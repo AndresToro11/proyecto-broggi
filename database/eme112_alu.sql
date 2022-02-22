@@ -19,6 +19,11 @@
 -- Table structure for table `agencies`
 --
 
+DROP DATABASE IF EXISTS eme112_alu;
+
+CREATE DATABASE eme112_alu;
+USE eme112_alu;
+
 DROP TABLE IF EXISTS `agencies`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
