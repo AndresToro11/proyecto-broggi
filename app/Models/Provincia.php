@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Comarca;
+use App\Models\Carta_trucada;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Provincia extends Model
 {
@@ -22,11 +25,6 @@ class Provincia extends Model
         return $this->hasMany(Carta_trucada::class, 'provincies_id');
     }
 
-    /**
-     * Get all of the comarques for the Provincia
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
     public function comarques(): HasMany
     {
         return $this->hasMany(Comarca::class, 'provincies_id');

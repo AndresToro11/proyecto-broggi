@@ -2,8 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Usuari;
+use App\Models\Agencia;
+use App\Models\Incident;
+use App\Models\Municipi;
+use App\Models\Expedient;
+use App\Models\Provincia;
+use App\Models\Dades_personals;
+use App\Models\Tipus_localitzacio;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Carta_trucada extends Model
 {
