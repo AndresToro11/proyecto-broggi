@@ -52,9 +52,14 @@ class UsuariController extends Controller
         return redirect('/');
     }
 
-    public function update(Request $request, Usuari $usuari)
+    public function update(Request $request, Usuari $user)
     {
-        
+        $user->codi = $request->input('id');
+        $user->contrassenya = $request->input('contrassenya');
+        $user->nom = $request->input('nom');
+        $user->cognoms = $request->input('cognoms');
+
+        $user->save();
     }
 
     public function destroy(Usuari $usuari)
