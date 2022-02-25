@@ -2,17 +2,15 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
 use App\Models\Usuari;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\Api\UsuariController;
 
 class UsuariController extends Controller
 {
-    public function showLogin()
-    {
-        return view('login');
-    }
-
     public function login(Request $request)
     {
         $codi = $request->input('codi');
@@ -22,13 +20,13 @@ class UsuariController extends Controller
 
         if($user !=null && Hash::check($contrassenya, $user->contrassenya)){
             Auth::login($user);
-            $response = redirect('/home');
+            //$response = redirect('/home');
         }
         else{
             $request->session()->flash('error', 'Usuario o contraseña incorrecta');
-            $response = redirect('/login')->withInput();
+            //$response = redirect('/login')->withInput();
         }
-        return $response;
+        //return $response;
     }
 
     public function store(Request $request)
@@ -42,14 +40,11 @@ class UsuariController extends Controller
         $user->perfil = $request->input('perfil');
 
         $user->save();
-
-        return view('/home');
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('/');
     }
 
     public function update(Request $request, Usuari $user)
