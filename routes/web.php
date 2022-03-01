@@ -22,6 +22,13 @@ Route::get('/', function () {
 
 Route::resource('user', UsuariController::class);
 
+
+//---------------------------- Expedientes -------------------------
+
+Route::get('/expedientes', function () {
+    return view('expedientes');
+});
+
 //-------------------------- Paginas logeadas ---------------------
 
 Route::middleware(['auth'])->group(function () {

@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\expedients;
 use Illuminate\Http\Request;
 
-class ExpedientsController extends Controller
+class ExpedientesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,16 +12,6 @@ class ExpedientsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
     {
         //
     }
@@ -41,21 +30,10 @@ class ExpedientsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\expedients  $expedients
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(expedients $expedients)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\expedients  $expedients
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(expedients $expedients)
+    public function show($id)
     {
         //
     }
@@ -64,10 +42,10 @@ class ExpedientsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\expedients  $expedients
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, expedients $expedients)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +53,10 @@ class ExpedientsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\expedients  $expedients
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(expedients $expedients)
+    public function destroy($id)
     {
         //
     }

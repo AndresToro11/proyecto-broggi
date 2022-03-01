@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\Api\ExpedientController;
 use App\Http\Controllers\Api\UsuariController;
 
 /*
@@ -20,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('user', UsuariController::class);
+
+Route::apiResource('expediente', ExpedientController::class);
