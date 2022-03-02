@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
 
 
 </head>
+
 <body>
     <nav>
         <div class="nav-wrapper">
@@ -27,10 +29,12 @@
     </nav>
 
     <div id="app" class="container">
+        <example-component></example-component>
         @yield('contenido')
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
 
 </body>
+
 </html>

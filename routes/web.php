@@ -25,7 +25,10 @@ Route::resource('user', UsuariController::class);
 //-------------------------- Paginas logeadas ---------------------
 
 Route::middleware(['auth'])->group(function () {
-    
 });
 
-//-------------------------------------------------------------------
+//------------------------------Llamada-------------------------------------
+
+Route::get('/llamada', function () {
+    return view('llamada');
+});

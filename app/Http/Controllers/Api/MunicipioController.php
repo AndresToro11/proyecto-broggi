@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\municipis;
+use App\Models\Municipi;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\MunicipioResource;
 
-class MunicipisController extends Controller
+class MunicipioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,17 +16,8 @@ class MunicipisController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $municipio = Municipi::all();
+        return MunicipioResource::collection($municipio);
     }
 
     /**
@@ -41,21 +34,10 @@ class MunicipisController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\municipis  $municipis
+     * @param  \App\Models\Municipi  $municipi
      * @return \Illuminate\Http\Response
      */
-    public function show(municipis $municipis)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\municipis  $municipis
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(municipis $municipis)
+    public function show(Municipi $municipi)
     {
         //
     }
@@ -64,10 +46,10 @@ class MunicipisController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\municipis  $municipis
+     * @param  \App\Models\Municipi  $municipi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, municipis $municipis)
+    public function update(Request $request, Municipi $municipi)
     {
         //
     }
@@ -75,10 +57,10 @@ class MunicipisController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\municipis  $municipis
+     * @param  \App\Models\Municipi  $municipi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(municipis $municipis)
+    public function destroy(Municipi $municipi)
     {
         //
     }
