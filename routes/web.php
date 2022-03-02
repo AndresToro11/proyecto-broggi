@@ -32,7 +32,11 @@ Route::get('/expedientes', function () {
 //-------------------------- Paginas logeadas ---------------------
 
 Route::middleware(['auth'])->group(function () {
-    
+
 });
 
-//-------------------------------------------------------------------
+//----------------------------- Grafico -----------------------------
+
+Route::get('/grafico', function () {
+    return view('grafico');
+});
