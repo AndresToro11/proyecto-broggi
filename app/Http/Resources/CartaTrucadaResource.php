@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Carta_trucadaResource extends JsonResource
+class CartaTrucadaResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

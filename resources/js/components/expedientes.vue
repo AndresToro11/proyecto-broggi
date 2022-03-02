@@ -1,15 +1,13 @@
 <template>
     <div class="mt-4">
-        <div class="card" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="true" aria-controls="collapseWidthExample">
+        <div class="card" v-for="expediente in expedientes" :key="expediente.id">
             <div class="card-body">
-                
-                <div class="row" v-for="expediente in expedientes" :key="expediente.id">
-                    {{ expediente.id }}
+                <div class="row">
                     <div class="col">
                         Expediente {{ expediente.id }}
                     </div>
                     <div class="col">
-                        Operador: operador1
+                        Operador LaLacra
                     </div>
                     <div class="col">
                         fecha {{ expediente.data_creacio }}
@@ -18,30 +16,20 @@
                         estado {{ expediente.estats_expedients_id }}
                     </div>
                 </div>
-                
-            </div>
-        </div>
-        <div style="min-height: 120px;">
-            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                <!-- <div class="card">
-                    <div class="card-body">
-                        <div class="row" v-for="cartaLlamada in expedientes.cartas_trucades" :key="expediente.cartas_trucades.id">
-                            <div class="col">
-                                codigo {{ expediente.cartas_trucades.id }}
-                            </div>
-                            <div class="col">
-                                Provincia {{ expediente.cartas_trucades.provincies_id }}
-                            </div>
-                            <div class="col">
-                                Ciudad {{ expediente.cartas_trucades.municipis_id }}
-                            </div>
-                            <div class="col">
-                                Incidente {{ expediente.cartas_trucades.incidents_id }}
-                            </div>
-                        </div>
+                <div class="row" v-for="carta in expediente.cartas_trucades" :key="carta.id">
+                    <div class="col">
+                        Codigo llamada {{ carta.id }}
                     </div>
-                </div> -->
-                
+                        <div class="col">
+                        Provincia {{ carta.provincies_id }}
+                    </div>
+                    <div class="col">
+                        Municipio {{ carta.municipis_id }}
+                    </div>
+                    <div class="col">
+                        Incidente {{ carta.incidents_id }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -52,19 +40,32 @@
 
         data(){
             return {
-                expedientes: []
+                expedientes: [],
+                cartaLlamada: []
             }
         },
 
         methods:{
-            select(){
+            selectExpedientes(){
             let me = this;
-            console.log('entrando a la select');
             axios
                 .get('/expediente')
                 .then(response => {
                     me.expedientes = response.data;
                     console.log('hola');
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+                .finally(() => this.loading = false);
+            },
+
+            selectLlamada(){
+            let me = this;
+            axios
+                .get('/expediente')
+                .then(response => {
+                    me.expedientes = response.data;
                 })
                 .catch(error => {
                     console.log(error);
@@ -77,7 +78,7 @@
             this.select();
         },
         mounted() {
-            
+
             console.log('¡¡Componente montado!!')
         }
     }

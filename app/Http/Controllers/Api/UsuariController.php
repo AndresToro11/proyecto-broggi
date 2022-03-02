@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Controllers\Api\UsuariController;
 
 class UsuariController extends Controller
 {
@@ -23,7 +22,7 @@ class UsuariController extends Controller
             //$response = redirect('/home');
         }
         else{
-            $request->session()->flash('error', 'Usuario o contraseña incorrecta');
+            //$request->session()->flash('error', 'Usuario o contraseña incorrecta');
             //$response = redirect('/login')->withInput();
         }
         //return $response;

@@ -5436,30 +5436,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      expedientes: []
+      expedientes: [],
+      cartaLlamada: []
     };
   },
   methods: {
-    select: function select() {
+    selectExpedientes: function selectExpedientes() {
       var _this = this;
 
       var me = this;
-      console.log('entrando a la select');
       axios.get('/expediente').then(function (response) {
         me.expedientes = response.data;
         console.log('hola');
@@ -5467,6 +5455,18 @@ __webpack_require__.r(__webpack_exports__);
         console.log(error);
       })["finally"](function () {
         return _this.loading = false;
+      });
+    },
+    selectLlamada: function selectLlamada() {
+      var _this2 = this;
+
+      var me = this;
+      axios.get('/expediente').then(function (response) {
+        me.expedientes = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this2.loading = false;
       });
     }
   },
@@ -28327,29 +28327,16 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mt-4" }, [
-    _c(
-      "div",
-      {
-        staticClass: "card",
-        attrs: {
-          "data-bs-toggle": "collapse",
-          "data-bs-target": "#collapseWidthExample",
-          "aria-expanded": "true",
-          "aria-controls": "collapseWidthExample",
-        },
-      },
-      [
+  return _c(
+    "div",
+    { staticClass: "mt-4" },
+    _vm._l(_vm.expedientes, function (expediente) {
+      return _c("div", { key: expediente.id, staticClass: "card" }, [
         _c(
           "div",
           { staticClass: "card-body" },
-          _vm._l(_vm.expedientes, function (expediente) {
-            return _c("div", { key: expediente.id, staticClass: "row" }, [
-              _vm._v(
-                "\n                " +
-                  _vm._s(expediente.id) +
-                  "\n                "
-              ),
+          [
+            _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "col" }, [
                 _vm._v(
                   "\n                    Expediente " +
@@ -28360,7 +28347,7 @@ var render = function () {
               _vm._v(" "),
               _c("div", { staticClass: "col" }, [
                 _vm._v(
-                  "\n                    Operador: operador1\n                "
+                  "\n                    Operador LaLacra\n                "
                 ),
               ]),
               _vm._v(" "),
@@ -28379,29 +28366,52 @@ var render = function () {
                     "\n                "
                 ),
               ]),
-            ])
-          }),
-          0
+            ]),
+            _vm._v(" "),
+            _vm._l(expediente.cartas_trucades, function (carta) {
+              return _c("div", { key: carta.id, staticClass: "row" }, [
+                _c("div", { staticClass: "col" }, [
+                  _vm._v(
+                    "\n                    Codigo llamada " +
+                      _vm._s(carta.id) +
+                      "\n                "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _vm._v(
+                    "\n                    Provincia " +
+                      _vm._s(carta.provincies_id) +
+                      "\n                "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _vm._v(
+                    "\n                    Municipio " +
+                      _vm._s(carta.municipis_id) +
+                      "\n                "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _vm._v(
+                    "\n                    Incidente " +
+                      _vm._s(carta.incidents_id) +
+                      "\n                "
+                  ),
+                ]),
+              ])
+            }),
+          ],
+          2
         ),
-      ]
-    ),
-    _vm._v(" "),
-    _vm._m(0),
-  ])
+      ])
+    }),
+    0
+  )
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticStyle: { "min-height": "120px" } }, [
-      _c("div", {
-        staticClass: "collapse collapse-horizontal",
-        attrs: { id: "collapseWidthExample" },
-      }),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

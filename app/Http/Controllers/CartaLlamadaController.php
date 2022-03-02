@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
-use App\Models\Expedient;
 use Illuminate\Http\Request;
 use App\Models\Carta_trucada;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\ExpedientResource;
+use App\Http\Resources\CartaTrucadaResource;
 
-class ExpedientController extends Controller
+class CartaLlamadaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,10 +16,11 @@ class ExpedientController extends Controller
      */
     public function index()
     {
-        $expedientes = Expedient::with('cartas_trucades')
+        $carta = Carta_trucada::with('incident', 'tipus_localitzacio', 'usuari', 'provincia',
+                                    'municipi', 'dades_personals', 'agencia')
                                 ->get();
 
-        return new ExpedientResource($expedientes);
+        return new CartaTrucadaResource($carta);
     }
 
     /**
@@ -31,16 +31,16 @@ class ExpedientController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Expedient  $expedient
+     * @param  \App\Models\Carta_trucada  $carta_trucada
      * @return \Illuminate\Http\Response
      */
-    public function show(Expedient $expedient)
+    public function show(Carta_trucada $carta_trucada)
     {
         //
     }
@@ -49,10 +49,10 @@ class ExpedientController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Expedient  $expedient
+     * @param  \App\Models\Carta_trucada  $carta_trucada
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Expedient $expedient)
+    public function update(Request $request, Carta_trucada $carta_trucada)
     {
         //
     }
@@ -60,10 +60,10 @@ class ExpedientController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Expedient  $expedient
+     * @param  \App\Models\Carta_trucada  $carta_trucada
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Expedient $expedient)
+    public function destroy(Carta_trucada $carta_trucada)
     {
         //
     }
