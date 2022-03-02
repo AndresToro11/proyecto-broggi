@@ -17,7 +17,7 @@ class ExpedientController extends Controller
      */
     public function index()
     {
-        $expedientes = Expedient::with('cartas_trucades')
+        $expedientes = Expedient::with('cartas_trucades', 'cartas_trucades.usuari')
                                 ->get();
 
         return new ExpedientResource($expedientes);
