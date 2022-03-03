@@ -86,10 +86,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-5">
+                            <div class="col-4">
                                 Nota común: "{{ carta.nota_comuna }}"
                             </div>
-                            <div class="col-1">
+                            <div class="col-2">
                                 Fuera de cataluña:
                                 <div v-if="carta.fora_catalunya">
                                     Si
@@ -135,9 +135,6 @@
                     console.log(error);
                 })
                 .finally(() => this.loading = false);
-            },
-            ultimaPosicion(array){
-                return this.array[this.array.length - 1];
             }
         },
         mounted() {

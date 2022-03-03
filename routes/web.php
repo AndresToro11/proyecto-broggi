@@ -18,9 +18,23 @@ Route::get('/', function () {
     return view('index');
 });
 
-//------------------------------ User -----------------------------
+//------------------------------ Home -----------------------------
 
-Route::resource('user', UsuariController::class);
+Route::get('/home', function () {
+    return view('home');
+});
+
+//------------------------------ Llamada -----------------------------
+
+Route::get('/llamada', function () {
+    return view('llamada');
+});
+
+//-------------------------------- Video ---------------------------
+
+Route::get('/video', function () {
+    return view('video');
+});
 
 
 //---------------------------- Expedientes -------------------------
