@@ -1,5 +1,6 @@
 @extends('layouts.plantilla')
 @section('contenido')
-    {{-- <datos-personales></datos-personales> --}}
-    
+    <datos-administrativos></datos-administrativos>
+    <datos-personales></datos-personales>
+    <datos-incidentes></datos-incidentes>
 @endsection

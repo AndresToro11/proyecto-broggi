@@ -5407,6 +5407,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -5431,7 +5434,86 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      municipios: [],
+      provincia: []
+    };
+  },
+  methods: {
+    select: function select() {
+      var _this = this;
+
+      var me = this;
+      console.log('Entrando a la select');
+      axios.get('/municipio').then(function (response) {
+        me.municipios = response.data;
+        console.log('ol');
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+    }
+  },
   mounted: function mounted() {
     console.log('Component mounted.');
   }
@@ -5450,6 +5532,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
 //
 //
 //
@@ -5574,8 +5658,8 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 Vue.component('example-component', (__webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]));
 Vue.component('login', (__webpack_require__(/*! ./components/login.vue */ "./resources/js/components/login.vue")["default"])); //---------------------------------------------------------------------------------------------------
 
-Vue.component('Datos-Administrativo', (__webpack_require__(/*! ./components/cartaLlamada/DatosAdministrativos.vue */ "./resources/js/components/cartaLlamada/DatosAdministrativos.vue")["default"]));
-Vue.component('Datos-Incidente', (__webpack_require__(/*! ./components/cartaLlamada/DatosIncidente.vue */ "./resources/js/components/cartaLlamada/DatosIncidente.vue")["default"]));
+Vue.component('datos-administrativos', (__webpack_require__(/*! ./components/cartaLlamada/DatosAdministrativos.vue */ "./resources/js/components/cartaLlamada/DatosAdministrativos.vue")["default"]));
+Vue.component('datos-incidentes', (__webpack_require__(/*! ./components/cartaLlamada/DatosIncidente.vue */ "./resources/js/components/cartaLlamada/DatosIncidente.vue")["default"]));
 Vue.component('datos-personales', (__webpack_require__(/*! ./components/cartaLlamada/DatosPersonales.vue */ "./resources/js/components/cartaLlamada/DatosPersonales.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -28508,9 +28592,24 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h3", [_vm._v("Datos Administrativos")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("Contador: 00:00")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("Codigo expediente: Ex2131321")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("Codigo Trucada: TR3242")]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -28533,9 +28632,152 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h3", [_vm._v("Datos Incidente")]),
+      _vm._v(" "),
+      _c("input", {
+        attrs: { type: "checkbox", name: "catalunya", id: "catalunya" },
+      }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "catalunya" } }, [
+        _vm._v("El accidente a sido fuera de catalunya"),
+      ]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "comarca" } }, [_vm._v("Comarca")]),
+      _vm._v(" "),
+      _c("select", { attrs: { name: "comarca", id: "comarca" } }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "provincia" } }, [_vm._v("Provincia")]),
+      _vm._v(" "),
+      _c("select", { attrs: { name: "provincia", id: "provincia" } }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
+      _vm._v(" "),
+      _c("select", { attrs: { name: "municipio", id: "municipio" } }),
+      _vm._v(" "),
+      _c("input", {
+        attrs: { type: "text", name: "municipio", id: "municipio", hidden: "" },
+      }),
+      _vm._v(" "),
+      _c("h4", [_vm._v("Tipos de localizacion")]),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "checkbox", id: "carrers" } }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "carrers" } }, [_vm._v("Calles")]),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "checkbox", id: "puntoSingular" } }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "puntoSingular" } }, [
+        _vm._v("Punto singular"),
+      ]),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "checkbox", id: "carretera" } }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "carretera" } }, [_vm._v("Carretera")]),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "checkbox", id: "entidadPoblacion " } }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "entidadPoblacion" } }, [
+        _vm._v("Entidad Poblacion"),
+      ]),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "checkbox", id: "fueraCataluna" } }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "fueraCataluna" } }, [
+        _vm._v("Fuera Cataluña"),
+      ]),
+      _vm._v(" "),
+      _c("span", [
+        _c("label", { attrs: { for: "via" } }, [_vm._v("Via")]),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "text", name: "via", id: "via" } }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "text", name: "direccion", id: "direccion" },
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "numero" } }, [_vm._v("Numero puerta")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "number", name: "numero", id: "numero" },
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "escala" } }, [_vm._v("Escala")]),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "text", name: "escala", id: "escala" } }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "piso" } }, [_vm._v("Piso")]),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "number", name: "piso", id: "piso" } }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "puerta" } }, [_vm._v("Puerta")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "number", name: "puerta", id: "puerta" },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("span", [
+        _c("label", { attrs: { for: "nombre" } }, [_vm._v("Nombre")]),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "text", name: "nombre", id: "nombre" } }),
+      ]),
+      _vm._v(" "),
+      _c("span", [
+        _c("label", { attrs: { for: "carretera" } }, [_vm._v("Carretera")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "text", name: "carretera", id: "carretera" },
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "puntoKM" } }, [
+          _vm._v("Punto kilometrico"),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "number", name: "puntoKM", id: "puntoKM" },
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "sentido" } }, [_vm._v("Sentido")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "text", name: "sentido", id: "sentido" },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("span", [
+        _c("label", { attrs: { for: "entidad" } }, [_vm._v("Entidad")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "text", name: "entidad", id: "entidad" },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("Emergencia")]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "tiposIncidete" } }, [
+        _vm._v("Tipo Incidente"),
+      ]),
+      _vm._v(" "),
+      _c("select", { attrs: { name: "tiposIncidete", id: "tiposIncidete" } }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "incidente" } }, [_vm._v("Incidente")]),
+      _vm._v(" "),
+      _c("select", { attrs: { name: "incidente", id: "incidente" } }),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -28610,11 +28852,19 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
         _vm._v(" "),
-        _c("select", { attrs: { name: "municipio", id: "municipio" } }, [
-          _c("option", { attrs: { value: "1" } }, [_vm._v("1")]),
+        _c("select", [
+          _c("option", { attrs: { disabled: "", value: "" } }, [
+            _vm._v("Seleccione un elemento"),
+          ]),
           _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [_vm._v("2")]),
+          _c("option", [_vm._v("A")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("B")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("C")]),
         ]),
+        _vm._v(" "),
+        _c("br"),
         _vm._v(" "),
         _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
         _vm._v(" "),
@@ -28626,10 +28876,6 @@ var staticRenderFns = [
             required: "",
           },
         }),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("br"),
         _vm._v(" "),
         _c("label", { attrs: { for: "hora" } }, [_vm._v("Hora")]),
         _vm._v(" "),

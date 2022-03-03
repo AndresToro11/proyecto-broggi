@@ -29,7 +29,6 @@
     </nav>
 
     <div id="app" class="container">
-        <example-component></example-component>
         @yield('contenido')
     </div>
 

@@ -22,8 +22,8 @@ window.Vue = require('vue').default;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('login', require('./components/login.vue').default);
 //---------------------------------------------------------------------------------------------------
-Vue.component('Datos-Administrativo', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
-Vue.component('Datos-Incidente', require('./components/cartaLlamada/DatosIncidente.vue').default);
+Vue.component('datos-administrativos', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
+Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncidente.vue').default);
 Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
