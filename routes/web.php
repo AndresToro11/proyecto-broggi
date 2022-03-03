@@ -18,9 +18,30 @@ Route::get('/', function () {
     return view('index');
 });
 
-//------------------------------ User -----------------------------
+//------------------------------ Home -----------------------------
 
-Route::resource('user', UsuariController::class);
+Route::get('/home', function () {
+    return view('home');
+});
+
+//------------------------------ Llamada -----------------------------
+
+Route::get('/llamada', function () {
+    return view('llamada');
+});
+
+//-------------------------------- Video ---------------------------
+
+Route::get('/video', function () {
+    return view('video');
+});
+
+
+//---------------------------- Expedientes -------------------------
+
+Route::get('/expedientes', function () {
+    return view('expedientes');
+});
 
 //-------------------------- Paginas logeadas ---------------------
 
@@ -31,4 +52,11 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/llamada', function () {
     return view('llamada');
+
+});
+
+//----------------------------- Grafico -----------------------------
+
+Route::get('/grafico', function () {
+    return view('grafico');
 });

@@ -3,6 +3,8 @@
 use App\Http\Controllers\Api\MunicipioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\Api\ExpedientController;
 use App\Http\Controllers\Api\UsuariController;
 use App\Models\Municipi;
 
@@ -24,3 +26,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('user', UsuariController::class);
 
 Route::apiResource('municipio', MunicipioController::class);
+Route::apiResource('expediente', ExpedientController::class);//->only(['index', 'provincias']);
+Route::get('expediente/provincias', [ExpedientController::class, 'provincias']);
