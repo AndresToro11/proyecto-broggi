@@ -3,8 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Api\ExpedientController;
 use App\Http\Controllers\Api\UsuariController;
+use App\Http\Controllers\Api\GraficoController;
+use App\Http\Controllers\Api\ExpedientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('user', UsuariController::class);
 
-Route::apiResource('expediente', ExpedientController::class);//->only(['index', 'provincias']);
-Route::get('expediente/provincias', [ExpedientController::class, 'provincias']);
+Route::apiResource('expediente', ExpedientController::class);
+//Route::get('expediente/provincias', [ExpedientController::class, 'provincias']);
+
+//Route::apiResource('grafico', GraficoController::class);
+Route::get('grafico/provincias', [GraficoController::class, 'provincias']);
