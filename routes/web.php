@@ -48,13 +48,6 @@ Route::get('/expedientes', function () {
 Route::middleware(['auth'])->group(function () {
 });
 
-//------------------------------Llamada-------------------------------------
-
-Route::get('/llamada', function () {
-    return view('llamada');
-
-});
-
 //----------------------------- Grafico -----------------------------
 
 Route::get('/grafico', function () {
