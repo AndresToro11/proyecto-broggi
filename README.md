@@ -2,7 +2,7 @@
    
    <p>El Instituto Moisès Broggi es un centro publico del Departamento de Enseñanzas que imparte estudios de Educación Secundaria Obligatoria, Bachillerato y Ciclos Formativos.
 
-   Llegado a un acuerdo con nuestro centro de estudio, el Instituto Moisès Broggi nos ofrece crear un proyecto el cual ayude a la formación de los estudiantes del Ciclo de Emergencias Sanitarias, concretamente un simulador formativo para gestionar las llamadas que llegue a los telefonos de emergencia del 112.</p>
+   Llegado a un acuerdo con nuestro centro de estudio, el Instituto Moisès Broggi nos ofrece crear un proyecto el cual ayude a la formación de los estudiantes del Ciclo de Emergencias Sanitarias, concretamente un simulador formativo para gestionar las llamadas que lleguen a los telefonos de emergencia del 112.</p>
    
    <h1>Desarrollo Técnico</h1>
    
