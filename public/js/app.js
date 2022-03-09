@@ -5353,6 +5353,75 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/Boton.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/Boton.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      llamada: {
+        codi_trucada: "",
+        data_hora: "",
+        temps_trucada: "",
+        dades_personals_id: "",
+        telefon: "",
+        procedencia_trucada: "",
+        origen_trucada: "",
+        nom_trucada: "",
+        municipis_id_trucada: "",
+        adreca_trucada: "",
+        fora_catalunya: "",
+        provincies_id: "",
+        municipis_id: "",
+        tipus_localitzacions_id: "",
+        descripcio_localitzacio: "",
+        detall_localitzacio: "",
+        altres_ref_localitzacio: "",
+        incidents_id: "",
+        nota_comuna: "",
+        expedients_id: "",
+        usuaris_id: ""
+      }
+    };
+  },
+  methods: {
+    insert: function insert() {
+      var _this = this;
+
+      var me = this;
+      axios.post("/llamada", me.llamada).then(function (response) {
+        console.log(response);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.select();
+    console.log("Component mounted.");
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/DatosAdministrativos.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/DatosAdministrativos.vue?vue&type=script&lang=js& ***!
@@ -5593,8 +5662,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5619,6 +5686,29 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.select();
+    console.log("Component mounted.");
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  mounted: function mounted() {
     console.log("Component mounted.");
   }
 });
@@ -6022,7 +6112,9 @@ Vue.component('login', (__webpack_require__(/*! ./components/login.vue */ "./res
 
 Vue.component('datos-administrativos', (__webpack_require__(/*! ./components/cartaLlamada/DatosAdministrativos.vue */ "./resources/js/components/cartaLlamada/DatosAdministrativos.vue")["default"]));
 Vue.component('datos-incidentes', (__webpack_require__(/*! ./components/cartaLlamada/DatosIncidente.vue */ "./resources/js/components/cartaLlamada/DatosIncidente.vue")["default"]));
-Vue.component('datos-personales', (__webpack_require__(/*! ./components/cartaLlamada/DatosPersonales.vue */ "./resources/js/components/cartaLlamada/DatosPersonales.vue")["default"])); //------------------------------------------- Expedientes --------------------------------
+Vue.component('datos-personales', (__webpack_require__(/*! ./components/cartaLlamada/DatosPersonales.vue */ "./resources/js/components/cartaLlamada/DatosPersonales.vue")["default"]));
+Vue.component('expedientes-relacionados', (__webpack_require__(/*! ./components/cartaLlamada/ExpedientesRelacionados.vue */ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue")["default"]));
+Vue.component('enviar-datos', (__webpack_require__(/*! ./components/cartaLlamada/Boton.vue */ "./resources/js/components/cartaLlamada/Boton.vue")["default"])); //------------------------------------------- Expedientes --------------------------------
 
 Vue.component('expedientes', (__webpack_require__(/*! ./components/expedientes.vue */ "./resources/js/components/expedientes.vue")["default"])); //--------------------------------------------- Grafico ----------------------------------
 
@@ -41881,6 +41973,45 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./resources/js/components/cartaLlamada/Boton.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/cartaLlamada/Boton.vue ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Boton_vue_vue_type_template_id_1206029a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Boton.vue?vue&type=template&id=1206029a& */ "./resources/js/components/cartaLlamada/Boton.vue?vue&type=template&id=1206029a&");
+/* harmony import */ var _Boton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Boton.vue?vue&type=script&lang=js& */ "./resources/js/components/cartaLlamada/Boton.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Boton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Boton_vue_vue_type_template_id_1206029a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Boton_vue_vue_type_template_id_1206029a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/cartaLlamada/Boton.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/cartaLlamada/DatosAdministrativos.vue":
 /*!***********************************************************************!*\
   !*** ./resources/js/components/cartaLlamada/DatosAdministrativos.vue ***!
@@ -41994,6 +42125,45 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/cartaLlamada/DatosPersonales.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6& */ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6&");
+/* harmony import */ var _ExpedientesRelacionados_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExpedientesRelacionados.vue?vue&type=script&lang=js& */ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ExpedientesRelacionados_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/cartaLlamada/ExpedientesRelacionados.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -42232,6 +42402,22 @@ component.options.__file = "resources/js/components/login.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/cartaLlamada/Boton.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/cartaLlamada/Boton.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Boton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Boton.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/Boton.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Boton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/cartaLlamada/DatosAdministrativos.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************!*\
   !*** ./resources/js/components/cartaLlamada/DatosAdministrativos.vue?vue&type=script&lang=js& ***!
@@ -42277,6 +42463,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DatosPersonales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DatosPersonales.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/DatosPersonales.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DatosPersonales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ExpedientesRelacionados.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -42376,6 +42578,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/cartaLlamada/Boton.vue?vue&type=template&id=1206029a&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/cartaLlamada/Boton.vue?vue&type=template&id=1206029a& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Boton_vue_vue_type_template_id_1206029a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Boton_vue_vue_type_template_id_1206029a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Boton_vue_vue_type_template_id_1206029a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Boton.vue?vue&type=template&id=1206029a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/Boton.vue?vue&type=template&id=1206029a&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/cartaLlamada/DatosAdministrativos.vue?vue&type=template&id=93e1dc7a&":
 /*!******************************************************************************************************!*\
   !*** ./resources/js/components/cartaLlamada/DatosAdministrativos.vue?vue&type=template&id=93e1dc7a& ***!
@@ -42423,6 +42642,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatosPersonales_vue_vue_type_template_id_45899a16___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DatosPersonales_vue_vue_type_template_id_45899a16___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DatosPersonales.vue?vue&type=template&id=45899a16& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/DatosPersonales.vue?vue&type=template&id=45899a16&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6& ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6&");
 
 
 /***/ }),
@@ -42525,6 +42761,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_template_id_172b28a4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_template_id_172b28a4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./login.vue?vue&type=template&id=172b28a4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/login.vue?vue&type=template&id=172b28a4&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/Boton.vue?vue&type=template&id=1206029a&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/Boton.vue?vue&type=template&id=1206029a& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h3", [_vm._v("boton")]),
+    _vm._v(" "),
+    _c("button", { attrs: { type: "button" } }, [_vm._v("Cancelar")]),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        attrs: { type: "button" },
+        on: {
+          click: function ($event) {
+            return _vm.insert()
+          },
+        },
+      },
+      [_vm._v("Aceptar")]
+    ),
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
 
 
 /***/ }),
@@ -42831,102 +43109,118 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("form", { attrs: { action: "", method: "post" } }, [
-      _c("h3", [_vm._v("Dades Personals:")]),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "telefono" } }, [_vm._v("Telefono")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: { type: "text", name: "telefono", id: "telefono", required: "" },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "antecedentes" } }, [_vm._v("Antecedentes")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: {
-          type: "text",
-          name: "antecedentes",
-          id: "antecedentes",
-          required: "",
-        },
-      }),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "procedencia" } }, [_vm._v("Procedencia")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: {
-          type: "text",
-          name: "procedencia",
-          id: "procedencia",
-          required: "",
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
-      _vm._v(" "),
-      _c(
-        "select",
-        { staticClass: "form-control", attrs: { id: "municipio" } },
-        [
-          _c("option", { attrs: { value: "" } }),
-          _vm._v(" "),
-          _vm._l(_vm.municipios, function (municipio) {
-            return _c("option", { key: municipio.id }, [
-              _vm._v(
-                "\n                " + _vm._s(municipio.nom) + "\n            "
-              ),
-            ])
-          }),
-        ],
-        2
-      ),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: {
-          type: "text",
-          name: "direccion",
-          id: "direccion",
-          required: "",
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "hora" } }, [_vm._v("Hora")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: { type: "text", name: "hora", id: "hora", required: "" },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "llamada" } }, [_vm._v("Llamada:")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: { type: "text", name: "llamada", id: "llamada", required: "" },
-      }),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "notaComun" } }, [_vm._v("Nota comun:")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: {
-          type: "text",
-          name: "notaComun",
-          id: "notaComun",
-          required: "",
-          size: "100",
-        },
-      }),
-    ]),
+    _c("h3", [_vm._v("Dades Personals:")]),
+    _vm._v(" "),
+    _c("label", { attrs: { for: "telefono" } }, [_vm._v("Telefono")]),
+    _vm._v(" "),
+    _c("input", {
+      attrs: { type: "text", name: "telefono", id: "telefono", required: "" },
+    }),
+    _vm._v(" "),
+    _c("label", { attrs: { for: "antecedentes" } }, [_vm._v("Antecedentes")]),
+    _vm._v(" "),
+    _c("input", {
+      attrs: {
+        type: "text",
+        name: "antecedentes",
+        id: "antecedentes",
+        required: "",
+      },
+    }),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("label", { attrs: { for: "procedencia" } }, [_vm._v("Procedencia")]),
+    _vm._v(" "),
+    _c("input", {
+      attrs: {
+        type: "text",
+        name: "procedencia",
+        id: "procedencia",
+        required: "",
+      },
+    }),
+    _vm._v(" "),
+    _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
+    _vm._v(" "),
+    _c(
+      "select",
+      { staticClass: "form-control", attrs: { id: "municipio" } },
+      [
+        _c("option", { attrs: { value: "" } }),
+        _vm._v(" "),
+        _vm._l(_vm.municipios, function (municipio) {
+          return _c("option", { key: municipio.id }, [
+            _vm._v("\n            " + _vm._s(municipio.nom) + "\n        "),
+          ])
+        }),
+      ],
+      2
+    ),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
+    _vm._v(" "),
+    _c("input", {
+      attrs: { type: "text", name: "direccion", id: "direccion", required: "" },
+    }),
+    _vm._v(" "),
+    _c("label", { attrs: { for: "hora" } }, [_vm._v("Hora")]),
+    _vm._v(" "),
+    _c("input", {
+      attrs: { type: "text", name: "hora", id: "hora", required: "" },
+    }),
+    _vm._v(" "),
+    _c("label", { attrs: { for: "llamada" } }, [_vm._v("Llamada:")]),
+    _vm._v(" "),
+    _c("input", {
+      attrs: { type: "text", name: "llamada", id: "llamada", required: "" },
+    }),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("label", { attrs: { for: "notaComun" } }, [_vm._v("Nota comun:")]),
+    _vm._v(" "),
+    _c("input", {
+      attrs: {
+        type: "text",
+        name: "notaComun",
+        id: "notaComun",
+        required: "",
+        size: "100",
+      },
+    }),
   ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6&":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6& ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("h3", [_vm._v("Expedientes Relacionados")])
 }
 var staticRenderFns = []
 render._withStripped = true
