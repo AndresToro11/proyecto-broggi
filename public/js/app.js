@@ -5364,6 +5364,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosAdministrativos'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosPersonales'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosIncidente'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/ExpedientesRelacionados'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 //
 //
 //
@@ -5372,51 +5376,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+
+
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      llamada: {
-        codi_trucada: "",
-        data_hora: "",
-        temps_trucada: "",
-        dades_personals_id: "",
-        telefon: "",
-        procedencia_trucada: "",
-        origen_trucada: "",
-        nom_trucada: "",
-        municipis_id_trucada: "",
-        adreca_trucada: "",
-        fora_catalunya: "",
-        provincies_id: "",
-        municipis_id: "",
-        tipus_localitzacions_id: "",
-        descripcio_localitzacio: "",
-        detall_localitzacio: "",
-        altres_ref_localitzacio: "",
-        incidents_id: "",
-        nota_comuna: "",
-        expedients_id: "",
-        usuaris_id: ""
-      }
+      array: []
     };
   },
   methods: {
-    insert: function insert() {
-      var _this = this;
-
-      var me = this;
-      axios.post("/llamada", me.llamada).then(function (response) {
-        console.log(response);
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
+    getData: function getData(array) {
+      this.array = array;
     }
   },
-  mounted: function mounted() {
-    this.select();
-    console.log("Component mounted.");
+  components: {
+    DatosAdministrativos: Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosAdministrativos'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
+    DatosPersonales: Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosPersonales'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
+    DatosIncidente: Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosIncidente'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
+    ExpedientesRelacionados: Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/ExpedientesRelacionados'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
   }
 });
 
@@ -5558,6 +5541,9 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    emit: function emit() {
+      this.$emit();
+    },
     select: function select() {
       var _this = this;
 
@@ -5665,7 +5651,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      municipios: []
+      municipios: [],
+      datos_personales: {
+        telefono: "",
+        antecedentes: "",
+        procedencia: "",
+        municipio: "",
+        direccion: "",
+        hora: "",
+        llamada: "",
+        notaComun: ""
+      }
     };
   },
   methods: {
@@ -5682,6 +5678,9 @@ __webpack_require__.r(__webpack_exports__);
       })["finally"](function () {
         return _this.loading = false;
       });
+    },
+    setData: function setData() {
+      this.$emit("getData", this.datos_personales);
     }
   },
   mounted: function mounted() {
@@ -42781,24 +42780,38 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h3", [_vm._v("boton")]),
-    _vm._v(" "),
-    _c("button", { attrs: { type: "button" } }, [_vm._v("Cancelar")]),
-    _vm._v(" "),
-    _c(
-      "button",
-      {
-        attrs: { type: "button" },
-        on: {
-          click: function ($event) {
-            return _vm.insert()
+  return _c(
+    "div",
+    [
+      _c("datos-administrativos"),
+      _vm._v(" "),
+      _c("datos-personales"),
+      _vm._v(" "),
+      _c("datos-incidentes"),
+      _vm._v(" "),
+      _c("Personals", { on: { getData: _vm.getData } }),
+      _vm._v(" "),
+      _c("h3", [_vm._v("boton")]),
+      _vm._v(" "),
+      _c("button", { attrs: { type: "button" } }, [_vm._v("Cancelar")]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          attrs: { type: "button" },
+          on: {
+            click: function ($event) {
+              return _vm.insert()
+            },
           },
         },
-      },
-      [_vm._v("Aceptar")]
-    ),
-  ])
+        [_vm._v("Aceptar")]
+      ),
+      _vm._v(" "),
+      _c("expedientes-relacionados"),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

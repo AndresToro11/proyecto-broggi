@@ -17,7 +17,7 @@
             <option v-for="provincia in provincias" :key="provincia.id">
                 {{ provincia.nom }}
             </option>
-        </select> 
+        </select>
         <label for="municipio">Municipio</label>
         <select class="form-control" id="municipio">
             <option value=""></option>
@@ -96,6 +96,9 @@ export default {
         };
     },
     methods: {
+        emit(){
+            this.$emit();
+        },
         select() {
             let me = this;
             console.log("Entrando a la select 2");
@@ -151,7 +154,6 @@ export default {
                 .finally(() => (this.loading = false));
         },
     },
-
     mounted() {
         this.select();
         console.log("Component mounted.");

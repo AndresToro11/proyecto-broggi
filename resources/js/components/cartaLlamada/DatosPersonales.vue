@@ -41,6 +41,16 @@ export default {
     data() {
         return {
             municipios: [],
+            datos_personales:{
+                telefono:"",
+                antecedentes:"",
+                procedencia:"",
+                municipio:"",
+                direccion:"",
+                hora:"",
+                llamada:"",
+                notaComun:""
+            }
         };
     },
     methods: {
@@ -57,6 +67,9 @@ export default {
                     console.log(error);
                 })
                 .finally(() => (this.loading = false));
+        },
+        setData(){
+            this.$emit("getData", this.datos_personales);
         },
     },
 
