@@ -35,7 +35,7 @@
                     datasets: [
                         {
                             label: "Incidentes",
-                            data: [200, 200, 600],
+                            data: [200, 300, 600],
                             borderWidth: 1,
                             backgroundColor: [
                                 'rgba(168, 29, 31, 1)',

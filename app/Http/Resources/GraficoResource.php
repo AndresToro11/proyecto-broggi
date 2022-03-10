@@ -14,6 +14,10 @@ class GraficoResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        //return parent::toArray($request);
+
+        return[
+            "provincias" => $this->cartas_trucades[0]->provincia->nom
+        ];
     }
 }

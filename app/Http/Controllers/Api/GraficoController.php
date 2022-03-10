@@ -10,9 +10,9 @@ use App\Http\Resources\GraficoResource;
 class GraficoController extends Controller
 {
     function provincias(){
-        $expedientes = Expedient::with('cartas_trucades.provincia')//->groupByRaw('cartas_trucades.id')
+        $expedientes = Expedient::with('cartas_trucades.provincia')//->count('id');//->groupByRaw('id')
                                 ->get();
 
-        return new GraficoResource($expedientes);
+        return GraficoResource::collection($expedientes);
     }
 }
