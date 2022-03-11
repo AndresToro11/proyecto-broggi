@@ -5482,59 +5482,61 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {
-      provincias: []
-    };
+    return {};
   },
   methods: {
     selectProvincias: function selectProvincias() {
       var _this = this;
 
       axios.get('/grafico/provincias').then(function (response) {
-        console.log('hola');
-        var auxs = [];
+        var provincias = [];
         var encontrado = false;
 
         for (var i = 0; i < response.data.length; i++) {
-          for (var aux in auxs) {
-            if (response.data[i] == aux) {
-              auxs[aux] = auxs[aux] + 1;
+          for (var provincia in provincias) {
+            if (response.data[i] == provincia) {
+              provincias[provincia] = provincias[provincia] + 1;
               encontrado = true;
             }
           }
 
           if (encontrado == false) {
-            auxs[response.data[i]] = 1;
+            provincias[response.data[i]] = 1;
           }
 
           encontrado = false;
         }
 
-        _this.provincias = auxs;
-
-        _this.grafico(auxs);
+        _this.grafico(provincias);
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
         return _this.loading = false;
       });
     },
-    grafico: function grafico(auxs) {
+    grafico: function grafico(provinciasSelect) {
       if (this.grafica) {
         this.grafica.destroy();
       }
 
-      console.log(auxs);
+      var provincias = [];
+      var numeros = [];
+
+      for (var provincia in provinciasSelect) {
+        provincias.push(provincia);
+        numeros.push(provinciasSelect[provincia]);
+      }
+
       new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](document.getElementById("grafico").getContext('2d'), {
         //Aquí podría haber un if para cambiar el gráfico con un evento de VUE al momento con el metodo destroy.
         type:
         /*"doughnut"*/
         "pie",
         data: {
-          labels: ["Incendios", "Atracos", "Choques"],
+          labels: provincias,
           datasets: [{
             label: "Incidentes",
-            data: [200, 300, 600],
+            data: numeros,
             borderWidth: 1,
             backgroundColor: ['rgba(168, 29, 31, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)']
           }]

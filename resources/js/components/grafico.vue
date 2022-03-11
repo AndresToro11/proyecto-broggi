@@ -11,7 +11,6 @@
 
         data(){
             return {
-                provincias: []
             }
         },
 
@@ -20,49 +19,54 @@
             axios
                 .get('/grafico/provincias')
                 .then(response => {
-                    console.log('hola');
-                    var auxs = [];
+                    var provincias = [];
                     var encontrado = false;
 
                     for (let i = 0; i < response.data.length; i++) {
-                        for(let aux in auxs){
+                        for(let provincia in provincias){
 
-                            if(response.data[i] == aux){
-                                auxs[aux] = auxs[aux] + 1;
+                            if(response.data[i] == provincia){
+                                provincias[provincia] = provincias[provincia] + 1;
                                 encontrado = true;
                             }
                         }
                         if(encontrado == false){
-                            auxs[response.data[i]] = 1;
+                            provincias[response.data[i]] = 1;
                         }
                         encontrado = false;
                     }
-                    
-                    this.provincias = auxs;
-                    this.grafico(auxs);
+                    this.grafico(provincias);
                 })
                 .catch(error => {
                     console.log(error);
                 })
                 .finally(() => this.loading = false);
-                
+
             },
 
-            grafico(auxs){
+            grafico(provinciasSelect){
                 if (this.grafica) {
                     this.grafica.destroy();
                 }
-                console.log(auxs);
-                new Chart (document.getElementById("grafico").getContext('2d'), { 
+
+                let provincias = [];
+                let numeros = [];
+
+                for(var provincia in provinciasSelect) {
+                    provincias.push(provincia);
+                    numeros.push(provinciasSelect[provincia]);
+                }
+
+                new Chart (document.getElementById("grafico").getContext('2d'), {
                     //Aquí podría haber un if para cambiar el gráfico con un evento de VUE al momento con el metodo destroy.
                     type: /*"doughnut"*/ "pie",
                     data: {
-                        
-                        labels:  ["Incendios", "Atracos", "Choques"],
+
+                        labels:  provincias,
                         datasets: [
                             {
                                 label: "Incidentes",
-                                data: [200, 300, 600],
+                                data: numeros,
                                 borderWidth: 1,
                                 backgroundColor: [
                                     'rgba(168, 29, 31, 1)',
@@ -79,7 +83,7 @@
         mounted() {
             console.log('Component arriba.');
             this.selectProvincias();
-            
+
         }
     }
 
