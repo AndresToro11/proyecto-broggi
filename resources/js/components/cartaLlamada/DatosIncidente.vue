@@ -27,7 +27,7 @@
         </select>
         <input type="text" name="municipio" id="municipio" hidden />
         <h4>Tipos de localizacion</h4>
-        <input type="checkbox" id="carrers" />
+        <input type="checkbox" id="carrers"/>
         <label for="carrers">Calles</label>
         <input type="checkbox" id="puntoSingular" />
         <label for="puntoSingular">Punto singular</label>
@@ -37,6 +37,7 @@
         <label for="entidadPoblacion">Entidad Poblacion</label>
         <input type="checkbox" id="fueraCataluna" />
         <label for="fueraCataluna">Fuera Cataluña</label>
+        <!-- poner lo de arriba desde la bd -->
         <span>
             <label for="via">Via</label>
             <input type="text" name="via" id="via" />
@@ -93,6 +94,26 @@ export default {
             comarcas: [],
             tIncidentes: [],
             incidentes: [],
+            datos_incidente:{
+                catalunya: "",
+                comarca: "",
+                provincia: "",
+                municipio: "",
+                localizacion: "",
+                via: "",
+                direccion: "",
+                numPuerta: "",
+                escalera: "",
+                piso: "",
+                puerta: "",
+                nombre: "",
+                carretera: "",
+                puntoKm: "",
+                sentido: "",
+                entidad: "",
+                tiposIncidente: "",
+                incidente: ""
+            }
         };
     },
     methods: {
@@ -152,6 +173,8 @@ export default {
                     console.log(error);
                 })
                 .finally(() => (this.loading = false));
+        },setDataIncidente(){
+            this.$emit("getDataIncidente", this.datos_incidente);
         },
     },
     mounted() {

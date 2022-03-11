@@ -8,24 +8,18 @@
         <br />
         <br />
         <label for="procedencia">Procedencia</label>
-        <input type="text" name="procedencia" id="procedencia" required />
+        <input type="text" name="procedencia" id="procedencia" required />ç
+        <label for="origen">Origen</label>
+        <input type="text" name="origen" id="origen" required />
         <label for="municipio">Municipio</label>
-        <select class="form-control" id="municipio">
+        <select class="form-control" id="municipio" v-model="datos_personales.municipio">
             <option value=""></option>
-            <option v-for="municipio in municipios" :key="municipio.id">
+            <option v-for="municipio in municipios" :key="municipio.id" >
                 {{ municipio.nom }}
             </option>
         </select>
-        <br />
         <label for="direccion">Direccion</label>
         <input type="text" name="direccion" id="direccion" required />
-
-        <label for="hora">Hora</label>
-        <input type="text" name="hora" id="hora" required />
-        <label for="llamada">Llamada:</label>
-        <input type="text" name="llamada" id="llamada" required />
-        <br />
-        <br />
         <label for="notaComun">Nota comun:</label>
         <input
             type="text"
@@ -45,10 +39,9 @@ export default {
                 telefono:"",
                 antecedentes:"",
                 procedencia:"",
+                origen:"",
                 municipio:"",
                 direccion:"",
-                hora:"",
-                llamada:"",
                 notaComun:""
             }
         };
@@ -68,8 +61,8 @@ export default {
                 })
                 .finally(() => (this.loading = false));
         },
-        setData(){
-            this.$emit("getData", this.datos_personales);
+        setDataPersonal(){
+            this.$emit("getDataPersonal", this.datos_personales);
         },
     },
 

@@ -5364,10 +5364,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosAdministrativos'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosPersonales'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosIncidente'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/ExpedientesRelacionados'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 //
 //
 //
@@ -5380,26 +5376,46 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 //
 //
 //
-
-
-
-
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      array: []
+      array: [],
+      cartaLlamada: {
+        temps_trucada: contador,
+        dades_personals_id: " ",
+        telefon: arrayPersonal.telefono,
+        procedencia_trucada: arrayPersonal.procedencia,
+        origen_trucada: arrayPersonal.origen,
+        nom_trucada: "null",
+        municipis_id_trucada: arrayPersonal.municipio,
+        adreca_trucada: arrayPersonal.direccion,
+        fora_catalunya: arrayIncidente.catalunya,
+        provincies_id: arrayIncidente.provincia,
+        municipis_id: arrayIncidente.municipio,
+        tipus_localitzacions_id: arrayIncidente.localizacion,
+        descripcio_localitzacio: arrayIncidente.carretera + " " + arrayIncidente.puntoKm + " " + arrayIncidente.sentido + " Direccion" + arrayIncidente.direccion + " Numero puerta:" + arrayIncidente.numPuerta + " Escalera:" + arrayIncidente.escalera + " Piso:" + arrayIncidente.piso + " Puerta:" + arrayIncidente.puerta,
+        detall_localitzacio: " ",
+        altres_ref_localitzacio: " ",
+        incidents_id: arrayIncidente.incidente,
+        nota_comuna: arrayPersonal.notaComun,
+        expedients_id: " ",
+        usuaris_id: " "
+      }
     };
   },
   methods: {
-    getData: function getData(array) {
-      this.array = array;
-    }
-  },
-  components: {
-    DatosAdministrativos: Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosAdministrativos'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
-    DatosPersonales: Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosPersonales'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
-    DatosIncidente: Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/DatosIncidente'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
-    ExpedientesRelacionados: Object(function webpackMissingModule() { var e = new Error("Cannot find module '@/components/cartaLlamada/ExpedientesRelacionados'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    getDataPersonal: function getDataPersonal(array) {
+      this.arrayPersonal = array;
+    },
+    getDataIncidente: function getDataIncidente(array) {
+      this.arrayIncidente = array;
+    },
+    getDataAdministrativos: function getDataAdministrativos(contador) {
+      this.contador = contador;
+    },
+    insertBD: function insertBD() {}
   }
 });
 
@@ -5423,11 +5439,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
+  data: function data() {
+    return {
+      contador: " "
+    };
+  },
+  setDataAdministrativos: function setDataAdministrativos() {
+    this.$emit("getDataAdministrativos", this.contador);
   }
 });
 
@@ -5530,6 +5549,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5537,7 +5557,27 @@ __webpack_require__.r(__webpack_exports__);
       provincias: [],
       comarcas: [],
       tIncidentes: [],
-      incidentes: []
+      incidentes: [],
+      datos_incidente: {
+        catalunya: "",
+        comarca: "",
+        provincia: "",
+        municipio: "",
+        localizacion: "",
+        via: "",
+        direccion: "",
+        numPuerta: "",
+        escalera: "",
+        piso: "",
+        puerta: "",
+        nombre: "",
+        carretera: "",
+        puntoKm: "",
+        sentido: "",
+        entidad: "",
+        tiposIncidente: "",
+        incidente: ""
+      }
     };
   },
   methods: {
@@ -5589,6 +5629,9 @@ __webpack_require__.r(__webpack_exports__);
       })["finally"](function () {
         return _this.loading = false;
       });
+    },
+    setDataIncidente: function setDataIncidente() {
+      this.$emit("getDataIncidente", this.datos_incidente);
     }
   },
   mounted: function mounted() {
@@ -5642,12 +5685,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5656,10 +5693,9 @@ __webpack_require__.r(__webpack_exports__);
         telefono: "",
         antecedentes: "",
         procedencia: "",
+        origen: "",
         municipio: "",
         direccion: "",
-        hora: "",
-        llamada: "",
         notaComun: ""
       }
     };
@@ -5679,8 +5715,8 @@ __webpack_require__.r(__webpack_exports__);
         return _this.loading = false;
       });
     },
-    setData: function setData() {
-      this.$emit("getData", this.datos_personales);
+    setDataPersonal: function setDataPersonal() {
+      this.$emit("getDataPersonal", this.datos_personales);
     }
   },
   mounted: function mounted() {
@@ -42785,7 +42821,7 @@ var render = function () {
     [
       _c("datos-administrativos"),
       _vm._v(" "),
-      _c("datos-personales"),
+      _c("datos-personales", { on: { getData: _vm.getData } }),
       _vm._v(" "),
       _c("datos-incidentes"),
       _vm._v(" "),
@@ -42801,11 +42837,11 @@ var render = function () {
           attrs: { type: "button" },
           on: {
             click: function ($event) {
-              return _vm.insert()
+              _vm.setDataPersonal(), _vm.setDataIncidente()
             },
           },
         },
-        [_vm._v("Aceptar")]
+        [_vm._v("\n        Aceptar\n    ")]
       ),
       _vm._v(" "),
       _c("expedientes-relacionados"),
@@ -42847,10 +42883,6 @@ var staticRenderFns = [
       _c("h3", [_vm._v("Datos Administrativos")]),
       _vm._v(" "),
       _c("p", [_vm._v("Contador: 00:00")]),
-      _vm._v(" "),
-      _c("p", [_vm._v("Codigo expediente: Ex2131321")]),
-      _vm._v(" "),
-      _c("p", [_vm._v("Codigo Trucada: TR3242")]),
     ])
   },
 ]
@@ -43155,12 +43187,46 @@ var render = function () {
         required: "",
       },
     }),
+    _vm._v("ç\n    "),
+    _c("label", { attrs: { for: "origen" } }, [_vm._v("Origen")]),
+    _vm._v(" "),
+    _c("input", {
+      attrs: { type: "text", name: "origen", id: "origen", required: "" },
+    }),
     _vm._v(" "),
     _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
     _vm._v(" "),
     _c(
       "select",
-      { staticClass: "form-control", attrs: { id: "municipio" } },
+      {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.datos_personales.municipio,
+            expression: "datos_personales.municipio",
+          },
+        ],
+        staticClass: "form-control",
+        attrs: { id: "municipio" },
+        on: {
+          change: function ($event) {
+            var $$selectedVal = Array.prototype.filter
+              .call($event.target.options, function (o) {
+                return o.selected
+              })
+              .map(function (o) {
+                var val = "_value" in o ? o._value : o.value
+                return val
+              })
+            _vm.$set(
+              _vm.datos_personales,
+              "municipio",
+              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+            )
+          },
+        },
+      },
       [
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
@@ -43173,29 +43239,11 @@ var render = function () {
       2
     ),
     _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
     _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
     _vm._v(" "),
     _c("input", {
       attrs: { type: "text", name: "direccion", id: "direccion", required: "" },
     }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "hora" } }, [_vm._v("Hora")]),
-    _vm._v(" "),
-    _c("input", {
-      attrs: { type: "text", name: "hora", id: "hora", required: "" },
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "llamada" } }, [_vm._v("Llamada:")]),
-    _vm._v(" "),
-    _c("input", {
-      attrs: { type: "text", name: "llamada", id: "llamada", required: "" },
-    }),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
     _vm._v(" "),
     _c("label", { attrs: { for: "notaComun" } }, [_vm._v("Nota comun:")]),
     _vm._v(" "),
