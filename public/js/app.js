@@ -5484,10 +5484,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+var grafica;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    var grafica;
-  },
+  data: function data() {},
   methods: {
     selectProvincias: function selectProvincias() {
       var _this = this;
@@ -5495,6 +5494,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('/grafico/provincias').then(function (response) {
         var provincias = [];
         var encontrado = false;
+        var type = 'bar';
 
         for (var i = 0; i < response.data.length; i++) {
           for (var provincia in provincias) {
@@ -5511,7 +5511,7 @@ __webpack_require__.r(__webpack_exports__);
           encontrado = false;
         }
 
-        _this.grafico(provincias);
+        _this.grafico(provincias, type);
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
@@ -5522,59 +5522,62 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios.get('/grafico/municipios').then(function (response) {
-        var provincias = [];
+        var municipios = [];
         var encontrado = false;
+        var type = 'doughnut';
 
         for (var i = 0; i < response.data.length; i++) {
-          for (var provincia in provincias) {
-            if (response.data[i] == provincia) {
-              provincias[provincia] = provincias[provincia] + 1;
+          for (var municipio in municipios) {
+            if (response.data[i] == municipio) {
+              municipios[municipio] = municipios[municipio] + 1;
               encontrado = true;
             }
           }
 
           if (encontrado == false) {
-            provincias[response.data[i]] = 1;
+            municipios[response.data[i]] = 1;
           }
 
           encontrado = false;
         }
 
-        _this2.grafico(provincias);
+        _this2.grafico(municipios, type);
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
         return _this2.loading = false;
       });
     },
-    grafico: function grafico(provinciasSelect) {
+    grafico: function grafico(datos, tipo) {
+      var objetos = [];
+      var numeros = [];
+
+      for (var dato in datos) {
+        objetos.push(dato);
+        numeros.push(datos[dato]);
+      }
+
+      var canva = document.getElementById("grafico").getContext('2d');
+
       if (grafica) {
         grafica.destroy();
       }
 
-      var provincias = [];
-      var numeros = [];
-
-      for (var provincia in provinciasSelect) {
-        provincias.push(provincia);
-        numeros.push(provinciasSelect[provincia]);
-      }
-
-      grafica = new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](document.getElementById("grafico").getContext('2d'), {
-        //Aquí podría haber un if para cambiar el gráfico con un evento de VUE al momento con el metodo destroy.
-        type:
-        /*"doughnut"*/
-        "pie",
+      grafica = new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](canva, {
+        type: tipo,
+        //"doughnut" "pie" "polarArea" "bar" "line",
         data: {
-          labels: provincias,
+          labels: objetos,
           datasets: [{
             label: "Incidentes",
             data: numeros,
-            borderWidth: 1,
-            backgroundColor: ['rgba(168, 29, 31, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)']
+            borderWidth: 5,
+            backgroundColor: ['rgba(168, 29, 31, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(255, 72, 0)', 'rgba(54, 135, 30)']
           }]
         }
       });
+      grafica.canvas.parentNode.style.width = '800px';
+      grafica.canvas.parentNode.style.width = '800px';
     }
   },
   mounted: function mounted() {
@@ -41678,7 +41681,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./grafico.vue?vue&type=template&id=1814014a&width=200&height=100& */ "./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100&");
+/* harmony import */ var _grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./grafico.vue?vue&type=template&id=1814014a& */ "./resources/js/components/grafico.vue?vue&type=template&id=1814014a&");
 /* harmony import */ var _grafico_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./grafico.vue?vue&type=script&lang=js& */ "./resources/js/components/grafico.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
@@ -41690,8 +41693,8 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _grafico_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__.render,
-  _grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -41975,19 +41978,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100& ***!
-  \*************************************************************************************************/
+/***/ "./resources/js/components/grafico.vue?vue&type=template&id=1814014a&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/grafico.vue?vue&type=template&id=1814014a& ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./grafico.vue?vue&type=template&id=1814014a&width=200&height=100& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./grafico.vue?vue&type=template&id=1814014a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a&");
 
 
 /***/ }),
@@ -42237,10 +42240,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100&":
-/*!****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100& ***!
-  \****************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a& ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -42254,7 +42257,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("canvas", { attrs: { id: "grafico", width: "200", height: "100" } }),
+    _c("canvas", { attrs: { id: "grafico" } }),
     _vm._v(" "),
     _c("div", [
       _c("button", { on: { click: _vm.selectProvincias } }, [

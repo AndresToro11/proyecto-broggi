@@ -1,6 +1,6 @@
-<template width="200" height="100">
+<template>
     <div>
-        <canvas id="grafico" width="200" height="100"></canvas>
+        <canvas id="grafico"></canvas>
         <div>
             <button v-on:click="selectProvincias">Provincias</button>
             <button v-on:click="selectMunicipios">Municipios</button>
@@ -11,11 +11,13 @@
 <script>
     import Chart from "chart.js/auto";
 
+    let grafica;
+    
+
     export default {
         data(){
-            var grafica;
+            
         },
-
 
         methods:{
             selectProvincias(){
@@ -24,6 +26,7 @@
                 .then(response => {
                     var provincias = [];
                     var encontrado = false;
+                    var type = 'bar';
 
                     for (let i = 0; i < response.data.length; i++) {
                         for(let provincia in provincias){
@@ -38,7 +41,7 @@
                         }
                         encontrado = false;
                     }
-                    this.grafico(provincias);
+                    this.grafico(provincias, type);
                 })
                 .catch(error => {
                     console.log(error);
@@ -50,23 +53,24 @@
                 axios
                 .get('/grafico/municipios')
                 .then(response => {
-                    var provincias = [];
+                    var municipios = [];
                     var encontrado = false;
+                    var type = 'doughnut';
 
                     for (let i = 0; i < response.data.length; i++) {
-                        for(let provincia in provincias){
+                        for(let municipio in municipios){
 
-                            if(response.data[i] == provincia){
-                                provincias[provincia] = provincias[provincia] + 1;
+                            if(response.data[i] == municipio){
+                                municipios[municipio] = municipios[municipio] + 1;
                                 encontrado = true;
                             }
                         }
                         if(encontrado == false){
-                            provincias[response.data[i]] = 1;
+                            municipios[response.data[i]] = 1;
                         }
                         encontrado = false;
                     }
-                    this.grafico(provincias);
+                    this.grafico(municipios, type);
                 })
                 .catch(error => {
                     console.log(error);
@@ -74,40 +78,45 @@
                 .finally(() => this.loading = false);
             },
             
-            grafico(provinciasSelect){
+            grafico(datos, tipo){
 
-                if (grafica) {
+                let objetos = [];
+                let numeros = [];
+
+                for(var dato in datos) {
+                    objetos.push(dato);
+                    numeros.push(datos[dato]);
+                }
+
+                let canva = document.getElementById("grafico").getContext('2d');
+                
+                if(grafica){
                     grafica.destroy();
                 }
 
-                let provincias = [];
-                let numeros = [];
-
-                for(var provincia in provinciasSelect) {
-                    provincias.push(provincia);
-                    numeros.push(provinciasSelect[provincia]);
-                }
-
-                grafica = new Chart (document.getElementById("grafico").getContext('2d'), {
-                    //Aquí podría haber un if para cambiar el gráfico con un evento de VUE al momento con el metodo destroy.
-                    type: /*"doughnut"*/ "pie",
+                grafica = new Chart(canva, 
+                {
+                    type: tipo, //"doughnut" "pie" "polarArea" "bar" "line",
                     data: {
-
-                        labels:  provincias,
+                        labels:  objetos,
                         datasets: [
                             {
                                 label: "Incidentes",
                                 data: numeros,
-                                borderWidth: 1,
+                                borderWidth: 5,
                                 backgroundColor: [
                                     'rgba(168, 29, 31, 1)',
                                     'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)'
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(255, 72, 0)',
+                                    'rgba(54, 135, 30)',
                                 ],
                             },
                         ],
                     }
                 });
+                grafica.canvas.parentNode.style.width = '800px';
+                grafica.canvas.parentNode.style.width = '800px';
             },
         },
 
