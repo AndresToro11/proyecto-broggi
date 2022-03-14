@@ -1,6 +1,10 @@
 <template width="200" height="100">
     <div>
         <canvas id="grafico" width="200" height="100"></canvas>
+        <div>
+            <button v-on:click="selectProvincias">Provincias</button>
+            <button v-on:click="selectMunicipios">Municipios</button>
+        </div>
     </div>
 </template>
 
@@ -8,11 +12,10 @@
     import Chart from "chart.js/auto";
 
     export default {
-
         data(){
-            return {
-            }
+            var grafica;
         },
+
 
         methods:{
             selectProvincias(){
@@ -41,12 +44,40 @@
                     console.log(error);
                 })
                 .finally(() => this.loading = false);
-
             },
 
+            selectMunicipios(){
+                axios
+                .get('/grafico/municipios')
+                .then(response => {
+                    var provincias = [];
+                    var encontrado = false;
+
+                    for (let i = 0; i < response.data.length; i++) {
+                        for(let provincia in provincias){
+
+                            if(response.data[i] == provincia){
+                                provincias[provincia] = provincias[provincia] + 1;
+                                encontrado = true;
+                            }
+                        }
+                        if(encontrado == false){
+                            provincias[response.data[i]] = 1;
+                        }
+                        encontrado = false;
+                    }
+                    this.grafico(provincias);
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+                .finally(() => this.loading = false);
+            },
+            
             grafico(provinciasSelect){
-                if (this.grafica) {
-                    this.grafica.destroy();
+
+                if (grafica) {
+                    grafica.destroy();
                 }
 
                 let provincias = [];
@@ -57,7 +88,7 @@
                     numeros.push(provinciasSelect[provincia]);
                 }
 
-                new Chart (document.getElementById("grafico").getContext('2d'), {
+                grafica = new Chart (document.getElementById("grafico").getContext('2d'), {
                     //Aquí podría haber un if para cambiar el gráfico con un evento de VUE al momento con el metodo destroy.
                     type: /*"doughnut"*/ "pie",
                     data: {
@@ -77,13 +108,12 @@
                         ],
                     }
                 });
-            }
+            },
         },
 
         mounted() {
             console.log('Component arriba.');
-            this.selectProvincias();
-
+            this.selectMunicipios();
         }
     }
 

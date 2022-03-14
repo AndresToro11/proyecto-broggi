@@ -25,7 +25,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('user', UsuariController::class);
 
 Route::apiResource('expediente', ExpedientController::class);
-//Route::get('expediente/provincias', [ExpedientController::class, 'provincias']);
 
-//Route::apiResource('grafico', GraficoController::class);
+//-------------------------------- Grafico -----------------------------------
+
 Route::get('grafico/provincias', [GraficoController::class, 'provincias']);
+Route::get('grafico/municipios', [GraficoController::class, 'municipios']);
+
+//----------------------------------------------------------------------------

@@ -5479,10 +5479,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    var grafica;
   },
   methods: {
     selectProvincias: function selectProvincias() {
@@ -5514,9 +5518,38 @@ __webpack_require__.r(__webpack_exports__);
         return _this.loading = false;
       });
     },
+    selectMunicipios: function selectMunicipios() {
+      var _this2 = this;
+
+      axios.get('/grafico/municipios').then(function (response) {
+        var provincias = [];
+        var encontrado = false;
+
+        for (var i = 0; i < response.data.length; i++) {
+          for (var provincia in provincias) {
+            if (response.data[i] == provincia) {
+              provincias[provincia] = provincias[provincia] + 1;
+              encontrado = true;
+            }
+          }
+
+          if (encontrado == false) {
+            provincias[response.data[i]] = 1;
+          }
+
+          encontrado = false;
+        }
+
+        _this2.grafico(provincias);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this2.loading = false;
+      });
+    },
     grafico: function grafico(provinciasSelect) {
-      if (this.grafica) {
-        this.grafica.destroy();
+      if (grafica) {
+        grafica.destroy();
       }
 
       var provincias = [];
@@ -5527,7 +5560,7 @@ __webpack_require__.r(__webpack_exports__);
         numeros.push(provinciasSelect[provincia]);
       }
 
-      new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](document.getElementById("grafico").getContext('2d'), {
+      grafica = new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](document.getElementById("grafico").getContext('2d'), {
         //Aquí podría haber un if para cambiar el gráfico con un evento de VUE al momento con el metodo destroy.
         type:
         /*"doughnut"*/
@@ -5546,7 +5579,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     console.log('Component arriba.');
-    this.selectProvincias();
+    this.selectMunicipios();
   }
 }); //Graficos https://parzibyte.me/blog/2021/11/02/usar-chart-js-vue-js-webpack-npm/
 //https://www.chartjs.org/docs/latest/
@@ -42220,18 +42253,21 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("canvas", { attrs: { id: "grafico", width: "200", height: "100" } }),
+    _vm._v(" "),
+    _c("div", [
+      _c("button", { on: { click: _vm.selectProvincias } }, [
+        _vm._v("Provincias"),
+      ]),
+      _vm._v(" "),
+      _c("button", { on: { click: _vm.selectMunicipios } }, [
+        _vm._v("Municipios"),
+      ]),
+    ]),
+  ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("canvas", { attrs: { id: "grafico", width: "200", height: "100" } }),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
