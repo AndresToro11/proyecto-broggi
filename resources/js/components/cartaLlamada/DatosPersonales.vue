@@ -8,7 +8,7 @@
         <br />
         <br />
         <label for="procedencia">Procedencia</label>
-        <input type="text" name="procedencia" id="procedencia" required />ç
+        <input type="text" name="procedencia" id="procedencia" required />
         <label for="origen">Origen</label>
         <input type="text" name="origen" id="origen" required />
         <label for="municipio">Municipio</label>

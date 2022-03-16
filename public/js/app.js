@@ -5378,43 +5378,70 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      array: [],
       cartaLlamada: {
-        temps_trucada: contador,
+        temps_trucada: "contador",
         dades_personals_id: " ",
-        telefon: arrayPersonal.telefono,
-        procedencia_trucada: arrayPersonal.procedencia,
-        origen_trucada: arrayPersonal.origen,
+        telefon: " ",
+        procedencia_trucada: " ",
+        origen_trucada: " ",
         nom_trucada: "null",
-        municipis_id_trucada: arrayPersonal.municipio,
-        adreca_trucada: arrayPersonal.direccion,
-        fora_catalunya: arrayIncidente.catalunya,
-        provincies_id: arrayIncidente.provincia,
-        municipis_id: arrayIncidente.municipio,
-        tipus_localitzacions_id: arrayIncidente.localizacion,
-        descripcio_localitzacio: arrayIncidente.carretera + " " + arrayIncidente.puntoKm + " " + arrayIncidente.sentido + " Direccion" + arrayIncidente.direccion + " Numero puerta:" + arrayIncidente.numPuerta + " Escalera:" + arrayIncidente.escalera + " Piso:" + arrayIncidente.piso + " Puerta:" + arrayIncidente.puerta,
+        municipis_id_trucada: " ",
+        adreca_trucada: " ",
+        fora_catalunya: " ",
+        provincies_id: " ",
+        municipis_id: " ",
+        tipus_localitzacions_id: " ",
+        descripcio_localitzacio: " ",
         detall_localitzacio: " ",
-        altres_ref_localitzacio: " ",
-        incidents_id: arrayIncidente.incidente,
-        nota_comuna: arrayPersonal.notaComun,
+        altres_ref_localitzacio: "",
+        incidents_id: " ",
+        nota_comuna: " ",
         expedients_id: " ",
         usuaris_id: " "
       }
     };
   },
   methods: {
+    select: function select() {
+      var _this = this;
+
+      var me = this;
+      console.log("Entrando a la select");
+      axios.get("/idLocalizacion").then(function (response) {
+        console.log("ol");
+        me.idLocalizaciones = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+    },
     getDataPersonal: function getDataPersonal(array) {
-      this.arrayPersonal = array;
+      cartaLlamada.telefon = array.telefono, cartaLlamada.procedencia_trucada = array.procedencia, cartaLlamada.origen_trucada = array.origen, cartaLlamada.municipis_id_trucada = array.municipio, cartaLlamada.adreca_trucada = array.direccion, cartaLlamada.nota_comuna = array.notaComun;
     },
     getDataIncidente: function getDataIncidente(array) {
-      this.arrayIncidente = array;
+      cartaLlamada.fora_catalunya = array.catalunya, cartaLlamada.provincies_id = array.provincia, cartaLlamada.municipis_id = array.municipio, cartaLlamada.tipus_localitzacions_id = array.localizacion, cartaLlamada.descripcio_localitzacio = array.descripcio_localitzacio, cartaLlamada.detall_localitzacio = array.detall_localitzacio, cartaLlamada.incidents_id = array.incidente;
     },
     getDataAdministrativos: function getDataAdministrativos(contador) {
       this.contador = contador;
     },
+    console: function (_console) {
+      function console() {
+        return _console.apply(this, arguments);
+      }
+
+      console.toString = function () {
+        return _console.toString();
+      };
+
+      return console;
+    }(function () {
+      console.log(this.cartaLlamada);
+    }),
     insertBD: function insertBD() {}
   }
 });
@@ -5540,45 +5567,110 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       municipios: [],
       provincias: [],
       comarcas: [],
+      tiposLocalizaciones: [],
       tIncidentes: [],
       incidentes: [],
+      calle: {
+        via: "",
+        direccion: "",
+        numPuerta: ""
+      },
+      calle2: {
+        escalera: "",
+        piso: "",
+        puerta: ""
+      },
+      puntoSingular: {
+        nombre: ""
+      },
+      carretera: {
+        carretera: "",
+        puntoKm: ""
+      },
+      carretera2: {
+        sentido: ""
+      },
       datos_incidente: {
         catalunya: "",
         comarca: "",
         provincia: "",
         municipio: "",
         localizacion: "",
-        via: "",
-        direccion: "",
-        numPuerta: "",
-        escalera: "",
-        piso: "",
-        puerta: "",
-        nombre: "",
-        carretera: "",
-        puntoKm: "",
-        sentido: "",
-        entidad: "",
+        descripcio_localitzacio: "",
+        detall_localitzacio: "",
+        altres_ref_localitzacio: "",
         tiposIncidente: "",
         incidente: ""
       }
     };
+  },
+  computed: {
+    descripcioLocalitzacio: function descripcioLocalitzacio() {
+      var varianle;
+
+      switch (this.datos_incidente.localizacion) {
+        case 1:
+          varianle = this.calle;
+          break;
+
+        case 2:
+          varianle = this.puntoSingular;
+          break;
+
+        case 3:
+          varianle = this["null"];
+          break;
+
+        case 4:
+          varianle = this.carretera;
+          break;
+
+        case 5:
+          varianle = this.datos_incidente.provincia;
+          break;
+
+        default:
+          break;
+      }
+
+      this.datos_incidente.descripcio_localitzacio = varianle;
+    },
+    detallLocalitzacio: function detallLocalitzacio() {
+      var varianle;
+
+      switch (this.datos_incidente.localizacion) {
+        case 1:
+          varianle = this.calle2;
+          break;
+
+        case 2:
+          varianle = null;
+          break;
+
+        case 3:
+          varianle = this["null"];
+          break;
+
+        case 4:
+          varianle = this.carretera2;
+          break;
+
+        case 5:
+          varianle = null;
+          break;
+
+        default:
+          break;
+      }
+
+      this.datos_incidente.detall_localitzacio = varianle;
+    }
   },
   methods: {
     emit: function emit() {
@@ -5624,6 +5716,14 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("/incidente").then(function (response) {
         console.log("Comarca OK");
         me.incidentes = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+      axios.get("/tiposLocalitzacion").then(function (response) {
+        console.log("Tipos Localizacion OK");
+        me.tiposLocalizaciones = response.data;
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
@@ -42821,11 +42921,11 @@ var render = function () {
     [
       _c("datos-administrativos"),
       _vm._v(" "),
-      _c("datos-personales", { on: { getData: _vm.getData } }),
+      _c("datos-personales", { on: { getDataPersonal: _vm.getDataPersonal } }),
       _vm._v(" "),
-      _c("datos-incidentes"),
-      _vm._v(" "),
-      _c("Personals", { on: { getData: _vm.getData } }),
+      _c("datos-incidentes", {
+        on: { getDataIncidente: _vm.getDataIncidente },
+      }),
       _vm._v(" "),
       _c("h3", [_vm._v("boton")]),
       _vm._v(" "),
@@ -42837,11 +42937,14 @@ var render = function () {
           attrs: { type: "button" },
           on: {
             click: function ($event) {
-              _vm.setDataPersonal(), _vm.setDataIncidente()
+              _vm.setDataPersonal(),
+                _vm.setDataIncidente(),
+                _vm.setDataAdministrativos(),
+                _vm.console()
             },
           },
         },
-        [_vm._v("\n        Aceptar\n    ")]
+        [_vm._v("Aceptar")]
       ),
       _vm._v(" "),
       _c("expedientes-relacionados"),
@@ -42912,7 +43015,44 @@ var render = function () {
     _c("h3", [_vm._v("Datos Incidente")]),
     _vm._v(" "),
     _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.datos_incidente.catalunya,
+          expression: "datos_incidente.catalunya",
+        },
+      ],
       attrs: { type: "checkbox", name: "catalunya", id: "catalunya" },
+      domProps: {
+        checked: Array.isArray(_vm.datos_incidente.catalunya)
+          ? _vm._i(_vm.datos_incidente.catalunya, null) > -1
+          : _vm.datos_incidente.catalunya,
+      },
+      on: {
+        change: function ($event) {
+          var $$a = _vm.datos_incidente.catalunya,
+            $$el = $event.target,
+            $$c = $$el.checked ? true : false
+          if (Array.isArray($$a)) {
+            var $$v = null,
+              $$i = _vm._i($$a, $$v)
+            if ($$el.checked) {
+              $$i < 0 &&
+                _vm.$set(_vm.datos_incidente, "catalunya", $$a.concat([$$v]))
+            } else {
+              $$i > -1 &&
+                _vm.$set(
+                  _vm.datos_incidente,
+                  "catalunya",
+                  $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                )
+            }
+          } else {
+            _vm.$set(_vm.datos_incidente, "catalunya", $$c)
+          }
+        },
+      },
     }),
     _vm._v(" "),
     _c("label", { attrs: { for: "catalunya" } }, [
@@ -42925,7 +43065,35 @@ var render = function () {
     _vm._v(" "),
     _c(
       "select",
-      { staticClass: "form-control", attrs: { id: "comarca" } },
+      {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.datos_incidente.comarca,
+            expression: "datos_incidente.comarca",
+          },
+        ],
+        staticClass: "form-control",
+        attrs: { id: "comarca" },
+        on: {
+          change: function ($event) {
+            var $$selectedVal = Array.prototype.filter
+              .call($event.target.options, function (o) {
+                return o.selected
+              })
+              .map(function (o) {
+                var val = "_value" in o ? o._value : o.value
+                return val
+              })
+            _vm.$set(
+              _vm.datos_incidente,
+              "comarca",
+              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+            )
+          },
+        },
+      },
       [
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
@@ -42942,7 +43110,35 @@ var render = function () {
     _vm._v(" "),
     _c(
       "select",
-      { staticClass: "form-control", attrs: { id: "provincia" } },
+      {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.datos_incidente.provincia,
+            expression: "datos_incidente.provincia",
+          },
+        ],
+        staticClass: "form-control",
+        attrs: { id: "provincia" },
+        on: {
+          change: function ($event) {
+            var $$selectedVal = Array.prototype.filter
+              .call($event.target.options, function (o) {
+                return o.selected
+              })
+              .map(function (o) {
+                var val = "_value" in o ? o._value : o.value
+                return val
+              })
+            _vm.$set(
+              _vm.datos_incidente,
+              "provincia",
+              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+            )
+          },
+        },
+      },
       [
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
@@ -42959,7 +43155,35 @@ var render = function () {
     _vm._v(" "),
     _c(
       "select",
-      { staticClass: "form-control", attrs: { id: "municipio" } },
+      {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.datos_incidente.municipio,
+            expression: "datos_incidente.municipio",
+          },
+        ],
+        staticClass: "form-control",
+        attrs: { id: "municipio" },
+        on: {
+          change: function ($event) {
+            var $$selectedVal = Array.prototype.filter
+              .call($event.target.options, function (o) {
+                return o.selected
+              })
+              .map(function (o) {
+                var val = "_value" in o ? o._value : o.value
+                return val
+              })
+            _vm.$set(
+              _vm.datos_incidente,
+              "municipio",
+              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+            )
+          },
+        },
+      },
       [
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
@@ -42972,45 +43196,288 @@ var render = function () {
       2
     ),
     _vm._v(" "),
-    _c("input", {
-      attrs: { type: "text", name: "municipio", id: "municipio", hidden: "" },
-    }),
-    _vm._v(" "),
     _c("h4", [_vm._v("Tipos de localizacion")]),
     _vm._v(" "),
-    _c("input", { attrs: { type: "checkbox", id: "carrers" } }),
+    _c(
+      "select",
+      {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.datos_incidente.localizacion,
+            expression: "datos_incidente.localizacion",
+          },
+        ],
+        staticClass: "form-control",
+        attrs: { id: "tiposLocalizacion" },
+        on: {
+          change: function ($event) {
+            var $$selectedVal = Array.prototype.filter
+              .call($event.target.options, function (o) {
+                return o.selected
+              })
+              .map(function (o) {
+                var val = "_value" in o ? o._value : o.value
+                return val
+              })
+            _vm.$set(
+              _vm.datos_incidente,
+              "localizacion",
+              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+            )
+          },
+        },
+      },
+      [
+        _c("option", { attrs: { value: "" } }),
+        _vm._v(" "),
+        _vm._l(_vm.tiposLocalizaciones, function (tiposLocalizacion) {
+          return _c("option", { key: tiposLocalizacion.id }, [
+            _vm._v(
+              "\n            " + _vm._s(tiposLocalizacion.tipus) + "\n        "
+            ),
+          ])
+        }),
+      ],
+      2
+    ),
     _vm._v(" "),
-    _c("label", { attrs: { for: "carrers" } }, [_vm._v("Calles")]),
-    _vm._v(" "),
-    _c("input", { attrs: { type: "checkbox", id: "puntoSingular" } }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "puntoSingular" } }, [
-      _vm._v("Punto singular"),
+    _c("span", [
+      _c("label", { attrs: { for: "via" } }, [_vm._v("Via")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.calle.via,
+            expression: "calle.via",
+          },
+        ],
+        attrs: { type: "text", name: "via", id: "via" },
+        domProps: { value: _vm.calle.via },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.calle, "via", $event.target.value)
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.calle.direccion,
+            expression: "calle.direccion",
+          },
+        ],
+        attrs: { type: "text", name: "direccion", id: "direccion" },
+        domProps: { value: _vm.calle.direccion },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.calle, "direccion", $event.target.value)
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "numero" } }, [_vm._v("Numero puerta")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.calle.numero,
+            expression: "calle.numero",
+          },
+        ],
+        attrs: { type: "number", name: "numero", id: "numero" },
+        domProps: { value: _vm.calle.numero },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.calle, "numero", $event.target.value)
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "escala" } }, [_vm._v("Escala")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.calle2.escala,
+            expression: "calle2.escala",
+          },
+        ],
+        attrs: { type: "text", name: "escala", id: "escala" },
+        domProps: { value: _vm.calle2.escala },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.calle2, "escala", $event.target.value)
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "piso" } }, [_vm._v("Piso")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.calle2.piso,
+            expression: "calle2.piso",
+          },
+        ],
+        attrs: { type: "number", name: "piso", id: "piso" },
+        domProps: { value: _vm.calle2.piso },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.calle2, "piso", $event.target.value)
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "puerta" } }, [_vm._v("Puerta")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.calle.puerta,
+            expression: "calle.puerta",
+          },
+        ],
+        attrs: { type: "number", name: "puerta", id: "puerta" },
+        domProps: { value: _vm.calle.puerta },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.calle, "puerta", $event.target.value)
+          },
+        },
+      }),
     ]),
     _vm._v(" "),
-    _c("input", { attrs: { type: "checkbox", id: "carretera" } }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "carretera" } }, [_vm._v("Carretera")]),
-    _vm._v(" "),
-    _c("input", { attrs: { type: "checkbox", id: "entidadPoblacion " } }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "entidadPoblacion" } }, [
-      _vm._v("Entidad Poblacion"),
+    _c("span", [
+      _c("label", { attrs: { for: "nombre" } }, [_vm._v("Nombre")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.puntoSingular.nombre,
+            expression: "puntoSingular.nombre",
+          },
+        ],
+        attrs: { type: "text", name: "nombre", id: "nombre" },
+        domProps: { value: _vm.puntoSingular.nombre },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.puntoSingular, "nombre", $event.target.value)
+          },
+        },
+      }),
     ]),
     _vm._v(" "),
-    _c("input", { attrs: { type: "checkbox", id: "fueraCataluna" } }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "fueraCataluna" } }, [
-      _vm._v("Fuera Cataluña"),
+    _c("span", [
+      _c("label", { attrs: { for: "carretera" } }, [_vm._v("Carretera")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.carretera.carretera,
+            expression: "carretera.carretera",
+          },
+        ],
+        attrs: { type: "text", name: "carretera", id: "carretera" },
+        domProps: { value: _vm.carretera.carretera },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.carretera, "carretera", $event.target.value)
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "puntoKM" } }, [_vm._v("Punto kilometrico")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.carretera.puntoKm,
+            expression: "carretera.puntoKm",
+          },
+        ],
+        attrs: { type: "number", name: "puntoKM", id: "puntoKM" },
+        domProps: { value: _vm.carretera.puntoKm },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.carretera, "puntoKm", $event.target.value)
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "sentido" } }, [_vm._v("Sentido")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.carretera2.sentido,
+            expression: "carretera2.sentido",
+          },
+        ],
+        attrs: { type: "text", name: "sentido", id: "sentido" },
+        domProps: { value: _vm.carretera2.sentido },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.carretera2, "sentido", $event.target.value)
+          },
+        },
+      }),
     ]),
-    _vm._v(" "),
-    _vm._m(0),
-    _vm._v(" "),
-    _vm._m(1),
-    _vm._v(" "),
-    _vm._m(2),
-    _vm._v(" "),
-    _vm._m(3),
     _vm._v(" "),
     _c("h4", [_vm._v("Emergencia")]),
     _vm._v(" "),
@@ -43020,7 +43487,35 @@ var render = function () {
     _vm._v(" "),
     _c(
       "select",
-      { staticClass: "form-control", attrs: { id: "tiposIncidete" } },
+      {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.datos_incidente.tiposIncidente,
+            expression: "datos_incidente.tiposIncidente",
+          },
+        ],
+        staticClass: "form-control",
+        attrs: { id: "tiposIncidete" },
+        on: {
+          change: function ($event) {
+            var $$selectedVal = Array.prototype.filter
+              .call($event.target.options, function (o) {
+                return o.selected
+              })
+              .map(function (o) {
+                var val = "_value" in o ? o._value : o.value
+                return val
+              })
+            _vm.$set(
+              _vm.datos_incidente,
+              "tiposIncidente",
+              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+            )
+          },
+        },
+      },
       [
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
@@ -43039,7 +43534,35 @@ var render = function () {
     _vm._v(" "),
     _c(
       "select",
-      { staticClass: "form-control", attrs: { id: "incidente" } },
+      {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.datos_incidente.incidente,
+            expression: "datos_incidente.incidente",
+          },
+        ],
+        staticClass: "form-control",
+        attrs: { id: "incidente" },
+        on: {
+          change: function ($event) {
+            var $$selectedVal = Array.prototype.filter
+              .call($event.target.options, function (o) {
+                return o.selected
+              })
+              .map(function (o) {
+                var val = "_value" in o ? o._value : o.value
+                return val
+              })
+            _vm.$set(
+              _vm.datos_incidente,
+              "incidente",
+              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+            )
+          },
+        },
+      },
       [
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
@@ -43055,82 +43578,7 @@ var render = function () {
     ),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", [
-      _c("label", { attrs: { for: "via" } }, [_vm._v("Via")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "text", name: "via", id: "via" } }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: { type: "text", name: "direccion", id: "direccion" },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "numero" } }, [_vm._v("Numero puerta")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "number", name: "numero", id: "numero" } }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "escala" } }, [_vm._v("Escala")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "text", name: "escala", id: "escala" } }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "piso" } }, [_vm._v("Piso")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "number", name: "piso", id: "piso" } }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "puerta" } }, [_vm._v("Puerta")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "number", name: "puerta", id: "puerta" } }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", [
-      _c("label", { attrs: { for: "nombre" } }, [_vm._v("Nombre")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "text", name: "nombre", id: "nombre" } }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", [
-      _c("label", { attrs: { for: "carretera" } }, [_vm._v("Carretera")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: { type: "text", name: "carretera", id: "carretera" },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "puntoKM" } }, [_vm._v("Punto kilometrico")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: { type: "number", name: "puntoKM", id: "puntoKM" },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "sentido" } }, [_vm._v("Sentido")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "text", name: "sentido", id: "sentido" } }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", [
-      _c("label", { attrs: { for: "entidad" } }, [_vm._v("Entidad")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "text", name: "entidad", id: "entidad" } }),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -43187,7 +43635,7 @@ var render = function () {
         required: "",
       },
     }),
-    _vm._v("ç\n    "),
+    _vm._v(" "),
     _c("label", { attrs: { for: "origen" } }, [_vm._v("Origen")]),
     _vm._v(" "),
     _c("input", {

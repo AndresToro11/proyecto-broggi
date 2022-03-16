@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\UsuariController;
 use App\Http\Controllers\Api\ExpedientController;
 use App\Http\Controllers\Api\MunicipioController;
 use App\Http\Controllers\TiposIncidenteController;
+use App\Http\Controllers\TiposLocalizacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +34,6 @@ Route::apiResource('provincia', ProvinciaController::class);
 Route::apiResource('comarca', ComarcaController::class);
 Route::apiResource('incidente', IncidenteController::class);
 Route::apiResource('tiposIncidente', TiposIncidenteController::class);
+Route::apiResource('tiposLocalitzacion', TiposLocalizacionController::class);
 Route::apiResource('expediente', ExpedientController::class); //->only(['index', 'provincias']);
 Route::get('expediente/provincias', [ExpedientController::class, 'provincias']);

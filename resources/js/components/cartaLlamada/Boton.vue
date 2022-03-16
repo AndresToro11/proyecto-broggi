@@ -1,14 +1,15 @@
 <template>
     <div>
         <datos-administrativos></datos-administrativos>
-        <datos-personales @getData="getData"></datos-personales>
-        <datos-incidentes></datos-incidentes>
-        <Personals @getData="getData"></Personals>
+        <datos-personales @getDataPersonal="getDataPersonal"></datos-personales>
+        <datos-incidentes
+            @getDataIncidente="getDataIncidente"
+        ></datos-incidentes>
+        <!-- <Personals @getDataPersonal="getDataPersonal"></Personals>
+        <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
         <h3>boton</h3>
         <button type="button">Cancelar</button>
-        <button type="button" @click="setDataPersonal(), setDataIncidente()">
-            Aceptar
-        </button>
+        <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(), console()">Aceptar</button>
         <expedientes-relacionados></expedientes-relacionados>
     </div>
 </template>
@@ -16,41 +17,68 @@
 export default {
     data() {
         return {
-            array: [],
-            cartaLlamada:{
-                temps_trucada: contador,
+            cartaLlamada: {
+                temps_trucada: "contador",
                 dades_personals_id: " ",
-                telefon: arrayPersonal.telefono,
-                procedencia_trucada: arrayPersonal.procedencia,
-                origen_trucada: arrayPersonal.origen,
+                telefon: " ",
+                procedencia_trucada: " ",
+                origen_trucada: " ",
                 nom_trucada: "null",
-                municipis_id_trucada: arrayPersonal.municipio,
-                adreca_trucada: arrayPersonal.direccion,
-                fora_catalunya: arrayIncidente.catalunya,
-                provincies_id: arrayIncidente.provincia,
-                municipis_id: arrayIncidente.municipio,
-                tipus_localitzacions_id: arrayIncidente.localizacion,
-                descripcio_localitzacio:arrayIncidente.carretera+" "+arrayIncidente.puntoKm+" "+ arrayIncidente.sentido + " Direccion"+arrayIncidente.direccion+" Numero puerta:"+arrayIncidente.numPuerta+" Escalera:"+arrayIncidente.escalera+" Piso:"+arrayIncidente.piso+" Puerta:"+arrayIncidente.puerta ,
-                detall_localitzacio:" ",
-                altres_ref_localitzacio:" ",
-                incidents_id: arrayIncidente.incidente,
-                nota_comuna: arrayPersonal.notaComun,
+                municipis_id_trucada: " ",
+                adreca_trucada: " ",
+                fora_catalunya: " ",
+                provincies_id: " ",
+                municipis_id: " ",
+                tipus_localitzacions_id: " ",
+                descripcio_localitzacio:" ",
+                detall_localitzacio: " ",
+                altres_ref_localitzacio: "",
+                incidents_id: " ",
+                nota_comuna: " ",
                 expedients_id: " ",
-                usuaris_id:" "
-            }
+                usuaris_id: " "
+            },
         };
     },
     methods: {
+        select() {
+            let me = this;
+            console.log("Entrando a la select");
+            axios
+                .get("/idLocalizacion")
+                .then((response) => {
+                    console.log("ol");
+                    me.idLocalizaciones = response.data;
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+                .finally(() => (this.loading = false));
+        },
         getDataPersonal(array) {
-            this.arrayPersonal = array;
+                cartaLlamada.telefon= array.telefono,
+                cartaLlamada.procedencia_trucada= array.procedencia,
+                cartaLlamada.origen_trucada= array.origen,
+                cartaLlamada.municipis_id_trucada= array.municipio,
+                cartaLlamada.adreca_trucada= array.direccion,
+                cartaLlamada.nota_comuna= array.notaComun
         },
         getDataIncidente(array) {
-            this.arrayIncidente = array;
+                cartaLlamada.fora_catalunya= array.catalunya,
+                cartaLlamada.provincies_id= array.provincia,
+                cartaLlamada.municipis_id= array.municipio,
+                cartaLlamada.tipus_localitzacions_id= array.localizacion,
+                cartaLlamada.descripcio_localitzacio= array.descripcio_localitzacio,
+                cartaLlamada.detall_localitzacio= array.detall_localitzacio,
+                cartaLlamada.incidents_id= array.incidente
         },
         getDataAdministrativos(contador) {
             this.contador = contador;
         },
-        insertBD() {},
+        console(){
+            console.log(this.cartaLlamada);
+        },
+        insertBD() {}
     },
 };
 </script>
