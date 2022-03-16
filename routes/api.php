@@ -24,11 +24,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('user', UsuariController::class);
 
-Route::apiResource('expediente', ExpedientController::class);
+Route::apiResource('expedientes', ExpedientController::class);
 
 //-------------------------------- Grafico -----------------------------------
 
 Route::get('grafico/provincias', [GraficoController::class, 'provincias']);
 Route::get('grafico/municipios', [GraficoController::class, 'municipios']);
+Route::get('grafico/usuarios', [GraficoController::class, 'usuarios']);
 
 //----------------------------------------------------------------------------

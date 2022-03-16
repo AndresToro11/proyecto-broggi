@@ -80,7 +80,7 @@
             selectExpedientes(){
             let me = this;
             axios
-                .get('/expediente')
+                .get('/expedientes')
                 .then(response => {
                     me.expedientes = response.data;
                 })

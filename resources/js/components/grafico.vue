@@ -10,15 +10,13 @@
 
 <script>
     import Chart from "chart.js/auto";
-    import Loading from 'vue-loading-overlay';
-    import 'vue-loading-overlay/dist/vue-loading.css';
 
     let grafica;
 
     export default {
         data(){
             return{
-                
+
             }
         },
 
@@ -43,7 +41,7 @@
                 axios
                 .get('/grafico/municipios')
                 .then(response => {
-                    
+
                     var municipios = [];
                     var type = 'doughnut';
                     municipios = response.data;
@@ -54,7 +52,23 @@
                 })
                 .finally(() => this.loading = false);
             },
-            
+
+            selectUsuarios(){
+                axios
+                .get('/grafico/usuarios')
+                .then(response => {
+
+                    var municipios = [];
+                    var type = 'doughnut';
+                    municipios = response.data;
+                    this.grafico(municipios, type)
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+                .finally(() => this.loading = false);
+            },
+
             grafico(datos, tipo){
                 let objetos = [];
                 let numeros = [];
@@ -65,12 +79,12 @@
                 }
 
                 let canva = document.getElementById("grafico").getContext('2d');
-                
+
                 if(grafica){
                     grafica.destroy();
                 }
 
-                grafica = new Chart(canva, 
+                grafica = new Chart(canva,
                 {
                     type: tipo, //"doughnut" "pie" "polarArea" "bar" "line",
                     data: {

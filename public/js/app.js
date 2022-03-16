@@ -5444,7 +5444,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var me = this;
-      axios.get('/expediente').then(function (response) {
+      axios.get('/expedientes').then(function (response) {
         me.expedientes = response.data;
       })["catch"](function (error) {
         console.log(error);
@@ -5473,8 +5473,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js/auto */ "./node_modules/chart.js/auto/auto.esm.js");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-loading-overlay'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-loading-overlay/dist/vue-loading.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 //
 //
 //
@@ -5485,8 +5483,6 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 //
 //
 //
-
-
 
 var grafica;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -5522,6 +5518,21 @@ var grafica;
         console.log(error);
       })["finally"](function () {
         return _this2.loading = false;
+      });
+    },
+    selectUsuarios: function selectUsuarios() {
+      var _this3 = this;
+
+      axios.get('/grafico/usuarios').then(function (response) {
+        var municipios = [];
+        var type = 'doughnut';
+        municipios = response.data;
+
+        _this3.grafico(municipios, type);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this3.loading = false;
       });
     },
     grafico: function grafico(datos, tipo) {
@@ -5798,7 +5809,7 @@ try {
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-window.axios.defaults.baseURL = '/proyecto_broggi/public/api';
+window.axios.defaults.baseURL = '/proyecto-broggi/public/api';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

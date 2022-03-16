@@ -24,10 +24,6 @@ class ExpedientController extends Controller
         return new ExpedientResource($expedientes);
     }
 
-    public function provincias(){
-        
-    }
-
     /**
      * Store a newly created resource in storage.
      *
