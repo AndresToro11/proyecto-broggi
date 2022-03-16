@@ -8,8 +8,10 @@ class MunicipiosResource extends JsonResource
 {
     public function toArray($request)
     {
-        return  [
-            $this->cartas_trucades[0]->municipi->nom
+        //return parent::toArray($request);
+        return [
+            'nombre' => $this->municipi->nom,
+            'numero' => $this->numero
         ];
     }
 }

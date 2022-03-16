@@ -8,8 +8,11 @@ class ProvinciasResource extends JsonResource
 {
     public function toArray($request)
     {
-        return  [
-            $this->cartas_trucades[0]->provincia->nom
+        //return parent::toArray($request);
+
+        return [
+            'nombre' => $this->provincia->nom,
+            'numero' => $this->numero
         ];
     }
 }

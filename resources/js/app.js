@@ -37,6 +37,7 @@ Vue.component('administrador', require('./components/home/administrador.vue').de
 Vue.component('operador', require('./components/home/operador.vue').default);
 Vue.component('supervisor', require('./components/home/supervisor.vue').default);
 
+
 //-----------------------------------------------------------------------------------------
 
 

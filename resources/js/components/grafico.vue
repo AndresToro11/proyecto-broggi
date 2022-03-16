@@ -10,38 +10,28 @@
 
 <script>
     import Chart from "chart.js/auto";
+    import Loading from 'vue-loading-overlay';
+    import 'vue-loading-overlay/dist/vue-loading.css';
 
     let grafica;
-    
 
     export default {
         data(){
-            
+            return{
+                
+            }
         },
 
         methods:{
             selectProvincias(){
-            axios
+                axios
                 .get('/grafico/provincias')
+
                 .then(response => {
                     var provincias = [];
-                    var encontrado = false;
                     var type = 'bar';
-
-                    for (let i = 0; i < response.data.length; i++) {
-                        for(let provincia in provincias){
-
-                            if(response.data[i] == provincia){
-                                provincias[provincia] = provincias[provincia] + 1;
-                                encontrado = true;
-                            }
-                        }
-                        if(encontrado == false){
-                            provincias[response.data[i]] = 1;
-                        }
-                        encontrado = false;
-                    }
-                    this.grafico(provincias, type);
+                    provincias = response.data;
+                    this.grafico(provincias, type)
                 })
                 .catch(error => {
                     console.log(error);
@@ -53,24 +43,11 @@
                 axios
                 .get('/grafico/municipios')
                 .then(response => {
+                    
                     var municipios = [];
-                    var encontrado = false;
                     var type = 'doughnut';
-
-                    for (let i = 0; i < response.data.length; i++) {
-                        for(let municipio in municipios){
-
-                            if(response.data[i] == municipio){
-                                municipios[municipio] = municipios[municipio] + 1;
-                                encontrado = true;
-                            }
-                        }
-                        if(encontrado == false){
-                            municipios[response.data[i]] = 1;
-                        }
-                        encontrado = false;
-                    }
-                    this.grafico(municipios, type);
+                    municipios = response.data;
+                    this.grafico(municipios, type)
                 })
                 .catch(error => {
                     console.log(error);
@@ -79,13 +56,12 @@
             },
             
             grafico(datos, tipo){
-
                 let objetos = [];
                 let numeros = [];
 
-                for(var dato in datos) {
-                    objetos.push(dato);
-                    numeros.push(datos[dato]);
+                for (let i = 0; i < datos.length; i++) {
+                    objetos.push(datos[i]['nombre']);
+                    numeros.push(datos[i]['numero']);
                 }
 
                 let canva = document.getElementById("grafico").getContext('2d');
@@ -121,11 +97,9 @@
         },
 
         mounted() {
-            console.log('Component arriba.');
-            this.selectMunicipios();
+            this.selectProvincias();
         }
     }
 
-    //Graficos https://parzibyte.me/blog/2021/11/02/usar-chart-js-vue-js-webpack-npm/
-    //https://www.chartjs.org/docs/latest/
+    //https://programmerclick.com/article/27651329726/
 </script>

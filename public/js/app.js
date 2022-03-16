@@ -5473,6 +5473,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js/auto */ "./node_modules/chart.js/auto/auto.esm.js");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-loading-overlay'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-loading-overlay/dist/vue-loading.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 //
 //
 //
@@ -5484,32 +5486,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
+
 var grafica;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {},
+  data: function data() {
+    return {};
+  },
   methods: {
     selectProvincias: function selectProvincias() {
       var _this = this;
 
       axios.get('/grafico/provincias').then(function (response) {
         var provincias = [];
-        var encontrado = false;
         var type = 'bar';
-
-        for (var i = 0; i < response.data.length; i++) {
-          for (var provincia in provincias) {
-            if (response.data[i] == provincia) {
-              provincias[provincia] = provincias[provincia] + 1;
-              encontrado = true;
-            }
-          }
-
-          if (encontrado == false) {
-            provincias[response.data[i]] = 1;
-          }
-
-          encontrado = false;
-        }
+        provincias = response.data;
 
         _this.grafico(provincias, type);
       })["catch"](function (error) {
@@ -5523,23 +5514,8 @@ var grafica;
 
       axios.get('/grafico/municipios').then(function (response) {
         var municipios = [];
-        var encontrado = false;
         var type = 'doughnut';
-
-        for (var i = 0; i < response.data.length; i++) {
-          for (var municipio in municipios) {
-            if (response.data[i] == municipio) {
-              municipios[municipio] = municipios[municipio] + 1;
-              encontrado = true;
-            }
-          }
-
-          if (encontrado == false) {
-            municipios[response.data[i]] = 1;
-          }
-
-          encontrado = false;
-        }
+        municipios = response.data;
 
         _this2.grafico(municipios, type);
       })["catch"](function (error) {
@@ -5552,9 +5528,9 @@ var grafica;
       var objetos = [];
       var numeros = [];
 
-      for (var dato in datos) {
-        objetos.push(dato);
-        numeros.push(datos[dato]);
+      for (var i = 0; i < datos.length; i++) {
+        objetos.push(datos[i]['nombre']);
+        numeros.push(datos[i]['numero']);
       }
 
       var canva = document.getElementById("grafico").getContext('2d');
@@ -5581,11 +5557,9 @@ var grafica;
     }
   },
   mounted: function mounted() {
-    console.log('Component arriba.');
-    this.selectMunicipios();
+    this.selectProvincias();
   }
-}); //Graficos https://parzibyte.me/blog/2021/11/02/usar-chart-js-vue-js-webpack-npm/
-//https://www.chartjs.org/docs/latest/
+}); //https://programmerclick.com/article/27651329726/
 
 /***/ }),
 
