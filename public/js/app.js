@@ -5382,6 +5382,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      idDatosPersonales: [],
       cartaLlamada: {
         temps_trucada: "contador",
         dades_personals_id: " ",
@@ -5419,6 +5420,16 @@ __webpack_require__.r(__webpack_exports__);
       })["finally"](function () {
         return _this.loading = false;
       });
+      axios.get("/datosPersonales").then(function (response) {
+        console.log("Datos Personales");
+        me.idDatosPersonales = response.data;
+      })["catch"](function (error) {
+        _this.console.log("Error:");
+
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
     },
     getDataPersonal: function getDataPersonal(array) {
       cartaLlamada.telefon = array.telefono, cartaLlamada.procedencia_trucada = array.procedencia, cartaLlamada.origen_trucada = array.origen, cartaLlamada.municipis_id_trucada = array.municipio, cartaLlamada.adreca_trucada = array.direccion, cartaLlamada.nota_comuna = array.notaComun;
@@ -5429,20 +5440,34 @@ __webpack_require__.r(__webpack_exports__);
     getDataAdministrativos: function getDataAdministrativos(contador) {
       this.contador = contador;
     },
-    console: function (_console) {
-      function console() {
-        return _console.apply(this, arguments);
+    insertBD: function insertBD(cartaLlamada) {
+      var me = this;
+      axios.post('/llamada', me.cartaLlamada).then(function (response) {
+        console.log('Insert OK');
+      })["catch"](function (error) {
+        this.console.log("Error:");
+        console.log(error);
+      });
+    }
+  },
+  computed: {
+    descripcioLocalitzacio: function descripcioLocalitzacio() {
+      var varianle = -1;
+
+      for (var index = 0; index < this.idDatosPersonales.length; index++) {
+        if (cartaLlamada.telefon == this.idDatosPersonales.telefono[index]) {
+          varianle = this.idDatosPersonales.id[index];
+        }
       }
 
-      console.toString = function () {
-        return _console.toString();
-      };
-
-      return console;
-    }(function () {
-      console.log(this.cartaLlamada);
-    }),
-    insertBD: function insertBD() {}
+      if (varianle != -1) {
+        this.cartaLlamada.dades_personals_id = varianle;
+      }
+    }
+  },
+  mounted: function mounted() {
+    this.select();
+    console.log("Component mounted.");
   }
 });
 
@@ -42940,7 +42965,7 @@ var render = function () {
               _vm.setDataPersonal(),
                 _vm.setDataIncidente(),
                 _vm.setDataAdministrativos(),
-                _vm.console()
+                _vm.insertBD(_vm.cartaLlamada)
             },
           },
         },
@@ -43151,7 +43176,7 @@ var render = function () {
       2
     ),
     _vm._v(" "),
-    _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
+    _c("label", { attrs: { for: "mucipio" } }, [_vm._v("Municipio")]),
     _vm._v(" "),
     _c(
       "select",
@@ -43164,7 +43189,7 @@ var render = function () {
             expression: "datos_incidente.municipio",
           },
         ],
-        staticClass: "form-control",
+        staticClass: "form-connitrol",
         attrs: { id: "municipio" },
         on: {
           change: function ($event) {

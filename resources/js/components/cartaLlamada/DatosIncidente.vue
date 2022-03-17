@@ -18,8 +18,8 @@
                 {{ provincia.nom }}
             </option>
         </select>
-        <label for="municipio">Municipio</label>
-        <select class="form-control" id="municipio" v-model="datos_incidente.municipio">
+        <label for="mucipio">Municipio</label>
+        <select class="form-connitrol" id="municipio" v-model="datos_incidente.municipio">
             <option value=""></option>
             <option v-for="municipio in municipios" :key="municipio.id">
                 {{ municipio.nom }}

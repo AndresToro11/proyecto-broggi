@@ -9,7 +9,7 @@
         <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
         <h3>boton</h3>
         <button type="button">Cancelar</button>
-        <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(), console()">Aceptar</button>
+        <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(),insertBD(cartaLlamada)">Aceptar</button>
         <expedientes-relacionados></expedientes-relacionados>
     </div>
 </template>
@@ -17,6 +17,7 @@
 export default {
     data() {
         return {
+            idDatosPersonales: [],
             cartaLlamada: {
                 temps_trucada: "contador",
                 dades_personals_id: " ",
@@ -54,6 +55,17 @@ export default {
                     console.log(error);
                 })
                 .finally(() => (this.loading = false));
+            axios
+                .get("/datosPersonales")
+                .then((response) => {
+                    console.log("Datos Personales");
+                    me.idDatosPersonales = response.data;
+                })
+                .catch((error) => {
+                    this.console.log("Error:");
+                    console.log(error);
+                })
+                .finally(() => (this.loading = false));
         },
         getDataPersonal(array) {
                 cartaLlamada.telefon= array.telefono,
@@ -75,10 +87,34 @@ export default {
         getDataAdministrativos(contador) {
             this.contador = contador;
         },
-        console(){
-            console.log(this.cartaLlamada);
+        insertBD(cartaLlamada) {
+            let me = this;
+            axios
+                .post('/llamada', me.cartaLlamada)
+                .then(function(response){
+                    console.log('Insert OK')
+                }).catch(function(error){
+                    this.console.log("Error:");
+                    console.log(error);
+                })
+        }
+    },
+    computed:{
+        descripcioLocalitzacio: function () {
+            let varianle = -1;
+            for (let index = 0; index < this.idDatosPersonales.length ; index++) {
+                if (cartaLlamada.telefon == this.idDatosPersonales.telefono[index]) {
+                    varianle = this.idDatosPersonales.id[index];
+                }
+            }
+            if (varianle != -1) {
+                this.cartaLlamada.dades_personals_id=varianle;
+            }
         },
-        insertBD() {}
+    },
+    mounted() {
+        this.select();
+        console.log("Component mounted.");
     },
 };
 </script>
