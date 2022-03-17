@@ -4,7 +4,7 @@ namespace App\Http\Resources\Grafico;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class UsuariosResource extends JsonResource
+class UsuarioResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,6 +14,12 @@ class UsuariosResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        //return parent::toArray($request);
+
+        return [
+            'usuario' => $this->usuari->codi,
+            'nombre' => $this->incident->descripcio,
+            'numero' => $this->numero
+        ];
     }
 }

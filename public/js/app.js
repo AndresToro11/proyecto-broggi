@@ -5483,22 +5483,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 var grafica;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    return {
+      usuarios: [],
+      usuario: {},
+      selected: ''
+    };
   },
   methods: {
     selectProvincias: function selectProvincias() {
       var _this = this;
 
       axios.get('/grafico/provincias').then(function (response) {
+        var titulo = 'Incidentes';
         var provincias = [];
         var type = 'bar';
         provincias = response.data;
 
-        _this.grafico(provincias, type);
+        _this.grafico(provincias, type, titulo);
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
@@ -5509,11 +5523,12 @@ var grafica;
       var _this2 = this;
 
       axios.get('/grafico/municipios').then(function (response) {
+        var titulo = 'Incidentes';
         var municipios = [];
         var type = 'doughnut';
         municipios = response.data;
 
-        _this2.grafico(municipios, type);
+        _this2.grafico(municipios, type, titulo);
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
@@ -5523,19 +5538,50 @@ var grafica;
     selectUsuarios: function selectUsuarios() {
       var _this3 = this;
 
+      var me = this;
       axios.get('/grafico/usuarios').then(function (response) {
-        var municipios = [];
-        var type = 'doughnut';
-        municipios = response.data;
-
-        _this3.grafico(municipios, type);
+        me.usuarios = response.data;
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
         return _this3.loading = false;
       });
     },
-    grafico: function grafico(datos, tipo) {
+    selectUsuariosIncidentes: function selectUsuariosIncidentes() {
+      var _this4 = this;
+
+      var incidentes;
+      var type = 'bar';
+      var titulo = 'Incidentes';
+      axios.get('/grafico/usuarios-incidentes').then(function (response) {
+        incidentes = response.data;
+
+        _this4.grafico(incidentes, type, titulo);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this4.loading = false;
+      });
+    },
+    selectUsuario: function selectUsuario() {
+      var _this5 = this;
+
+      //let user = 2;
+      var type = 'doughnut';
+      var usuarios = [];
+      var titulo;
+      axios.get('/grafico/usuarios/' + this.selected).then(function (response) {
+        usuarios = response.data;
+        titulo = usuarios[0]['usuario'];
+
+        _this5.grafico(usuarios, type, titulo);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this5.loading = false;
+      });
+    },
+    grafico: function grafico(datos, tipo, titulo) {
       var objetos = [];
       var numeros = [];
 
@@ -5552,11 +5598,11 @@ var grafica;
 
       grafica = new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](canva, {
         type: tipo,
-        //"doughnut" "pie" "polarArea" "bar" "line",
+        //"doughnut" "pie" "polarArea" "bar" "line"
         data: {
           labels: objetos,
           datasets: [{
-            label: "Incidentes",
+            label: titulo,
             data: numeros,
             borderWidth: 5,
             backgroundColor: ['rgba(168, 29, 31, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(255, 72, 0)', 'rgba(54, 135, 30)']
@@ -5568,7 +5614,8 @@ var grafica;
     }
   },
   mounted: function mounted() {
-    this.selectProvincias();
+    this.selectUsuarios();
+    this.selectUsuariosIncidentes();
   }
 }); //https://programmerclick.com/article/27651329726/
 
@@ -42252,6 +42299,63 @@ var render = function () {
       _c("button", { on: { click: _vm.selectMunicipios } }, [
         _vm._v("Municipios"),
       ]),
+      _vm._v(" "),
+      _c("button", { on: { click: _vm.selectUsuariosIncidentes } }, [
+        _vm._v("Incidentes"),
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selected,
+              expression: "selected",
+            },
+          ],
+          staticClass: "form-control",
+          on: {
+            change: [
+              function ($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function (o) {
+                    return o.selected
+                  })
+                  .map(function (o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.selected = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              },
+              function ($event) {
+                return _vm.selectUsuario()
+              },
+            ],
+          },
+        },
+        [
+          _c("option", { attrs: { value: "0", disabled: "", selected: "" } }, [
+            _vm._v("Usuarios"),
+          ]),
+          _vm._v(" "),
+          _vm._l(_vm.usuarios, function (usuario) {
+            return _c(
+              "option",
+              { key: usuario.id, domProps: { value: usuario.id } },
+              [
+                _vm._v(
+                  "\n                " + _vm._s(usuario.codi) + "\n            "
+                ),
+              ]
+            )
+          }),
+        ],
+        2
+      ),
     ]),
   ])
 }

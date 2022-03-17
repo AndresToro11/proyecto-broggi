@@ -31,5 +31,7 @@ Route::apiResource('expedientes', ExpedientController::class);
 Route::get('grafico/provincias', [GraficoController::class, 'provincias']);
 Route::get('grafico/municipios', [GraficoController::class, 'municipios']);
 Route::get('grafico/usuarios', [GraficoController::class, 'usuarios']);
+Route::get('grafico/usuarios-incidentes', [GraficoController::class, 'usuariosIncidentes']);
+Route::get('grafico/usuarios/{usuario}', [GraficoController::class, 'showUsuario']);
 
 //----------------------------------------------------------------------------

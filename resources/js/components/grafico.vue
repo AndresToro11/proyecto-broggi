@@ -4,7 +4,16 @@
         <div>
             <button v-on:click="selectProvincias">Provincias</button>
             <button v-on:click="selectMunicipios">Municipios</button>
+            <button v-on:click="selectUsuariosIncidentes">Incidentes</button>
+            
+            <select class="form-control" v-on:change="selectUsuario()" v-model="selected">
+                <option value="0" disabled selected>Usuarios</option>
+                <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id" >
+                    {{ usuario.codi }}
+                </option>
+            </select>
         </div>
+
     </div>
 </template>
 
@@ -16,7 +25,9 @@
     export default {
         data(){
             return{
-
+                usuarios: [],
+                usuario: {},
+                selected: ''
             }
         },
 
@@ -26,10 +37,11 @@
                 .get('/grafico/provincias')
 
                 .then(response => {
-                    var provincias = [];
-                    var type = 'bar';
+                    let titulo = 'Incidentes'
+                    let provincias = [];
+                    let type = 'bar';
                     provincias = response.data;
-                    this.grafico(provincias, type)
+                    this.grafico(provincias, type, titulo)
                 })
                 .catch(error => {
                     console.log(error);
@@ -41,11 +53,11 @@
                 axios
                 .get('/grafico/municipios')
                 .then(response => {
-
-                    var municipios = [];
-                    var type = 'doughnut';
+                    let titulo = 'Incidentes'
+                    let municipios = [];
+                    let type = 'doughnut';
                     municipios = response.data;
-                    this.grafico(municipios, type)
+                    this.grafico(municipios, type, titulo)
                 })
                 .catch(error => {
                     console.log(error);
@@ -54,14 +66,11 @@
             },
 
             selectUsuarios(){
+                let me = this;
                 axios
                 .get('/grafico/usuarios')
                 .then(response => {
-
-                    var municipios = [];
-                    var type = 'doughnut';
-                    municipios = response.data;
-                    this.grafico(municipios, type)
+                    me.usuarios = response.data;
                 })
                 .catch(error => {
                     console.log(error);
@@ -69,7 +78,41 @@
                 .finally(() => this.loading = false);
             },
 
-            grafico(datos, tipo){
+            selectUsuariosIncidentes(){
+                let incidentes;
+                let type = 'bar';
+                let titulo = 'Incidentes';
+                axios
+                .get('/grafico/usuarios-incidentes')
+                .then(response => {
+                    incidentes = response.data;
+                    this.grafico(incidentes, type, titulo)
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+                .finally(() => this.loading = false);
+            },
+
+            selectUsuario(){
+                //let user = 2;
+                let type = 'doughnut';
+                let usuarios = [];
+                let titulo;
+                axios
+                .get('/grafico/usuarios/' + this.selected)
+                .then(response => {
+                    usuarios = response.data;
+                    titulo = usuarios[0]['usuario'];
+                    this.grafico(usuarios, type, titulo)
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+                .finally(() => this.loading = false);
+            },
+
+            grafico(datos, tipo, titulo){
                 let objetos = [];
                 let numeros = [];
 
@@ -86,12 +129,12 @@
 
                 grafica = new Chart(canva,
                 {
-                    type: tipo, //"doughnut" "pie" "polarArea" "bar" "line",
+                    type: tipo, //"doughnut" "pie" "polarArea" "bar" "line"
                     data: {
                         labels:  objetos,
                         datasets: [
                             {
-                                label: "Incidentes",
+                                label: titulo,
                                 data: numeros,
                                 borderWidth: 5,
                                 backgroundColor: [
@@ -111,9 +154,9 @@
         },
 
         mounted() {
-            this.selectProvincias();
+            this.selectUsuarios();
+            this.selectUsuariosIncidentes();
         }
     }
-
     //https://programmerclick.com/article/27651329726/
 </script>
