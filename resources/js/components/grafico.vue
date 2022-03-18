@@ -1,6 +1,7 @@
 <template>
     <div>
         <canvas id="grafico"></canvas>
+        
         <div>
             <button v-on:click="selectProvincias">Provincias</button>
             <button v-on:click="selectMunicipios">Municipios</button>
@@ -13,7 +14,6 @@
                 </option>
             </select>
         </div>
-
     </div>
 </template>
 
@@ -155,7 +155,7 @@
 
         mounted() {
             this.selectUsuarios();
-            this.selectUsuariosIncidentes();
+            this.selectUsuariosIncidentes()
         }
     }
     //https://programmerclick.com/article/27651329726/

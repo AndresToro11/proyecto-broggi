@@ -16,6 +16,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <script>
+        document.body.onload = addElement();
+
+        function addElement() {
+            // crea un nuevo div
+            // y añade contenido
+            var newDiv = document.createElement("div");
+            newDiv.textContent = "Hola caracola";
+
+            // añade el elemento creado y su contenido al DOM
+            var currentDiv = document.getElementById("div1");
+            document.body.appendChild(newDiv);
+        }
+        //<div class="spinner-border text-primary" role="status"/>
+    </script>
+
 </head>
 <body>
     <nav>
@@ -28,6 +44,9 @@
             </ul>
         </div>
     </nav>
+
+
+    <div id="div1">El texto superior se ha creado dinámicamente.</div>
 
     <div id="app" class="container">
         @yield('contenido')
