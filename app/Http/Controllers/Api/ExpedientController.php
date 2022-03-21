@@ -24,14 +24,6 @@ class ExpedientController extends Controller
         return new ExpedientResource($expedientes);
     }
 
-    public function provincias(){
-        $expedientes = Expedient::with('estat_expedient', 'cartas_trucades', 'cartas_trucades.usuari',
-        'cartas_trucades.provincia', 'cartas_trucades.municipi')
-        ->get();
-
-        return new ExpedientResource($expedientes);
-    }
-
     /**
      * Store a newly created resource in storage.
      *

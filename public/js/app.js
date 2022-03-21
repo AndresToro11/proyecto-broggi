@@ -5639,53 +5639,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5697,7 +5650,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var me = this;
-      axios.get('/expediente').then(function (response) {
+      axios.get('/expedientes').then(function (response) {
         me.expedientes = response.data;
       })["catch"](function (error) {
         console.log(error);
@@ -5732,40 +5685,152 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
+var grafica;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {//provincias = []
+    return {
+      usuarios: [],
+      usuario: {},
+      selected: ''
     };
   },
   methods: {
-    selectProvincias: function selectProvincias() {}
+    selectProvincias: function selectProvincias() {
+      var _this = this;
+
+      axios.get('/grafico/provincias').then(function (response) {
+        var titulo = 'Incidentes';
+        var provincias = [];
+        var type = 'bar';
+        provincias = response.data;
+
+        _this.grafico(provincias, type, titulo);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+    },
+    selectMunicipios: function selectMunicipios() {
+      var _this2 = this;
+
+      axios.get('/grafico/municipios').then(function (response) {
+        var titulo = 'Incidentes';
+        var municipios = [];
+        var type = 'doughnut';
+        municipios = response.data;
+
+        _this2.grafico(municipios, type, titulo);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this2.loading = false;
+      });
+    },
+    selectUsuarios: function selectUsuarios() {
+      var _this3 = this;
+
+      var me = this;
+      axios.get('/grafico/usuarios').then(function (response) {
+        me.usuarios = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this3.loading = false;
+      });
+    },
+    selectUsuariosIncidentes: function selectUsuariosIncidentes() {
+      var _this4 = this;
+
+      var incidentes;
+      var type = 'bar';
+      var titulo = 'Incidentes';
+      axios.get('/grafico/usuarios-incidentes').then(function (response) {
+        incidentes = response.data;
+
+        _this4.grafico(incidentes, type, titulo);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this4.loading = false;
+      });
+    },
+    selectUsuario: function selectUsuario() {
+      var _this5 = this;
+
+      //let user = 2;
+      var type = 'doughnut';
+      var usuarios = [];
+      var titulo;
+      axios.get('/grafico/usuarios/' + this.selected).then(function (response) {
+        usuarios = response.data;
+        titulo = usuarios[0]['usuario'];
+
+        _this5.grafico(usuarios, type, titulo);
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this5.loading = false;
+      });
+    },
+    grafico: function grafico(datos, tipo, titulo) {
+      var objetos = [];
+      var numeros = [];
+
+      for (var i = 0; i < datos.length; i++) {
+        objetos.push(datos[i]['nombre']);
+        numeros.push(datos[i]['numero']);
+      }
+
+      var canva = document.getElementById("grafico").getContext('2d');
+
+      if (grafica) {
+        grafica.destroy();
+      }
+
+      grafica = new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](canva, {
+        type: tipo,
+        //"doughnut" "pie" "polarArea" "bar" "line"
+        data: {
+          labels: objetos,
+          datasets: [{
+            label: titulo,
+            data: numeros,
+            borderWidth: 5,
+            backgroundColor: ['rgba(168, 29, 31, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(255, 72, 0)', 'rgba(54, 135, 30)']
+          }]
+        }
+      });
+      grafica.canvas.parentNode.style.width = '800px';
+      grafica.canvas.parentNode.style.width = '800px';
+    }
   },
   mounted: function mounted() {
-    console.log('Component arriba.');
-
-    if (this.grafica) {
-      this.grafica.destroy();
-    }
-
-    new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](document.getElementById("grafico").getContext('2d'), {
-      //Aquí podría haber un if para cambiar el gráfico con un evento de VUE al momento con el metodo destroy.
-      type:
-      /*"doughnut"*/
-      "pie",
-      data: {
-        labels: ["Incendios", "Atracos", "Choques"],
-        datasets: [{
-          label: "Incidentes",
-          data: [200, 200, 600],
-          borderWidth: 1,
-          backgroundColor: ['rgba(168, 29, 31, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)']
-        }]
-      }
-    });
+    this.selectUsuarios();
+    this.selectUsuariosIncidentes();
   }
-}); //Graficos https://parzibyte.me/blog/2021/11/02/usar-chart-js-vue-js-webpack-npm/
-//https://www.chartjs.org/docs/latest/
+}); //https://programmerclick.com/article/27651329726/
 
 /***/ }),
 
@@ -6008,7 +6073,7 @@ try {
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-window.axios.defaults.baseURL = '/proyecto_broggi/public/api';
+window.axios.defaults.baseURL = '/proyecto-broggi/public/api';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -41982,7 +42047,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./grafico.vue?vue&type=template&id=1814014a&width=200&height=100& */ "./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100&");
+/* harmony import */ var _grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./grafico.vue?vue&type=template&id=1814014a& */ "./resources/js/components/grafico.vue?vue&type=template&id=1814014a&");
 /* harmony import */ var _grafico_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./grafico.vue?vue&type=script&lang=js& */ "./resources/js/components/grafico.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
@@ -41994,8 +42059,8 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _grafico_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__.render,
-  _grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -42378,19 +42443,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100& ***!
-  \*************************************************************************************************/
+/***/ "./resources/js/components/grafico.vue?vue&type=template&id=1814014a&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/grafico.vue?vue&type=template&id=1814014a& ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a_width_200_height_100___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./grafico.vue?vue&type=template&id=1814014a&width=200&height=100& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_grafico_vue_vue_type_template_id_1814014a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./grafico.vue?vue&type=template&id=1814014a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a&");
 
 
 /***/ }),
@@ -42978,10 +43043,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100&":
-/*!****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a&width=200&height=100& ***!
-  \****************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/grafico.vue?vue&type=template&id=1814014a& ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -42994,15 +43059,90 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("canvas", { attrs: { id: "grafico" } }),
+    _vm._v(" "),
+    _c("div", [
+      _c("button", { on: { click: _vm.selectProvincias } }, [
+        _vm._v("Provincias"),
+      ]),
+      _vm._v(" "),
+      _c("button", { on: { click: _vm.selectMunicipios } }, [
+        _vm._v("Municipios"),
+      ]),
+      _vm._v(" "),
+      _c("button", { on: { click: _vm.selectUsuariosIncidentes } }, [
+        _vm._v("Incidentes"),
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selected,
+              expression: "selected",
+            },
+          ],
+          staticClass: "form-control",
+          on: {
+            change: [
+              function ($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function (o) {
+                    return o.selected
+                  })
+                  .map(function (o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.selected = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              },
+              function ($event) {
+                return _vm.selectUsuario()
+              },
+            ],
+          },
+        },
+        [
+          _c("option", { attrs: { value: "0", disabled: "", selected: "" } }, [
+            _vm._v("Usuarios"),
+          ]),
+          _vm._v(" "),
+          _vm._l(_vm.usuarios, function (usuario) {
+            return _c(
+              "option",
+              { key: usuario.id, domProps: { value: usuario.id } },
+              [
+                _vm._v(
+                  "\n                " + _vm._s(usuario.codi) + "\n            "
+                ),
+              ]
+            )
+          }),
+        ],
+        2
+      ),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("canvas", { attrs: { id: "grafico", width: "200", height: "100" } }),
+    return _c("div", { staticClass: "text-center", attrs: { id: "loader" } }, [
+      _c("div", {
+        staticClass: "spinner-border text-danger",
+        staticStyle: { width: "9rem", height: "9rem" },
+        attrs: { role: "status" },
+      }),
     ])
   },
 ]

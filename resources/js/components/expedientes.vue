@@ -1,52 +1,5 @@
 <template>
     <div class="mt-4">
-        <!-- <div class="card" v-for="expediente in expedientes" :key="expediente.id">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col">
-                        Expediente {{ expediente.id }}
-                    </div>
-                    <div class="col">
-                        Operador: {{
-                            expediente.cartas_trucades[expediente.cartas_trucades.length - 1].usuari.codi
-                            }}
-                    </div>
-                    <div class="col">
-                        fecha {{ expediente.data_creacio }}
-                    </div>
-                    <div class="col">
-                        estado {{ expediente.estat_expedient.estat }}
-                    </div>
-                </div>
-
-
-                <div v-for="carta in expediente.cartas_trucades" :key="carta.id">
-                    <div class="row" >
-                        <div class="col">
-                            Codigo llamada {{ carta.id }}
-                        </div>
-                            <div class="col">
-                            Provincia {{ carta.provincia.nom }}
-                        </div>
-                        <div class="col">
-                            Municipio {{ carta.municipi.nom }}
-                        </div>
-                        <div class="col">
-                            Incidente {{ carta.incident.descripcio }}
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            Nota común "{{ carta.nota_comuna }}"
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-
-
 
         <div class="test" v-for="expediente in expedientes" :key="expediente.id">
             <p>
@@ -58,7 +11,7 @@
                         <div class="col">
                             Operador: {{
                                 expediente.cartas_trucades[expediente.cartas_trucades.length - 1].usuari.codi
-                                }}
+                            }}
                         </div>
                         <div class="col">
                             fecha: {{ expediente.data_creacio }}
@@ -127,7 +80,7 @@
             selectExpedientes(){
             let me = this;
             axios
-                .get('/expediente')
+                .get('/expedientes')
                 .then(response => {
                     me.expedientes = response.data;
                 })

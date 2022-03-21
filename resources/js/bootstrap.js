@@ -13,7 +13,7 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-window.axios.defaults.baseURL = '/proyecto_broggi/public/api';
+window.axios.defaults.baseURL = '/proyecto-broggi/public/api';
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
