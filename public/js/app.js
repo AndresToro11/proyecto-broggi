@@ -5477,9 +5477,428 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/Carta_de_llamada.vue?vue&type=script&lang=js& ***!
   \************************************************************************************************************************************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\proyecto-broggi\\resources\\js\\components\\cartaLlamada\\Carta_de_llamada.vue: Unexpected token (388:0)\n\n\u001b[0m \u001b[90m 386 |\u001b[39m \u001b[90m//\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 387 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 388 |\u001b[39m \u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 389 |\u001b[39m \u001b[90m// import Select1 from \"./Select1\";\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 390 |\u001b[39m \u001b[90m//import * as mdc from \"material-components-web\";\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 391 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m {\u001b[0m\n    at Parser._raise (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:476:17)\n    at Parser.raiseWithData (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:469:17)\n    at Parser.raise (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:430:17)\n    at Parser.unexpected (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:3789:16)\n    at Parser.parseExprAtom (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:12622:22)\n    at Parser.parseExprSubscripts (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:12149:23)\n    at Parser.parseUpdate (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:12129:21)\n    at Parser.parseMaybeUnary (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:12104:23)\n    at Parser.parseMaybeUnaryOrPrivate (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:11901:61)\n    at Parser.parseExprOps (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:11908:23)\n    at Parser.parseMaybeConditional (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:11878:23)\n    at Parser.parseMaybeAssign (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:11833:21)\n    at Parser.parseExpressionBase (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:11769:23)\n    at C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:11763:39\n    at Parser.allowInAnd (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:13817:16)\n    at Parser.parseExpression (C:\\xampp\\htdocs\\proyecto-broggi\\node_modules\\@babel\\parser\\lib\\index.js:11763:17)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// import Select1 from "./Select1";
+//import * as mdc from "material-components-web";
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Carta_de_llamada",
+  // components: {
+  //   Select1,
+  // },
+  props: ["title", "datosDelInterlocutor", "datosDelAccidente", "fueraDeCatalunya", "mapa", "overlapGroup8", "frameMap", "cartaDeLlamada", "videoInteractivo", "sergiPrezJimnez", "cerrarSesin" // "select11Props",
+  // "select12Props",
+  // "select13Props",
+  // "select14Props",
+  // "select15Props",
+  ],
+  mounted: function mounted() {
+    new mdc.textField.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".direccion .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".antecedentes .mdc-text-field"));
+    mdc.autoInit();
+    new mdc.select.MDCSelect(document.querySelector(".comarca .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".provincia .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".municipio-down .mdc-select"));
+    new mdc.textField.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
+    new mdc.select.MDCSelect(document.querySelector(".municipio-up .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
+    new mdc.textField.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
+    mdc.autoInit();
+    new mdc.ripple.MDCRipple(document.querySelector(".mapa-down .mdc-button"));
+    new mdc.textField.MDCTextField(document.querySelector(".nota-comun .mdc-text-field"));
+    new mdc.select.MDCSelect(document.querySelector(".incidente .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".tipo-de-incidente .mdc-select"));
+    mdc.autoInit();
+    new mdc.ripple.MDCRipple(document.querySelector(".mapa-up .mdc-button"));
+    mdc.autoInit();
+    new mdc.ripple.MDCRipple(document.querySelector(".aceptar .mdc-button"));
+  }
+});
 
 /***/ }),
 
@@ -43588,7 +44007,7 @@ var render = function () {
               staticClass:
                 "title valign-text-middle gothica1-normal-black-28px",
             },
-            [_vm._v("\n            " + _vm._s(_vm.title) + "\n          ")]
+            [_vm._v("\n          " + _vm._s(_vm.title) + "\n        ")]
           ),
           _vm._v(" "),
           _c(
@@ -43599,9 +44018,7 @@ var render = function () {
             },
             [
               _vm._v(
-                "\n            " +
-                  _vm._s(_vm.datosDelInterlocutor) +
-                  "\n          "
+                "\n          " + _vm._s(_vm.datosDelInterlocutor) + "\n        "
               ),
             ]
           ),
@@ -43620,9 +44037,7 @@ var render = function () {
             },
             [
               _vm._v(
-                "\n            " +
-                  _vm._s(_vm.datosDelAccidente) +
-                  "\n          "
+                "\n          " + _vm._s(_vm.datosDelAccidente) + "\n        "
               ),
             ]
           ),
@@ -43638,7 +44053,7 @@ var render = function () {
             {
               staticClass: "mapa valign-text-middle gothica1-normal-black-28px",
             },
-            [_vm._v("\n            " + _vm._s(_vm.mapa) + "\n          ")]
+            [_vm._v("\n          " + _vm._s(_vm.mapa) + "\n        ")]
           ),
         ]),
         _vm._v(" "),
@@ -43661,44 +44076,7 @@ var render = function () {
             _vm._m(6),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "flex-col-2" }, [
-            _c("div", { staticClass: "flex-row-2" }, [
-              _vm._m(7),
-              _vm._v(" "),
-              _c("div", { staticClass: "flex-col-3" }, [
-                _c("div", { staticClass: "hide-up" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "overlap-group7" }, [
-                  _c(
-                    "div",
-                    { staticClass: "llamadas-relacionados" },
-                    [
-                      _vm._v("\n<<<<<<< HEAD\n                    "),
-                      _vm._v("\n=======\n                    "),
-                      _c("select1", {
-                        attrs: { className: _vm.select15Props.className },
-                      }),
-                      _vm._v(
-                        "\n>>>>>>> 1f215842c9adbc14584eb3ef1914e80530d88c2b\n                  "
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hide-down" }),
-                  _vm._v(" "),
-                  _c("img", {
-                    staticClass: "top-llamadas-relacioadas",
-                    attrs: {
-                      src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/top-llamadas-relacioadas@1x.svg",
-                    },
-                  }),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _vm._m(8),
-          ]),
+          _vm._m(7),
         ]),
       ]),
       _vm._v(" "),
@@ -43708,7 +44086,7 @@ var render = function () {
           staticClass:
             "carta-de-llamada valign-text-middle gothica1-medium-black-28px",
         },
-        [_vm._v("\n        " + _vm._s(_vm.cartaDeLlamada) + "\n      ")]
+        [_vm._v("\n      " + _vm._s(_vm.cartaDeLlamada) + "\n    ")]
       ),
       _vm._v(" "),
       _c(
@@ -43717,7 +44095,7 @@ var render = function () {
           staticClass:
             "video-interactivo valign-text-middle gothica1-medium-black-28px",
         },
-        [_vm._v("\n        " + _vm._s(_vm.videoInteractivo) + "\n      ")]
+        [_vm._v("\n      " + _vm._s(_vm.videoInteractivo) + "\n    ")]
       ),
       _vm._v(" "),
       _c(
@@ -43726,7 +44104,7 @@ var render = function () {
           staticClass:
             "sergi-prez-jimnez valign-text-middle gothica1-normal-black-18px",
         },
-        [_vm._v("\n        " + _vm._s(_vm.sergiPrezJimnez) + "\n      ")]
+        [_vm._v("\n      " + _vm._s(_vm.sergiPrezJimnez) + "\n    ")]
       ),
       _vm._v(" "),
       _c("img", {
@@ -43742,7 +44120,7 @@ var render = function () {
           staticClass:
             "cerrar-sesin valign-text-middle gothica1-normal-black-18px",
         },
-        [_vm._v("\n        " + _vm._s(_vm.cerrarSesin) + "\n      ")]
+        [_vm._v("\n      " + _vm._s(_vm.cerrarSesin) + "\n    ")]
       ),
     ]),
   ])
@@ -43759,7 +44137,7 @@ var staticRenderFns = [
         _c(
           "span",
           { staticClass: "mdc-floating-label", attrs: { id: "telefono" } },
-          [_vm._v("\n                Teléfono\n              ")]
+          [_vm._v("\n              Teléfono\n            ")]
         ),
         _vm._v(" "),
         _c("input", {
@@ -43782,7 +44160,7 @@ var staticRenderFns = [
         _c(
           "span",
           { staticClass: "mdc-floating-label", attrs: { id: "direccion" } },
-          [_vm._v("\n                Direccion\n              ")]
+          [_vm._v("\n              Direccion\n            ")]
         ),
         _vm._v(" "),
         _c("input", {
@@ -43805,7 +44183,7 @@ var staticRenderFns = [
         _c(
           "span",
           { staticClass: "mdc-floating-label", attrs: { id: "antecedentes" } },
-          [_vm._v("\n                Antedecentes\n              ")]
+          [_vm._v("\n              Antedecentes\n            ")]
         ),
         _vm._v(" "),
         _c("input", {
@@ -43848,7 +44226,7 @@ var staticRenderFns = [
                   staticClass: "mdc-floating-label",
                   attrs: { id: "demo-label" },
                 },
-                [_vm._v("\n                  Comarca\n                ")]
+                [_vm._v("\n                Comarca\n              ")]
               ),
               _vm._v(" "),
               _c(
@@ -44020,7 +44398,7 @@ var staticRenderFns = [
                   staticClass: "mdc-floating-label",
                   attrs: { id: "demo-label" },
                 },
-                [_vm._v("\n                  Provincia\n                ")]
+                [_vm._v("\n                Provincia\n              ")]
               ),
               _vm._v(" "),
               _c(
@@ -44557,312 +44935,333 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "nota-comun" }, [
-      _c(
-        "label",
-        {
-          staticClass: "mdc-text-field mdc-text-field--filled",
-          attrs: { id: "notaComun" },
-        },
-        [
-          _c("span", { staticClass: "mdc-text-field__ripple" }),
-          _vm._v(" "),
+    return _c("div", { staticClass: "flex-col-2" }, [
+      _c("div", { staticClass: "flex-row-2" }, [
+        _c("div", { staticClass: "nota-comun" }, [
           _c(
-            "span",
+            "label",
             {
-              staticClass: "mdc-floating-label",
-              attrs: { id: "notaComunLabel" },
+              staticClass: "mdc-text-field mdc-text-field--filled",
+              attrs: { id: "notaComun" },
             },
-            [_vm._v("Nota Común")]
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "notaComunLabel" },
+                },
+                [_vm._v("Nota Común")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
           ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex-col-3" }, [
+          _c("div", { staticClass: "hide-up" }),
           _vm._v(" "),
-          _c("input", {
-            staticClass: "mdc-text-field__input",
-            attrs: { type: "text", "aria-labelledby": "my-label-id" },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "mdc-line-ripple" }),
-        ]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex-row-3" }, [
-      _c("img", {
-        staticClass: "separation-down",
-        attrs: {
-          src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg",
-        },
-      }),
+          _c("div", { staticClass: "overlap-group7" }, [
+            _c("div", { staticClass: "llamadas-relacionados" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "hide-down" }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "top-llamadas-relacioadas",
+              attrs: {
+                src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/top-llamadas-relacioadas@1x.svg",
+              },
+            }),
+          ]),
+        ]),
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "flex-col-4" }, [
-        _c("div", { staticClass: "incidente" }, [
-          _c(
-            "div",
-            {
-              staticClass: "mdc-select mdc-select--filled demo-width-class",
-              attrs: { "data-id": "anima-widget" },
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "mdc-select__anchor custom-enhanced-select-width",
-                  attrs: {
-                    role: "button",
-                    "aria-haspopup": "listbox",
-                    "aria-expanded": "false",
-                  },
-                },
-                [
-                  _c("span", { staticClass: "mdc-select__ripple" }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass: "mdc-floating-label",
-                      attrs: { id: "demo-label" },
+      _c("div", { staticClass: "flex-row-3" }, [
+        _c("img", {
+          staticClass: "separation-down",
+          attrs: {
+            src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg",
+          },
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex-col-4" }, [
+          _c("div", { staticClass: "incidente" }, [
+            _c(
+              "div",
+              {
+                staticClass: "mdc-select mdc-select--filled demo-width-class",
+                attrs: { "data-id": "anima-widget" },
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "mdc-select__anchor custom-enhanced-select-width",
+                    attrs: {
+                      role: "button",
+                      "aria-haspopup": "listbox",
+                      "aria-expanded": "false",
                     },
-                    [_vm._v("Tipos de Incidente")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    { staticClass: "mdc-select__selected-text-container" },
-                    [
-                      _c("span", {
-                        staticClass: "mdc-select__selected-text",
-                        attrs: { id: "demo-selected-text" },
-                      }),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "mdc-select__dropdown-icon-inactive material-icons",
-                      },
-                      [_vm._v("arrow_drop_down")]
-                    ),
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-select__ripple" }),
                     _vm._v(" "),
                     _c(
                       "span",
                       {
-                        staticClass:
-                          "mdc-select__dropdown-icon-active material-icons",
+                        staticClass: "mdc-floating-label",
+                        attrs: { id: "demo-label" },
                       },
-                      [_vm._v("arrow_drop_up")]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "mdc-line-ripple" }),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                },
-                [
-                  _c(
-                    "ul",
-                    {
-                      staticClass: "mdc-list",
-                      attrs: {
-                        id: "select_dropdown",
-                        role: "listbox",
-                        "aria-label": "listbox",
-                      },
-                    },
-                    [
-                      _c(
-                        "li",
-                        {
-                          staticClass: "mdc-list-item",
-                          attrs: { "data-value": "X", role: "option" },
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-list-item__ripple" }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-list-item__text" }, [
-                            _vm._v("X"),
-                          ]),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]
-              ),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "tipo-de-incidente" }, [
-          _c(
-            "div",
-            {
-              staticClass: "mdc-select mdc-select--filled demo-width-class",
-              attrs: { "data-id": "anima-widget" },
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "mdc-select__anchor custom-enhanced-select-width",
-                  attrs: {
-                    role: "button",
-                    "aria-haspopup": "listbox",
-                    "aria-expanded": "false",
-                  },
-                },
-                [
-                  _c("span", { staticClass: "mdc-select__ripple" }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass: "mdc-floating-label",
-                      attrs: { id: "demo-label" },
-                    },
-                    [_vm._v("Tipos de Incidente")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    { staticClass: "mdc-select__selected-text-container" },
-                    [
-                      _c("span", {
-                        staticClass: "mdc-select__selected-text",
-                        attrs: { id: "demo-selected-text" },
-                      }),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "mdc-select__dropdown-icon-inactive material-icons",
-                      },
-                      [_vm._v("arrow_drop_down")]
+                      [_vm._v("Tipos de Incidente")]
                     ),
                     _vm._v(" "),
                     _c(
                       "span",
-                      {
-                        staticClass:
-                          "mdc-select__dropdown-icon-active material-icons",
-                      },
-                      [_vm._v("arrow_drop_up")]
+                      { staticClass: "mdc-select__selected-text-container" },
+                      [
+                        _c("span", {
+                          staticClass: "mdc-select__selected-text",
+                          attrs: { id: "demo-selected-text" },
+                        }),
+                      ]
                     ),
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "mdc-line-ripple" }),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                },
-                [
-                  _c(
-                    "ul",
-                    {
-                      staticClass: "mdc-list",
-                      attrs: {
-                        id: "select_dropdown",
-                        role: "listbox",
-                        "aria-label": "listbox",
-                      },
-                    },
-                    [
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
                       _c(
-                        "li",
+                        "span",
                         {
-                          staticClass: "mdc-list-item",
-                          attrs: { "data-value": "X", role: "option" },
+                          staticClass:
+                            "mdc-select__dropdown-icon-inactive material-icons",
                         },
-                        [
-                          _c("span", { staticClass: "mdc-list-item__ripple" }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-list-item__text" }, [
-                            _vm._v("X"),
-                          ]),
-                        ]
+                        [_vm._v("arrow_drop_down")]
                       ),
-                    ]
-                  ),
-                ]
-              ),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex-row-4" }, [
-          _c("a", { attrs: { href: "#frame-map" } }, [
-            _c("div", { staticClass: "mapa-up", attrs: { id: "mapa-up" } }, [
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "mdc-select__dropdown-icon-active material-icons",
+                        },
+                        [_vm._v("arrow_drop_up")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-line-ripple" }),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                  },
+                  [
+                    _c(
+                      "ul",
+                      {
+                        staticClass: "mdc-list",
+                        attrs: {
+                          id: "select_dropdown",
+                          role: "listbox",
+                          "aria-label": "listbox",
+                        },
+                      },
+                      [
+                        _c(
+                          "li",
+                          {
+                            staticClass: "mdc-list-item",
+                            attrs: { "data-value": "X", role: "option" },
+                          },
+                          [
+                            _c("span", {
+                              staticClass: "mdc-list-item__ripple",
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-list-item__text" }, [
+                              _vm._v("X"),
+                            ]),
+                          ]
+                        ),
+                      ]
+                    ),
+                  ]
+                ),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "tipo-de-incidente" }, [
+            _c(
+              "div",
+              {
+                staticClass: "mdc-select mdc-select--filled demo-width-class",
+                attrs: { "data-id": "anima-widget" },
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "mdc-select__anchor custom-enhanced-select-width",
+                    attrs: {
+                      role: "button",
+                      "aria-haspopup": "listbox",
+                      "aria-expanded": "false",
+                    },
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-select__ripple" }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "mdc-floating-label",
+                        attrs: { id: "demo-label" },
+                      },
+                      [_vm._v("Tipos de Incidente")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-select__selected-text-container" },
+                      [
+                        _c("span", {
+                          staticClass: "mdc-select__selected-text",
+                          attrs: { id: "demo-selected-text" },
+                        }),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "mdc-select__dropdown-icon-inactive material-icons",
+                        },
+                        [_vm._v("arrow_drop_down")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "mdc-select__dropdown-icon-active material-icons",
+                        },
+                        [_vm._v("arrow_drop_up")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-line-ripple" }),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                  },
+                  [
+                    _c(
+                      "ul",
+                      {
+                        staticClass: "mdc-list",
+                        attrs: {
+                          id: "select_dropdown",
+                          role: "listbox",
+                          "aria-label": "listbox",
+                        },
+                      },
+                      [
+                        _c(
+                          "li",
+                          {
+                            staticClass: "mdc-list-item",
+                            attrs: { "data-value": "X", role: "option" },
+                          },
+                          [
+                            _c("span", {
+                              staticClass: "mdc-list-item__ripple",
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-list-item__text" }, [
+                              _vm._v("X"),
+                            ]),
+                          ]
+                        ),
+                      ]
+                    ),
+                  ]
+                ),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex-row-4" }, [
+            _c("a", { attrs: { href: "#frame-map" } }, [
+              _c("div", { staticClass: "mapa-up", attrs: { id: "mapa-up" } }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "mdc-button mdc-button--raised",
+                    attrs: { id: "mapa-up", "data-id": "anima-widget" },
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-button__ripple" }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-button__label" }, [
+                      _vm._v("Mapa"),
+                    ]),
+                  ]
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "aceptar", attrs: { id: "aceptar" } }, [
               _c(
                 "button",
                 {
                   staticClass: "mdc-button mdc-button--raised",
-                  attrs: { id: "mapa-up", "data-id": "anima-widget" },
+                  attrs: { id: "aceptar", "data-id": "anima-widget" },
                 },
                 [
                   _c("span", { staticClass: "mdc-button__ripple" }),
                   _vm._v(" "),
                   _c("span", { staticClass: "mdc-button__label" }, [
-                    _vm._v("Mapa"),
+                    _vm._v("Aceptar"),
                   ]),
                 ]
               ),
             ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "aceptar", attrs: { id: "aceptar" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "mdc-button mdc-button--raised",
-                attrs: { id: "aceptar", "data-id": "anima-widget" },
-              },
-              [
-                _c("span", { staticClass: "mdc-button__ripple" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-button__label" }, [
-                  _vm._v("Aceptar"),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "cancelar", attrs: { id: "cancelar" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "mdc-button mdc-button--raised",
-                attrs: { id: "cancelar", "data-id": "anima-widget" },
-              },
-              [
-                _c("span", { staticClass: "mdc-button__ripple" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-button__label" }, [
-                  _vm._v("Cancelar"),
-                ]),
-              ]
-            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "cancelar", attrs: { id: "cancelar" } }, [
+              _c(
+                "button",
+                {
+                  staticClass: "mdc-button mdc-button--raised",
+                  attrs: { id: "cancelar", "data-id": "anima-widget" },
+                },
+                [
+                  _c("span", { staticClass: "mdc-button__ripple" }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-button__label" }, [
+                    _vm._v("Cancelar"),
+                  ]),
+                ]
+              ),
+            ]),
           ]),
         ]),
       ]),
