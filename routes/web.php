@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//------------------------------ User -----------------------------
+
+Route::resource('user', UsuariController::class);
+
+//-------------------------- Paginas logeadas ---------------------
+
+Route::middleware(['auth'])->group(function () {
+    
+});
+
+//-------------------------------------------------------------------
