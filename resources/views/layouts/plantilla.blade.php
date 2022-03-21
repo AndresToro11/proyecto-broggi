@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> Andres
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +27,6 @@
                 <li><a href="{{ url('/grafico') }}">Grafico</a></li>
                 <li><a href="">login</a></li>
             </ul>
-=======
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,20 +68,11 @@
 
         <div id="app" class="container">
             @yield('contenido')
->>>>>>> Andres
         </div>
 
         <script src="{{ asset('js/app.js') }}"></script>
-
-<<<<<<< HEAD
     <script src="{{ asset('js/app.js') }}"></script>
 
 </body>
-<<<<<<< HEAD
 
-=======
->>>>>>> Andres
-=======
-    </body>
->>>>>>> Andres
 </html>

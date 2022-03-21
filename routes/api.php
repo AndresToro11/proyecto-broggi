@@ -5,12 +5,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\UsuariController;
-<<<<<<< HEAD
 use App\Models\Municipi;
-=======
 use App\Http\Controllers\Api\GraficoController;
 use App\Http\Controllers\Api\ExpedientController;
->>>>>>> Andres
 
 /*
 |--------------------------------------------------------------------------
@@ -29,11 +26,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('user', UsuariController::class);
 
-<<<<<<< HEAD
 Route::apiResource('municipio', MunicipioController::class);
-Route::apiResource('expediente', ExpedientController::class);//->only(['index', 'provincias']);
 Route::get('expediente/provincias', [ExpedientController::class, 'provincias']);
-=======
 Route::apiResource('expedientes', ExpedientController::class);
 
 //-------------------------------- Grafico -----------------------------------
@@ -45,4 +39,3 @@ Route::get('grafico/usuarios-incidentes', [GraficoController::class, 'usuariosIn
 Route::get('grafico/usuarios/{usuario}', [GraficoController::class, 'showUsuario']);
 
 //----------------------------------------------------------------------------
->>>>>>> Andres
