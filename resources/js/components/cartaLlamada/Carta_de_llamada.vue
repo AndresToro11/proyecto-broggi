@@ -270,20 +270,12 @@
                 <div class="hide-up"></div>
                 <div class="overlap-group7">
                   <div class="llamadas-relacionados">
-<<<<<<< HEAD
                     <!-- <select1 />
-=======
-                    <select1 />
->>>>>>> 1f215842c9adbc14584eb3ef1914e80530d88c2b
                     <select1 :className="select11Props.className" />
                     <select1 :className="select12Props.className" />
                     <select1 :className="select13Props.className" />
                     <select1 :className="select14Props.className" />
-<<<<<<< HEAD
                     <select1 :className="select15Props.className" /> -->
-=======
-                    <select1 :className="select15Props.className" />
->>>>>>> 1f215842c9adbc14584eb3ef1914e80530d88c2b
                   </div>
                   <div class="hide-down"></div>
                   <img class="top-llamadas-relacioadas" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/top-llamadas-relacioadas@1x.svg"/>
@@ -385,7 +377,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 // import Select1 from "./Select1";
 //import * as mdc from "material-components-web";
 export default {
@@ -393,15 +384,6 @@ export default {
   // components: {
   //   Select1,
   // },
-=======
-import Select1 from "./Select1";
-import * as mdc from "material-components-web";
-export default {
-  name: "Carta_de_llamada",
-  components: {
-    Select1,
-  },
->>>>>>> 1f215842c9adbc14584eb3ef1914e80530d88c2b
   props: [
     "title",
     "datosDelInterlocutor",
@@ -414,19 +396,11 @@ export default {
     "videoInteractivo",
     "sergiPrezJimnez",
     "cerrarSesin",
-<<<<<<< HEAD
     // "select11Props",
     // "select12Props",
     // "select13Props",
     // "select14Props",
     // "select15Props",
-=======
-    "select11Props",
-    "select12Props",
-    "select13Props",
-    "select14Props",
-    "select15Props",
->>>>>>> 1f215842c9adbc14584eb3ef1914e80530d88c2b
   ],
   mounted: () => {
     new mdc.textField.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
