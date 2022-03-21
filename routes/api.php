@@ -1,7 +1,13 @@
 <?php
 
+use App\Http\Controllers\Api\MunicipioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\Api\UsuariController;
+use App\Models\Municipi;
+use App\Http\Controllers\Api\GraficoController;
+use App\Http\Controllers\Api\ExpedientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +25,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('user', UsuariController::class);
+
+Route::apiResource('municipio', MunicipioController::class);
+Route::get('expediente/provincias', [ExpedientController::class, 'provincias']);
+Route::apiResource('expedientes', ExpedientController::class);
+
+//-------------------------------- Grafico -----------------------------------
+
+Route::get('grafico/provincias', [GraficoController::class, 'provincias']);
+Route::get('grafico/municipios', [GraficoController::class, 'municipios']);
+Route::get('grafico/usuarios', [GraficoController::class, 'usuarios']);
+Route::get('grafico/usuarios-incidentes', [GraficoController::class, 'usuariosIncidentes']);
+Route::get('grafico/usuarios/{usuario}', [GraficoController::class, 'showUsuario']);
+
+//----------------------------------------------------------------------------
