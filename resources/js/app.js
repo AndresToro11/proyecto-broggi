@@ -22,10 +22,12 @@ window.Vue = require('vue').default;
 //---------------------------------------------- Login -----------------------------------
 
 Vue.component('login', require('./components/login.vue').default);
-//---------------------------------------------------------------------------------------------------
+//-----------------------------------------------Llamada----------------------------------------------------
 Vue.component('datos-administrativos', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
 Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncidente.vue').default);
 Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default);
+Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
+Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
 
 //------------------------------------------- Expedientes --------------------------------
 

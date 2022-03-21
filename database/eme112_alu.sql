@@ -422,7 +422,7 @@ CREATE TABLE `tipus_localitzacions` (
 
 LOCK TABLES `tipus_localitzacions` WRITE;
 /*!40000 ALTER TABLE `tipus_localitzacions` DISABLE KEYS */;
-INSERT INTO `tipus_localitzacions` VALUES (1,'Carrers'),(3,'Entitat Població'),(2,'Punt Singular');
+INSERT INTO `tipus_localitzacions` VALUES (1,'Carrers'),(2,'Punt Singular'),(3,'Entitat Població'),(4,'Carretera'),(5,'Fuera Cataluña');
 /*!40000 ALTER TABLE `tipus_localitzacions` ENABLE KEYS */;
 UNLOCK TABLES;
 
