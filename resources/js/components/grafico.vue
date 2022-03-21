@@ -1,7 +1,13 @@
 <template>
     <div>
+
+        <div id="loader" class="text-center">
+            <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;">
+            </div>
+        </div>
+
         <canvas id="grafico"></canvas>
-        
+
         <div>
             <button v-on:click="selectProvincias">Provincias</button>
             <button v-on:click="selectMunicipios">Municipios</button>
@@ -14,6 +20,7 @@
                 </option>
             </select>
         </div>
+
     </div>
 </template>
 
@@ -21,6 +28,7 @@
     import Chart from "chart.js/auto";
 
     let grafica;
+    
 
     export default {
         data(){
