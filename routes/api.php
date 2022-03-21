@@ -10,8 +10,6 @@ use App\Http\Controllers\Api\ExpedientController;
 use App\Http\Controllers\ComarcaController;
 use App\Http\Controllers\IncidenteController;
 use App\Http\Controllers\ProvinciaController;
-use App\Http\Controllers\Api\UsuariController;
-use App\Http\Controllers\Api\ExpedientController;
 use App\Http\Controllers\Api\MunicipioController;
 use App\Http\Controllers\TiposIncidenteController;
 

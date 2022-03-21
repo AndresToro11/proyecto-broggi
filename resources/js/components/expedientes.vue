@@ -78,6 +78,7 @@
 
         methods:{
             selectExpedientes(){
+            
             let me = this;
             axios
                 .get('/expedientes')

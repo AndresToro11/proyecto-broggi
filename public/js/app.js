@@ -6095,7 +6095,6 @@ var grafica;
     selectUsuario: function selectUsuario() {
       var _this5 = this;
 
-      //let user = 2;
       var type = 'doughnut';
       var usuarios = [];
       var titulo;

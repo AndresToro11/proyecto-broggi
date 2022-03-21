@@ -103,7 +103,6 @@
             },
 
             selectUsuario(){
-                //let user = 2;
                 let type = 'doughnut';
                 let usuarios = [];
                 let titulo;
