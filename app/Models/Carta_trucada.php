@@ -21,10 +21,10 @@ class Carta_trucada extends Model
 
     protected $table = 'cartes_trucades';
     public $timestamps = false;
-    
+
     public function incident(): BelongsTo
     {
-        return $this->belongsTo(Incident::class, 'cicles_id');
+        return $this->belongsTo(Incident::class, 'incidents_id');
     }
 
     public function expedient(): BelongsTo
