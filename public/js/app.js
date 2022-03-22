@@ -6384,16 +6384,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      expedientes: []
+      expedientes: [],
+      loading: false
     };
   },
   methods: {
     selectExpedientes: function selectExpedientes() {
       var _this = this;
 
+      this.loading = true;
       var me = this;
       axios.get('/expedientes').then(function (response) {
         me.expedientes = response.data;
@@ -6450,6 +6458,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 var grafica;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -6457,13 +6471,15 @@ var grafica;
     return {
       usuarios: [],
       usuario: {},
-      selected: ''
+      selected: '',
+      loading: false
     };
   },
   methods: {
     selectProvincias: function selectProvincias() {
       var _this = this;
 
+      this.loading = true;
       axios.get('/grafico/provincias').then(function (response) {
         var titulo = 'Incidentes';
         var provincias = [];
@@ -6480,6 +6496,7 @@ var grafica;
     selectMunicipios: function selectMunicipios() {
       var _this2 = this;
 
+      this.loading = true;
       axios.get('/grafico/municipios').then(function (response) {
         var titulo = 'Incidentes';
         var municipios = [];
@@ -6496,6 +6513,7 @@ var grafica;
     selectUsuarios: function selectUsuarios() {
       var _this3 = this;
 
+      this.loading = true;
       var me = this;
       axios.get('/grafico/usuarios').then(function (response) {
         me.usuarios = response.data;
@@ -6508,6 +6526,7 @@ var grafica;
     selectUsuariosIncidentes: function selectUsuariosIncidentes() {
       var _this4 = this;
 
+      this.loading = true;
       var incidentes;
       var type = 'bar';
       var titulo = 'Incidentes';
@@ -6524,6 +6543,7 @@ var grafica;
     selectUsuario: function selectUsuario() {
       var _this5 = this;
 
+      this.loading = true;
       var type = 'doughnut';
       var usuarios = [];
       var titulo;
@@ -6539,6 +6559,7 @@ var grafica;
       });
     },
     grafico: function grafico(datos, tipo, titulo) {
+      this.loading = true;
       var objetos = [];
       var numeros = [];
 
@@ -6567,7 +6588,8 @@ var grafica;
         }
       });
       grafica.canvas.parentNode.style.width = '800px';
-      grafica.canvas.parentNode.style.width = '800px';
+      grafica.canvas.parentNode.style.heigth = '600px';
+      this.loading = false;
     }
   },
   mounted: function mounted() {
@@ -46069,161 +46091,181 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "mt-4" },
-    _vm._l(_vm.expedientes, function (expediente) {
-      return _c("div", { key: expediente.id, staticClass: "test" }, [
-        _c("p", [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-primary",
-              staticStyle: { width: "1000px" },
-              attrs: {
-                "data-bs-toggle": "collapse",
-                href: "#collapseExample",
-                role: "button",
-                "aria-expanded": "false",
-                "aria-controls": "collapseExample",
-              },
-            },
-            [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col" }, [
-                  _vm._v(
-                    "\n                        Expediente: " +
-                      _vm._s(expediente.id) +
-                      "\n                    "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col" }, [
-                  _vm._v(
-                    "\n                        Operador: " +
-                      _vm._s(
-                        expediente.cartas_trucades[
-                          expediente.cartas_trucades.length - 1
-                        ].usuari.codi
-                      ) +
-                      "\n                    "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col" }, [
-                  _vm._v(
-                    "\n                        fecha: " +
-                      _vm._s(expediente.data_creacio) +
-                      "\n                    "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col" }, [
-                  _vm._v(
-                    "\n                        estado: " +
-                      _vm._s(expediente.estat_expedient.estat) +
-                      "\n                    "
-                  ),
-                ]),
-              ]),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c(
+  return _c("div", { staticClass: "mt-4" }, [
+    _vm.loading == true
+      ? _c("div", { staticClass: "mt-4" }, [_vm._m(0)])
+      : _c(
           "div",
-          {
-            staticClass: "collapse border m-4",
-            attrs: { id: "collapseExample" },
-          },
-          _vm._l(expediente.cartas_trucades, function (carta) {
-            return _c("div", { key: carta.id, staticClass: "border m-4 p-4" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col" }, [
-                  _vm._v(
-                    "\n                            Codigo llamada: " +
-                      _vm._s(carta.id) +
-                      "\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col" }, [
-                  _vm._v(
-                    "\n                            Provincia: " +
-                      _vm._s(carta.provincia.nom) +
-                      "\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col" }, [
-                  _vm._v(
-                    "\n                            Municipio: " +
-                      _vm._s(carta.municipi.nom) +
-                      "\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col" }, [
-                  _vm._v(
-                    "\n                            Incidente: " +
-                      _vm._s(carta.incident.descripcio) +
-                      "\n                        "
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-4" }, [
-                  _vm._v(
-                    '\n                            Nota común: "' +
-                      _vm._s(carta.nota_comuna) +
-                      '"\n                        '
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-2" }, [
-                  _vm._v(
-                    "\n                            Fuera de cataluña:\n                            "
-                  ),
-                  carta.fora_catalunya
-                    ? _c("div", [
+          _vm._l(_vm.expedientes, function (expediente) {
+            return _c("div", { key: expediente.id, staticClass: "test" }, [
+              _c("p", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-primary",
+                    staticStyle: { width: "1000px" },
+                    attrs: {
+                      "data-bs-toggle": "collapse",
+                      href: "#collapseExample",
+                      role: "button",
+                      "aria-expanded": "false",
+                      "aria-controls": "collapseExample",
+                    },
+                  },
+                  [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col" }, [
                         _vm._v(
-                          "\n                                Si\n                            "
-                        ),
-                      ])
-                    : _c("div", [
-                        _vm._v(
-                          "\n                                No\n                            "
+                          "\n                            Expediente: " +
+                            _vm._s(expediente.id) +
+                            "\n                        "
                         ),
                       ]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-3" }, [
-                  _vm._v(
-                    "\n                            Tiempo de la llamada: " +
-                      _vm._s(carta.temps_trucada) +
-                      "\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-3" }, [
-                  _vm._v(
-                    "\n                            Direccion: " +
-                      _vm._s(carta.adreca_trucada) +
-                      "\n                        "
-                  ),
-                ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col" }, [
+                        _vm._v(
+                          "\n                            Operador: " +
+                            _vm._s(
+                              expediente.cartas_trucades[
+                                expediente.cartas_trucades.length - 1
+                              ].usuari.codi
+                            ) +
+                            "\n                        "
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col" }, [
+                        _vm._v(
+                          "\n                            fecha: " +
+                            _vm._s(expediente.data_creacio) +
+                            "\n                        "
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col" }, [
+                        _vm._v(
+                          "\n                            estado: " +
+                            _vm._s(expediente.estat_expedient.estat) +
+                            "\n                        "
+                        ),
+                      ]),
+                    ]),
+                  ]
+                ),
               ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "collapse border m-4",
+                  attrs: { id: "collapseExample" },
+                },
+                _vm._l(expediente.cartas_trucades, function (carta) {
+                  return _c(
+                    "div",
+                    { key: carta.id, staticClass: "border m-4 p-4" },
+                    [
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v(
+                            "\n                            Codigo llamada: " +
+                              _vm._s(carta.id) +
+                              "\n                        "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v(
+                            "\n                            Provincia: " +
+                              _vm._s(carta.provincia.nom) +
+                              "\n                        "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v(
+                            "\n                            Municipio: " +
+                              _vm._s(carta.municipi.nom) +
+                              "\n                        "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col" }, [
+                          _vm._v(
+                            "\n                            Incidente: " +
+                              _vm._s(carta.incident.descripcio) +
+                              "\n                        "
+                          ),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col-4" }, [
+                          _vm._v(
+                            '\n                            Nota común: "' +
+                              _vm._s(carta.nota_comuna) +
+                              '"\n                        '
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-2" }, [
+                          _vm._v(
+                            "\n                            Fuera de cataluña:\n                            "
+                          ),
+                          carta.fora_catalunya
+                            ? _c("div", [
+                                _vm._v(
+                                  "\n                                Si\n                            "
+                                ),
+                              ])
+                            : _c("div", [
+                                _vm._v(
+                                  "\n                                No\n                            "
+                                ),
+                              ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-3" }, [
+                          _vm._v(
+                            "\n                            Tiempo de la llamada: " +
+                              _vm._s(carta.temps_trucada) +
+                              "\n                        "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-3" }, [
+                          _vm._v(
+                            "\n                            Direccion: " +
+                              _vm._s(carta.adreca_trucada) +
+                              "\n                        "
+                          ),
+                        ]),
+                      ]),
+                    ]
+                  )
+                }),
+                0
+              ),
             ])
           }),
           0
         ),
-      ])
-    }),
-    0
-  )
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center", attrs: { id: "loader" } }, [
+      _c("div", {
+        staticClass: "spinner-border text-danger",
+        staticStyle: { width: "9rem", height: "9rem" },
+        attrs: { role: "status" },
+      }),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -46247,76 +46289,86 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("canvas", { attrs: { id: "grafico" } }),
-    _vm._v(" "),
-    _c("div", [
-      _c("button", { on: { click: _vm.selectProvincias } }, [
-        _vm._v("Provincias"),
-      ]),
-      _vm._v(" "),
-      _c("button", { on: { click: _vm.selectMunicipios } }, [
-        _vm._v("Municipios"),
-      ]),
-      _vm._v(" "),
-      _c("button", { on: { click: _vm.selectUsuariosIncidentes } }, [
-        _vm._v("Incidentes"),
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.selected,
-              expression: "selected",
-            },
-          ],
-          staticClass: "form-control",
-          on: {
-            change: [
-              function ($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function (o) {
-                    return o.selected
-                  })
-                  .map(function (o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.selected = $event.target.multiple
-                  ? $$selectedVal
-                  : $$selectedVal[0]
-              },
-              function ($event) {
-                return _vm.selectUsuario()
-              },
-            ],
-          },
-        },
-        [
-          _c("option", { attrs: { value: "0", disabled: "", selected: "" } }, [
-            _vm._v("Usuarios"),
-          ]),
+    _vm.loading == true
+      ? _c("div", [
+          _vm._m(0),
           _vm._v(" "),
-          _vm._l(_vm.usuarios, function (usuario) {
-            return _c(
-              "option",
-              { key: usuario.id, domProps: { value: usuario.id } },
+          _c("canvas", { attrs: { id: "grafico", hidden: "" } }),
+        ])
+      : _c("div", [
+          _c("canvas", { attrs: { id: "grafico" } }),
+          _vm._v(" "),
+          _c("div", [
+            _c("button", { on: { click: _vm.selectProvincias } }, [
+              _vm._v("Provincias"),
+            ]),
+            _vm._v(" "),
+            _c("button", { on: { click: _vm.selectMunicipios } }, [
+              _vm._v("Municipios"),
+            ]),
+            _vm._v(" "),
+            _c("button", { on: { click: _vm.selectUsuariosIncidentes } }, [
+              _vm._v("Incidentes"),
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.selected,
+                    expression: "selected",
+                  },
+                ],
+                staticClass: "form-control",
+                on: {
+                  change: [
+                    function ($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function (o) {
+                          return o.selected
+                        })
+                        .map(function (o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.selected = $event.target.multiple
+                        ? $$selectedVal
+                        : $$selectedVal[0]
+                    },
+                    function ($event) {
+                      return _vm.selectUsuario()
+                    },
+                  ],
+                },
+              },
               [
-                _vm._v(
-                  "\n                " + _vm._s(usuario.codi) + "\n            "
+                _c(
+                  "option",
+                  { attrs: { value: "0", disabled: "", selected: "" } },
+                  [_vm._v("Usuarios")]
                 ),
-              ]
-            )
-          }),
-        ],
-        2
-      ),
-    ]),
+                _vm._v(" "),
+                _vm._l(_vm.usuarios, function (usuario) {
+                  return _c(
+                    "option",
+                    { key: usuario.id, domProps: { value: usuario.id } },
+                    [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(usuario.codi) +
+                          "\n                "
+                      ),
+                    ]
+                  )
+                }),
+              ],
+              2
+            ),
+          ]),
+        ]),
   ])
 }
 var staticRenderFns = [
@@ -46374,7 +46426,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/grafico",
+                href: "/proyecto-broggi/public/expedientes",
                 type: "button",
               },
             },
@@ -46388,7 +46440,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/grafico",
+                href: "/proyecto-broggi/public/grafico",
                 type: "button",
               },
             },
@@ -46402,7 +46454,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/grafico",
+                href: "/proyecto-broggi/public/grafico",
                 type: "button",
               },
             },
@@ -46547,7 +46599,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/llamada",
+                href: "/proyecto_broggi/public/expedientes",
                 type: "button",
               },
             },
