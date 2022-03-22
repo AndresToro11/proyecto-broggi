@@ -14,6 +14,7 @@ export default {
 
     },
     setDataAdministrativos(){
+            console.log('Admin');
             this.$emit("getDataAdministrativos", this.contador);
         },
 };

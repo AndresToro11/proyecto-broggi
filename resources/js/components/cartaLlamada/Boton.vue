@@ -14,6 +14,9 @@
     </div>
 </template>
 <script>
+import Administrativo from "@/components/DatosAdministrativos";
+import Personal from "@/components/DatosPersonales";
+import Incidente from "@/components/DatosIncidente";
 export default {
     data() {
         return {
@@ -31,13 +34,13 @@ export default {
                 provincies_id: " ",
                 municipis_id: " ",
                 tipus_localitzacions_id: " ",
-                descripcio_localitzacio:" ",
+                descripcio_localitzacio: " ",
                 detall_localitzacio: " ",
                 altres_ref_localitzacio: "",
                 incidents_id: " ",
                 nota_comuna: " ",
                 expedients_id: " ",
-                usuaris_id: " "
+                usuaris_id: " ",
             },
         };
     },
@@ -58,21 +61,22 @@ export default {
                 .finally(() => (this.loading = false));
         },
         getDataPersonal(array) {
-                cartaLlamada.telefon= array.telefono,
-                cartaLlamada.procedencia_trucada= array.procedencia,
-                cartaLlamada.origen_trucada= array.origen,
-                cartaLlamada.municipis_id_trucada= array.municipio,
-                cartaLlamada.adreca_trucada= array.direccion,
-                cartaLlamada.nota_comuna= array.notaComun
+            (cartaLlamada.telefon = array.telefono),
+                (cartaLlamada.procedencia_trucada = array.procedencia),
+                (cartaLlamada.origen_trucada = array.origen),
+                (cartaLlamada.municipis_id_trucada = array.municipio),
+                (cartaLlamada.adreca_trucada = array.direccion),
+                (cartaLlamada.nota_comuna = array.notaComun);
         },
         getDataIncidente(array) {
-                cartaLlamada.fora_catalunya= array.catalunya,
-                cartaLlamada.provincies_id= array.provincia,
-                cartaLlamada.municipis_id= array.municipio,
-                cartaLlamada.tipus_localitzacions_id= array.localizacion,
-                cartaLlamada.descripcio_localitzacio= array.descripcio_localitzacio,
-                cartaLlamada.detall_localitzacio= array.detall_localitzacio,
-                cartaLlamada.incidents_id= array.incidente
+            (cartaLlamada.fora_catalunya = array.catalunya),
+                (cartaLlamada.provincies_id = array.provincia),
+                (cartaLlamada.municipis_id = array.municipio),
+                (cartaLlamada.tipus_localitzacions_id = array.localizacion),
+                (cartaLlamada.descripcio_localitzacio =
+                    array.descripcio_localitzacio),
+                (cartaLlamada.detall_localitzacio = array.detall_localitzacio),
+                (cartaLlamada.incidents_id = array.incidente);
         },
         getDataAdministrativos(contador) {
             this.contador = contador;
@@ -80,30 +84,50 @@ export default {
         insertBD(cartaLlamada) {
             let me = this;
             axios
-                .post('/llamada', me.cartaLlamada)
-                .then(function(response){
-                    console.log('Insert OK')
-                }).catch(function(error){
+                .post("/llamada", me.cartaLlamada)
+                .then(function (response) {
+                    console.log("Insert OK");
+                })
+                .catch(function (error) {
                     this.console.log("Error:");
                     console.log(error);
-                })
+                });
         },
-        botonBD(){
-            console.log('AVEZTRUZ');
-        }
+        botonBD() {
+            console.log("AVEZTRUZ");
+            this.$emit("setDataPersonal");
+            this.$emit("setDataIncidente");
+            this.$emit("setDataAdministrativos");
+            setDataPersonal();
+            setDataIncidente();
+            Administrativo.setDataAdministrativos();
+            setTimeout(insertBD(cartaLlamada), 2000);
+        },
     },
-    computed:{
+    computed: {
         descripcioLocalitzacio: function () {
             let varianle = -1;
-            for (let index = 0; index < this.idDatosPersonales.length ; index++) {
-                if (cartaLlamada.telefon == this.idDatosPersonales.telefono[index]) {
+            for (
+                let index = 0;
+                index < this.idDatosPersonales.length;
+                index++
+            ) {
+                if (
+                    cartaLlamada.telefon ==
+                    this.idDatosPersonales.telefono[index]
+                ) {
                     varianle = this.idDatosPersonales.id[index];
                 }
             }
             if (varianle != -1) {
-                this.cartaLlamada.dades_personals_id=varianle;
+                this.cartaLlamada.dades_personals_id = varianle;
             }
         },
+    },
+    components: {
+        Personal,
+        Administrativo,
+        Incidente,
     },
     mounted() {
         this.select();

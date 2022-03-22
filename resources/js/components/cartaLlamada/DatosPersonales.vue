@@ -62,6 +62,7 @@ export default {
                 .finally(() => (this.loading = false));
         },
         setDataPersonal(){
+            console.log('Personal');
             this.$emit("getDataPersonal", this.datos_personales);
         },
     },

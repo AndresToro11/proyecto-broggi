@@ -237,6 +237,7 @@ export default {
                 })
                 .finally(() => (this.loading = false));
         },setDataIncidente(){
+            console.log('Incidente');
             this.$emit("getDataIncidente", this.datos_incidente);
         },
     },
