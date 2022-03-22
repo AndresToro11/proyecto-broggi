@@ -1,28 +1,35 @@
 <template>
     <div class="mt-4">
 
-        <div class="test" v-for="expediente in expedientes" :key="expediente.id">
-            <p>
-                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="width: 1000px">
-                    <div class="row">
-                        <div class="col">
-                            Expediente: {{ expediente.id }}
+        <div class="mt-4" v-if="loading == true">
+            <div id="loader" class="text-center">
+                <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
+            </div>
+        </div>
+
+        <div v-else>
+            <div class="test" v-for="expediente in expedientes" :key="expediente.id">
+                <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="width: 1000px">
+                        <div class="row">
+                            <div class="col">
+                                Expediente: {{ expediente.id }}
+                            </div>
+                            <div class="col">
+                                Operador: {{
+                                    expediente.cartas_trucades[expediente.cartas_trucades.length - 1].usuari.codi
+                                }}
+                            </div>
+                            <div class="col">
+                                fecha: {{ expediente.data_creacio }}
+                            </div>
+                            <div class="col">
+                                estado: {{ expediente.estat_expedient.estat }}
+                            </div>
                         </div>
-                        <div class="col">
-                            Operador: {{
-                                expediente.cartas_trucades[expediente.cartas_trucades.length - 1].usuari.codi
-                            }}
-                        </div>
-                        <div class="col">
-                            fecha: {{ expediente.data_creacio }}
-                        </div>
-                        <div class="col">
-                            estado: {{ expediente.estat_expedient.estat }}
-                        </div>
-                    </div>
-                </a>
-            </p>
-            <div class="collapse border m-4" id="collapseExample">
+                    </a>
+                </p>
+                <div class="collapse border m-4" id="collapseExample">
                     <div class="border m-4 p-4" v-for="carta in expediente.cartas_trucades" :key="carta.id">
                         <div class="row" >
                             <div class="col">
@@ -59,10 +66,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
-
-
 
     </div>
 </template>
@@ -72,23 +78,24 @@
 
         data(){
             return {
-                expedientes: []
+                expedientes: [],
+                loading: false
             }
         },
 
         methods:{
             selectExpedientes(){
-            
-            let me = this;
-            axios
-                .get('/expedientes')
-                .then(response => {
-                    me.expedientes = response.data;
-                })
-                .catch(error => {
-                    console.log(error);
-                })
-                .finally(() => this.loading = false);
+                this.loading = true;
+                let me = this;
+                axios
+                    .get('/expedientes')
+                    .then(response => {
+                        me.expedientes = response.data;
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+                    .finally(() => this.loading = false);
             }
         },
         mounted() {

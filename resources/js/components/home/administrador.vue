@@ -6,13 +6,13 @@
         
         <div class="row text-center mt-4">
             <div class="col">
-                <a href="/proyecto_broggi/public/grafico" type="button" class="btn btn-primary">Gestionar expediente</a>
+                <a href="/proyecto-broggi/public/expedientes" type="button" class="btn btn-primary">Gestionar expediente</a>
             </div>
             <div class="col">
-                <a href="/proyecto_broggi/public/grafico" type="button" class="btn btn-primary">Gráfico</a>
+                <a href="/proyecto-broggi/public/grafico" type="button" class="btn btn-primary">Gráfico</a>
             </div>
                         <div class="col">
-                <a href="/proyecto_broggi/public/grafico" type="button" class="btn btn-primary">Gestionar usuarios</a>
+                <a href="/proyecto-broggi/public/grafico" type="button" class="btn btn-primary">Gestionar usuarios</a>
             </div>
         </div>
 

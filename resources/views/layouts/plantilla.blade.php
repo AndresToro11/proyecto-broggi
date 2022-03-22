@@ -31,7 +31,7 @@
         </script>
 
     </head>
-    <body onload="loader()">
+    <body onload="">
         <nav>
             <div class="nav-wrapper">
                 <a href="{{ url('/home') }}" class="brand-logo">Logo</a>
