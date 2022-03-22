@@ -1,25 +1,31 @@
 <template>
     <div>
 
-        <div id="loader" class="text-center">
-            <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;">
+        <div v-if="loading == true">
+            <div id="loader" class="text-center">
+                <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
+            </div>
+            <canvas id="grafico" hidden></canvas>
+        </div>
+            
+        <div v-else>
+            <canvas id="grafico"></canvas>
+            <div>
+                <button @click="selectProvincias">Provincias</button>
+                <button @click="selectMunicipios">Municipios</button>
+                <button @click="selectUsuariosIncidentes">Incidentes</button>
+                
+                <select class="form-control" v-on:change="selectUsuario()" v-model="selected">
+                    <option value="0" disabled selected>Usuarios</option>
+                    <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id" >
+                        {{ usuario.codi }}
+                    </option>
+                </select>
             </div>
         </div>
+        
 
-        <canvas id="grafico"></canvas>
 
-        <div>
-            <button v-on:click="selectProvincias">Provincias</button>
-            <button v-on:click="selectMunicipios">Municipios</button>
-            <button v-on:click="selectUsuariosIncidentes">Incidentes</button>
-            
-            <select class="form-control" v-on:change="selectUsuario()" v-model="selected">
-                <option value="0" disabled selected>Usuarios</option>
-                <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id" >
-                    {{ usuario.codi }}
-                </option>
-            </select>
-        </div>
 
     </div>
 </template>
@@ -29,18 +35,19 @@
 
     let grafica;
     
-
     export default {
         data(){
             return{
                 usuarios: [],
                 usuario: {},
-                selected: ''
+                selected: '',
+                loading: false
             }
         },
 
         methods:{
             selectProvincias(){
+                this.loading = true;
                 axios
                 .get('/grafico/provincias')
 
@@ -58,6 +65,7 @@
             },
 
             selectMunicipios(){
+                this.loading = true;
                 axios
                 .get('/grafico/municipios')
                 .then(response => {
@@ -74,6 +82,7 @@
             },
 
             selectUsuarios(){
+                this.loading = true;
                 let me = this;
                 axios
                 .get('/grafico/usuarios')
@@ -87,6 +96,7 @@
             },
 
             selectUsuariosIncidentes(){
+                this.loading = true;
                 let incidentes;
                 let type = 'bar';
                 let titulo = 'Incidentes';
@@ -103,7 +113,7 @@
             },
 
             selectUsuario(){
-                //let user = 2;
+                this.loading = true;
                 let type = 'doughnut';
                 let usuarios = [];
                 let titulo;
@@ -121,6 +131,7 @@
             },
 
             grafico(datos, tipo, titulo){
+                this.loading = true;
                 let objetos = [];
                 let numeros = [];
 
@@ -157,7 +168,8 @@
                     }
                 });
                 grafica.canvas.parentNode.style.width = '800px';
-                grafica.canvas.parentNode.style.width = '800px';
+                grafica.canvas.parentNode.style.heigth = '600px';
+                this.loading = false;
             },
         },
 

@@ -1,4 +1,4 @@
-{{ session(['rol' => 'administrador']) }}
+{{ session(['rol' => 'operador']) }}
 
 @extends('layouts.plantilla')
 
