@@ -6,7 +6,9 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        <select name="pepe" id="pepe">
+                            <option value="1">fdgdfgdfgdf</option>
+                        </select>
                     </div>
                 </div>
             </div>
