@@ -269,14 +269,14 @@
               <div class="flex-col-3">
                 <div class="hide-up"></div>
                 <div class="overlap-group7">
-                  <div class="llamadas-relacionados">
-                    <!-- <select1 />
+                  <!-- <div class="llamadas-relacionados">
+                    <select1 />
                     <select1 :className="select11Props.className" />
                     <select1 :className="select12Props.className" />
                     <select1 :className="select13Props.className" />
                     <select1 :className="select14Props.className" />
-                    <select1 :className="select15Props.className" /> -->
-                  </div>
+                    <select1 :className="select15Props.className" />
+                  </div> -->
                   <div class="hide-down"></div>
                   <img class="top-llamadas-relacioadas" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/top-llamadas-relacioadas@1x.svg"/>
                 </div>
@@ -378,12 +378,12 @@
 
 <script>
 // import Select1 from "./Select1";
-//import * as mdc from "material-components-web";
+import * as mdc from "material-components-web";
 export default {
   name: "Carta_de_llamada",
-  // components: {
-  //   Select1,
-  // },
+  components: {
+    // Select1,
+  },
   props: [
     "title",
     "datosDelInterlocutor",
