@@ -99,7 +99,6 @@
             }
         },
         mounted() {
-            console.log('¡¡Componente expedientes up!!')
             this.selectExpedientes();
         }
     }

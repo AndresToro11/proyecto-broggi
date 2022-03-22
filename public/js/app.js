@@ -6413,7 +6413,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    console.log('¡¡Componente expedientes up!!');
     this.selectExpedientes();
   }
 });
@@ -6461,9 +6460,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 var grafica;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -6471,8 +6467,9 @@ var grafica;
     return {
       usuarios: [],
       usuario: {},
-      selected: '',
-      loading: false
+      selected: 0,
+      loading: false,
+      showUsuarios: false
     };
   },
   methods: {
@@ -6491,7 +6488,7 @@ var grafica;
         console.log(error);
       })["finally"](function () {
         return _this.loading = false;
-      });
+      }, this.showUsuarios = false, this.selected = 0);
     },
     selectMunicipios: function selectMunicipios() {
       var _this2 = this;
@@ -6508,7 +6505,7 @@ var grafica;
         console.log(error);
       })["finally"](function () {
         return _this2.loading = false;
-      });
+      }, this.showUsuarios = false, this.selected = 0);
     },
     selectUsuarios: function selectUsuarios() {
       var _this3 = this;
@@ -6538,7 +6535,7 @@ var grafica;
         console.log(error);
       })["finally"](function () {
         return _this4.loading = false;
-      });
+      }, this.showUsuarios = true, this.selected = 0);
     },
     selectUsuario: function selectUsuario() {
       var _this5 = this;
@@ -46298,76 +46295,78 @@ var render = function () {
       : _c("div", [
           _c("canvas", { attrs: { id: "grafico" } }),
           _vm._v(" "),
-          _c("div", [
-            _c("button", { on: { click: _vm.selectProvincias } }, [
-              _vm._v("Provincias"),
-            ]),
-            _vm._v(" "),
-            _c("button", { on: { click: _vm.selectMunicipios } }, [
-              _vm._v("Municipios"),
-            ]),
-            _vm._v(" "),
-            _c("button", { on: { click: _vm.selectUsuariosIncidentes } }, [
-              _vm._v("Incidentes"),
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.selected,
-                    expression: "selected",
-                  },
-                ],
-                staticClass: "form-control",
-                on: {
-                  change: [
-                    function ($event) {
-                      var $$selectedVal = Array.prototype.filter
-                        .call($event.target.options, function (o) {
-                          return o.selected
-                        })
-                        .map(function (o) {
-                          var val = "_value" in o ? o._value : o.value
-                          return val
-                        })
-                      _vm.selected = $event.target.multiple
-                        ? $$selectedVal
-                        : $$selectedVal[0]
-                    },
-                    function ($event) {
-                      return _vm.selectUsuario()
-                    },
-                  ],
-                },
-              },
-              [
-                _c(
-                  "option",
-                  { attrs: { value: "0", disabled: "", selected: "" } },
-                  [_vm._v("Usuarios")]
-                ),
-                _vm._v(" "),
-                _vm._l(_vm.usuarios, function (usuario) {
-                  return _c(
-                    "option",
-                    { key: usuario.id, domProps: { value: usuario.id } },
-                    [
-                      _vm._v(
-                        "\n                    " +
-                          _vm._s(usuario.codi) +
-                          "\n                "
-                      ),
-                    ]
-                  )
-                }),
-              ],
-              2
-            ),
+          _c("button", { on: { click: _vm.selectProvincias } }, [
+            _vm._v("Provincias"),
           ]),
+          _vm._v(" "),
+          _c("button", { on: { click: _vm.selectMunicipios } }, [
+            _vm._v("Municipios"),
+          ]),
+          _vm._v(" "),
+          _c("button", { on: { click: _vm.selectUsuariosIncidentes } }, [
+            _vm._v("Incidentes"),
+          ]),
+          _vm._v(" "),
+          _vm.showUsuarios == true
+            ? _c("div", [
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.selected,
+                        expression: "selected",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    on: {
+                      change: [
+                        function ($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function (o) {
+                              return o.selected
+                            })
+                            .map(function (o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.selected = $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        },
+                        function ($event) {
+                          return _vm.selectUsuario()
+                        },
+                      ],
+                    },
+                  },
+                  [
+                    _c(
+                      "option",
+                      { attrs: { value: "0", disabled: "", selected: "" } },
+                      [_vm._v("Usuarios")]
+                    ),
+                    _vm._v(" "),
+                    _vm._l(_vm.usuarios, function (usuario) {
+                      return _c(
+                        "option",
+                        { key: usuario.id, domProps: { value: usuario.id } },
+                        [
+                          _vm._v(
+                            "\n                        " +
+                              _vm._s(usuario.codi) +
+                              "\n                    "
+                          ),
+                        ]
+                      )
+                    }),
+                  ],
+                  2
+                ),
+              ])
+            : _vm._e(),
         ]),
   ])
 }

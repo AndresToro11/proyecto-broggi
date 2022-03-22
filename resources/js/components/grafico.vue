@@ -10,23 +10,20 @@
             
         <div v-else>
             <canvas id="grafico"></canvas>
-            <div>
                 <button @click="selectProvincias">Provincias</button>
                 <button @click="selectMunicipios">Municipios</button>
                 <button @click="selectUsuariosIncidentes">Incidentes</button>
-                
-                <select class="form-control" v-on:change="selectUsuario()" v-model="selected">
-                    <option value="0" disabled selected>Usuarios</option>
-                    <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id" >
-                        {{ usuario.codi }}
-                    </option>
-                </select>
-            </div>
+
+                <div v-if="showUsuarios == true">
+                    <select class="form-control" v-on:change="selectUsuario()" v-model="selected">
+                        <option value="0" disabled selected>Usuarios</option>
+                        <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id" >
+                            {{ usuario.codi }}
+                        </option>
+                    </select>
+                </div>
         </div>
         
-
-
-
     </div>
 </template>
 
@@ -40,8 +37,9 @@
             return{
                 usuarios: [],
                 usuario: {},
-                selected: '',
-                loading: false
+                selected: 0,
+                loading: false,
+                showUsuarios: false
             }
         },
 
@@ -61,7 +59,9 @@
                 .catch(error => {
                     console.log(error);
                 })
-                .finally(() => this.loading = false);
+                .finally(() => this.loading = false, 
+                                this.showUsuarios = false,
+                                this.selected = 0);
             },
 
             selectMunicipios(){
@@ -78,7 +78,9 @@
                 .catch(error => {
                     console.log(error);
                 })
-                .finally(() => this.loading = false);
+                .finally(() => this.loading = false, 
+                                this.showUsuarios = false,
+                                this.selected = 0);
             },
 
             selectUsuarios(){
@@ -109,7 +111,9 @@
                 .catch(error => {
                     console.log(error);
                 })
-                .finally(() => this.loading = false);
+                .finally(() => this.loading = false, 
+                                this.showUsuarios = true,
+                                this.selected = 0);
             },
 
             selectUsuario(){

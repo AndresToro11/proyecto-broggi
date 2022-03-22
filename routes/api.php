@@ -34,6 +34,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('user', UsuariController::class);
 
+//-------------------------- Carta de llamada ------------------------------------
+
 Route::apiResource('municipio', MunicipioController::class);
 Route::apiResource('provincia', ProvinciaController::class);
 Route::apiResource('comarca', ComarcaController::class);
@@ -41,11 +43,12 @@ Route::apiResource('incidente', IncidenteController::class);
 Route::apiResource('tiposIncidente', TiposIncidenteController::class);
 Route::apiResource('tiposLocalitzacion', TiposLocalizacionController::class);
 Route::apiResource('datosPersonales', DatosPersonalesController::class);
-Route::apiResource('expediente', ExpedientController::class); //->only(['index', 'provincias']);
-Route::get('expediente/provincias', [ExpedientController::class, 'provincias']);
+
+//-------------------------------- Expedientes -----------------------------------
+
 Route::apiResource('expedientes', ExpedientController::class);
 
-//-------------------------------- Grafico -----------------------------------
+//-------------------------------- Grafico ---------------------------------------
 
 Route::get('grafico/provincias', [GraficoController::class, 'provincias']);
 Route::get('grafico/municipios', [GraficoController::class, 'municipios']);
@@ -53,4 +56,4 @@ Route::get('grafico/usuarios', [GraficoController::class, 'usuarios']);
 Route::get('grafico/usuarios-incidentes', [GraficoController::class, 'usuariosIncidentes']);
 Route::get('grafico/usuarios/{usuario}', [GraficoController::class, 'showUsuario']);
 
-//----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------

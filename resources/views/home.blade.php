@@ -6,7 +6,6 @@
 
 @section('contenido')
 
-
     @if(session('rol') == "administrador")
     <administrador></administrador>
 

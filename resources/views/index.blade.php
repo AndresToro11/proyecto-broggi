@@ -1,11 +1,10 @@
 @extends('layouts.plantilla')
 
-@section('titulo', 'pruebita')
+@section('titulo', 'Index')
 
 @section('contenido')
 
-    <h1>Hola</h1>
-    <example-component></example-component>
+    <h1>Esto es el index</h1>
     <login></login>
 
 @endsection
