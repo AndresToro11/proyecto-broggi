@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\Incident;
 use Illuminate\Http\Request;
+use App\Models\Tipus_incident;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\IncidenteResource;
+use App\Http\Resources\TiposIncidenteResource;
 
-class IncidenteController extends Controller
+class TiposIncidenteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class IncidenteController extends Controller
      */
     public function index()
     {
-        $incidente = Incident::all();
-        return IncidenteResource::collection($incidente);
+        $tIncidente = Tipus_incident::all();
+        return TiposIncidenteResource::collection($tIncidente);
     }
 
     /**
@@ -34,10 +34,10 @@ class IncidenteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Incident  $incident
+     * @param  \App\Models\Tipus_incident  $tipus_incident
      * @return \Illuminate\Http\Response
      */
-    public function show(Incident $incident)
+    public function show(Tipus_incident $tipus_incident)
     {
         //
     }
@@ -46,10 +46,10 @@ class IncidenteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Incident  $incident
+     * @param  \App\Models\Tipus_incident  $tipus_incident
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Incident $incident)
+    public function update(Request $request, Tipus_incident $tipus_incident)
     {
         //
     }
@@ -57,10 +57,10 @@ class IncidenteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Incident  $incident
+     * @param  \App\Models\Tipus_incident  $tipus_incident
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Incident $incident)
+    public function destroy(Tipus_incident $tipus_incident)
     {
         //
     }

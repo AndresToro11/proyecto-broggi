@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Models\Incident;
 use Illuminate\Http\Request;
-use App\Models\Tipus_localitzacio;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\TiposLocalitzacionResource;
+use App\Http\Resources\IncidenteResource;
 
-class TiposLocalizacionController extends Controller
+class IncidenteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class TiposLocalizacionController extends Controller
      */
     public function index()
     {
-        $tiposLocalitzacion = Tipus_localitzacio::all();
-        return TiposLocalitzacionResource::collection($tiposLocalitzacion);
+        $incidente = Incident::all();
+        return IncidenteResource::collection($incidente);
     }
 
     /**
@@ -34,10 +34,10 @@ class TiposLocalizacionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Tipus_localitzacio  $tipus_localitzacio
+     * @param  \App\Models\Incident  $incident
      * @return \Illuminate\Http\Response
      */
-    public function show(Tipus_localitzacio $tipus_localitzacio)
+    public function show(Incident $incident)
     {
         //
     }
@@ -46,10 +46,10 @@ class TiposLocalizacionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Tipus_localitzacio  $tipus_localitzacio
+     * @param  \App\Models\Incident  $incident
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tipus_localitzacio $tipus_localitzacio)
+    public function update(Request $request, Incident $incident)
     {
         //
     }
@@ -57,10 +57,10 @@ class TiposLocalizacionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tipus_localitzacio  $tipus_localitzacio
+     * @param  \App\Models\Incident  $incident
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tipus_localitzacio $tipus_localitzacio)
+    public function destroy(Incident $incident)
     {
         //
     }

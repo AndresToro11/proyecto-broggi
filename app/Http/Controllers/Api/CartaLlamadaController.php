@@ -7,7 +7,7 @@ use App\Models\Carta_trucada;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CartaTrucadaResource;
 
-class CartaLlamada extends Controller
+class CartaLlamadaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,9 +26,12 @@ class CartaLlamada extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( Carta_trucada $cartaLlamada)
     {
-        //
+        $carta_trucada = new Carta_trucada();
+        $carta_trucada = $cartaLlamada;
+        $carta_trucada->save();
+        return redirect()->action([CartaLlamadaController::class, 'home']);
     }
 
     /**

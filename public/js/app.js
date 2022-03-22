@@ -5412,14 +5412,6 @@ __webpack_require__.r(__webpack_exports__);
 
       var me = this;
       console.log("Entrando a la select");
-      axios.get("/idLocalizacion").then(function (response) {
-        console.log("ol");
-        me.idLocalizaciones = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
       axios.get("/datosPersonales").then(function (response) {
         console.log("Datos Personales");
         me.idDatosPersonales = response.data;
@@ -5448,6 +5440,9 @@ __webpack_require__.r(__webpack_exports__);
         this.console.log("Error:");
         console.log(error);
       });
+    },
+    botonBD: function botonBD() {
+      console.log('AVEZTRUZ');
     }
   },
   computed: {
@@ -42962,10 +42957,7 @@ var render = function () {
           attrs: { type: "button" },
           on: {
             click: function ($event) {
-              _vm.setDataPersonal(),
-                _vm.setDataIncidente(),
-                _vm.setDataAdministrativos(),
-                _vm.insertBD(_vm.cartaLlamada)
+              return _vm.botonBD()
             },
           },
         },

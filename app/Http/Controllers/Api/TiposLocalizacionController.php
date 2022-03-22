@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\Provincia;
 use Illuminate\Http\Request;
+use App\Models\Tipus_localitzacio;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\ProvinciaResource;
+use App\Http\Resources\TiposLocalitzacionResource;
 
-class ProvinciaController extends Controller
+class TiposLocalizacionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class ProvinciaController extends Controller
      */
     public function index()
     {
-        $provincia = Provincia::all();
-        return ProvinciaResource::collection($provincia);
+        $tiposLocalitzacion = Tipus_localitzacio::all();
+        return TiposLocalitzacionResource::collection($tiposLocalitzacion);
     }
 
     /**
@@ -34,10 +34,10 @@ class ProvinciaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Provincia  $provincia
+     * @param  \App\Models\Tipus_localitzacio  $tipus_localitzacio
      * @return \Illuminate\Http\Response
      */
-    public function show(Provincia $provincia)
+    public function show(Tipus_localitzacio $tipus_localitzacio)
     {
         //
     }
@@ -46,10 +46,10 @@ class ProvinciaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Provincia  $provincia
+     * @param  \App\Models\Tipus_localitzacio  $tipus_localitzacio
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Provincia $provincia)
+    public function update(Request $request, Tipus_localitzacio $tipus_localitzacio)
     {
         //
     }
@@ -57,10 +57,10 @@ class ProvinciaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Provincia  $provincia
+     * @param  \App\Models\Tipus_localitzacio  $tipus_localitzacio
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Provincia $provincia)
+    public function destroy(Tipus_localitzacio $tipus_localitzacio)
     {
         //
     }

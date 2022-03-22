@@ -9,7 +9,7 @@
         <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
         <h3>boton</h3>
         <button type="button">Cancelar</button>
-        <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(),insertBD(cartaLlamada)">Aceptar</button>
+        <button type="button" @click="botonBD()">Aceptar</button>
         <expedientes-relacionados></expedientes-relacionados>
     </div>
 </template>
@@ -45,16 +45,6 @@ export default {
         select() {
             let me = this;
             console.log("Entrando a la select");
-            axios
-                .get("/idLocalizacion")
-                .then((response) => {
-                    console.log("ol");
-                    me.idLocalizaciones = response.data;
-                })
-                .catch((error) => {
-                    console.log(error);
-                })
-                .finally(() => (this.loading = false));
             axios
                 .get("/datosPersonales")
                 .then((response) => {
@@ -97,6 +87,9 @@ export default {
                     this.console.log("Error:");
                     console.log(error);
                 })
+        },
+        botonBD(){
+            console.log('AVEZTRUZ');
         }
     },
     computed:{

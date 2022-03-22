@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Models\Comarca;
 use Illuminate\Http\Request;
-use App\Models\Tipus_incident;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\TiposIncidenteResource;
+use App\Http\Resources\ComarcaResource;
 
-class TiposIncidenteController extends Controller
+class ComarcaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class TiposIncidenteController extends Controller
      */
     public function index()
     {
-        $tIncidente = Tipus_incident::all();
-        return TiposIncidenteResource::collection($tIncidente);
+        $comarca = Comarca::all();
+        return ComarcaResource::collection($comarca);
     }
 
     /**
@@ -34,10 +34,10 @@ class TiposIncidenteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Tipus_incident  $tipus_incident
+     * @param  \App\Models\Comarca  $comarca
      * @return \Illuminate\Http\Response
      */
-    public function show(Tipus_incident $tipus_incident)
+    public function show(Comarca $comarca)
     {
         //
     }
@@ -46,10 +46,10 @@ class TiposIncidenteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Tipus_incident  $tipus_incident
+     * @param  \App\Models\Comarca  $comarca
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tipus_incident $tipus_incident)
+    public function update(Request $request, Comarca $comarca)
     {
         //
     }
@@ -57,10 +57,10 @@ class TiposIncidenteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tipus_incident  $tipus_incident
+     * @param  \App\Models\Comarca  $comarca
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tipus_incident $tipus_incident)
+    public function destroy(Comarca $comarca)
     {
         //
     }

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\Comarca;
+use App\Models\Provincia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\ComarcaResource;
+use App\Http\Resources\ProvinciaResource;
 
-class ComarcaController extends Controller
+class ProvinciaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class ComarcaController extends Controller
      */
     public function index()
     {
-        $comarca = Comarca::all();
-        return ComarcaResource::collection($comarca);
+        $provincia = Provincia::all();
+        return ProvinciaResource::collection($provincia);
     }
 
     /**
@@ -34,10 +34,10 @@ class ComarcaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Comarca  $comarca
+     * @param  \App\Models\Provincia  $provincia
      * @return \Illuminate\Http\Response
      */
-    public function show(Comarca $comarca)
+    public function show(Provincia $provincia)
     {
         //
     }
@@ -46,10 +46,10 @@ class ComarcaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Comarca  $comarca
+     * @param  \App\Models\Provincia  $provincia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comarca $comarca)
+    public function update(Request $request, Provincia $provincia)
     {
         //
     }
@@ -57,10 +57,10 @@ class ComarcaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Comarca  $comarca
+     * @param  \App\Models\Provincia  $provincia
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comarca $comarca)
+    public function destroy(Provincia $provincia)
     {
         //
     }
