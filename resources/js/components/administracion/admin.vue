@@ -1,6 +1,6 @@
 <template>
-    <div>
-
+    <div class="m-4">
+        <h1 class="m-4">Administración</h1>
         <div class="card text-center">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
@@ -35,7 +35,9 @@
                                 <th scope="col">Apellidos</th>
                                 <th scope="col">Rol</th>
                                 <th scope="col">Mail</th>
-                                    <th scope="col"></th>
+                                <th scope="col">
+                                    <a href="http://localhost/proyecto-broggi/public/admin/nuevoUsuario" type="button" class="btn btn-light rounded-circle"><i class="fas fa-plus"></i></a>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -68,7 +70,7 @@
                     </div>
 
                     <div v-else>
-                        
+
                         <table class="table">
                             <thead>
                                 <tr>
@@ -77,7 +79,9 @@
                                     <th scope="col">Apellidos</th>
                                     <th scope="col">Rol</th>
                                     <th scope="col">Mail</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">
+                                        <a href="http://localhost/proyecto-broggi/public/admin/nuevoUsuario" type="button" class="btn btn-light rounded-circle"><i class="fas fa-plus"></i></a>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -118,7 +122,9 @@
                                     <th scope="col">Apellidos</th>
                                     <th scope="col">Rol</th>
                                     <th scope="col">mail</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">
+                                        <a href="http://localhost/proyecto-broggi/public/admin/nuevoUsuario" type="button" class="btn btn-light rounded-circle"><i class="fas fa-plus"></i></a>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -175,7 +181,7 @@
                     })
                     .finally(() => this.loading = false);
             },
-                        
+
             selectOperadores(){
 
                 document.getElementById('todos').setAttribute('class', 'nav-link');

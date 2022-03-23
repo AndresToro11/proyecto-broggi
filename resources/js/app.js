@@ -48,7 +48,8 @@ Vue.component('supervisor', require('./components/home/supervisor.vue').default)
 
 //----------------------------------------------- Admin -----------------------------------
 
-Vue.component('admin', require('./components/admin.vue').default);
+Vue.component('nuevousuario', require('./components/administracion/nuevousuario.vue').default);
+Vue.component('admin', require('./components/administracion/admin.vue').default);
 
 //-----------------------------------------------------------------------------------------
 

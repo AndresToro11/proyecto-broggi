@@ -56,7 +56,11 @@ Route::get('/grafico', function () {
 //------------------------------ Admin -----------------------------
 
 Route::get('/admin', function () {
-    return view('admin');
+    return view('administracion.admin');
+});
+
+Route::get('/admin/nuevoUsuario', function () {
+    return view('administracion.nuevoUsuario');
 });
 
 //---------------------------------  --------------------------------

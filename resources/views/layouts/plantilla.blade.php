@@ -31,6 +31,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{ url('/expedientes') }}">Expedientes</a></li>
                     <li><a href="{{ url('/grafico') }}">Grafico</a></li>
+                    <li><a href="{{ url('/admin') }}">Admin</a></li>
                     <li><a href="">login</a></li>
                 </ul>
             </div>
