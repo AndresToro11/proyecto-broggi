@@ -7,7 +7,7 @@
             </div>
             <canvas id="grafico" hidden></canvas>
         </div>
-            
+
         <div v-else>
             <canvas id="grafico"></canvas>
                 <button @click="selectProvincias">Provincias</button>
@@ -23,7 +23,7 @@
                     </select>
                 </div>
         </div>
-        
+
     </div>
 </template>
 
@@ -31,7 +31,7 @@
     import Chart from "chart.js/auto";
 
     let grafica;
-    
+
     export default {
         data(){
             return{
@@ -59,7 +59,7 @@
                 .catch(error => {
                     console.log(error);
                 })
-                .finally(() => this.loading = false, 
+                .finally(() => this.loading = false,
                                 this.showUsuarios = false,
                                 this.selected = 0);
             },
@@ -78,7 +78,7 @@
                 .catch(error => {
                     console.log(error);
                 })
-                .finally(() => this.loading = false, 
+                .finally(() => this.loading = false,
                                 this.showUsuarios = false,
                                 this.selected = 0);
             },
@@ -111,7 +111,7 @@
                 .catch(error => {
                     console.log(error);
                 })
-                .finally(() => this.loading = false, 
+                .finally(() => this.loading = false,
                                 this.showUsuarios = true,
                                 this.selected = 0);
             },
@@ -171,8 +171,9 @@
                         ],
                     }
                 });
-                grafica.canvas.parentNode.style.width = '800px';
-                grafica.canvas.parentNode.style.heigth = '600px';
+                grafica.canvas.parentNode.style.left = '40%';
+                grafica.canvas.parentNode.style.width = '40%';
+                grafica.canvas.parentNode.style.heigth = '30%';
                 this.loading = false;
             },
         },

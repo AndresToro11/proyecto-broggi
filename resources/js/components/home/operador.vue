@@ -6,13 +6,13 @@
 
         <div class="row text-center mt-4">
             <div class="col">
-                <a href="/proyecto_broggi/public/llamada" type="button" class="btn btn-primary">Llamada</a>
+                <a href="/proyecto-broggi/public/llamada" type="button" class="btn btn-primary">Llamada</a>
             </div>
             <div class="col">
-                <a href="/proyecto_broggi/public/video" type="button" class="btn btn-primary">Video</a>
+                <a href="/proyecto-broggi/public/video" type="button" class="btn btn-primary">Video</a>
             </div>
         </div>
-        
+
     </div>
 </template>
 

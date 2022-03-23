@@ -6584,8 +6584,9 @@ var grafica;
           }]
         }
       });
-      grafica.canvas.parentNode.style.width = '800px';
-      grafica.canvas.parentNode.style.heigth = '600px';
+      grafica.canvas.parentNode.style.left = '40%';
+      grafica.canvas.parentNode.style.width = '40%';
+      grafica.canvas.parentNode.style.heigth = '30%';
       this.loading = false;
     }
   },
@@ -46505,7 +46506,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/llamada",
+                href: "/proyecto-broggi/public/llamada",
                 type: "button",
               },
             },
@@ -46518,7 +46519,7 @@ var staticRenderFns = [
             "a",
             {
               staticClass: "btn btn-primary",
-              attrs: { href: "/proyecto_broggi/public/video", type: "button" },
+              attrs: { href: "/proyecto-broggi/public/video", type: "button" },
             },
             [_vm._v("Video")]
           ),
@@ -46568,7 +46569,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/llamada",
+                href: "/proyecto-broggi/public/llamada",
                 type: "button",
               },
             },
@@ -46582,7 +46583,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/grafico",
+                href: "/proyecto-broggi/public/grafico",
                 type: "button",
               },
             },
@@ -46598,7 +46599,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/expedientes",
+                href: "/proyecto-broggi/public/expedientes",
                 type: "button",
               },
             },
@@ -46611,7 +46612,7 @@ var staticRenderFns = [
             "a",
             {
               staticClass: "btn btn-primary",
-              attrs: { href: "/proyecto_broggi/public/video", type: "button" },
+              attrs: { href: "/proyecto-broggi/public/video", type: "button" },
             },
             [_vm._v("Estado operadores")]
           ),
