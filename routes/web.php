@@ -36,7 +36,6 @@ Route::get('/video', function () {
     return view('video');
 });
 
-
 //---------------------------- Expedientes -------------------------
 
 Route::get('/expedientes', function () {
@@ -53,3 +52,11 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/grafico', function () {
     return view('grafico');
 });
+
+//------------------------------ Admin -----------------------------
+
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+//---------------------------------  --------------------------------

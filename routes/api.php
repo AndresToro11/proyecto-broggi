@@ -1,18 +1,19 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\Api\UsuariController;
 use App\Models\Municipi;
-use App\Http\Controllers\Api\GraficoController;
-use App\Http\Controllers\Api\ExpedientController;
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ComarcaController;
 use App\Http\Controllers\IncidenteController;
 use App\Http\Controllers\ProvinciaController;
+use App\Http\Controllers\Api\UsuariController;
+use App\Http\Controllers\Api\GraficoController;
+use App\Http\Controllers\Api\ExpedientController;
 use App\Http\Controllers\Api\MunicipioController;
-use App\Http\Controllers\TiposIncidenteController;
 
+use App\Http\Controllers\TiposIncidenteController;
 use App\Http\Controllers\TiposLocalizacionController;
 use App\Http\Controllers\Api\DatosPersonalesController;
 
@@ -55,5 +56,11 @@ Route::get('grafico/municipios', [GraficoController::class, 'municipios']);
 Route::get('grafico/usuarios', [GraficoController::class, 'usuarios']);
 Route::get('grafico/usuarios-incidentes', [GraficoController::class, 'usuariosIncidentes']);
 Route::get('grafico/usuarios/{usuario}', [GraficoController::class, 'showUsuario']);
+
+//------------------------------------ Admin --------------------------------------
+
+Route::get('admin/usuarios', [AdminController::class, 'usuarios']);
+Route::get('admin/operadores', [AdminController::class, 'operadores']);
+Route::get('admin/supervisores', [AdminController::class, 'supervisores']);
 
 //---------------------------------------------------------------------------------
