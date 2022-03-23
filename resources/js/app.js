@@ -31,6 +31,7 @@ Vue.component('datos-personales', require('./components/cartaLlamada/DatosPerson
 Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
 Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
 Vue.component('carta-llamada', require('./components/cartaLlamada/Carta_de_llamada.vue').default);
+
 //------------------------------------------- Expedientes --------------------------------
 
 Vue.component('expedientes', require('./components/expedientes.vue').default);
@@ -45,6 +46,9 @@ Vue.component('administrador', require('./components/home/administrador.vue').de
 Vue.component('operador', require('./components/home/operador.vue').default);
 Vue.component('supervisor', require('./components/home/supervisor.vue').default);
 
+//----------------------------------------------- Admin -----------------------------------
+
+Vue.component('admin', require('./components/admin.vue').default);
 
 //-----------------------------------------------------------------------------------------
 
