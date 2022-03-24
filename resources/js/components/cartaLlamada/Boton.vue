@@ -5,9 +5,9 @@
         <datos-incidentes
             @getDataIncidente="getDataIncidente"
         ></datos-incidentes>
-        <!-- <datos-accidente
+        <datos-accidente
             @getDataAccidente="getDataAccidente"
-        ></datos-accidente> -->
+        ></datos-accidente>
         <!-- <Personals @getDataPersonal="getDataPersonal"></Personals> -->
         <!-- <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
         <!-- <h3>boton</h3>
