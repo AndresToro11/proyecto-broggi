@@ -24,8 +24,8 @@
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet" />
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/globals.css" />
+    <link rel="stylesheet" type="text/css" href={{ asset('css/styleguide.css') }} />
+    <link rel=" stylesheet" type="text/css" href={{ asset('css/globals.css') }} />
 
     <script>
         function loader() {

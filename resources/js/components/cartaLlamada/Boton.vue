@@ -1,7 +1,7 @@
 <template>
     <div>
-        <datos-administrativos></datos-administrativos>
-        <datos-personales @getDataPersonal="getDataPersonal"></datos-personales>
+        <!-- <datos-administrativos></datos-administrativos> -->
+        <!-- <datos-personales @getDataPersonal="getDataPersonal"></datos-personales> -->
         <datos-incidentes
             @getDataIncidente="getDataIncidente"
         ></datos-incidentes>
