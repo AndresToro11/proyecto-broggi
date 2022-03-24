@@ -909,6 +909,148 @@ function supportsPassiveOption(globalObj) {
 
 /***/ }),
 
+/***/ "./node_modules/@material/dom/keyboard.js":
+/*!************************************************!*\
+  !*** ./node_modules/@material/dom/keyboard.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "KEY": () => (/* binding */ KEY),
+/* harmony export */   "normalizeKey": () => (/* binding */ normalizeKey),
+/* harmony export */   "isNavigationEvent": () => (/* binding */ isNavigationEvent)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+/**
+ * KEY provides normalized string values for keys.
+ */
+var KEY = {
+    UNKNOWN: 'Unknown',
+    BACKSPACE: 'Backspace',
+    ENTER: 'Enter',
+    SPACEBAR: 'Spacebar',
+    PAGE_UP: 'PageUp',
+    PAGE_DOWN: 'PageDown',
+    END: 'End',
+    HOME: 'Home',
+    ARROW_LEFT: 'ArrowLeft',
+    ARROW_UP: 'ArrowUp',
+    ARROW_RIGHT: 'ArrowRight',
+    ARROW_DOWN: 'ArrowDown',
+    DELETE: 'Delete',
+    ESCAPE: 'Escape',
+    TAB: 'Tab',
+};
+var normalizedKeys = new Set();
+// IE11 has no support for new Map with iterable so we need to initialize this
+// by hand.
+normalizedKeys.add(KEY.BACKSPACE);
+normalizedKeys.add(KEY.ENTER);
+normalizedKeys.add(KEY.SPACEBAR);
+normalizedKeys.add(KEY.PAGE_UP);
+normalizedKeys.add(KEY.PAGE_DOWN);
+normalizedKeys.add(KEY.END);
+normalizedKeys.add(KEY.HOME);
+normalizedKeys.add(KEY.ARROW_LEFT);
+normalizedKeys.add(KEY.ARROW_UP);
+normalizedKeys.add(KEY.ARROW_RIGHT);
+normalizedKeys.add(KEY.ARROW_DOWN);
+normalizedKeys.add(KEY.DELETE);
+normalizedKeys.add(KEY.ESCAPE);
+normalizedKeys.add(KEY.TAB);
+var KEY_CODE = {
+    BACKSPACE: 8,
+    ENTER: 13,
+    SPACEBAR: 32,
+    PAGE_UP: 33,
+    PAGE_DOWN: 34,
+    END: 35,
+    HOME: 36,
+    ARROW_LEFT: 37,
+    ARROW_UP: 38,
+    ARROW_RIGHT: 39,
+    ARROW_DOWN: 40,
+    DELETE: 46,
+    ESCAPE: 27,
+    TAB: 9,
+};
+var mappedKeyCodes = new Map();
+// IE11 has no support for new Map with iterable so we need to initialize this
+// by hand.
+mappedKeyCodes.set(KEY_CODE.BACKSPACE, KEY.BACKSPACE);
+mappedKeyCodes.set(KEY_CODE.ENTER, KEY.ENTER);
+mappedKeyCodes.set(KEY_CODE.SPACEBAR, KEY.SPACEBAR);
+mappedKeyCodes.set(KEY_CODE.PAGE_UP, KEY.PAGE_UP);
+mappedKeyCodes.set(KEY_CODE.PAGE_DOWN, KEY.PAGE_DOWN);
+mappedKeyCodes.set(KEY_CODE.END, KEY.END);
+mappedKeyCodes.set(KEY_CODE.HOME, KEY.HOME);
+mappedKeyCodes.set(KEY_CODE.ARROW_LEFT, KEY.ARROW_LEFT);
+mappedKeyCodes.set(KEY_CODE.ARROW_UP, KEY.ARROW_UP);
+mappedKeyCodes.set(KEY_CODE.ARROW_RIGHT, KEY.ARROW_RIGHT);
+mappedKeyCodes.set(KEY_CODE.ARROW_DOWN, KEY.ARROW_DOWN);
+mappedKeyCodes.set(KEY_CODE.DELETE, KEY.DELETE);
+mappedKeyCodes.set(KEY_CODE.ESCAPE, KEY.ESCAPE);
+mappedKeyCodes.set(KEY_CODE.TAB, KEY.TAB);
+var navigationKeys = new Set();
+// IE11 has no support for new Set with iterable so we need to initialize this
+// by hand.
+navigationKeys.add(KEY.PAGE_UP);
+navigationKeys.add(KEY.PAGE_DOWN);
+navigationKeys.add(KEY.END);
+navigationKeys.add(KEY.HOME);
+navigationKeys.add(KEY.ARROW_LEFT);
+navigationKeys.add(KEY.ARROW_UP);
+navigationKeys.add(KEY.ARROW_RIGHT);
+navigationKeys.add(KEY.ARROW_DOWN);
+/**
+ * normalizeKey returns the normalized string for a navigational action.
+ */
+function normalizeKey(evt) {
+    var key = evt.key;
+    // If the event already has a normalized key, return it
+    if (normalizedKeys.has(key)) {
+        return key;
+    }
+    // tslint:disable-next-line:deprecation
+    var mappedKey = mappedKeyCodes.get(evt.keyCode);
+    if (mappedKey) {
+        return mappedKey;
+    }
+    return KEY.UNKNOWN;
+}
+/**
+ * isNavigationEvent returns whether the event is a navigation event
+ */
+function isNavigationEvent(evt) {
+    return navigationKeys.has(normalizeKey(evt));
+}
+//# sourceMappingURL=keyboard.js.map
+
+/***/ }),
+
 /***/ "./node_modules/@material/dom/ponyfill.js":
 /*!************************************************!*\
   !*** ./node_modules/@material/dom/ponyfill.js ***!
@@ -1515,6 +1657,3147 @@ var MDCLineRippleFoundation = /** @class */ (function (_super) {
 
 // tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDCLineRippleFoundation);
+//# sourceMappingURL=foundation.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/list/component.js":
+/*!**************************************************!*\
+  !*** ./node_modules/@material/list/component.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCList": () => (/* binding */ MDCList)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
+/* harmony import */ var _material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/dom/ponyfill */ "./node_modules/@material/dom/ponyfill.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/list/constants.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/list/foundation.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+var MDCList = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCList, _super);
+    function MDCList() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(MDCList.prototype, "vertical", {
+        set: function (value) {
+            this.foundation.setVerticalOrientation(value);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCList.prototype, "listElements", {
+        get: function () {
+            return Array.from(this.root.querySelectorAll("." + this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_CLASS]));
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCList.prototype, "wrapFocus", {
+        set: function (value) {
+            this.foundation.setWrapFocus(value);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCList.prototype, "typeaheadInProgress", {
+        /**
+         * @return Whether typeahead is currently matching a user-specified prefix.
+         */
+        get: function () {
+            return this.foundation.isTypeaheadInProgress();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCList.prototype, "hasTypeahead", {
+        /**
+         * Sets whether typeahead functionality is enabled on the list.
+         * @param hasTypeahead Whether typeahead is enabled.
+         */
+        set: function (hasTypeahead) {
+            this.foundation.setHasTypeahead(hasTypeahead);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCList.prototype, "singleSelection", {
+        set: function (isSingleSelectionList) {
+            this.foundation.setSingleSelection(isSingleSelectionList);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCList.prototype, "selectedIndex", {
+        get: function () {
+            return this.foundation.getSelectedIndex();
+        },
+        set: function (index) {
+            this.foundation.setSelectedIndex(index);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCList.attachTo = function (root) {
+        return new MDCList(root);
+    };
+    MDCList.prototype.initialSyncWithDOM = function () {
+        this.isEvolutionEnabled =
+            _constants__WEBPACK_IMPORTED_MODULE_1__.evolutionAttribute in this.root.dataset;
+        if (this.isEvolutionEnabled) {
+            this.classNameMap = _constants__WEBPACK_IMPORTED_MODULE_1__.evolutionClassNameMap;
+        }
+        else if ((0,_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__.matches)(this.root, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.DEPRECATED_SELECTOR)) {
+            this.classNameMap = _constants__WEBPACK_IMPORTED_MODULE_1__.deprecatedClassNameMap;
+        }
+        else {
+            this.classNameMap =
+                Object.values(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses)
+                    .reduce(function (obj, className) {
+                    obj[className] = className;
+                    return obj;
+                }, {});
+        }
+        this.handleClick = this.handleClickEvent.bind(this);
+        this.handleKeydown = this.handleKeydownEvent.bind(this);
+        this.focusInEventListener = this.handleFocusInEvent.bind(this);
+        this.focusOutEventListener = this.handleFocusOutEvent.bind(this);
+        this.listen('keydown', this.handleKeydown);
+        this.listen('click', this.handleClick);
+        this.listen('focusin', this.focusInEventListener);
+        this.listen('focusout', this.focusOutEventListener);
+        this.layout();
+        this.initializeListType();
+        this.ensureFocusable();
+    };
+    MDCList.prototype.destroy = function () {
+        this.unlisten('keydown', this.handleKeydown);
+        this.unlisten('click', this.handleClick);
+        this.unlisten('focusin', this.focusInEventListener);
+        this.unlisten('focusout', this.focusOutEventListener);
+    };
+    MDCList.prototype.layout = function () {
+        var direction = this.root.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_ORIENTATION);
+        this.vertical = direction !== _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_ORIENTATION_HORIZONTAL;
+        var itemSelector = "." + this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_CLASS] + ":not([tabindex])";
+        var childSelector = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.FOCUSABLE_CHILD_ELEMENTS;
+        // List items need to have at least tabindex=-1 to be focusable.
+        var itemEls = this.root.querySelectorAll(itemSelector);
+        if (itemEls.length) {
+            Array.prototype.forEach.call(itemEls, function (el) {
+                el.setAttribute('tabindex', '-1');
+            });
+        }
+        // Child button/a elements are not tabbable until the list item is focused.
+        var focusableChildEls = this.root.querySelectorAll(childSelector);
+        if (focusableChildEls.length) {
+            Array.prototype.forEach.call(focusableChildEls, function (el) {
+                el.setAttribute('tabindex', '-1');
+            });
+        }
+        if (this.isEvolutionEnabled) {
+            this.foundation.setUseSelectedAttribute(true);
+        }
+        this.foundation.layout();
+    };
+    /**
+     * Extracts the primary text from a list item.
+     * @param item The list item element.
+     * @return The primary text in the element.
+     */
+    MDCList.prototype.getPrimaryText = function (item) {
+        var _a;
+        var primaryText = item.querySelector("." + this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_PRIMARY_TEXT_CLASS]);
+        if (this.isEvolutionEnabled || primaryText) {
+            return (_a = primaryText === null || primaryText === void 0 ? void 0 : primaryText.textContent) !== null && _a !== void 0 ? _a : '';
+        }
+        var singleLineText = item.querySelector("." + this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_TEXT_CLASS]);
+        return (singleLineText && singleLineText.textContent) || '';
+    };
+    /**
+     * Initialize selectedIndex value based on pre-selected list items.
+     */
+    MDCList.prototype.initializeListType = function () {
+        var _this = this;
+        this.isInteractive =
+            (0,_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__.matches)(this.root, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_INTERACTIVE_ROLES_SELECTOR);
+        if (this.isEvolutionEnabled && this.isInteractive) {
+            var selection = Array.from(this.root.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.SELECTED_ITEM_SELECTOR), function (listItem) { return _this.listElements.indexOf(listItem); });
+            if ((0,_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__.matches)(this.root, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_MULTI_SELECTABLE_SELECTOR)) {
+                this.selectedIndex = selection;
+            }
+            else if (selection.length > 0) {
+                this.selectedIndex = selection[0];
+            }
+            return;
+        }
+        var checkboxListItems = this.root.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_ROLE_CHECKBOX_SELECTOR);
+        var radioSelectedListItem = this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_CHECKED_RADIO_SELECTOR);
+        if (checkboxListItems.length) {
+            var preselectedItems = this.root.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_CHECKED_CHECKBOX_SELECTOR);
+            this.selectedIndex = Array.from(preselectedItems, function (listItem) { return _this.listElements.indexOf(listItem); });
+        }
+        else if (radioSelectedListItem) {
+            this.selectedIndex = this.listElements.indexOf(radioSelectedListItem);
+        }
+    };
+    /**
+     * Updates the list item at itemIndex to the desired isEnabled state.
+     * @param itemIndex Index of the list item
+     * @param isEnabled Sets the list item to enabled or disabled.
+     */
+    MDCList.prototype.setEnabled = function (itemIndex, isEnabled) {
+        this.foundation.setEnabled(itemIndex, isEnabled);
+    };
+    /**
+     * Given the next desired character from the user, adds it to the typeahead
+     * buffer. Then, attempts to find the next option matching the buffer. Wraps
+     * around if at the end of options.
+     *
+     * @param nextChar The next character to add to the prefix buffer.
+     * @param startingIndex The index from which to start matching. Defaults to
+     *     the currently focused index.
+     * @return The index of the matched item.
+     */
+    MDCList.prototype.typeaheadMatchItem = function (nextChar, startingIndex) {
+        return this.foundation.typeaheadMatchItem(nextChar, startingIndex, /** skipFocus */ true);
+    };
+    MDCList.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take
+        // a Partial<MDCFooAdapter>. To ensure we don't accidentally omit any
+        // methods, we need a separate, strongly typed adapter variable.
+        var adapter = {
+            addClassForElementIndex: function (index, className) {
+                var element = _this.listElements[index];
+                if (element) {
+                    element.classList.add(_this.classNameMap[className]);
+                }
+            },
+            focusItemAtIndex: function (index) {
+                var element = _this.listElements[index];
+                if (element) {
+                    element.focus();
+                }
+            },
+            getAttributeForElementIndex: function (index, attr) {
+                return _this.listElements[index].getAttribute(attr);
+            },
+            getFocusedElementIndex: function () {
+                return _this.listElements.indexOf(document.activeElement);
+            },
+            getListItemCount: function () { return _this.listElements.length; },
+            getPrimaryTextAtIndex: function (index) {
+                return _this.getPrimaryText(_this.listElements[index]);
+            },
+            hasCheckboxAtIndex: function (index) {
+                var listItem = _this.listElements[index];
+                return !!listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.CHECKBOX_SELECTOR);
+            },
+            hasRadioAtIndex: function (index) {
+                var listItem = _this.listElements[index];
+                return !!listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.RADIO_SELECTOR);
+            },
+            isCheckboxCheckedAtIndex: function (index) {
+                var listItem = _this.listElements[index];
+                var toggleEl = listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.CHECKBOX_SELECTOR);
+                return toggleEl.checked;
+            },
+            isFocusInsideList: function () {
+                return _this.root !== document.activeElement &&
+                    _this.root.contains(document.activeElement);
+            },
+            isRootFocused: function () { return document.activeElement === _this.root; },
+            listItemAtIndexHasClass: function (index, className) {
+                return _this.listElements[index].classList.contains(_this.classNameMap[className]);
+            },
+            notifyAction: function (index) {
+                _this.emit(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ACTION_EVENT, { index: index }, /** shouldBubble */ true);
+            },
+            removeClassForElementIndex: function (index, className) {
+                var element = _this.listElements[index];
+                if (element) {
+                    element.classList.remove(_this.classNameMap[className]);
+                }
+            },
+            setAttributeForElementIndex: function (index, attr, value) {
+                var element = _this.listElements[index];
+                if (element) {
+                    element.setAttribute(attr, value);
+                }
+            },
+            setCheckedCheckboxOrRadioAtIndex: function (index, isChecked) {
+                var listItem = _this.listElements[index];
+                var toggleEl = listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.CHECKBOX_RADIO_SELECTOR);
+                toggleEl.checked = isChecked;
+                var event = document.createEvent('Event');
+                event.initEvent('change', true, true);
+                toggleEl.dispatchEvent(event);
+            },
+            setTabIndexForListItemChildren: function (listItemIndex, tabIndexValue) {
+                var element = _this.listElements[listItemIndex];
+                var selector = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.CHILD_ELEMENTS_TO_TOGGLE_TABINDEX;
+                Array.prototype.forEach.call(element.querySelectorAll(selector), function (el) {
+                    el.setAttribute('tabindex', tabIndexValue);
+                });
+            },
+        };
+        return new _foundation__WEBPACK_IMPORTED_MODULE_3__.MDCListFoundation(adapter);
+    };
+    /**
+     * Ensures that at least one item is focusable if the list is interactive and
+     * doesn't specify a suitable tabindex.
+     */
+    MDCList.prototype.ensureFocusable = function () {
+        if (this.isEvolutionEnabled && this.isInteractive) {
+            if (!this.root.querySelector("." + this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_CLASS] + "[tabindex=\"0\"]")) {
+                var index = this.initialFocusIndex();
+                if (index !== -1) {
+                    this.listElements[index].tabIndex = 0;
+                }
+            }
+        }
+    };
+    MDCList.prototype.initialFocusIndex = function () {
+        if (this.selectedIndex instanceof Array && this.selectedIndex.length > 0) {
+            return this.selectedIndex[0];
+        }
+        if (typeof this.selectedIndex === 'number' &&
+            this.selectedIndex !== _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            return this.selectedIndex;
+        }
+        var el = this.root.querySelector("." + this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_CLASS] + ":not(." + this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_DISABLED_CLASS] + ")");
+        if (el === null) {
+            return -1;
+        }
+        return this.getListItemIndex(el);
+    };
+    /**
+     * Used to figure out which list item this event is targetting. Or returns -1
+     * if there is no list item
+     */
+    MDCList.prototype.getListItemIndex = function (el) {
+        var nearestParent = (0,_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__.closest)(el, "." + this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_CLASS] + ", ." + this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.ROOT]);
+        // Get the index of the element if it is a list item.
+        if (nearestParent &&
+            (0,_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__.matches)(nearestParent, "." + this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_CLASS])) {
+            return this.listElements.indexOf(nearestParent);
+        }
+        return -1;
+    };
+    /**
+     * Used to figure out which element was clicked before sending the event to
+     * the foundation.
+     */
+    MDCList.prototype.handleFocusInEvent = function (evt) {
+        var index = this.getListItemIndex(evt.target);
+        this.foundation.handleFocusIn(index);
+    };
+    /**
+     * Used to figure out which element was clicked before sending the event to
+     * the foundation.
+     */
+    MDCList.prototype.handleFocusOutEvent = function (evt) {
+        var index = this.getListItemIndex(evt.target);
+        this.foundation.handleFocusOut(index);
+    };
+    /**
+     * Used to figure out which element was focused when keydown event occurred
+     * before sending the event to the foundation.
+     */
+    MDCList.prototype.handleKeydownEvent = function (evt) {
+        var index = this.getListItemIndex(evt.target);
+        var target = evt.target;
+        this.foundation.handleKeydown(evt, target.classList.contains(this.classNameMap[_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_CLASS]), index);
+    };
+    /**
+     * Used to figure out which element was clicked before sending the event to
+     * the foundation.
+     */
+    MDCList.prototype.handleClickEvent = function (evt) {
+        var index = this.getListItemIndex(evt.target);
+        var target = evt.target;
+        // Toggle the checkbox only if it's not the target of the event, or the
+        // checkbox will have 2 change events.
+        var toggleCheckbox = !(0,_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__.matches)(target, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.CHECKBOX_RADIO_SELECTOR);
+        this.foundation.handleClick(index, toggleCheckbox);
+    };
+    return MDCList;
+}(_material_base_component__WEBPACK_IMPORTED_MODULE_4__.MDCComponent));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/list/constants.js":
+/*!**************************************************!*\
+  !*** ./node_modules/@material/list/constants.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "strings": () => (/* binding */ strings),
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
+/* harmony export */   "numbers": () => (/* binding */ numbers),
+/* harmony export */   "deprecatedClassNameMap": () => (/* binding */ deprecatedClassNameMap),
+/* harmony export */   "evolutionAttribute": () => (/* binding */ evolutionAttribute),
+/* harmony export */   "evolutionClassNameMap": () => (/* binding */ evolutionClassNameMap)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var _a, _b;
+var cssClasses = {
+    LIST_ITEM_ACTIVATED_CLASS: 'mdc-list-item--activated',
+    LIST_ITEM_CLASS: 'mdc-list-item',
+    LIST_ITEM_DISABLED_CLASS: 'mdc-list-item--disabled',
+    LIST_ITEM_SELECTED_CLASS: 'mdc-list-item--selected',
+    LIST_ITEM_TEXT_CLASS: 'mdc-list-item__text',
+    LIST_ITEM_PRIMARY_TEXT_CLASS: 'mdc-list-item__primary-text',
+    ROOT: 'mdc-list',
+};
+var evolutionClassNameMap = (_a = {},
+    _a["" + cssClasses.LIST_ITEM_ACTIVATED_CLASS] = 'mdc-list-item--activated',
+    _a["" + cssClasses.LIST_ITEM_CLASS] = 'mdc-list-item',
+    _a["" + cssClasses.LIST_ITEM_DISABLED_CLASS] = 'mdc-list-item--disabled',
+    _a["" + cssClasses.LIST_ITEM_SELECTED_CLASS] = 'mdc-list-item--selected',
+    _a["" + cssClasses.LIST_ITEM_PRIMARY_TEXT_CLASS] = 'mdc-list-item__primary-text',
+    _a["" + cssClasses.ROOT] = 'mdc-list',
+    _a);
+var deprecatedClassNameMap = (_b = {},
+    _b["" + cssClasses.LIST_ITEM_ACTIVATED_CLASS] = 'mdc-deprecated-list-item--activated',
+    _b["" + cssClasses.LIST_ITEM_CLASS] = 'mdc-deprecated-list-item',
+    _b["" + cssClasses.LIST_ITEM_DISABLED_CLASS] = 'mdc-deprecated-list-item--disabled',
+    _b["" + cssClasses.LIST_ITEM_SELECTED_CLASS] = 'mdc-deprecated-list-item--selected',
+    _b["" + cssClasses.LIST_ITEM_TEXT_CLASS] = 'mdc-deprecated-list-item__text',
+    _b["" + cssClasses.LIST_ITEM_PRIMARY_TEXT_CLASS] = 'mdc-deprecated-list-item__primary-text',
+    _b["" + cssClasses.ROOT] = 'mdc-deprecated-list',
+    _b);
+var strings = {
+    ACTION_EVENT: 'MDCList:action',
+    ARIA_CHECKED: 'aria-checked',
+    ARIA_CHECKED_CHECKBOX_SELECTOR: '[role="checkbox"][aria-checked="true"]',
+    ARIA_CHECKED_RADIO_SELECTOR: '[role="radio"][aria-checked="true"]',
+    ARIA_CURRENT: 'aria-current',
+    ARIA_DISABLED: 'aria-disabled',
+    ARIA_ORIENTATION: 'aria-orientation',
+    ARIA_ORIENTATION_HORIZONTAL: 'horizontal',
+    ARIA_ROLE_CHECKBOX_SELECTOR: '[role="checkbox"]',
+    ARIA_SELECTED: 'aria-selected',
+    ARIA_INTERACTIVE_ROLES_SELECTOR: '[role="listbox"], [role="menu"]',
+    ARIA_MULTI_SELECTABLE_SELECTOR: '[aria-multiselectable="true"]',
+    CHECKBOX_RADIO_SELECTOR: 'input[type="checkbox"], input[type="radio"]',
+    CHECKBOX_SELECTOR: 'input[type="checkbox"]',
+    CHILD_ELEMENTS_TO_TOGGLE_TABINDEX: "\n    ." + cssClasses.LIST_ITEM_CLASS + " button:not(:disabled),\n    ." + cssClasses.LIST_ITEM_CLASS + " a,\n    ." + deprecatedClassNameMap[cssClasses.LIST_ITEM_CLASS] + " button:not(:disabled),\n    ." + deprecatedClassNameMap[cssClasses.LIST_ITEM_CLASS] + " a\n  ",
+    DEPRECATED_SELECTOR: '.mdc-deprecated-list',
+    FOCUSABLE_CHILD_ELEMENTS: "\n    ." + cssClasses.LIST_ITEM_CLASS + " button:not(:disabled),\n    ." + cssClasses.LIST_ITEM_CLASS + " a,\n    ." + cssClasses.LIST_ITEM_CLASS + " input[type=\"radio\"]:not(:disabled),\n    ." + cssClasses.LIST_ITEM_CLASS + " input[type=\"checkbox\"]:not(:disabled),\n    ." + deprecatedClassNameMap[cssClasses.LIST_ITEM_CLASS] + " button:not(:disabled),\n    ." + deprecatedClassNameMap[cssClasses.LIST_ITEM_CLASS] + " a,\n    ." + deprecatedClassNameMap[cssClasses.LIST_ITEM_CLASS] + " input[type=\"radio\"]:not(:disabled),\n    ." + deprecatedClassNameMap[cssClasses.LIST_ITEM_CLASS] + " input[type=\"checkbox\"]:not(:disabled)\n  ",
+    RADIO_SELECTOR: 'input[type="radio"]',
+    SELECTED_ITEM_SELECTOR: '[aria-selected="true"], [aria-current="true"]',
+};
+var numbers = {
+    UNSET_INDEX: -1,
+    TYPEAHEAD_BUFFER_CLEAR_TIMEOUT_MS: 300
+};
+var evolutionAttribute = 'evolution';
+
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/list/events.js":
+/*!***********************************************!*\
+  !*** ./node_modules/@material/list/events.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "preventDefaultEvent": () => (/* binding */ preventDefaultEvent)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var ELEMENTS_KEY_ALLOWED_IN = ['input', 'button', 'textarea', 'select'];
+/**
+ * Ensures that preventDefault is only called if the containing element
+ * doesn't consume the event, and it will cause an unintended scroll.
+ *
+ * @param evt keyboard event to be prevented.
+ */
+var preventDefaultEvent = function (evt) {
+    var target = evt.target;
+    if (!target) {
+        return;
+    }
+    var tagName = ("" + target.tagName).toLowerCase();
+    if (ELEMENTS_KEY_ALLOWED_IN.indexOf(tagName) === -1) {
+        evt.preventDefault();
+    }
+};
+//# sourceMappingURL=events.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/list/foundation.js":
+/*!***************************************************!*\
+  !*** ./node_modules/@material/list/foundation.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCListFoundation": () => (/* binding */ MDCListFoundation),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
+/* harmony import */ var _material_dom_keyboard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/dom/keyboard */ "./node_modules/@material/dom/keyboard.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/list/constants.js");
+/* harmony import */ var _events__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./events */ "./node_modules/@material/list/events.js");
+/* harmony import */ var _typeahead__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./typeahead */ "./node_modules/@material/list/typeahead.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+function isNumberArray(selectedIndex) {
+    return selectedIndex instanceof Array;
+}
+var MDCListFoundation = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCListFoundation, _super);
+    function MDCListFoundation(adapter) {
+        var _this = _super.call(this, (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MDCListFoundation.defaultAdapter), adapter)) || this;
+        _this.wrapFocus = false;
+        _this.isVertical = true;
+        _this.isSingleSelectionList = false;
+        _this.selectedIndex = _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX;
+        _this.focusedItemIndex = _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX;
+        _this.useActivatedClass = false;
+        _this.useSelectedAttr = false;
+        _this.ariaCurrentAttrValue = null;
+        _this.isCheckboxList = false;
+        _this.isRadioList = false;
+        _this.hasTypeahead = false;
+        // Transiently holds current typeahead prefix from user.
+        _this.typeaheadState = _typeahead__WEBPACK_IMPORTED_MODULE_2__.initState();
+        _this.sortedIndexByFirstChar = new Map();
+        return _this;
+    }
+    Object.defineProperty(MDCListFoundation, "strings", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCListFoundation, "cssClasses", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCListFoundation, "numbers", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.numbers;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCListFoundation, "defaultAdapter", {
+        get: function () {
+            return {
+                addClassForElementIndex: function () { return undefined; },
+                focusItemAtIndex: function () { return undefined; },
+                getAttributeForElementIndex: function () { return null; },
+                getFocusedElementIndex: function () { return 0; },
+                getListItemCount: function () { return 0; },
+                hasCheckboxAtIndex: function () { return false; },
+                hasRadioAtIndex: function () { return false; },
+                isCheckboxCheckedAtIndex: function () { return false; },
+                isFocusInsideList: function () { return false; },
+                isRootFocused: function () { return false; },
+                listItemAtIndexHasClass: function () { return false; },
+                notifyAction: function () { return undefined; },
+                removeClassForElementIndex: function () { return undefined; },
+                setAttributeForElementIndex: function () { return undefined; },
+                setCheckedCheckboxOrRadioAtIndex: function () { return undefined; },
+                setTabIndexForListItemChildren: function () { return undefined; },
+                getPrimaryTextAtIndex: function () { return ''; },
+            };
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCListFoundation.prototype.layout = function () {
+        if (this.adapter.getListItemCount() === 0) {
+            return;
+        }
+        // TODO(b/172274142): consider all items when determining the list's type.
+        if (this.adapter.hasCheckboxAtIndex(0)) {
+            this.isCheckboxList = true;
+        }
+        else if (this.adapter.hasRadioAtIndex(0)) {
+            this.isRadioList = true;
+        }
+        else {
+            this.maybeInitializeSingleSelection();
+        }
+        if (this.hasTypeahead) {
+            this.sortedIndexByFirstChar = this.typeaheadInitSortedIndex();
+        }
+    };
+    /** Returns the index of the item that was last focused. */
+    MDCListFoundation.prototype.getFocusedItemIndex = function () {
+        return this.focusedItemIndex;
+    };
+    /** Toggles focus wrapping with keyboard navigation. */
+    MDCListFoundation.prototype.setWrapFocus = function (value) {
+        this.wrapFocus = value;
+    };
+    /**
+     * Toggles orientation direction for keyboard navigation (true for vertical,
+     * false for horizontal).
+     */
+    MDCListFoundation.prototype.setVerticalOrientation = function (value) {
+        this.isVertical = value;
+    };
+    /** Toggles single-selection behavior. */
+    MDCListFoundation.prototype.setSingleSelection = function (value) {
+        this.isSingleSelectionList = value;
+        if (value) {
+            this.maybeInitializeSingleSelection();
+            this.selectedIndex = this.getSelectedIndexFromDOM();
+        }
+    };
+    /**
+     * Automatically determines whether the list is single selection list. If so,
+     * initializes the internal state to match the selected item.
+     */
+    MDCListFoundation.prototype.maybeInitializeSingleSelection = function () {
+        var selectedItemIndex = this.getSelectedIndexFromDOM();
+        if (selectedItemIndex === _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX)
+            return;
+        var hasActivatedClass = this.adapter.listItemAtIndexHasClass(selectedItemIndex, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_ACTIVATED_CLASS);
+        if (hasActivatedClass) {
+            this.setUseActivatedClass(true);
+        }
+        this.isSingleSelectionList = true;
+        this.selectedIndex = selectedItemIndex;
+    };
+    /** @return Index of the first selected item based on the DOM state. */
+    MDCListFoundation.prototype.getSelectedIndexFromDOM = function () {
+        var selectedIndex = _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX;
+        var listItemsCount = this.adapter.getListItemCount();
+        for (var i = 0; i < listItemsCount; i++) {
+            var hasSelectedClass = this.adapter.listItemAtIndexHasClass(i, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_SELECTED_CLASS);
+            var hasActivatedClass = this.adapter.listItemAtIndexHasClass(i, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_ACTIVATED_CLASS);
+            if (!(hasSelectedClass || hasActivatedClass)) {
+                continue;
+            }
+            selectedIndex = i;
+            break;
+        }
+        return selectedIndex;
+    };
+    /**
+     * Sets whether typeahead is enabled on the list.
+     * @param hasTypeahead Whether typeahead is enabled.
+     */
+    MDCListFoundation.prototype.setHasTypeahead = function (hasTypeahead) {
+        this.hasTypeahead = hasTypeahead;
+        if (hasTypeahead) {
+            this.sortedIndexByFirstChar = this.typeaheadInitSortedIndex();
+        }
+    };
+    /**
+     * @return Whether typeahead is currently matching a user-specified prefix.
+     */
+    MDCListFoundation.prototype.isTypeaheadInProgress = function () {
+        return this.hasTypeahead &&
+            _typeahead__WEBPACK_IMPORTED_MODULE_2__.isTypingInProgress(this.typeaheadState);
+    };
+    /** Toggle use of the "activated" CSS class. */
+    MDCListFoundation.prototype.setUseActivatedClass = function (useActivated) {
+        this.useActivatedClass = useActivated;
+    };
+    /**
+     * Toggles use of the selected attribute (true for aria-selected, false for
+     * aria-checked).
+     */
+    MDCListFoundation.prototype.setUseSelectedAttribute = function (useSelected) {
+        this.useSelectedAttr = useSelected;
+    };
+    MDCListFoundation.prototype.getSelectedIndex = function () {
+        return this.selectedIndex;
+    };
+    MDCListFoundation.prototype.setSelectedIndex = function (index, _a) {
+        var _b = _a === void 0 ? {} : _a, forceUpdate = _b.forceUpdate;
+        if (!this.isIndexValid(index)) {
+            return;
+        }
+        if (this.isCheckboxList) {
+            this.setCheckboxAtIndex(index);
+        }
+        else if (this.isRadioList) {
+            this.setRadioAtIndex(index);
+        }
+        else {
+            this.setSingleSelectionAtIndex(index, { forceUpdate: forceUpdate });
+        }
+    };
+    /**
+     * Focus in handler for the list items.
+     */
+    MDCListFoundation.prototype.handleFocusIn = function (listItemIndex) {
+        if (listItemIndex >= 0) {
+            this.focusedItemIndex = listItemIndex;
+            this.adapter.setAttributeForElementIndex(listItemIndex, 'tabindex', '0');
+            this.adapter.setTabIndexForListItemChildren(listItemIndex, '0');
+        }
+    };
+    /**
+     * Focus out handler for the list items.
+     */
+    MDCListFoundation.prototype.handleFocusOut = function (listItemIndex) {
+        var _this = this;
+        if (listItemIndex >= 0) {
+            this.adapter.setAttributeForElementIndex(listItemIndex, 'tabindex', '-1');
+            this.adapter.setTabIndexForListItemChildren(listItemIndex, '-1');
+        }
+        /**
+         * Between Focusout & Focusin some browsers do not have focus on any
+         * element. Setting a delay to wait till the focus is moved to next element.
+         */
+        setTimeout(function () {
+            if (!_this.adapter.isFocusInsideList()) {
+                _this.setTabindexToFirstSelectedOrFocusedItem();
+            }
+        }, 0);
+    };
+    /**
+     * Key handler for the list.
+     */
+    MDCListFoundation.prototype.handleKeydown = function (event, isRootListItem, listItemIndex) {
+        var _this = this;
+        var isArrowLeft = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_3__.normalizeKey)(event) === 'ArrowLeft';
+        var isArrowUp = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_3__.normalizeKey)(event) === 'ArrowUp';
+        var isArrowRight = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_3__.normalizeKey)(event) === 'ArrowRight';
+        var isArrowDown = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_3__.normalizeKey)(event) === 'ArrowDown';
+        var isHome = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_3__.normalizeKey)(event) === 'Home';
+        var isEnd = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_3__.normalizeKey)(event) === 'End';
+        var isEnter = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_3__.normalizeKey)(event) === 'Enter';
+        var isSpace = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_3__.normalizeKey)(event) === 'Spacebar';
+        // Have to check both upper and lower case, because having caps lock on
+        // affects the value.
+        var isLetterA = event.key === 'A' || event.key === 'a';
+        if (this.adapter.isRootFocused()) {
+            if (isArrowUp || isEnd) {
+                event.preventDefault();
+                this.focusLastElement();
+            }
+            else if (isArrowDown || isHome) {
+                event.preventDefault();
+                this.focusFirstElement();
+            }
+            if (this.hasTypeahead) {
+                var handleKeydownOpts = {
+                    event: event,
+                    focusItemAtIndex: function (index) {
+                        _this.focusItemAtIndex(index);
+                    },
+                    focusedItemIndex: -1,
+                    isTargetListItem: isRootListItem,
+                    sortedIndexByFirstChar: this.sortedIndexByFirstChar,
+                    isItemAtIndexDisabled: function (index) {
+                        return _this.adapter.listItemAtIndexHasClass(index, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_DISABLED_CLASS);
+                    },
+                };
+                _typeahead__WEBPACK_IMPORTED_MODULE_2__.handleKeydown(handleKeydownOpts, this.typeaheadState);
+            }
+            return;
+        }
+        var currentIndex = this.adapter.getFocusedElementIndex();
+        if (currentIndex === -1) {
+            currentIndex = listItemIndex;
+            if (currentIndex < 0) {
+                // If this event doesn't have a mdc-list-item ancestor from the
+                // current list (not from a sublist), return early.
+                return;
+            }
+        }
+        if ((this.isVertical && isArrowDown) ||
+            (!this.isVertical && isArrowRight)) {
+            (0,_events__WEBPACK_IMPORTED_MODULE_4__.preventDefaultEvent)(event);
+            this.focusNextElement(currentIndex);
+        }
+        else if ((this.isVertical && isArrowUp) || (!this.isVertical && isArrowLeft)) {
+            (0,_events__WEBPACK_IMPORTED_MODULE_4__.preventDefaultEvent)(event);
+            this.focusPrevElement(currentIndex);
+        }
+        else if (isHome) {
+            (0,_events__WEBPACK_IMPORTED_MODULE_4__.preventDefaultEvent)(event);
+            this.focusFirstElement();
+        }
+        else if (isEnd) {
+            (0,_events__WEBPACK_IMPORTED_MODULE_4__.preventDefaultEvent)(event);
+            this.focusLastElement();
+        }
+        else if (isLetterA && event.ctrlKey && this.isCheckboxList) {
+            event.preventDefault();
+            this.toggleAll(this.selectedIndex === _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX ?
+                [] :
+                this.selectedIndex);
+        }
+        else if (isEnter || isSpace) {
+            if (isRootListItem) {
+                // Return early if enter key is pressed on anchor element which triggers
+                // synthetic MouseEvent event.
+                var target = event.target;
+                if (target && target.tagName === 'A' && isEnter) {
+                    return;
+                }
+                (0,_events__WEBPACK_IMPORTED_MODULE_4__.preventDefaultEvent)(event);
+                if (this.adapter.listItemAtIndexHasClass(currentIndex, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_DISABLED_CLASS)) {
+                    return;
+                }
+                if (!this.isTypeaheadInProgress()) {
+                    if (this.isSelectableList()) {
+                        this.setSelectedIndexOnAction(currentIndex);
+                    }
+                    this.adapter.notifyAction(currentIndex);
+                }
+            }
+        }
+        if (this.hasTypeahead) {
+            var handleKeydownOpts = {
+                event: event,
+                focusItemAtIndex: function (index) {
+                    _this.focusItemAtIndex(index);
+                },
+                focusedItemIndex: this.focusedItemIndex,
+                isTargetListItem: isRootListItem,
+                sortedIndexByFirstChar: this.sortedIndexByFirstChar,
+                isItemAtIndexDisabled: function (index) { return _this.adapter.listItemAtIndexHasClass(index, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_DISABLED_CLASS); },
+            };
+            _typeahead__WEBPACK_IMPORTED_MODULE_2__.handleKeydown(handleKeydownOpts, this.typeaheadState);
+        }
+    };
+    /**
+     * Click handler for the list.
+     */
+    MDCListFoundation.prototype.handleClick = function (index, toggleCheckbox) {
+        if (index === _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            return;
+        }
+        if (this.adapter.listItemAtIndexHasClass(index, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_DISABLED_CLASS)) {
+            return;
+        }
+        if (this.isSelectableList()) {
+            this.setSelectedIndexOnAction(index, toggleCheckbox);
+        }
+        this.adapter.notifyAction(index);
+    };
+    /**
+     * Focuses the next element on the list.
+     */
+    MDCListFoundation.prototype.focusNextElement = function (index) {
+        var count = this.adapter.getListItemCount();
+        var nextIndex = index + 1;
+        if (nextIndex >= count) {
+            if (this.wrapFocus) {
+                nextIndex = 0;
+            }
+            else {
+                // Return early because last item is already focused.
+                return index;
+            }
+        }
+        this.focusItemAtIndex(nextIndex);
+        return nextIndex;
+    };
+    /**
+     * Focuses the previous element on the list.
+     */
+    MDCListFoundation.prototype.focusPrevElement = function (index) {
+        var prevIndex = index - 1;
+        if (prevIndex < 0) {
+            if (this.wrapFocus) {
+                prevIndex = this.adapter.getListItemCount() - 1;
+            }
+            else {
+                // Return early because first item is already focused.
+                return index;
+            }
+        }
+        this.focusItemAtIndex(prevIndex);
+        return prevIndex;
+    };
+    MDCListFoundation.prototype.focusFirstElement = function () {
+        this.focusItemAtIndex(0);
+        return 0;
+    };
+    MDCListFoundation.prototype.focusLastElement = function () {
+        var lastIndex = this.adapter.getListItemCount() - 1;
+        this.focusItemAtIndex(lastIndex);
+        return lastIndex;
+    };
+    MDCListFoundation.prototype.focusInitialElement = function () {
+        var initialIndex = this.getFirstSelectedOrFocusedItemIndex();
+        this.focusItemAtIndex(initialIndex);
+        return initialIndex;
+    };
+    /**
+     * @param itemIndex Index of the list item
+     * @param isEnabled Sets the list item to enabled or disabled.
+     */
+    MDCListFoundation.prototype.setEnabled = function (itemIndex, isEnabled) {
+        if (!this.isIndexValid(itemIndex)) {
+            return;
+        }
+        if (isEnabled) {
+            this.adapter.removeClassForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_DISABLED_CLASS);
+            this.adapter.setAttributeForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_DISABLED, 'false');
+        }
+        else {
+            this.adapter.addClassForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_DISABLED_CLASS);
+            this.adapter.setAttributeForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_DISABLED, 'true');
+        }
+    };
+    MDCListFoundation.prototype.setSingleSelectionAtIndex = function (index, _a) {
+        var _b = _a === void 0 ? {} : _a, forceUpdate = _b.forceUpdate;
+        if (this.selectedIndex === index && !forceUpdate) {
+            return;
+        }
+        var selectedClassName = _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_SELECTED_CLASS;
+        if (this.useActivatedClass) {
+            selectedClassName = _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_ACTIVATED_CLASS;
+        }
+        if (this.selectedIndex !== _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            this.adapter.removeClassForElementIndex(this.selectedIndex, selectedClassName);
+        }
+        this.setAriaForSingleSelectionAtIndex(index);
+        this.setTabindexAtIndex(index);
+        if (index !== _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            this.adapter.addClassForElementIndex(index, selectedClassName);
+        }
+        this.selectedIndex = index;
+    };
+    /**
+     * Sets aria attribute for single selection at given index.
+     */
+    MDCListFoundation.prototype.setAriaForSingleSelectionAtIndex = function (index) {
+        // Detect the presence of aria-current and get the value only during list
+        // initialization when it is in unset state.
+        if (this.selectedIndex === _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            this.ariaCurrentAttrValue =
+                this.adapter.getAttributeForElementIndex(index, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_CURRENT);
+        }
+        var isAriaCurrent = this.ariaCurrentAttrValue !== null;
+        var ariaAttribute = isAriaCurrent ? _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_CURRENT : _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_SELECTED;
+        if (this.selectedIndex !== _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            this.adapter.setAttributeForElementIndex(this.selectedIndex, ariaAttribute, 'false');
+        }
+        if (index !== _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            var ariaAttributeValue = isAriaCurrent ? this.ariaCurrentAttrValue : 'true';
+            this.adapter.setAttributeForElementIndex(index, ariaAttribute, ariaAttributeValue);
+        }
+    };
+    /**
+     * Returns the attribute to use for indicating selection status.
+     */
+    MDCListFoundation.prototype.getSelectionAttribute = function () {
+        return this.useSelectedAttr ? _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_SELECTED : _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_CHECKED;
+    };
+    /**
+     * Toggles radio at give index. Radio doesn't change the checked state if it
+     * is already checked.
+     */
+    MDCListFoundation.prototype.setRadioAtIndex = function (index) {
+        var selectionAttribute = this.getSelectionAttribute();
+        this.adapter.setCheckedCheckboxOrRadioAtIndex(index, true);
+        if (this.selectedIndex !== _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            this.adapter.setAttributeForElementIndex(this.selectedIndex, selectionAttribute, 'false');
+        }
+        this.adapter.setAttributeForElementIndex(index, selectionAttribute, 'true');
+        this.selectedIndex = index;
+    };
+    MDCListFoundation.prototype.setCheckboxAtIndex = function (index) {
+        var selectionAttribute = this.getSelectionAttribute();
+        for (var i = 0; i < this.adapter.getListItemCount(); i++) {
+            var isChecked = false;
+            if (index.indexOf(i) >= 0) {
+                isChecked = true;
+            }
+            this.adapter.setCheckedCheckboxOrRadioAtIndex(i, isChecked);
+            this.adapter.setAttributeForElementIndex(i, selectionAttribute, isChecked ? 'true' : 'false');
+        }
+        this.selectedIndex = index;
+    };
+    MDCListFoundation.prototype.setTabindexAtIndex = function (index) {
+        if (this.focusedItemIndex === _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX && index !== 0) {
+            // If some list item was selected set first list item's tabindex to -1.
+            // Generally, tabindex is set to 0 on first list item of list that has no
+            // preselected items.
+            this.adapter.setAttributeForElementIndex(0, 'tabindex', '-1');
+        }
+        else if (this.focusedItemIndex >= 0 && this.focusedItemIndex !== index) {
+            this.adapter.setAttributeForElementIndex(this.focusedItemIndex, 'tabindex', '-1');
+        }
+        // Set the previous selection's tabindex to -1. We need this because
+        // in selection menus that are not visible, programmatically setting an
+        // option will not change focus but will change where tabindex should be 0.
+        if (!(this.selectedIndex instanceof Array) &&
+            this.selectedIndex !== index) {
+            this.adapter.setAttributeForElementIndex(this.selectedIndex, 'tabindex', '-1');
+        }
+        if (index !== _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            this.adapter.setAttributeForElementIndex(index, 'tabindex', '0');
+        }
+    };
+    /**
+     * @return Return true if it is single selectin list, checkbox list or radio
+     *     list.
+     */
+    MDCListFoundation.prototype.isSelectableList = function () {
+        return this.isSingleSelectionList || this.isCheckboxList ||
+            this.isRadioList;
+    };
+    MDCListFoundation.prototype.setTabindexToFirstSelectedOrFocusedItem = function () {
+        var targetIndex = this.getFirstSelectedOrFocusedItemIndex();
+        this.setTabindexAtIndex(targetIndex);
+    };
+    MDCListFoundation.prototype.getFirstSelectedOrFocusedItemIndex = function () {
+        // Action lists retain focus on the most recently focused item.
+        if (!this.isSelectableList()) {
+            return Math.max(this.focusedItemIndex, 0);
+        }
+        // Single-selection lists focus the selected item.
+        if (typeof this.selectedIndex === 'number' &&
+            this.selectedIndex !== _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            return this.selectedIndex;
+        }
+        // Multiple-selection lists focus the first selected item.
+        if (isNumberArray(this.selectedIndex) && this.selectedIndex.length > 0) {
+            return this.selectedIndex.reduce(function (minIndex, currentIndex) { return Math.min(minIndex, currentIndex); });
+        }
+        // Selection lists without a selection focus the first item.
+        return 0;
+    };
+    MDCListFoundation.prototype.isIndexValid = function (index) {
+        var _this = this;
+        if (index instanceof Array) {
+            if (!this.isCheckboxList) {
+                throw new Error('MDCListFoundation: Array of index is only supported for checkbox based list');
+            }
+            if (index.length === 0) {
+                return true;
+            }
+            else {
+                return index.some(function (i) { return _this.isIndexInRange(i); });
+            }
+        }
+        else if (typeof index === 'number') {
+            if (this.isCheckboxList) {
+                throw new Error("MDCListFoundation: Expected array of index for checkbox based list but got number: " + index);
+            }
+            return this.isIndexInRange(index) ||
+                this.isSingleSelectionList && index === _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX;
+        }
+        else {
+            return false;
+        }
+    };
+    MDCListFoundation.prototype.isIndexInRange = function (index) {
+        var listSize = this.adapter.getListItemCount();
+        return index >= 0 && index < listSize;
+    };
+    /**
+     * Sets selected index on user action, toggles checkbox / radio based on
+     * toggleCheckbox value. User interaction should not toggle list item(s) when
+     * disabled.
+     */
+    MDCListFoundation.prototype.setSelectedIndexOnAction = function (index, toggleCheckbox) {
+        if (toggleCheckbox === void 0) { toggleCheckbox = true; }
+        if (this.isCheckboxList) {
+            this.toggleCheckboxAtIndex(index, toggleCheckbox);
+        }
+        else {
+            this.setSelectedIndex(index);
+        }
+    };
+    MDCListFoundation.prototype.toggleCheckboxAtIndex = function (index, toggleCheckbox) {
+        var selectionAttribute = this.getSelectionAttribute();
+        var isChecked = this.adapter.isCheckboxCheckedAtIndex(index);
+        if (toggleCheckbox) {
+            isChecked = !isChecked;
+            this.adapter.setCheckedCheckboxOrRadioAtIndex(index, isChecked);
+        }
+        this.adapter.setAttributeForElementIndex(index, selectionAttribute, isChecked ? 'true' : 'false');
+        // If none of the checkbox items are selected and selectedIndex is not
+        // initialized then provide a default value.
+        var selectedIndexes = this.selectedIndex === _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX ?
+            [] :
+            this.selectedIndex.slice();
+        if (isChecked) {
+            selectedIndexes.push(index);
+        }
+        else {
+            selectedIndexes = selectedIndexes.filter(function (i) { return i !== index; });
+        }
+        this.selectedIndex = selectedIndexes;
+    };
+    MDCListFoundation.prototype.focusItemAtIndex = function (index) {
+        this.adapter.focusItemAtIndex(index);
+        this.focusedItemIndex = index;
+    };
+    MDCListFoundation.prototype.toggleAll = function (currentlySelectedIndexes) {
+        var count = this.adapter.getListItemCount();
+        // If all items are selected, deselect everything.
+        if (currentlySelectedIndexes.length === count) {
+            this.setCheckboxAtIndex([]);
+        }
+        else {
+            // Otherwise select all enabled options.
+            var allIndexes = [];
+            for (var i = 0; i < count; i++) {
+                if (!this.adapter.listItemAtIndexHasClass(i, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_DISABLED_CLASS) ||
+                    currentlySelectedIndexes.indexOf(i) > -1) {
+                    allIndexes.push(i);
+                }
+            }
+            this.setCheckboxAtIndex(allIndexes);
+        }
+    };
+    /**
+     * Given the next desired character from the user, adds it to the typeahead
+     * buffer. Then, attempts to find the next option matching the buffer. Wraps
+     * around if at the end of options.
+     *
+     * @param nextChar The next character to add to the prefix buffer.
+     * @param startingIndex The index from which to start matching. Only relevant
+     *     when starting a new match sequence. To start a new match sequence,
+     *     clear the buffer using `clearTypeaheadBuffer`, or wait for the buffer
+     *     to clear after a set interval defined in list foundation. Defaults to
+     *     the currently focused index.
+     * @return The index of the matched item, or -1 if no match.
+     */
+    MDCListFoundation.prototype.typeaheadMatchItem = function (nextChar, startingIndex, skipFocus) {
+        var _this = this;
+        if (skipFocus === void 0) { skipFocus = false; }
+        var opts = {
+            focusItemAtIndex: function (index) {
+                _this.focusItemAtIndex(index);
+            },
+            focusedItemIndex: startingIndex ? startingIndex : this.focusedItemIndex,
+            nextChar: nextChar,
+            sortedIndexByFirstChar: this.sortedIndexByFirstChar,
+            skipFocus: skipFocus,
+            isItemAtIndexDisabled: function (index) { return _this.adapter.listItemAtIndexHasClass(index, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.LIST_ITEM_DISABLED_CLASS); }
+        };
+        return _typeahead__WEBPACK_IMPORTED_MODULE_2__.matchItem(opts, this.typeaheadState);
+    };
+    /**
+     * Initializes the MDCListTextAndIndex data structure by indexing the current
+     * list items by primary text.
+     *
+     * @return The primary texts of all the list items sorted by first character.
+     */
+    MDCListFoundation.prototype.typeaheadInitSortedIndex = function () {
+        return _typeahead__WEBPACK_IMPORTED_MODULE_2__.initSortedIndex(this.adapter.getListItemCount(), this.adapter.getPrimaryTextAtIndex);
+    };
+    /**
+     * Clears the typeahead buffer.
+     */
+    MDCListFoundation.prototype.clearTypeaheadBuffer = function () {
+        _typeahead__WEBPACK_IMPORTED_MODULE_2__.clearBuffer(this.typeaheadState);
+    };
+    return MDCListFoundation;
+}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_5__.MDCFoundation));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDCListFoundation);
+//# sourceMappingURL=foundation.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/list/typeahead.js":
+/*!**************************************************!*\
+  !*** ./node_modules/@material/list/typeahead.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "initState": () => (/* binding */ initState),
+/* harmony export */   "initSortedIndex": () => (/* binding */ initSortedIndex),
+/* harmony export */   "matchItem": () => (/* binding */ matchItem),
+/* harmony export */   "isTypingInProgress": () => (/* binding */ isTypingInProgress),
+/* harmony export */   "clearBuffer": () => (/* binding */ clearBuffer),
+/* harmony export */   "handleKeydown": () => (/* binding */ handleKeydown)
+/* harmony export */ });
+/* harmony import */ var _material_dom_keyboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/dom/keyboard */ "./node_modules/@material/dom/keyboard.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/list/constants.js");
+/* harmony import */ var _events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./events */ "./node_modules/@material/list/events.js");
+/**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+/**
+ * Initializes a state object for typeahead. Use the same reference for calls to
+ * typeahead functions.
+ *
+ * @return The current state of the typeahead process. Each state reference
+ *     represents a typeahead instance as the reference is typically mutated
+ *     in-place.
+ */
+function initState() {
+    var state = {
+        bufferClearTimeout: 0,
+        currentFirstChar: '',
+        sortedIndexCursor: 0,
+        typeaheadBuffer: '',
+    };
+    return state;
+}
+/**
+ * Initializes typeahead state by indexing the current list items by primary
+ * text into the sortedIndexByFirstChar data structure.
+ *
+ * @param listItemCount numer of items in the list
+ * @param getPrimaryTextByItemIndex function that returns the primary text at a
+ *     given index
+ *
+ * @return Map that maps the first character of the primary text to the full
+ *     list text and it's index
+ */
+function initSortedIndex(listItemCount, getPrimaryTextByItemIndex) {
+    var sortedIndexByFirstChar = new Map();
+    // Aggregate item text to index mapping
+    for (var i = 0; i < listItemCount; i++) {
+        var primaryText = getPrimaryTextByItemIndex(i).trim();
+        if (!primaryText) {
+            continue;
+        }
+        var firstChar = primaryText[0].toLowerCase();
+        if (!sortedIndexByFirstChar.has(firstChar)) {
+            sortedIndexByFirstChar.set(firstChar, []);
+        }
+        sortedIndexByFirstChar.get(firstChar).push({ text: primaryText.toLowerCase(), index: i });
+    }
+    // Sort the mapping
+    // TODO(b/157162694): Investigate replacing forEach with Map.values()
+    sortedIndexByFirstChar.forEach(function (values) {
+        values.sort(function (first, second) {
+            return first.index - second.index;
+        });
+    });
+    return sortedIndexByFirstChar;
+}
+/**
+ * Given the next desired character from the user, it attempts to find the next
+ * list option matching the buffer. Wraps around if at the end of options.
+ *
+ * @param opts Options and accessors
+ *   - nextChar - the next character to match against items
+ *   - sortedIndexByFirstChar - output of `initSortedIndex(...)`
+ *   - focusedItemIndex - the index of the currently focused item
+ *   - focusItemAtIndex - function that focuses a list item at given index
+ *   - skipFocus - whether or not to focus the matched item
+ *   - isItemAtIndexDisabled - function that determines whether an item at a
+ *        given index is disabled
+ * @param state The typeahead state instance. See `initState`.
+ *
+ * @return The index of the matched item, or -1 if no match.
+ */
+function matchItem(opts, state) {
+    var nextChar = opts.nextChar, focusItemAtIndex = opts.focusItemAtIndex, sortedIndexByFirstChar = opts.sortedIndexByFirstChar, focusedItemIndex = opts.focusedItemIndex, skipFocus = opts.skipFocus, isItemAtIndexDisabled = opts.isItemAtIndexDisabled;
+    clearTimeout(state.bufferClearTimeout);
+    state.bufferClearTimeout = setTimeout(function () {
+        clearBuffer(state);
+    }, _constants__WEBPACK_IMPORTED_MODULE_0__.numbers.TYPEAHEAD_BUFFER_CLEAR_TIMEOUT_MS);
+    state.typeaheadBuffer = state.typeaheadBuffer + nextChar;
+    var index;
+    if (state.typeaheadBuffer.length === 1) {
+        index = matchFirstChar(sortedIndexByFirstChar, focusedItemIndex, isItemAtIndexDisabled, state);
+    }
+    else {
+        index = matchAllChars(sortedIndexByFirstChar, isItemAtIndexDisabled, state);
+    }
+    if (index !== -1 && !skipFocus) {
+        focusItemAtIndex(index);
+    }
+    return index;
+}
+/**
+ * Matches the user's single input character in the buffer to the
+ * next option that begins with such character. Wraps around if at
+ * end of options. Returns -1 if no match is found.
+ */
+function matchFirstChar(sortedIndexByFirstChar, focusedItemIndex, isItemAtIndexDisabled, state) {
+    var firstChar = state.typeaheadBuffer[0];
+    var itemsMatchingFirstChar = sortedIndexByFirstChar.get(firstChar);
+    if (!itemsMatchingFirstChar) {
+        return -1;
+    }
+    // Has the same firstChar been recently matched?
+    // Also, did starting index remain the same between key presses?
+    // If both hold true, simply increment index.
+    if (firstChar === state.currentFirstChar &&
+        itemsMatchingFirstChar[state.sortedIndexCursor].index ===
+            focusedItemIndex) {
+        state.sortedIndexCursor =
+            (state.sortedIndexCursor + 1) % itemsMatchingFirstChar.length;
+        var newIndex = itemsMatchingFirstChar[state.sortedIndexCursor].index;
+        if (!isItemAtIndexDisabled(newIndex)) {
+            return newIndex;
+        }
+    }
+    // If we're here, it means one of the following happened:
+    // - either firstChar or startingIndex has changed, invalidating the
+    // cursor.
+    // - The next item of typeahead is disabled, so we have to look further.
+    state.currentFirstChar = firstChar;
+    var newCursorPosition = -1;
+    var cursorPosition;
+    // Find the first non-disabled item as a fallback.
+    for (cursorPosition = 0; cursorPosition < itemsMatchingFirstChar.length; cursorPosition++) {
+        if (!isItemAtIndexDisabled(itemsMatchingFirstChar[cursorPosition].index)) {
+            newCursorPosition = cursorPosition;
+            break;
+        }
+    }
+    // Advance cursor to first item matching the firstChar that is positioned
+    // after starting item. Cursor is unchanged from fallback if there's no
+    // such item.
+    for (; cursorPosition < itemsMatchingFirstChar.length; cursorPosition++) {
+        if (itemsMatchingFirstChar[cursorPosition].index > focusedItemIndex &&
+            !isItemAtIndexDisabled(itemsMatchingFirstChar[cursorPosition].index)) {
+            newCursorPosition = cursorPosition;
+            break;
+        }
+    }
+    if (newCursorPosition !== -1) {
+        state.sortedIndexCursor = newCursorPosition;
+        return itemsMatchingFirstChar[state.sortedIndexCursor].index;
+    }
+    return -1;
+}
+/**
+ * Attempts to find the next item that matches all of the typeahead buffer.
+ * Wraps around if at end of options. Returns -1 if no match is found.
+ */
+function matchAllChars(sortedIndexByFirstChar, isItemAtIndexDisabled, state) {
+    var firstChar = state.typeaheadBuffer[0];
+    var itemsMatchingFirstChar = sortedIndexByFirstChar.get(firstChar);
+    if (!itemsMatchingFirstChar) {
+        return -1;
+    }
+    // Do nothing if text already matches
+    var startingItem = itemsMatchingFirstChar[state.sortedIndexCursor];
+    if (startingItem.text.lastIndexOf(state.typeaheadBuffer, 0) === 0 &&
+        !isItemAtIndexDisabled(startingItem.index)) {
+        return startingItem.index;
+    }
+    // Find next item that matches completely; if no match, we'll eventually
+    // loop around to same position
+    var cursorPosition = (state.sortedIndexCursor + 1) % itemsMatchingFirstChar.length;
+    var nextCursorPosition = -1;
+    while (cursorPosition !== state.sortedIndexCursor) {
+        var currentItem = itemsMatchingFirstChar[cursorPosition];
+        var matches = currentItem.text.lastIndexOf(state.typeaheadBuffer, 0) === 0;
+        var isEnabled = !isItemAtIndexDisabled(currentItem.index);
+        if (matches && isEnabled) {
+            nextCursorPosition = cursorPosition;
+            break;
+        }
+        cursorPosition = (cursorPosition + 1) % itemsMatchingFirstChar.length;
+    }
+    if (nextCursorPosition !== -1) {
+        state.sortedIndexCursor = nextCursorPosition;
+        return itemsMatchingFirstChar[state.sortedIndexCursor].index;
+    }
+    return -1;
+}
+/**
+ * Whether or not the given typeahead instaance state is currently typing.
+ *
+ * @param state The typeahead state instance. See `initState`.
+ */
+function isTypingInProgress(state) {
+    return state.typeaheadBuffer.length > 0;
+}
+/**
+ * Clears the typeahaed buffer so that it resets item matching to the first
+ * character.
+ *
+ * @param state The typeahead state instance. See `initState`.
+ */
+function clearBuffer(state) {
+    state.typeaheadBuffer = '';
+}
+/**
+ * Given a keydown event, it calculates whether or not to automatically focus a
+ * list item depending on what was typed mimicing the typeahead functionality of
+ * a standard <select> element that is open.
+ *
+ * @param opts Options and accessors
+ *   - event - the KeyboardEvent to handle and parse
+ *   - sortedIndexByFirstChar - output of `initSortedIndex(...)`
+ *   - focusedItemIndex - the index of the currently focused item
+ *   - focusItemAtIndex - function that focuses a list item at given index
+ *   - isItemAtFocusedIndexDisabled - whether or not the currently focused item
+ *      is disabled
+ *   - isTargetListItem - whether or not the event target is a list item
+ * @param state The typeahead state instance. See `initState`.
+ *
+ * @returns index of the item matched by the keydown. -1 if not matched.
+ */
+function handleKeydown(opts, state) {
+    var event = opts.event, isTargetListItem = opts.isTargetListItem, focusedItemIndex = opts.focusedItemIndex, focusItemAtIndex = opts.focusItemAtIndex, sortedIndexByFirstChar = opts.sortedIndexByFirstChar, isItemAtIndexDisabled = opts.isItemAtIndexDisabled;
+    var isArrowLeft = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_1__.normalizeKey)(event) === 'ArrowLeft';
+    var isArrowUp = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_1__.normalizeKey)(event) === 'ArrowUp';
+    var isArrowRight = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_1__.normalizeKey)(event) === 'ArrowRight';
+    var isArrowDown = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_1__.normalizeKey)(event) === 'ArrowDown';
+    var isHome = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_1__.normalizeKey)(event) === 'Home';
+    var isEnd = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_1__.normalizeKey)(event) === 'End';
+    var isEnter = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_1__.normalizeKey)(event) === 'Enter';
+    var isSpace = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_1__.normalizeKey)(event) === 'Spacebar';
+    if (event.ctrlKey || event.metaKey || isArrowLeft || isArrowUp ||
+        isArrowRight || isArrowDown || isHome || isEnd || isEnter) {
+        return -1;
+    }
+    var isCharacterKey = !isSpace && event.key.length === 1;
+    if (isCharacterKey) {
+        (0,_events__WEBPACK_IMPORTED_MODULE_2__.preventDefaultEvent)(event);
+        var matchItemOpts = {
+            focusItemAtIndex: focusItemAtIndex,
+            focusedItemIndex: focusedItemIndex,
+            nextChar: event.key.toLowerCase(),
+            sortedIndexByFirstChar: sortedIndexByFirstChar,
+            skipFocus: false,
+            isItemAtIndexDisabled: isItemAtIndexDisabled,
+        };
+        return matchItem(matchItemOpts, state);
+    }
+    if (!isSpace) {
+        return -1;
+    }
+    if (isTargetListItem) {
+        (0,_events__WEBPACK_IMPORTED_MODULE_2__.preventDefaultEvent)(event);
+    }
+    var typeaheadOnListItem = isTargetListItem && isTypingInProgress(state);
+    if (typeaheadOnListItem) {
+        var matchItemOpts = {
+            focusItemAtIndex: focusItemAtIndex,
+            focusedItemIndex: focusedItemIndex,
+            nextChar: ' ',
+            sortedIndexByFirstChar: sortedIndexByFirstChar,
+            skipFocus: false,
+            isItemAtIndexDisabled: isItemAtIndexDisabled,
+        };
+        // space participates in typeahead matching if in rapid typing mode
+        return matchItem(matchItemOpts, state);
+    }
+    return -1;
+}
+//# sourceMappingURL=typeahead.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/menu-surface/component.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@material/menu-surface/component.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCMenuSurface": () => (/* binding */ MDCMenuSurface)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/menu-surface/constants.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/menu-surface/foundation.js");
+/* harmony import */ var _material_animation_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/animation/util */ "./node_modules/@material/animation/util.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+var MDCMenuSurface = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCMenuSurface, _super);
+    function MDCMenuSurface() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCMenuSurface.attachTo = function (root) {
+        return new MDCMenuSurface(root);
+    };
+    MDCMenuSurface.prototype.initialSyncWithDOM = function () {
+        var _this = this;
+        var parentEl = this.root.parentElement;
+        this.anchorElement = parentEl && parentEl.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.ANCHOR) ? parentEl : null;
+        if (this.root.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.FIXED)) {
+            this.setFixedPosition(true);
+        }
+        this.handleKeydown = function (event) {
+            _this.foundation.handleKeydown(event);
+        };
+        this.handleBodyClick = function (event) {
+            _this.foundation.handleBodyClick(event);
+        };
+        // capture so that no race between handleBodyClick and quickOpen when
+        // menusurface opened on button click which registers this listener
+        this.registerBodyClickListener = function () {
+            document.body.addEventListener('click', _this.handleBodyClick, { capture: true });
+        };
+        this.deregisterBodyClickListener = function () {
+            document.body.removeEventListener('click', _this.handleBodyClick, { capture: true });
+        };
+        this.listen('keydown', this.handleKeydown);
+        this.listen(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.OPENED_EVENT, this.registerBodyClickListener);
+        this.listen(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.CLOSED_EVENT, this.deregisterBodyClickListener);
+    };
+    MDCMenuSurface.prototype.destroy = function () {
+        this.unlisten('keydown', this.handleKeydown);
+        this.unlisten(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.OPENED_EVENT, this.registerBodyClickListener);
+        this.unlisten(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.CLOSED_EVENT, this.deregisterBodyClickListener);
+        _super.prototype.destroy.call(this);
+    };
+    MDCMenuSurface.prototype.isOpen = function () {
+        return this.foundation.isOpen();
+    };
+    MDCMenuSurface.prototype.open = function () {
+        this.foundation.open();
+    };
+    MDCMenuSurface.prototype.close = function (skipRestoreFocus) {
+        if (skipRestoreFocus === void 0) { skipRestoreFocus = false; }
+        this.foundation.close(skipRestoreFocus);
+    };
+    Object.defineProperty(MDCMenuSurface.prototype, "quickOpen", {
+        set: function (quickOpen) {
+            this.foundation.setQuickOpen(quickOpen);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /** Sets the foundation to use page offsets for an positioning when the menu is hoisted to the body. */
+    MDCMenuSurface.prototype.setIsHoisted = function (isHoisted) {
+        this.foundation.setIsHoisted(isHoisted);
+    };
+    /** Sets the element that the menu-surface is anchored to. */
+    MDCMenuSurface.prototype.setMenuSurfaceAnchorElement = function (element) {
+        this.anchorElement = element;
+    };
+    /** Sets the menu-surface to position: fixed. */
+    MDCMenuSurface.prototype.setFixedPosition = function (isFixed) {
+        if (isFixed) {
+            this.root.classList.add(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.FIXED);
+        }
+        else {
+            this.root.classList.remove(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.FIXED);
+        }
+        this.foundation.setFixedPosition(isFixed);
+    };
+    /** Sets the absolute x/y position to position based on. Requires the menu to be hoisted. */
+    MDCMenuSurface.prototype.setAbsolutePosition = function (x, y) {
+        this.foundation.setAbsolutePosition(x, y);
+        this.setIsHoisted(true);
+    };
+    /**
+     * @param corner Default anchor corner alignment of top-left surface corner.
+     */
+    MDCMenuSurface.prototype.setAnchorCorner = function (corner) {
+        this.foundation.setAnchorCorner(corner);
+    };
+    MDCMenuSurface.prototype.setAnchorMargin = function (margin) {
+        this.foundation.setAnchorMargin(margin);
+    };
+    MDCMenuSurface.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            addClass: function (className) { return _this.root.classList.add(className); },
+            removeClass: function (className) { return _this.root.classList.remove(className); },
+            hasClass: function (className) { return _this.root.classList.contains(className); },
+            hasAnchor: function () { return !!_this.anchorElement; },
+            notifyClose: function () {
+                return _this.emit(_foundation__WEBPACK_IMPORTED_MODULE_2__.MDCMenuSurfaceFoundation.strings.CLOSED_EVENT, {});
+            },
+            notifyClosing: function () {
+                _this.emit(_foundation__WEBPACK_IMPORTED_MODULE_2__.MDCMenuSurfaceFoundation.strings.CLOSING_EVENT, {});
+            },
+            notifyOpen: function () {
+                return _this.emit(_foundation__WEBPACK_IMPORTED_MODULE_2__.MDCMenuSurfaceFoundation.strings.OPENED_EVENT, {});
+            },
+            isElementInContainer: function (el) { return _this.root.contains(el); },
+            isRtl: function () {
+                return getComputedStyle(_this.root).getPropertyValue('direction') === 'rtl';
+            },
+            setTransformOrigin: function (origin) {
+                var propertyName = (0,_material_animation_util__WEBPACK_IMPORTED_MODULE_3__.getCorrectPropertyName)(window, 'transform') + "-origin";
+                _this.root.style.setProperty(propertyName, origin);
+            },
+            isFocused: function () { return document.activeElement === _this.root; },
+            saveFocus: function () {
+                _this.previousFocus =
+                    document.activeElement;
+            },
+            restoreFocus: function () {
+                if (_this.root.contains(document.activeElement)) {
+                    if (_this.previousFocus && _this.previousFocus.focus) {
+                        _this.previousFocus.focus();
+                    }
+                }
+            },
+            getInnerDimensions: function () {
+                return {
+                    width: _this.root.offsetWidth,
+                    height: _this.root.offsetHeight
+                };
+            },
+            getAnchorDimensions: function () { return _this.anchorElement ?
+                _this.anchorElement.getBoundingClientRect() :
+                null; },
+            getWindowDimensions: function () {
+                return { width: window.innerWidth, height: window.innerHeight };
+            },
+            getBodyDimensions: function () {
+                return { width: document.body.clientWidth, height: document.body.clientHeight };
+            },
+            getWindowScroll: function () {
+                return { x: window.pageXOffset, y: window.pageYOffset };
+            },
+            setPosition: function (position) {
+                var rootHTML = _this.root;
+                rootHTML.style.left = 'left' in position ? position.left + "px" : '';
+                rootHTML.style.right = 'right' in position ? position.right + "px" : '';
+                rootHTML.style.top = 'top' in position ? position.top + "px" : '';
+                rootHTML.style.bottom =
+                    'bottom' in position ? position.bottom + "px" : '';
+            },
+            setMaxHeight: function (height) {
+                _this.root.style.maxHeight = height;
+            },
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new _foundation__WEBPACK_IMPORTED_MODULE_2__.MDCMenuSurfaceFoundation(adapter);
+    };
+    return MDCMenuSurface;
+}(_material_base_component__WEBPACK_IMPORTED_MODULE_4__.MDCComponent));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/menu-surface/constants.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@material/menu-surface/constants.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
+/* harmony export */   "strings": () => (/* binding */ strings),
+/* harmony export */   "numbers": () => (/* binding */ numbers),
+/* harmony export */   "CornerBit": () => (/* binding */ CornerBit),
+/* harmony export */   "Corner": () => (/* binding */ Corner)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    ANCHOR: 'mdc-menu-surface--anchor',
+    ANIMATING_CLOSED: 'mdc-menu-surface--animating-closed',
+    ANIMATING_OPEN: 'mdc-menu-surface--animating-open',
+    FIXED: 'mdc-menu-surface--fixed',
+    IS_OPEN_BELOW: 'mdc-menu-surface--is-open-below',
+    OPEN: 'mdc-menu-surface--open',
+    ROOT: 'mdc-menu-surface',
+};
+// tslint:disable:object-literal-sort-keys
+var strings = {
+    CLOSED_EVENT: 'MDCMenuSurface:closed',
+    CLOSING_EVENT: 'MDCMenuSurface:closing',
+    OPENED_EVENT: 'MDCMenuSurface:opened',
+    FOCUSABLE_ELEMENTS: [
+        'button:not(:disabled)',
+        '[href]:not([aria-disabled="true"])',
+        'input:not(:disabled)',
+        'select:not(:disabled)',
+        'textarea:not(:disabled)',
+        '[tabindex]:not([tabindex="-1"]):not([aria-disabled="true"])',
+    ].join(', '),
+};
+// tslint:enable:object-literal-sort-keys
+var numbers = {
+    /** Total duration of menu-surface open animation. */
+    TRANSITION_OPEN_DURATION: 120,
+    /** Total duration of menu-surface close animation. */
+    TRANSITION_CLOSE_DURATION: 75,
+    /**
+     * Margin left to the edge of the viewport when menu-surface is at maximum
+     * possible height. Also used as a viewport margin.
+     */
+    MARGIN_TO_EDGE: 32,
+    /**
+     * Ratio of anchor width to menu-surface width for switching from corner
+     * positioning to center positioning.
+     */
+    ANCHOR_TO_MENU_SURFACE_WIDTH_RATIO: 0.67,
+    /**
+     * Amount of time to wait before restoring focus when closing the menu
+     * surface. This is important because if a touch event triggered the menu
+     * close, and the subsequent mouse event occurs after focus is restored, then
+     * the restored focus would be lost.
+     */
+    TOUCH_EVENT_WAIT_MS: 30,
+};
+/**
+ * Enum for bits in the {@see Corner) bitmap.
+ */
+var CornerBit;
+(function (CornerBit) {
+    CornerBit[CornerBit["BOTTOM"] = 1] = "BOTTOM";
+    CornerBit[CornerBit["CENTER"] = 2] = "CENTER";
+    CornerBit[CornerBit["RIGHT"] = 4] = "RIGHT";
+    CornerBit[CornerBit["FLIP_RTL"] = 8] = "FLIP_RTL";
+})(CornerBit || (CornerBit = {}));
+/**
+ * Enum for representing an element corner for positioning the menu-surface.
+ *
+ * The START constants map to LEFT if element directionality is left
+ * to right and RIGHT if the directionality is right to left.
+ * Likewise END maps to RIGHT or LEFT depending on the directionality.
+ */
+var Corner;
+(function (Corner) {
+    Corner[Corner["TOP_LEFT"] = 0] = "TOP_LEFT";
+    Corner[Corner["TOP_RIGHT"] = 4] = "TOP_RIGHT";
+    Corner[Corner["BOTTOM_LEFT"] = 1] = "BOTTOM_LEFT";
+    Corner[Corner["BOTTOM_RIGHT"] = 5] = "BOTTOM_RIGHT";
+    Corner[Corner["TOP_START"] = 8] = "TOP_START";
+    Corner[Corner["TOP_END"] = 12] = "TOP_END";
+    Corner[Corner["BOTTOM_START"] = 9] = "BOTTOM_START";
+    Corner[Corner["BOTTOM_END"] = 13] = "BOTTOM_END";
+})(Corner || (Corner = {}));
+
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/menu-surface/foundation.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@material/menu-surface/foundation.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCMenuSurfaceFoundation": () => (/* binding */ MDCMenuSurfaceFoundation),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/menu-surface/constants.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var MDCMenuSurfaceFoundation = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCMenuSurfaceFoundation, _super);
+    function MDCMenuSurfaceFoundation(adapter) {
+        var _this = _super.call(this, (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MDCMenuSurfaceFoundation.defaultAdapter), adapter)) || this;
+        _this.isSurfaceOpen = false;
+        _this.isQuickOpen = false;
+        _this.isHoistedElement = false;
+        _this.isFixedPosition = false;
+        _this.isHorizontallyCenteredOnViewport = false;
+        _this.maxHeight = 0;
+        _this.openAnimationEndTimerId = 0;
+        _this.closeAnimationEndTimerId = 0;
+        _this.animationRequestId = 0;
+        _this.anchorCorner = _constants__WEBPACK_IMPORTED_MODULE_1__.Corner.TOP_START;
+        /**
+         * Corner of the menu surface to which menu surface is attached to anchor.
+         *
+         *  Anchor corner --->+----------+
+         *                    |  ANCHOR  |
+         *                    +----------+
+         *  Origin corner --->+--------------+
+         *                    |              |
+         *                    |              |
+         *                    | MENU SURFACE |
+         *                    |              |
+         *                    |              |
+         *                    +--------------+
+         */
+        _this.originCorner = _constants__WEBPACK_IMPORTED_MODULE_1__.Corner.TOP_START;
+        _this.anchorMargin = { top: 0, right: 0, bottom: 0, left: 0 };
+        _this.position = { x: 0, y: 0 };
+        return _this;
+    }
+    Object.defineProperty(MDCMenuSurfaceFoundation, "cssClasses", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenuSurfaceFoundation, "strings", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenuSurfaceFoundation, "numbers", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.numbers;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenuSurfaceFoundation, "Corner", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.Corner;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenuSurfaceFoundation, "defaultAdapter", {
+        /**
+         * @see {@link MDCMenuSurfaceAdapter} for typing information on parameters and return types.
+         */
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function () { return undefined; },
+                removeClass: function () { return undefined; },
+                hasClass: function () { return false; },
+                hasAnchor: function () { return false; },
+                isElementInContainer: function () { return false; },
+                isFocused: function () { return false; },
+                isRtl: function () { return false; },
+                getInnerDimensions: function () { return ({ height: 0, width: 0 }); },
+                getAnchorDimensions: function () { return null; },
+                getWindowDimensions: function () { return ({ height: 0, width: 0 }); },
+                getBodyDimensions: function () { return ({ height: 0, width: 0 }); },
+                getWindowScroll: function () { return ({ x: 0, y: 0 }); },
+                setPosition: function () { return undefined; },
+                setMaxHeight: function () { return undefined; },
+                setTransformOrigin: function () { return undefined; },
+                saveFocus: function () { return undefined; },
+                restoreFocus: function () { return undefined; },
+                notifyClose: function () { return undefined; },
+                notifyOpen: function () { return undefined; },
+                notifyClosing: function () { return undefined; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCMenuSurfaceFoundation.prototype.init = function () {
+        var _a = MDCMenuSurfaceFoundation.cssClasses, ROOT = _a.ROOT, OPEN = _a.OPEN;
+        if (!this.adapter.hasClass(ROOT)) {
+            throw new Error(ROOT + " class required in root element.");
+        }
+        if (this.adapter.hasClass(OPEN)) {
+            this.isSurfaceOpen = true;
+        }
+    };
+    MDCMenuSurfaceFoundation.prototype.destroy = function () {
+        clearTimeout(this.openAnimationEndTimerId);
+        clearTimeout(this.closeAnimationEndTimerId);
+        // Cancel any currently running animations.
+        cancelAnimationFrame(this.animationRequestId);
+    };
+    /**
+     * @param corner Default anchor corner alignment of top-left menu surface
+     *     corner.
+     */
+    MDCMenuSurfaceFoundation.prototype.setAnchorCorner = function (corner) {
+        this.anchorCorner = corner;
+    };
+    /**
+     * Flip menu corner horizontally.
+     */
+    MDCMenuSurfaceFoundation.prototype.flipCornerHorizontally = function () {
+        this.originCorner = this.originCorner ^ _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.RIGHT;
+    };
+    /**
+     * @param margin Set of margin values from anchor.
+     */
+    MDCMenuSurfaceFoundation.prototype.setAnchorMargin = function (margin) {
+        this.anchorMargin.top = margin.top || 0;
+        this.anchorMargin.right = margin.right || 0;
+        this.anchorMargin.bottom = margin.bottom || 0;
+        this.anchorMargin.left = margin.left || 0;
+    };
+    /** Used to indicate if the menu-surface is hoisted to the body. */
+    MDCMenuSurfaceFoundation.prototype.setIsHoisted = function (isHoisted) {
+        this.isHoistedElement = isHoisted;
+    };
+    /**
+     * Used to set the menu-surface calculations based on a fixed position menu.
+     */
+    MDCMenuSurfaceFoundation.prototype.setFixedPosition = function (isFixedPosition) {
+        this.isFixedPosition = isFixedPosition;
+    };
+    /**
+     * @return Returns true if menu is in fixed (`position: fixed`) position.
+     */
+    MDCMenuSurfaceFoundation.prototype.isFixed = function () {
+        return this.isFixedPosition;
+    };
+    /** Sets the menu-surface position on the page. */
+    MDCMenuSurfaceFoundation.prototype.setAbsolutePosition = function (x, y) {
+        this.position.x = this.isFinite(x) ? x : 0;
+        this.position.y = this.isFinite(y) ? y : 0;
+    };
+    /** Sets whether menu-surface should be horizontally centered to viewport. */
+    MDCMenuSurfaceFoundation.prototype.setIsHorizontallyCenteredOnViewport = function (isCentered) {
+        this.isHorizontallyCenteredOnViewport = isCentered;
+    };
+    MDCMenuSurfaceFoundation.prototype.setQuickOpen = function (quickOpen) {
+        this.isQuickOpen = quickOpen;
+    };
+    /**
+     * Sets maximum menu-surface height on open.
+     * @param maxHeight The desired max-height. Set to 0 (default) to
+     *     automatically calculate max height based on available viewport space.
+     */
+    MDCMenuSurfaceFoundation.prototype.setMaxHeight = function (maxHeight) {
+        this.maxHeight = maxHeight;
+    };
+    MDCMenuSurfaceFoundation.prototype.isOpen = function () {
+        return this.isSurfaceOpen;
+    };
+    /**
+     * Open the menu surface.
+     */
+    MDCMenuSurfaceFoundation.prototype.open = function () {
+        var _this = this;
+        if (this.isSurfaceOpen) {
+            return;
+        }
+        this.adapter.saveFocus();
+        if (this.isQuickOpen) {
+            this.isSurfaceOpen = true;
+            this.adapter.addClass(MDCMenuSurfaceFoundation.cssClasses.OPEN);
+            this.dimensions = this.adapter.getInnerDimensions();
+            this.autoposition();
+            this.adapter.notifyOpen();
+        }
+        else {
+            this.adapter.addClass(MDCMenuSurfaceFoundation.cssClasses.ANIMATING_OPEN);
+            this.animationRequestId = requestAnimationFrame(function () {
+                _this.dimensions = _this.adapter.getInnerDimensions();
+                _this.autoposition();
+                _this.adapter.addClass(MDCMenuSurfaceFoundation.cssClasses.OPEN);
+                _this.openAnimationEndTimerId = setTimeout(function () {
+                    _this.openAnimationEndTimerId = 0;
+                    _this.adapter.removeClass(MDCMenuSurfaceFoundation.cssClasses.ANIMATING_OPEN);
+                    _this.adapter.notifyOpen();
+                }, _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.TRANSITION_OPEN_DURATION);
+            });
+            this.isSurfaceOpen = true;
+        }
+    };
+    /**
+     * Closes the menu surface.
+     */
+    MDCMenuSurfaceFoundation.prototype.close = function (skipRestoreFocus) {
+        var _this = this;
+        if (skipRestoreFocus === void 0) { skipRestoreFocus = false; }
+        if (!this.isSurfaceOpen) {
+            return;
+        }
+        this.adapter.notifyClosing();
+        if (this.isQuickOpen) {
+            this.isSurfaceOpen = false;
+            if (!skipRestoreFocus) {
+                this.maybeRestoreFocus();
+            }
+            this.adapter.removeClass(MDCMenuSurfaceFoundation.cssClasses.OPEN);
+            this.adapter.removeClass(MDCMenuSurfaceFoundation.cssClasses.IS_OPEN_BELOW);
+            this.adapter.notifyClose();
+            return;
+        }
+        this.adapter.addClass(MDCMenuSurfaceFoundation.cssClasses.ANIMATING_CLOSED);
+        requestAnimationFrame(function () {
+            _this.adapter.removeClass(MDCMenuSurfaceFoundation.cssClasses.OPEN);
+            _this.adapter.removeClass(MDCMenuSurfaceFoundation.cssClasses.IS_OPEN_BELOW);
+            _this.closeAnimationEndTimerId = setTimeout(function () {
+                _this.closeAnimationEndTimerId = 0;
+                _this.adapter.removeClass(MDCMenuSurfaceFoundation.cssClasses.ANIMATING_CLOSED);
+                _this.adapter.notifyClose();
+            }, _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.TRANSITION_CLOSE_DURATION);
+        });
+        this.isSurfaceOpen = false;
+        if (!skipRestoreFocus) {
+            this.maybeRestoreFocus();
+        }
+    };
+    /** Handle clicks and close if not within menu-surface element. */
+    MDCMenuSurfaceFoundation.prototype.handleBodyClick = function (evt) {
+        var el = evt.target;
+        if (this.adapter.isElementInContainer(el)) {
+            return;
+        }
+        this.close();
+    };
+    /** Handle keys that close the surface. */
+    MDCMenuSurfaceFoundation.prototype.handleKeydown = function (evt) {
+        var keyCode = evt.keyCode, key = evt.key;
+        var isEscape = key === 'Escape' || keyCode === 27;
+        if (isEscape) {
+            this.close();
+        }
+    };
+    MDCMenuSurfaceFoundation.prototype.autoposition = function () {
+        var _a;
+        // Compute measurements for autoposition methods reuse.
+        this.measurements = this.getAutoLayoutmeasurements();
+        var corner = this.getoriginCorner();
+        var maxMenuSurfaceHeight = this.getMenuSurfaceMaxHeight(corner);
+        var verticalAlignment = this.hasBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.BOTTOM) ? 'bottom' : 'top';
+        var horizontalAlignment = this.hasBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.RIGHT) ? 'right' : 'left';
+        var horizontalOffset = this.getHorizontalOriginOffset(corner);
+        var verticalOffset = this.getVerticalOriginOffset(corner);
+        var _b = this.measurements, anchorSize = _b.anchorSize, surfaceSize = _b.surfaceSize;
+        var position = (_a = {},
+            _a[horizontalAlignment] = horizontalOffset,
+            _a[verticalAlignment] = verticalOffset,
+            _a);
+        // Center align when anchor width is comparable or greater than menu
+        // surface, otherwise keep corner.
+        if (anchorSize.width / surfaceSize.width >
+            _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.ANCHOR_TO_MENU_SURFACE_WIDTH_RATIO) {
+            horizontalAlignment = 'center';
+        }
+        // If the menu-surface has been hoisted to the body, it's no longer relative
+        // to the anchor element
+        if (this.isHoistedElement || this.isFixedPosition) {
+            this.adjustPositionForHoistedElement(position);
+        }
+        this.adapter.setTransformOrigin(horizontalAlignment + " " + verticalAlignment);
+        this.adapter.setPosition(position);
+        this.adapter.setMaxHeight(maxMenuSurfaceHeight ? maxMenuSurfaceHeight + 'px' : '');
+        // If it is opened from the top then add is-open-below class
+        if (!this.hasBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.BOTTOM)) {
+            this.adapter.addClass(MDCMenuSurfaceFoundation.cssClasses.IS_OPEN_BELOW);
+        }
+    };
+    /**
+     * @return Measurements used to position menu surface popup.
+     */
+    MDCMenuSurfaceFoundation.prototype.getAutoLayoutmeasurements = function () {
+        var anchorRect = this.adapter.getAnchorDimensions();
+        var bodySize = this.adapter.getBodyDimensions();
+        var viewportSize = this.adapter.getWindowDimensions();
+        var windowScroll = this.adapter.getWindowScroll();
+        if (!anchorRect) {
+            // tslint:disable:object-literal-sort-keys Positional properties are more readable when they're grouped together
+            anchorRect = {
+                top: this.position.y,
+                right: this.position.x,
+                bottom: this.position.y,
+                left: this.position.x,
+                width: 0,
+                height: 0,
+            };
+            // tslint:enable:object-literal-sort-keys
+        }
+        return {
+            anchorSize: anchorRect,
+            bodySize: bodySize,
+            surfaceSize: this.dimensions,
+            viewportDistance: {
+                // tslint:disable:object-literal-sort-keys Positional properties are more readable when they're grouped together
+                top: anchorRect.top,
+                right: viewportSize.width - anchorRect.right,
+                bottom: viewportSize.height - anchorRect.bottom,
+                left: anchorRect.left,
+                // tslint:enable:object-literal-sort-keys
+            },
+            viewportSize: viewportSize,
+            windowScroll: windowScroll,
+        };
+    };
+    /**
+     * Computes the corner of the anchor from which to animate and position the
+     * menu surface.
+     *
+     * Only LEFT or RIGHT bit is used to position the menu surface ignoring RTL
+     * context. E.g., menu surface will be positioned from right side on TOP_END.
+     */
+    MDCMenuSurfaceFoundation.prototype.getoriginCorner = function () {
+        var corner = this.originCorner;
+        var _a = this.measurements, viewportDistance = _a.viewportDistance, anchorSize = _a.anchorSize, surfaceSize = _a.surfaceSize;
+        var MARGIN_TO_EDGE = MDCMenuSurfaceFoundation.numbers.MARGIN_TO_EDGE;
+        var isAnchoredToBottom = this.hasBit(this.anchorCorner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.BOTTOM);
+        var availableTop;
+        var availableBottom;
+        if (isAnchoredToBottom) {
+            availableTop =
+                viewportDistance.top - MARGIN_TO_EDGE + this.anchorMargin.bottom;
+            availableBottom =
+                viewportDistance.bottom - MARGIN_TO_EDGE - this.anchorMargin.bottom;
+        }
+        else {
+            availableTop =
+                viewportDistance.top - MARGIN_TO_EDGE + this.anchorMargin.top;
+            availableBottom = viewportDistance.bottom - MARGIN_TO_EDGE +
+                anchorSize.height - this.anchorMargin.top;
+        }
+        var isAvailableBottom = availableBottom - surfaceSize.height > 0;
+        if (!isAvailableBottom && availableTop > availableBottom) {
+            // Attach bottom side of surface to the anchor.
+            corner = this.setBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.BOTTOM);
+        }
+        var isRtl = this.adapter.isRtl();
+        var isFlipRtl = this.hasBit(this.anchorCorner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.FLIP_RTL);
+        var hasRightBit = this.hasBit(this.anchorCorner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.RIGHT) ||
+            this.hasBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.RIGHT);
+        // Whether surface attached to right side of anchor element.
+        var isAnchoredToRight = false;
+        // Anchored to start
+        if (isRtl && isFlipRtl) {
+            isAnchoredToRight = !hasRightBit;
+        }
+        else {
+            // Anchored to right
+            isAnchoredToRight = hasRightBit;
+        }
+        var availableLeft;
+        var availableRight;
+        if (isAnchoredToRight) {
+            availableLeft =
+                viewportDistance.left + anchorSize.width + this.anchorMargin.right;
+            availableRight = viewportDistance.right - this.anchorMargin.right;
+        }
+        else {
+            availableLeft = viewportDistance.left + this.anchorMargin.left;
+            availableRight =
+                viewportDistance.right + anchorSize.width - this.anchorMargin.left;
+        }
+        var isAvailableLeft = availableLeft - surfaceSize.width > 0;
+        var isAvailableRight = availableRight - surfaceSize.width > 0;
+        var isOriginCornerAlignedToEnd = this.hasBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.FLIP_RTL) &&
+            this.hasBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.RIGHT);
+        if (isAvailableRight && isOriginCornerAlignedToEnd && isRtl ||
+            !isAvailableLeft && isOriginCornerAlignedToEnd) {
+            // Attach left side of surface to the anchor.
+            corner = this.unsetBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.RIGHT);
+        }
+        else if (isAvailableLeft && isAnchoredToRight && isRtl ||
+            (isAvailableLeft && !isAnchoredToRight && hasRightBit) ||
+            (!isAvailableRight && availableLeft >= availableRight)) {
+            // Attach right side of surface to the anchor.
+            corner = this.setBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.RIGHT);
+        }
+        return corner;
+    };
+    /**
+     * @param corner Origin corner of the menu surface.
+     * @return Maximum height of the menu surface, based on available space. 0
+     *     indicates should not be set.
+     */
+    MDCMenuSurfaceFoundation.prototype.getMenuSurfaceMaxHeight = function (corner) {
+        if (this.maxHeight > 0) {
+            return this.maxHeight;
+        }
+        var viewportDistance = this.measurements.viewportDistance;
+        var maxHeight = 0;
+        var isBottomAligned = this.hasBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.BOTTOM);
+        var isBottomAnchored = this.hasBit(this.anchorCorner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.BOTTOM);
+        var MARGIN_TO_EDGE = MDCMenuSurfaceFoundation.numbers.MARGIN_TO_EDGE;
+        // When maximum height is not specified, it is handled from CSS.
+        if (isBottomAligned) {
+            maxHeight = viewportDistance.top + this.anchorMargin.top - MARGIN_TO_EDGE;
+            if (!isBottomAnchored) {
+                maxHeight += this.measurements.anchorSize.height;
+            }
+        }
+        else {
+            maxHeight = viewportDistance.bottom - this.anchorMargin.bottom +
+                this.measurements.anchorSize.height - MARGIN_TO_EDGE;
+            if (isBottomAnchored) {
+                maxHeight -= this.measurements.anchorSize.height;
+            }
+        }
+        return maxHeight;
+    };
+    /**
+     * @param corner Origin corner of the menu surface.
+     * @return Horizontal offset of menu surface origin corner from corresponding
+     *     anchor corner.
+     */
+    MDCMenuSurfaceFoundation.prototype.getHorizontalOriginOffset = function (corner) {
+        var anchorSize = this.measurements.anchorSize;
+        // isRightAligned corresponds to using the 'right' property on the surface.
+        var isRightAligned = this.hasBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.RIGHT);
+        var avoidHorizontalOverlap = this.hasBit(this.anchorCorner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.RIGHT);
+        if (isRightAligned) {
+            var rightOffset = avoidHorizontalOverlap ?
+                anchorSize.width - this.anchorMargin.left :
+                this.anchorMargin.right;
+            // For hoisted or fixed elements, adjust the offset by the difference
+            // between viewport width and body width so when we calculate the right
+            // value (`adjustPositionForHoistedElement`) based on the element
+            // position, the right property is correct.
+            if (this.isHoistedElement || this.isFixedPosition) {
+                return rightOffset -
+                    (this.measurements.viewportSize.width -
+                        this.measurements.bodySize.width);
+            }
+            return rightOffset;
+        }
+        return avoidHorizontalOverlap ? anchorSize.width - this.anchorMargin.right :
+            this.anchorMargin.left;
+    };
+    /**
+     * @param corner Origin corner of the menu surface.
+     * @return Vertical offset of menu surface origin corner from corresponding
+     *     anchor corner.
+     */
+    MDCMenuSurfaceFoundation.prototype.getVerticalOriginOffset = function (corner) {
+        var anchorSize = this.measurements.anchorSize;
+        var isBottomAligned = this.hasBit(corner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.BOTTOM);
+        var avoidVerticalOverlap = this.hasBit(this.anchorCorner, _constants__WEBPACK_IMPORTED_MODULE_1__.CornerBit.BOTTOM);
+        var y = 0;
+        if (isBottomAligned) {
+            y = avoidVerticalOverlap ? anchorSize.height - this.anchorMargin.top :
+                -this.anchorMargin.bottom;
+        }
+        else {
+            y = avoidVerticalOverlap ?
+                (anchorSize.height + this.anchorMargin.bottom) :
+                this.anchorMargin.top;
+        }
+        return y;
+    };
+    /**
+     * Calculates the offsets for positioning the menu-surface when the
+     * menu-surface has been hoisted to the body.
+     */
+    MDCMenuSurfaceFoundation.prototype.adjustPositionForHoistedElement = function (position) {
+        var e_1, _a;
+        var _b = this.measurements, windowScroll = _b.windowScroll, viewportDistance = _b.viewportDistance, surfaceSize = _b.surfaceSize, viewportSize = _b.viewportSize;
+        var props = Object.keys(position);
+        try {
+            for (var props_1 = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__values)(props), props_1_1 = props_1.next(); !props_1_1.done; props_1_1 = props_1.next()) {
+                var prop = props_1_1.value;
+                var value = position[prop] || 0;
+                if (this.isHorizontallyCenteredOnViewport &&
+                    (prop === 'left' || prop === 'right')) {
+                    position[prop] = (viewportSize.width - surfaceSize.width) / 2;
+                    continue;
+                }
+                // Hoisted surfaces need to have the anchor elements location on the page
+                // added to the position properties for proper alignment on the body.
+                value += viewportDistance[prop];
+                // Surfaces that are absolutely positioned need to have additional
+                // calculations for scroll and bottom positioning.
+                if (!this.isFixedPosition) {
+                    if (prop === 'top') {
+                        value += windowScroll.y;
+                    }
+                    else if (prop === 'bottom') {
+                        value -= windowScroll.y;
+                    }
+                    else if (prop === 'left') {
+                        value += windowScroll.x;
+                    }
+                    else { // prop === 'right'
+                        value -= windowScroll.x;
+                    }
+                }
+                position[prop] = value;
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (props_1_1 && !props_1_1.done && (_a = props_1.return)) _a.call(props_1);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+    };
+    /**
+     * The last focused element when the menu surface was opened should regain
+     * focus, if the user is focused on or within the menu surface when it is
+     * closed.
+     */
+    MDCMenuSurfaceFoundation.prototype.maybeRestoreFocus = function () {
+        var _this = this;
+        var isRootFocused = this.adapter.isFocused();
+        var childHasFocus = document.activeElement &&
+            this.adapter.isElementInContainer(document.activeElement);
+        if (isRootFocused || childHasFocus) {
+            // Wait before restoring focus when closing the menu surface. This is
+            // important because if a touch event triggered the menu close, and the
+            // subsequent mouse event occurs after focus is restored, then the
+            // restored focus would be lost.
+            setTimeout(function () {
+                _this.adapter.restoreFocus();
+            }, _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.TOUCH_EVENT_WAIT_MS);
+        }
+    };
+    MDCMenuSurfaceFoundation.prototype.hasBit = function (corner, bit) {
+        return Boolean(corner & bit); // tslint:disable-line:no-bitwise
+    };
+    MDCMenuSurfaceFoundation.prototype.setBit = function (corner, bit) {
+        return corner | bit; // tslint:disable-line:no-bitwise
+    };
+    MDCMenuSurfaceFoundation.prototype.unsetBit = function (corner, bit) {
+        return corner ^ bit;
+    };
+    /**
+     * isFinite that doesn't force conversion to number type.
+     * Equivalent to Number.isFinite in ES2015, which is not supported in IE.
+     */
+    MDCMenuSurfaceFoundation.prototype.isFinite = function (num) {
+        return typeof num === 'number' && isFinite(num);
+    };
+    return MDCMenuSurfaceFoundation;
+}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_2__.MDCFoundation));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDCMenuSurfaceFoundation);
+//# sourceMappingURL=foundation.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/menu/component.js":
+/*!**************************************************!*\
+  !*** ./node_modules/@material/menu/component.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCMenu": () => (/* binding */ MDCMenu)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
+/* harmony import */ var _material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material/dom/ponyfill */ "./node_modules/@material/dom/ponyfill.js");
+/* harmony import */ var _material_list_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/list/component */ "./node_modules/@material/list/component.js");
+/* harmony import */ var _material_list_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material/list/constants */ "./node_modules/@material/list/constants.js");
+/* harmony import */ var _material_list_foundation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material/list/foundation */ "./node_modules/@material/list/foundation.js");
+/* harmony import */ var _material_menu_surface_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/menu-surface/component */ "./node_modules/@material/menu-surface/component.js");
+/* harmony import */ var _material_menu_surface_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/menu-surface/foundation */ "./node_modules/@material/menu-surface/foundation.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/menu/constants.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/menu/foundation.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+
+
+
+
+var MDCMenu = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCMenu, _super);
+    function MDCMenu() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCMenu.attachTo = function (root) {
+        return new MDCMenu(root);
+    };
+    MDCMenu.prototype.initialize = function (menuSurfaceFactory, listFactory) {
+        if (menuSurfaceFactory === void 0) { menuSurfaceFactory = function (el) { return new _material_menu_surface_component__WEBPACK_IMPORTED_MODULE_1__.MDCMenuSurface(el); }; }
+        if (listFactory === void 0) { listFactory = function (el) { return new _material_list_component__WEBPACK_IMPORTED_MODULE_2__.MDCList(el); }; }
+        this.menuSurfaceFactory = menuSurfaceFactory;
+        this.listFactory = listFactory;
+    };
+    MDCMenu.prototype.initialSyncWithDOM = function () {
+        var _this = this;
+        this.menuSurface = this.menuSurfaceFactory(this.root);
+        var list = this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__.strings.LIST_SELECTOR);
+        if (list) {
+            this.list = this.listFactory(list);
+            this.list.wrapFocus = true;
+        }
+        else {
+            this.list = null;
+        }
+        this.handleKeydown = function (evt) {
+            _this.foundation.handleKeydown(evt);
+        };
+        this.handleItemAction = function (evt) {
+            _this.foundation.handleItemAction(_this.items[evt.detail.index]);
+        };
+        this.handleMenuSurfaceOpened = function () {
+            _this.foundation.handleMenuSurfaceOpened();
+        };
+        this.menuSurface.listen(_material_menu_surface_foundation__WEBPACK_IMPORTED_MODULE_4__.MDCMenuSurfaceFoundation.strings.OPENED_EVENT, this.handleMenuSurfaceOpened);
+        this.listen('keydown', this.handleKeydown);
+        this.listen(_material_list_foundation__WEBPACK_IMPORTED_MODULE_5__.MDCListFoundation.strings.ACTION_EVENT, this.handleItemAction);
+    };
+    MDCMenu.prototype.destroy = function () {
+        if (this.list) {
+            this.list.destroy();
+        }
+        this.menuSurface.destroy();
+        this.menuSurface.unlisten(_material_menu_surface_foundation__WEBPACK_IMPORTED_MODULE_4__.MDCMenuSurfaceFoundation.strings.OPENED_EVENT, this.handleMenuSurfaceOpened);
+        this.unlisten('keydown', this.handleKeydown);
+        this.unlisten(_material_list_foundation__WEBPACK_IMPORTED_MODULE_5__.MDCListFoundation.strings.ACTION_EVENT, this.handleItemAction);
+        _super.prototype.destroy.call(this);
+    };
+    Object.defineProperty(MDCMenu.prototype, "open", {
+        get: function () {
+            return this.menuSurface.isOpen();
+        },
+        set: function (value) {
+            if (value) {
+                this.menuSurface.open();
+            }
+            else {
+                this.menuSurface.close();
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenu.prototype, "wrapFocus", {
+        get: function () {
+            return this.list ? this.list.wrapFocus : false;
+        },
+        set: function (value) {
+            if (this.list) {
+                this.list.wrapFocus = value;
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenu.prototype, "hasTypeahead", {
+        /**
+         * Sets whether the menu has typeahead functionality.
+         * @param value Whether typeahead is enabled.
+         */
+        set: function (value) {
+            if (this.list) {
+                this.list.hasTypeahead = value;
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenu.prototype, "typeaheadInProgress", {
+        /**
+         * @return Whether typeahead logic is currently matching some user prefix.
+         */
+        get: function () {
+            return this.list ? this.list.typeaheadInProgress : false;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /**
+     * Given the next desired character from the user, adds it to the typeahead
+     * buffer. Then, attempts to find the next option matching the buffer. Wraps
+     * around if at the end of options.
+     *
+     * @param nextChar The next character to add to the prefix buffer.
+     * @param startingIndex The index from which to start matching. Only relevant
+     *     when starting a new match sequence. To start a new match sequence,
+     *     clear the buffer using `clearTypeaheadBuffer`, or wait for the buffer
+     *     to clear after a set interval defined in list foundation. Defaults to
+     *     the currently focused index.
+     * @return The index of the matched item, or -1 if no match.
+     */
+    MDCMenu.prototype.typeaheadMatchItem = function (nextChar, startingIndex) {
+        if (this.list) {
+            return this.list.typeaheadMatchItem(nextChar, startingIndex);
+        }
+        return -1;
+    };
+    /**
+     * Layout the underlying list element in the case of any dynamic updates
+     * to its structure.
+     */
+    MDCMenu.prototype.layout = function () {
+        if (this.list) {
+            this.list.layout();
+        }
+    };
+    Object.defineProperty(MDCMenu.prototype, "items", {
+        /**
+         * Return the items within the menu. Note that this only contains the set of elements within
+         * the items container that are proper list items, and not supplemental / presentational DOM
+         * elements.
+         */
+        get: function () {
+            return this.list ? this.list.listElements : [];
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenu.prototype, "singleSelection", {
+        /**
+         * Turns on/off the underlying list's single selection mode. Used mainly
+         * by select menu.
+         *
+         * @param singleSelection Whether to enable single selection mode.
+         */
+        set: function (singleSelection) {
+            if (this.list) {
+                this.list.singleSelection = singleSelection;
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenu.prototype, "selectedIndex", {
+        /**
+         * Retrieves the selected index. Only applicable to select menus.
+         * @return The selected index, which is a number for single selection and
+         *     radio lists, and an array of numbers for checkbox lists.
+         */
+        get: function () {
+            return this.list ? this.list.selectedIndex : _material_list_constants__WEBPACK_IMPORTED_MODULE_6__.numbers.UNSET_INDEX;
+        },
+        /**
+         * Sets the selected index of the list. Only applicable to select menus.
+         * @param index The selected index, which is a number for single selection and
+         *     radio lists, and an array of numbers for checkbox lists.
+         */
+        set: function (index) {
+            if (this.list) {
+                this.list.selectedIndex = index;
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenu.prototype, "quickOpen", {
+        set: function (quickOpen) {
+            this.menuSurface.quickOpen = quickOpen;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /**
+     * Sets default focus state where the menu should focus every time when menu
+     * is opened. Focuses the list root (`DefaultFocusState.LIST_ROOT`) element by
+     * default.
+     * @param focusState Default focus state.
+     */
+    MDCMenu.prototype.setDefaultFocusState = function (focusState) {
+        this.foundation.setDefaultFocusState(focusState);
+    };
+    /**
+     * @param corner Default anchor corner alignment of top-left menu corner.
+     */
+    MDCMenu.prototype.setAnchorCorner = function (corner) {
+        this.menuSurface.setAnchorCorner(corner);
+    };
+    MDCMenu.prototype.setAnchorMargin = function (margin) {
+        this.menuSurface.setAnchorMargin(margin);
+    };
+    /**
+     * Sets the list item as the selected row at the specified index.
+     * @param index Index of list item within menu.
+     */
+    MDCMenu.prototype.setSelectedIndex = function (index) {
+        this.foundation.setSelectedIndex(index);
+    };
+    /**
+     * Sets the enabled state to isEnabled for the menu item at the given index.
+     * @param index Index of the menu item
+     * @param isEnabled The desired enabled state of the menu item.
+     */
+    MDCMenu.prototype.setEnabled = function (index, isEnabled) {
+        this.foundation.setEnabled(index, isEnabled);
+    };
+    /**
+     * @return The item within the menu at the index specified.
+     */
+    MDCMenu.prototype.getOptionByIndex = function (index) {
+        var items = this.items;
+        if (index < items.length) {
+            return this.items[index];
+        }
+        else {
+            return null;
+        }
+    };
+    /**
+     * @param index A menu item's index.
+     * @return The primary text within the menu at the index specified.
+     */
+    MDCMenu.prototype.getPrimaryTextAtIndex = function (index) {
+        var item = this.getOptionByIndex(index);
+        if (item && this.list) {
+            return this.list.getPrimaryText(item) || '';
+        }
+        return '';
+    };
+    MDCMenu.prototype.setFixedPosition = function (isFixed) {
+        this.menuSurface.setFixedPosition(isFixed);
+    };
+    MDCMenu.prototype.setIsHoisted = function (isHoisted) {
+        this.menuSurface.setIsHoisted(isHoisted);
+    };
+    MDCMenu.prototype.setAbsolutePosition = function (x, y) {
+        this.menuSurface.setAbsolutePosition(x, y);
+    };
+    /**
+     * Sets the element that the menu-surface is anchored to.
+     */
+    MDCMenu.prototype.setAnchorElement = function (element) {
+        this.menuSurface.anchorElement = element;
+    };
+    MDCMenu.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            addClassToElementAtIndex: function (index, className) {
+                var list = _this.items;
+                list[index].classList.add(className);
+            },
+            removeClassFromElementAtIndex: function (index, className) {
+                var list = _this.items;
+                list[index].classList.remove(className);
+            },
+            addAttributeToElementAtIndex: function (index, attr, value) {
+                var list = _this.items;
+                list[index].setAttribute(attr, value);
+            },
+            removeAttributeFromElementAtIndex: function (index, attr) {
+                var list = _this.items;
+                list[index].removeAttribute(attr);
+            },
+            getAttributeFromElementAtIndex: function (index, attr) {
+                var list = _this.items;
+                return list[index].getAttribute(attr);
+            },
+            elementContainsClass: function (element, className) {
+                return element.classList.contains(className);
+            },
+            closeSurface: function (skipRestoreFocus) {
+                _this.menuSurface.close(skipRestoreFocus);
+            },
+            getElementIndex: function (element) { return _this.items.indexOf(element); },
+            notifySelected: function (evtData) {
+                _this.emit(_constants__WEBPACK_IMPORTED_MODULE_3__.strings.SELECTED_EVENT, {
+                    index: evtData.index,
+                    item: _this.items[evtData.index],
+                });
+            },
+            getMenuItemCount: function () { return _this.items.length; },
+            focusItemAtIndex: function (index) {
+                _this.items[index].focus();
+            },
+            focusListRoot: function () {
+                _this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__.strings.LIST_SELECTOR).focus();
+            },
+            isSelectableItemAtIndex: function (index) {
+                return !!(0,_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_7__.closest)(_this.items[index], "." + _constants__WEBPACK_IMPORTED_MODULE_3__.cssClasses.MENU_SELECTION_GROUP);
+            },
+            getSelectedSiblingOfItemAtIndex: function (index) {
+                var selectionGroupEl = (0,_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_7__.closest)(_this.items[index], "." + _constants__WEBPACK_IMPORTED_MODULE_3__.cssClasses.MENU_SELECTION_GROUP);
+                var selectedItemEl = selectionGroupEl.querySelector("." + _constants__WEBPACK_IMPORTED_MODULE_3__.cssClasses.MENU_SELECTED_LIST_ITEM);
+                return selectedItemEl ? _this.items.indexOf(selectedItemEl) : -1;
+            },
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new _foundation__WEBPACK_IMPORTED_MODULE_8__.MDCMenuFoundation(adapter);
+    };
+    return MDCMenu;
+}(_material_base_component__WEBPACK_IMPORTED_MODULE_9__.MDCComponent));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/menu/constants.js":
+/*!**************************************************!*\
+  !*** ./node_modules/@material/menu/constants.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
+/* harmony export */   "strings": () => (/* binding */ strings),
+/* harmony export */   "numbers": () => (/* binding */ numbers),
+/* harmony export */   "DefaultFocusState": () => (/* binding */ DefaultFocusState)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    MENU_SELECTED_LIST_ITEM: 'mdc-menu-item--selected',
+    MENU_SELECTION_GROUP: 'mdc-menu__selection-group',
+    ROOT: 'mdc-menu',
+};
+var strings = {
+    ARIA_CHECKED_ATTR: 'aria-checked',
+    ARIA_DISABLED_ATTR: 'aria-disabled',
+    CHECKBOX_SELECTOR: 'input[type="checkbox"]',
+    LIST_SELECTOR: '.mdc-list,.mdc-deprecated-list',
+    SELECTED_EVENT: 'MDCMenu:selected',
+    SKIP_RESTORE_FOCUS: 'data-menu-item-skip-restore-focus',
+};
+var numbers = {
+    FOCUS_ROOT_INDEX: -1,
+};
+var DefaultFocusState;
+(function (DefaultFocusState) {
+    DefaultFocusState[DefaultFocusState["NONE"] = 0] = "NONE";
+    DefaultFocusState[DefaultFocusState["LIST_ROOT"] = 1] = "LIST_ROOT";
+    DefaultFocusState[DefaultFocusState["FIRST_ITEM"] = 2] = "FIRST_ITEM";
+    DefaultFocusState[DefaultFocusState["LAST_ITEM"] = 3] = "LAST_ITEM";
+})(DefaultFocusState || (DefaultFocusState = {}));
+
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/menu/foundation.js":
+/*!***************************************************!*\
+  !*** ./node_modules/@material/menu/foundation.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCMenuFoundation": () => (/* binding */ MDCMenuFoundation),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
+/* harmony import */ var _material_list_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/list/constants */ "./node_modules/@material/list/constants.js");
+/* harmony import */ var _material_menu_surface_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/menu-surface/foundation */ "./node_modules/@material/menu-surface/foundation.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/menu/constants.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+var MDCMenuFoundation = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCMenuFoundation, _super);
+    function MDCMenuFoundation(adapter) {
+        var _this = _super.call(this, (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MDCMenuFoundation.defaultAdapter), adapter)) || this;
+        _this.closeAnimationEndTimerId = 0;
+        _this.defaultFocusState = _constants__WEBPACK_IMPORTED_MODULE_1__.DefaultFocusState.LIST_ROOT;
+        _this.selectedIndex = -1;
+        return _this;
+    }
+    Object.defineProperty(MDCMenuFoundation, "cssClasses", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenuFoundation, "strings", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenuFoundation, "numbers", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.numbers;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCMenuFoundation, "defaultAdapter", {
+        /**
+         * @see {@link MDCMenuAdapter} for typing information on parameters and return types.
+         */
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClassToElementAtIndex: function () { return undefined; },
+                removeClassFromElementAtIndex: function () { return undefined; },
+                addAttributeToElementAtIndex: function () { return undefined; },
+                removeAttributeFromElementAtIndex: function () { return undefined; },
+                getAttributeFromElementAtIndex: function () { return null; },
+                elementContainsClass: function () { return false; },
+                closeSurface: function () { return undefined; },
+                getElementIndex: function () { return -1; },
+                notifySelected: function () { return undefined; },
+                getMenuItemCount: function () { return 0; },
+                focusItemAtIndex: function () { return undefined; },
+                focusListRoot: function () { return undefined; },
+                getSelectedSiblingOfItemAtIndex: function () { return -1; },
+                isSelectableItemAtIndex: function () { return false; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCMenuFoundation.prototype.destroy = function () {
+        if (this.closeAnimationEndTimerId) {
+            clearTimeout(this.closeAnimationEndTimerId);
+        }
+        this.adapter.closeSurface();
+    };
+    MDCMenuFoundation.prototype.handleKeydown = function (evt) {
+        var key = evt.key, keyCode = evt.keyCode;
+        var isTab = key === 'Tab' || keyCode === 9;
+        if (isTab) {
+            this.adapter.closeSurface(/** skipRestoreFocus */ true);
+        }
+    };
+    MDCMenuFoundation.prototype.handleItemAction = function (listItem) {
+        var _this = this;
+        var index = this.adapter.getElementIndex(listItem);
+        if (index < 0) {
+            return;
+        }
+        this.adapter.notifySelected({ index: index });
+        var skipRestoreFocus = this.adapter.getAttributeFromElementAtIndex(index, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.SKIP_RESTORE_FOCUS) === 'true';
+        this.adapter.closeSurface(skipRestoreFocus);
+        // Wait for the menu to close before adding/removing classes that affect styles.
+        this.closeAnimationEndTimerId = setTimeout(function () {
+            // Recompute the index in case the menu contents have changed.
+            var recomputedIndex = _this.adapter.getElementIndex(listItem);
+            if (recomputedIndex >= 0 &&
+                _this.adapter.isSelectableItemAtIndex(recomputedIndex)) {
+                _this.setSelectedIndex(recomputedIndex);
+            }
+        }, _material_menu_surface_foundation__WEBPACK_IMPORTED_MODULE_2__.MDCMenuSurfaceFoundation.numbers.TRANSITION_CLOSE_DURATION);
+    };
+    MDCMenuFoundation.prototype.handleMenuSurfaceOpened = function () {
+        switch (this.defaultFocusState) {
+            case _constants__WEBPACK_IMPORTED_MODULE_1__.DefaultFocusState.FIRST_ITEM:
+                this.adapter.focusItemAtIndex(0);
+                break;
+            case _constants__WEBPACK_IMPORTED_MODULE_1__.DefaultFocusState.LAST_ITEM:
+                this.adapter.focusItemAtIndex(this.adapter.getMenuItemCount() - 1);
+                break;
+            case _constants__WEBPACK_IMPORTED_MODULE_1__.DefaultFocusState.NONE:
+                // Do nothing.
+                break;
+            default:
+                this.adapter.focusListRoot();
+                break;
+        }
+    };
+    /**
+     * Sets default focus state where the menu should focus every time when menu
+     * is opened. Focuses the list root (`DefaultFocusState.LIST_ROOT`) element by
+     * default.
+     */
+    MDCMenuFoundation.prototype.setDefaultFocusState = function (focusState) {
+        this.defaultFocusState = focusState;
+    };
+    /** @return Index of the currently selected list item within the menu. */
+    MDCMenuFoundation.prototype.getSelectedIndex = function () {
+        return this.selectedIndex;
+    };
+    /**
+     * Selects the list item at `index` within the menu.
+     * @param index Index of list item within the menu.
+     */
+    MDCMenuFoundation.prototype.setSelectedIndex = function (index) {
+        this.validatedIndex(index);
+        if (!this.adapter.isSelectableItemAtIndex(index)) {
+            throw new Error('MDCMenuFoundation: No selection group at specified index.');
+        }
+        var prevSelectedIndex = this.adapter.getSelectedSiblingOfItemAtIndex(index);
+        if (prevSelectedIndex >= 0) {
+            this.adapter.removeAttributeFromElementAtIndex(prevSelectedIndex, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_CHECKED_ATTR);
+            this.adapter.removeClassFromElementAtIndex(prevSelectedIndex, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.MENU_SELECTED_LIST_ITEM);
+        }
+        this.adapter.addClassToElementAtIndex(index, _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.MENU_SELECTED_LIST_ITEM);
+        this.adapter.addAttributeToElementAtIndex(index, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_CHECKED_ATTR, 'true');
+        this.selectedIndex = index;
+    };
+    /**
+     * Sets the enabled state to isEnabled for the menu item at the given index.
+     * @param index Index of the menu item
+     * @param isEnabled The desired enabled state of the menu item.
+     */
+    MDCMenuFoundation.prototype.setEnabled = function (index, isEnabled) {
+        this.validatedIndex(index);
+        if (isEnabled) {
+            this.adapter.removeClassFromElementAtIndex(index, _material_list_constants__WEBPACK_IMPORTED_MODULE_3__.cssClasses.LIST_ITEM_DISABLED_CLASS);
+            this.adapter.addAttributeToElementAtIndex(index, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_DISABLED_ATTR, 'false');
+        }
+        else {
+            this.adapter.addClassToElementAtIndex(index, _material_list_constants__WEBPACK_IMPORTED_MODULE_3__.cssClasses.LIST_ITEM_DISABLED_CLASS);
+            this.adapter.addAttributeToElementAtIndex(index, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_DISABLED_ATTR, 'true');
+        }
+    };
+    MDCMenuFoundation.prototype.validatedIndex = function (index) {
+        var menuSize = this.adapter.getMenuItemCount();
+        var isIndexInRange = index >= 0 && index < menuSize;
+        if (!isIndexInRange) {
+            throw new Error('MDCMenuFoundation: No list item at specified index.');
+        }
+    };
+    return MDCMenuFoundation;
+}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_4__.MDCFoundation));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDCMenuFoundation);
 //# sourceMappingURL=foundation.js.map
 
 /***/ }),
@@ -2600,6 +5883,1631 @@ function getNormalizedEventCoords(evt, pageOffset, clientRect) {
     return { x: normalizedX, y: normalizedY };
 }
 //# sourceMappingURL=util.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/select/component.js":
+/*!****************************************************!*\
+  !*** ./node_modules/@material/select/component.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCSelect": () => (/* binding */ MDCSelect)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
+/* harmony import */ var _material_floating_label_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/floating-label/component */ "./node_modules/@material/floating-label/component.js");
+/* harmony import */ var _material_line_ripple_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/line-ripple/component */ "./node_modules/@material/line-ripple/component.js");
+/* harmony import */ var _material_menu_surface_constants__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material/menu-surface/constants */ "./node_modules/@material/menu-surface/constants.js");
+/* harmony import */ var _material_menu_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/menu/component */ "./node_modules/@material/menu/component.js");
+/* harmony import */ var _material_menu_constants__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material/menu/constants */ "./node_modules/@material/menu/constants.js");
+/* harmony import */ var _material_notched_outline_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/notched-outline/component */ "./node_modules/@material/notched-outline/component.js");
+/* harmony import */ var _material_ripple_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material/ripple/component */ "./node_modules/@material/ripple/component.js");
+/* harmony import */ var _material_ripple_foundation__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material/ripple/foundation */ "./node_modules/@material/ripple/foundation.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/select/constants.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/select/foundation.js");
+/* harmony import */ var _helper_text_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helper-text/component */ "./node_modules/@material/select/helper-text/component.js");
+/* harmony import */ var _icon_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./icon/component */ "./node_modules/@material/select/icon/component.js");
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var MDCSelect = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCSelect, _super);
+    function MDCSelect() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCSelect.attachTo = function (root) {
+        return new MDCSelect(root);
+    };
+    MDCSelect.prototype.initialize = function (labelFactory, lineRippleFactory, outlineFactory, menuFactory, iconFactory, helperTextFactory) {
+        if (labelFactory === void 0) { labelFactory = function (el) { return new _material_floating_label_component__WEBPACK_IMPORTED_MODULE_1__.MDCFloatingLabel(el); }; }
+        if (lineRippleFactory === void 0) { lineRippleFactory = function (el) { return new _material_line_ripple_component__WEBPACK_IMPORTED_MODULE_2__.MDCLineRipple(el); }; }
+        if (outlineFactory === void 0) { outlineFactory = function (el) { return new _material_notched_outline_component__WEBPACK_IMPORTED_MODULE_3__.MDCNotchedOutline(el); }; }
+        if (menuFactory === void 0) { menuFactory = function (el) { return new _material_menu_component__WEBPACK_IMPORTED_MODULE_4__.MDCMenu(el); }; }
+        if (iconFactory === void 0) { iconFactory = function (el) { return new _icon_component__WEBPACK_IMPORTED_MODULE_5__.MDCSelectIcon(el); }; }
+        if (helperTextFactory === void 0) { helperTextFactory = function (el) { return new _helper_text_component__WEBPACK_IMPORTED_MODULE_6__.MDCSelectHelperText(el); }; }
+        this.selectAnchor =
+            this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.SELECT_ANCHOR_SELECTOR);
+        this.selectedText =
+            this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.SELECTED_TEXT_SELECTOR);
+        this.hiddenInput = this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.HIDDEN_INPUT_SELECTOR);
+        if (!this.selectedText) {
+            throw new Error('MDCSelect: Missing required element: The following selector must be present: ' +
+                ("'" + _constants__WEBPACK_IMPORTED_MODULE_7__.strings.SELECTED_TEXT_SELECTOR + "'"));
+        }
+        if (this.selectAnchor.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.ARIA_CONTROLS)) {
+            var helperTextElement = document.getElementById(this.selectAnchor.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.ARIA_CONTROLS));
+            if (helperTextElement) {
+                this.helperText = helperTextFactory(helperTextElement);
+            }
+        }
+        this.menuSetup(menuFactory);
+        var labelElement = this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.LABEL_SELECTOR);
+        this.label = labelElement ? labelFactory(labelElement) : null;
+        var lineRippleElement = this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.LINE_RIPPLE_SELECTOR);
+        this.lineRipple =
+            lineRippleElement ? lineRippleFactory(lineRippleElement) : null;
+        var outlineElement = this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.OUTLINE_SELECTOR);
+        this.outline = outlineElement ? outlineFactory(outlineElement) : null;
+        var leadingIcon = this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.LEADING_ICON_SELECTOR);
+        if (leadingIcon) {
+            this.leadingIcon = iconFactory(leadingIcon);
+        }
+        if (!this.root.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_7__.cssClasses.OUTLINED)) {
+            this.ripple = this.createRipple();
+        }
+    };
+    /**
+     * Initializes the select's event listeners and internal state based
+     * on the environment's state.
+     */
+    MDCSelect.prototype.initialSyncWithDOM = function () {
+        var _this = this;
+        this.handleFocus = function () {
+            _this.foundation.handleFocus();
+        };
+        this.handleBlur = function () {
+            _this.foundation.handleBlur();
+        };
+        this.handleClick = function (evt) {
+            _this.selectAnchor.focus();
+            _this.foundation.handleClick(_this.getNormalizedXCoordinate(evt));
+        };
+        this.handleKeydown = function (evt) {
+            _this.foundation.handleKeydown(evt);
+        };
+        this.handleMenuItemAction = function (evt) {
+            _this.foundation.handleMenuItemAction(evt.detail.index);
+        };
+        this.handleMenuOpened = function () {
+            _this.foundation.handleMenuOpened();
+        };
+        this.handleMenuClosed = function () {
+            _this.foundation.handleMenuClosed();
+        };
+        this.handleMenuClosing = function () {
+            _this.foundation.handleMenuClosing();
+        };
+        this.selectAnchor.addEventListener('focus', this.handleFocus);
+        this.selectAnchor.addEventListener('blur', this.handleBlur);
+        this.selectAnchor.addEventListener('click', this.handleClick);
+        this.selectAnchor.addEventListener('keydown', this.handleKeydown);
+        this.menu.listen(_material_menu_surface_constants__WEBPACK_IMPORTED_MODULE_8__.strings.CLOSED_EVENT, this.handleMenuClosed);
+        this.menu.listen(_material_menu_surface_constants__WEBPACK_IMPORTED_MODULE_8__.strings.CLOSING_EVENT, this.handleMenuClosing);
+        this.menu.listen(_material_menu_surface_constants__WEBPACK_IMPORTED_MODULE_8__.strings.OPENED_EVENT, this.handleMenuOpened);
+        this.menu.listen(_material_menu_constants__WEBPACK_IMPORTED_MODULE_9__.strings.SELECTED_EVENT, this.handleMenuItemAction);
+        if (this.hiddenInput) {
+            if (this.hiddenInput.value) {
+                // If the hidden input already has a value, use it to restore the
+                // select's value. This can happen e.g. if the user goes back or (in
+                // some browsers) refreshes the page.
+                this.foundation.setValue(this.hiddenInput.value, /** skipNotify */ true);
+                this.foundation.layout();
+                return;
+            }
+            this.hiddenInput.value = this.value;
+        }
+    };
+    MDCSelect.prototype.destroy = function () {
+        this.selectAnchor.removeEventListener('focus', this.handleFocus);
+        this.selectAnchor.removeEventListener('blur', this.handleBlur);
+        this.selectAnchor.removeEventListener('keydown', this.handleKeydown);
+        this.selectAnchor.removeEventListener('click', this.handleClick);
+        this.menu.unlisten(_material_menu_surface_constants__WEBPACK_IMPORTED_MODULE_8__.strings.CLOSED_EVENT, this.handleMenuClosed);
+        this.menu.unlisten(_material_menu_surface_constants__WEBPACK_IMPORTED_MODULE_8__.strings.OPENED_EVENT, this.handleMenuOpened);
+        this.menu.unlisten(_material_menu_constants__WEBPACK_IMPORTED_MODULE_9__.strings.SELECTED_EVENT, this.handleMenuItemAction);
+        this.menu.destroy();
+        if (this.ripple) {
+            this.ripple.destroy();
+        }
+        if (this.outline) {
+            this.outline.destroy();
+        }
+        if (this.leadingIcon) {
+            this.leadingIcon.destroy();
+        }
+        if (this.helperText) {
+            this.helperText.destroy();
+        }
+        _super.prototype.destroy.call(this);
+    };
+    Object.defineProperty(MDCSelect.prototype, "value", {
+        get: function () {
+            return this.foundation.getValue();
+        },
+        set: function (value) {
+            this.foundation.setValue(value);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCSelect.prototype.setValue = function (value, skipNotify) {
+        if (skipNotify === void 0) { skipNotify = false; }
+        this.foundation.setValue(value, skipNotify);
+    };
+    Object.defineProperty(MDCSelect.prototype, "selectedIndex", {
+        get: function () {
+            return this.foundation.getSelectedIndex();
+        },
+        set: function (selectedIndex) {
+            this.foundation.setSelectedIndex(selectedIndex, /* closeMenu */ true);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCSelect.prototype.setSelectedIndex = function (selectedIndex, skipNotify) {
+        if (skipNotify === void 0) { skipNotify = false; }
+        this.foundation.setSelectedIndex(selectedIndex, /* closeMenu */ true, skipNotify);
+    };
+    Object.defineProperty(MDCSelect.prototype, "disabled", {
+        get: function () {
+            return this.foundation.getDisabled();
+        },
+        set: function (disabled) {
+            this.foundation.setDisabled(disabled);
+            if (this.hiddenInput) {
+                this.hiddenInput.disabled = disabled;
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelect.prototype, "leadingIconAriaLabel", {
+        set: function (label) {
+            this.foundation.setLeadingIconAriaLabel(label);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelect.prototype, "leadingIconContent", {
+        /**
+         * Sets the text content of the leading icon.
+         */
+        set: function (content) {
+            this.foundation.setLeadingIconContent(content);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelect.prototype, "helperTextContent", {
+        /**
+         * Sets the text content of the helper text.
+         */
+        set: function (content) {
+            this.foundation.setHelperTextContent(content);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelect.prototype, "useDefaultValidation", {
+        /**
+         * Enables or disables the default validation scheme where a required select
+         * must be non-empty. Set to false for custom validation.
+         * @param useDefaultValidation Set this to false to ignore default
+         *     validation scheme.
+         */
+        set: function (useDefaultValidation) {
+            this.foundation.setUseDefaultValidation(useDefaultValidation);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelect.prototype, "valid", {
+        /**
+         * Checks if the select is in a valid state.
+         */
+        get: function () {
+            return this.foundation.isValid();
+        },
+        /**
+         * Sets the current invalid state of the select.
+         */
+        set: function (isValid) {
+            this.foundation.setValid(isValid);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelect.prototype, "required", {
+        /**
+         * Returns whether the select is required.
+         */
+        get: function () {
+            return this.foundation.getRequired();
+        },
+        /**
+         * Sets the control to the required state.
+         */
+        set: function (isRequired) {
+            this.foundation.setRequired(isRequired);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /**
+     * Re-calculates if the notched outline should be notched and if the label
+     * should float.
+     */
+    MDCSelect.prototype.layout = function () {
+        this.foundation.layout();
+    };
+    /**
+     * Synchronizes the list of options with the state of the foundation. Call
+     * this whenever menu options are dynamically updated.
+     */
+    MDCSelect.prototype.layoutOptions = function () {
+        this.foundation.layoutOptions();
+        this.menu.layout();
+        // Update cached menuItemValues for adapter.
+        this.menuItemValues =
+            this.menu.items.map(function (el) { return el.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.VALUE_ATTR) || ''; });
+        if (this.hiddenInput) {
+            this.hiddenInput.value = this.value;
+        }
+    };
+    MDCSelect.prototype.getDefaultFoundation = function () {
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        var adapter = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, this.getSelectAdapterMethods()), this.getCommonAdapterMethods()), this.getOutlineAdapterMethods()), this.getLabelAdapterMethods());
+        return new _foundation__WEBPACK_IMPORTED_MODULE_10__.MDCSelectFoundation(adapter, this.getFoundationMap());
+    };
+    /**
+     * Handles setup for the menu.
+     */
+    MDCSelect.prototype.menuSetup = function (menuFactory) {
+        this.menuElement = this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.MENU_SELECTOR);
+        this.menu = menuFactory(this.menuElement);
+        this.menu.hasTypeahead = true;
+        this.menu.singleSelection = true;
+        this.menuItemValues =
+            this.menu.items.map(function (el) { return el.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.VALUE_ATTR) || ''; });
+    };
+    MDCSelect.prototype.createRipple = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, _material_ripple_component__WEBPACK_IMPORTED_MODULE_11__.MDCRipple.createAdapter({ root: this.selectAnchor })), { registerInteractionHandler: function (evtType, handler) {
+                _this.selectAnchor.addEventListener(evtType, handler);
+            }, deregisterInteractionHandler: function (evtType, handler) {
+                _this.selectAnchor.removeEventListener(evtType, handler);
+            } });
+        // tslint:enable:object-literal-sort-keys
+        return new _material_ripple_component__WEBPACK_IMPORTED_MODULE_11__.MDCRipple(this.selectAnchor, new _material_ripple_foundation__WEBPACK_IMPORTED_MODULE_12__.MDCRippleFoundation(adapter));
+    };
+    MDCSelect.prototype.getSelectAdapterMethods = function () {
+        var _this = this;
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        return {
+            getMenuItemAttr: function (menuItem, attr) {
+                return menuItem.getAttribute(attr);
+            },
+            setSelectedText: function (text) {
+                _this.selectedText.textContent = text;
+            },
+            isSelectAnchorFocused: function () { return document.activeElement === _this.selectAnchor; },
+            getSelectAnchorAttr: function (attr) {
+                return _this.selectAnchor.getAttribute(attr);
+            },
+            setSelectAnchorAttr: function (attr, value) {
+                _this.selectAnchor.setAttribute(attr, value);
+            },
+            removeSelectAnchorAttr: function (attr) {
+                _this.selectAnchor.removeAttribute(attr);
+            },
+            addMenuClass: function (className) {
+                _this.menuElement.classList.add(className);
+            },
+            removeMenuClass: function (className) {
+                _this.menuElement.classList.remove(className);
+            },
+            openMenu: function () {
+                _this.menu.open = true;
+            },
+            closeMenu: function () {
+                _this.menu.open = false;
+            },
+            getAnchorElement: function () {
+                return _this.root.querySelector(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.SELECT_ANCHOR_SELECTOR);
+            },
+            setMenuAnchorElement: function (anchorEl) {
+                _this.menu.setAnchorElement(anchorEl);
+            },
+            setMenuAnchorCorner: function (anchorCorner) {
+                _this.menu.setAnchorCorner(anchorCorner);
+            },
+            setMenuWrapFocus: function (wrapFocus) {
+                _this.menu.wrapFocus = wrapFocus;
+            },
+            getSelectedIndex: function () {
+                var index = _this.menu.selectedIndex;
+                return index instanceof Array ? index[0] : index;
+            },
+            setSelectedIndex: function (index) {
+                _this.menu.selectedIndex = index;
+            },
+            focusMenuItemAtIndex: function (index) {
+                _this.menu.items[index].focus();
+            },
+            getMenuItemCount: function () { return _this.menu.items.length; },
+            // Cache menu item values. layoutOptions() updates this cache.
+            getMenuItemValues: function () { return _this.menuItemValues; },
+            getMenuItemTextAtIndex: function (index) {
+                return _this.menu.getPrimaryTextAtIndex(index);
+            },
+            isTypeaheadInProgress: function () { return _this.menu.typeaheadInProgress; },
+            typeaheadMatchItem: function (nextChar, startingIndex) {
+                return _this.menu.typeaheadMatchItem(nextChar, startingIndex);
+            },
+        };
+        // tslint:enable:object-literal-sort-keys
+    };
+    MDCSelect.prototype.getCommonAdapterMethods = function () {
+        var _this = this;
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        return {
+            addClass: function (className) {
+                _this.root.classList.add(className);
+            },
+            removeClass: function (className) {
+                _this.root.classList.remove(className);
+            },
+            hasClass: function (className) { return _this.root.classList.contains(className); },
+            setRippleCenter: function (normalizedX) {
+                _this.lineRipple && _this.lineRipple.setRippleCenter(normalizedX);
+            },
+            activateBottomLine: function () {
+                _this.lineRipple && _this.lineRipple.activate();
+            },
+            deactivateBottomLine: function () {
+                _this.lineRipple && _this.lineRipple.deactivate();
+            },
+            notifyChange: function (value) {
+                if (_this.hiddenInput) {
+                    _this.hiddenInput.value = value;
+                }
+                var index = _this.selectedIndex;
+                _this.emit(_constants__WEBPACK_IMPORTED_MODULE_7__.strings.CHANGE_EVENT, { value: value, index: index }, true /* shouldBubble  */);
+            },
+        };
+        // tslint:enable:object-literal-sort-keys
+    };
+    MDCSelect.prototype.getOutlineAdapterMethods = function () {
+        var _this = this;
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        return {
+            hasOutline: function () { return Boolean(_this.outline); },
+            notchOutline: function (labelWidth) {
+                _this.outline && _this.outline.notch(labelWidth);
+            },
+            closeOutline: function () {
+                _this.outline && _this.outline.closeNotch();
+            },
+        };
+        // tslint:enable:object-literal-sort-keys
+    };
+    MDCSelect.prototype.getLabelAdapterMethods = function () {
+        var _this = this;
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        return {
+            hasLabel: function () { return !!_this.label; },
+            floatLabel: function (shouldFloat) {
+                _this.label && _this.label.float(shouldFloat);
+            },
+            getLabelWidth: function () { return _this.label ? _this.label.getWidth() : 0; },
+            setLabelRequired: function (isRequired) {
+                _this.label && _this.label.setRequired(isRequired);
+            },
+        };
+        // tslint:enable:object-literal-sort-keys
+    };
+    /**
+     * Calculates where the line ripple should start based on the x coordinate within the component.
+     */
+    MDCSelect.prototype.getNormalizedXCoordinate = function (evt) {
+        var targetClientRect = evt.target.getBoundingClientRect();
+        var xCoordinate = this.isTouchEvent(evt) ? evt.touches[0].clientX : evt.clientX;
+        return xCoordinate - targetClientRect.left;
+    };
+    MDCSelect.prototype.isTouchEvent = function (evt) {
+        return Boolean(evt.touches);
+    };
+    /**
+     * Returns a map of all subcomponents to subfoundations.
+     */
+    MDCSelect.prototype.getFoundationMap = function () {
+        return {
+            helperText: this.helperText ? this.helperText.foundationForSelect :
+                undefined,
+            leadingIcon: this.leadingIcon ? this.leadingIcon.foundationForSelect :
+                undefined,
+        };
+    };
+    return MDCSelect;
+}(_material_base_component__WEBPACK_IMPORTED_MODULE_13__.MDCComponent));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/select/constants.js":
+/*!****************************************************!*\
+  !*** ./node_modules/@material/select/constants.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
+/* harmony export */   "strings": () => (/* binding */ strings),
+/* harmony export */   "numbers": () => (/* binding */ numbers)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    ACTIVATED: 'mdc-select--activated',
+    DISABLED: 'mdc-select--disabled',
+    FOCUSED: 'mdc-select--focused',
+    INVALID: 'mdc-select--invalid',
+    MENU_INVALID: 'mdc-select__menu--invalid',
+    OUTLINED: 'mdc-select--outlined',
+    REQUIRED: 'mdc-select--required',
+    ROOT: 'mdc-select',
+    WITH_LEADING_ICON: 'mdc-select--with-leading-icon',
+};
+var strings = {
+    ARIA_CONTROLS: 'aria-controls',
+    ARIA_DESCRIBEDBY: 'aria-describedby',
+    ARIA_SELECTED_ATTR: 'aria-selected',
+    CHANGE_EVENT: 'MDCSelect:change',
+    HIDDEN_INPUT_SELECTOR: 'input[type="hidden"]',
+    LABEL_SELECTOR: '.mdc-floating-label',
+    LEADING_ICON_SELECTOR: '.mdc-select__icon',
+    LINE_RIPPLE_SELECTOR: '.mdc-line-ripple',
+    MENU_SELECTOR: '.mdc-select__menu',
+    OUTLINE_SELECTOR: '.mdc-notched-outline',
+    SELECTED_TEXT_SELECTOR: '.mdc-select__selected-text',
+    SELECT_ANCHOR_SELECTOR: '.mdc-select__anchor',
+    VALUE_ATTR: 'data-value',
+};
+var numbers = {
+    LABEL_SCALE: 0.75,
+    UNSET_INDEX: -1,
+    CLICK_DEBOUNCE_TIMEOUT_MS: 330,
+};
+
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/select/foundation.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@material/select/foundation.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCSelectFoundation": () => (/* binding */ MDCSelectFoundation),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
+/* harmony import */ var _material_dom_keyboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/dom/keyboard */ "./node_modules/@material/dom/keyboard.js");
+/* harmony import */ var _material_menu_surface_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/menu-surface/constants */ "./node_modules/@material/menu-surface/constants.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/select/constants.js");
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+var MDCSelectFoundation = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCSelectFoundation, _super);
+    /* istanbul ignore next: optional argument is not a branch statement */
+    /**
+     * @param adapter
+     * @param foundationMap Map from subcomponent names to their subfoundations.
+     */
+    function MDCSelectFoundation(adapter, foundationMap) {
+        if (foundationMap === void 0) { foundationMap = {}; }
+        var _this = _super.call(this, (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MDCSelectFoundation.defaultAdapter), adapter)) || this;
+        // Disabled state
+        _this.disabled = false;
+        // isMenuOpen is used to track the state of the menu by listening to the
+        // MDCMenuSurface:closed event For reference, menu.open will return false if
+        // the menu is still closing, but isMenuOpen returns false only after the menu
+        // has closed
+        _this.isMenuOpen = false;
+        // By default, select is invalid if it is required but no value is selected.
+        _this.useDefaultValidation = true;
+        _this.customValidity = true;
+        _this.lastSelectedIndex = _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX;
+        _this.clickDebounceTimeout = 0;
+        _this.recentlyClicked = false;
+        _this.leadingIcon = foundationMap.leadingIcon;
+        _this.helperText = foundationMap.helperText;
+        return _this;
+    }
+    Object.defineProperty(MDCSelectFoundation, "cssClasses", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelectFoundation, "numbers", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.numbers;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelectFoundation, "strings", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelectFoundation, "defaultAdapter", {
+        /**
+         * See {@link MDCSelectAdapter} for typing information on parameters and return types.
+         */
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function () { return undefined; },
+                removeClass: function () { return undefined; },
+                hasClass: function () { return false; },
+                activateBottomLine: function () { return undefined; },
+                deactivateBottomLine: function () { return undefined; },
+                getSelectedIndex: function () { return -1; },
+                setSelectedIndex: function () { return undefined; },
+                hasLabel: function () { return false; },
+                floatLabel: function () { return undefined; },
+                getLabelWidth: function () { return 0; },
+                setLabelRequired: function () { return undefined; },
+                hasOutline: function () { return false; },
+                notchOutline: function () { return undefined; },
+                closeOutline: function () { return undefined; },
+                setRippleCenter: function () { return undefined; },
+                notifyChange: function () { return undefined; },
+                setSelectedText: function () { return undefined; },
+                isSelectAnchorFocused: function () { return false; },
+                getSelectAnchorAttr: function () { return ''; },
+                setSelectAnchorAttr: function () { return undefined; },
+                removeSelectAnchorAttr: function () { return undefined; },
+                addMenuClass: function () { return undefined; },
+                removeMenuClass: function () { return undefined; },
+                openMenu: function () { return undefined; },
+                closeMenu: function () { return undefined; },
+                getAnchorElement: function () { return null; },
+                setMenuAnchorElement: function () { return undefined; },
+                setMenuAnchorCorner: function () { return undefined; },
+                setMenuWrapFocus: function () { return undefined; },
+                focusMenuItemAtIndex: function () { return undefined; },
+                getMenuItemCount: function () { return 0; },
+                getMenuItemValues: function () { return []; },
+                getMenuItemTextAtIndex: function () { return ''; },
+                isTypeaheadInProgress: function () { return false; },
+                typeaheadMatchItem: function () { return -1; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /** Returns the index of the currently selected menu item, or -1 if none. */
+    MDCSelectFoundation.prototype.getSelectedIndex = function () {
+        return this.adapter.getSelectedIndex();
+    };
+    MDCSelectFoundation.prototype.setSelectedIndex = function (index, closeMenu, skipNotify) {
+        if (closeMenu === void 0) { closeMenu = false; }
+        if (skipNotify === void 0) { skipNotify = false; }
+        if (index >= this.adapter.getMenuItemCount()) {
+            return;
+        }
+        if (index === _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX) {
+            this.adapter.setSelectedText('');
+        }
+        else {
+            this.adapter.setSelectedText(this.adapter.getMenuItemTextAtIndex(index).trim());
+        }
+        this.adapter.setSelectedIndex(index);
+        if (closeMenu) {
+            this.adapter.closeMenu();
+        }
+        if (!skipNotify && this.lastSelectedIndex !== index) {
+            this.handleChange();
+        }
+        this.lastSelectedIndex = index;
+    };
+    MDCSelectFoundation.prototype.setValue = function (value, skipNotify) {
+        if (skipNotify === void 0) { skipNotify = false; }
+        var index = this.adapter.getMenuItemValues().indexOf(value);
+        this.setSelectedIndex(index, /** closeMenu */ false, skipNotify);
+    };
+    MDCSelectFoundation.prototype.getValue = function () {
+        var index = this.adapter.getSelectedIndex();
+        var menuItemValues = this.adapter.getMenuItemValues();
+        return index !== _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX ? menuItemValues[index] : '';
+    };
+    MDCSelectFoundation.prototype.getDisabled = function () {
+        return this.disabled;
+    };
+    MDCSelectFoundation.prototype.setDisabled = function (isDisabled) {
+        this.disabled = isDisabled;
+        if (this.disabled) {
+            this.adapter.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.DISABLED);
+            this.adapter.closeMenu();
+        }
+        else {
+            this.adapter.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.DISABLED);
+        }
+        if (this.leadingIcon) {
+            this.leadingIcon.setDisabled(this.disabled);
+        }
+        if (this.disabled) {
+            // Prevent click events from focusing select. Simply pointer-events: none
+            // is not enough since screenreader clicks may bypass this.
+            this.adapter.removeSelectAnchorAttr('tabindex');
+        }
+        else {
+            this.adapter.setSelectAnchorAttr('tabindex', '0');
+        }
+        this.adapter.setSelectAnchorAttr('aria-disabled', this.disabled.toString());
+    };
+    /** Opens the menu. */
+    MDCSelectFoundation.prototype.openMenu = function () {
+        this.adapter.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.ACTIVATED);
+        this.adapter.openMenu();
+        this.isMenuOpen = true;
+        this.adapter.setSelectAnchorAttr('aria-expanded', 'true');
+    };
+    /**
+     * @param content Sets the content of the helper text.
+     */
+    MDCSelectFoundation.prototype.setHelperTextContent = function (content) {
+        if (this.helperText) {
+            this.helperText.setContent(content);
+        }
+    };
+    /**
+     * Re-calculates if the notched outline should be notched and if the label
+     * should float.
+     */
+    MDCSelectFoundation.prototype.layout = function () {
+        if (this.adapter.hasLabel()) {
+            var optionHasValue = this.getValue().length > 0;
+            var isFocused = this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.FOCUSED);
+            var shouldFloatAndNotch = optionHasValue || isFocused;
+            var isRequired = this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.REQUIRED);
+            this.notchOutline(shouldFloatAndNotch);
+            this.adapter.floatLabel(shouldFloatAndNotch);
+            this.adapter.setLabelRequired(isRequired);
+        }
+    };
+    /**
+     * Synchronizes the list of options with the state of the foundation. Call
+     * this whenever menu options are dynamically updated.
+     */
+    MDCSelectFoundation.prototype.layoutOptions = function () {
+        var menuItemValues = this.adapter.getMenuItemValues();
+        var selectedIndex = menuItemValues.indexOf(this.getValue());
+        this.setSelectedIndex(selectedIndex, /** closeMenu */ false, /** skipNotify */ true);
+    };
+    MDCSelectFoundation.prototype.handleMenuOpened = function () {
+        if (this.adapter.getMenuItemValues().length === 0) {
+            return;
+        }
+        // Menu should open to the last selected element, should open to first menu item otherwise.
+        var selectedIndex = this.getSelectedIndex();
+        var focusItemIndex = selectedIndex >= 0 ? selectedIndex : 0;
+        this.adapter.focusMenuItemAtIndex(focusItemIndex);
+    };
+    MDCSelectFoundation.prototype.handleMenuClosing = function () {
+        this.adapter.setSelectAnchorAttr('aria-expanded', 'false');
+    };
+    MDCSelectFoundation.prototype.handleMenuClosed = function () {
+        this.adapter.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.ACTIVATED);
+        this.isMenuOpen = false;
+        // Unfocus the select if menu is closed without a selection
+        if (!this.adapter.isSelectAnchorFocused()) {
+            this.blur();
+        }
+    };
+    /**
+     * Handles value changes, via change event or programmatic updates.
+     */
+    MDCSelectFoundation.prototype.handleChange = function () {
+        this.layout();
+        this.adapter.notifyChange(this.getValue());
+        var isRequired = this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.REQUIRED);
+        if (isRequired && this.useDefaultValidation) {
+            this.setValid(this.isValid());
+        }
+    };
+    MDCSelectFoundation.prototype.handleMenuItemAction = function (index) {
+        this.setSelectedIndex(index, /** closeMenu */ true);
+    };
+    /**
+     * Handles focus events from select element.
+     */
+    MDCSelectFoundation.prototype.handleFocus = function () {
+        this.adapter.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.FOCUSED);
+        this.layout();
+        this.adapter.activateBottomLine();
+    };
+    /**
+     * Handles blur events from select element.
+     */
+    MDCSelectFoundation.prototype.handleBlur = function () {
+        if (this.isMenuOpen) {
+            return;
+        }
+        this.blur();
+    };
+    MDCSelectFoundation.prototype.handleClick = function (normalizedX) {
+        if (this.disabled || this.recentlyClicked) {
+            return;
+        }
+        this.setClickDebounceTimeout();
+        if (this.isMenuOpen) {
+            this.adapter.closeMenu();
+            return;
+        }
+        this.adapter.setRippleCenter(normalizedX);
+        this.openMenu();
+    };
+    /**
+     * Handles keydown events on select element. Depending on the type of
+     * character typed, does typeahead matching or opens menu.
+     */
+    MDCSelectFoundation.prototype.handleKeydown = function (event) {
+        if (this.isMenuOpen || !this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.FOCUSED)) {
+            return;
+        }
+        var isEnter = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_2__.normalizeKey)(event) === _material_dom_keyboard__WEBPACK_IMPORTED_MODULE_2__.KEY.ENTER;
+        var isSpace = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_2__.normalizeKey)(event) === _material_dom_keyboard__WEBPACK_IMPORTED_MODULE_2__.KEY.SPACEBAR;
+        var arrowUp = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_2__.normalizeKey)(event) === _material_dom_keyboard__WEBPACK_IMPORTED_MODULE_2__.KEY.ARROW_UP;
+        var arrowDown = (0,_material_dom_keyboard__WEBPACK_IMPORTED_MODULE_2__.normalizeKey)(event) === _material_dom_keyboard__WEBPACK_IMPORTED_MODULE_2__.KEY.ARROW_DOWN;
+        var isModifier = event.ctrlKey || event.metaKey;
+        // Typeahead
+        if (!isModifier &&
+            (!isSpace && event.key && event.key.length === 1 ||
+                isSpace && this.adapter.isTypeaheadInProgress())) {
+            var key = isSpace ? ' ' : event.key;
+            var typeaheadNextIndex = this.adapter.typeaheadMatchItem(key, this.getSelectedIndex());
+            if (typeaheadNextIndex >= 0) {
+                this.setSelectedIndex(typeaheadNextIndex);
+            }
+            event.preventDefault();
+            return;
+        }
+        if (!isEnter && !isSpace && !arrowUp && !arrowDown) {
+            return;
+        }
+        // Increment/decrement index as necessary and open menu.
+        if (arrowUp && this.getSelectedIndex() > 0) {
+            this.setSelectedIndex(this.getSelectedIndex() - 1);
+        }
+        else if (arrowDown &&
+            this.getSelectedIndex() < this.adapter.getMenuItemCount() - 1) {
+            this.setSelectedIndex(this.getSelectedIndex() + 1);
+        }
+        this.openMenu();
+        event.preventDefault();
+    };
+    /**
+     * Opens/closes the notched outline.
+     */
+    MDCSelectFoundation.prototype.notchOutline = function (openNotch) {
+        if (!this.adapter.hasOutline()) {
+            return;
+        }
+        var isFocused = this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.FOCUSED);
+        if (openNotch) {
+            var labelScale = _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.LABEL_SCALE;
+            var labelWidth = this.adapter.getLabelWidth() * labelScale;
+            this.adapter.notchOutline(labelWidth);
+        }
+        else if (!isFocused) {
+            this.adapter.closeOutline();
+        }
+    };
+    /**
+     * Sets the aria label of the leading icon.
+     */
+    MDCSelectFoundation.prototype.setLeadingIconAriaLabel = function (label) {
+        if (this.leadingIcon) {
+            this.leadingIcon.setAriaLabel(label);
+        }
+    };
+    /**
+     * Sets the text content of the leading icon.
+     */
+    MDCSelectFoundation.prototype.setLeadingIconContent = function (content) {
+        if (this.leadingIcon) {
+            this.leadingIcon.setContent(content);
+        }
+    };
+    MDCSelectFoundation.prototype.getUseDefaultValidation = function () {
+        return this.useDefaultValidation;
+    };
+    MDCSelectFoundation.prototype.setUseDefaultValidation = function (useDefaultValidation) {
+        this.useDefaultValidation = useDefaultValidation;
+    };
+    MDCSelectFoundation.prototype.setValid = function (isValid) {
+        if (!this.useDefaultValidation) {
+            this.customValidity = isValid;
+        }
+        this.adapter.setSelectAnchorAttr('aria-invalid', (!isValid).toString());
+        if (isValid) {
+            this.adapter.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.INVALID);
+            this.adapter.removeMenuClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.MENU_INVALID);
+        }
+        else {
+            this.adapter.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.INVALID);
+            this.adapter.addMenuClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.MENU_INVALID);
+        }
+        this.syncHelperTextValidity(isValid);
+    };
+    MDCSelectFoundation.prototype.isValid = function () {
+        if (this.useDefaultValidation &&
+            this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.REQUIRED) &&
+            !this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.DISABLED)) {
+            // See notes for required attribute under https://www.w3.org/TR/html52/sec-forms.html#the-select-element
+            // TL;DR: Invalid if no index is selected, or if the first index is selected and has an empty value.
+            return this.getSelectedIndex() !== _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.UNSET_INDEX &&
+                (this.getSelectedIndex() !== 0 || Boolean(this.getValue()));
+        }
+        return this.customValidity;
+    };
+    MDCSelectFoundation.prototype.setRequired = function (isRequired) {
+        if (isRequired) {
+            this.adapter.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.REQUIRED);
+        }
+        else {
+            this.adapter.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.REQUIRED);
+        }
+        this.adapter.setSelectAnchorAttr('aria-required', isRequired.toString());
+        this.adapter.setLabelRequired(isRequired);
+    };
+    MDCSelectFoundation.prototype.getRequired = function () {
+        return this.adapter.getSelectAnchorAttr('aria-required') === 'true';
+    };
+    MDCSelectFoundation.prototype.init = function () {
+        var anchorEl = this.adapter.getAnchorElement();
+        if (anchorEl) {
+            this.adapter.setMenuAnchorElement(anchorEl);
+            this.adapter.setMenuAnchorCorner(_material_menu_surface_constants__WEBPACK_IMPORTED_MODULE_3__.Corner.BOTTOM_START);
+        }
+        this.adapter.setMenuWrapFocus(false);
+        this.setDisabled(this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.DISABLED));
+        this.syncHelperTextValidity(!this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.INVALID));
+        this.layout();
+        this.layoutOptions();
+    };
+    /**
+     * Unfocuses the select component.
+     */
+    MDCSelectFoundation.prototype.blur = function () {
+        this.adapter.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.FOCUSED);
+        this.layout();
+        this.adapter.deactivateBottomLine();
+        var isRequired = this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.REQUIRED);
+        if (isRequired && this.useDefaultValidation) {
+            this.setValid(this.isValid());
+        }
+    };
+    MDCSelectFoundation.prototype.syncHelperTextValidity = function (isValid) {
+        if (!this.helperText) {
+            return;
+        }
+        this.helperText.setValidity(isValid);
+        var helperTextVisible = this.helperText.isVisible();
+        var helperTextId = this.helperText.getId();
+        if (helperTextVisible && helperTextId) {
+            this.adapter.setSelectAnchorAttr(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_DESCRIBEDBY, helperTextId);
+        }
+        else {
+            // Needed because screenreaders will read labels pointed to by
+            // `aria-describedby` even if they are `aria-hidden`.
+            this.adapter.removeSelectAnchorAttr(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_DESCRIBEDBY);
+        }
+    };
+    MDCSelectFoundation.prototype.setClickDebounceTimeout = function () {
+        var _this = this;
+        clearTimeout(this.clickDebounceTimeout);
+        this.clickDebounceTimeout = setTimeout(function () {
+            _this.recentlyClicked = false;
+        }, _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.CLICK_DEBOUNCE_TIMEOUT_MS);
+        this.recentlyClicked = true;
+    };
+    return MDCSelectFoundation;
+}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_4__.MDCFoundation));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDCSelectFoundation);
+//# sourceMappingURL=foundation.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/select/helper-text/component.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@material/select/helper-text/component.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCSelectHelperText": () => (/* binding */ MDCSelectHelperText)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/select/helper-text/foundation.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var MDCSelectHelperText = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCSelectHelperText, _super);
+    function MDCSelectHelperText() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCSelectHelperText.attachTo = function (root) {
+        return new MDCSelectHelperText(root);
+    };
+    Object.defineProperty(MDCSelectHelperText.prototype, "foundationForSelect", {
+        // Provided for access by MDCSelect component
+        get: function () {
+            return this.foundation;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCSelectHelperText.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            addClass: function (className) { return _this.root.classList.add(className); },
+            removeClass: function (className) { return _this.root.classList.remove(className); },
+            hasClass: function (className) { return _this.root.classList.contains(className); },
+            getAttr: function (attr) { return _this.root.getAttribute(attr); },
+            setAttr: function (attr, value) { return _this.root.setAttribute(attr, value); },
+            removeAttr: function (attr) { return _this.root.removeAttribute(attr); },
+            setContent: function (content) {
+                _this.root.textContent = content;
+            },
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new _foundation__WEBPACK_IMPORTED_MODULE_1__.MDCSelectHelperTextFoundation(adapter);
+    };
+    return MDCSelectHelperText;
+}(_material_base_component__WEBPACK_IMPORTED_MODULE_2__.MDCComponent));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/select/helper-text/constants.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@material/select/helper-text/constants.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "strings": () => (/* binding */ strings),
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var strings = {
+    ARIA_HIDDEN: 'aria-hidden',
+    ROLE: 'role',
+};
+var cssClasses = {
+    HELPER_TEXT_VALIDATION_MSG: 'mdc-select-helper-text--validation-msg',
+    HELPER_TEXT_VALIDATION_MSG_PERSISTENT: 'mdc-select-helper-text--validation-msg-persistent',
+};
+
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/select/helper-text/foundation.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@material/select/helper-text/foundation.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCSelectHelperTextFoundation": () => (/* binding */ MDCSelectHelperTextFoundation),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/select/helper-text/constants.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var MDCSelectHelperTextFoundation = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCSelectHelperTextFoundation, _super);
+    function MDCSelectHelperTextFoundation(adapter) {
+        return _super.call(this, (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MDCSelectHelperTextFoundation.defaultAdapter), adapter)) || this;
+    }
+    Object.defineProperty(MDCSelectHelperTextFoundation, "cssClasses", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelectHelperTextFoundation, "strings", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelectHelperTextFoundation, "defaultAdapter", {
+        /**
+         * See {@link MDCSelectHelperTextAdapter} for typing information on parameters and return types.
+         */
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function () { return undefined; },
+                removeClass: function () { return undefined; },
+                hasClass: function () { return false; },
+                setAttr: function () { return undefined; },
+                getAttr: function () { return null; },
+                removeAttr: function () { return undefined; },
+                setContent: function () { return undefined; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /**
+     * @return The ID of the helper text, or null if none is set.
+     */
+    MDCSelectHelperTextFoundation.prototype.getId = function () {
+        return this.adapter.getAttr('id');
+    };
+    /**
+     * @return Whether the helper text is currently visible.
+     */
+    MDCSelectHelperTextFoundation.prototype.isVisible = function () {
+        return this.adapter.getAttr(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_HIDDEN) !== 'true';
+    };
+    /**
+     * Sets the content of the helper text field.
+     */
+    MDCSelectHelperTextFoundation.prototype.setContent = function (content) {
+        this.adapter.setContent(content);
+    };
+    /**
+     * Sets the helper text to act as a validation message.
+     * By default, validation messages are hidden when the select is valid and
+     * visible when the select is invalid.
+     *
+     * @param isValidation True to make the helper text act as an error validation
+     *     message.
+     */
+    MDCSelectHelperTextFoundation.prototype.setValidation = function (isValidation) {
+        if (isValidation) {
+            this.adapter.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.HELPER_TEXT_VALIDATION_MSG);
+        }
+        else {
+            this.adapter.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.HELPER_TEXT_VALIDATION_MSG);
+        }
+    };
+    /**
+     * Sets the persistency of the validation helper text.
+     * This keeps the validation message visible even if the select is valid,
+     * though it will be displayed in the normal (grey) color.
+     */
+    MDCSelectHelperTextFoundation.prototype.setValidationMsgPersistent = function (isPersistent) {
+        if (isPersistent) {
+            this.adapter.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.HELPER_TEXT_VALIDATION_MSG_PERSISTENT);
+        }
+        else {
+            this.adapter.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.HELPER_TEXT_VALIDATION_MSG_PERSISTENT);
+        }
+    };
+    /**
+     * When acting as a validation message, shows/hides the helper text and
+     * triggers alerts as necessary based on the select's validity.
+     */
+    MDCSelectHelperTextFoundation.prototype.setValidity = function (selectIsValid) {
+        var isValidationMsg = this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.HELPER_TEXT_VALIDATION_MSG);
+        if (!isValidationMsg) {
+            // Non-validating helper-text is always displayed and does not participate
+            // in validation logic.
+            return;
+        }
+        var isPersistentValidationMsg = this.adapter.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.HELPER_TEXT_VALIDATION_MSG_PERSISTENT);
+        // Validating helper text is displayed if select is invalid, unless it is
+        // set as persistent, in which case it always displays.
+        var msgShouldDisplay = !selectIsValid || isPersistentValidationMsg;
+        if (msgShouldDisplay) {
+            this.showToScreenReader();
+            // In addition to displaying, also trigger an alert if the select
+            // has become invalid.
+            if (!selectIsValid) {
+                this.adapter.setAttr(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ROLE, 'alert');
+            }
+            else {
+                this.adapter.removeAttr(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ROLE);
+            }
+            return;
+        }
+        // Hide everything.
+        this.adapter.removeAttr(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ROLE);
+        this.hide();
+    };
+    /**
+     * Makes the helper text visible to screen readers.
+     */
+    MDCSelectHelperTextFoundation.prototype.showToScreenReader = function () {
+        this.adapter.removeAttr(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_HIDDEN);
+    };
+    /**
+     * Hides the help text from screen readers.
+     */
+    MDCSelectHelperTextFoundation.prototype.hide = function () {
+        this.adapter.setAttr(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_HIDDEN, 'true');
+    };
+    return MDCSelectHelperTextFoundation;
+}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_2__.MDCFoundation));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDCSelectHelperTextFoundation);
+//# sourceMappingURL=foundation.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/select/icon/component.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@material/select/icon/component.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCSelectIcon": () => (/* binding */ MDCSelectIcon)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/select/icon/foundation.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var MDCSelectIcon = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCSelectIcon, _super);
+    function MDCSelectIcon() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCSelectIcon.attachTo = function (root) {
+        return new MDCSelectIcon(root);
+    };
+    Object.defineProperty(MDCSelectIcon.prototype, "foundationForSelect", {
+        // Provided for access by MDCSelect component
+        get: function () {
+            return this.foundation;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCSelectIcon.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            getAttr: function (attr) { return _this.root.getAttribute(attr); },
+            setAttr: function (attr, value) { return _this.root.setAttribute(attr, value); },
+            removeAttr: function (attr) { return _this.root.removeAttribute(attr); },
+            setContent: function (content) {
+                _this.root.textContent = content;
+            },
+            registerInteractionHandler: function (evtType, handler) {
+                return _this.listen(evtType, handler);
+            },
+            deregisterInteractionHandler: function (evtType, handler) {
+                return _this.unlisten(evtType, handler);
+            },
+            notifyIconAction: function () { return _this.emit(_foundation__WEBPACK_IMPORTED_MODULE_1__.MDCSelectIconFoundation.strings.ICON_EVENT, {} /* evtData */, true /* shouldBubble */); },
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new _foundation__WEBPACK_IMPORTED_MODULE_1__.MDCSelectIconFoundation(adapter);
+    };
+    return MDCSelectIcon;
+}(_material_base_component__WEBPACK_IMPORTED_MODULE_2__.MDCComponent));
+
+//# sourceMappingURL=component.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/select/icon/constants.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@material/select/icon/constants.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "strings": () => (/* binding */ strings)
+/* harmony export */ });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var strings = {
+    ICON_EVENT: 'MDCSelect:icon',
+    ICON_ROLE: 'button',
+};
+
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@material/select/icon/foundation.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@material/select/icon/foundation.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MDCSelectIconFoundation": () => (/* binding */ MDCSelectIconFoundation),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/select/icon/constants.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var INTERACTION_EVENTS = ['click', 'keydown'];
+var MDCSelectIconFoundation = /** @class */ (function (_super) {
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCSelectIconFoundation, _super);
+    function MDCSelectIconFoundation(adapter) {
+        var _this = _super.call(this, (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MDCSelectIconFoundation.defaultAdapter), adapter)) || this;
+        _this.savedTabIndex = null;
+        _this.interactionHandler = function (evt) {
+            _this.handleInteraction(evt);
+        };
+        return _this;
+    }
+    Object.defineProperty(MDCSelectIconFoundation, "strings", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_1__.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCSelectIconFoundation, "defaultAdapter", {
+        /**
+         * See {@link MDCSelectIconAdapter} for typing information on parameters and return types.
+         */
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                getAttr: function () { return null; },
+                setAttr: function () { return undefined; },
+                removeAttr: function () { return undefined; },
+                setContent: function () { return undefined; },
+                registerInteractionHandler: function () { return undefined; },
+                deregisterInteractionHandler: function () { return undefined; },
+                notifyIconAction: function () { return undefined; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCSelectIconFoundation.prototype.init = function () {
+        var e_1, _a;
+        this.savedTabIndex = this.adapter.getAttr('tabindex');
+        try {
+            for (var INTERACTION_EVENTS_1 = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__values)(INTERACTION_EVENTS), INTERACTION_EVENTS_1_1 = INTERACTION_EVENTS_1.next(); !INTERACTION_EVENTS_1_1.done; INTERACTION_EVENTS_1_1 = INTERACTION_EVENTS_1.next()) {
+                var evtType = INTERACTION_EVENTS_1_1.value;
+                this.adapter.registerInteractionHandler(evtType, this.interactionHandler);
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (INTERACTION_EVENTS_1_1 && !INTERACTION_EVENTS_1_1.done && (_a = INTERACTION_EVENTS_1.return)) _a.call(INTERACTION_EVENTS_1);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+    };
+    MDCSelectIconFoundation.prototype.destroy = function () {
+        var e_2, _a;
+        try {
+            for (var INTERACTION_EVENTS_2 = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__values)(INTERACTION_EVENTS), INTERACTION_EVENTS_2_1 = INTERACTION_EVENTS_2.next(); !INTERACTION_EVENTS_2_1.done; INTERACTION_EVENTS_2_1 = INTERACTION_EVENTS_2.next()) {
+                var evtType = INTERACTION_EVENTS_2_1.value;
+                this.adapter.deregisterInteractionHandler(evtType, this.interactionHandler);
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (INTERACTION_EVENTS_2_1 && !INTERACTION_EVENTS_2_1.done && (_a = INTERACTION_EVENTS_2.return)) _a.call(INTERACTION_EVENTS_2);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
+    };
+    MDCSelectIconFoundation.prototype.setDisabled = function (disabled) {
+        if (!this.savedTabIndex) {
+            return;
+        }
+        if (disabled) {
+            this.adapter.setAttr('tabindex', '-1');
+            this.adapter.removeAttr('role');
+        }
+        else {
+            this.adapter.setAttr('tabindex', this.savedTabIndex);
+            this.adapter.setAttr('role', _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ICON_ROLE);
+        }
+    };
+    MDCSelectIconFoundation.prototype.setAriaLabel = function (label) {
+        this.adapter.setAttr('aria-label', label);
+    };
+    MDCSelectIconFoundation.prototype.setContent = function (content) {
+        this.adapter.setContent(content);
+    };
+    MDCSelectIconFoundation.prototype.handleInteraction = function (evt) {
+        var isEnterKey = evt.key === 'Enter' || evt.keyCode === 13;
+        if (evt.type === 'click' || isEnterKey) {
+            this.adapter.notifyIconAction();
+        }
+    };
+    return MDCSelectIconFoundation;
+}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_2__.MDCFoundation));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDCSelectIconFoundation);
+//# sourceMappingURL=foundation.js.map
 
 /***/ }),
 
@@ -10156,6 +15064,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/checkbox/component.js");
 /* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/textfield/component.js");
+/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/select/component.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -10398,6 +15354,9 @@ __webpack_require__.r(__webpack_exports__);
     new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
     new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".flex-col-item-Direccion-Up .mdc-text-field"));
     new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".flex-col-item-Antedecendes-Up .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".frame-1-item .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".frame-1-item .mdc-select"));
   }
 });
 
@@ -29453,7 +34412,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nheight: 1080px;\npadding: 0 89px;\nwidth: 1920px;\n}\n.carta-de-llamada-default .container-scrolling::-webkit-scrollbar {\ndisplay: none;\nwidth: 0;\n}\n\n/* .carta-de-llamada-default .container-scrolling {\nalign-items: flex-start;\ndisplay: flex;\nheight: 908px;\nleft: 92px;\nmin-width: 1739px;\noverflow-y: scroll;\npadding: 0 8px;\nposition: fixed;\ntop: 172px;\nz-index: 1;\n} */\n.carta-de-llamada-default .flex-col {\nalign-items: flex-start;\nalign-self: flex-end;\ndisplay: flex;\nflex-direction: column;\nmargin-bottom: -560px;\nmin-height: 1418px;\nwidth: 621px;\n}\n.carta-de-llamada-default .flex-row {\nalign-items: flex-end;\ndisplay: flex;\nheight: 80px;\nmin-width: 402px;\n}\n.carta-de-llamada-default .flex-col-1 {\nalign-items: flex-start;\nalign-self: flex-start;\ndisplay: flex;\nflex-direction: column;\nmin-height: 68px;\nwidth: 218px;\n}\n.carta-de-llamada-default .title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 2px;\nmargin-top: 36px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-default .guardar-datos-checkbox {\nheight: 40px;\nmargin-left: 41px;\nwidth: 40px;\n}\n.carta-de-llamada-default .guardar-datos {\nletter-spacing: 0.15px;\nline-height: 24px;\nmargin-bottom: 8px;\nmin-height: 24px;\nmin-width: 103px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-default .flex-row-1 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 1336px;\nmargin-top: 2px;\nmin-width: 621px;\n}\n.carta-de-llamada-default .flex-col-2 {\nalign-items: flex-start;\ndisplay: flex;\nflex-direction: column;\nmargin-top: 4px;\nmin-height: 794px;\nwidth: 265px;\n}\n.carta-de-llamada-default .telefono {\nheight: 56px;\nmargin-left: 2px;\nwidth: 263px;\n}\n.telefono .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.telefono\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.carta-de-llamada-default .flex-col-item-Direccion-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-default .flex-col-item-Antedecendes-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.flex-col-item-Direccion-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.flex-col-item-Direccion-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.flex-col-item-Antedecendes-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.flex-col-item-Direccion-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.flex-col-item-Antedecendes-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.carta-de-llamada-default .overlap-group {\nalign-items: flex-start;\nalign-self: flex-end;\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237145d42a31b3d71f3385b/img/mapa@1x.png);\nbackground-position: 50% 50%;\nbackground-size: cover;\ndisplay: flex;\nmargin-bottom: 262px;\nmargin-left: 46px;\nmin-width: 1px;\n}\n.carta-de-llamada-default .frame-map {\nheight: 1px;\nwidth: 1px;\n}\n.carta-de-llamada-default .flex-col-3 {\nalign-items: flex-start;\ndisplay: flex;\nflex-direction: column;\nmargin-left: 3px;\nmin-height: 1336px;\nwidth: 306px;\n}\n.carta-de-llamada-default .procedencia-de-la-llamada {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-default .flex-col-item-1 {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-default .tipo-de-localizacin {\nheight: 60px;\nmargin-top: 94px;\nwidth: 263px;\n}\n.carta-de-llamada-default .referencia {\nheight: 145px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-default .mapa-down {\nalign-self: flex-end;\nborder-radius: 32px;\nheight: 36px;\nmargin-top: 746px;\nwidth: 69px;\n}\n.carta-de-llamada-default .flex-row-2 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 922px;\nmargin-left: 7px;\nmargin-top: -177px;\nmin-width: 1092px;\n}\n.carta-de-llamada-default .flex-col-4 {\nalign-items: flex-start;\nalign-self: flex-end;\ndisplay: flex;\nflex-direction: column;\nmin-height: 609px;\nwidth: 313px;\n}\n.carta-de-llamada-default .nota-comun {\nheight: 226px;\nwidth: 263px;\n}\n.carta-de-llamada-default .flex-row-3 {\nalign-items: center;\ndisplay: flex;\nheight: 289px;\nmargin-left: 0.5px;\nmargin-top: 94px;\nmin-width: 313px;\n}\n.carta-de-llamada-default .separation-down {\nheight: 183px;\nmargin-bottom: 48px;\nwidth: 1px;\n}\n.carta-de-llamada-default .flex-col-5 {\nalign-items: center;\ndisplay: flex;\nflex-direction: column;\nmargin-left: 49px;\nmin-height: 289px;\nwidth: 263px;\n}\n.carta-de-llamada-default .incidente {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-default .tipo-de-incidente {\nheight: 60px;\nmargin-top: 24px;\nwidth: 263px;\n}\n.carta-de-llamada-default .mapa-up {\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nmargin-right: 8px;\nmargin-top: 49px;\ntransition: all 0.2s ease-in-out;\nwidth: 69px;\n}\n.carta-de-llamada-default .mapa-up:hover {\ntransform: scale(1.1);\n}\n.carta-de-llamada-default .flex-row-4 {\nalign-items: flex-start;\ndisplay: flex;\nmargin-left: 1px;\nmargin-top: 24px;\nmin-width: 188px;\n}\n.carta-de-llamada-default .aceptar {\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\ntransition: all 0.2s ease-in-out;\nwidth: 83px;\n}\n.carta-de-llamada-default .aceptar:hover {\ntransform: scale(1.1);\n}\n.carta-de-llamada-default .cancelar {\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nmargin-left: 16px;\ntransition: all 0.2s ease-in-out;\nwidth: 89px;\n}\n.carta-de-llamada-default .cancelar:hover {\ntransform: scale(1.1);\n}\n.carta-de-llamada-default .hide-container {\nalign-items: flex-start;\ndisplay: flex;\nflex-direction: column;\nmin-height: 686px;\nwidth: 779px;\n}\n.carta-de-llamada-default .hide-up {\nbackground-color: var(--white);\nheight: 313px;\nwidth: 779px;\n}\n.carta-de-llamada-default .hide-down {\nbackground-color: var(--white);\nheight: 146px;\nmargin-top: 227px;\nwidth: 779px;\n}\n.mdc-checkbox {\nbox-sizing: content-box;\n}\n.guardar-datos-checkbox\n.mdc-checkbox__native-control:enabled:checked\n~ .mdc-checkbox__background,\n.guardar-datos-checkbox\n.mdc-checkbox--selected\n.mdc-checkbox__native-control\n~ .mdc-checkbox__background,\n.guardar-datos-checkbox\n.mdc-checkbox--anim-checked-unchecked\n.mdc-checkbox__native-control\n~ .mdc-checkbox__background {\nbackground-color: #0066ff !important;\nborder-color: #0066ff !important;\n}\n.guardar-datos-checkbox\n.mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n.mdc-checkbox__ripple::before,\n.guardar-datos-checkbox\n.mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n.mdc-checkbox__ripple::after {\nbackground-color: #0066ff !important;\n}\n.mdc-list-item {\nalign-items: center;\ndisplay: flex;\nheight: 48px;\nposition: relative;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    background-color: var(--white);\n    display: flex;\n    height: 1080px;\n    padding: 0 89px;\n    width: 1920px;\n}\n.carta-de-llamada-default .container-scrolling::-webkit-scrollbar {\n    display: none;\n    width: 0;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    height: 908px;\n    left: 92px;\n    min-width: 1739px;\n    overflow-y: scroll;\n    padding: 0 8px;\n    position: fixed;\n    top: 172px;\n    z-index: 1;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    margin-bottom: -560px;\n    min-height: 1418px;\n    width: 621px;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .guardar-datos-checkbox {\n    height: 40px;\n    margin-left: 41px;\n    width: 40px;\n}\n.carta-de-llamada-default .guardar-datos {\n    letter-spacing: 0.15px;\n    line-height: 24px;\n    margin-bottom: 8px;\n    min-height: 24px;\n    min-width: 103px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 1336px;\n    margin-top: 2px;\n    min-width: 621px;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 4px;\n    min-height: 794px;\n    width: 265px;\n}\n.carta-de-llamada-default .telefono {\n    height: 56px;\n    margin-left: 2px;\n    width: 263px;\n}\n.telefono .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.telefono\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: #000;\n}\n.carta-de-llamada-default .flex-col-item-Direccion-Up {\n    height: 60px;\n    margin-left: 2px;\n    margin-top: 25px;\n    width: 263px;\n}\n.carta-de-llamada-default .flex-col-item-Antedecendes-Up {\n    height: 60px;\n    margin-left: 2px;\n    margin-top: 25px;\n    width: 263px;\n}\n.flex-col-item-Direccion-Up\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: #000;\n}\n.flex-col-item-Direccion-Up\n    .mdc-select:not(.mdc-select--disabled).mdc-select--focused\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up\n    .mdc-select:not(.mdc-select--disabled).mdc-select--focused\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up .custom-enhanced-select-width {\n    width: 200px;\n}\n.flex-col-item-Antedecendes-Up .custom-enhanced-select-width {\n    width: 200px;\n}\n.flex-col-item-Direccion-Up .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.flex-col-item-Antedecendes-Up .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.carta-de-llamada-default .overlap-group {\n    align-items: flex-start;\n    align-self: flex-end;\n    background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237145d42a31b3d71f3385b/img/mapa@1x.png);\n    background-position: 50% 50%;\n    background-size: cover;\n    display: flex;\n    margin-bottom: 262px;\n    margin-left: 46px;\n    min-width: 1px;\n}\n.carta-de-llamada-default .frame-map {\n    height: 1px;\n    width: 1px;\n}\n.carta-de-llamada-default .flex-col-3 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 3px;\n    min-height: 1336px;\n    width: 306px;\n}\n.carta-de-llamada-default .procedencia-de-la-llamada {\n    height: 60px;\n    width: 263px;\n}\n.carta-de-llamada-default .flex-col-item-1 {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.carta-de-llamada-default .tipo-de-localizacin {\n    height: 60px;\n    margin-top: 94px;\n    width: 263px;\n}\n.carta-de-llamada-default .referencia {\n    height: 145px;\n    margin-top: 25px;\n    width: 263px;\n}\n.carta-de-llamada-default .mapa-down {\n    align-self: flex-end;\n    border-radius: 32px;\n    height: 36px;\n    margin-top: 746px;\n    width: 69px;\n}\n.carta-de-llamada-default .flex-row-2 {\n    align-items: flex-start;\n    display: flex;\n    height: 922px;\n    margin-left: 7px;\n    margin-top: -177px;\n    min-width: 1092px;\n}\n.carta-de-llamada-default .flex-col-4 {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    min-height: 609px;\n    width: 313px;\n}\n.carta-de-llamada-default .nota-comun {\n    height: 226px;\n    width: 263px;\n}\n.carta-de-llamada-default .flex-row-3 {\n    align-items: center;\n    display: flex;\n    height: 289px;\n    margin-left: 0.5px;\n    margin-top: 94px;\n    min-width: 313px;\n}\n.carta-de-llamada-default .separation-down {\n    height: 183px;\n    margin-bottom: 48px;\n    width: 1px;\n}\n.carta-de-llamada-default .flex-col-5 {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    margin-left: 49px;\n    min-height: 289px;\n    width: 263px;\n}\n.carta-de-llamada-default .incidente {\n    height: 60px;\n    width: 263px;\n}\n.carta-de-llamada-default .tipo-de-incidente {\n    height: 60px;\n    margin-top: 24px;\n    width: 263px;\n}\n.carta-de-llamada-default .mapa-up {\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    margin-right: 8px;\n    margin-top: 49px;\n    transition: all 0.2s ease-in-out;\n    width: 69px;\n}\n.carta-de-llamada-default .mapa-up:hover {\n    transform: scale(1.1);\n}\n.carta-de-llamada-default .flex-row-4 {\n    align-items: flex-start;\n    display: flex;\n    margin-left: 1px;\n    margin-top: 24px;\n    min-width: 188px;\n}\n.carta-de-llamada-default .aceptar {\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    transition: all 0.2s ease-in-out;\n    width: 83px;\n}\n.carta-de-llamada-default .aceptar:hover {\n    transform: scale(1.1);\n}\n.carta-de-llamada-default .cancelar {\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    margin-left: 16px;\n    transition: all 0.2s ease-in-out;\n    width: 89px;\n}\n.carta-de-llamada-default .cancelar:hover {\n    transform: scale(1.1);\n}\n.carta-de-llamada-default .hide-container {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 686px;\n    width: 779px;\n}\n.carta-de-llamada-default .hide-up {\n    background-color: var(--white);\n    height: 313px;\n    width: 779px;\n}\n.carta-de-llamada-default .hide-down {\n    background-color: var(--white);\n    height: 146px;\n    margin-top: 227px;\n    width: 779px;\n}\n.mdc-checkbox {\n    box-sizing: content-box;\n}\n.guardar-datos-checkbox\n    .mdc-checkbox__native-control:enabled:checked\n    ~ .mdc-checkbox__background,\n    .guardar-datos-checkbox\n    .mdc-checkbox--selected\n    .mdc-checkbox__native-control\n    ~ .mdc-checkbox__background,\n    .guardar-datos-checkbox\n    .mdc-checkbox--anim-checked-unchecked\n    .mdc-checkbox__native-control\n    ~ .mdc-checkbox__background {\n    background-color: #0066ff !important;\n    border-color: #0066ff !important;\n}\n.guardar-datos-checkbox\n    .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n    .mdc-checkbox__ripple::before,\n    .guardar-datos-checkbox\n    .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n    .mdc-checkbox__ripple::after {\n    background-color: #0066ff !important;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Part */\n.frame-1 {\n    margin-left: 415px;\n    margin-top: 110px;\n  align-items: flex-start;\n  display: flex;\n  flex-direction: column;\n  min-height: 230px;\n  width: 263px;\n}\n.procedencia-de-la-llamada {\n  height: 60px;\n  width: 263px;\n}\n.frame-1-item {\n  height: 60px;\n  margin-top: 25px;\n  width: 263px;\n}\n.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.frame-1-item .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n  align-items: center;\n  display: flex;\n  height: 48px;\n  position: relative;\n}\n.frame-1-item .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.frame-1-item .custom-enhanced-select-width {\n  width: 200px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -48521,6 +53480,17 @@ var render = function () {
             _vm._m(1),
           ]),
         ]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: {
+            type: "hidden",
+            id: "anPageName",
+            name: "page",
+            value: "390_1493",
+          },
+        }),
+        _vm._v(" "),
+        _vm._m(2),
       ]),
     ]),
   ])
@@ -48634,6 +53604,155 @@ var staticRenderFns = [
             ]
           ),
         ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "frame-1" }, [
+      _c("div", { staticClass: "procedencia-de-la-llamada" }, [
+        _c("label", { staticClass: "mdc-text-field mdc-text-field--filled" }, [
+          _c("span", { staticClass: "mdc-text-field__ripple" }),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "mdc-floating-label", attrs: { id: "my-label-id" } },
+            [_vm._v("Procedencia de la llamada")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "mdc-text-field__input",
+            attrs: { type: "text", "aria-labelledby": "my-label-id" },
+          }),
+          _vm._v(" "),
+          _c("span", { staticClass: "mdc-line-ripple" }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "frame-1-item" }, [
+        _c("label", { staticClass: "mdc-text-field mdc-text-field--filled" }, [
+          _c("span", { staticClass: "mdc-text-field__ripple" }),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "mdc-floating-label", attrs: { id: "my-label-id" } },
+            [_vm._v("Origen de la llamada")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "mdc-text-field__input",
+            attrs: { type: "text", "aria-labelledby": "my-label-id" },
+          }),
+          _vm._v(" "),
+          _c("span", { staticClass: "mdc-line-ripple" }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "frame-1-item" }, [
+        _c(
+          "div",
+          {
+            staticClass: "mdc-select mdc-select--filled demo-width-class",
+            attrs: { "data-id": "anima-widget" },
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "mdc-select__anchor custom-enhanced-select-width",
+                attrs: {
+                  role: "button",
+                  "aria-haspopup": "listbox",
+                  "aria-expanded": "false",
+                },
+              },
+              [
+                _c("span", { staticClass: "mdc-select__ripple" }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "mdc-floating-label",
+                    attrs: { id: "demo-label" },
+                  },
+                  [_vm._v("Municipio")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  { staticClass: "mdc-select__selected-text-container" },
+                  [
+                    _c("span", {
+                      staticClass: "mdc-select__selected-text",
+                      attrs: { id: "demo-selected-text" },
+                    }),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "mdc-select__dropdown-icon-inactive material-icons",
+                    },
+                    [_vm._v("arrow_drop_down")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "mdc-select__dropdown-icon-active material-icons",
+                    },
+                    [_vm._v("arrow_drop_up")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-line-ripple" }),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+              },
+              [
+                _c(
+                  "ul",
+                  {
+                    staticClass: "mdc-list",
+                    attrs: {
+                      id: "select_dropdown",
+                      role: "listbox",
+                      "aria-label": "listbox",
+                    },
+                  },
+                  [
+                    _c(
+                      "li",
+                      {
+                        staticClass: "mdc-list-item",
+                        attrs: { "data-value": "Item", role: "option" },
+                      },
+                      [
+                        _c("span", { staticClass: "mdc-list-item__ripple" }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-list-item__text" }, [
+                          _vm._v("Item"),
+                        ]),
+                      ]
+                    ),
+                  ]
+                ),
+              ]
+            ),
+          ]
+        ),
       ]),
     ])
   },
