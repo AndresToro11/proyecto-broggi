@@ -62,5 +62,7 @@ Route::get('grafico/usuarios/{usuario}', [GraficoController::class, 'showUsuario
 Route::get('admin/usuarios', [AdminController::class, 'usuarios']);
 Route::get('admin/operadores', [AdminController::class, 'operadores']);
 Route::get('admin/supervisores', [AdminController::class, 'supervisores']);
+Route::get('admin/roles', [AdminController::class, 'roles']);
+Route::post('admin/insertUsuario', [AdminController::class, 'insertUsuario']);
 
 //---------------------------------------------------------------------------------

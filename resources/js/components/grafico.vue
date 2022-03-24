@@ -36,7 +36,6 @@
         data(){
             return{
                 usuarios: [],
-                usuario: {},
                 selected: 0,
                 loading: false,
                 showUsuarios: false
@@ -125,7 +124,6 @@
                 .get('/grafico/usuarios/' + this.selected)
                 .then(response => {
                     usuarios = response.data;
-                    titulo = usuarios[0]['usuario'];
                     this.grafico(usuarios, type, titulo)
                 })
                 .catch(error => {
