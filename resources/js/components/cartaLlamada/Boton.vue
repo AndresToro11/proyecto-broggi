@@ -5,8 +5,11 @@
         <datos-incidentes
             @getDataIncidente="getDataIncidente"
         ></datos-incidentes>
-        <!-- <Personals @getDataPersonal="getDataPersonal"></Personals>
-        <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
+        <!-- <datos-accidente
+            @getDataAccidente="getDataAccidente"
+        ></datos-accidente> -->
+        <!-- <Personals @getDataPersonal="getDataPersonal"></Personals> -->
+        <!-- <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
         <!-- <h3>boton</h3>
         <button type="button">Cancelar</button>
         <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(),insertBD(cartaLlamada)">Aceptar</button>
