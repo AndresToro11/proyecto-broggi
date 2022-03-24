@@ -2,13 +2,12 @@
     <div>
         <!-- <datos-administrativos></datos-administrativos> -->
         <!-- <datos-personales @getDataPersonal="getDataPersonal"></datos-personales> -->
-        <datos-incidentes
+        <!-- <datos-incidentes
             @getDataIncidente="getDataIncidente"
-        ></datos-incidentes>
-        <datos-accidente
-            @getDataAccidente="getDataAccidente"
-        ></datos-accidente>
-        <!-- <Personals @getDataPersonal="getDataPersonal"></Personals> -->
+        ></datos-incidentes> -->
+        <datos-personales
+            @getDataPersonal="getDataPersonal"
+        ></datos-personales>
         <!-- <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
         <!-- <h3>boton</h3>
         <button type="button">Cancelar</button>
