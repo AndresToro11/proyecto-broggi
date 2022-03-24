@@ -359,7 +359,7 @@
 import HeaderOperador from "./HeaderOperador";
 import * as mdc from "material-components-web";
 export default {
-  name: "CartaDeLlamadaDefault",
+  name: "CartaDeLlamada",
   components: {
     HeaderOperador,
   },
