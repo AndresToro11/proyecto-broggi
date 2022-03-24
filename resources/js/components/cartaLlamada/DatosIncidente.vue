@@ -57,6 +57,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Second Column -->
                         <div class="flex-row-2">
                             <div class="flex-col-3">
                                 <div class="procedencia-de-la-llamada">
@@ -91,11 +92,25 @@
                                         <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
                                             <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
                                                 <li class="mdc-list-item" data-value="Item" role="option">
-                                                    <span class="mdc-list-item__ripple"></span> <span class="mdc-list-item__text">Item</span>
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">Item</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Column -->
+                        <div class="flex-row-3">
+                            <div class="flex-col-4">
+                                <div class="nota-comun"> <!-- Nota Comun -->
+                                    <label class="mdc-text-field mdc-text-field--filled" id="notaComun">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="notaComunLabel">Nota Común</span>
+                                        <input type="text" class="mdc-text-field__input" id="input-NotaComun" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -287,6 +302,7 @@
             new mdc.textField.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
             new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
+            new mdc.textField.MDCTextField(document.querySelector(".nota-comun .mdc-text-field"));
         },
     };
 </script>
@@ -503,56 +519,71 @@
     width: 263px;
     }
 
-    /* Second Part */
+    /* Second Column */
+    .flex-row-2 {
+        align-items: flex-start;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin-left: 315px;
+        margin-top: -261px;
+        width: 263px;
+    }
 
- .flex-row-2 {
+    .procedencia-de-la-llamada {
+    height: 60px;
+    width: 263px;
+    }
+
+    .origen-de-la-llamada {
+    height: 60px;
+    margin-top: 21px;
+    width: 263px;
+    }
+
+    .municipio {
+    height: 60px;
+    margin-top: 25px;
+    width: 263px;
+    }
+
+    .procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .municipio .custom-enhanced-select-width {
+    width: 200px;
+    }
+
+    .mdc-list-item {
+    align-items: center;
+    display: flex;
+    height: 48px;
+    position: relative;
+    }
+
+    /* Third Column */
+    .flex-row-3 {
     align-items: flex-start;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
-    margin-left: 315px;
-    margin-top: -261px;
+    margin-left: 628px;
+    margin-top: -392px;
     width: 263px;
-}
-
-.procedencia-de-la-llamada {
-  height: 60px;
-  width: 263px;
-}
-
-.origen-de-la-llamada {
-  height: 60px;
-  margin-top: 21px;
-  width: 263px;
-}
-
-.municipio {
-    height: 60px;
-  margin-top: 25px;
-  width: 263px;
-}
-
-.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
-  color: var(--mdc-theme-primary);
-}
-
-.origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
-  color: var(--mdc-theme-primary);
-}
-
-.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
-  color: var(--mdc-theme-primary);
-}
-
-.municipio .custom-enhanced-select-width {
-  width: 200px;
-}
-
-.mdc-list-item {
-  align-items: center;
-  display: flex;
-  height: 48px;
-  position: relative;
-}
-
+    height: 56px;
+    }
+    .nota-comun {
+    height: 56px;
+    margin-top: 166px;
+    width: 263px;
+    }
 </style>

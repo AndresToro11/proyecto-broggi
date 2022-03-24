@@ -15173,6 +15173,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -15352,6 +15367,7 @@ __webpack_require__.r(__webpack_exports__);
     new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
     new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
     new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".municipio .mdc-select"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".nota-comun .mdc-text-field"));
   }
 });
 
@@ -34407,7 +34423,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    background-color: var(--white);\n    display: flex;\n    height: 1080px;\n    /* padding: 0 89px; */\n    width: 1920px;\n    position: fixed;\n}\n.carta-de-llamada-default .container-scrolling::-webkit-scrollbar {\n    display: none;\n    position: fixed;\n    width: 0;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    height: 908px;\n    left: 92px;\n    min-width: 1739px;\n    overflow-y: scroll;\n    padding: 0 8px;\n    position: fixed;\n    top: 172px;\n    z-index: 1;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    margin-bottom: -560px;\n    min-height: 1418px;\n    width: 265px;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 4px;\n    min-height: 265px;\n    width: 265px;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 265px;\n    margin-top: 2px;\n    min-width: 265px;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .guardar-datos-checkbox {\n    height: 40px;\n    margin-left: 41px;\n    width: 40px;\n}\n.carta-de-llamada-default .guardar-datos {\n    letter-spacing: 0.15px;\n    line-height: 24px;\n    margin-bottom: 8px;\n    min-height: 24px;\n    min-width: 103px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .telefono {\n    height: 56px;\n    margin-left: 2px;\n    width: 263px;\n}\n.telefono .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.telefono\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: #000;\n}\n.carta-de-llamada-default .flex-col-item-Direccion-Up {\n    height: 60px;\n    margin-left: 2px;\n    margin-top: 25px;\n    width: 263px;\n}\n.flex-col-item-Direccion-Up\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up\n    .mdc-select:not(.mdc-select--disabled).mdc-select--focused\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up .custom-enhanced-select-width {\n    width: 200px;\n}\n.flex-col-item-Direccion-Up .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.carta-de-llamada-default .flex-col-item-Antedecendes-Up {\n    height: 60px;\n    margin-left: 2px;\n    margin-top: 25px;\n    width: 263px;\n}\n.flex-col-item-Antedecendes-Up\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: #000;\n}\n.flex-col-item-Antedecendes-Up\n    .mdc-select:not(.mdc-select--disabled).mdc-select--focused\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up .custom-enhanced-select-width {\n    width: 200px;\n}\n.flex-col-item-Antedecendes-Up .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.mdc-checkbox {\n    box-sizing: content-box;\n}\n.guardar-datos-checkbox\n    .mdc-checkbox__native-control:enabled:checked\n    ~ .mdc-checkbox__background,\n    .guardar-datos-checkbox\n    .mdc-checkbox--selected\n    .mdc-checkbox__native-control\n    ~ .mdc-checkbox__background,\n    .guardar-datos-checkbox\n    .mdc-checkbox--anim-checked-unchecked\n    .mdc-checkbox__native-control\n    ~ .mdc-checkbox__background {\n    background-color: #0066ff !important;\n    border-color: #0066ff !important;\n}\n.guardar-datos-checkbox\n    .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n    .mdc-checkbox__ripple::before,\n    .guardar-datos-checkbox\n    .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n    .mdc-checkbox__ripple::after {\n    background-color: #0066ff !important;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Part */\n.flex-row-2 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 315px;\n    margin-top: -261px;\n    width: 263px;\n}\n.procedencia-de-la-llamada {\n  height: 60px;\n  width: 263px;\n}\n.origen-de-la-llamada {\n  height: 60px;\n  margin-top: 21px;\n  width: 263px;\n}\n.municipio {\n    height: 60px;\n  margin-top: 25px;\n  width: 263px;\n}\n.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\n  width: 200px;\n}\n.mdc-list-item {\n  align-items: center;\n  display: flex;\n  height: 48px;\n  position: relative;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nheight: 1080px;\n/* padding: 0 89px; */\nwidth: 1920px;\nposition: fixed;\n}\n.carta-de-llamada-default .container-scrolling::-webkit-scrollbar {\ndisplay: none;\nposition: fixed;\nwidth: 0;\n}\n.carta-de-llamada-default .container-scrolling {\nalign-items: flex-start;\ndisplay: flex;\nheight: 908px;\nleft: 92px;\nmin-width: 1739px;\noverflow-y: scroll;\npadding: 0 8px;\nposition: fixed;\ntop: 172px;\nz-index: 1;\n}\n.carta-de-llamada-default .flex-col {\nalign-items: flex-start;\nalign-self: flex-end;\ndisplay: flex;\nflex-direction: column;\nmargin-bottom: -560px;\nmin-height: 1418px;\nwidth: 265px;\n}\n.carta-de-llamada-default .flex-col-1 {\nalign-items: flex-start;\nalign-self: flex-start;\ndisplay: flex;\nflex-direction: column;\nmin-height: 68px;\nwidth: 218px;\n}\n.carta-de-llamada-default .flex-col-2 {\nalign-items: flex-start;\ndisplay: flex;\nflex-direction: column;\nmargin-top: 4px;\nmin-height: 265px;\nwidth: 265px;\n}\n.carta-de-llamada-default .flex-row {\nalign-items: flex-end;\ndisplay: flex;\nheight: 80px;\nmin-width: 402px;\n}\n.carta-de-llamada-default .flex-row-1 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 265px;\nmargin-top: 2px;\nmin-width: 265px;\n}\n.carta-de-llamada-default .title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 2px;\nmargin-top: 36px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-default .guardar-datos-checkbox {\nheight: 40px;\nmargin-left: 41px;\nwidth: 40px;\n}\n.carta-de-llamada-default .guardar-datos {\nletter-spacing: 0.15px;\nline-height: 24px;\nmargin-bottom: 8px;\nmin-height: 24px;\nmin-width: 103px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-default .telefono {\nheight: 56px;\nmargin-left: 2px;\nwidth: 263px;\n}\n.telefono .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.telefono\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.carta-de-llamada-default .flex-col-item-Direccion-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.flex-col-item-Direccion-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.flex-col-item-Direccion-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.carta-de-llamada-default .flex-col-item-Antedecendes-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.flex-col-item-Antedecendes-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.flex-col-item-Antedecendes-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.flex-col-item-Antedecendes-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.mdc-checkbox {\nbox-sizing: content-box;\n}\n.guardar-datos-checkbox\n.mdc-checkbox__native-control:enabled:checked\n~ .mdc-checkbox__background,\n.guardar-datos-checkbox\n.mdc-checkbox--selected\n.mdc-checkbox__native-control\n~ .mdc-checkbox__background,\n.guardar-datos-checkbox\n.mdc-checkbox--anim-checked-unchecked\n.mdc-checkbox__native-control\n~ .mdc-checkbox__background {\nbackground-color: #0066ff !important;\nborder-color: #0066ff !important;\n}\n.guardar-datos-checkbox\n.mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n.mdc-checkbox__ripple::before,\n.guardar-datos-checkbox\n.mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n.mdc-checkbox__ripple::after {\nbackground-color: #0066ff !important;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n\n/* Second Column */\n.flex-row-2 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 315px;\n    margin-top: -261px;\n    width: 263px;\n}\n.procedencia-de-la-llamada {\nheight: 60px;\nwidth: 263px;\n}\n.origen-de-la-llamada {\nheight: 60px;\nmargin-top: 21px;\nwidth: 263px;\n}\n.municipio {\n    height: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\nwidth: 200px;\n}\n.mdc-list-item {\nalign-items: center;\ndisplay: flex;\nheight: 48px;\nposition: relative;\n}\n\n/* Third Column */\n.flex-row-3 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 628px;\n    margin-top: -392px;\n    width: 263px;\n}\n.nota-comun {\nheight: 226px;\nmargin-top: 166px;\nwidth: 263px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53453,6 +53469,8 @@ var render = function () {
             _vm._m(1),
             _vm._v(" "),
             _vm._m(2),
+            _vm._v(" "),
+            _vm._m(3),
           ]),
         ]),
       ]),
@@ -53728,6 +53746,47 @@ var staticRenderFns = [
                   ),
                 ]
               ),
+            ]
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex-row-3" }, [
+      _c("div", { staticClass: "flex-col-4" }, [
+        _c("div", { staticClass: "nota-comun" }, [
+          _c(
+            "label",
+            {
+              staticClass: "mdc-text-field mdc-text-field--filled",
+              attrs: { id: "notaComun" },
+            },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "notaComunLabel" },
+                },
+                [_vm._v("Nota Común")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: {
+                  type: "text",
+                  id: "input-NotaComun",
+                  "aria-labelledby": "my-label-id",
+                },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
             ]
           ),
         ]),
