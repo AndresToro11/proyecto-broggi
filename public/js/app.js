@@ -5376,9 +5376,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5434,15 +5431,22 @@ __webpack_require__.r(__webpack_exports__);
     },
     insertBD: function insertBD(cartaLlamada) {
       var me = this;
-      axios.post('/llamada', me.cartaLlamada).then(function (response) {
-        console.log('Insert OK');
+      axios.post("/llamada", me.cartaLlamada).then(function (response) {
+        console.log("Insert OK");
       })["catch"](function (error) {
         this.console.log("Error:");
         console.log(error);
       });
     },
     botonBD: function botonBD() {
-      console.log('AVEZTRUZ');
+      console.log("AVEZTRUZ");
+      this.$emit("setDataPersonal");
+      this.$emit("setDataIncidente");
+      this.$emit("setDataAdministrativos");
+      setDataPersonal();
+      setDataIncidente();
+      Administrativo.setDataAdministrativos();
+      setTimeout(insertBD(cartaLlamada), 2000);
     }
   },
   computed: {
@@ -5493,6 +5497,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   setDataAdministrativos: function setDataAdministrativos() {
+    console.log('Admin');
     this.$emit("getDataAdministrativos", this.contador);
   }
 });
@@ -5510,6 +5515,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5630,68 +5643,56 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  computed: {
-    descripcioLocalitzacio: function descripcioLocalitzacio() {
-      var varianle;
-
-      switch (this.datos_incidente.localizacion) {
-        case 1:
-          varianle = this.calle;
-          break;
-
-        case 2:
-          varianle = this.puntoSingular;
-          break;
-
-        case 3:
-          varianle = this["null"];
-          break;
-
-        case 4:
-          varianle = this.carretera;
-          break;
-
-        case 5:
-          varianle = this.datos_incidente.provincia;
-          break;
-
-        default:
-          break;
-      }
-
-      this.datos_incidente.descripcio_localitzacio = varianle;
-    },
-    detallLocalitzacio: function detallLocalitzacio() {
-      var varianle;
-
-      switch (this.datos_incidente.localizacion) {
-        case 1:
-          varianle = this.calle2;
-          break;
-
-        case 2:
-          varianle = null;
-          break;
-
-        case 3:
-          varianle = this["null"];
-          break;
-
-        case 4:
-          varianle = this.carretera2;
-          break;
-
-        case 5:
-          varianle = null;
-          break;
-
-        default:
-          break;
-      }
-
-      this.datos_incidente.detall_localitzacio = varianle;
-    }
-  },
+  // computed: {
+  //     descripcioLocalitzacio: function () {
+  //         let varianle;
+  //         switch (this.datos_incidente.localizacion) {
+  //             case 1:
+  //                 varianle=this.calle;
+  //                 break;
+  //             case 2:
+  //                 varianle=this.puntoSingular;
+  //                 break;
+  //             case 3:
+  //                 varianle=this.null;
+  //                 break;
+  //             case 4:
+  //                 varianle=this.carretera;
+  //                 break;
+  //             case 5:
+  //                 varianle=this.datos_incidente.provincia;
+  //                 break;
+  //             default:
+  //                 break;
+  //         }
+  //         this.datos_incidente.descripcio_localitzacio = varianle;
+  //         this.setDataIncidente();
+  //     },
+  //     detallLocalitzacio: function () {
+  //         let varianle;
+  //         switch (this.datos_incidente.localizacion) {
+  //             case 1:
+  //                 varianle=this.calle2;
+  //                 break;
+  //             case 2:
+  //                 varianle=null;
+  //                 break;
+  //             case 3:
+  //                 varianle=this.null;
+  //                 break;
+  //             case 4:
+  //                 varianle=this.carretera2;
+  //                 break;
+  //             case 5:
+  //                 varianle=null;
+  //                 break;
+  //             default:
+  //                 break;
+  //         }
+  //         this.datos_incidente.detall_localitzacio = varianle;
+  //         this.setDataIncidente();
+  //     }
+  // },
   methods: {
     emit: function emit() {
       this.$emit();
@@ -5751,7 +5752,72 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     setDataIncidente: function setDataIncidente() {
-      this.$emit("getDataIncidente", this.datos_incidente);
+      console.log('Incidente');
+      this.$emit("get-dataincidente", this.datos_incidente);
+    },
+    descripcioLocalitzacio: function descripcioLocalitzacio() {
+      var varianle;
+
+      switch (this.datos_incidente.localizacion) {
+        case 'Carrers':
+          varianle = this.calle;
+          break;
+
+        case 2:
+          varianle = this.puntoSingular;
+          break;
+
+        case 3:
+          varianle = this["null"];
+          break;
+
+        case 4:
+          varianle = this.carretera;
+          break;
+
+        case 5:
+          varianle = this.datos_incidente.provincia;
+          break;
+
+        default:
+          break;
+      }
+
+      if (this.datos_incidente.localizacion == 'Carrers') {}
+
+      this.datos_incidente.descripcio_localitzacio = varianle;
+      this.setDataIncidente();
+    },
+    detallLocalitzacio: function detallLocalitzacio() {
+      var varianle;
+
+      switch (this.datos_incidente.localizacion) {
+        case 1:
+          varianle = this.calle2;
+          break;
+
+        case 2:
+          varianle = null;
+          break;
+
+        case 3:
+          varianle = this["null"];
+          break;
+
+        case 4:
+          varianle = this.carretera2;
+          break;
+
+        case 5:
+          varianle = null;
+          break;
+
+        default:
+          break;
+      }
+
+      this.datos_incidente.detall_localitzacio = varianle;
+      this.setDataIncidente();
     }
   },
   mounted: function mounted() {
@@ -5773,6 +5839,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -5836,7 +5903,8 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     setDataPersonal: function setDataPersonal() {
-      this.$emit("getDataPersonal", this.datos_personales);
+      console.log('Personal');
+      this.$emit("get-datapersonal", this.datos_personales);
     }
   },
   mounted: function mounted() {
@@ -42941,10 +43009,12 @@ var render = function () {
     [
       _c("datos-administrativos"),
       _vm._v(" "),
-      _c("datos-personales", { on: { getDataPersonal: _vm.getDataPersonal } }),
+      _c("datos-personales", {
+        on: { "get-datapersonal": _vm.getDataPersonal },
+      }),
       _vm._v(" "),
       _c("datos-incidentes", {
-        on: { getDataIncidente: _vm.getDataIncidente },
+        on: { "get-dataincidente": _vm.getDataIncidente },
       }),
       _vm._v(" "),
       _c("h3", [_vm._v("boton")]),
@@ -42965,6 +43035,8 @@ var render = function () {
       ),
       _vm._v(" "),
       _c("expedientes-relacionados"),
+      _vm._v(" "),
+      _c("h4", [_vm._v("Funciona")]),
     ],
     1
   )
@@ -43047,6 +43119,9 @@ var render = function () {
           : _vm.datos_incidente.catalunya,
       },
       on: {
+        blur: function ($event) {
+          return _vm.setDataIncidente(_vm.datos_incidente)
+        },
         change: function ($event) {
           var $$a = _vm.datos_incidente.catalunya,
             $$el = $event.target,
@@ -43094,6 +43169,9 @@ var render = function () {
         staticClass: "form-control",
         attrs: { id: "comarca" },
         on: {
+          blur: function ($event) {
+            return _vm.setDataIncidente(_vm.datos_incidente)
+          },
           change: function ($event) {
             var $$selectedVal = Array.prototype.filter
               .call($event.target.options, function (o) {
@@ -43139,6 +43217,9 @@ var render = function () {
         staticClass: "form-control",
         attrs: { id: "provincia" },
         on: {
+          blur: function ($event) {
+            return _vm.setDataIncidente(_vm.datos_incidente)
+          },
           change: function ($event) {
             var $$selectedVal = Array.prototype.filter
               .call($event.target.options, function (o) {
@@ -43184,6 +43265,9 @@ var render = function () {
         staticClass: "form-connitrol",
         attrs: { id: "municipio" },
         on: {
+          blur: function ($event) {
+            return _vm.setDataIncidente(_vm.datos_incidente)
+          },
           change: function ($event) {
             var $$selectedVal = Array.prototype.filter
               .call($event.target.options, function (o) {
@@ -43227,8 +43311,11 @@ var render = function () {
           },
         ],
         staticClass: "form-control",
-        attrs: { id: "tiposLocalizacion" },
+        attrs: { id: "tiposLocalizacion", required: "" },
         on: {
+          blur: function ($event) {
+            return _vm.setDataIncidente(_vm.datos_incidente)
+          },
           change: function ($event) {
             var $$selectedVal = Array.prototype.filter
               .call($event.target.options, function (o) {
@@ -43260,241 +43347,285 @@ var render = function () {
       2
     ),
     _vm._v(" "),
-    _c("span", [
-      _c("label", { attrs: { for: "via" } }, [_vm._v("Via")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.calle.via,
-            expression: "calle.via",
-          },
-        ],
-        attrs: { type: "text", name: "via", id: "via" },
-        domProps: { value: _vm.calle.via },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.calle, "via", $event.target.value)
-          },
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.calle.direccion,
-            expression: "calle.direccion",
-          },
-        ],
-        attrs: { type: "text", name: "direccion", id: "direccion" },
-        domProps: { value: _vm.calle.direccion },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.calle, "direccion", $event.target.value)
-          },
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "numero" } }, [_vm._v("Numero puerta")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.calle.numero,
-            expression: "calle.numero",
-          },
-        ],
-        attrs: { type: "number", name: "numero", id: "numero" },
-        domProps: { value: _vm.calle.numero },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.calle, "numero", $event.target.value)
-          },
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "escala" } }, [_vm._v("Escala")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.calle2.escala,
-            expression: "calle2.escala",
-          },
-        ],
-        attrs: { type: "text", name: "escala", id: "escala" },
-        domProps: { value: _vm.calle2.escala },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.calle2, "escala", $event.target.value)
-          },
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "piso" } }, [_vm._v("Piso")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.calle2.piso,
-            expression: "calle2.piso",
-          },
-        ],
-        attrs: { type: "number", name: "piso", id: "piso" },
-        domProps: { value: _vm.calle2.piso },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.calle2, "piso", $event.target.value)
-          },
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "puerta" } }, [_vm._v("Puerta")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.calle.puerta,
-            expression: "calle.puerta",
-          },
-        ],
-        attrs: { type: "number", name: "puerta", id: "puerta" },
-        domProps: { value: _vm.calle.puerta },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.calle, "puerta", $event.target.value)
-          },
-        },
-      }),
-    ]),
-    _vm._v(" "),
-    _c("span", [
-      _c("label", { attrs: { for: "nombre" } }, [_vm._v("Nombre")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.puntoSingular.nombre,
-            expression: "puntoSingular.nombre",
-          },
-        ],
-        attrs: { type: "text", name: "nombre", id: "nombre" },
-        domProps: { value: _vm.puntoSingular.nombre },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.puntoSingular, "nombre", $event.target.value)
-          },
-        },
-      }),
-    ]),
-    _vm._v(" "),
-    _c("span", [
-      _c("label", { attrs: { for: "carretera" } }, [_vm._v("Carretera")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.carretera.carretera,
-            expression: "carretera.carretera",
-          },
-        ],
-        attrs: { type: "text", name: "carretera", id: "carretera" },
-        domProps: { value: _vm.carretera.carretera },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.carretera, "carretera", $event.target.value)
-          },
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "puntoKM" } }, [_vm._v("Punto kilometrico")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.carretera.puntoKm,
-            expression: "carretera.puntoKm",
-          },
-        ],
-        attrs: { type: "number", name: "puntoKM", id: "puntoKM" },
-        domProps: { value: _vm.carretera.puntoKm },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.carretera, "puntoKm", $event.target.value)
-          },
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "sentido" } }, [_vm._v("Sentido")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.carretera2.sentido,
-            expression: "carretera2.sentido",
-          },
-        ],
-        attrs: { type: "text", name: "sentido", id: "sentido" },
-        domProps: { value: _vm.carretera2.sentido },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.carretera2, "sentido", $event.target.value)
-          },
-        },
-      }),
-    ]),
+    _vm.datos_incidente.localizacion == "Carrers"
+      ? _c("span", [
+          _c("label", { attrs: { for: "via" } }, [_vm._v("Via")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.calle.via,
+                expression: "calle.via",
+              },
+            ],
+            attrs: { type: "text", name: "via", id: "via" },
+            domProps: { value: _vm.calle.via },
+            on: {
+              blur: function ($event) {
+                return _vm.descripcioLocalitzacio()
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.calle, "via", $event.target.value)
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.calle.direccion,
+                expression: "calle.direccion",
+              },
+            ],
+            attrs: { type: "text", name: "direccion", id: "direccion" },
+            domProps: { value: _vm.calle.direccion },
+            on: {
+              blur: function ($event) {
+                return _vm.descripcioLocalitzacio()
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.calle, "direccion", $event.target.value)
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "numero" } }, [_vm._v("Numero puerta")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.calle.numPuerta,
+                expression: "calle.numPuerta",
+              },
+            ],
+            attrs: { type: "number", name: "numero", id: "numero" },
+            domProps: { value: _vm.calle.numPuerta },
+            on: {
+              blur: function ($event) {
+                return _vm.descripcioLocalitzacio()
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.calle, "numPuerta", $event.target.value)
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "escalera" } }, [_vm._v("Escalera")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.calle2.escalera,
+                expression: "calle2.escalera",
+              },
+            ],
+            attrs: { type: "text", name: "escalera", id: "escalera" },
+            domProps: { value: _vm.calle2.escalera },
+            on: {
+              blur: function ($event) {
+                return _vm.setDataIncidente(_vm.datos_incidente)
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.calle2, "escalera", $event.target.value)
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "piso" } }, [_vm._v("Piso")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.calle2.piso,
+                expression: "calle2.piso",
+              },
+            ],
+            attrs: { type: "number", name: "piso", id: "piso" },
+            domProps: { value: _vm.calle2.piso },
+            on: {
+              blur: function ($event) {
+                return _vm.setDataIncidente(_vm.datos_incidente)
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.calle2, "piso", $event.target.value)
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "puerta" } }, [_vm._v("Puerta")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.calle2.puerta,
+                expression: "calle2.puerta",
+              },
+            ],
+            attrs: { type: "number", name: "puerta", id: "puerta" },
+            domProps: { value: _vm.calle2.puerta },
+            on: {
+              blur: function ($event) {
+                return _vm.setDataIncidente(_vm.datos_incidente)
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.calle2, "puerta", $event.target.value)
+              },
+            },
+          }),
+        ])
+      : _vm.datos_incidente.localizacion === "Punt Singular"
+      ? _c("span", [
+          _c("label", { attrs: { for: "nombre" } }, [_vm._v("Nombre")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.puntoSingular.nombre,
+                expression: "puntoSingular.nombre",
+              },
+            ],
+            attrs: { type: "text", name: "nombre", id: "nombre" },
+            domProps: { value: _vm.puntoSingular.nombre },
+            on: {
+              blur: function ($event) {
+                return _vm.setDataIncidente(_vm.datos_incidente)
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.puntoSingular, "nombre", $event.target.value)
+              },
+            },
+          }),
+        ])
+      : _vm.datos_incidente.localizacion === "Carretera"
+      ? _c("span", [
+          _c("label", { attrs: { for: "carretera" } }, [_vm._v("Carretera")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.carretera.carretera,
+                expression: "carretera.carretera",
+              },
+            ],
+            attrs: { type: "text", name: "carretera", id: "carretera" },
+            domProps: { value: _vm.carretera.carretera },
+            on: {
+              blur: function ($event) {
+                return _vm.setDataIncidente(_vm.datos_incidente)
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.carretera, "carretera", $event.target.value)
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "puntoKM" } }, [
+            _vm._v("Punto kilometrico"),
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.carretera.puntoKm,
+                expression: "carretera.puntoKm",
+              },
+            ],
+            attrs: { type: "number", name: "puntoKM", id: "puntoKM" },
+            domProps: { value: _vm.carretera.puntoKm },
+            on: {
+              blur: function ($event) {
+                return _vm.setDataIncidente(_vm.datos_incidente)
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.carretera, "puntoKm", $event.target.value)
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "sentido" } }, [_vm._v("Sentido")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.carretera2.sentido,
+                expression: "carretera2.sentido",
+              },
+            ],
+            attrs: { type: "text", name: "sentido", id: "sentido" },
+            domProps: { value: _vm.carretera2.sentido },
+            on: {
+              blur: function ($event) {
+                return _vm.setDataIncidente(_vm.datos_incidente)
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.carretera2, "sentido", $event.target.value)
+              },
+            },
+          }),
+        ])
+      : _vm.datos_incidente.localizacion === "Fuera Cataluña"
+      ? _c("span", [
+          _c("label", { attrs: { for: "provincia" } }, [_vm._v("Provincia")]),
+          _vm._v(" "),
+          _c("input", {
+            attrs: { type: "text", id: "provincia", disabled: "" },
+          }),
+        ])
+      : _vm.datos_incidente.localizacion === "Entitat Població"
+      ? _c("span")
+      : _vm._e(),
     _vm._v(" "),
     _c("h4", [_vm._v("Emergencia")]),
     _vm._v(" "),
@@ -43624,17 +43755,51 @@ var render = function () {
     _c("label", { attrs: { for: "telefono" } }, [_vm._v("Telefono")]),
     _vm._v(" "),
     _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.datos_personales.telefono,
+          expression: "datos_personales.telefono",
+        },
+      ],
       attrs: { type: "text", name: "telefono", id: "telefono", required: "" },
+      domProps: { value: _vm.datos_personales.telefono },
+      on: {
+        input: function ($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.$set(_vm.datos_personales, "telefono", $event.target.value)
+        },
+      },
     }),
     _vm._v(" "),
     _c("label", { attrs: { for: "antecedentes" } }, [_vm._v("Antecedentes")]),
     _vm._v(" "),
     _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.datos_personales.antecedentes,
+          expression: "datos_personales.antecedentes",
+        },
+      ],
       attrs: {
         type: "text",
         name: "antecedentes",
         id: "antecedentes",
         required: "",
+      },
+      domProps: { value: _vm.datos_personales.antecedentes },
+      on: {
+        input: function ($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.$set(_vm.datos_personales, "antecedentes", $event.target.value)
+        },
       },
     }),
     _vm._v(" "),
@@ -43645,18 +43810,52 @@ var render = function () {
     _c("label", { attrs: { for: "procedencia" } }, [_vm._v("Procedencia")]),
     _vm._v(" "),
     _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.datos_personales.procedencia,
+          expression: "datos_personales.procedencia",
+        },
+      ],
       attrs: {
         type: "text",
         name: "procedencia",
         id: "procedencia",
         required: "",
       },
+      domProps: { value: _vm.datos_personales.procedencia },
+      on: {
+        input: function ($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.$set(_vm.datos_personales, "procedencia", $event.target.value)
+        },
+      },
     }),
     _vm._v(" "),
     _c("label", { attrs: { for: "origen" } }, [_vm._v("Origen")]),
     _vm._v(" "),
     _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.datos_personales.origen,
+          expression: "datos_personales.origen",
+        },
+      ],
       attrs: { type: "text", name: "origen", id: "origen", required: "" },
+      domProps: { value: _vm.datos_personales.origen },
+      on: {
+        input: function ($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.$set(_vm.datos_personales, "origen", $event.target.value)
+        },
+      },
     }),
     _vm._v(" "),
     _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
@@ -43707,18 +43906,52 @@ var render = function () {
     _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
     _vm._v(" "),
     _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.datos_personales.direccion,
+          expression: "datos_personales.direccion",
+        },
+      ],
       attrs: { type: "text", name: "direccion", id: "direccion", required: "" },
+      domProps: { value: _vm.datos_personales.direccion },
+      on: {
+        input: function ($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.$set(_vm.datos_personales, "direccion", $event.target.value)
+        },
+      },
     }),
     _vm._v(" "),
     _c("label", { attrs: { for: "notaComun" } }, [_vm._v("Nota comun:")]),
     _vm._v(" "),
     _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.datos_personales.notaComun,
+          expression: "datos_personales.notaComun",
+        },
+      ],
       attrs: {
         type: "text",
         name: "notaComun",
         id: "notaComun",
         required: "",
         size: "100",
+      },
+      domProps: { value: _vm.datos_personales.notaComun },
+      on: {
+        input: function ($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.$set(_vm.datos_personales, "notaComun", $event.target.value)
+        },
       },
     }),
   ])

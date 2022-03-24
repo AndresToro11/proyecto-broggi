@@ -1,22 +1,16 @@
 <template>
     <div>
         <datos-administrativos></datos-administrativos>
-        <datos-personales @getDataPersonal="getDataPersonal"></datos-personales>
-        <datos-incidentes
-            @getDataIncidente="getDataIncidente"
-        ></datos-incidentes>
-        <!-- <Personals @getDataPersonal="getDataPersonal"></Personals>
-        <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
+        <datos-personales @get-datapersonal="getDataPersonal"></datos-personales>
+        <datos-incidentes @get-dataincidente="getDataIncidente"></datos-incidentes>
         <h3>boton</h3>
         <button type="button">Cancelar</button>
         <button type="button" @click="botonBD()">Aceptar</button>
         <expedientes-relacionados></expedientes-relacionados>
+        <h4>Funciona</h4>
     </div>
 </template>
 <script>
-import Administrativo from "@/components/DatosAdministrativos";
-import Personal from "@/components/DatosPersonales";
-import Incidente from "@/components/DatosIncidente";
 export default {
     data() {
         return {
@@ -73,8 +67,7 @@ export default {
                 (cartaLlamada.provincies_id = array.provincia),
                 (cartaLlamada.municipis_id = array.municipio),
                 (cartaLlamada.tipus_localitzacions_id = array.localizacion),
-                (cartaLlamada.descripcio_localitzacio =
-                    array.descripcio_localitzacio),
+                (cartaLlamada.descripcio_localitzacio = array.descripcio_localitzacio),
                 (cartaLlamada.detall_localitzacio = array.detall_localitzacio),
                 (cartaLlamada.incidents_id = array.incidente);
         },
@@ -123,11 +116,6 @@ export default {
                 this.cartaLlamada.dades_personals_id = varianle;
             }
         },
-    },
-    components: {
-        Personal,
-        Administrativo,
-        Incidente,
     },
     mounted() {
         this.select();
