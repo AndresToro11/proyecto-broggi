@@ -1,29 +1,17 @@
-:root { 
+:root {
   --black: #000000;
   --black-2: #00000099;
   --white: #ffffff;
- 
+
   --font-size-m2: 28px;
   --font-size-s2: 21px;
+  --font-size-xs: 18px;
   --font-size-xxs: 16px;
- 
+
   --font-family-gothic_a1: "Gothic A1", Helvetica;
   --font-family-roboto: "Roboto", Helvetica;
-}
-.gothica1-normal-black-28px {
-  color: var(--black);
-  font-family: var(--font-family-gothic_a1);
-  font-size: var(--font-size-m2);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.gothica1-normal-black-21px {
-  color: var(--black);
-  font-family: var(--font-family-gothic_a1);
-  font-size: var(--font-size-s2);
-  font-style: normal;
-  font-weight: 400;
+  --font-family-gothic_a1-medium: "Gothic A1-Medium", Helvetica;
+  --font-family-gothic_a1-regular: "Gothic A1-Regular", Helvetica;
 }
 
 .roboto-normal-black-16px {
@@ -33,3 +21,28 @@
   font-style: normal;
   font-weight: 400;
 }
+
+.gothica1-normal-black-21px {
+    color: var(--black);
+    font-family: var(--font-family-gothic_a1);
+    font-size: var(--font-size-s2);
+    font-style: normal;
+    font-weight: 400;
+  }
+
+.gothica1-normal-black-28px {
+    color: var(--black);
+    font-family: var(--font-family-gothic_a1);
+    font-size: var(--font-size-m2);
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .gothica1-medium-white-28px {
+      color: var(--white);
+      font-family: var(--font-family-gothic_a1-medium);
+      font-size: var(--font-size-m2);
+      font-style: normal;
+      font-weight: 500;
+
+  }
