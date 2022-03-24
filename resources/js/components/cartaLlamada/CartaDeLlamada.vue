@@ -1,15 +1,14 @@
 <template>
-  <div class="container-center-horizontal">
-    <div class="carta-de-llamada-default screen">
-      <header-operador
+<div class="container-center-horizontal">
+    <div class="carta-de-llamada-default screen"> -->
+      <!-- <header-operador
         :background="headerOperadorProps.background"
         :squareBackground="headerOperadorProps.squareBackground"
         :cartaDeLlamada="headerOperadorProps.cartaDeLlamada"
         :videoInteractivo="headerOperadorProps.videoInteractivo"
         :sergiPrezJimnez="headerOperadorProps.sergiPrezJimnez"
         :cerrarSesin="headerOperadorProps.cerrarSesin"
-      />
-      <h1>Hola</h1>
+      /> -->
       <div class="container-scrolling">
         <div class="flex-col">
           <div class="flex-row">
@@ -356,12 +355,12 @@
 </template>
 
 <script>
-import HeaderOperador from "./HeaderOperador";
+// import HeaderOperador from "./HeaderOperador";
 import * as mdc from "material-components-web";
 export default {
-  name: "CartaDeLlamada",
+  name: "pepe",
   components: {
-    HeaderOperador,
+    // HeaderOperador,
   },
   props: [
     "cartaDeLlamada",
@@ -371,7 +370,7 @@ export default {
     "mapa",
     "overlapGroup",
     "frameMap",
-    "headerOperadorProps",
+    // "headerOperadorProps",
   ],
   mounted: () => {
     mdc.autoInit();

@@ -14670,11 +14670,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _HeaderOperador__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeaderOperador */ "./resources/js/components/cartaLlamada/HeaderOperador.vue");
-/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/auto-init/index.js");
-/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/textfield/component.js");
-/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/select/component.js");
-/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/ripple/component.js");
+/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/auto-init/index.js");
+/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/textfield/component.js");
+/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/select/component.js");
+/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/ripple/component.js");
 //
 //
 //
@@ -15031,39 +15030,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-
+// import HeaderOperador from "./HeaderOperador";
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "CartaDeLlamadaDefault",
-  components: {
-    HeaderOperador: _HeaderOperador__WEBPACK_IMPORTED_MODULE_0__["default"]
+  name: "pepe",
+  components: {// HeaderOperador,
   },
-  props: ["cartaDeLlamada", "datosDelInterlocutor", "guardarDatos", "datosDelAccidente", "mapa", "overlapGroup", "frameMap", "headerOperadorProps"],
+  props: ["cartaDeLlamada", "datosDelInterlocutor", "guardarDatos", "datosDelAccidente", "mapa", "overlapGroup", "frameMap" // "headerOperadorProps",
+  ],
   mounted: function mounted() {
-    material_components_web__WEBPACK_IMPORTED_MODULE_1__["default"]();
-    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCTextField(document.querySelector(".flex-col-item .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCTextField(document.querySelector(".flex-col-item .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCSelect(document.querySelector(".comarca .mdc-select"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCSelect(document.querySelector(".flex-col-item .mdc-select"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCSelect(document.querySelector(".flex-col-item .mdc-select"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCTextField(document.querySelector(".flex-col-item-1 .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCSelect(document.querySelector(".flex-col-item-1 .mdc-select"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
-    material_components_web__WEBPACK_IMPORTED_MODULE_1__["default"]();
-    new material_components_web__WEBPACK_IMPORTED_MODULE_4__.MDCRipple(document.querySelector(".mapa-down .mdc-button"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCTextField(document.querySelector(".nota-comun .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCSelect(document.querySelector(".incidente .mdc-select"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCSelect(document.querySelector(".tipo-de-incidente .mdc-select"));
-    material_components_web__WEBPACK_IMPORTED_MODULE_1__["default"]();
-    new material_components_web__WEBPACK_IMPORTED_MODULE_4__.MDCRipple(document.querySelector(".mapa-up .mdc-button"));
-    material_components_web__WEBPACK_IMPORTED_MODULE_1__["default"]();
-    new material_components_web__WEBPACK_IMPORTED_MODULE_4__.MDCRipple(document.querySelector(".aceptar .mdc-button"));
-    material_components_web__WEBPACK_IMPORTED_MODULE_1__["default"]();
-    new material_components_web__WEBPACK_IMPORTED_MODULE_4__.MDCRipple(document.querySelector(".cancelar .mdc-button"));
+    material_components_web__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".flex-col-item .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".flex-col-item .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".comarca .mdc-select"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".flex-col-item .mdc-select"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".flex-col-item .mdc-select"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".flex-col-item-1 .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".flex-col-item-1 .mdc-select"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
+    material_components_web__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCRipple(document.querySelector(".mapa-down .mdc-button"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".nota-comun .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".incidente .mdc-select"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".tipo-de-incidente .mdc-select"));
+    material_components_web__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCRipple(document.querySelector(".mapa-up .mdc-button"));
+    material_components_web__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCRipple(document.querySelector(".aceptar .mdc-button"));
+    material_components_web__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    new material_components_web__WEBPACK_IMPORTED_MODULE_3__.MDCRipple(document.querySelector(".cancelar .mdc-button"));
   }
 });
 
@@ -15467,44 +15465,6 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     console.log("Component mounted.");
   }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "HeaderOperador",
-  props: ["background", "squareBackground", "cartaDeLlamada", "videoInteractivo", "sergiPrezJimnez", "cerrarSesin"]
 });
 
 /***/ }),
@@ -15995,7 +15955,7 @@ Vue.component('datos-incidentes', (__webpack_require__(/*! ./components/cartaLla
 Vue.component('datos-personales', (__webpack_require__(/*! ./components/cartaLlamada/DatosPersonales.vue */ "./resources/js/components/cartaLlamada/DatosPersonales.vue")["default"]));
 Vue.component('expedientes-relacionados', (__webpack_require__(/*! ./components/cartaLlamada/ExpedientesRelacionados.vue */ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue")["default"]));
 Vue.component('enviar-datos', (__webpack_require__(/*! ./components/cartaLlamada/Boton.vue */ "./resources/js/components/cartaLlamada/Boton.vue")["default"]));
-Vue.component('deCualquierManera', (__webpack_require__(/*! ./components/cartaLlamada/CartaDeLlamada.vue */ "./resources/js/components/cartaLlamada/CartaDeLlamada.vue")["default"])); //------------------------------------------- Expedientes --------------------------------
+Vue.component('pe-pe', (__webpack_require__(/*! ./components/cartaLlamada/CartaDeLlamada.vue */ "./resources/js/components/cartaLlamada/CartaDeLlamada.vue")["default"])); //------------------------------------------- Expedientes --------------------------------
 
 Vue.component('expedientes', (__webpack_require__(/*! ./components/expedientes.vue */ "./resources/js/components/expedientes.vue")["default"])); //--------------------------------------------- Grafico ----------------------------------
 
@@ -34459,30 +34419,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n  align
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=style&index=0&lang=css&":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=style&index=0&lang=css& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.header-operador {\n  align-items: flex-end;\n  background-color: var(--white);\n  display: flex;\n  height: 172px;\n  left: 0;\n  min-width: 1920px;\n  position: fixed;\n  top: 0;\n  z-index: 2;\n}\n.overlap-group1 {\n  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c45c941ee39385c45cb4e/img/shadow@1x.svg);\n  background-size: 100% 100%;\n  height: 198px;\n  margin-bottom: -26px;\n  position: relative;\n  width: 1920px;\n}\n.background {\n  height: 172px;\n  left: 0;\n  -o-object-fit: cover;\n     object-fit: cover;\n  position: absolute;\n  top: 0;\n  width: 1920px;\n}\n.overlap-group1-item {\n  height: 172px;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 1920px;\n}\n.title {\n  cursor: pointer;\n  height: 16px;\n  left: 521px;\n  letter-spacing: 1.25px;\n  line-height: 16px;\n  position: absolute;\n  text-shadow: 0px 4px 4px #00000040;\n  top: 139px;\n  transition: all 0.2s ease-in-out;\n  white-space: nowrap;\n}\n.title:hover {\n  transform: scale(1.1);\n}\n.video-interactivo {\n  height: 16px;\n  left: 1161px;\n  letter-spacing: 1.25px;\n  line-height: 16px;\n  position: absolute;\n  text-shadow: 0px 4px 4px #00000040;\n  top: 139px;\n  white-space: nowrap;\n}\n.sergi-prez-jimnez {\n  height: 16px;\n  left: 1408px;\n  letter-spacing: 1.25px;\n  line-height: 16px;\n  position: absolute;\n  text-shadow: 0px 4px 4px #00000040;\n  top: 34px;\n  white-space: nowrap;\n}\n.separate {\n  height: 58px;\n  left: 1647px;\n  position: absolute;\n  top: 18px;\n  width: 9px;\n}\n.cerrar-sesin {\n  height: 16px;\n  left: 1707px;\n  letter-spacing: 1.25px;\n  line-height: 16px;\n  position: absolute;\n  text-shadow: 0px 4px 4px #00000040;\n  top: 34px;\n  white-space: nowrap;\n}\n", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/runtime/api.js":
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
@@ -52008,36 +51944,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=style&index=0&lang=css&":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=style&index=0&lang=css& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderOperador_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HeaderOperador.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=style&index=0&lang=css&");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderOperador_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderOperador_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
-
-/***/ }),
-
 /***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
@@ -52830,47 +52736,6 @@ component.options.__file = "resources/js/components/cartaLlamada/ExpedientesRela
 
 /***/ }),
 
-/***/ "./resources/js/components/cartaLlamada/HeaderOperador.vue":
-/*!*****************************************************************!*\
-  !*** ./resources/js/components/cartaLlamada/HeaderOperador.vue ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _HeaderOperador_vue_vue_type_template_id_5ac3da78___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeaderOperador.vue?vue&type=template&id=5ac3da78& */ "./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=template&id=5ac3da78&");
-/* harmony import */ var _HeaderOperador_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HeaderOperador.vue?vue&type=script&lang=js& */ "./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=script&lang=js&");
-/* harmony import */ var _HeaderOperador_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HeaderOperador.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=style&index=0&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-;
-
-
-/* normalize component */
-
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _HeaderOperador_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _HeaderOperador_vue_vue_type_template_id_5ac3da78___WEBPACK_IMPORTED_MODULE_0__.render,
-  _HeaderOperador_vue_vue_type_template_id_5ac3da78___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/cartaLlamada/HeaderOperador.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/components/expedientes.vue":
 /*!*************************************************!*\
   !*** ./resources/js/components/expedientes.vue ***!
@@ -53201,22 +53066,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************!*\
-  !*** ./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderOperador_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HeaderOperador.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderOperador_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
 /***/ "./resources/js/components/expedientes.vue?vue&type=script&lang=js&":
 /*!**************************************************************************!*\
   !*** ./resources/js/components/expedientes.vue?vue&type=script&lang=js& ***!
@@ -53326,19 +53175,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=style&index=0&lang=css&":
-/*!**************************************************************************************************!*\
-  !*** ./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=style&index=0&lang=css& ***!
-  \**************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderOperador_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HeaderOperador.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=style&index=0&lang=css&");
-
-
-/***/ }),
-
 /***/ "./resources/js/components/cartaLlamada/Boton.vue?vue&type=template&id=1206029a&":
 /*!***************************************************************************************!*\
   !*** ./resources/js/components/cartaLlamada/Boton.vue?vue&type=template&id=1206029a& ***!
@@ -53437,23 +53273,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=template&id=5ac3da78&":
-/*!************************************************************************************************!*\
-  !*** ./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=template&id=5ac3da78& ***!
-  \************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderOperador_vue_vue_type_template_id_5ac3da78___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderOperador_vue_vue_type_template_id_5ac3da78___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderOperador_vue_vue_type_template_id_5ac3da78___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HeaderOperador.vue?vue&type=template&id=5ac3da78& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=template&id=5ac3da78&");
 
 
 /***/ }),
@@ -53636,163 +53455,145 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-center-horizontal" }, [
-    _c(
-      "div",
-      { staticClass: "carta-de-llamada-default screen" },
-      [
-        _c("header-operador", {
-          attrs: {
-            background: _vm.headerOperadorProps.background,
-            squareBackground: _vm.headerOperadorProps.squareBackground,
-            cartaDeLlamada: _vm.headerOperadorProps.cartaDeLlamada,
-            videoInteractivo: _vm.headerOperadorProps.videoInteractivo,
-            sergiPrezJimnez: _vm.headerOperadorProps.sergiPrezJimnez,
-            cerrarSesin: _vm.headerOperadorProps.cerrarSesin,
-          },
-        }),
-        _vm._v(" "),
-        _c("h1", [_vm._v("Hola")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "container-scrolling" }, [
-          _c("div", { staticClass: "flex-col" }, [
-            _c("div", { staticClass: "flex-row" }, [
-              _c("div", { staticClass: "flex-col-1" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "carta-de-llamada valign-text-middle gothica1-normal-black-28px",
-                  },
-                  [_vm._v(_vm._s(_vm.cartaDeLlamada))]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "datos-del-interlocutor valign-text-middle gothica1-normal-black-21px",
-                  },
-                  [
-                    _vm._v(
-                      "\n              " +
-                        _vm._s(_vm.datosDelInterlocutor) +
-                        "\n            "
-                    ),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "guardar-datos-checkbox" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "mdc-checkbox",
-                    attrs: {
-                      "data-mdc-auto-init": "MDCCheckbox",
-                      "data-id": "anima-widget",
-                    },
-                  },
-                  [
-                    _c("input", {
-                      staticClass: "mdc-checkbox__native-control",
-                      attrs: { type: "checkbox", checked: "" },
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mdc-checkbox__background" }, [
-                      _c(
-                        "svg",
-                        {
-                          staticClass: "mdc-checkbox__checkmark",
-                          attrs: { viewBox: "0 0 24 24" },
-                        },
-                        [
-                          _c("path", {
-                            staticClass: "mdc-checkbox__checkmark-path",
-                            attrs: {
-                              fill: "none",
-                              d: "M1.73,12.91 8.1,19.28 22.79,4.59",
-                            },
-                          }),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "mdc-checkbox__mixedmark" }),
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mdc-checkbox__ripple" }),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "guardar-datos" }, [
-                _vm._v(_vm._s(_vm.guardarDatos)),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex-row-1" }, [
-              _c("div", { staticClass: "flex-col-2" }, [
-                _vm._m(0),
-                _vm._v(" "),
-                _vm._m(1),
-                _vm._v(" "),
-                _vm._m(2),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "datos-del-accidente valign-text-middle gothica1-normal-black-21px",
-                  },
-                  [
-                    _vm._v(
-                      "\n              " +
-                        _vm._s(_vm.datosDelAccidente) +
-                        "\n            "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _vm._m(3),
-                _vm._v(" "),
-                _vm._m(4),
-                _vm._v(" "),
-                _vm._m(5),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "mapa valign-text-middle gothica1-normal-black-28px",
-                  },
-                  [_vm._v(_vm._s(_vm.mapa))]
-                ),
-              ]),
+    _c("div", { staticClass: "carta-de-llamada-default screen" }, [
+      _vm._v(" -->\n      "),
+      _vm._v(" "),
+      _c("div", { staticClass: "container-scrolling" }, [
+        _c("div", { staticClass: "flex-col" }, [
+          _c("div", { staticClass: "flex-row" }, [
+            _c("div", { staticClass: "flex-col-1" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "carta-de-llamada valign-text-middle gothica1-normal-black-28px",
+                },
+                [_vm._v(_vm._s(_vm.cartaDeLlamada))]
+              ),
               _vm._v(" "),
               _c(
                 "div",
                 {
-                  staticClass: "overlap-group",
-                  style: {
-                    "background-image": "url(" + _vm.overlapGroup + ")",
+                  staticClass:
+                    "datos-del-interlocutor valign-text-middle gothica1-normal-black-21px",
+                },
+                [
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(_vm.datosDelInterlocutor) +
+                      "\n              "
+                  ),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "guardar-datos-checkbox" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "mdc-checkbox",
+                  attrs: {
+                    "data-mdc-auto-init": "MDCCheckbox",
+                    "data-id": "anima-widget",
                   },
                 },
                 [
-                  _c("img", {
-                    staticClass: "frame-map",
-                    attrs: { id: "frame-map", src: _vm.frameMap },
+                  _c("input", {
+                    staticClass: "mdc-checkbox__native-control",
+                    attrs: { type: "checkbox", checked: "" },
                   }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mdc-checkbox__background" }, [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "mdc-checkbox__checkmark",
+                        attrs: { viewBox: "0 0 24 24" },
+                      },
+                      [
+                        _c("path", {
+                          staticClass: "mdc-checkbox__checkmark-path",
+                          attrs: {
+                            fill: "none",
+                            d: "M1.73,12.91 8.1,19.28 22.79,4.59",
+                          },
+                        }),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mdc-checkbox__mixedmark" }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mdc-checkbox__ripple" }),
                 ]
               ),
-              _vm._v(" "),
-              _vm._m(6),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "guardar-datos" }, [
+              _vm._v(_vm._s(_vm.guardarDatos)),
             ]),
           ]),
           _vm._v(" "),
-          _vm._m(7),
+          _c("div", { staticClass: "flex-row-1" }, [
+            _c("div", { staticClass: "flex-col-2" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "datos-del-accidente valign-text-middle gothica1-normal-black-21px",
+                },
+                [
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(_vm.datosDelAccidente) +
+                      "\n              "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "mapa valign-text-middle gothica1-normal-black-28px",
+                },
+                [_vm._v(_vm._s(_vm.mapa))]
+              ),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "overlap-group",
+                style: { "background-image": "url(" + _vm.overlapGroup + ")" },
+              },
+              [
+                _c("img", {
+                  staticClass: "frame-map",
+                  attrs: { id: "frame-map", src: _vm.frameMap },
+                }),
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(6),
+          ]),
         ]),
-      ],
-      1
-    ),
+        _vm._v(" "),
+        _vm._m(7),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = [
@@ -55637,86 +55438,6 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("h3", [_vm._v("Expedientes Relacionados")])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=template&id=5ac3da78&":
-/*!***************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/HeaderOperador.vue?vue&type=template&id=5ac3da78& ***!
-  \***************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "header-operador" }, [
-    _c("div", { staticClass: "overlap-group1" }, [
-      _c("img", { staticClass: "background", attrs: { src: _vm.background } }),
-      _c("img", {
-        staticClass: "overlap-group1-item",
-        attrs: { src: _vm.squareBackground },
-      }),
-      _vm._v(" "),
-      _c(
-        "h1",
-        { staticClass: "title valign-text-middle gothica1-medium-white-28px" },
-        [_vm._v(_vm._s(_vm.cartaDeLlamada))]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "video-interactivo valign-text-middle gothica1-medium-white-28px",
-        },
-        [_vm._v(_vm._s(_vm.videoInteractivo))]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "sergi-prez-jimnez valign-text-middle gothica1-normal-white-18px",
-        },
-        [_vm._v(_vm._s(_vm.sergiPrezJimnez))]
-      ),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "separate",
-        attrs: {
-          src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c45c941ee39385c45cb4e/img/separate@2x.svg",
-        },
-      }),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "cerrar-sesin valign-text-middle gothica1-normal-white-18px",
-        },
-        [_vm._v(_vm._s(_vm.cerrarSesin))]
-      ),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "overlap-group1-item",
-        attrs: {
-          src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c45c941ee39385c45cb4e/img/white-gradient@1x.svg",
-        },
-      }),
-    ]),
-  ])
 }
 var staticRenderFns = []
 render._withStripped = true
