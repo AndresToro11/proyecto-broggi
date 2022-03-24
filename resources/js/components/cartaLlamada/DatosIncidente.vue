@@ -308,7 +308,7 @@
 </script>
 
 <style>
-     .carta-de-llamada-default {
+    .carta-de-llamada-default {
     align-items: flex-start;
     background-color: var(--white);
     display: flex;
