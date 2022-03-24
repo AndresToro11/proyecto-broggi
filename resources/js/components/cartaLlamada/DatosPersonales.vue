@@ -92,26 +92,11 @@
                     <!-- Second Column -->
                     <div class="flex-row-2">
                         <div class="flex-col-3">
-                            <div class="procedencia-de-la-llamada">
-                                <label class="mdc-text-field mdc-text-field--filled">
-                                    <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">Procedencia de la llamada</span>
-                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                    <span class="mdc-line-ripple"></span>
-                                </label>
-                            </div>
-                            <div class="origen-de-la-llamada">
-                                <label class="mdc-text-field mdc-text-field--filled">
-                                    <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">Origen de la llamada</span>
-                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                    <span class="mdc-line-ripple"></span>
-                                </label>
-                            </div>
-                            <div class="municipio">
+                            <div class="tipo-de-localizacin">
                                 <div class="mdc-select mdc-select--filled demo-width-class">
                                     <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
-                                        <span class="mdc-select__ripple"></span> <span id="demo-label" class="mdc-floating-label">Municipio</span>
+                                        <span class="mdc-select__ripple"></span>
+                                        <span id="demo-label" class="mdc-floating-label">Tipo de Localización</span>
                                         <span class="mdc-select__selected-text-container">
                                             <span id="demo-selected-text" class="mdc-select__selected-text"></span>
                                         </span>
@@ -123,15 +108,36 @@
                                     </div>
                                     <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
                                         <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                            <li class="mdc-list-item" data-value="Item" role="option">
+                                            <li class="mdc-list-item" data-value="Punto Singular" role="option">
                                                 <span class="mdc-list-item__ripple"></span>
-                                                <span class="mdc-list-item__text">Item</span>
+                                                <span class="mdc-list-item__text">Punto Singular</span>
+                                            </li>
+                                            <li class="mdc-list-item" data-value="Carretera" role="option">
+                                                <span class="mdc-list-item__ripple"></span>
+                                                <span class="mdc-list-item__text">Carretera</span>
+                                            </li>
+                                            <li class="mdc-list-item" data-value="Entidad Población" role="option">
+                                                <span class="mdc-list-item__ripple"></span>
+                                                <span class="mdc-list-item__text">Entidad Población</span>
+                                            </li>
+                                            <li class="mdc-list-item" data-value="Calle" role="option">
+                                                <span class="mdc-list-item__ripple"></span>
+                                                <span class="mdc-list-item__text">Calle</span>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
+                            <div class="referencia">
+                                <label class="mdc-text-field mdc-text-field--filled">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Referencia</span>
+                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+                            </div>
                         </div>
+                        <img class="separation-down" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg"/>
                     </div>
                     <!-- Third Column -->
                     <div class="flex-row-3">
@@ -197,6 +203,8 @@ export default {
         new mdc.select.MDCSelect(document.querySelector(".comarca .mdc-select"));
         new mdc.select.MDCSelect(document.querySelector(".provincia .mdc-select"));
         new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
+        new mdc.select.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
+    new mdc.textField.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
     },
 };
 </script>
@@ -278,7 +286,7 @@ export default {
     height: 265px;
     margin-top: 2px;
     min-width: 265px;
-    z-index: 5;
+    z-index: 2;
     }
 
     .carta-de-llamada-default .title {
@@ -358,46 +366,51 @@ export default {
 
     /* Second Column */
     .flex-row-2 {
-        align-items: flex-start;
-        align-self: flex-start;
-        display: flex;
-        flex-direction: column;
-        margin-left: -213px;
-        margin-top: 127px;
-        width: 263px;
+    align-items: flex-start;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: -213px;
+    margin-top: 127px;
+    width: 263px;
+    z-index: 6;
     }
 
-    .procedencia-de-la-llamada {
+    .tipo-de-localizacin {
     height: 60px;
     width: 263px;
     }
 
-    .origen-de-la-llamada {
-    height: 60px;
-    margin-top: 21px;
-    width: 263px;
-    }
-
-    .municipio {
-    height: 60px;
+    .referencia {
+    height: 145px;
     margin-top: 25px;
     width: 263px;
     }
 
-    .procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: var(--mdc-theme-primary);
+    .separation-down {
+    height: 183px;
+    margin-left: 313px;
+    margin-top: -203px;
+    width: 1px;
     }
 
-    .origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: var(--mdc-theme-primary);
-    }
-
-    .municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
-    color: var(--mdc-theme-primary);
-    }
-
-    .municipio .custom-enhanced-select-width {
+    .tipo-de-localizacin .custom-enhanced-select-width {
     width: 200px;
+    }
+
+    .mdc-list-item {
+    align-items: center;
+    display: flex;
+    height: 48px;
+    position: relative;
+    }
+
+    .tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .referencia .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
     }
 
     .mdc-list-item {

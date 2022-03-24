@@ -15539,6 +15539,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -15580,6 +15586,8 @@ __webpack_require__.r(__webpack_exports__);
     new mdc.select.MDCSelect(document.querySelector(".comarca .mdc-select"));
     new mdc.select.MDCSelect(document.querySelector(".provincia .mdc-select"));
     new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
+    new mdc.textField.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
   }
 });
 
@@ -34576,7 +34584,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    background-color: var(--white);\n    display: flex;\n    height: 1080px;\n    /* padding: 0 89px; */\n    width: 1920px;\n    position: fixed;\n    z-index: 3;\n}\n.carta-de-llamada-default .container-scrolling::-webkit-scrollbar {\n    display: none;\n    position: fixed;\n    width: 0;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    height: 908px;\n    left: 92px;\n    min-width: 1739px;\n    overflow-y: scroll;\n    padding: 0 8px;\n    position: fixed;\n    top: 480px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    margin-bottom: -560px;\n    min-height: 1418px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 125px;\n    min-height: 265px;\n    margin-left: -263px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 265px;\n    margin-top: 2px;\n    min-width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.comarca {\n    height: 60px;\n    width: 263px;\n}\n.provincia {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.municipio {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n.comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.comarca .custom-enhanced-select-width {\n    width: 200px;\n}\n.provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.provincia .custom-enhanced-select-width {\n    width: 200px;\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\n    width: 200px;\n}\n\n    /* Global */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Column */\n.flex-row-2 {\n        align-items: flex-start;\n        align-self: flex-start;\n        display: flex;\n        flex-direction: column;\n        margin-left: -213px;\n        margin-top: 127px;\n        width: 263px;\n}\n.procedencia-de-la-llamada {\n    height: 60px;\n    width: 263px;\n}\n.origen-de-la-llamada {\n    height: 60px;\n    margin-top: 21px;\n    width: 263px;\n}\n.municipio {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\n    width: 200px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n\n    /* Third Column */\n.flex-row-3 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 50px;\n    margin-top: 6px;\n    width: 263px;\n    height: 56px;\n}\n.nota-comun {\n    height: 56px;\n    margin-top: 166px;\n    width: 263px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    background-color: var(--white);\n    display: flex;\n    height: 1080px;\n    /* padding: 0 89px; */\n    width: 1920px;\n    position: fixed;\n    z-index: 3;\n}\n.carta-de-llamada-default .container-scrolling::-webkit-scrollbar {\n    display: none;\n    position: fixed;\n    width: 0;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    height: 908px;\n    left: 92px;\n    min-width: 1739px;\n    overflow-y: scroll;\n    padding: 0 8px;\n    position: fixed;\n    top: 480px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    margin-bottom: -560px;\n    min-height: 1418px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 125px;\n    min-height: 265px;\n    margin-left: -263px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 265px;\n    margin-top: 2px;\n    min-width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.comarca {\n    height: 60px;\n    width: 263px;\n}\n.provincia {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.municipio {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n.comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.comarca .custom-enhanced-select-width {\n    width: 200px;\n}\n.provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.provincia .custom-enhanced-select-width {\n    width: 200px;\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\n    width: 200px;\n}\n\n    /* Global */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Column */\n.flex-row-2 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: -213px;\n    margin-top: 127px;\n    width: 263px;\n}\n.tipo-de-localizacin {\n    height: 60px;\n    width: 263px;\n}\n.referencia {\n    height: 145px;\n    margin-top: 25px;\n    width: 263px;\n}\n.separation-down {\n    height: 183px;\n    margin-left: 50px;\n    margin-top: 11px;\n    width: 1px;\n}\n.tipo-de-localizacin .custom-enhanced-select-width {\n    width: 200px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n.tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n\n    /* Third Column */\n.flex-row-3 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 50px;\n    margin-top: 6px;\n    width: 263px;\n    height: 56px;\n}\n.nota-comun {\n    height: 56px;\n    margin-top: 166px;\n    width: 263px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -54418,65 +54426,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "flex-row-2" }, [
               _c("div", { staticClass: "flex-col-3" }, [
-                _c("div", { staticClass: "procedencia-de-la-llamada" }, [
-                  _c(
-                    "label",
-                    { staticClass: "mdc-text-field mdc-text-field--filled" },
-                    [
-                      _c("span", { staticClass: "mdc-text-field__ripple" }),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass: "mdc-floating-label",
-                          attrs: { id: "my-label-id" },
-                        },
-                        [_vm._v("Procedencia de la llamada")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass: "mdc-text-field__input",
-                        attrs: {
-                          type: "text",
-                          "aria-labelledby": "my-label-id",
-                        },
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "mdc-line-ripple" }),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "origen-de-la-llamada" }, [
-                  _c(
-                    "label",
-                    { staticClass: "mdc-text-field mdc-text-field--filled" },
-                    [
-                      _c("span", { staticClass: "mdc-text-field__ripple" }),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass: "mdc-floating-label",
-                          attrs: { id: "my-label-id" },
-                        },
-                        [_vm._v("Origen de la llamada")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass: "mdc-text-field__input",
-                        attrs: {
-                          type: "text",
-                          "aria-labelledby": "my-label-id",
-                        },
-                      }),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "mdc-line-ripple" }),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "municipio" }, [
+                _c("div", { staticClass: "tipo-de-localizacin" }, [
                   _c(
                     "div",
                     {
@@ -54504,7 +54454,7 @@ var staticRenderFns = [
                               staticClass: "mdc-floating-label",
                               attrs: { id: "demo-label" },
                             },
-                            [_vm._v("Municipio")]
+                            [_vm._v("Tipo de Localización")]
                           ),
                           _vm._v(" "),
                           _c(
@@ -54572,7 +54522,7 @@ var staticRenderFns = [
                                 {
                                   staticClass: "mdc-list-item",
                                   attrs: {
-                                    "data-value": "Item",
+                                    "data-value": "Punto Singular",
                                     role: "option",
                                   },
                                 },
@@ -54584,7 +54534,73 @@ var staticRenderFns = [
                                   _c(
                                     "span",
                                     { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("Item")]
+                                    [_vm._v("Punto Singular")]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "li",
+                                {
+                                  staticClass: "mdc-list-item",
+                                  attrs: {
+                                    "data-value": "Carretera",
+                                    role: "option",
+                                  },
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "mdc-list-item__ripple",
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdc-list-item__text" },
+                                    [_vm._v("Carretera")]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "li",
+                                {
+                                  staticClass: "mdc-list-item",
+                                  attrs: {
+                                    "data-value": "Entidad Población",
+                                    role: "option",
+                                  },
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "mdc-list-item__ripple",
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdc-list-item__text" },
+                                    [_vm._v("Entidad Población")]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "li",
+                                {
+                                  staticClass: "mdc-list-item",
+                                  attrs: {
+                                    "data-value": "Calle",
+                                    role: "option",
+                                  },
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "mdc-list-item__ripple",
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdc-list-item__text" },
+                                    [_vm._v("Calle")]
                                   ),
                                 ]
                               ),
@@ -54595,7 +54611,43 @@ var staticRenderFns = [
                     ]
                   ),
                 ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "referencia" }, [
+                  _c(
+                    "label",
+                    { staticClass: "mdc-text-field mdc-text-field--filled" },
+                    [
+                      _c("span", { staticClass: "mdc-text-field__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass: "mdc-floating-label",
+                          attrs: { id: "my-label-id" },
+                        },
+                        [_vm._v("Referencia")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "mdc-text-field__input",
+                        attrs: {
+                          type: "text",
+                          "aria-labelledby": "my-label-id",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                ]),
               ]),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "separation-down",
+                attrs: {
+                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg",
+                },
+              }),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "flex-row-3" }, [
