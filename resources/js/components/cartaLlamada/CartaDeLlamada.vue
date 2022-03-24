@@ -9,6 +9,7 @@
         :sergiPrezJimnez="headerOperadorProps.sergiPrezJimnez"
         :cerrarSesin="headerOperadorProps.cerrarSesin"
       />
+      <h1>Hola</h1>
       <div class="container-scrolling">
         <div class="flex-col">
           <div class="flex-row">
