@@ -7,10 +7,10 @@
         ></datos-incidentes>
         <!-- <Personals @getDataPersonal="getDataPersonal"></Personals>
         <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
-        <h3>boton</h3>
+        <!-- <h3>boton</h3>
         <button type="button">Cancelar</button>
         <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(),insertBD(cartaLlamada)">Aceptar</button>
-        <expedientes-relacionados></expedientes-relacionados>
+        <expedientes-relacionados></expedientes-relacionados> -->
     </div>
 </template>
 <script>

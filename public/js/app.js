@@ -15173,11 +15173,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -15222,7 +15217,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  props: ["cartaDeLlamada", "datosDelInterlocutor", "guardarDatos", "datosDelAccidente", "mapa", "overlapGroup", "frameMap"],
+  props: ["cartaDeLlamada", "datosDelInterlocutor", "guardarDatos"],
   computed: {
     descripcioLocalitzacio: function descripcioLocalitzacio() {
       var varianle;
@@ -15355,8 +15350,8 @@ __webpack_require__.r(__webpack_exports__);
     new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".flex-col-item-Direccion-Up .mdc-text-field"));
     new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".flex-col-item-Antedecendes-Up .mdc-text-field"));
     new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".frame-1-item .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".frame-1-item .mdc-select"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".municipio .mdc-select"));
   }
 });
 
@@ -34412,7 +34407,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    background-color: var(--white);\n    display: flex;\n    height: 1080px;\n    padding: 0 89px;\n    width: 1920px;\n}\n.carta-de-llamada-default .container-scrolling::-webkit-scrollbar {\n    display: none;\n    width: 0;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    height: 908px;\n    left: 92px;\n    min-width: 1739px;\n    overflow-y: scroll;\n    padding: 0 8px;\n    position: fixed;\n    top: 172px;\n    z-index: 1;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    margin-bottom: -560px;\n    min-height: 1418px;\n    width: 621px;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .guardar-datos-checkbox {\n    height: 40px;\n    margin-left: 41px;\n    width: 40px;\n}\n.carta-de-llamada-default .guardar-datos {\n    letter-spacing: 0.15px;\n    line-height: 24px;\n    margin-bottom: 8px;\n    min-height: 24px;\n    min-width: 103px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 1336px;\n    margin-top: 2px;\n    min-width: 621px;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 4px;\n    min-height: 794px;\n    width: 265px;\n}\n.carta-de-llamada-default .telefono {\n    height: 56px;\n    margin-left: 2px;\n    width: 263px;\n}\n.telefono .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.telefono\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: #000;\n}\n.carta-de-llamada-default .flex-col-item-Direccion-Up {\n    height: 60px;\n    margin-left: 2px;\n    margin-top: 25px;\n    width: 263px;\n}\n.carta-de-llamada-default .flex-col-item-Antedecendes-Up {\n    height: 60px;\n    margin-left: 2px;\n    margin-top: 25px;\n    width: 263px;\n}\n.flex-col-item-Direccion-Up\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: #000;\n}\n.flex-col-item-Direccion-Up\n    .mdc-select:not(.mdc-select--disabled).mdc-select--focused\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up\n    .mdc-select:not(.mdc-select--disabled).mdc-select--focused\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up .custom-enhanced-select-width {\n    width: 200px;\n}\n.flex-col-item-Antedecendes-Up .custom-enhanced-select-width {\n    width: 200px;\n}\n.flex-col-item-Direccion-Up .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.flex-col-item-Antedecendes-Up .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.carta-de-llamada-default .overlap-group {\n    align-items: flex-start;\n    align-self: flex-end;\n    background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237145d42a31b3d71f3385b/img/mapa@1x.png);\n    background-position: 50% 50%;\n    background-size: cover;\n    display: flex;\n    margin-bottom: 262px;\n    margin-left: 46px;\n    min-width: 1px;\n}\n.carta-de-llamada-default .frame-map {\n    height: 1px;\n    width: 1px;\n}\n.carta-de-llamada-default .flex-col-3 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 3px;\n    min-height: 1336px;\n    width: 306px;\n}\n.carta-de-llamada-default .procedencia-de-la-llamada {\n    height: 60px;\n    width: 263px;\n}\n.carta-de-llamada-default .flex-col-item-1 {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.carta-de-llamada-default .tipo-de-localizacin {\n    height: 60px;\n    margin-top: 94px;\n    width: 263px;\n}\n.carta-de-llamada-default .referencia {\n    height: 145px;\n    margin-top: 25px;\n    width: 263px;\n}\n.carta-de-llamada-default .mapa-down {\n    align-self: flex-end;\n    border-radius: 32px;\n    height: 36px;\n    margin-top: 746px;\n    width: 69px;\n}\n.carta-de-llamada-default .flex-row-2 {\n    align-items: flex-start;\n    display: flex;\n    height: 922px;\n    margin-left: 7px;\n    margin-top: -177px;\n    min-width: 1092px;\n}\n.carta-de-llamada-default .flex-col-4 {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    min-height: 609px;\n    width: 313px;\n}\n.carta-de-llamada-default .nota-comun {\n    height: 226px;\n    width: 263px;\n}\n.carta-de-llamada-default .flex-row-3 {\n    align-items: center;\n    display: flex;\n    height: 289px;\n    margin-left: 0.5px;\n    margin-top: 94px;\n    min-width: 313px;\n}\n.carta-de-llamada-default .separation-down {\n    height: 183px;\n    margin-bottom: 48px;\n    width: 1px;\n}\n.carta-de-llamada-default .flex-col-5 {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    margin-left: 49px;\n    min-height: 289px;\n    width: 263px;\n}\n.carta-de-llamada-default .incidente {\n    height: 60px;\n    width: 263px;\n}\n.carta-de-llamada-default .tipo-de-incidente {\n    height: 60px;\n    margin-top: 24px;\n    width: 263px;\n}\n.carta-de-llamada-default .mapa-up {\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    margin-right: 8px;\n    margin-top: 49px;\n    transition: all 0.2s ease-in-out;\n    width: 69px;\n}\n.carta-de-llamada-default .mapa-up:hover {\n    transform: scale(1.1);\n}\n.carta-de-llamada-default .flex-row-4 {\n    align-items: flex-start;\n    display: flex;\n    margin-left: 1px;\n    margin-top: 24px;\n    min-width: 188px;\n}\n.carta-de-llamada-default .aceptar {\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    transition: all 0.2s ease-in-out;\n    width: 83px;\n}\n.carta-de-llamada-default .aceptar:hover {\n    transform: scale(1.1);\n}\n.carta-de-llamada-default .cancelar {\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    margin-left: 16px;\n    transition: all 0.2s ease-in-out;\n    width: 89px;\n}\n.carta-de-llamada-default .cancelar:hover {\n    transform: scale(1.1);\n}\n.carta-de-llamada-default .hide-container {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 686px;\n    width: 779px;\n}\n.carta-de-llamada-default .hide-up {\n    background-color: var(--white);\n    height: 313px;\n    width: 779px;\n}\n.carta-de-llamada-default .hide-down {\n    background-color: var(--white);\n    height: 146px;\n    margin-top: 227px;\n    width: 779px;\n}\n.mdc-checkbox {\n    box-sizing: content-box;\n}\n.guardar-datos-checkbox\n    .mdc-checkbox__native-control:enabled:checked\n    ~ .mdc-checkbox__background,\n    .guardar-datos-checkbox\n    .mdc-checkbox--selected\n    .mdc-checkbox__native-control\n    ~ .mdc-checkbox__background,\n    .guardar-datos-checkbox\n    .mdc-checkbox--anim-checked-unchecked\n    .mdc-checkbox__native-control\n    ~ .mdc-checkbox__background {\n    background-color: #0066ff !important;\n    border-color: #0066ff !important;\n}\n.guardar-datos-checkbox\n    .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n    .mdc-checkbox__ripple::before,\n    .guardar-datos-checkbox\n    .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n    .mdc-checkbox__ripple::after {\n    background-color: #0066ff !important;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Part */\n.frame-1 {\n    margin-left: 415px;\n    margin-top: 110px;\n  align-items: flex-start;\n  display: flex;\n  flex-direction: column;\n  min-height: 230px;\n  width: 263px;\n}\n.procedencia-de-la-llamada {\n  height: 60px;\n  width: 263px;\n}\n.frame-1-item {\n  height: 60px;\n  margin-top: 25px;\n  width: 263px;\n}\n.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.frame-1-item .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n  align-items: center;\n  display: flex;\n  height: 48px;\n  position: relative;\n}\n.frame-1-item .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.frame-1-item .custom-enhanced-select-width {\n  width: 200px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    background-color: var(--white);\n    display: flex;\n    height: 1080px;\n    /* padding: 0 89px; */\n    width: 1920px;\n    position: fixed;\n}\n.carta-de-llamada-default .container-scrolling::-webkit-scrollbar {\n    display: none;\n    position: fixed;\n    width: 0;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    height: 908px;\n    left: 92px;\n    min-width: 1739px;\n    overflow-y: scroll;\n    padding: 0 8px;\n    position: fixed;\n    top: 172px;\n    z-index: 1;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    margin-bottom: -560px;\n    min-height: 1418px;\n    width: 265px;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 4px;\n    min-height: 265px;\n    width: 265px;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 265px;\n    margin-top: 2px;\n    min-width: 265px;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .guardar-datos-checkbox {\n    height: 40px;\n    margin-left: 41px;\n    width: 40px;\n}\n.carta-de-llamada-default .guardar-datos {\n    letter-spacing: 0.15px;\n    line-height: 24px;\n    margin-bottom: 8px;\n    min-height: 24px;\n    min-width: 103px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .telefono {\n    height: 56px;\n    margin-left: 2px;\n    width: 263px;\n}\n.telefono .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.telefono\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: #000;\n}\n.carta-de-llamada-default .flex-col-item-Direccion-Up {\n    height: 60px;\n    margin-left: 2px;\n    margin-top: 25px;\n    width: 263px;\n}\n.flex-col-item-Direccion-Up\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up\n    .mdc-select:not(.mdc-select--disabled).mdc-select--focused\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up .custom-enhanced-select-width {\n    width: 200px;\n}\n.flex-col-item-Direccion-Up .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.carta-de-llamada-default .flex-col-item-Antedecendes-Up {\n    height: 60px;\n    margin-left: 2px;\n    margin-top: 25px;\n    width: 263px;\n}\n.flex-col-item-Antedecendes-Up\n    .mdc-text-field--focused:not(.mdc-text-field--disabled)\n    .mdc-floating-label {\n    color: #000;\n}\n.flex-col-item-Antedecendes-Up\n    .mdc-select:not(.mdc-select--disabled).mdc-select--focused\n    .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up .custom-enhanced-select-width {\n    width: 200px;\n}\n.flex-col-item-Antedecendes-Up .mdc-text-field {\n    --mdc-theme-primary: #000000;\n}\n.mdc-checkbox {\n    box-sizing: content-box;\n}\n.guardar-datos-checkbox\n    .mdc-checkbox__native-control:enabled:checked\n    ~ .mdc-checkbox__background,\n    .guardar-datos-checkbox\n    .mdc-checkbox--selected\n    .mdc-checkbox__native-control\n    ~ .mdc-checkbox__background,\n    .guardar-datos-checkbox\n    .mdc-checkbox--anim-checked-unchecked\n    .mdc-checkbox__native-control\n    ~ .mdc-checkbox__background {\n    background-color: #0066ff !important;\n    border-color: #0066ff !important;\n}\n.guardar-datos-checkbox\n    .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n    .mdc-checkbox__ripple::before,\n    .guardar-datos-checkbox\n    .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused\n    .mdc-checkbox__ripple::after {\n    background-color: #0066ff !important;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Part */\n.flex-row-2 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 315px;\n    margin-top: -261px;\n    width: 263px;\n}\n.procedencia-de-la-llamada {\n  height: 60px;\n  width: 263px;\n}\n.origen-de-la-llamada {\n  height: 60px;\n  margin-top: 21px;\n  width: 263px;\n}\n.municipio {\n    height: 60px;\n  margin-top: 25px;\n  width: 263px;\n}\n.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\n  width: 200px;\n}\n.mdc-list-item {\n  align-items: center;\n  display: flex;\n  height: 48px;\n  position: relative;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53329,28 +53324,6 @@ var render = function () {
       _c("datos-incidentes", {
         on: { getDataIncidente: _vm.getDataIncidente },
       }),
-      _vm._v(" "),
-      _c("h3", [_vm._v("boton")]),
-      _vm._v(" "),
-      _c("button", { attrs: { type: "button" } }, [_vm._v("Cancelar")]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          attrs: { type: "button" },
-          on: {
-            click: function ($event) {
-              _vm.setDataPersonal(),
-                _vm.setDataIncidente(),
-                _vm.setDataAdministrativos(),
-                _vm.insertBD(_vm.cartaLlamada)
-            },
-          },
-        },
-        [_vm._v("Aceptar")]
-      ),
-      _vm._v(" "),
-      _c("expedientes-relacionados"),
     ],
     1
   )
@@ -53478,19 +53451,10 @@ var render = function () {
             ]),
             _vm._v(" "),
             _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2),
           ]),
         ]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: {
-            type: "hidden",
-            id: "anPageName",
-            name: "page",
-            value: "390_1493",
-          },
-        }),
-        _vm._v(" "),
-        _vm._m(2),
       ]),
     ]),
   ])
@@ -53611,148 +53575,162 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "frame-1" }, [
-      _c("div", { staticClass: "procedencia-de-la-llamada" }, [
-        _c("label", { staticClass: "mdc-text-field mdc-text-field--filled" }, [
-          _c("span", { staticClass: "mdc-text-field__ripple" }),
-          _vm._v(" "),
+    return _c("div", { staticClass: "flex-row-2" }, [
+      _c("div", { staticClass: "flex-col-3" }, [
+        _c("div", { staticClass: "procedencia-de-la-llamada" }, [
           _c(
-            "span",
-            { staticClass: "mdc-floating-label", attrs: { id: "my-label-id" } },
-            [_vm._v("Procedencia de la llamada")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "mdc-text-field__input",
-            attrs: { type: "text", "aria-labelledby": "my-label-id" },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "mdc-line-ripple" }),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "frame-1-item" }, [
-        _c("label", { staticClass: "mdc-text-field mdc-text-field--filled" }, [
-          _c("span", { staticClass: "mdc-text-field__ripple" }),
-          _vm._v(" "),
-          _c(
-            "span",
-            { staticClass: "mdc-floating-label", attrs: { id: "my-label-id" } },
-            [_vm._v("Origen de la llamada")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "mdc-text-field__input",
-            attrs: { type: "text", "aria-labelledby": "my-label-id" },
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "mdc-line-ripple" }),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "frame-1-item" }, [
-        _c(
-          "div",
-          {
-            staticClass: "mdc-select mdc-select--filled demo-width-class",
-            attrs: { "data-id": "anima-widget" },
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass: "mdc-select__anchor custom-enhanced-select-width",
-                attrs: {
-                  role: "button",
-                  "aria-haspopup": "listbox",
-                  "aria-expanded": "false",
+            "label",
+            { staticClass: "mdc-text-field mdc-text-field--filled" },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "my-label-id" },
                 },
-              },
-              [
-                _c("span", { staticClass: "mdc-select__ripple" }),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
-                    staticClass: "mdc-floating-label",
-                    attrs: { id: "demo-label" },
+                [_vm._v("Procedencia de la llamada")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "origen-de-la-llamada" }, [
+          _c(
+            "label",
+            { staticClass: "mdc-text-field mdc-text-field--filled" },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "my-label-id" },
+                },
+                [_vm._v("Origen de la llamada")]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "municipio" }, [
+          _c(
+            "div",
+            { staticClass: "mdc-select mdc-select--filled demo-width-class" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "mdc-select__anchor custom-enhanced-select-width",
+                  attrs: {
+                    role: "button",
+                    "aria-haspopup": "listbox",
+                    "aria-expanded": "false",
                   },
-                  [_vm._v("Municipio")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  { staticClass: "mdc-select__selected-text-container" },
-                  [
-                    _c("span", {
-                      staticClass: "mdc-select__selected-text",
-                      attrs: { id: "demo-selected-text" },
-                    }),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "mdc-select__dropdown-icon-inactive material-icons",
-                    },
-                    [_vm._v("arrow_drop_down")]
-                  ),
+                },
+                [
+                  _c("span", { staticClass: "mdc-select__ripple" }),
                   _vm._v(" "),
                   _c(
                     "span",
                     {
-                      staticClass:
-                        "mdc-select__dropdown-icon-active material-icons",
+                      staticClass: "mdc-floating-label",
+                      attrs: { id: "demo-label" },
                     },
-                    [_vm._v("arrow_drop_up")]
+                    [_vm._v("Municipio")]
                   ),
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-line-ripple" }),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-              },
-              [
-                _c(
-                  "ul",
-                  {
-                    staticClass: "mdc-list",
-                    attrs: {
-                      id: "select_dropdown",
-                      role: "listbox",
-                      "aria-label": "listbox",
-                    },
-                  },
-                  [
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "mdc-select__selected-text-container" },
+                    [
+                      _c("span", {
+                        staticClass: "mdc-select__selected-text",
+                        attrs: { id: "demo-selected-text" },
+                      }),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
                     _c(
-                      "li",
+                      "span",
                       {
-                        staticClass: "mdc-list-item",
-                        attrs: { "data-value": "Item", role: "option" },
+                        staticClass:
+                          "mdc-select__dropdown-icon-inactive material-icons",
                       },
-                      [
-                        _c("span", { staticClass: "mdc-list-item__ripple" }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-list-item__text" }, [
-                          _vm._v("Item"),
-                        ]),
-                      ]
+                      [_vm._v("arrow_drop_down")]
                     ),
-                  ]
-                ),
-              ]
-            ),
-          ]
-        ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "mdc-select__dropdown-icon-active material-icons",
+                      },
+                      [_vm._v("arrow_drop_up")]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-line-ripple" }),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                },
+                [
+                  _c(
+                    "ul",
+                    {
+                      staticClass: "mdc-list",
+                      attrs: {
+                        id: "select_dropdown",
+                        role: "listbox",
+                        "aria-label": "listbox",
+                      },
+                    },
+                    [
+                      _c(
+                        "li",
+                        {
+                          staticClass: "mdc-list-item",
+                          attrs: { "data-value": "Item", role: "option" },
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-list-item__ripple" }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-list-item__text" }, [
+                            _vm._v("Item"),
+                          ]),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+        ]),
       ]),
     ])
   },

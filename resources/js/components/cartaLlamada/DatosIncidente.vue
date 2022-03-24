@@ -57,50 +57,50 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            <!-- Second Part -->
-                <!-- <input type="hidden" id="anPageName" name="page" value="390_1493" />
-                <div class="frame-1">
-                    <div class="procedencia-de-la-llamada">
-                        <label class="mdc-text-field mdc-text-field--filled">
-                            <span class="mdc-text-field__ripple"></span>
-                            <span class="mdc-floating-label" id="my-label-id">Procedencia de la llamada</span>
-                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                            <span class="mdc-line-ripple"></span>
-                        </label>
-                    </div>
-                    <div class="origen-de-la-llamada">
-                        <label class="mdc-text-field mdc-text-field--filled">
-                            <span class="mdc-text-field__ripple"></span>
-                            <span class="mdc-floating-label" id="my-label-id">Origen de la llamada</span>
-                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                            <span class="mdc-line-ripple"></span>
-                        </label>
-                    </div>
-                    <div class="municipio">
-                        <div class="mdc-select mdc-select--filled demo-width-class">
-                            <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
-                                <span class="mdc-select__ripple"></span> <span id="demo-label" class="mdc-floating-label">Municipio</span>
-                                <span class="mdc-select__selected-text-container">
-                                    <span id="demo-selected-text" class="mdc-select__selected-text"></span>
-                                </span>
-                                <span class="mdc-select__dropdown-icon">
-                                    <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
-                                    <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
-                                </span>
-                                <span class="mdc-line-ripple"></span>
-                            </div>
-                            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                                <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                    <li class="mdc-list-item" data-value="Item" role="option">
-                                        <span class="mdc-list-item__ripple"></span> <span class="mdc-list-item__text">Item</span>
-                                    </li>
-                                </ul>
+                        <div class="flex-row-2">
+                            <div class="flex-col-3">
+                                <div class="procedencia-de-la-llamada">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">Procedencia de la llamada</span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                                <div class="origen-de-la-llamada">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">Origen de la llamada</span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                                <div class="municipio">
+                                    <div class="mdc-select mdc-select--filled demo-width-class">
+                                        <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                            <span class="mdc-select__ripple"></span> <span id="demo-label" class="mdc-floating-label">Municipio</span>
+                                            <span class="mdc-select__selected-text-container">
+                                                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                            </span>
+                                            <span class="mdc-select__dropdown-icon">
+                                                <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
+                                                <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
+                                            </span>
+                                            <span class="mdc-line-ripple"></span>
+                                        </div>
+                                        <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                            <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                                                <li class="mdc-list-item" data-value="Item" role="option">
+                                                    <span class="mdc-list-item__ripple"></span> <span class="mdc-list-item__text">Item</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -155,10 +155,6 @@
         "cartaDeLlamada",
         "datosDelInterlocutor",
         "guardarDatos",
-        // "datosDelAccidente",
-        // "mapa",
-        // "overlapGroup",
-        // "frameMap",
     ],
         computed: {
             descripcioLocalitzacio: function () {
@@ -288,25 +284,27 @@
             new mdc.textField.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".flex-col-item-Direccion-Up .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".flex-col-item-Antedecendes-Up .mdc-text-field"));
-            // new mdc.textField.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
-            // new mdc.textField.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
-            // new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
+            new mdc.textField.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
+            new mdc.textField.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
+            new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
         },
     };
 </script>
 
 <style>
-    /* .carta-de-llamada-default {
+     .carta-de-llamada-default {
     align-items: flex-start;
     background-color: var(--white);
     display: flex;
     height: 1080px;
-    padding: 0 89px;
+    /* padding: 0 89px; */
     width: 1920px;
+    position: fixed;
     }
 
     .carta-de-llamada-default .container-scrolling::-webkit-scrollbar {
     display: none;
+    position: fixed;
     width: 0;
     }
 
@@ -330,14 +328,7 @@
     flex-direction: column;
     margin-bottom: -560px;
     min-height: 1418px;
-    width: 621px;
-    }
-
-    .carta-de-llamada-default .flex-row {
-    align-items: flex-end;
-    display: flex;
-    height: 80px;
-    min-width: 402px;
+    width: 265px;
     }
 
     .carta-de-llamada-default .flex-col-1 {
@@ -347,6 +338,30 @@
     flex-direction: column;
     min-height: 68px;
     width: 218px;
+    }
+
+    .carta-de-llamada-default .flex-col-2 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    min-height: 265px;
+    width: 265px;
+    }
+
+    .carta-de-llamada-default .flex-row {
+    align-items: flex-end;
+    display: flex;
+    height: 80px;
+    min-width: 402px;
+    }
+
+    .carta-de-llamada-default .flex-row-1 {
+    align-items: flex-start;
+    display: flex;
+    height: 265px;
+    margin-top: 2px;
+    min-width: 265px;
     }
 
     .carta-de-llamada-default .title {
@@ -380,23 +395,6 @@
     white-space: nowrap;
     }
 
-    .carta-de-llamada-default .flex-row-1 {
-    align-items: flex-start;
-    display: flex;
-    height: 1336px;
-    margin-top: 2px;
-    min-width: 621px;
-    }
-
-    .carta-de-llamada-default .flex-col-2 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    margin-top: 4px;
-    min-height: 794px;
-    width: 265px;
-    }
-
     .carta-de-llamada-default .telefono {
     height: 56px;
     margin-left: 2px;
@@ -420,32 +418,13 @@
     width: 263px;
     }
 
-    .carta-de-llamada-default .flex-col-item-Antedecendes-Up {
-    height: 60px;
-    margin-left: 2px;
-    margin-top: 25px;
-    width: 263px;
-    }
-
     .flex-col-item-Direccion-Up
     .mdc-text-field--focused:not(.mdc-text-field--disabled)
     .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .flex-col-item-Antedecendes-Up
-    .mdc-text-field--focused:not(.mdc-text-field--disabled)
-    .mdc-floating-label {
-    color: #000;
-    }
-
     .flex-col-item-Direccion-Up
-    .mdc-select:not(.mdc-select--disabled).mdc-select--focused
-    .mdc-floating-label {
-    color: var(--mdc-theme-primary);
-    }
-
-    .flex-col-item-Antedecendes-Up
     .mdc-select:not(.mdc-select--disabled).mdc-select--focused
     .mdc-floating-label {
     color: var(--mdc-theme-primary);
@@ -455,113 +434,35 @@
     width: 200px;
     }
 
-    .flex-col-item-Antedecendes-Up .custom-enhanced-select-width {
-    width: 200px;
-    }
-
     .flex-col-item-Direccion-Up .mdc-text-field {
     --mdc-theme-primary: #000000;
     }
 
-    .flex-col-item-Antedecendes-Up .mdc-text-field {
-    --mdc-theme-primary: #000000;
-    }
-
-    .carta-de-llamada-default .overlap-group {
-    align-items: flex-start;
-    align-self: flex-end;
-    background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237145d42a31b3d71f3385b/img/mapa@1x.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    display: flex;
-    margin-bottom: 262px;
-    margin-left: 46px;
-    min-width: 1px;
-    }
-
-    .carta-de-llamada-default .flex-col-3 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    margin-left: 3px;
-    min-height: 1336px;
-    width: 306px;
-    }
-
-    .carta-de-llamada-default .procedencia-de-la-llamada {
+    .carta-de-llamada-default .flex-col-item-Antedecendes-Up {
     height: 60px;
-    width: 263px;
-    }
-
-    .carta-de-llamada-default .flex-col-item-1 {
-    height: 60px;
+    margin-left: 2px;
     margin-top: 25px;
     width: 263px;
     }
 
-    .carta-de-llamada-default .flex-row-2 {
-    align-items: flex-start;
-    display: flex;
-    height: 922px;
-    margin-left: 7px;
-    margin-top: -177px;
-    min-width: 1092px;
+    .flex-col-item-Antedecendes-Up
+    .mdc-text-field--focused:not(.mdc-text-field--disabled)
+    .mdc-floating-label {
+    color: #000;
     }
 
-    .carta-de-llamada-default .flex-col-4 {
-    align-items: flex-start;
-    align-self: flex-end;
-    display: flex;
-    flex-direction: column;
-    min-height: 609px;
-    width: 313px;
+    .flex-col-item-Antedecendes-Up
+    .mdc-select:not(.mdc-select--disabled).mdc-select--focused
+    .mdc-floating-label {
+    color: var(--mdc-theme-primary);
     }
 
-    .carta-de-llamada-default .flex-row-3 {
-    align-items: center;
-    display: flex;
-    height: 289px;
-    margin-left: 0.5px;
-    margin-top: 94px;
-    min-width: 313px;
+    .flex-col-item-Antedecendes-Up .custom-enhanced-select-width {
+    width: 200px;
     }
 
-    .carta-de-llamada-default .flex-col-5 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-left: 49px;
-    min-height: 289px;
-    width: 263px;
-    }
-
-    .carta-de-llamada-default .flex-row-4 {
-    align-items: flex-start;
-    display: flex;
-    margin-left: 1px;
-    margin-top: 24px;
-    min-width: 188px;
-    }
-
-    .carta-de-llamada-default .hide-container {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    min-height: 686px;
-    width: 779px;
-    }
-
-    .carta-de-llamada-default .hide-up {
-    background-color: var(--white);
-    height: 313px;
-    width: 779px;
-    }
-
-    .carta-de-llamada-default .hide-down {
-    background-color: var(--white);
-    height: 146px;
-    margin-top: 227px;
-    width: 779px;
+    .flex-col-item-Antedecendes-Up .mdc-text-field {
+    --mdc-theme-primary: #000000;
     }
 
     .mdc-checkbox {
@@ -590,9 +491,9 @@
     .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused
     .mdc-checkbox__ripple::after {
     background-color: #0066ff !important;
-    } */
+    }
 
-    /* .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
     background-color: #ffffff;
     width: 263px;
     }
@@ -600,66 +501,18 @@
     .mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {
     background-color: #ffffff;
     width: 263px;
-    } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
     /* Second Part */
 
-/* .frame-1 {
-    margin-left: 415px;
-    margin-top: 110px;
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  min-height: 230px;
-  width: 263px;
+ .flex-row-2 {
+    align-items: flex-start;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 315px;
+    margin-top: -261px;
+    width: 263px;
 }
 
 .procedencia-de-la-llamada {
@@ -669,6 +522,12 @@
 
 .origen-de-la-llamada {
   height: 60px;
+  margin-top: 21px;
+  width: 263px;
+}
+
+.municipio {
+    height: 60px;
   margin-top: 25px;
   width: 263px;
 }
@@ -694,6 +553,6 @@
   display: flex;
   height: 48px;
   position: relative;
-} */
+}
 
 </style>
