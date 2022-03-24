@@ -60,52 +60,47 @@
                     </div>
                 </div>
             <!-- Second Part -->
-                        <!-- <input type="hidden" id="anPageName" name="page" value="390_1493" />
-                        <div class="frame-1">
-                        <div class="procedencia-de-la-llamada">
-                            <label class="mdc-text-field mdc-text-field--filled">
+                <!-- <input type="hidden" id="anPageName" name="page" value="390_1493" />
+                <div class="frame-1">
+                    <div class="procedencia-de-la-llamada">
+                        <label class="mdc-text-field mdc-text-field--filled">
                             <span class="mdc-text-field__ripple"></span>
                             <span class="mdc-floating-label" id="my-label-id">Procedencia de la llamada</span>
                             <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
                             <span class="mdc-line-ripple"></span>
-                            </label>
-                        </div>
-                        <div class="origen-de-la-llamada">
-                            <label class="mdc-text-field mdc-text-field--filled">
+                        </label>
+                    </div>
+                    <div class="origen-de-la-llamada">
+                        <label class="mdc-text-field mdc-text-field--filled">
                             <span class="mdc-text-field__ripple"></span>
                             <span class="mdc-floating-label" id="my-label-id">Origen de la llamada</span>
                             <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
                             <span class="mdc-line-ripple"></span>
-                            </label>
-                        </div>
-                        <div class="municipio">
-                            <div class="mdc-select mdc-select--filled demo-width-class">
-                            <div
-                                class="mdc-select__anchor custom-enhanced-select-width"
-                                role="button"
-                                aria-haspopup="listbox"
-                                aria-expanded="false"
-                            >
+                        </label>
+                    </div>
+                    <div class="municipio">
+                        <div class="mdc-select mdc-select--filled demo-width-class">
+                            <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                 <span class="mdc-select__ripple"></span> <span id="demo-label" class="mdc-floating-label">Municipio</span>
                                 <span class="mdc-select__selected-text-container">
-                                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                    <span id="demo-selected-text" class="mdc-select__selected-text"></span>
                                 </span>
                                 <span class="mdc-select__dropdown-icon">
-                                <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
-                                <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
+                                    <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
+                                    <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
                                 </span>
                                 <span class="mdc-line-ripple"></span>
                             </div>
                             <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
                                 <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                <li class="mdc-list-item" data-value="Item" role="option">
-                                    <span class="mdc-list-item__ripple"></span> <span class="mdc-list-item__text">Item</span>
-                                </li>
+                                    <li class="mdc-list-item" data-value="Item" role="option">
+                                        <span class="mdc-list-item__ripple"></span> <span class="mdc-list-item__text">Item</span>
+                                    </li>
                                 </ul>
                             </div>
-                            </div>
                         </div>
-                        </div> -->
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -160,10 +155,10 @@
         "cartaDeLlamada",
         "datosDelInterlocutor",
         "guardarDatos",
-        "datosDelAccidente",
-        "mapa",
-        "overlapGroup",
-        "frameMap",
+        // "datosDelAccidente",
+        // "mapa",
+        // "overlapGroup",
+        // "frameMap",
     ],
         computed: {
             descripcioLocalitzacio: function () {
@@ -293,9 +288,9 @@
             new mdc.textField.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".flex-col-item-Direccion-Up .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".flex-col-item-Antedecendes-Up .mdc-text-field"));
-            new mdc.textField.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
-            new mdc.textField.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
-            new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
+            // new mdc.textField.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
+            // new mdc.textField.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
+            // new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
         },
     };
 </script>
