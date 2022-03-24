@@ -1,78 +1,75 @@
 <template>
     <div>
-        <h3>Datos Incidente</h3>
-        <input type="checkbox" name="catalunya" id="catalunya" v-model="datos_incidente.catalunya">
-        <label for="catalunya">El accidente a sido fuera de catalunya</label>
-        <br>
-        <label for="comarca">Comarca</label>
-        <select class="form-control" id="comarca" v-model="datos_incidente.comarca">
-            <option value=""></option>
-            <option v-for="comarca in comarcas" :key="comarca.id">
-                {{ comarca.nom }}
-            </option>
-        </select>
-        <label for="provincia">Provincia</label>
-        <select class="form-control" id="provincia" v-model="datos_incidente.provincia" >
-            <option value=""></option>
-            <option v-for="provincia in provincias" :key="provincia.id">
-                {{ provincia.nom }}
-            </option>
-        </select>
-        <label for="mucipio">Municipio</label>
-        <select class="form-connitrol" id="municipio" v-model="datos_incidente.municipio">
-            <option value=""></option>
-            <option v-for="municipio in municipios" :key="municipio.id">
-                {{ municipio.nom }}
-            </option>
-        </select>
-        <h4>Tipos de localizacion</h4>
-        <select class="form-control" id="tiposLocalizacion" v-model="datos_incidente.localizacion">
-            <option value=""></option>
-            <option v-for="tiposLocalizacion in tiposLocalizaciones" :key="tiposLocalizacion.id">
-                {{ tiposLocalizacion.tipus   }}
-            </option>
-        </select>
-        <span>
-            <label for="via">Via</label>
-            <input type="text" name="via" id="via" v-model="calle.via">
-            <label for="direccion">Direccion</label>
-            <input type="text" name="direccion" id="direccion" v-model="calle.direccion">
-            <label for="numero">Numero puerta</label>
-            <input type="number" name="numero" id="numero" v-model="calle.numero">
-            <label for="escala">Escala</label>
-            <input type="text" name="escala" id="escala" v-model="calle2.escala">
-            <label for="piso">Piso</label>
-            <input type="number" name="piso" id="piso" v-model="calle2.piso">
-            <label for="puerta">Puerta</label>
-            <input type="number" name="puerta" id="puerta" v-model="calle.puerta">
-        </span>
-        <span>
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" v-model="puntoSingular.nombre">
-        </span>
-        <span>
-            <label for="carretera">Carretera</label>
-            <input type="text" name="carretera" id="carretera" v-model="carretera.carretera">
-            <label for="puntoKM">Punto kilometrico</label>
-            <input type="number" name="puntoKM" id="puntoKM" v-model="carretera.puntoKm">
-            <label for="sentido">Sentido</label>
-            <input type="text" name="sentido" id="sentido" v-model="carretera2.sentido">
-        </span>
-        <h4>Emergencia</h4>
-        <label for="tiposIncidete">Tipo Incidente</label>
-        <select class="form-control" id="tiposIncidete" v-model="datos_incidente.tiposIncidente">
-            <option value=""></option>
-            <option v-for="tIncidente in tIncidentes" :key="tIncidente.id">
-                {{ tIncidente.descripcio }}
-            </option>
-        </select>
-        <label for="incidente">Incidente</label>
-        <select class="form-control" id="incidente" v-model="datos_incidente.incidente">
-            <option value=""></option>
-            <option v-for="incidente in incidentes" :key="incidente.id">
-                {{ incidente.descripcio }}
-            </option>
-        </select>
+        <input type="hidden" id="anPageName" name="page" value="carta-de-llamada-default" />
+            <div class="container-center-horizontal">
+                <div class="carta-de-llamada-default screen">
+                    <div class="container-scrolling">
+                        <div class="flex-col">
+                            <div class="flex-row">
+                                <div class="flex-col-1">
+                                    <h1 class="title valign-text-middle gothica1-normal-black-28px">Carta de llamada</h1>
+                                    <div class="datos-del-interlocutor valign-text-middle gothica1-normal-black-21px">
+                                        Datos del interlocutor
+                                    </div>
+                                </div>
+                                <div class="guardar-datos-checkbox">
+                                    <div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox" data-id="anima-widget">
+                                        <input type="checkbox" checked class="mdc-checkbox__native-control" />
+                                        <div class="mdc-checkbox__background">
+                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                        </svg>
+                                        <div class="mdc-checkbox__mixedmark"></div>
+                                    </div>
+                                    <div class="mdc-checkbox__ripple"></div>
+                                </div>
+                                <!-- <script>
+                                mdc.autoInit();
+                                </script> -->
+                            </div>
+                            <div class="guardar-datos roboto-normal-black-16px">Guardar datos</div>
+                        </div>
+                        <div class="flex-row-1">
+                            <div class="flex-col-2">
+                                <div class="telefono">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">Teléfono</span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                    <!-- <script>
+                                        new mdc.textField.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
+                                    </script> -->
+                                </div>
+                                <div class="flex-col-item">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">Direccion</span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                    <!-- <script>
+                                        new mdc.textField.MDCTextField(document.querySelector(".flex-col-item .mdc-text-field"));
+                                    </script> -->
+                                </div>
+                                <div class="flex-col-item">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">Antedecentes</span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                    <!-- <script>
+                                        new mdc.textField.MDCTextField(document.querySelector(".flex-col-item .mdc-text-field"));
+                                    </script> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -246,3 +243,6 @@ export default {
     },
 };
 </script>
+<style>
+
+</style>
