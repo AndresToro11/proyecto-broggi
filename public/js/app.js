@@ -5421,15 +5421,21 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     getDataPersonal: function getDataPersonal(array) {
-      cartaLlamada.telefon = array.telefono, cartaLlamada.procedencia_trucada = array.procedencia, cartaLlamada.origen_trucada = array.origen, cartaLlamada.municipis_id_trucada = array.municipio, cartaLlamada.adreca_trucada = array.direccion, cartaLlamada.nota_comuna = array.notaComun;
+      this.cartaLlamada.telefon = array.telefono, this.cartaLlamada.procedencia_trucada = array.procedencia, this.cartaLlamada.origen_trucada = array.origen, this.cartaLlamada.municipis_id_trucada = array.municipio, this.cartaLlamada.adreca_trucada = array.direccion, this.cartaLlamada.nota_comuna = array.notaComun;
     },
     getDataIncidente: function getDataIncidente(array) {
-      cartaLlamada.fora_catalunya = array.catalunya, cartaLlamada.provincies_id = array.provincia, cartaLlamada.municipis_id = array.municipio, cartaLlamada.tipus_localitzacions_id = array.localizacion, cartaLlamada.descripcio_localitzacio = array.descripcio_localitzacio, cartaLlamada.detall_localitzacio = array.detall_localitzacio, cartaLlamada.incidents_id = array.incidente;
+      if (array.localizacion == 'Fuera Cataluña') {
+        this.cartaLlamada.fora_catalunya = 1;
+      } else {
+        this.cartaLlamada.fora_catalunya = 0;
+      }
+
+      this.cartaLlamada.provincies_id = array.provincia, this.cartaLlamada.municipis_id = array.municipio, this.cartaLlamada.tipus_localitzacions_id = array.localizacion, this.cartaLlamada.descripcio_localitzacio = array.descripcio_localitzacio, this.cartaLlamada.detall_localitzacio = array.detall_localitzacio, this.cartaLlamada.incidents_id = array.incidente;
     },
     getDataAdministrativos: function getDataAdministrativos(contador) {
       this.contador = contador;
     },
-    insertBD: function insertBD(cartaLlamada) {
+    insertBD: function insertBD() {
       var me = this;
       axios.post("/llamada", me.cartaLlamada).then(function (response) {
         console.log("Insert OK");
@@ -5437,16 +5443,6 @@ __webpack_require__.r(__webpack_exports__);
         this.console.log("Error:");
         console.log(error);
       });
-    },
-    botonBD: function botonBD() {
-      console.log("AVEZTRUZ");
-      this.$emit("setDataPersonal");
-      this.$emit("setDataIncidente");
-      this.$emit("setDataAdministrativos");
-      setDataPersonal();
-      setDataIncidente();
-      Administrativo.setDataAdministrativos();
-      setTimeout(insertBD(cartaLlamada), 2000);
     }
   },
   computed: {
@@ -5594,12 +5590,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5629,6 +5619,9 @@ __webpack_require__.r(__webpack_exports__);
       carretera2: {
         sentido: ""
       },
+      fueraCatalunya: {
+        provincia: ""
+      },
       datos_incidente: {
         catalunya: "",
         comarca: "",
@@ -5643,56 +5636,6 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  // computed: {
-  //     descripcioLocalitzacio: function () {
-  //         let varianle;
-  //         switch (this.datos_incidente.localizacion) {
-  //             case 1:
-  //                 varianle=this.calle;
-  //                 break;
-  //             case 2:
-  //                 varianle=this.puntoSingular;
-  //                 break;
-  //             case 3:
-  //                 varianle=this.null;
-  //                 break;
-  //             case 4:
-  //                 varianle=this.carretera;
-  //                 break;
-  //             case 5:
-  //                 varianle=this.datos_incidente.provincia;
-  //                 break;
-  //             default:
-  //                 break;
-  //         }
-  //         this.datos_incidente.descripcio_localitzacio = varianle;
-  //         this.setDataIncidente();
-  //     },
-  //     detallLocalitzacio: function () {
-  //         let varianle;
-  //         switch (this.datos_incidente.localizacion) {
-  //             case 1:
-  //                 varianle=this.calle2;
-  //                 break;
-  //             case 2:
-  //                 varianle=null;
-  //                 break;
-  //             case 3:
-  //                 varianle=this.null;
-  //                 break;
-  //             case 4:
-  //                 varianle=this.carretera2;
-  //                 break;
-  //             case 5:
-  //                 varianle=null;
-  //                 break;
-  //             default:
-  //                 break;
-  //         }
-  //         this.datos_incidente.detall_localitzacio = varianle;
-  //         this.setDataIncidente();
-  //     }
-  // },
   methods: {
     emit: function emit() {
       this.$emit();
@@ -5756,27 +5699,29 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit("get-dataincidente", this.datos_incidente);
     },
     descripcioLocalitzacio: function descripcioLocalitzacio() {
+      console.log("descripcion");
       var varianle;
+      this.datos_incidente.descripcio_localitzacio = " ";
 
       switch (this.datos_incidente.localizacion) {
         case 'Carrers':
-          varianle = this.calle;
+          varianle = this.calle.via + " " + this.calle.direccion + " " + this.calle.numPuerta;
           break;
 
-        case 2:
-          varianle = this.puntoSingular;
+        case 'Punt Singular':
+          varianle = this.puntoSingular.nombre;
           break;
 
-        case 3:
-          varianle = this["null"];
+        case 'Entitat Població':
+          varianle = " ";
           break;
 
-        case 4:
-          varianle = this.carretera;
+        case 'Carretera':
+          varianle = this.carretera.carretera + " " + this.carretera.puntoKm;
           break;
 
-        case 5:
-          varianle = this.datos_incidente.provincia;
+        case 'Fuera Cataluña':
+          varianle = this.fueraCatalunya.provincia;
           break;
 
         default:
@@ -5789,27 +5734,29 @@ __webpack_require__.r(__webpack_exports__);
       this.setDataIncidente();
     },
     detallLocalitzacio: function detallLocalitzacio() {
+      console.log("detalle");
       var varianle;
+      this.datos_incidente.detall_localitzacio = " ";
 
       switch (this.datos_incidente.localizacion) {
-        case 1:
-          varianle = this.calle2;
+        case 'Carrers':
+          varianle = this.calle2.escalera + " " + this.calle2.piso + " " + this.calle2.puerta;
           break;
 
-        case 2:
-          varianle = null;
+        case 'Entitat Població':
+          varianle = " ";
           break;
 
-        case 3:
-          varianle = this["null"];
+        case 'Punt Singular':
+          varianle = " ";
           break;
 
-        case 4:
-          varianle = this.carretera2;
+        case 'Carretera':
+          varianle = this.carretera2.sentido;
           break;
 
-        case 5:
-          varianle = null;
+        case 'Fuera Cataluña':
+          varianle = " ";
           break;
 
         default:
@@ -5817,6 +5764,12 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this.datos_incidente.detall_localitzacio = varianle;
+      this.setDataIncidente();
+    },
+    activarFunciones: function activarFunciones() {
+      console.log("activar");
+      this.descripcioLocalitzacio();
+      this.detallLocalitzacio();
       this.setDataIncidente();
     }
   },
@@ -5839,6 +5792,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -5905,6 +5859,10 @@ __webpack_require__.r(__webpack_exports__);
     setDataPersonal: function setDataPersonal() {
       console.log('Personal');
       this.$emit("get-datapersonal", this.datos_personales);
+    },
+    activarFunciones: function activarFunciones() {
+      console.log("activar");
+      this.setDataPersonal();
     }
   },
   mounted: function mounted() {
@@ -6343,9 +6301,9 @@ Vue.component('expedientes', (__webpack_require__(/*! ./components/expedientes.v
 
 Vue.component('grafico', (__webpack_require__(/*! ./components/grafico.vue */ "./resources/js/components/grafico.vue")["default"])); //----------------------------------------------- Home ------------------------------------
 
-Vue.component('administrador', (__webpack_require__(/*! ./components/home/administrador.vue */ "./resources/js/components/home/administrador.vue")["default"]));
-Vue.component('operador', (__webpack_require__(/*! ./components/home/operador.vue */ "./resources/js/components/home/operador.vue")["default"]));
-Vue.component('supervisor', (__webpack_require__(/*! ./components/home/supervisor.vue */ "./resources/js/components/home/supervisor.vue")["default"])); //-----------------------------------------------------------------------------------------
+Vue.component('user-administrador', (__webpack_require__(/*! ./components/home/administrador.vue */ "./resources/js/components/home/administrador.vue")["default"]));
+Vue.component('user-operador', (__webpack_require__(/*! ./components/home/operador.vue */ "./resources/js/components/home/operador.vue")["default"]));
+Vue.component('user-supervisor', (__webpack_require__(/*! ./components/home/supervisor.vue */ "./resources/js/components/home/supervisor.vue")["default"])); //-----------------------------------------------------------------------------------------
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -43027,7 +42985,7 @@ var render = function () {
           attrs: { type: "button" },
           on: {
             click: function ($event) {
-              return _vm.botonBD()
+              return _vm.insertBD()
             },
           },
         },
@@ -43103,104 +43061,6 @@ var render = function () {
   return _c("div", [
     _c("h3", [_vm._v("Datos Incidente")]),
     _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_incidente.catalunya,
-          expression: "datos_incidente.catalunya",
-        },
-      ],
-      attrs: { type: "checkbox", name: "catalunya", id: "catalunya" },
-      domProps: {
-        checked: Array.isArray(_vm.datos_incidente.catalunya)
-          ? _vm._i(_vm.datos_incidente.catalunya, null) > -1
-          : _vm.datos_incidente.catalunya,
-      },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataIncidente(_vm.datos_incidente)
-        },
-        change: function ($event) {
-          var $$a = _vm.datos_incidente.catalunya,
-            $$el = $event.target,
-            $$c = $$el.checked ? true : false
-          if (Array.isArray($$a)) {
-            var $$v = null,
-              $$i = _vm._i($$a, $$v)
-            if ($$el.checked) {
-              $$i < 0 &&
-                _vm.$set(_vm.datos_incidente, "catalunya", $$a.concat([$$v]))
-            } else {
-              $$i > -1 &&
-                _vm.$set(
-                  _vm.datos_incidente,
-                  "catalunya",
-                  $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                )
-            }
-          } else {
-            _vm.$set(_vm.datos_incidente, "catalunya", $$c)
-          }
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "catalunya" } }, [
-      _vm._v("El accidente a sido fuera de catalunya"),
-    ]),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "comarca" } }, [_vm._v("Comarca")]),
-    _vm._v(" "),
-    _c(
-      "select",
-      {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.datos_incidente.comarca,
-            expression: "datos_incidente.comarca",
-          },
-        ],
-        staticClass: "form-control",
-        attrs: { id: "comarca" },
-        on: {
-          blur: function ($event) {
-            return _vm.setDataIncidente(_vm.datos_incidente)
-          },
-          change: function ($event) {
-            var $$selectedVal = Array.prototype.filter
-              .call($event.target.options, function (o) {
-                return o.selected
-              })
-              .map(function (o) {
-                var val = "_value" in o ? o._value : o.value
-                return val
-              })
-            _vm.$set(
-              _vm.datos_incidente,
-              "comarca",
-              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-            )
-          },
-        },
-      },
-      [
-        _c("option", { attrs: { value: "" } }),
-        _vm._v(" "),
-        _vm._l(_vm.comarcas, function (comarca) {
-          return _c("option", { key: comarca.id }, [
-            _vm._v("\n            " + _vm._s(comarca.nom) + "\n        "),
-          ])
-        }),
-      ],
-      2
-    ),
-    _vm._v(" "),
     _c("label", { attrs: { for: "provincia" } }, [_vm._v("Provincia")]),
     _vm._v(" "),
     _c(
@@ -43249,6 +43109,56 @@ var render = function () {
       2
     ),
     _vm._v(" "),
+    _c("label", { attrs: { for: "comarca" } }, [_vm._v("Comarca")]),
+    _vm._v(" "),
+    _c(
+      "select",
+      {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.datos_incidente.comarca,
+            expression: "datos_incidente.comarca",
+          },
+        ],
+        staticClass: "form-control",
+        attrs: { id: "comarca" },
+        on: {
+          change: [
+            function ($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function (o) {
+                  return o.selected
+                })
+                .map(function (o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.$set(
+                _vm.datos_incidente,
+                "comarca",
+                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+              )
+            },
+            function ($event) {
+              return _vm.activarFunciones()
+            },
+          ],
+        },
+      },
+      [
+        _c("option", { attrs: { value: "" } }),
+        _vm._v(" "),
+        _vm._l(_vm.comarcas, function (comarca) {
+          return _c("option", { key: comarca.id }, [
+            _vm._v("\n            " + _vm._s(comarca.nom) + "\n        "),
+          ])
+        }),
+      ],
+      2
+    ),
+    _vm._v(" "),
     _c("label", { attrs: { for: "mucipio" } }, [_vm._v("Municipio")]),
     _vm._v(" "),
     _c(
@@ -43262,27 +43172,29 @@ var render = function () {
             expression: "datos_incidente.municipio",
           },
         ],
-        staticClass: "form-connitrol",
+        staticClass: "form-control",
         attrs: { id: "municipio" },
         on: {
-          blur: function ($event) {
-            return _vm.setDataIncidente(_vm.datos_incidente)
-          },
-          change: function ($event) {
-            var $$selectedVal = Array.prototype.filter
-              .call($event.target.options, function (o) {
-                return o.selected
-              })
-              .map(function (o) {
-                var val = "_value" in o ? o._value : o.value
-                return val
-              })
-            _vm.$set(
-              _vm.datos_incidente,
-              "municipio",
-              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-            )
-          },
+          change: [
+            function ($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function (o) {
+                  return o.selected
+                })
+                .map(function (o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.$set(
+                _vm.datos_incidente,
+                "municipio",
+                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+              )
+            },
+            function ($event) {
+              return _vm.activarFunciones()
+            },
+          ],
         },
       },
       [
@@ -43313,24 +43225,26 @@ var render = function () {
         staticClass: "form-control",
         attrs: { id: "tiposLocalizacion", required: "" },
         on: {
-          blur: function ($event) {
-            return _vm.setDataIncidente(_vm.datos_incidente)
-          },
-          change: function ($event) {
-            var $$selectedVal = Array.prototype.filter
-              .call($event.target.options, function (o) {
-                return o.selected
-              })
-              .map(function (o) {
-                var val = "_value" in o ? o._value : o.value
-                return val
-              })
-            _vm.$set(
-              _vm.datos_incidente,
-              "localizacion",
-              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-            )
-          },
+          change: [
+            function ($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function (o) {
+                  return o.selected
+                })
+                .map(function (o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.$set(
+                _vm.datos_incidente,
+                "localizacion",
+                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+              )
+            },
+            function ($event) {
+              return _vm.activarFunciones()
+            },
+          ],
         },
       },
       [
@@ -43442,7 +43356,7 @@ var render = function () {
             domProps: { value: _vm.calle2.escalera },
             on: {
               blur: function ($event) {
-                return _vm.setDataIncidente(_vm.datos_incidente)
+                return _vm.detallLocalitzacio()
               },
               input: function ($event) {
                 if ($event.target.composing) {
@@ -43468,7 +43382,7 @@ var render = function () {
             domProps: { value: _vm.calle2.piso },
             on: {
               blur: function ($event) {
-                return _vm.setDataIncidente(_vm.datos_incidente)
+                return _vm.detallLocalitzacio()
               },
               input: function ($event) {
                 if ($event.target.composing) {
@@ -43494,7 +43408,7 @@ var render = function () {
             domProps: { value: _vm.calle2.puerta },
             on: {
               blur: function ($event) {
-                return _vm.setDataIncidente(_vm.datos_incidente)
+                return _vm.detallLocalitzacio()
               },
               input: function ($event) {
                 if ($event.target.composing) {
@@ -43522,7 +43436,7 @@ var render = function () {
             domProps: { value: _vm.puntoSingular.nombre },
             on: {
               blur: function ($event) {
-                return _vm.setDataIncidente(_vm.datos_incidente)
+                return _vm.descripcioLocalitzacio()
               },
               input: function ($event) {
                 if ($event.target.composing) {
@@ -43550,7 +43464,7 @@ var render = function () {
             domProps: { value: _vm.carretera.carretera },
             on: {
               blur: function ($event) {
-                return _vm.setDataIncidente(_vm.datos_incidente)
+                return _vm.descripcioLocalitzacio()
               },
               input: function ($event) {
                 if ($event.target.composing) {
@@ -43578,7 +43492,7 @@ var render = function () {
             domProps: { value: _vm.carretera.puntoKm },
             on: {
               blur: function ($event) {
-                return _vm.setDataIncidente(_vm.datos_incidente)
+                return _vm.descripcioLocalitzacio()
               },
               input: function ($event) {
                 if ($event.target.composing) {
@@ -43604,7 +43518,7 @@ var render = function () {
             domProps: { value: _vm.carretera2.sentido },
             on: {
               blur: function ($event) {
-                return _vm.setDataIncidente(_vm.datos_incidente)
+                return _vm.detallLocalitzacio()
               },
               input: function ($event) {
                 if ($event.target.composing) {
@@ -43620,11 +43534,29 @@ var render = function () {
           _c("label", { attrs: { for: "provincia" } }, [_vm._v("Provincia")]),
           _vm._v(" "),
           _c("input", {
-            attrs: { type: "text", id: "provincia", disabled: "" },
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.fueraCatalunya.provincia,
+                expression: "fueraCatalunya.provincia",
+              },
+            ],
+            attrs: { type: "text", id: "provinciaOut" },
+            domProps: { value: _vm.fueraCatalunya.provincia },
+            on: {
+              blur: function ($event) {
+                return _vm.descripcioLocalitzacio()
+              },
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.fueraCatalunya, "provincia", $event.target.value)
+              },
+            },
           }),
         ])
-      : _vm.datos_incidente.localizacion === "Entitat Població"
-      ? _c("span")
       : _vm._e(),
     _vm._v(" "),
     _c("h4", [_vm._v("Emergencia")]),
@@ -43647,21 +43579,26 @@ var render = function () {
         staticClass: "form-control",
         attrs: { id: "tiposIncidete" },
         on: {
-          change: function ($event) {
-            var $$selectedVal = Array.prototype.filter
-              .call($event.target.options, function (o) {
-                return o.selected
-              })
-              .map(function (o) {
-                var val = "_value" in o ? o._value : o.value
-                return val
-              })
-            _vm.$set(
-              _vm.datos_incidente,
-              "tiposIncidente",
-              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-            )
-          },
+          change: [
+            function ($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function (o) {
+                  return o.selected
+                })
+                .map(function (o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.$set(
+                _vm.datos_incidente,
+                "tiposIncidente",
+                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+              )
+            },
+            function ($event) {
+              return _vm.activarFunciones()
+            },
+          ],
         },
       },
       [
@@ -43694,21 +43631,26 @@ var render = function () {
         staticClass: "form-control",
         attrs: { id: "incidente" },
         on: {
-          change: function ($event) {
-            var $$selectedVal = Array.prototype.filter
-              .call($event.target.options, function (o) {
-                return o.selected
-              })
-              .map(function (o) {
-                var val = "_value" in o ? o._value : o.value
-                return val
-              })
-            _vm.$set(
-              _vm.datos_incidente,
-              "incidente",
-              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-            )
-          },
+          change: [
+            function ($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function (o) {
+                  return o.selected
+                })
+                .map(function (o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.$set(
+                _vm.datos_incidente,
+                "incidente",
+                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+              )
+            },
+            function ($event) {
+              return _vm.activarFunciones()
+            },
+          ],
         },
       },
       [
@@ -43763,9 +43705,12 @@ var render = function () {
           expression: "datos_personales.telefono",
         },
       ],
-      attrs: { type: "text", name: "telefono", id: "telefono", required: "" },
+      attrs: { type: "number", name: "telefono", id: "telefono", required: "" },
       domProps: { value: _vm.datos_personales.telefono },
       on: {
+        blur: function ($event) {
+          return _vm.setDataPersonal()
+        },
         input: function ($event) {
           if ($event.target.composing) {
             return
@@ -43794,6 +43739,9 @@ var render = function () {
       },
       domProps: { value: _vm.datos_personales.antecedentes },
       on: {
+        blur: function ($event) {
+          return _vm.setDataPersonal()
+        },
         input: function ($event) {
           if ($event.target.composing) {
             return
@@ -43826,6 +43774,9 @@ var render = function () {
       },
       domProps: { value: _vm.datos_personales.procedencia },
       on: {
+        blur: function ($event) {
+          return _vm.setDataPersonal()
+        },
         input: function ($event) {
           if ($event.target.composing) {
             return
@@ -43849,6 +43800,9 @@ var render = function () {
       attrs: { type: "text", name: "origen", id: "origen", required: "" },
       domProps: { value: _vm.datos_personales.origen },
       on: {
+        blur: function ($event) {
+          return _vm.setDataPersonal()
+        },
         input: function ($event) {
           if ($event.target.composing) {
             return
@@ -43872,23 +43826,28 @@ var render = function () {
           },
         ],
         staticClass: "form-control",
-        attrs: { id: "municipio" },
+        attrs: { id: "municipio", required: "" },
         on: {
-          change: function ($event) {
-            var $$selectedVal = Array.prototype.filter
-              .call($event.target.options, function (o) {
-                return o.selected
-              })
-              .map(function (o) {
-                var val = "_value" in o ? o._value : o.value
-                return val
-              })
-            _vm.$set(
-              _vm.datos_personales,
-              "municipio",
-              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-            )
-          },
+          change: [
+            function ($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function (o) {
+                  return o.selected
+                })
+                .map(function (o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.$set(
+                _vm.datos_personales,
+                "municipio",
+                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+              )
+            },
+            function ($event) {
+              return _vm.activarFunciones()
+            },
+          ],
         },
       },
       [
@@ -43917,6 +43876,9 @@ var render = function () {
       attrs: { type: "text", name: "direccion", id: "direccion", required: "" },
       domProps: { value: _vm.datos_personales.direccion },
       on: {
+        blur: function ($event) {
+          return _vm.setDataPersonal()
+        },
         input: function ($event) {
           if ($event.target.composing) {
             return
@@ -43946,6 +43908,9 @@ var render = function () {
       },
       domProps: { value: _vm.datos_personales.notaComun },
       on: {
+        blur: function ($event) {
+          return _vm.setDataPersonal()
+        },
         input: function ($event) {
           if ($event.target.composing) {
             return
@@ -44234,7 +44199,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/grafico",
+                href: "/proyecto-broggi/public/grafico",
                 type: "button",
               },
             },
@@ -44248,7 +44213,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/grafico",
+                href: "/proyecto-broggi/public/grafico",
                 type: "button",
               },
             },
@@ -44262,7 +44227,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/grafico",
+                href: "/proyecto-broggi/public/grafico",
                 type: "button",
               },
             },
@@ -44314,7 +44279,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/llamada",
+                href: "/proyecto-broggi/public/llamada",
                 type: "button",
               },
             },
@@ -44327,7 +44292,7 @@ var staticRenderFns = [
             "a",
             {
               staticClass: "btn btn-primary",
-              attrs: { href: "/proyecto_broggi/public/video", type: "button" },
+              attrs: { href: "/proyecto-broggi/public/video", type: "button" },
             },
             [_vm._v("Video")]
           ),
@@ -44377,7 +44342,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/llamada",
+                href: "/proyecto-broggi/public/llamada",
                 type: "button",
               },
             },
@@ -44391,7 +44356,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/grafico",
+                href: "/proyecto-broggi/public/grafico",
                 type: "button",
               },
             },
@@ -44407,7 +44372,7 @@ var staticRenderFns = [
             {
               staticClass: "btn btn-primary",
               attrs: {
-                href: "/proyecto_broggi/public/llamada",
+                href: "/proyecto-broggi/public/llamada",
                 type: "button",
               },
             },
@@ -44420,7 +44385,7 @@ var staticRenderFns = [
             "a",
             {
               staticClass: "btn btn-primary",
-              attrs: { href: "/proyecto_broggi/public/video", type: "button" },
+              attrs: { href: "/proyecto-broggi/public/video", type: "button" },
             },
             [_vm._v("Estado operadores")]
           ),

@@ -5,7 +5,7 @@
         <datos-incidentes @get-dataincidente="getDataIncidente"></datos-incidentes>
         <h3>boton</h3>
         <button type="button">Cancelar</button>
-        <button type="button" @click="botonBD()">Aceptar</button>
+        <button type="button" @click="insertBD()">Aceptar</button>
         <expedientes-relacionados></expedientes-relacionados>
         <h4>Funciona</h4>
     </div>
@@ -55,26 +55,30 @@ export default {
                 .finally(() => (this.loading = false));
         },
         getDataPersonal(array) {
-            (cartaLlamada.telefon = array.telefono),
-                (cartaLlamada.procedencia_trucada = array.procedencia),
-                (cartaLlamada.origen_trucada = array.origen),
-                (cartaLlamada.municipis_id_trucada = array.municipio),
-                (cartaLlamada.adreca_trucada = array.direccion),
-                (cartaLlamada.nota_comuna = array.notaComun);
+                (this.cartaLlamada.telefon = array.telefono),
+                (this.cartaLlamada.procedencia_trucada = array.procedencia),
+                (this.cartaLlamada.origen_trucada = array.origen),
+                (this.cartaLlamada.municipis_id_trucada = array.municipio),
+                (this.cartaLlamada.adreca_trucada = array.direccion),
+                (this.cartaLlamada.nota_comuna = array.notaComun);
         },
         getDataIncidente(array) {
-            (cartaLlamada.fora_catalunya = array.catalunya),
-                (cartaLlamada.provincies_id = array.provincia),
-                (cartaLlamada.municipis_id = array.municipio),
-                (cartaLlamada.tipus_localitzacions_id = array.localizacion),
-                (cartaLlamada.descripcio_localitzacio = array.descripcio_localitzacio),
-                (cartaLlamada.detall_localitzacio = array.detall_localitzacio),
-                (cartaLlamada.incidents_id = array.incidente);
+                if (array.localizacion =='Fuera Cataluña') {
+                    (this.cartaLlamada.fora_catalunya = 1);
+                }else{
+                    (this.cartaLlamada.fora_catalunya = 0);
+                }
+                (this.cartaLlamada.provincies_id = array.provincia),
+                (this.cartaLlamada.municipis_id = array.municipio),
+                (this.cartaLlamada.tipus_localitzacions_id = array.localizacion),
+                (this.cartaLlamada.descripcio_localitzacio = array.descripcio_localitzacio),
+                (this.cartaLlamada.detall_localitzacio = array.detall_localitzacio),
+                (this.cartaLlamada.incidents_id = array.incidente);
         },
         getDataAdministrativos(contador) {
             this.contador = contador;
         },
-        insertBD(cartaLlamada) {
+        insertBD() {
             let me = this;
             axios
                 .post("/llamada", me.cartaLlamada)
@@ -85,16 +89,6 @@ export default {
                     this.console.log("Error:");
                     console.log(error);
                 });
-        },
-        botonBD() {
-            console.log("AVEZTRUZ");
-            this.$emit("setDataPersonal");
-            this.$emit("setDataIncidente");
-            this.$emit("setDataAdministrativos");
-            setDataPersonal();
-            setDataIncidente();
-            Administrativo.setDataAdministrativos();
-            setTimeout(insertBD(cartaLlamada), 2000);
         },
     },
     computed: {

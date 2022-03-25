@@ -39,9 +39,9 @@ Vue.component('grafico', require('./components/grafico.vue').default);
 
 //----------------------------------------------- Home ------------------------------------
 
-Vue.component('administrador', require('./components/home/administrador.vue').default);
-Vue.component('operador', require('./components/home/operador.vue').default);
-Vue.component('supervisor', require('./components/home/supervisor.vue').default);
+Vue.component('user-administrador', require('./components/home/administrador.vue').default);
+Vue.component('user-operador', require('./components/home/operador.vue').default);
+Vue.component('user-supervisor', require('./components/home/supervisor.vue').default);
 
 //-----------------------------------------------------------------------------------------
 

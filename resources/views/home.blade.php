@@ -2,19 +2,20 @@
 
 @extends('layouts.plantilla')
 
-@section('titulo', 'Expedientes')
+@section('titulo', 'jojo')
+
 
 @section('contenido')
 
 
     @if(session('rol') == "administrador")
-    <administrador></administrador>
+    <user-administrador></user-administrador>
 
     @elseif(session('rol') == "operador")
-    <operador></operador>
+    <user-operador></user-operador>
 
     @elseif(session('rol') == "supervisor")
-    <supervisor></supervisor>
+    <user-supervisor></user-supervisor>
 
     @endif
 
