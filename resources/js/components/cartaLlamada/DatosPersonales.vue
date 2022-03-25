@@ -142,13 +142,72 @@
                     <!-- Third Column -->
                     <div class="flex-row-3">
                         <div class="flex-col-4">
-                            <div class="nota-comun"> <!-- Nota Comun -->
-                                <label class="mdc-text-field mdc-text-field--filled" id="notaComun">
-                                    <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="notaComunLabel">Nota Común</span>
-                                    <input type="text" class="mdc-text-field__input" id="input-NotaComun" aria-labelledby="my-label-id" />
-                                    <span class="mdc-line-ripple"></span>
-                                </label>
+                            <div class="incidente">
+                                <div class="mdc-select mdc-select--filled demo-width-class" data-id="anima-widget">
+                                    <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                        <span class="mdc-select__ripple"></span>
+                                        <span id="demo-label" class="mdc-floating-label">Tipos de Incidente</span>
+                                        <span class="mdc-select__selected-text-container">
+                                            <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                        </span>
+                                        <span class="mdc-select__dropdown-icon">
+                                            <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
+                                            <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
+                                        </span>
+                                        <span class="mdc-line-ripple"></span>
+                                    </div>
+                                    <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                        <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                                            <li class="mdc-list-item" data-value="X" role="option">
+                                                <span class="mdc-list-item__ripple"></span> <span class="mdc-list-item__text">X</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tipo-de-incidente">
+                                <div class="mdc-select mdc-select--filled demo-width-class" data-id="anima-widget">
+                                    <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                        <span class="mdc-select__ripple"></span>
+                                        <span id="demo-label" class="mdc-floating-label">Tipos de Incidente</span>
+                                        <span class="mdc-select__selected-text-container">
+                                            <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                        </span>
+                                        <span class="mdc-select__dropdown-icon">
+                                            <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
+                                            <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
+                                        </span>
+                                        <span class="mdc-line-ripple"></span>
+                                    </div>
+                                    <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                        <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                                            <li class="mdc-list-item" data-value="X" role="option">
+                                                <span class="mdc-list-item__ripple"></span>
+                                                <span class="mdc-list-item__text">X</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mapa-up" id="mapa-up">
+                                <button class="mdc-button mdc-button--raised" id="mapa-up">
+                                    <span class="mdc-button__ripple"></span>
+                                    <span class="mdc-button__label">Mapa</span>
+                                </button>
+                            </div>
+                            <div class="flex-row-4">
+                                <div class="aceptar" id="aceptar">
+                                    <button class="mdc-button mdc-button--raised" id="aceptar">
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">Aceptar</span>
+                                    </button>
+                                </div>
+                                <div class="cancelar" id="cancelar">
+                                    <button class="mdc-button mdc-button--raised" id="cancelar">
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__label">Cancelar</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -204,7 +263,15 @@ export default {
         new mdc.select.MDCSelect(document.querySelector(".provincia .mdc-select"));
         new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
         new mdc.select.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
-    new mdc.textField.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
+        new mdc.textField.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
+        new mdc.select.MDCSelect(document.querySelector(".incidente .mdc-select"));
+        new mdc.select.MDCSelect(document.querySelector(".tipo-de-incidente .mdc-select"));
+        mdc.autoInit();
+        new mdc.ripple.MDCRipple(document.querySelector(".mapa-up .mdc-button"));
+        mdc.autoInit();
+        new mdc.ripple.MDCRipple(document.querySelector(".aceptar .mdc-button"));
+        mdc.autoInit();
+        new mdc.ripple.MDCRipple(document.querySelector(".cancelar .mdc-button"));
     },
 };
 </script>
@@ -286,7 +353,7 @@ export default {
     height: 265px;
     margin-top: 2px;
     min-width: 265px;
-    z-index: 2;
+    z-index: 6;
     }
 
     .carta-de-llamada-default .title {
@@ -426,14 +493,115 @@ export default {
     align-self: flex-start;
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
-    margin-top: 6px;
+    margin-left: 100px;
+    margin-top: 127px;
     width: 263px;
     height: 56px;
     }
-    .nota-comun {
-    height: 56px;
-    margin-top: 166px;
+
+    .incidente {
+    height: 60px;
     width: 263px;
+    }
+
+    .tipo-de-incidente {
+    height: 60px;
+    margin-top: 24px;
+    width: 263px;
+    }
+
+    .mapa-up #mapa-up{
+    border-radius: 32px;
+    cursor: pointer;
+    height: 36px;
+    width: 89px;
+    margin-left: 80px;
+    transition: all 0.2s ease-in-out;
+    background-color: #0040FF;
+    font-family: var(--font-family-gothic_a1);
+    text-transform: capitalize;
+    }
+
+    #mapa-up:hover,
+    #aceptar:hover,
+    #cancelar:hover {
+    transform: scale(1.1);
+    }
+
+    .flex-row-4 {
+    align-items: flex-start;
+    display: flex;
+    margin-left: 38px;
+    margin-top: 24px;
+    min-width: 188px;
+    }
+
+    .aceptar #aceptar {
+    border-radius: 32px;
+    cursor: pointer;
+    height: 36px;
+    width: 103px;
+    margin-left: 74px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    background-color: #0040FF;
+    font-family: var(--font-family-gothic_a1);
+    text-transform: capitalize;
+    }
+
+    .cancelar #cancelar{
+    border-radius: 32px;
+    cursor: pointer;
+    height: 36px;
+    width: 103px;
+    margin-left: 74px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    background-color: rgb(207, 0, 0);
+    font-family: var(--font-family-gothic_a1);
+    text-transform: capitalize;
+    }
+
+    .mapa-up {
+    margin-top: 50px;
+    height: auto !important;
+    width: auto !important;
+    }
+
+    .incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .mdc-list-item {
+    align-items: center;
+    display: flex;
+    height: 48px;
+    position: relative;
+    }
+
+    .cancelar {
+    height: auto !important;
+    width: auto !important;
+    margin-top: -20px;
+    margin-left: -50px;
+    }
+
+    .tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .aceptar {
+    height: auto !important;
+    width: auto !important;
+    margin-top: -20px;
+    margin-left: -100px;
+    }
+
+    .tipo-de-incidente .custom-enhanced-select-width {
+    width: 200px;
+    }
+
+    .incidente .custom-enhanced-select-width {
+    width: 200px;
     }
 </style>

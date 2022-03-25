@@ -15545,6 +15545,65 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -15588,6 +15647,14 @@ __webpack_require__.r(__webpack_exports__);
     new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
     new mdc.select.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
     new mdc.textField.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
+    new mdc.select.MDCSelect(document.querySelector(".incidente .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".tipo-de-incidente .mdc-select"));
+    mdc.autoInit();
+    new mdc.ripple.MDCRipple(document.querySelector(".mapa-up .mdc-button"));
+    mdc.autoInit();
+    new mdc.ripple.MDCRipple(document.querySelector(".aceptar .mdc-button"));
+    mdc.autoInit();
+    new mdc.ripple.MDCRipple(document.querySelector(".cancelar .mdc-button"));
   }
 });
 
@@ -34584,7 +34651,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    background-color: var(--white);\n    display: flex;\n    height: 1080px;\n    /* padding: 0 89px; */\n    width: 1920px;\n    position: fixed;\n    z-index: 3;\n}\n.carta-de-llamada-default .container-scrolling::-webkit-scrollbar {\n    display: none;\n    position: fixed;\n    width: 0;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    height: 908px;\n    left: 92px;\n    min-width: 1739px;\n    overflow-y: scroll;\n    padding: 0 8px;\n    position: fixed;\n    top: 480px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    margin-bottom: -560px;\n    min-height: 1418px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 125px;\n    min-height: 265px;\n    margin-left: -263px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 265px;\n    margin-top: 2px;\n    min-width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.comarca {\n    height: 60px;\n    width: 263px;\n}\n.provincia {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.municipio {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n.comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.comarca .custom-enhanced-select-width {\n    width: 200px;\n}\n.provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.provincia .custom-enhanced-select-width {\n    width: 200px;\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\n    width: 200px;\n}\n\n    /* Global */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Column */\n.flex-row-2 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: -213px;\n    margin-top: 127px;\n    width: 263px;\n}\n.tipo-de-localizacin {\n    height: 60px;\n    width: 263px;\n}\n.referencia {\n    height: 145px;\n    margin-top: 25px;\n    width: 263px;\n}\n.separation-down {\n    height: 183px;\n    margin-left: 50px;\n    margin-top: 11px;\n    width: 1px;\n}\n.tipo-de-localizacin .custom-enhanced-select-width {\n    width: 200px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n.tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n\n    /* Third Column */\n.flex-row-3 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 50px;\n    margin-top: 6px;\n    width: 263px;\n    height: 56px;\n}\n.nota-comun {\n    height: 56px;\n    margin-top: 166px;\n    width: 263px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    background-color: var(--white);\n    display: flex;\n    height: 1080px;\n    /* padding: 0 89px; */\n    width: 1920px;\n    position: fixed;\n    z-index: 3;\n}\n.carta-de-llamada-default .container-scrolling::-webkit-scrollbar {\n    display: none;\n    position: fixed;\n    width: 0;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    height: 908px;\n    left: 92px;\n    min-width: 1739px;\n    overflow-y: scroll;\n    padding: 0 8px;\n    position: fixed;\n    top: 480px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    margin-bottom: -560px;\n    min-height: 1418px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 125px;\n    min-height: 265px;\n    margin-left: -263px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 265px;\n    margin-top: 2px;\n    min-width: 265px;\n    z-index: 6;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.comarca {\n    height: 60px;\n    width: 263px;\n}\n.provincia {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.municipio {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n.comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.comarca .custom-enhanced-select-width {\n    width: 200px;\n}\n.provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.provincia .custom-enhanced-select-width {\n    width: 200px;\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\n    width: 200px;\n}\n\n    /* Global */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Column */\n.flex-row-2 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: -213px;\n    margin-top: 127px;\n    width: 263px;\n    z-index: 6;\n}\n.tipo-de-localizacin {\n    height: 60px;\n    width: 263px;\n}\n.referencia {\n    height: 145px;\n    margin-top: 25px;\n    width: 263px;\n}\n.separation-down {\n    height: 183px;\n    margin-left: 313px;\n    margin-top: -203px;\n    width: 1px;\n}\n.tipo-de-localizacin .custom-enhanced-select-width {\n    width: 200px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n.tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n\n    /* Third Column */\n.flex-row-3 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 100px;\n    margin-top: 127px;\n    width: 263px;\n    height: 56px;\n}\n.incidente {\n    height: 60px;\n    width: 263px;\n}\n.tipo-de-incidente {\n    height: 60px;\n    margin-top: 24px;\n    width: 263px;\n}\n.mapa-up #mapa-up{\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 89px;\n    margin-left: 80px;\n    transition: all 0.2s ease-in-out;\n    background-color: #0040FF;\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n#mapa-up:hover,\n    #aceptar:hover,\n    #cancelar:hover {\n    transform: scale(1.1);\n}\n.flex-row-4 {\n    align-items: flex-start;\n    display: flex;\n    margin-left: 38px;\n    margin-top: 24px;\n    min-width: 188px;\n}\n.aceptar #aceptar {\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 103px;\n    margin-left: 74px;\n    margin-top: 20px;\n    transition: all 0.2s ease-in-out;\n    background-color: #0040FF;\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n.cancelar #cancelar{\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 103px;\n    margin-left: 74px;\n    margin-top: 20px;\n    transition: all 0.2s ease-in-out;\n    background-color: rgb(207, 0, 0);\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n.mapa-up {\n    margin-top: 50px;\n    height: auto !important;\n    width: auto !important;\n}\n.incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    position: relative;\n}\n.cancelar {\n    height: auto !important;\n    width: auto !important;\n    margin-top: -20px;\n    margin-left: -50px;\n}\n.tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.aceptar {\n    height: auto !important;\n    width: auto !important;\n    margin-top: -20px;\n    margin-left: -100px;\n}\n.tipo-de-incidente .custom-enhanced-select-width {\n    width: 200px;\n}\n.incidente .custom-enhanced-select-width {\n    width: 200px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -54652,35 +54719,303 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "flex-row-3" }, [
               _c("div", { staticClass: "flex-col-4" }, [
-                _c("div", { staticClass: "nota-comun" }, [
+                _c("div", { staticClass: "incidente" }, [
                   _c(
-                    "label",
+                    "div",
                     {
-                      staticClass: "mdc-text-field mdc-text-field--filled",
-                      attrs: { id: "notaComun" },
+                      staticClass:
+                        "mdc-select mdc-select--filled demo-width-class",
+                      attrs: { "data-id": "anima-widget" },
                     },
                     [
-                      _c("span", { staticClass: "mdc-text-field__ripple" }),
-                      _vm._v(" "),
                       _c(
-                        "span",
+                        "div",
                         {
-                          staticClass: "mdc-floating-label",
-                          attrs: { id: "notaComunLabel" },
+                          staticClass:
+                            "mdc-select__anchor custom-enhanced-select-width",
+                          attrs: {
+                            role: "button",
+                            "aria-haspopup": "listbox",
+                            "aria-expanded": "false",
+                          },
                         },
-                        [_vm._v("Nota Común")]
+                        [
+                          _c("span", { staticClass: "mdc-select__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "demo-label" },
+                            },
+                            [_vm._v("Tipos de Incidente")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "mdc-select__selected-text-container",
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-select__selected-text",
+                                attrs: { id: "demo-selected-text" },
+                              }),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "mdc-select__dropdown-icon" },
+                            [
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "mdc-select__dropdown-icon-inactive material-icons",
+                                },
+                                [_vm._v("arrow_drop_down")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "mdc-select__dropdown-icon-active material-icons",
+                                },
+                                [_vm._v("arrow_drop_up")]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
                       ),
                       _vm._v(" "),
-                      _c("input", {
-                        staticClass: "mdc-text-field__input",
-                        attrs: {
-                          type: "text",
-                          id: "input-NotaComun",
-                          "aria-labelledby": "my-label-id",
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
                         },
-                      }),
+                        [
+                          _c(
+                            "ul",
+                            {
+                              staticClass: "mdc-list",
+                              attrs: {
+                                id: "select_dropdown",
+                                role: "listbox",
+                                "aria-label": "listbox",
+                              },
+                            },
+                            [
+                              _c(
+                                "li",
+                                {
+                                  staticClass: "mdc-list-item",
+                                  attrs: { "data-value": "X", role: "option" },
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "mdc-list-item__ripple",
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdc-list-item__text" },
+                                    [_vm._v("X")]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "tipo-de-incidente" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mdc-select mdc-select--filled demo-width-class",
+                      attrs: { "data-id": "anima-widget" },
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "mdc-select__anchor custom-enhanced-select-width",
+                          attrs: {
+                            role: "button",
+                            "aria-haspopup": "listbox",
+                            "aria-expanded": "false",
+                          },
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-select__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "demo-label" },
+                            },
+                            [_vm._v("Tipos de Incidente")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "mdc-select__selected-text-container",
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-select__selected-text",
+                                attrs: { id: "demo-selected-text" },
+                              }),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "mdc-select__dropdown-icon" },
+                            [
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "mdc-select__dropdown-icon-inactive material-icons",
+                                },
+                                [_vm._v("arrow_drop_down")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "mdc-select__dropdown-icon-active material-icons",
+                                },
+                                [_vm._v("arrow_drop_up")]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
                       _vm._v(" "),
-                      _c("span", { staticClass: "mdc-line-ripple" }),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                        },
+                        [
+                          _c(
+                            "ul",
+                            {
+                              staticClass: "mdc-list",
+                              attrs: {
+                                id: "select_dropdown",
+                                role: "listbox",
+                                "aria-label": "listbox",
+                              },
+                            },
+                            [
+                              _c(
+                                "li",
+                                {
+                                  staticClass: "mdc-list-item",
+                                  attrs: { "data-value": "X", role: "option" },
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "mdc-list-item__ripple",
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdc-list-item__text" },
+                                    [_vm._v("X")]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mapa-up", attrs: { id: "mapa-up" } },
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "mdc-button mdc-button--raised",
+                        attrs: { id: "mapa-up" },
+                      },
+                      [
+                        _c("span", { staticClass: "mdc-button__ripple" }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-button__label" }, [
+                          _vm._v("Mapa"),
+                        ]),
+                      ]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "flex-row-4" }, [
+                  _c(
+                    "div",
+                    { staticClass: "aceptar", attrs: { id: "aceptar" } },
+                    [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "mdc-button mdc-button--raised",
+                          attrs: { id: "aceptar" },
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-button__ripple" }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-button__label" }, [
+                            _vm._v("Aceptar"),
+                          ]),
+                        ]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "cancelar", attrs: { id: "cancelar" } },
+                    [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "mdc-button mdc-button--raised",
+                          attrs: { id: "cancelar" },
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-button__ripple" }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-button__label" }, [
+                            _vm._v("Cancelar"),
+                          ]),
+                        ]
+                      ),
                     ]
                   ),
                 ]),
