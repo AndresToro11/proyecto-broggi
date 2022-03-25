@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Utilitat;
+use App\Clases\Utilitat;
 use App\Models\Perfil;
 use App\Models\Usuari;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
 use App\Http\Resources\Admin\RolesResource;
 use App\Http\Resources\Admin\UsuariosResource;
 
@@ -64,10 +65,11 @@ class AdminController extends Controller
         $usuario->activo = 1;
 
         try{
-            $cicle->save(); 
-            $response = (new CicleResource($cicle))
-                         ->response()
-                         ->setStatusCode(201);
+            $usuario->save(); 
+            // $response = (new Usuari($usuario))
+            //              ->response()
+            //              ->setStatusCode(201);
+            $response = response()->json(['message' => 'Tot correcte'], 201);
          }
          catch(QueryException $e){
              $mensaje = Utilitat::errorMessage($e);

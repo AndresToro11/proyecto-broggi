@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('titulo', 'Admin')
+@section('titulo', 'Crear usuario')
 
 @section('contenido')
 

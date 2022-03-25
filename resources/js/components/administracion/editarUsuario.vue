@@ -27,17 +27,6 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input @blur="verificarContrasena()" v-model="usuario.contrasena" id="password" type="password" class="validate">
-                        <label for="password">Contraseña</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input @blur="verificarContrasena()" v-model="contrasenaC" id="cPassword" type="password" class="validate">
-                        <label for="cPassword">Confirmar contraseña</label>
-                    </div>
-                </div>
-
-                <div class="row">
                     <div class="input-field col s8">
                         <input v-model="usuario.mail" id="email" type="email" class="validate">
                         <label for="email">Mail</label>
@@ -64,6 +53,21 @@
                     </div>
                 </div>
                     
+            </div>
+        </div>
+
+        <div class="row m-4">
+            <div class="card m-4">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input @blur="verificarContrasena()" v-model="usuario.contrasena" id="password" type="password" class="validate">
+                        <label for="password">Contraseña</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input @blur="verificarContrasena()" v-model="contrasenaC" id="cPassword" type="password" class="validate">
+                        <label for="cPassword">Confirmar contraseña</label>
+                    </div>
+                </div>
             </div>
         </div>
             

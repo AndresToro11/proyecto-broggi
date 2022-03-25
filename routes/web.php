@@ -63,4 +63,8 @@ Route::get('/admin/nuevoUsuario', function () {
     return view('administracion.nuevoUsuario');
 });
 
+Route::get('/admin/editarUsuario', function () {
+    return view('administracion.editarUsuario');
+});
+
 //---------------------------------  --------------------------------

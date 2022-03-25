@@ -48,8 +48,8 @@
                                 <td class="text-center">{{ user.perfil.nom }}</td>
                                 <td class="text-center">{{ user.mail }}</td>
                                 <td class="text-center">
-                                    <button type="button" class="btn btn-light"><i class="fal fa-edit"></i></button>
-                                    <button type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></button>
+                                    <a href="http://localhost/proyecto-broggi/public/admin/editarUsuario" type="button" class="btn btn-light"><i class="fal fa-edit"></i></a>
+                                    <a type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -92,8 +92,8 @@
                                     <td class="text-center">{{ user.rol }}</td>
                                     <td class="text-center">{{ user.mail }}</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-light"><i class="fal fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></button>
+                                        <a href="http://localhost/proyecto-broggi/public/admin/editarUsuario" type="button" class="btn btn-light"><i class="fal fa-edit"></i></a>
+                                        <a type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -117,7 +117,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Codigo</th>
+                                    <th scope="col">Nick</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Apellidos</th>
                                     <th scope="col">Rol</th>
@@ -135,8 +135,8 @@
                                     <td class="text-center">{{ user.rol }}</td>
                                     <td class="text-center">{{ user.mail }}</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-light"><i class="fal fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></button>
+                                        <a href="http://localhost/proyecto-broggi/public/admin/editarUsuario" type="button" class="btn btn-light"><i class="fal fa-edit"></i></a>
+                                        <a type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
