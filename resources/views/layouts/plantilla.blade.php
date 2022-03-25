@@ -36,20 +36,33 @@
 
     <body onload="" style="margin: 0">
         <input type="hidden" id="anPageName" name="page" value="header" />
+        {{-- Header Operador --}}
         <div class="container-center-horizontal">
             <div class="header screen">
-                <div class="header-operador">
-                    <div class="overlap-group">
-                        <img class="background" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png" />
-                        <img class="overlap-group-item" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png" />
-                        <h1 class="title valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
-                        <div class="video-interactivo valign-text-middle gothica1-medium-white-28px">Video Interactivo</div>
-                        <div class="sergi-prez-jimnez valign-text-middle">Sergi Pérez Jiménez</div>
-                        <img class="separate" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/separate@2x.svg" />
-                        <div class="cerrar-sesin valign-text-middle">Cerrar sesión</div>
-                        <img class="overlap-group-item" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/white-gradient@1x.svg" />
+                <span>
+                    <div class="header-operador">
+                        <div class="overlap-group-operador">
+                            <img class="background-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png" />
+                            <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png" />
+                            <h1 class="title-operador valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
+                            <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Video Interactivo</div>
+                            <div class="sergi-prez-jimnez-operador valign-text-middle">Sergi Pérez Jiménez</div>
+                            <img class="separate-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/separate@2x.svg" />
+                            <div class="cerrar-sesin-operador valign-text-middle">Cerrar sesión</div>
+                            <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/white-gradient@1x.svg" />
+                        </div>
                     </div>
-                </div>
+                </span>
+                {{-- Header Supervisor --}}
+                <span>
+                    <div class="header-supervisor">
+                    </div>
+                </span>
+                {{-- Header Administrador --}}
+                <span>
+                    <div class="header-administrador">
+                    </div>
+                </span>
             </div>
         </div>
         <div id="app" class="container">
@@ -75,7 +88,7 @@
             min-width: 1920px;
             }
 
-            .header .overlap-group {
+            .header .overlap-group-operador {
             background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/shadow@1x.svg);
             background-size: 100% 100%;
             height: 198px;
@@ -84,7 +97,7 @@
             width: 1920px;
             }
 
-            .header .background {
+            .header .background-operador {
             height: 172px;
             left: 0;
             object-fit: cover;
@@ -93,7 +106,7 @@
             width: 1920px;
             }
 
-            .header .overlap-group-item {
+            .header .overlap-group-item-operador {
             height: 172px;
             left: 0;
             position: absolute;
@@ -101,7 +114,7 @@
             width: 1920px;
             }
 
-            .header .title {
+            .header .title-operador {
             cursor: pointer;
             height: 16px;
             left: 521px;
@@ -114,11 +127,11 @@
             white-space: nowrap;
             }
 
-            .header .title:hover {
+            .header .title-operador:hover {
             transform: scale(1.1);
             }
 
-            .header .video-interactivo {
+            .header .video-interactivo-operador {
             height: 16px;
             left: 1161px;
             letter-spacing: 1.25px;
@@ -129,7 +142,7 @@
             white-space: nowrap;
             }
 
-            .header .sergi-prez-jimnez {
+            .header .sergi-prez-jimnez-operador {
             color: var(--white);
             font-family: var(--font-family-gothic_a1-regular);
             font-size: var(--font-size-xs);
@@ -144,7 +157,7 @@
             white-space: nowrap;
             }
 
-            .header .separate {
+            .header .separate-operador {
             height: 58px;
             left: 1647px;
             position: absolute;
@@ -152,7 +165,7 @@
             width: 9px;
             }
 
-            .header .cerrar-sesin {
+            .header .cerrar-sesin-operador {
             color: var(--white);
             font-family: var(--font-family-gothic_a1-regular);
             font-size: var(--font-size-xs);

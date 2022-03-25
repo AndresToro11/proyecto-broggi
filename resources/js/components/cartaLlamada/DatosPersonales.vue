@@ -8,7 +8,7 @@
                         <div class="flex-row">
                             <div class="flex-col-1">
                                 <div class="datos-del-interlocutor valign-text-middle gothica1-normal-black-21px">
-                                    Datos del accidente
+                                    Datos del incidente
                                 </div>
                             </div>
                         </div>
@@ -279,18 +279,17 @@ export default {
 <style>
 .carta-de-llamada-default {
     align-items: flex-start;
-    background-color: var(--white);
     display: flex;
     height: 1080px;
     /* padding: 0 89px; */
     width: 1920px;
-    position: fixed;
+    /* position: fixed; */
     z-index: 3;
     }
 
     .carta-de-llamada-default .container-scrolling::-webkit-scrollbar {
     display: none;
-    position: fixed;
+    /* position: fixed; */
     width: 0;
     }
 
@@ -302,7 +301,8 @@ export default {
     min-width: 1739px;
     overflow-y: scroll;
     padding: 0 8px;
-    position: fixed;
+    /* position: fixed; */
+    /* top: 172px; */
     top: 480px;
     z-index: 5;
     }
@@ -393,7 +393,7 @@ export default {
     align-items: center;
     display: flex;
     height: 48px;
-    position: relative;
+    /* position: relative; */
     }
 
     .comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
@@ -469,7 +469,7 @@ export default {
     align-items: center;
     display: flex;
     height: 48px;
-    position: relative;
+    /* position: relative; */
     }
 
     .tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
@@ -484,7 +484,7 @@ export default {
     align-items: center;
     display: flex;
     height: 48px;
-    position: relative;
+    /* position: relative; */
     }
 
     /* Third Column */
@@ -576,7 +576,7 @@ export default {
     align-items: center;
     display: flex;
     height: 48px;
-    position: relative;
+    /* position: relative; */
     }
 
     .cancelar {

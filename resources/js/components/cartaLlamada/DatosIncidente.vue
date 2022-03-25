@@ -1,117 +1,101 @@
 <template>
     <div>
         <input type="hidden" id="anPageName" name="page" value="carta-de-llamada-default" />
-            <div class="container-center-horizontal">
-                <div class="carta-de-llamada-default screen">
-                    <div class="container-scrolling">
-                        <div class="flex-col">
-                            <div class="flex-row">
-                                <div class="flex-col-1">
-                                    <h1 class="title valign-text-middle gothica1-normal-black-28px">Carta de llamada</h1>
-                                    <div class="datos-del-interlocutor valign-text-middle gothica1-normal-black-21px">
-                                        Datos del interlocutor
-                                    </div>
-                                </div>
-                                <div class="guardar-datos-checkbox">
-                                    <div class="mdc-checkbox" data-mdc-auto-init="MDCCheckbox">
-                                        <input type="checkbox" checked class="mdc-checkbox__native-control" />
-                                        <div class="mdc-checkbox__background">
-                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                        </svg>
-                                        <div class="mdc-checkbox__mixedmark"></div>
-                                    </div>
-                                    <div class="mdc-checkbox__ripple"></div>
-                                </div>
-                                <!-- <script>
-                                mdc.autoInit();
-                                </script> -->
-                            </div>
-                            <div class="guardar-datos roboto-normal-black-16px">Guardar datos</div>
-                        </div>
-                        <div class="flex-row-1">
-                            <div class="flex-col-2">
-                                <div class="telefono">
-                                    <label class="mdc-text-field mdc-text-field--filled">
-                                        <span class="mdc-text-field__ripple"></span>
-                                        <span class="mdc-floating-label" id="my-label-id">Teléfono</span>
-                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                        <span class="mdc-line-ripple"></span>
-                                    </label>
-                                </div>
-                                <div class="flex-col-item-Direccion-Up">
-                                    <label class="mdc-text-field mdc-text-field--filled">
-                                        <span class="mdc-text-field__ripple"></span>
-                                        <span class="mdc-floating-label" id="my-label-id">Direccion</span>
-                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                        <span class="mdc-line-ripple"></span>
-                                    </label>
-                                </div>
-                                <div class="flex-col-item-Antedecendes-Up">
-                                    <label class="mdc-text-field mdc-text-field--filled">
-                                        <span class="mdc-text-field__ripple"></span>
-                                        <span class="mdc-floating-label" id="my-label-id">Antedecentes</span>
-                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                        <span class="mdc-line-ripple"></span>
-                                    </label>
+        <div class="container-center-horizontal">
+            <div class="carta-de-llamada-default screen">
+                <div class="container-scrolling">
+                    <div class="flex-col">
+                        <div class="flex-row">
+                            <div class="flex-col-1">
+                                <h1 class="title valign-text-middle gothica1-normal-black-28px">Carta de llamada</h1>
+                                <div class="datos-del-interlocutor valign-text-middle gothica1-normal-black-21px">
+                                    Datos del interlocutor
                                 </div>
                             </div>
                         </div>
-                        <!-- Second Column -->
-                        <div class="flex-row-2">
-                            <div class="flex-col-3">
-                                <div class="procedencia-de-la-llamada">
-                                    <label class="mdc-text-field mdc-text-field--filled">
-                                        <span class="mdc-text-field__ripple"></span>
-                                        <span class="mdc-floating-label" id="my-label-id">Procedencia de la llamada</span>
-                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                    </div>
+                    <div class="flex-row-1">
+                        <div class="flex-col-2">
+                            <div class="telefono">
+                                <label class="mdc-text-field mdc-text-field--filled">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Teléfono</span>
+                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+                            </div>
+                            <div class="flex-col-item-Direccion-Up">
+                                <label class="mdc-text-field mdc-text-field--filled">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Direccion</span>
+                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+                            </div>
+                            <div class="flex-col-item-Antedecendes-Up">
+                                <label class="mdc-text-field mdc-text-field--filled">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Antedecentes</span>
+                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Column -->
+                    <div class="flex-row-2">
+                        <div class="flex-col-3">
+                            <div class="procedencia-de-la-llamada">
+                                <label class="mdc-text-field mdc-text-field--filled">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Procedencia de la llamada</span>
+                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+                            </div>
+                            <div class="origen-de-la-llamada">
+                                <label class="mdc-text-field mdc-text-field--filled">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Origen de la llamada</span>
+                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+                            </div>
+                            <div class="municipio">
+                                <div class="mdc-select mdc-select--filled demo-width-class">
+                                    <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                        <span class="mdc-select__ripple"></span> <span id="demo-label" class="mdc-floating-label">Municipio</span>
+                                        <span class="mdc-select__selected-text-container">
+                                            <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                        </span>
+                                        <span class="mdc-select__dropdown-icon">
+                                            <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
+                                            <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
+                                        </span>
                                         <span class="mdc-line-ripple"></span>
-                                    </label>
-                                </div>
-                                <div class="origen-de-la-llamada">
-                                    <label class="mdc-text-field mdc-text-field--filled">
-                                        <span class="mdc-text-field__ripple"></span>
-                                        <span class="mdc-floating-label" id="my-label-id">Origen de la llamada</span>
-                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                        <span class="mdc-line-ripple"></span>
-                                    </label>
-                                </div>
-                                <div class="municipio">
-                                    <div class="mdc-select mdc-select--filled demo-width-class">
-                                        <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
-                                            <span class="mdc-select__ripple"></span> <span id="demo-label" class="mdc-floating-label">Municipio</span>
-                                            <span class="mdc-select__selected-text-container">
-                                                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
-                                            </span>
-                                            <span class="mdc-select__dropdown-icon">
-                                                <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
-                                                <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
-                                            </span>
-                                            <span class="mdc-line-ripple"></span>
-                                        </div>
-                                        <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                                            <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                                <li class="mdc-list-item" data-value="Item" role="option">
-                                                    <span class="mdc-list-item__ripple"></span>
-                                                    <span class="mdc-list-item__text">Item</span>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                    </div>
+                                    <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                        <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                                            <li class="mdc-list-item" data-value="Item" role="option">
+                                                <span class="mdc-list-item__ripple"></span>
+                                                <span class="mdc-list-item__text">Item</span>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Third Column -->
-                        <div class="flex-row-3">
-                            <div class="flex-col-4">
-                                <div class="nota-comun"> <!-- Nota Comun -->
-                                    <label class="mdc-text-field mdc-text-field--filled" id="notaComun">
-                                        <span class="mdc-text-field__ripple"></span>
-                                        <span class="mdc-floating-label" id="notaComunLabel">Nota Común</span>
-                                        <input type="text" class="mdc-text-field__input" id="input-NotaComun" aria-labelledby="my-label-id" />
-                                        <span class="mdc-line-ripple"></span>
-                                    </label>
-                                </div>
+                    </div>
+                    <!-- Third Column -->
+                    <div class="flex-row-3">
+                        <div class="flex-col-4">
+                            <div class="nota-comun"> <!-- Nota Comun -->
+                                <label class="mdc-text-field mdc-text-field--filled" id="notaComun">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="notaComunLabel">Nota Común</span>
+                                    <input type="text" class="mdc-text-field__input" id="input-NotaComun" aria-labelledby="my-label-id" />
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -310,29 +294,29 @@
 <style>
     .carta-de-llamada-default {
     align-items: flex-start;
-    background-color: var(--white);
     display: flex;
-    height: 1080px;
+    height: 312px;
     /* padding: 0 89px; */
-    width: 1920px;
-    position: fixed;
+    width: 891px;
+    /* position: fixed; */
     }
 
     .carta-de-llamada-default .container-scrolling::-webkit-scrollbar {
     display: none;
-    position: fixed;
+    /* position: fixed; */
     width: 0;
     }
 
     .carta-de-llamada-default .container-scrolling {
     align-items: flex-start;
     display: flex;
-    height: 908px;
+    height: 312px;
+    width: 891px;
     left: 92px;
     min-width: 1739px;
     overflow-y: scroll;
     padding: 0 8px;
-    position: fixed;
+    /* position: fixed; */
     top: 172px;
     z-index: 1;
     }
@@ -567,7 +551,7 @@
     align-items: center;
     display: flex;
     height: 48px;
-    position: relative;
+    /* position: relative; */
     }
 
     /* Third Column */

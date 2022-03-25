@@ -1,17 +1,13 @@
 <template>
-    <div>
+    <div class="main">
         <!-- <datos-administrativos></datos-administrativos> -->
-        <!-- <datos-personales @getDataPersonal="getDataPersonal"></datos-personales> -->
-        <!-- <datos-incidentes
-            @getDataIncidente="getDataIncidente"
-        ></datos-incidentes> -->
-        <datos-personales
-            @getDataPersonal="getDataPersonal"
-        ></datos-personales>
-        <!-- <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
-        <!-- <h3>boton</h3>
-        <button type="button">Cancelar</button>
-        <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(),insertBD(cartaLlamada)">Aceptar</button>
+        <div class="datos-incidentes">
+            <datos-incidentes @getDataIncidente="getDataIncidente"></datos-incidentes>
+        </div>
+        <div class="datos-personales">
+            <datos-personales @getDataPersonal="getDataPersonal"></datos-personales>
+        </div>
+        <!-- <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(),insertBD(cartaLlamada)">Aceptar</button>
         <expedientes-relacionados></expedientes-relacionados> -->
     </div>
 </template>
@@ -120,3 +116,19 @@ export default {
     },
 };
 </script>
+
+<style>
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .datos-incidentes {
+        margin-left: 92px;
+    }
+
+    .datos-personales {
+        margin-left: 92px;
+        margin-top: -750px;
+    }
+</style>
