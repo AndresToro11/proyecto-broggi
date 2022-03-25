@@ -16167,7 +16167,7 @@ Vue.component('login', (__webpack_require__(/*! ./components/login.vue */ "./res
 Vue.component('datos-administrativos', (__webpack_require__(/*! ./components/cartaLlamada/DatosAdministrativos.vue */ "./resources/js/components/cartaLlamada/DatosAdministrativos.vue")["default"]));
 Vue.component('datos-incidentes', (__webpack_require__(/*! ./components/cartaLlamada/DatosIncidente.vue */ "./resources/js/components/cartaLlamada/DatosIncidente.vue")["default"])); //Acabado
 
-Vue.component('datos-personales', (__webpack_require__(/*! ./components/cartaLlamada/DatosPersonales.vue */ "./resources/js/components/cartaLlamada/DatosPersonales.vue")["default"])); //
+Vue.component('datos-personales', (__webpack_require__(/*! ./components/cartaLlamada/DatosPersonales.vue */ "./resources/js/components/cartaLlamada/DatosPersonales.vue")["default"])); //Acabado
 
 Vue.component('expedientes-relacionados', (__webpack_require__(/*! ./components/cartaLlamada/ExpedientesRelacionados.vue */ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue")["default"]));
 Vue.component('enviar-datos', (__webpack_require__(/*! ./components/cartaLlamada/Boton.vue */ "./resources/js/components/cartaLlamada/Boton.vue")["default"])); //------------------------------------------- Expedientes --------------------------------
