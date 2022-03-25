@@ -21,7 +21,7 @@ window.Vue = require('vue').default;
 
 //---------------------------------------------- Login -----------------------------------
 
-Vue.component('login', require('./components/login.vue').default);
+Vue.component('vista-login', require('./components/login.vue').default); //Acabado
 
 //-----------------------------------------------Llamada----------------------------------------------------
 

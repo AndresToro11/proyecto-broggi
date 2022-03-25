@@ -18,6 +18,12 @@ Route::get('/', function () {
     return view('index');
 });
 
+//------------------------------ Login -----------------------------
+
+Route::get('/login', function () {
+    return view('login');
+});
+
 //------------------------------ Home -----------------------------
 
 Route::get('/home', function () {
