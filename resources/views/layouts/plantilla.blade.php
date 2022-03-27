@@ -101,7 +101,7 @@
             width: 1920px;
             }
 
-            TODO: /* Header Operador */
+            /* TODO: Header Operador */
             .header .header-operador {
             align-items: flex-end;
             background-color: var(--white);
@@ -202,7 +202,7 @@
             white-space: nowrap;
             }
 
-            TODO: /* Header Supervisor */
+            /* TODO: Header Supervisor */
             .header-supervisor {
             align-items: flex-start;
             background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623f92c8f6a94c4ce7531afa/img/shadow-1@1x.svg);
@@ -310,7 +310,7 @@
             white-space: nowrap;
             }
 
-            TODO: /* Header Administrador */
+            /* TODO: Header Administrador */
             .header-administrador {
             align-items: flex-start;
             background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624047c85dc258b91591e4d0/img/shadow-1@1x.svg);
