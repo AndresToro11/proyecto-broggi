@@ -308,537 +308,6 @@ var MDCFoundation = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./node_modules/@material/checkbox/component.js":
-/*!******************************************************!*\
-  !*** ./node_modules/@material/checkbox/component.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MDCCheckbox": () => (/* binding */ MDCCheckbox)
-/* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _material_animation_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/animation/util */ "./node_modules/@material/animation/util.js");
-/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
-/* harmony import */ var _material_dom_events__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material/dom/events */ "./node_modules/@material/dom/events.js");
-/* harmony import */ var _material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material/dom/ponyfill */ "./node_modules/@material/dom/ponyfill.js");
-/* harmony import */ var _material_ripple_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/ripple/component */ "./node_modules/@material/ripple/component.js");
-/* harmony import */ var _material_ripple_foundation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material/ripple/foundation */ "./node_modules/@material/ripple/foundation.js");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/checkbox/constants.js");
-/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/checkbox/foundation.js");
-/**
- * @license
- * Copyright 2016 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
-
-
-
-
-
-
-
-
-
-var CB_PROTO_PROPS = ['checked', 'indeterminate'];
-var MDCCheckbox = /** @class */ (function (_super) {
-    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCCheckbox, _super);
-    function MDCCheckbox() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.rippleSurface = _this.createRipple();
-        return _this;
-    }
-    MDCCheckbox.attachTo = function (root) {
-        return new MDCCheckbox(root);
-    };
-    Object.defineProperty(MDCCheckbox.prototype, "ripple", {
-        get: function () {
-            return this.rippleSurface;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCCheckbox.prototype, "checked", {
-        get: function () {
-            return this.getNativeControl().checked;
-        },
-        set: function (checked) {
-            this.getNativeControl().checked = checked;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCCheckbox.prototype, "indeterminate", {
-        get: function () {
-            return this.getNativeControl().indeterminate;
-        },
-        set: function (indeterminate) {
-            this.getNativeControl().indeterminate = indeterminate;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCCheckbox.prototype, "disabled", {
-        get: function () {
-            return this.getNativeControl().disabled;
-        },
-        set: function (disabled) {
-            this.foundation.setDisabled(disabled);
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCCheckbox.prototype, "value", {
-        get: function () {
-            return this.getNativeControl().value;
-        },
-        set: function (value) {
-            this.getNativeControl().value = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    MDCCheckbox.prototype.initialize = function () {
-        var DATA_INDETERMINATE_ATTR = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.DATA_INDETERMINATE_ATTR;
-        this.getNativeControl().indeterminate =
-            this.getNativeControl().getAttribute(DATA_INDETERMINATE_ATTR) ===
-                'true';
-        this.getNativeControl().removeAttribute(DATA_INDETERMINATE_ATTR);
-    };
-    MDCCheckbox.prototype.initialSyncWithDOM = function () {
-        var _this = this;
-        this.handleChange = function () {
-            _this.foundation.handleChange();
-        };
-        this.handleAnimationEnd = function () {
-            _this.foundation.handleAnimationEnd();
-        };
-        this.getNativeControl().addEventListener('change', this.handleChange);
-        this.listen((0,_material_animation_util__WEBPACK_IMPORTED_MODULE_2__.getCorrectEventName)(window, 'animationend'), this.handleAnimationEnd);
-        this.installPropertyChangeHooks();
-    };
-    MDCCheckbox.prototype.destroy = function () {
-        this.rippleSurface.destroy();
-        this.getNativeControl().removeEventListener('change', this.handleChange);
-        this.unlisten((0,_material_animation_util__WEBPACK_IMPORTED_MODULE_2__.getCorrectEventName)(window, 'animationend'), this.handleAnimationEnd);
-        this.uninstallPropertyChangeHooks();
-        _super.prototype.destroy.call(this);
-    };
-    MDCCheckbox.prototype.getDefaultFoundation = function () {
-        var _this = this;
-        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
-        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
-        var adapter = {
-            addClass: function (className) { return _this.root.classList.add(className); },
-            forceLayout: function () { return _this.root.offsetWidth; },
-            hasNativeControl: function () { return !!_this.getNativeControl(); },
-            isAttachedToDOM: function () { return Boolean(_this.root.parentNode); },
-            isChecked: function () { return _this.checked; },
-            isIndeterminate: function () { return _this.indeterminate; },
-            removeClass: function (className) {
-                _this.root.classList.remove(className);
-            },
-            removeNativeControlAttr: function (attr) {
-                _this.getNativeControl().removeAttribute(attr);
-            },
-            setNativeControlAttr: function (attr, value) {
-                _this.getNativeControl().setAttribute(attr, value);
-            },
-            setNativeControlDisabled: function (disabled) {
-                _this.getNativeControl().disabled = disabled;
-            },
-        };
-        return new _foundation__WEBPACK_IMPORTED_MODULE_3__.MDCCheckboxFoundation(adapter);
-    };
-    MDCCheckbox.prototype.createRipple = function () {
-        var _this = this;
-        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
-        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
-        var adapter = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, _material_ripple_component__WEBPACK_IMPORTED_MODULE_4__.MDCRipple.createAdapter(this)), { deregisterInteractionHandler: function (evtType, handler) {
-                _this.getNativeControl().removeEventListener(evtType, handler, (0,_material_dom_events__WEBPACK_IMPORTED_MODULE_5__.applyPassive)());
-            }, isSurfaceActive: function () { return (0,_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_6__.matches)(_this.getNativeControl(), ':active'); }, isUnbounded: function () { return true; }, registerInteractionHandler: function (evtType, handler) {
-                _this.getNativeControl().addEventListener(evtType, handler, (0,_material_dom_events__WEBPACK_IMPORTED_MODULE_5__.applyPassive)());
-            } });
-        return new _material_ripple_component__WEBPACK_IMPORTED_MODULE_4__.MDCRipple(this.root, new _material_ripple_foundation__WEBPACK_IMPORTED_MODULE_7__.MDCRippleFoundation(adapter));
-    };
-    MDCCheckbox.prototype.installPropertyChangeHooks = function () {
-        var e_1, _a;
-        var _this = this;
-        var nativeCb = this.getNativeControl();
-        var cbProto = Object.getPrototypeOf(nativeCb);
-        var _loop_1 = function (controlState) {
-            var desc = Object.getOwnPropertyDescriptor(cbProto, controlState);
-            // We have to check for this descriptor, since some browsers (Safari) don't support its return.
-            // See: https://bugs.webkit.org/show_bug.cgi?id=49739
-            if (!validDescriptor(desc)) {
-                return { value: void 0 };
-            }
-            // Type cast is needed for compatibility with Closure Compiler.
-            var nativeGetter = desc.get;
-            var nativeCbDesc = {
-                configurable: desc.configurable,
-                enumerable: desc.enumerable,
-                get: nativeGetter,
-                set: function (state) {
-                    desc.set.call(nativeCb, state);
-                    _this.foundation.handleChange();
-                },
-            };
-            Object.defineProperty(nativeCb, controlState, nativeCbDesc);
-        };
-        try {
-            for (var CB_PROTO_PROPS_1 = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__values)(CB_PROTO_PROPS), CB_PROTO_PROPS_1_1 = CB_PROTO_PROPS_1.next(); !CB_PROTO_PROPS_1_1.done; CB_PROTO_PROPS_1_1 = CB_PROTO_PROPS_1.next()) {
-                var controlState = CB_PROTO_PROPS_1_1.value;
-                var state_1 = _loop_1(controlState);
-                if (typeof state_1 === "object")
-                    return state_1.value;
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (CB_PROTO_PROPS_1_1 && !CB_PROTO_PROPS_1_1.done && (_a = CB_PROTO_PROPS_1.return)) _a.call(CB_PROTO_PROPS_1);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-    };
-    MDCCheckbox.prototype.uninstallPropertyChangeHooks = function () {
-        var e_2, _a;
-        var nativeCb = this.getNativeControl();
-        var cbProto = Object.getPrototypeOf(nativeCb);
-        try {
-            for (var CB_PROTO_PROPS_2 = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__values)(CB_PROTO_PROPS), CB_PROTO_PROPS_2_1 = CB_PROTO_PROPS_2.next(); !CB_PROTO_PROPS_2_1.done; CB_PROTO_PROPS_2_1 = CB_PROTO_PROPS_2.next()) {
-                var controlState = CB_PROTO_PROPS_2_1.value;
-                var desc = Object.getOwnPropertyDescriptor(cbProto, controlState);
-                if (!validDescriptor(desc)) {
-                    return;
-                }
-                Object.defineProperty(nativeCb, controlState, desc);
-            }
-        }
-        catch (e_2_1) { e_2 = { error: e_2_1 }; }
-        finally {
-            try {
-                if (CB_PROTO_PROPS_2_1 && !CB_PROTO_PROPS_2_1.done && (_a = CB_PROTO_PROPS_2.return)) _a.call(CB_PROTO_PROPS_2);
-            }
-            finally { if (e_2) throw e_2.error; }
-        }
-    };
-    MDCCheckbox.prototype.getNativeControl = function () {
-        var NATIVE_CONTROL_SELECTOR = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.NATIVE_CONTROL_SELECTOR;
-        var el = this.root.querySelector(NATIVE_CONTROL_SELECTOR);
-        if (!el) {
-            throw new Error("Checkbox component requires a " + NATIVE_CONTROL_SELECTOR + " element");
-        }
-        return el;
-    };
-    return MDCCheckbox;
-}(_material_base_component__WEBPACK_IMPORTED_MODULE_8__.MDCComponent));
-
-function validDescriptor(inputPropDesc) {
-    return !!inputPropDesc && typeof inputPropDesc.set === 'function';
-}
-//# sourceMappingURL=component.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@material/checkbox/constants.js":
-/*!******************************************************!*\
-  !*** ./node_modules/@material/checkbox/constants.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
-/* harmony export */   "strings": () => (/* binding */ strings),
-/* harmony export */   "numbers": () => (/* binding */ numbers)
-/* harmony export */ });
-/**
- * @license
- * Copyright 2016 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
-var cssClasses = {
-    ANIM_CHECKED_INDETERMINATE: 'mdc-checkbox--anim-checked-indeterminate',
-    ANIM_CHECKED_UNCHECKED: 'mdc-checkbox--anim-checked-unchecked',
-    ANIM_INDETERMINATE_CHECKED: 'mdc-checkbox--anim-indeterminate-checked',
-    ANIM_INDETERMINATE_UNCHECKED: 'mdc-checkbox--anim-indeterminate-unchecked',
-    ANIM_UNCHECKED_CHECKED: 'mdc-checkbox--anim-unchecked-checked',
-    ANIM_UNCHECKED_INDETERMINATE: 'mdc-checkbox--anim-unchecked-indeterminate',
-    BACKGROUND: 'mdc-checkbox__background',
-    CHECKED: 'mdc-checkbox--checked',
-    CHECKMARK: 'mdc-checkbox__checkmark',
-    CHECKMARK_PATH: 'mdc-checkbox__checkmark-path',
-    DISABLED: 'mdc-checkbox--disabled',
-    INDETERMINATE: 'mdc-checkbox--indeterminate',
-    MIXEDMARK: 'mdc-checkbox__mixedmark',
-    NATIVE_CONTROL: 'mdc-checkbox__native-control',
-    ROOT: 'mdc-checkbox',
-    SELECTED: 'mdc-checkbox--selected',
-    UPGRADED: 'mdc-checkbox--upgraded',
-};
-var strings = {
-    ARIA_CHECKED_ATTR: 'aria-checked',
-    ARIA_CHECKED_INDETERMINATE_VALUE: 'mixed',
-    DATA_INDETERMINATE_ATTR: 'data-indeterminate',
-    NATIVE_CONTROL_SELECTOR: '.mdc-checkbox__native-control',
-    TRANSITION_STATE_CHECKED: 'checked',
-    TRANSITION_STATE_INDETERMINATE: 'indeterminate',
-    TRANSITION_STATE_INIT: 'init',
-    TRANSITION_STATE_UNCHECKED: 'unchecked',
-};
-var numbers = {
-    ANIM_END_LATCH_MS: 250,
-};
-//# sourceMappingURL=constants.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@material/checkbox/foundation.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@material/checkbox/foundation.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MDCCheckboxFoundation": () => (/* binding */ MDCCheckboxFoundation),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/checkbox/constants.js");
-/**
- * @license
- * Copyright 2016 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
-
-
-
-var MDCCheckboxFoundation = /** @class */ (function (_super) {
-    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__extends)(MDCCheckboxFoundation, _super);
-    function MDCCheckboxFoundation(adapter) {
-        var _this = _super.call(this, (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_0__.__assign)({}, MDCCheckboxFoundation.defaultAdapter), adapter)) || this;
-        _this.currentCheckState = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.TRANSITION_STATE_INIT;
-        _this.currentAnimationClass = '';
-        _this.animEndLatchTimer = 0;
-        _this.enableAnimationEndHandler = false;
-        return _this;
-    }
-    Object.defineProperty(MDCCheckboxFoundation, "cssClasses", {
-        get: function () {
-            return _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCCheckboxFoundation, "strings", {
-        get: function () {
-            return _constants__WEBPACK_IMPORTED_MODULE_1__.strings;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCCheckboxFoundation, "numbers", {
-        get: function () {
-            return _constants__WEBPACK_IMPORTED_MODULE_1__.numbers;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCCheckboxFoundation, "defaultAdapter", {
-        get: function () {
-            return {
-                addClass: function () { return undefined; },
-                forceLayout: function () { return undefined; },
-                hasNativeControl: function () { return false; },
-                isAttachedToDOM: function () { return false; },
-                isChecked: function () { return false; },
-                isIndeterminate: function () { return false; },
-                removeClass: function () { return undefined; },
-                removeNativeControlAttr: function () { return undefined; },
-                setNativeControlAttr: function () { return undefined; },
-                setNativeControlDisabled: function () { return undefined; },
-            };
-        },
-        enumerable: false,
-        configurable: true
-    });
-    MDCCheckboxFoundation.prototype.init = function () {
-        this.currentCheckState = this.determineCheckState();
-        this.updateAriaChecked();
-        this.adapter.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.UPGRADED);
-    };
-    MDCCheckboxFoundation.prototype.destroy = function () {
-        clearTimeout(this.animEndLatchTimer);
-    };
-    MDCCheckboxFoundation.prototype.setDisabled = function (disabled) {
-        this.adapter.setNativeControlDisabled(disabled);
-        if (disabled) {
-            this.adapter.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.DISABLED);
-        }
-        else {
-            this.adapter.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.DISABLED);
-        }
-    };
-    /**
-     * Handles the animationend event for the checkbox
-     */
-    MDCCheckboxFoundation.prototype.handleAnimationEnd = function () {
-        var _this = this;
-        if (!this.enableAnimationEndHandler) {
-            return;
-        }
-        clearTimeout(this.animEndLatchTimer);
-        this.animEndLatchTimer = setTimeout(function () {
-            _this.adapter.removeClass(_this.currentAnimationClass);
-            _this.enableAnimationEndHandler = false;
-        }, _constants__WEBPACK_IMPORTED_MODULE_1__.numbers.ANIM_END_LATCH_MS);
-    };
-    /**
-     * Handles the change event for the checkbox
-     */
-    MDCCheckboxFoundation.prototype.handleChange = function () {
-        this.transitionCheckState();
-    };
-    MDCCheckboxFoundation.prototype.transitionCheckState = function () {
-        if (!this.adapter.hasNativeControl()) {
-            return;
-        }
-        var oldState = this.currentCheckState;
-        var newState = this.determineCheckState();
-        if (oldState === newState) {
-            return;
-        }
-        this.updateAriaChecked();
-        var TRANSITION_STATE_UNCHECKED = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.TRANSITION_STATE_UNCHECKED;
-        var SELECTED = _constants__WEBPACK_IMPORTED_MODULE_1__.cssClasses.SELECTED;
-        if (newState === TRANSITION_STATE_UNCHECKED) {
-            this.adapter.removeClass(SELECTED);
-        }
-        else {
-            this.adapter.addClass(SELECTED);
-        }
-        // Check to ensure that there isn't a previously existing animation class, in case for example
-        // the user interacted with the checkbox before the animation was finished.
-        if (this.currentAnimationClass.length > 0) {
-            clearTimeout(this.animEndLatchTimer);
-            this.adapter.forceLayout();
-            this.adapter.removeClass(this.currentAnimationClass);
-        }
-        this.currentAnimationClass =
-            this.getTransitionAnimationClass(oldState, newState);
-        this.currentCheckState = newState;
-        // Check for parentNode so that animations are only run when the element is attached
-        // to the DOM.
-        if (this.adapter.isAttachedToDOM() &&
-            this.currentAnimationClass.length > 0) {
-            this.adapter.addClass(this.currentAnimationClass);
-            this.enableAnimationEndHandler = true;
-        }
-    };
-    MDCCheckboxFoundation.prototype.determineCheckState = function () {
-        var TRANSITION_STATE_INDETERMINATE = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.TRANSITION_STATE_INDETERMINATE, TRANSITION_STATE_CHECKED = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.TRANSITION_STATE_CHECKED, TRANSITION_STATE_UNCHECKED = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.TRANSITION_STATE_UNCHECKED;
-        if (this.adapter.isIndeterminate()) {
-            return TRANSITION_STATE_INDETERMINATE;
-        }
-        return this.adapter.isChecked() ? TRANSITION_STATE_CHECKED :
-            TRANSITION_STATE_UNCHECKED;
-    };
-    MDCCheckboxFoundation.prototype.getTransitionAnimationClass = function (oldState, newState) {
-        var TRANSITION_STATE_INIT = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.TRANSITION_STATE_INIT, TRANSITION_STATE_CHECKED = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.TRANSITION_STATE_CHECKED, TRANSITION_STATE_UNCHECKED = _constants__WEBPACK_IMPORTED_MODULE_1__.strings.TRANSITION_STATE_UNCHECKED;
-        var _a = MDCCheckboxFoundation.cssClasses, ANIM_UNCHECKED_CHECKED = _a.ANIM_UNCHECKED_CHECKED, ANIM_UNCHECKED_INDETERMINATE = _a.ANIM_UNCHECKED_INDETERMINATE, ANIM_CHECKED_UNCHECKED = _a.ANIM_CHECKED_UNCHECKED, ANIM_CHECKED_INDETERMINATE = _a.ANIM_CHECKED_INDETERMINATE, ANIM_INDETERMINATE_CHECKED = _a.ANIM_INDETERMINATE_CHECKED, ANIM_INDETERMINATE_UNCHECKED = _a.ANIM_INDETERMINATE_UNCHECKED;
-        switch (oldState) {
-            case TRANSITION_STATE_INIT:
-                if (newState === TRANSITION_STATE_UNCHECKED) {
-                    return '';
-                }
-                return newState === TRANSITION_STATE_CHECKED ? ANIM_INDETERMINATE_CHECKED : ANIM_INDETERMINATE_UNCHECKED;
-            case TRANSITION_STATE_UNCHECKED:
-                return newState === TRANSITION_STATE_CHECKED ? ANIM_UNCHECKED_CHECKED : ANIM_UNCHECKED_INDETERMINATE;
-            case TRANSITION_STATE_CHECKED:
-                return newState === TRANSITION_STATE_UNCHECKED ? ANIM_CHECKED_UNCHECKED : ANIM_CHECKED_INDETERMINATE;
-            default: // TRANSITION_STATE_INDETERMINATE
-                return newState === TRANSITION_STATE_CHECKED ? ANIM_INDETERMINATE_CHECKED : ANIM_INDETERMINATE_UNCHECKED;
-        }
-    };
-    MDCCheckboxFoundation.prototype.updateAriaChecked = function () {
-        // Ensure aria-checked is set to mixed if checkbox is in indeterminate state.
-        if (this.adapter.isIndeterminate()) {
-            this.adapter.setNativeControlAttr(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_CHECKED_ATTR, _constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_CHECKED_INDETERMINATE_VALUE);
-        }
-        else {
-            // The on/off state does not need to keep track of aria-checked, since
-            // the screenreader uses the checked property on the checkbox element.
-            this.adapter.removeNativeControlAttr(_constants__WEBPACK_IMPORTED_MODULE_1__.strings.ARIA_CHECKED_ATTR);
-        }
-    };
-    return MDCCheckboxFoundation;
-}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_2__.MDCFoundation));
-
-// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDCCheckboxFoundation);
-//# sourceMappingURL=foundation.js.map
-
-/***/ }),
-
 /***/ "./node_modules/@material/dom/events.js":
 /*!**********************************************!*\
   !*** ./node_modules/@material/dom/events.js ***!
@@ -15060,9 +14529,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/checkbox/component.js");
-/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/textfield/component.js");
-/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/select/component.js");
+/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/textfield/component.js");
+/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/select/component.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -15342,14 +14831,13 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.select();
     console.log("Component mounted.");
-    new material_components_web__WEBPACK_IMPORTED_MODULE_0__.MDCCheckbox(document.querySelector(".guardar-datos-checkbox .mdc-checkbox"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".flex-col-item-Direccion-Up .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".flex-col-item-Antedecendes-Up .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_2__.MDCSelect(document.querySelector(".municipio .mdc-select"));
-    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCTextField(document.querySelector(".nota-comun .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_0__.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_0__.MDCTextField(document.querySelector(".flex-col-item-Direccion-Up .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_0__.MDCTextField(document.querySelector(".flex-col-item-Antedecendes-Up .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_0__.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_0__.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_1__.MDCSelect(document.querySelector(".municipio .mdc-select"));
+    new material_components_web__WEBPACK_IMPORTED_MODULE_0__.MDCTextField(document.querySelector(".nota-comun .mdc-text-field"));
   }
 });
 
@@ -15366,6 +14854,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -53759,7 +53305,11 @@ var staticRenderFns = [
                       staticClass:
                         "title valign-text-middle gothica1-normal-black-28px",
                     },
-                    [_vm._v("Carta de llamada")]
+                    [
+                      _vm._v(
+                        "\n                                Carta de llamada\n                            "
+                      ),
+                    ]
                   ),
                   _vm._v(" "),
                   _c(
@@ -53793,7 +53343,11 @@ var staticRenderFns = [
                           staticClass: "mdc-floating-label",
                           attrs: { id: "my-label-id" },
                         },
-                        [_vm._v("Teléfono")]
+                        [
+                          _vm._v(
+                            "\n                                    Teléfono\n                                "
+                          ),
+                        ]
                       ),
                       _vm._v(" "),
                       _c("input", {
@@ -53851,7 +53405,11 @@ var staticRenderFns = [
                           staticClass: "mdc-floating-label",
                           attrs: { id: "my-label-id" },
                         },
-                        [_vm._v("Antedecentes")]
+                        [
+                          _vm._v(
+                            "\n                                    Antedecentes\n                                "
+                          ),
+                        ]
                       ),
                       _vm._v(" "),
                       _c("input", {
@@ -53884,7 +53442,11 @@ var staticRenderFns = [
                           staticClass: "mdc-floating-label",
                           attrs: { id: "my-label-id" },
                         },
-                        [_vm._v("Procedencia de la llamada")]
+                        [
+                          _vm._v(
+                            "\n                                    Procedencia de la llamada\n                                "
+                          ),
+                        ]
                       ),
                       _vm._v(" "),
                       _c("input", {
@@ -53913,7 +53475,11 @@ var staticRenderFns = [
                           staticClass: "mdc-floating-label",
                           attrs: { id: "my-label-id" },
                         },
-                        [_vm._v("Origen de la llamada")]
+                        [
+                          _vm._v(
+                            "\n                                    Origen de la llamada\n                                "
+                          ),
+                        ]
                       ),
                       _vm._v(" "),
                       _c("input", {
@@ -53957,7 +53523,11 @@ var staticRenderFns = [
                               staticClass: "mdc-floating-label",
                               attrs: { id: "demo-label" },
                             },
-                            [_vm._v("Municipio")]
+                            [
+                              _vm._v(
+                                "\n                                        Municipio\n                                    "
+                              ),
+                            ]
                           ),
                           _vm._v(" "),
                           _c(
@@ -53984,7 +53554,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-inactive material-icons",
                                 },
-                                [_vm._v("arrow_drop_down")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_down\n                                        "
+                                  ),
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -53993,7 +53567,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-active material-icons",
                                 },
-                                [_vm._v("arrow_drop_up")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_up\n                                        "
+                                  ),
+                                ]
                               ),
                             ]
                           ),
@@ -54037,7 +53615,11 @@ var staticRenderFns = [
                                   _c(
                                     "span",
                                     { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("Item")]
+                                    [
+                                      _vm._v(
+                                        "\n                                                Item\n                                            "
+                                      ),
+                                    ]
                                   ),
                                 ]
                               ),
@@ -54069,7 +53651,11 @@ var staticRenderFns = [
                           staticClass: "mdc-floating-label",
                           attrs: { id: "notaComunLabel" },
                         },
-                        [_vm._v("Nota Común")]
+                        [
+                          _vm._v(
+                            "\n                                    Nota Común\n                                "
+                          ),
+                        ]
                       ),
                       _vm._v(" "),
                       _c("input", {
@@ -54185,7 +53771,11 @@ var staticRenderFns = [
                               staticClass: "mdc-floating-label",
                               attrs: { id: "demo-label" },
                             },
-                            [_vm._v("Comarca")]
+                            [
+                              _vm._v(
+                                "\n                                        Comarca\n                                    "
+                              ),
+                            ]
                           ),
                           _vm._v(" "),
                           _c(
@@ -54212,7 +53802,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-inactive material-icons",
                                 },
-                                [_vm._v("arrow_drop_down")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_down\n                                        "
+                                  ),
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -54221,7 +53815,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-active material-icons",
                                 },
-                                [_vm._v("arrow_drop_up")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_up\n                                        "
+                                  ),
+                                ]
                               ),
                             ]
                           ),
@@ -54265,7 +53863,11 @@ var staticRenderFns = [
                                   _c(
                                     "span",
                                     { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("Item")]
+                                    [
+                                      _vm._v(
+                                        "\n                                                Item\n                                            "
+                                      ),
+                                    ]
                                   ),
                                 ]
                               ),
@@ -54306,7 +53908,11 @@ var staticRenderFns = [
                               staticClass: "mdc-floating-label",
                               attrs: { id: "demo-label" },
                             },
-                            [_vm._v("Provincia")]
+                            [
+                              _vm._v(
+                                "\n                                        Provincia\n                                    "
+                              ),
+                            ]
                           ),
                           _vm._v(" "),
                           _c(
@@ -54333,7 +53939,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-inactive material-icons",
                                 },
-                                [_vm._v("arrow_drop_down")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_down\n                                        "
+                                  ),
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -54342,7 +53952,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-active material-icons",
                                 },
-                                [_vm._v("arrow_drop_up")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_up\n                                        "
+                                  ),
+                                ]
                               ),
                             ]
                           ),
@@ -54386,7 +54000,11 @@ var staticRenderFns = [
                                   _c(
                                     "span",
                                     { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("Item")]
+                                    [
+                                      _vm._v(
+                                        "\n                                                Item\n                                            "
+                                      ),
+                                    ]
                                   ),
                                 ]
                               ),
@@ -54427,7 +54045,11 @@ var staticRenderFns = [
                               staticClass: "mdc-floating-label",
                               attrs: { id: "demo-label" },
                             },
-                            [_vm._v("Municipio")]
+                            [
+                              _vm._v(
+                                "\n                                        Municipio\n                                    "
+                              ),
+                            ]
                           ),
                           _vm._v(" "),
                           _c(
@@ -54454,7 +54076,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-inactive material-icons",
                                 },
-                                [_vm._v("arrow_drop_down")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_down\n                                        "
+                                  ),
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -54463,7 +54089,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-active material-icons",
                                 },
-                                [_vm._v("arrow_drop_up")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_up\n                                        "
+                                  ),
+                                ]
                               ),
                             ]
                           ),
@@ -54507,7 +54137,11 @@ var staticRenderFns = [
                                   _c(
                                     "span",
                                     { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("Item")]
+                                    [
+                                      _vm._v(
+                                        "\n                                                Item\n                                            "
+                                      ),
+                                    ]
                                   ),
                                 ]
                               ),
@@ -54551,7 +54185,11 @@ var staticRenderFns = [
                               staticClass: "mdc-floating-label",
                               attrs: { id: "demo-label" },
                             },
-                            [_vm._v("Tipo de Localización")]
+                            [
+                              _vm._v(
+                                "\n                                        Tipo de Localización\n                                    "
+                              ),
+                            ]
                           ),
                           _vm._v(" "),
                           _c(
@@ -54578,7 +54216,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-inactive material-icons",
                                 },
-                                [_vm._v("arrow_drop_down")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_down\n                                        "
+                                  ),
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -54587,7 +54229,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-active material-icons",
                                 },
-                                [_vm._v("arrow_drop_up")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_up\n                                        "
+                                  ),
+                                ]
                               ),
                             ]
                           ),
@@ -54631,7 +54277,11 @@ var staticRenderFns = [
                                   _c(
                                     "span",
                                     { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("Punto Singular")]
+                                    [
+                                      _vm._v(
+                                        "\n                                                Punto Singular\n                                            "
+                                      ),
+                                    ]
                                   ),
                                 ]
                               ),
@@ -54653,7 +54303,11 @@ var staticRenderFns = [
                                   _c(
                                     "span",
                                     { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("Carretera")]
+                                    [
+                                      _vm._v(
+                                        "\n                                                Carretera\n                                            "
+                                      ),
+                                    ]
                                   ),
                                 ]
                               ),
@@ -54675,7 +54329,11 @@ var staticRenderFns = [
                                   _c(
                                     "span",
                                     { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("Entidad Población")]
+                                    [
+                                      _vm._v(
+                                        "\n                                                Entidad Población\n                                            "
+                                      ),
+                                    ]
                                   ),
                                 ]
                               ),
@@ -54697,7 +54355,11 @@ var staticRenderFns = [
                                   _c(
                                     "span",
                                     { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("Calle")]
+                                    [
+                                      _vm._v(
+                                        "\n                                                Calle\n                                            "
+                                      ),
+                                    ]
                                   ),
                                 ]
                               ),
@@ -54722,7 +54384,11 @@ var staticRenderFns = [
                           staticClass: "mdc-floating-label",
                           attrs: { id: "my-label-id" },
                         },
-                        [_vm._v("Referencia")]
+                        [
+                          _vm._v(
+                            "\n                                    Referencia\n                                "
+                          ),
+                        ]
                       ),
                       _vm._v(" "),
                       _c("input", {
@@ -54778,7 +54444,11 @@ var staticRenderFns = [
                               staticClass: "mdc-floating-label",
                               attrs: { id: "demo-label" },
                             },
-                            [_vm._v("Tipos de Incidente")]
+                            [
+                              _vm._v(
+                                "\n                                        Tipos de Incidente\n                                    "
+                              ),
+                            ]
                           ),
                           _vm._v(" "),
                           _c(
@@ -54805,7 +54475,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-inactive material-icons",
                                 },
-                                [_vm._v("arrow_drop_down")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_down\n                                        "
+                                  ),
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -54814,7 +54488,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-active material-icons",
                                 },
-                                [_vm._v("arrow_drop_up")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_up\n                                        "
+                                  ),
+                                ]
                               ),
                             ]
                           ),
@@ -54896,7 +54574,11 @@ var staticRenderFns = [
                               staticClass: "mdc-floating-label",
                               attrs: { id: "demo-label" },
                             },
-                            [_vm._v("Tipos de Incidente")]
+                            [
+                              _vm._v(
+                                "\n                                        Tipos de Incidente\n                                    "
+                              ),
+                            ]
                           ),
                           _vm._v(" "),
                           _c(
@@ -54923,7 +54605,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-inactive material-icons",
                                 },
-                                [_vm._v("arrow_drop_down")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_down\n                                        "
+                                  ),
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -54932,7 +54618,11 @@ var staticRenderFns = [
                                   staticClass:
                                     "mdc-select__dropdown-icon-active material-icons",
                                 },
-                                [_vm._v("arrow_drop_up")]
+                                [
+                                  _vm._v(
+                                    "\n                                            arrow_drop_up\n                                        "
+                                  ),
+                                ]
                               ),
                             ]
                           ),
@@ -54999,7 +54689,9 @@ var staticRenderFns = [
                         _c("span", { staticClass: "mdc-button__ripple" }),
                         _vm._v(" "),
                         _c("span", { staticClass: "mdc-button__label" }, [
-                          _vm._v("Mapa"),
+                          _vm._v(
+                            "\n                                    Mapa\n                                "
+                          ),
                         ]),
                       ]
                     ),
@@ -55021,7 +54713,9 @@ var staticRenderFns = [
                           _c("span", { staticClass: "mdc-button__ripple" }),
                           _vm._v(" "),
                           _c("span", { staticClass: "mdc-button__label" }, [
-                            _vm._v("Aceptar"),
+                            _vm._v(
+                              "\n                                        Aceptar\n                                    "
+                            ),
                           ]),
                         ]
                       ),
@@ -55042,7 +54736,9 @@ var staticRenderFns = [
                           _c("span", { staticClass: "mdc-button__ripple" }),
                           _vm._v(" "),
                           _c("span", { staticClass: "mdc-button__label" }, [
-                            _vm._v("Cancelar"),
+                            _vm._v(
+                              "\n                                        Cancelar\n                                    "
+                            ),
                           ]),
                         ]
                       ),

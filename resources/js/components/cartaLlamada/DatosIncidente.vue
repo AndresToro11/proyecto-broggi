@@ -7,7 +7,9 @@
                     <div class="flex-col">
                         <div class="flex-row">
                             <div class="flex-col-1">
-                                <h1 class="title valign-text-middle gothica1-normal-black-28px">Carta de llamada</h1>
+                                <h1 class="title valign-text-middle gothica1-normal-black-28px">
+                                    Carta de llamada
+                                </h1>
                                 <div class="datos-del-interlocutor valign-text-middle gothica1-normal-black-21px">
                                     Datos del interlocutor
                                 </div>
@@ -19,8 +21,10 @@
                             <div class="telefono">
                                 <label class="mdc-text-field mdc-text-field--filled">
                                     <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">Teléfono</span>
-                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                    <span class="mdc-floating-label" id="my-label-id">
+                                        Teléfono
+                                    </span>
+                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
                                     <span class="mdc-line-ripple"></span>
                                 </label>
                             </div>
@@ -35,7 +39,9 @@
                             <div class="flex-col-item-Antedecendes-Up">
                                 <label class="mdc-text-field mdc-text-field--filled">
                                     <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">Antedecentes</span>
+                                    <span class="mdc-floating-label" id="my-label-id">
+                                        Antedecentes
+                                    </span>
                                     <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
                                     <span class="mdc-line-ripple"></span>
                                 </label>
@@ -48,7 +54,9 @@
                             <div class="procedencia-de-la-llamada">
                                 <label class="mdc-text-field mdc-text-field--filled">
                                     <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">Procedencia de la llamada</span>
+                                    <span class="mdc-floating-label" id="my-label-id">
+                                        Procedencia de la llamada
+                                    </span>
                                     <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
                                     <span class="mdc-line-ripple"></span>
                                 </label>
@@ -56,7 +64,9 @@
                             <div class="origen-de-la-llamada">
                                 <label class="mdc-text-field mdc-text-field--filled">
                                     <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">Origen de la llamada</span>
+                                    <span class="mdc-floating-label" id="my-label-id">
+                                        Origen de la llamada
+                                    </span>
                                     <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
                                     <span class="mdc-line-ripple"></span>
                                 </label>
@@ -64,13 +74,20 @@
                             <div class="municipio">
                                 <div class="mdc-select mdc-select--filled demo-width-class">
                                     <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
-                                        <span class="mdc-select__ripple"></span> <span id="demo-label" class="mdc-floating-label">Municipio</span>
+                                        <span class="mdc-select__ripple"></span>
+                                        <span id="demo-label" class="mdc-floating-label">
+                                            Municipio
+                                        </span>
                                         <span class="mdc-select__selected-text-container">
                                             <span id="demo-selected-text" class="mdc-select__selected-text"></span>
                                         </span>
                                         <span class="mdc-select__dropdown-icon">
-                                            <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
-                                            <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
+                                            <span class="mdc-select__dropdown-icon-inactive material-icons">
+                                                arrow_drop_down
+                                            </span>
+                                            <span class="mdc-select__dropdown-icon-active material-icons">
+                                                arrow_drop_up
+                                            </span>
                                         </span>
                                         <span class="mdc-line-ripple"></span>
                                     </div>
@@ -78,7 +95,9 @@
                                         <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
                                             <li class="mdc-list-item" data-value="Item" role="option">
                                                 <span class="mdc-list-item__ripple"></span>
-                                                <span class="mdc-list-item__text">Item</span>
+                                                <span class="mdc-list-item__text">
+                                                    Item
+                                                </span>
                                             </li>
                                         </ul>
                                     </div>
@@ -92,8 +111,10 @@
                             <div class="nota-comun"> <!-- Nota Comun -->
                                 <label class="mdc-text-field mdc-text-field--filled" id="notaComun">
                                     <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="notaComunLabel">Nota Común</span>
-                                    <input type="text" class="mdc-text-field__input" id="input-NotaComun" aria-labelledby="my-label-id" />
+                                    <span class="mdc-floating-label" id="notaComunLabel">
+                                        Nota Común
+                                    </span>
+                                    <input type="text" class="mdc-text-field__input" id="input-NotaComun" aria-labelledby="my-label-id"/>
                                     <span class="mdc-line-ripple"></span>
                                 </label>
                             </div>
@@ -279,7 +300,6 @@
         mounted() {
             this.select();
             console.log("Component mounted.");
-            new mdc.checkbox.MDCCheckbox(document.querySelector(".guardar-datos-checkbox .mdc-checkbox"));
             new mdc.textField.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".flex-col-item-Direccion-Up .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".flex-col-item-Antedecendes-Up .mdc-text-field"));
