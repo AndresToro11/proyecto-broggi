@@ -138,10 +138,16 @@
                                     </div>
                                     <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
                                         <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                            <li class="mdc-list-item" data-value="Punto Singular" role="option">
+                                            <li class="mdc-list-item" data-value="Fuera de Catalunya" role="option">
                                                 <span class="mdc-list-item__ripple"></span>
                                                 <span class="mdc-list-item__text">
-                                                    Punto Singular
+                                                    Fuera de Catalunya
+                                                </span>
+                                            </li>
+                                            <li class="mdc-list-item" data-value="Población" role="option">
+                                                <span class="mdc-list-item__ripple"></span>
+                                                <span class="mdc-list-item__text">
+                                                    Población
                                                 </span>
                                             </li>
                                             <li class="mdc-list-item" data-value="Carretera" role="option">
@@ -150,16 +156,16 @@
                                                     Carretera
                                                 </span>
                                             </li>
-                                            <li class="mdc-list-item" data-value="Entidad Población" role="option">
-                                                <span class="mdc-list-item__ripple"></span>
-                                                <span class="mdc-list-item__text">
-                                                    Entidad Población
-                                                </span>
-                                            </li>
                                             <li class="mdc-list-item" data-value="Calle" role="option">
                                                 <span class="mdc-list-item__ripple"></span>
                                                 <span class="mdc-list-item__text">
                                                     Calle
+                                                </span>
+                                            </li>
+                                            <li class="mdc-list-item" data-value="Punto Singular" role="option">
+                                                <span class="mdc-list-item__ripple"></span>
+                                                <span class="mdc-list-item__text">
+                                                    Punto Singular
                                                 </span>
                                             </li>
                                         </ul>
@@ -339,18 +345,7 @@ export default {
 .carta-de-llamada-default {
     align-items: flex-start;
     display: flex;
-    /* width: 954px;
-    height: 908px; */
-    /* padding: 0 89px; */
-    /* position: fixed; */
-    /* z-index: 3; */
     }
-
-    /* .carta-de-llamada-default .container-scrolling::-webkit-scrollbar {
-    display: none;
-    position: fixed;
-    width: 0;
-    } */
 
     .carta-de-llamada-default .container-scrolling {
     align-items: flex-start;
@@ -358,10 +353,6 @@ export default {
     width: 954px;
     /* height: 908px; */
     left: 92px;
-    /* min-width: 1739px; */
-    /* padding: 0 8px; */
-    /* position: fixed; */
-    /* top: 172px; */
     top: 480px;
     z-index: 5;
     }
@@ -371,8 +362,6 @@ export default {
     align-self: flex-end;
     display: flex;
     flex-direction: column;
-    /* margin-bottom: -560px; */
-    /* min-height: 1418px; */
     width: 265px;
     z-index: 5;
     }
@@ -452,7 +441,6 @@ export default {
     align-items: center;
     display: flex;
     height: 48px;
-    /* position: relative; */
     }
 
     .comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
@@ -528,7 +516,6 @@ export default {
     align-items: center;
     display: flex;
     height: 48px;
-    /* position: relative; */
     }
 
     .tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
@@ -635,7 +622,6 @@ export default {
     align-items: center;
     display: flex;
     height: 48px;
-    /* position: relative; */
     }
 
     .cancelar {
