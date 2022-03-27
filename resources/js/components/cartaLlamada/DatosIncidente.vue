@@ -489,30 +489,6 @@
     box-sizing: content-box;
     }
 
-    .guardar-datos-checkbox
-    .mdc-checkbox__native-control:enabled:checked
-    ~ .mdc-checkbox__background,
-    .guardar-datos-checkbox
-    .mdc-checkbox--selected
-    .mdc-checkbox__native-control
-    ~ .mdc-checkbox__background,
-    .guardar-datos-checkbox
-    .mdc-checkbox--anim-checked-unchecked
-    .mdc-checkbox__native-control
-    ~ .mdc-checkbox__background {
-    background-color: #0066ff !important;
-    border-color: #0066ff !important;
-    }
-
-    .guardar-datos-checkbox
-    .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused
-    .mdc-checkbox__ripple::before,
-    .guardar-datos-checkbox
-    .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused
-    .mdc-checkbox__ripple::after {
-    background-color: #0066ff !important;
-    }
-
     .mdc-text-field--filled:not(.mdc-text-field--disabled) {
     background-color: #ffffff;
     width: 263px;
@@ -525,13 +501,13 @@
 
     /* Second Column */
     .flex-row-2 {
-        align-items: flex-start;
-        align-self: flex-start;
-        display: flex;
-        flex-direction: column;
-        margin-left: 315px;
-        margin-top: -261px;
-        width: 263px;
+    align-items: flex-start;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 315px;
+    margin-top: -261px;
+    width: 263px;
     }
 
     .procedencia-de-la-llamada {

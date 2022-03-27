@@ -1,6 +1,8 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
-@import url("https://fonts.googleapis.com/css?family=Gothic+A1:400|Roboto:400");
+/* @import url("https://fonts.googleapis.com/css?family=Gothic+A1:400|Roboto:400"); */
+
+@import url("https://fonts.googleapis.com/css?family=Gothic+A1:200,300,700,800");
 
 :root {
   --mdc-theme-background: #fff;
@@ -9,7 +11,7 @@
   --mdc-theme-on-primary: #fff;
   --mdc-theme-on-secondary: #fff;
   --mdc-theme-on-surface: #000;
-  --mdc-theme-primary: #6200ee;
+  --mdc-theme-primary: #0040FF;
   --mdc-theme-secondary: #018786;
   --mdc-theme-surface: #fff;
 }
