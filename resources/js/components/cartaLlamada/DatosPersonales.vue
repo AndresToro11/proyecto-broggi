@@ -274,6 +274,7 @@
         </div>
     </div>
 </template>
+
 <script>
 export default {
     data() {
@@ -338,27 +339,27 @@ export default {
 .carta-de-llamada-default {
     align-items: flex-start;
     display: flex;
-    height: 1080px;
+    /* width: 954px;
+    height: 908px; */
     /* padding: 0 89px; */
-    width: 1920px;
     /* position: fixed; */
-    z-index: 3;
+    /* z-index: 3; */
     }
 
-    .carta-de-llamada-default .container-scrolling::-webkit-scrollbar {
+    /* .carta-de-llamada-default .container-scrolling::-webkit-scrollbar {
     display: none;
-    /* position: fixed; */
+    position: fixed;
     width: 0;
-    }
+    } */
 
     .carta-de-llamada-default .container-scrolling {
     align-items: flex-start;
     display: flex;
-    height: 908px;
+    width: 954px;
+    /* height: 908px; */
     left: 92px;
-    min-width: 1739px;
-    overflow-y: scroll;
-    padding: 0 8px;
+    /* min-width: 1739px; */
+    /* padding: 0 8px; */
     /* position: fixed; */
     /* top: 172px; */
     top: 480px;
@@ -370,8 +371,8 @@ export default {
     align-self: flex-end;
     display: flex;
     flex-direction: column;
-    margin-bottom: -560px;
-    min-height: 1418px;
+    /* margin-bottom: -560px; */
+    /* min-height: 1418px; */
     width: 265px;
     z-index: 5;
     }

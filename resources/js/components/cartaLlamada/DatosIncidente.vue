@@ -175,7 +175,7 @@
         "cartaDeLlamada",
         "datosDelInterlocutor",
         "guardarDatos",
-    ],
+        ],
         computed: {
             descripcioLocalitzacio: function () {
                 let varianle;
@@ -315,28 +315,17 @@
     .carta-de-llamada-default {
     align-items: flex-start;
     display: flex;
-    height: 312px;
-    /* padding: 0 89px; */
+    height: 320px;
     width: 891px;
-    /* position: fixed; */
-    }
-
-    .carta-de-llamada-default .container-scrolling::-webkit-scrollbar {
-    display: none;
-    /* position: fixed; */
-    width: 0;
     }
 
     .carta-de-llamada-default .container-scrolling {
     align-items: flex-start;
     display: flex;
-    height: 312px;
+    margin-left: -150px;
+    height: 320px;
     width: 891px;
     left: 92px;
-    min-width: 1739px;
-    overflow-y: scroll;
-    padding: 0 8px;
-    /* position: fixed; */
     top: 172px;
     z-index: 1;
     }
@@ -346,8 +335,7 @@
     align-self: flex-end;
     display: flex;
     flex-direction: column;
-    margin-bottom: -560px;
-    min-height: 1418px;
+    min-height: 265px;
     width: 265px;
     }
 
@@ -365,7 +353,6 @@
     display: flex;
     flex-direction: column;
     margin-top: 4px;
-    min-height: 265px;
     width: 265px;
     }
 
@@ -373,7 +360,6 @@
     align-items: flex-end;
     display: flex;
     height: 80px;
-    min-width: 402px;
     }
 
     .carta-de-llamada-default .flex-row-1 {
@@ -381,7 +367,6 @@
     display: flex;
     height: 265px;
     margin-top: 2px;
-    min-width: 265px;
     }
 
     .carta-de-llamada-default .title {
@@ -397,21 +382,6 @@
     line-height: 16px;
     margin-left: 2px;
     margin-top: 36px;
-    white-space: nowrap;
-    }
-
-    .carta-de-llamada-default .guardar-datos-checkbox {
-    height: 40px;
-    margin-left: 41px;
-    width: 40px;
-    }
-
-    .carta-de-llamada-default .guardar-datos {
-    letter-spacing: 0.15px;
-    line-height: 24px;
-    margin-bottom: 8px;
-    min-height: 24px;
-    min-width: 103px;
     white-space: nowrap;
     }
 
@@ -483,10 +453,6 @@
 
     .flex-col-item-Antedecendes-Up .mdc-text-field {
     --mdc-theme-primary: #000000;
-    }
-
-    .mdc-checkbox {
-    box-sizing: content-box;
     }
 
     .mdc-text-field--filled:not(.mdc-text-field--disabled) {

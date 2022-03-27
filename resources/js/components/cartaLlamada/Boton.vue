@@ -122,13 +122,4 @@ export default {
         display: flex;
         flex-direction: column;
     }
-
-    .datos-incidentes {
-        margin-left: 92px;
-    }
-
-    .datos-personales {
-        margin-left: 92px;
-        margin-top: -750px;
-    }
 </style>
