@@ -42,25 +42,37 @@
                 <span>
                     <div class="header-operador">
                         <div class="overlap-group-operador">
-                            <img class="background-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png" />
-                            <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png" />
+                            <img class="background-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png"/>
+                            <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
                             <h1 class="title-operador valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
                             <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Video Interactivo</div>
-                            <div class="sergi-prez-jimnez-operador valign-text-middle">Sergi Pérez Jiménez</div>
-                            <img class="separate-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/separate@2x.svg" />
-                            <div class="cerrar-sesin-operador valign-text-middle">Cerrar sesión</div>
-                            <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/white-gradient@1x.svg" />
+                            <div class="sergi-prez-jimnez-operador valign-text-middle gothica1-normal-white-18px">Sergi Pérez Jiménez</div>
+                            <img class="separate-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/separate@2x.svg"/>
+                            <div class="cerrar-sesin-operador valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
+                            <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/white-gradient@1x.svg"/>
                         </div>
                     </div>
                 </span>
                 {{-- Header Supervisor --}}
                 <span>
                     <div class="header-supervisor">
+                        <div class="overlap-group-supervisor">
+                            <img class="overlap-group-item-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
+                            <img class="overlap-group-item-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623f92c8f6a94c4ce7531afa/img/white-gradient-1@1x.svg"/>
+                            <h1 class="title-supervisor valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
+                            <div class="expedientes-supervisor valign-text-middle gothica1-medium-white-28px">Expedientes</div>
+                            <div class="grficos-supervisor valign-text-middle gothica1-medium-white-28px">Gráficos</div>
+                            <div class="operadores-supervisor valign-text-middle gothica1-medium-white-28px">Operadores</div>
+                            <div class="sergi-prez-jimnez-supervisor valign-text-middle gothica1-normal-white-18px">Sergi Pérez Jiménez</div>
+                            <img class="separate-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623f92c8f6a94c4ce7531afa/img/separate-1@2x.svg"/>
+                            <div class="cerrar-sesin-supervisor valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
+                          </div>
                     </div>
                 </span>
                 {{-- Header Administrador --}}
                 <span>
                     <div class="header-administrador">
+
                     </div>
                 </span>
             </div>
@@ -80,6 +92,7 @@
             width: 1920px;
             }
 
+            /* Header Operador */
             .header .header-operador {
             align-items: flex-end;
             background-color: var(--white);
@@ -170,6 +183,114 @@
             font-family: var(--font-family-gothic_a1-regular);
             font-size: var(--font-size-xs);
             font-weight: 400;
+            height: 16px;
+            left: 1707px;
+            letter-spacing: 1.25px;
+            line-height: 16px;
+            position: absolute;
+            text-shadow: 0px 4px 4px #00000040;
+            top: 34px;
+            white-space: nowrap;
+            }
+
+            /* Header Supervisor */
+            .header-supervisor {
+            align-items: flex-start;
+            background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623f92c8f6a94c4ce7531afa/img/shadow-1@1x.svg);
+            background-size: 100% 100%;
+            display: flex;
+            height: 198px;
+            min-width: 1920px;
+            z-index: 1;
+            }
+
+            .header .overlap-group-supervisor {
+            background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png);
+            background-position: 50% 50%;
+            background-size: cover;
+            height: 172px;
+            position: relative;
+            width: 1920px;
+            }
+
+            .header .overlap-group-item-supervisor {
+            height: 172px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 1920px;
+            }
+
+            .header .title-supervisor {
+            cursor: pointer;
+            height: 16px;
+            left: 265px;
+            letter-spacing: 1.25px;
+            line-height: 16px;
+            position: absolute;
+            text-shadow: 0px 4px 4px #00000040;
+            top: 139px;
+            transition: all 0.2s ease-in-out;
+            white-space: nowrap;
+            }
+
+            .header .title-supervisor:hover {
+            transform: scale(1.1);
+            }
+
+            .header .expedientes-supervisor {
+            height: 16px;
+            left: 681px;
+            letter-spacing: 1.25px;
+            line-height: 16px;
+            position: absolute;
+            text-shadow: 0px 4px 4px #00000040;
+            top: 139px;
+            white-space: nowrap;
+            }
+
+            .header .grficos-supervisor {
+            height: 16px;
+            left: 1093px;
+            letter-spacing: 1.25px;
+            line-height: 16px;
+            position: absolute;
+            text-shadow: 0px 4px 4px #00000040;
+            top: 139px;
+            white-space: nowrap;
+            }
+
+            .header .operadores-supervisor {
+            height: 16px;
+            left: 1454px;
+            letter-spacing: 1.25px;
+            line-height: 16px;
+            position: absolute;
+            text-shadow: 0px 4px 4px #00000040;
+            top: 139px;
+            white-space: nowrap;
+            }
+
+            .header .sergi-prez-jimnez-supervisor {
+            height: 16px;
+            left: 1408px;
+            letter-spacing: 1.25px;
+            line-height: 16px;
+            position: absolute;
+            text-shadow: 0px 4px 4px #00000040;
+            top: 34px;
+            white-space: nowrap;
+            }
+
+            .header .separate-supervisor {
+            height: 58px;
+            left: 1647px;
+            position: absolute;
+            top: 18px;
+            width: 9px;
+            }
+
+            .header .cerrar-sesin-supervisor {
             height: 16px;
             left: 1707px;
             letter-spacing: 1.25px;

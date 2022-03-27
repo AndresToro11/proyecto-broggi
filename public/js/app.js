@@ -16099,16 +16099,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -16142,7 +16132,8 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 //---------------------------------------------- Login -----------------------------------
 
-Vue.component('login', (__webpack_require__(/*! ./components/login.vue */ "./resources/js/components/login.vue")["default"])); //-----------------------------------------------Llamada----------------------------------------------------
+Vue.component('vista-login', (__webpack_require__(/*! ./components/login.vue */ "./resources/js/components/login.vue")["default"])); //Acabado
+//-----------------------------------------------Llamada----------------------------------------------------
 
 Vue.component('datos-administrativos', (__webpack_require__(/*! ./components/cartaLlamada/DatosAdministrativos.vue */ "./resources/js/components/cartaLlamada/DatosAdministrativos.vue")["default"]));
 Vue.component('datos-incidentes', (__webpack_require__(/*! ./components/cartaLlamada/DatosIncidente.vue */ "./resources/js/components/cartaLlamada/DatosIncidente.vue")["default"])); //Acabado
@@ -55672,23 +55663,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    Esto es de login\n                "
-              ),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
+    return _c("div", [_c("h1", [_vm._v("Hola caracola")])])
   },
 ]
 render._withStripped = true
