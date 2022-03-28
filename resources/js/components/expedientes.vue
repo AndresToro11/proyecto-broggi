@@ -29,7 +29,7 @@
                         </div>
                     </a>
                 </p>
-                <div class="collapse border m-4" id="collapseExample">
+             <div class="collapse border m-4" id="collapseExample">
                     <div class="border m-4 p-4" v-for="carta in expediente.cartas_trucades" :key="carta.id">
                         <div class="row" >
                             <div class="col">
@@ -79,7 +79,8 @@
         data(){
             return {
                 expedientes: [],
-                loading: false
+                loading: false,
+                contador : 0
             }
         },
 
@@ -99,7 +100,6 @@
             }
         },
         mounted() {
-            console.log('¡¡Componente expedientes up!!')
             this.selectExpedientes();
         }
     }

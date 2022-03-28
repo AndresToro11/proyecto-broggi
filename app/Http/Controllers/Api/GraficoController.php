@@ -20,6 +20,8 @@ class GraficoController extends Controller
         $provincias = Carta_trucada::with('provincia')
                                     ->select(['provincies_id', DB::raw('count(distinct expedients_id) as numero')])
                                     ->groupBy('provincies_id')
+                                    ->orderBy('numero', 'desc')
+                                    ->take(5)
                                     ->get();
 
         return ProvinciasResource::collection($provincias);
@@ -29,6 +31,8 @@ class GraficoController extends Controller
         $municipios = Carta_trucada::with('municipi')
                                     ->select(['municipis_id', DB::raw('count(distinct expedients_id) as numero')])
                                     ->groupBy('municipis_id')
+                                    ->orderBy('numero', 'desc')
+                                    ->take(5)
                                     ->get();
 
         return MunicipiosResource::collection($municipios);

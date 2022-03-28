@@ -1,11 +1,10 @@
-{{ session(['rol' => 'operador']) }}
+{{ session(['rol' => 'supervisor']) }}
 
 @extends('layouts.plantilla')
 
 @section('titulo', 'Expedientes')
 
 @section('contenido')
-
 
     @if(session('rol') == "administrador")
     <administrador></administrador>
