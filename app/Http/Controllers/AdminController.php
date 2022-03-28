@@ -66,9 +66,6 @@ class AdminController extends Controller
 
         try{
             $usuario->save(); 
-            // $response = (new Usuari($usuario))
-            //              ->response()
-            //              ->setStatusCode(201);
             $response = response()->json(['message' => 'Tot correcte'], 201);
          }
          catch(QueryException $e){

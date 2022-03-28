@@ -87,8 +87,7 @@
                     nick: ''
                 },
                 image: '/images/usuario.jpg',
-                contrasenaC: '',
-                
+                contrasenaC: ''
             }
         },
 
