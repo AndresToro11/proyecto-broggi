@@ -5,13 +5,13 @@
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a @click="selectTodos()" id="todos" class="nav-link active" href="#">Todos</a>
+                        <a @click="selectTodos()" id="todos" class="nav-link text-dark active" href="#">Todos</a>
                     </li>
                     <li class="nav-item">
-                        <a @click="selectOperadores()" id="operadores" class="nav-link" href="#">Operadores</a>
+                        <a @click="selectOperadores()" id="operadores" class="nav-link text-dark" href="#">Operadores</a>
                     </li>
                     <li class="nav-item">
-                        <a @click="selectSupervisores()" id="supervisores" class="nav-link" href="#">Supervisores</a>
+                        <a @click="selectSupervisores()" id="supervisores" class="nav-link text-dark" href="#">Supervisores</a>
                     </li>
                 </ul>
             </div>

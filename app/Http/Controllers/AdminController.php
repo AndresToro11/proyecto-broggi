@@ -81,7 +81,7 @@ class AdminController extends Controller
 
     public function update(Request $request, Usuari $usuari)
     {
-        //
+        
     }
 
     public function destroy(Usuari $usuari)

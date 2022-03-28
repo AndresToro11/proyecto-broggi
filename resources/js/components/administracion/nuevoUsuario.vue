@@ -45,9 +45,8 @@
                     <div class="input-field col s4">
                         <select v-model="usuario.rol" class="form-select" aria-label="Default select example">
                             <option selected disabled>Rol</option>
-                            <option v-for="rol in data" :key="rol.id" :value="rol.id" >
-                            {{ rol.nom}}
-                        </option>
+                            <option value="1">Operador</option>
+                            <option value="2">Supervisor</option>
                         </select>
                     </div>
                 </div>
@@ -94,20 +93,6 @@
         },
 
         methods:{
-            selectRoles(){
-                this.loading = true;
-                let me = this;
-                axios
-                    .get('/admin/roles')
-                    .then(response => {
-                        me.data = response.data;
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    })
-                    .finally(() => this.loading = false);
-            },
-
             insertUsuario(){
                 let me = this;
 
