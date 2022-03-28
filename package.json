@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "chart.js": "^3.7.1",
+        "material-components-web": "^13.0.0",
         "vue-axios": "^3.4.1",
         "vue-router": "^4.0.12"
     }

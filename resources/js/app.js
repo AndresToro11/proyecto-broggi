@@ -30,7 +30,8 @@ Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncide
 Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default);
 Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
 Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
-Vue.component('carta-llamada', require('./components/cartaLlamada/Carta_de_llamada.vue').default);
+Vue.component('deCualquierManera', require('./components/cartaLlamada/CartaDeLlamada.vue').default);
+
 //------------------------------------------- Expedientes --------------------------------
 
 Vue.component('expedientes', require('./components/expedientes.vue').default);
@@ -54,7 +55,6 @@ Vue.component('supervisor', require('./components/home/supervisor.vue').default)
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
 const app = new Vue({
     el: '#app',
 });
