@@ -14687,6 +14687,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -14705,19 +14706,6 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    selectRoles: function selectRoles() {
-      var _this = this;
-
-      this.loading = true;
-      var me = this;
-      axios.get('/admin/roles').then(function (response) {
-        me.data = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-    },
     insertUsuario: function insertUsuario() {
       var me = this;
       axios.post('/admin/insertUsuario', me.usuario);
@@ -14821,7 +14809,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -14840,19 +14827,6 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    selectRoles: function selectRoles() {
-      var _this = this;
-
-      this.loading = true;
-      var me = this;
-      axios.get('/admin/roles').then(function (response) {
-        me.data = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-    },
     insertUsuario: function insertUsuario() {
       var me = this;
       axios.post('/admin/insertUsuario', me.usuario);
@@ -54598,21 +54572,10 @@ var render = function () {
                   _vm._v("Rol"),
                 ]),
                 _vm._v(" "),
-                _vm._l(_vm.data, function (rol) {
-                  return _c(
-                    "option",
-                    { key: rol.id, domProps: { value: rol.id } },
-                    [
-                      _vm._v(
-                        "\n                        " +
-                          _vm._s(rol.nom) +
-                          "\n                    "
-                      ),
-                    ]
-                  )
-                }),
-              ],
-              2
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Operador")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("Supervisor")]),
+              ]
             ),
           ]),
         ]),
@@ -54669,7 +54632,9 @@ var render = function () {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row m-4" }, [
-      _c("div", { staticClass: "card m-4" }, [
+      _c("div", { staticClass: "col-4" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "card col-8 m-4" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "input-field col s6" }, [
             _c("input", {
@@ -54968,21 +54933,10 @@ var render = function () {
                   _vm._v("Rol"),
                 ]),
                 _vm._v(" "),
-                _vm._l(_vm.data, function (rol) {
-                  return _c(
-                    "option",
-                    { key: rol.id, domProps: { value: rol.id } },
-                    [
-                      _vm._v(
-                        "\n                        " +
-                          _vm._s(rol.nom) +
-                          "\n                    "
-                      ),
-                    ]
-                  )
-                }),
-              ],
-              2
+                _c("option", { attrs: { value: "1" } }, [_vm._v("Operador")]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "2" } }, [_vm._v("Supervisor")]),
+              ]
             ),
           ]),
         ]),
