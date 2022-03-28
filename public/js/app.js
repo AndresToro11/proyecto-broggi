@@ -10,8 +10,8 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getCorrectPropertyName": () => (/* binding */ getCorrectPropertyName),
-/* harmony export */   "getCorrectEventName": () => (/* binding */ getCorrectEventName)
+/* harmony export */   "getCorrectEventName": () => (/* binding */ getCorrectEventName),
+/* harmony export */   "getCorrectPropertyName": () => (/* binding */ getCorrectPropertyName)
 /* harmony export */ });
 /**
  * @license
@@ -558,8 +558,8 @@ function supportsPassiveOption(globalObj) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "KEY": () => (/* binding */ KEY),
-/* harmony export */   "normalizeKey": () => (/* binding */ normalizeKey),
-/* harmony export */   "isNavigationEvent": () => (/* binding */ isNavigationEvent)
+/* harmony export */   "isNavigationEvent": () => (/* binding */ isNavigationEvent),
+/* harmony export */   "normalizeKey": () => (/* binding */ normalizeKey)
 /* harmony export */ });
 /**
  * @license
@@ -700,8 +700,8 @@ function isNavigationEvent(evt) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "closest": () => (/* binding */ closest),
-/* harmony export */   "matches": () => (/* binding */ matches),
-/* harmony export */   "estimateScrollWidth": () => (/* binding */ estimateScrollWidth)
+/* harmony export */   "estimateScrollWidth": () => (/* binding */ estimateScrollWidth),
+/* harmony export */   "matches": () => (/* binding */ matches)
 /* harmony export */ });
 /**
  * @license
@@ -1707,12 +1707,12 @@ var MDCList = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "strings": () => (/* binding */ strings),
 /* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
-/* harmony export */   "numbers": () => (/* binding */ numbers),
 /* harmony export */   "deprecatedClassNameMap": () => (/* binding */ deprecatedClassNameMap),
 /* harmony export */   "evolutionAttribute": () => (/* binding */ evolutionAttribute),
-/* harmony export */   "evolutionClassNameMap": () => (/* binding */ evolutionClassNameMap)
+/* harmony export */   "evolutionClassNameMap": () => (/* binding */ evolutionClassNameMap),
+/* harmony export */   "numbers": () => (/* binding */ numbers),
+/* harmony export */   "strings": () => (/* binding */ strings)
 /* harmony export */ });
 /**
  * @license
@@ -2564,12 +2564,12 @@ var MDCListFoundation = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "initState": () => (/* binding */ initState),
-/* harmony export */   "initSortedIndex": () => (/* binding */ initSortedIndex),
-/* harmony export */   "matchItem": () => (/* binding */ matchItem),
-/* harmony export */   "isTypingInProgress": () => (/* binding */ isTypingInProgress),
 /* harmony export */   "clearBuffer": () => (/* binding */ clearBuffer),
-/* harmony export */   "handleKeydown": () => (/* binding */ handleKeydown)
+/* harmony export */   "handleKeydown": () => (/* binding */ handleKeydown),
+/* harmony export */   "initSortedIndex": () => (/* binding */ initSortedIndex),
+/* harmony export */   "initState": () => (/* binding */ initState),
+/* harmony export */   "isTypingInProgress": () => (/* binding */ isTypingInProgress),
+/* harmony export */   "matchItem": () => (/* binding */ matchItem)
 /* harmony export */ });
 /* harmony import */ var _material_dom_keyboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/dom/keyboard */ "./node_modules/@material/dom/keyboard.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/list/constants.js");
@@ -3080,11 +3080,11 @@ var MDCMenuSurface = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
-/* harmony export */   "strings": () => (/* binding */ strings),
-/* harmony export */   "numbers": () => (/* binding */ numbers),
+/* harmony export */   "Corner": () => (/* binding */ Corner),
 /* harmony export */   "CornerBit": () => (/* binding */ CornerBit),
-/* harmony export */   "Corner": () => (/* binding */ Corner)
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
+/* harmony export */   "numbers": () => (/* binding */ numbers),
+/* harmony export */   "strings": () => (/* binding */ strings)
 /* harmony export */ });
 /**
  * @license
@@ -4175,10 +4175,10 @@ var MDCMenu = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DefaultFocusState": () => (/* binding */ DefaultFocusState),
 /* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
-/* harmony export */   "strings": () => (/* binding */ strings),
 /* harmony export */   "numbers": () => (/* binding */ numbers),
-/* harmony export */   "DefaultFocusState": () => (/* binding */ DefaultFocusState)
+/* harmony export */   "strings": () => (/* binding */ strings)
 /* harmony export */ });
 /**
  * @license
@@ -4862,8 +4862,8 @@ var MDCRipple = /** @class */ (function (_super) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
-/* harmony export */   "strings": () => (/* binding */ strings),
-/* harmony export */   "numbers": () => (/* binding */ numbers)
+/* harmony export */   "numbers": () => (/* binding */ numbers),
+/* harmony export */   "strings": () => (/* binding */ strings)
 /* harmony export */ });
 /**
  * @license
@@ -5468,8 +5468,8 @@ var MDCRippleFoundation = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "supportsCssVariables": () => (/* binding */ supportsCssVariables),
-/* harmony export */   "getNormalizedEventCoords": () => (/* binding */ getNormalizedEventCoords)
+/* harmony export */   "getNormalizedEventCoords": () => (/* binding */ getNormalizedEventCoords),
+/* harmony export */   "supportsCssVariables": () => (/* binding */ supportsCssVariables)
 /* harmony export */ });
 /**
  * Stores result from supportsCssVariables to avoid redundant processing to
@@ -6035,8 +6035,8 @@ var MDCSelect = /** @class */ (function (_super) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
-/* harmony export */   "strings": () => (/* binding */ strings),
-/* harmony export */   "numbers": () => (/* binding */ numbers)
+/* harmony export */   "numbers": () => (/* binding */ numbers),
+/* harmony export */   "strings": () => (/* binding */ strings)
 /* harmony export */ });
 /**
  * @license
@@ -6662,8 +6662,8 @@ var MDCSelectHelperText = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "strings": () => (/* binding */ strings),
-/* harmony export */   "cssClasses": () => (/* binding */ cssClasses)
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
+/* harmony export */   "strings": () => (/* binding */ strings)
 /* harmony export */ });
 /**
  * @license
@@ -7232,8 +7232,8 @@ var MDCTextFieldCharacterCounter = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "strings": () => (/* binding */ strings),
-/* harmony export */   "cssClasses": () => (/* binding */ cssClasses)
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
+/* harmony export */   "strings": () => (/* binding */ strings)
 /* harmony export */ });
 /**
  * @license
@@ -7910,11 +7910,11 @@ var MDCTextField = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
-/* harmony export */   "strings": () => (/* binding */ strings),
-/* harmony export */   "numbers": () => (/* binding */ numbers),
+/* harmony export */   "ALWAYS_FLOAT_TYPES": () => (/* binding */ ALWAYS_FLOAT_TYPES),
 /* harmony export */   "VALIDATION_ATTR_WHITELIST": () => (/* binding */ VALIDATION_ATTR_WHITELIST),
-/* harmony export */   "ALWAYS_FLOAT_TYPES": () => (/* binding */ ALWAYS_FLOAT_TYPES)
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
+/* harmony export */   "numbers": () => (/* binding */ numbers),
+/* harmony export */   "strings": () => (/* binding */ strings)
 /* harmony export */ });
 /**
  * @license
@@ -8691,8 +8691,8 @@ var MDCTextFieldHelperText = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "strings": () => (/* binding */ strings),
-/* harmony export */   "cssClasses": () => (/* binding */ cssClasses)
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
+/* harmony export */   "strings": () => (/* binding */ strings)
 /* harmony export */ });
 /**
  * @license
@@ -8996,8 +8996,8 @@ var MDCTextFieldIcon = /** @class */ (function (_super) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "strings": () => (/* binding */ strings),
-/* harmony export */   "cssClasses": () => (/* binding */ cssClasses)
+/* harmony export */   "cssClasses": () => (/* binding */ cssClasses),
+/* harmony export */   "strings": () => (/* binding */ strings)
 /* harmony export */ });
 /**
  * @license
@@ -14565,8 +14565,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
-=======
 //
 //
 //
@@ -15072,7 +15070,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
->>>>>>> Andres
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -15167,17 +15164,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/CartaDeLlamada.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/CartaDeLlamada.vue?vue&type=script&lang=js& ***!
   \**********************************************************************************************************************************************************************************************************************************/
-=======
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/Carta_de_llamada.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/Carta_de_llamada.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************************************/
->>>>>>> Andres
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -15185,14 +15175,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-<<<<<<< HEAD
 /* harmony import */ var _HeaderOperador__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeaderOperador */ "./resources/js/components/cartaLlamada/HeaderOperador.vue");
 /* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/auto-init/index.js");
 /* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/textfield/component.js");
 /* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/select/component.js");
 /* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! material-components-web */ "./node_modules/@material/ripple/component.js");
-=======
->>>>>>> Andres
 //
 //
 //
@@ -34971,7 +34958,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n  align-items: flex-start;\n  background-color: var(--white);\n  display: flex;\n  height: 1080px;\n  position: relative;\n  width: 1920px;\n}\n.container-scrolling::-webkit-scrollbar {\n  display: none;\n  width: 0;\n}\n.container-scrolling {\n  align-items: flex-start;\n  display: flex;\n  height: 908px;\n  margin-left: 92px;\n  margin-top: 172px;\n  min-width: 1739px;\n  overflow-y: scroll;\n  padding: 0 8px;\n  z-index: 1;\n}\n.flex-col {\n  align-items: flex-start;\n  align-self: flex-end;\n  display: flex;\n  flex-direction: column;\n  margin-bottom: -560px;\n  min-height: 1418px;\n  width: 621px;\n}\n.flex-row {\n  align-items: flex-end;\n  display: flex;\n  height: 80px;\n  min-width: 402px;\n}\n.flex-col-1 {\n  align-items: flex-start;\n  align-self: flex-start;\n  display: flex;\n  flex-direction: column;\n  min-height: 68px;\n  width: 218px;\n}\n.carta-de-llamada {\n  height: 16px;\n  letter-spacing: 0.15px;\n  line-height: 16px;\n  white-space: nowrap;\n}\n.datos-del-interlocutor {\n  height: 16px;\n  letter-spacing: 0.15px;\n  line-height: 16px;\n  margin-left: 2px;\n  margin-top: 36px;\n  white-space: nowrap;\n}\n.guardar-datos-checkbox {\n  height: 40px;\n  margin-left: 41px;\n  width: 40px;\n}\n.guardar-datos {\n  color: var(--black-2);\n  font-family: var(--font-family-roboto);\n  font-size: var(--font-size-xxs);\n  font-weight: 400;\n  letter-spacing: 0.15px;\n  line-height: 24px;\n  margin-bottom: 8px;\n  min-height: 24px;\n  min-width: 103px;\n  white-space: nowrap;\n}\n.flex-row-1 {\n  align-items: flex-start;\n  display: flex;\n  height: 1336px;\n  margin-top: 2px;\n  min-width: 621px;\n}\n.flex-col-2 {\n  align-items: flex-start;\n  display: flex;\n  flex-direction: column;\n  margin-top: 4px;\n  min-height: 794px;\n  width: 265px;\n}\n.telefono {\n  height: 56px;\n  margin-left: 2px;\n  width: 263px;\n}\n.flex-col-item {\n  height: 60px;\n  margin-left: 2px;\n  margin-top: 25px;\n  width: 263px;\n}\n.datos-del-accidente {\n  height: 16px;\n  letter-spacing: 0.15px;\n  line-height: 16px;\n  margin-left: 2px;\n  margin-top: 60px;\n  white-space: nowrap;\n}\n.comarca {\n  height: 60px;\n  margin-left: 2px;\n  margin-top: 18px;\n  width: 263px;\n}\n.mapa {\n  height: 16px;\n  letter-spacing: 0.15px;\n  line-height: 16px;\n  margin-top: 228px;\n  white-space: nowrap;\n}\n.overlap-group {\n  align-items: flex-start;\n  align-self: flex-end;\n  background-position: 50% 50%;\n  background-size: cover;\n  display: flex;\n  margin-bottom: 262px;\n  margin-left: 46px;\n  min-width: 1px;\n}\n.frame-map {\n  height: 1px;\n  width: 1px;\n}\n.flex-col-3 {\n  align-items: flex-start;\n  display: flex;\n  flex-direction: column;\n  margin-left: 3px;\n  min-height: 1336px;\n  width: 306px;\n}\n.procedencia-de-la-llamada,\n.incidente {\n  height: 60px;\n  width: 263px;\n}\n.flex-col-item-1 {\n  height: 60px;\n  margin-top: 25px;\n  width: 263px;\n}\n.tipo-de-localizacin {\n  height: 60px;\n  margin-top: 94px;\n  width: 263px;\n}\n.referencia {\n  height: 145px;\n  margin-top: 25px;\n  width: 263px;\n}\n.mapa-down {\n  align-self: flex-end;\n  border-radius: 32px;\n  height: 36px;\n  margin-top: 746px;\n  width: 69px;\n}\n.flex-row-2 {\n  align-items: flex-start;\n  display: flex;\n  height: 922px;\n  margin-left: 7px;\n  margin-top: -177px;\n  min-width: 1092px;\n}\n.flex-col-4 {\n  align-items: flex-start;\n  align-self: flex-end;\n  display: flex;\n  flex-direction: column;\n  min-height: 609px;\n  width: 313px;\n}\n.nota-comun {\n  height: 226px;\n  width: 263px;\n}\n.flex-row-3 {\n  align-items: center;\n  display: flex;\n  height: 289px;\n  margin-left: 0.5px;\n  margin-top: 94px;\n  min-width: 313px;\n}\n.separation-down {\n  height: 183px;\n  margin-bottom: 48px;\n  width: 1px;\n}\n.flex-col-5 {\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  margin-left: 49px;\n  min-height: 289px;\n  width: 263px;\n}\n.tipo-de-incidente {\n  height: 60px;\n  margin-top: 24px;\n  width: 263px;\n}\n.mapa-up {\n  border-radius: 32px;\n  cursor: pointer;\n  height: 36px;\n  margin-right: 8px;\n  margin-top: 49px;\n  transition: all 0.2s ease-in-out;\n  width: 69px;\n}\n.mapa-up:hover,\n.aceptar:hover,\n.cancelar:hover {\n  transform: scale(1.1);\n}\n.flex-row-4 {\n  align-items: flex-start;\n  display: flex;\n  margin-left: 1px;\n  margin-top: 24px;\n  min-width: 188px;\n}\n.aceptar {\n  border-radius: 32px;\n  cursor: pointer;\n  height: 36px;\n  transition: all 0.2s ease-in-out;\n  width: 83px;\n}\n.cancelar {\n  border-radius: 32px;\n  cursor: pointer;\n  height: 36px;\n  margin-left: 16px;\n  transition: all 0.2s ease-in-out;\n  width: 89px;\n}\n.hide-container {\n  align-items: flex-start;\n  display: flex;\n  flex-direction: column;\n  min-height: 686px;\n  width: 779px;\n}\n.hide-up {\n  background-color: var(--white);\n  height: 313px;\n  width: 779px;\n}\n.hide-down {\n  background-color: var(--white);\n  height: 146px;\n  margin-top: 227px;\n  width: 779px;\n}\n.mapa-up {\n  height: auto !important;\n  width: auto !important;\n}\n.guardar-datos-checkbox .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused .mdc-checkbox__ripple::before,\n.guardar-datos-checkbox .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused .mdc-checkbox__ripple::after {\n  background-color: #0066ff !important;\n}\n.nota-comun .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.telefono .mdc-text-field {\n  --mdc-theme-primary: #000000;\n}\n.referencia .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item-1 .custom-enhanced-select-width {\n  width: 200px;\n}\n.mdc-checkbox {\n  box-sizing: content-box;\n}\n.tipo-de-localizacin .custom-enhanced-select-width {\n  width: 200px;\n}\n.flex-col-item .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item-1 .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: #000;\n}\n.telefono .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: #000;\n}\n.guardar-datos-checkbox .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background,\n.guardar-datos-checkbox .mdc-checkbox--selected .mdc-checkbox__native-control ~ .mdc-checkbox__background,\n.guardar-datos-checkbox .mdc-checkbox--anim-checked-unchecked .mdc-checkbox__native-control ~ .mdc-checkbox__background {\n  background-color: #0066ff !important;\n  border-color: #0066ff !important;\n}\n.flex-col-item .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item .custom-enhanced-select-width {\n  width: 200px;\n}\n.flex-col-item .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.mapa-down {\n  height: auto !important;\n  width: auto !important;\n}\n.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item .custom-enhanced-select-width {\n  width: 200px;\n}\n.mdc-list-item {\n  align-items: center;\n  display: flex;\n  height: 48px;\n  position: relative;\n}\n.tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item .mdc-text-field {\n  --mdc-theme-primary: #000000;\n}\n.flex-col-item-1 .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n  color: var(--mdc-theme-primary);\n}\n.aceptar {\n  height: auto !important;\n  width: auto !important;\n}\n.comarca .custom-enhanced-select-width {\n  width: 200px;\n}\n.cancelar {\n  height: auto !important;\n  width: auto !important;\n}\n.tipo-de-incidente .custom-enhanced-select-width {\n  width: 200px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\r\n  align-items: flex-start;\r\n  background-color: var(--white);\r\n  display: flex;\r\n  height: 1080px;\r\n  position: relative;\r\n  width: 1920px;\n}\n.container-scrolling::-webkit-scrollbar {\r\n  display: none;\r\n  width: 0;\n}\n.container-scrolling {\r\n  align-items: flex-start;\r\n  display: flex;\r\n  height: 908px;\r\n  margin-left: 92px;\r\n  margin-top: 172px;\r\n  min-width: 1739px;\r\n  overflow-y: scroll;\r\n  padding: 0 8px;\r\n  z-index: 1;\n}\n.flex-col {\r\n  align-items: flex-start;\r\n  align-self: flex-end;\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-bottom: -560px;\r\n  min-height: 1418px;\r\n  width: 621px;\n}\n.flex-row {\r\n  align-items: flex-end;\r\n  display: flex;\r\n  height: 80px;\r\n  min-width: 402px;\n}\n.flex-col-1 {\r\n  align-items: flex-start;\r\n  align-self: flex-start;\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 68px;\r\n  width: 218px;\n}\n.carta-de-llamada {\r\n  height: 16px;\r\n  letter-spacing: 0.15px;\r\n  line-height: 16px;\r\n  white-space: nowrap;\n}\n.datos-del-interlocutor {\r\n  height: 16px;\r\n  letter-spacing: 0.15px;\r\n  line-height: 16px;\r\n  margin-left: 2px;\r\n  margin-top: 36px;\r\n  white-space: nowrap;\n}\n.guardar-datos-checkbox {\r\n  height: 40px;\r\n  margin-left: 41px;\r\n  width: 40px;\n}\n.guardar-datos {\r\n  color: var(--black-2);\r\n  font-family: var(--font-family-roboto);\r\n  font-size: var(--font-size-xxs);\r\n  font-weight: 400;\r\n  letter-spacing: 0.15px;\r\n  line-height: 24px;\r\n  margin-bottom: 8px;\r\n  min-height: 24px;\r\n  min-width: 103px;\r\n  white-space: nowrap;\n}\n.flex-row-1 {\r\n  align-items: flex-start;\r\n  display: flex;\r\n  height: 1336px;\r\n  margin-top: 2px;\r\n  min-width: 621px;\n}\n.flex-col-2 {\r\n  align-items: flex-start;\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-top: 4px;\r\n  min-height: 794px;\r\n  width: 265px;\n}\n.telefono {\r\n  height: 56px;\r\n  margin-left: 2px;\r\n  width: 263px;\n}\n.flex-col-item {\r\n  height: 60px;\r\n  margin-left: 2px;\r\n  margin-top: 25px;\r\n  width: 263px;\n}\n.datos-del-accidente {\r\n  height: 16px;\r\n  letter-spacing: 0.15px;\r\n  line-height: 16px;\r\n  margin-left: 2px;\r\n  margin-top: 60px;\r\n  white-space: nowrap;\n}\n.comarca {\r\n  height: 60px;\r\n  margin-left: 2px;\r\n  margin-top: 18px;\r\n  width: 263px;\n}\n.mapa {\r\n  height: 16px;\r\n  letter-spacing: 0.15px;\r\n  line-height: 16px;\r\n  margin-top: 228px;\r\n  white-space: nowrap;\n}\n.overlap-group {\r\n  align-items: flex-start;\r\n  align-self: flex-end;\r\n  background-position: 50% 50%;\r\n  background-size: cover;\r\n  display: flex;\r\n  margin-bottom: 262px;\r\n  margin-left: 46px;\r\n  min-width: 1px;\n}\n.frame-map {\r\n  height: 1px;\r\n  width: 1px;\n}\n.flex-col-3 {\r\n  align-items: flex-start;\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-left: 3px;\r\n  min-height: 1336px;\r\n  width: 306px;\n}\n.procedencia-de-la-llamada,\r\n.incidente {\r\n  height: 60px;\r\n  width: 263px;\n}\n.flex-col-item-1 {\r\n  height: 60px;\r\n  margin-top: 25px;\r\n  width: 263px;\n}\n.tipo-de-localizacin {\r\n  height: 60px;\r\n  margin-top: 94px;\r\n  width: 263px;\n}\n.referencia {\r\n  height: 145px;\r\n  margin-top: 25px;\r\n  width: 263px;\n}\n.mapa-down {\r\n  align-self: flex-end;\r\n  border-radius: 32px;\r\n  height: 36px;\r\n  margin-top: 746px;\r\n  width: 69px;\n}\n.flex-row-2 {\r\n  align-items: flex-start;\r\n  display: flex;\r\n  height: 922px;\r\n  margin-left: 7px;\r\n  margin-top: -177px;\r\n  min-width: 1092px;\n}\n.flex-col-4 {\r\n  align-items: flex-start;\r\n  align-self: flex-end;\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 609px;\r\n  width: 313px;\n}\n.nota-comun {\r\n  height: 226px;\r\n  width: 263px;\n}\n.flex-row-3 {\r\n  align-items: center;\r\n  display: flex;\r\n  height: 289px;\r\n  margin-left: 0.5px;\r\n  margin-top: 94px;\r\n  min-width: 313px;\n}\n.separation-down {\r\n  height: 183px;\r\n  margin-bottom: 48px;\r\n  width: 1px;\n}\n.flex-col-5 {\r\n  align-items: center;\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-left: 49px;\r\n  min-height: 289px;\r\n  width: 263px;\n}\n.tipo-de-incidente {\r\n  height: 60px;\r\n  margin-top: 24px;\r\n  width: 263px;\n}\n.mapa-up {\r\n  border-radius: 32px;\r\n  cursor: pointer;\r\n  height: 36px;\r\n  margin-right: 8px;\r\n  margin-top: 49px;\r\n  transition: all 0.2s ease-in-out;\r\n  width: 69px;\n}\n.mapa-up:hover,\r\n.aceptar:hover,\r\n.cancelar:hover {\r\n  transform: scale(1.1);\n}\n.flex-row-4 {\r\n  align-items: flex-start;\r\n  display: flex;\r\n  margin-left: 1px;\r\n  margin-top: 24px;\r\n  min-width: 188px;\n}\n.aceptar {\r\n  border-radius: 32px;\r\n  cursor: pointer;\r\n  height: 36px;\r\n  transition: all 0.2s ease-in-out;\r\n  width: 83px;\n}\n.cancelar {\r\n  border-radius: 32px;\r\n  cursor: pointer;\r\n  height: 36px;\r\n  margin-left: 16px;\r\n  transition: all 0.2s ease-in-out;\r\n  width: 89px;\n}\n.hide-container {\r\n  align-items: flex-start;\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 686px;\r\n  width: 779px;\n}\n.hide-up {\r\n  background-color: var(--white);\r\n  height: 313px;\r\n  width: 779px;\n}\n.hide-down {\r\n  background-color: var(--white);\r\n  height: 146px;\r\n  margin-top: 227px;\r\n  width: 779px;\n}\n.mapa-up {\r\n  height: auto !important;\r\n  width: auto !important;\n}\n.guardar-datos-checkbox .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused .mdc-checkbox__ripple::before,\r\n.guardar-datos-checkbox .mdc-checkbox--selected.mdc-ripple-upgraded--background-focused .mdc-checkbox__ripple::after {\r\n  background-color: #0066ff !important;\n}\n.nota-comun .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.telefono .mdc-text-field {\r\n  --mdc-theme-primary: #000000;\n}\n.referencia .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item-1 .custom-enhanced-select-width {\r\n  width: 200px;\n}\n.mdc-checkbox {\r\n  box-sizing: content-box;\n}\n.tipo-de-localizacin .custom-enhanced-select-width {\r\n  width: 200px;\n}\n.flex-col-item .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item-1 .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\r\n  color: #000;\n}\n.telefono .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\r\n  color: #000;\n}\n.guardar-datos-checkbox .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background,\r\n.guardar-datos-checkbox .mdc-checkbox--selected .mdc-checkbox__native-control ~ .mdc-checkbox__background,\r\n.guardar-datos-checkbox .mdc-checkbox--anim-checked-unchecked .mdc-checkbox__native-control ~ .mdc-checkbox__background {\r\n  background-color: #0066ff !important;\r\n  border-color: #0066ff !important;\n}\n.flex-col-item .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item .custom-enhanced-select-width {\r\n  width: 200px;\n}\n.flex-col-item .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.mapa-down {\r\n  height: auto !important;\r\n  width: auto !important;\n}\n.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item .custom-enhanced-select-width {\r\n  width: 200px;\n}\n.mdc-list-item {\r\n  align-items: center;\r\n  display: flex;\r\n  height: 48px;\r\n  position: relative;\n}\n.tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.flex-col-item .mdc-text-field {\r\n  --mdc-theme-primary: #000000;\n}\n.flex-col-item-1 .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\r\n  color: var(--mdc-theme-primary);\n}\n.aceptar {\r\n  height: auto !important;\r\n  width: auto !important;\n}\n.comarca .custom-enhanced-select-width {\r\n  width: 200px;\n}\n.cancelar {\r\n  height: auto !important;\r\n  width: auto !important;\n}\n.tipo-de-incidente .custom-enhanced-select-width {\r\n  width: 200px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -34995,7 +34982,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.header-operador {\n  align-items: flex-end;\n  background-color: var(--white);\n  display: flex;\n  height: 172px;\n  left: 0;\n  min-width: 1920px;\n  position: fixed;\n  top: 0;\n  z-index: 2;\n}\n.overlap-group1 {\n  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c45c941ee39385c45cb4e/img/shadow@1x.svg);\n  background-size: 100% 100%;\n  height: 198px;\n  margin-bottom: -26px;\n  position: relative;\n  width: 1920px;\n}\n.background {\n  height: 172px;\n  left: 0;\n  -o-object-fit: cover;\n     object-fit: cover;\n  position: absolute;\n  top: 0;\n  width: 1920px;\n}\n.overlap-group1-item {\n  height: 172px;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 1920px;\n}\n.title {\n  cursor: pointer;\n  height: 16px;\n  left: 521px;\n  letter-spacing: 1.25px;\n  line-height: 16px;\n  position: absolute;\n  text-shadow: 0px 4px 4px #00000040;\n  top: 139px;\n  transition: all 0.2s ease-in-out;\n  white-space: nowrap;\n}\n.title:hover {\n  transform: scale(1.1);\n}\n.video-interactivo {\n  height: 16px;\n  left: 1161px;\n  letter-spacing: 1.25px;\n  line-height: 16px;\n  position: absolute;\n  text-shadow: 0px 4px 4px #00000040;\n  top: 139px;\n  white-space: nowrap;\n}\n.sergi-prez-jimnez {\n  height: 16px;\n  left: 1408px;\n  letter-spacing: 1.25px;\n  line-height: 16px;\n  position: absolute;\n  text-shadow: 0px 4px 4px #00000040;\n  top: 34px;\n  white-space: nowrap;\n}\n.separate {\n  height: 58px;\n  left: 1647px;\n  position: absolute;\n  top: 18px;\n  width: 9px;\n}\n.cerrar-sesin {\n  height: 16px;\n  left: 1707px;\n  letter-spacing: 1.25px;\n  line-height: 16px;\n  position: absolute;\n  text-shadow: 0px 4px 4px #00000040;\n  top: 34px;\n  white-space: nowrap;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.header-operador {\r\n  align-items: flex-end;\r\n  background-color: var(--white);\r\n  display: flex;\r\n  height: 172px;\r\n  left: 0;\r\n  min-width: 1920px;\r\n  position: fixed;\r\n  top: 0;\r\n  z-index: 2;\n}\n.overlap-group1 {\r\n  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c45c941ee39385c45cb4e/img/shadow@1x.svg);\r\n  background-size: 100% 100%;\r\n  height: 198px;\r\n  margin-bottom: -26px;\r\n  position: relative;\r\n  width: 1920px;\n}\n.background {\r\n  height: 172px;\r\n  left: 0;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  position: absolute;\r\n  top: 0;\r\n  width: 1920px;\n}\n.overlap-group1-item {\r\n  height: 172px;\r\n  left: 0;\r\n  position: absolute;\r\n  top: 0;\r\n  width: 1920px;\n}\n.title {\r\n  cursor: pointer;\r\n  height: 16px;\r\n  left: 521px;\r\n  letter-spacing: 1.25px;\r\n  line-height: 16px;\r\n  position: absolute;\r\n  text-shadow: 0px 4px 4px #00000040;\r\n  top: 139px;\r\n  transition: all 0.2s ease-in-out;\r\n  white-space: nowrap;\n}\n.title:hover {\r\n  transform: scale(1.1);\n}\n.video-interactivo {\r\n  height: 16px;\r\n  left: 1161px;\r\n  letter-spacing: 1.25px;\r\n  line-height: 16px;\r\n  position: absolute;\r\n  text-shadow: 0px 4px 4px #00000040;\r\n  top: 139px;\r\n  white-space: nowrap;\n}\n.sergi-prez-jimnez {\r\n  height: 16px;\r\n  left: 1408px;\r\n  letter-spacing: 1.25px;\r\n  line-height: 16px;\r\n  position: absolute;\r\n  text-shadow: 0px 4px 4px #00000040;\r\n  top: 34px;\r\n  white-space: nowrap;\n}\n.separate {\r\n  height: 58px;\r\n  left: 1647px;\r\n  position: absolute;\r\n  top: 18px;\r\n  width: 9px;\n}\n.cerrar-sesin {\r\n  height: 16px;\r\n  left: 1707px;\r\n  letter-spacing: 1.25px;\r\n  line-height: 16px;\r\n  position: absolute;\r\n  text-shadow: 0px 4px 4px #00000040;\r\n  top: 34px;\r\n  white-space: nowrap;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -52851,47 +52838,39 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./node_modules/tslib/tslib.es6.js":
 /*!*****************************************!*\
   !*** ./node_modules/tslib/tslib.es6.js ***!
   \*****************************************/
-=======
-/***/ "./resources/js/components/administracion/admin.vue":
-/*!**********************************************************!*\
-  !*** ./resources/js/components/administracion/admin.vue ***!
-  \**********************************************************/
->>>>>>> Andres
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-<<<<<<< HEAD
-/* harmony export */   "__extends": () => (/* binding */ __extends),
 /* harmony export */   "__assign": () => (/* binding */ __assign),
-/* harmony export */   "__rest": () => (/* binding */ __rest),
-/* harmony export */   "__decorate": () => (/* binding */ __decorate),
-/* harmony export */   "__param": () => (/* binding */ __param),
-/* harmony export */   "__metadata": () => (/* binding */ __metadata),
-/* harmony export */   "__awaiter": () => (/* binding */ __awaiter),
-/* harmony export */   "__generator": () => (/* binding */ __generator),
-/* harmony export */   "__createBinding": () => (/* binding */ __createBinding),
-/* harmony export */   "__exportStar": () => (/* binding */ __exportStar),
-/* harmony export */   "__values": () => (/* binding */ __values),
-/* harmony export */   "__read": () => (/* binding */ __read),
-/* harmony export */   "__spread": () => (/* binding */ __spread),
-/* harmony export */   "__spreadArrays": () => (/* binding */ __spreadArrays),
-/* harmony export */   "__spreadArray": () => (/* binding */ __spreadArray),
-/* harmony export */   "__await": () => (/* binding */ __await),
-/* harmony export */   "__asyncGenerator": () => (/* binding */ __asyncGenerator),
 /* harmony export */   "__asyncDelegator": () => (/* binding */ __asyncDelegator),
+/* harmony export */   "__asyncGenerator": () => (/* binding */ __asyncGenerator),
 /* harmony export */   "__asyncValues": () => (/* binding */ __asyncValues),
-/* harmony export */   "__makeTemplateObject": () => (/* binding */ __makeTemplateObject),
-/* harmony export */   "__importStar": () => (/* binding */ __importStar),
-/* harmony export */   "__importDefault": () => (/* binding */ __importDefault),
+/* harmony export */   "__await": () => (/* binding */ __await),
+/* harmony export */   "__awaiter": () => (/* binding */ __awaiter),
 /* harmony export */   "__classPrivateFieldGet": () => (/* binding */ __classPrivateFieldGet),
-/* harmony export */   "__classPrivateFieldSet": () => (/* binding */ __classPrivateFieldSet)
+/* harmony export */   "__classPrivateFieldSet": () => (/* binding */ __classPrivateFieldSet),
+/* harmony export */   "__createBinding": () => (/* binding */ __createBinding),
+/* harmony export */   "__decorate": () => (/* binding */ __decorate),
+/* harmony export */   "__exportStar": () => (/* binding */ __exportStar),
+/* harmony export */   "__extends": () => (/* binding */ __extends),
+/* harmony export */   "__generator": () => (/* binding */ __generator),
+/* harmony export */   "__importDefault": () => (/* binding */ __importDefault),
+/* harmony export */   "__importStar": () => (/* binding */ __importStar),
+/* harmony export */   "__makeTemplateObject": () => (/* binding */ __makeTemplateObject),
+/* harmony export */   "__metadata": () => (/* binding */ __metadata),
+/* harmony export */   "__param": () => (/* binding */ __param),
+/* harmony export */   "__read": () => (/* binding */ __read),
+/* harmony export */   "__rest": () => (/* binding */ __rest),
+/* harmony export */   "__spread": () => (/* binding */ __spread),
+/* harmony export */   "__spreadArray": () => (/* binding */ __spreadArray),
+/* harmony export */   "__spreadArrays": () => (/* binding */ __spreadArrays),
+/* harmony export */   "__values": () => (/* binding */ __values)
 /* harmony export */ });
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -53133,7 +53112,18 @@ function __classPrivateFieldSet(receiver, state, value, kind, f) {
     return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 }
 
-=======
+
+/***/ }),
+
+/***/ "./resources/js/components/administracion/admin.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/administracion/admin.vue ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _admin_vue_vue_type_template_id_761d949a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./admin.vue?vue&type=template&id=761d949a& */ "./resources/js/components/administracion/admin.vue?vue&type=template&id=761d949a&");
@@ -53239,7 +53229,6 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 if (false) { var api; }
 component.options.__file = "resources/js/components/administracion/nuevousuario.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
->>>>>>> Andres
 
 /***/ }),
 
