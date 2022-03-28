@@ -1,7 +1,7 @@
 <template>
     <div>
         <input type="hidden" id="anPageName" name="page" value="inicio-de-sesion" />
-        <div class="container-center-horizontal">
+        <!-- <div class="container-center-horizontal"> -->
         <div class="inicio-de-sesion screen">
             <img class="background" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623dbabddd12e5a0113de8d8/img/background@1x.png"/>
             <div class="inicio-de-sesin">
@@ -40,7 +40,7 @@
             </div>
             </div>
         </div>
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 
@@ -58,21 +58,23 @@
 
 <style>
     .inicio-de-sesion {
-    align-items: flex-start;
-    background-color: var(--white);
-    display: flex;
+    /* align-items: flex-start; */
+    /* background-color: var(--white); */
+    /* display: flex; */
     width: 1920px;
     height: 1080px;
+    overflow-block: hidden;
     }
 
     .inicio-de-sesion .background {
-    left: 0;
-    object-fit: cover;
+    /* left: 0; */
+    object-fit: fill;
     position: fixed;
-    top: 0;
+    /* top: 0; */
     width: 1920px;
     height: 1080px;
     z-index: 1;
+    overflow: hidden;
     }
 
     .inicio-de-sesion .inicio-de-sesin {

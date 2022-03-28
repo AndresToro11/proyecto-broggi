@@ -7,10 +7,10 @@
         <title>@yield('titulo')</title>
 
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> --}}
 
         <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> --}}
 
         {{-- Datos incidentes --}}
         <meta charset="UTF-8" />
@@ -54,7 +54,7 @@
                     </div>
                 </span>
                 {{-- Header Supervisor --}}
-                    {{-- <span>
+                    <span hidden>
                         <div class="header-supervisor">
                             <div class="overlap-group-supervisor">
                                 <img class="overlap-group-item-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
@@ -68,9 +68,9 @@
                                 <div class="cerrar-sesin-supervisor valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
                             </div>
                         </div>
-                    </span> --}}
+                    </span>
                 {{-- Header Administrador --}}
-                {{-- <span>
+                <span hidden>
                     <div class="header-administrador">
                         <div class="overlap-group-administrador">
                             <img class="overlap-group-item-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
@@ -83,7 +83,7 @@
                             <div class="cerrar-sesin-administrador valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
                         </div>
                     </div>
-                </span> --}}
+                </span>
             </div>
         </div>
         <div id="app" class="container">

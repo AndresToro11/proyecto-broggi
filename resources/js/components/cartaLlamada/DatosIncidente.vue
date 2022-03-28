@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div> <!-- TODO:  -->
         <input type="hidden" id="anPageName" name="page" value="carta-de-llamada-default" />
         <div class="container-center-horizontal">
             <div class="carta-de-llamada-default screen">
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Second Column -->
+                    <!-- TODO: Second Column -->
                     <div class="flex-row-2">
                         <div class="flex-col-3">
                             <div class="procedencia-de-la-llamada">
@@ -105,7 +105,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Third Column -->
+                    <!-- TODO: Third Column -->
                     <div class="flex-row-3">
                         <div class="flex-col-4">
                             <div class="nota-comun"> <!-- Nota Comun -->
@@ -322,7 +322,7 @@
     .carta-de-llamada-default .container-scrolling {
     align-items: flex-start;
     display: flex;
-    margin-left: -150px;
+    margin-left: 100px;
     height: 320px;
     width: 891px;
     left: 92px;

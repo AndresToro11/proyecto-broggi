@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div> <!-- TODO:  -->
         <input type="hidden" id="anPageName" name="page" value="carta-de-llamada-default" />
         <div class="container-center-horizontal">
             <div class="carta-de-llamada-default screen">
@@ -113,7 +113,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Second Column -->
+                    <!-- TODO: Second Column -->
                     <div class="flex-row-2">
                         <div class="flex-col-3">
                             <div class="tipo-de-localizacin">
@@ -172,21 +172,327 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="referencia">
-                                <label class="mdc-text-field mdc-text-field--filled">
-                                    <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">
-                                        Referencia
-                                    </span>
-                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                    <span class="mdc-line-ripple"></span>
-                                </label>
-                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <span hidden> <!-- TODO: POBLACIÓN: Solo sale la Referencia -->
+                                <div class="referencia">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">
+                                            Referencia
+                                        </span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                            </span>
+                            <span> <!-- TODO: CALLE: Sale el tipo de la via, el nombre de la via, el numero del portal, la escalera, el piso, la puerta y la referencia -->
+                                <span hidden>
+                                    <div class="tipo-de-via">
+                                        <div class="mdc-select mdc-select--filled demo-width-class">
+                                            <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                                <span class="mdc-select__ripple"></span>
+                                                <span id="demo-label" class="mdc-floating-label">
+                                                    Tipo de via
+                                                </span>
+                                                <span class="mdc-select__selected-text-container">
+                                                    <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                                </span>
+                                                <span class="mdc-select__dropdown-icon">
+                                                    <span class="mdc-select__dropdown-icon-inactive material-icons">
+                                                        arrow_drop_down
+                                                    </span>
+                                                    <span class="mdc-select__dropdown-icon-active material-icons">
+                                                        arrow_drop_up
+                                                    </span>
+                                                </span>
+                                                <span class="mdc-line-ripple"></span>
+                                            </div>
+                                            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                                <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                                                    <li class="mdc-list-item" data-value="#" role="option">
+                                                        <span class="mdc-list-item__ripple"></span>
+                                                        <span class="mdc-list-item__text">
+                                                            #
+                                                        </span>
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="#" role="option">
+                                                        <span class="mdc-list-item__ripple"></span>
+                                                        <span class="mdc-list-item__text">
+                                                            #
+                                                        </span>
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="#" role="option">
+                                                        <span class="mdc-list-item__ripple"></span>
+                                                        <span class="mdc-list-item__text">
+                                                            #
+                                                        </span>
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="#" role="option">
+                                                        <span class="mdc-list-item__ripple"></span>
+                                                        <span class="mdc-list-item__text">
+                                                            #
+                                                        </span>
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="#" role="option">
+                                                        <span class="mdc-list-item__ripple"></span>
+                                                        <span class="mdc-list-item__text">
+                                                            #
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="nombre-punto-singular">
+                                        <label class="mdc-text-field mdc-text-field--filled">
+                                            <span class="mdc-text-field__ripple"></span>
+                                            <span class="mdc-floating-label" id="my-label-id">
+                                                Nombre del punto singular
+                                            </span>
+                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                            <span class="mdc-line-ripple"></span>
+                                        </label>
+                                    </div>
+                                </span>
+                                <span hidden>
+                                    <div class="nombre-via">
+                                        <label class="mdc-text-field mdc-text-field--filled">
+                                            <span class="mdc-text-field__ripple"></span>
+                                            <span class="mdc-floating-label" id="my-label-id">
+                                                Nombre de la via
+                                            </span>
+                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                            <span class="mdc-line-ripple"></span>
+                                        </label>
+                                    </div>
+                                </span>
+                                <span hidden>
+                                    <div class="punto-kilometrico">
+                                        <label class="mdc-text-field mdc-text-field--filled">
+                                            <span class="mdc-text-field__ripple"></span>
+                                            <span class="mdc-floating-label" id="my-label-id">
+                                                Punto kilometrico
+                                            </span>
+                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                            <span class="mdc-line-ripple"></span>
+                                        </label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="referencia">
+                                        <label class="mdc-text-field mdc-text-field--filled">
+                                            <span class="mdc-text-field__ripple"></span>
+                                            <span class="mdc-floating-label" id="my-label-id">
+                                                Referencia
+                                            </span>
+                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                            <span class="mdc-line-ripple"></span>
+                                        </label>
+                                    </div>
+                                </span>
+                            </span>
                         </div>
-                        <img class="separation-down" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg"/>
                     </div>
-                    <!-- Third Column -->
-                    <div class="flex-row-3">
+                    <span>
+                        <div class="flex-row-3"><!-- FIXME: -->
+                            <div class="flex-col-4">
+                                <span hidden>
+                                    <div class="numero-portal">
+                                        <label class="mdc-text-field mdc-text-field--filled">
+                                            <span class="mdc-text-field__ripple"></span>
+                                            <span class="mdc-floating-label" id="my-label-id">
+                                                Numero del portal
+                                            </span>
+                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                            <span class="mdc-line-ripple"></span>
+                                        </label>
+                                    </div>
+                                </span>
+                                <span>
+                                <div class="sentido-circulacion">
+                                    <div class="mdc-select mdc-select--filled demo-width-class">
+                                        <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                            <span class="mdc-select__ripple"></span>
+                                            <span id="demo-label" class="mdc-floating-label">
+                                                Sentido de la circulación
+                                            </span>
+                                            <span class="mdc-select__selected-text-container">
+                                                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                            </span>
+                                            <span class="mdc-select__dropdown-icon">
+                                                <span class="mdc-select__dropdown-icon-inactive material-icons">
+                                                    arrow_drop_down
+                                                </span>
+                                                <span class="mdc-select__dropdown-icon-active material-icons">
+                                                    arrow_drop_up
+                                                </span>
+                                            </span>
+                                            <span class="mdc-line-ripple"></span>
+                                        </div>
+                                        <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                            <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                                                <li class="mdc-list-item" data-value="#" role="option">
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">
+                                                        #
+                                                    </span>
+                                                </li>
+                                                <li class="mdc-list-item" data-value="#" role="option">
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">
+                                                        #
+                                                    </span>
+                                                </li>
+                                                <li class="mdc-list-item" data-value="#" role="option">
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">
+                                                        #
+                                                    </span>
+                                                </li>
+                                                <li class="mdc-list-item" data-value="#" role="option">
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">
+                                                        #
+                                                    </span>
+                                                </li>
+                                                <li class="mdc-list-item" data-value="#" role="option">
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">
+                                                        #
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </span>
+                                <span>
+                                    <div class="escalera">
+                                        <label class="mdc-text-field mdc-text-field--filled">
+                                            <span class="mdc-text-field__ripple"></span>
+                                            <span class="mdc-floating-label" id="my-label-id">
+                                                Escalera
+                                            </span>
+                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                            <span class="mdc-line-ripple"></span>
+                                        </label>
+                                    </div>
+                                </span>
+                                <span hidden>
+                                    <div class="referencia">
+                                        <label class="mdc-text-field mdc-text-field--filled">
+                                            <span class="mdc-text-field__ripple"></span>
+                                            <span class="mdc-floating-label" id="my-label-id">
+                                                Referencia
+                                            </span>
+                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                            <span class="mdc-line-ripple"></span>
+                                        </label>
+                                    </div>
+                                </span>
+                                <div class="piso">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">
+                                            Piso
+                                        </span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div> <!-- FIXME: -->
+                        <div class="flex-row-4">
+                            <div class="flex-col-5">
+                                <div class="puerta">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">
+                                            Puerta
+                                        </span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                                <span>
+                                    <div class="referencia">
+                                        <label class="mdc-text-field mdc-text-field--filled">
+                                            <span class="mdc-text-field__ripple"></span>
+                                            <span class="mdc-floating-label" id="my-label-id">
+                                                Referencia
+                                            </span>
+                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                            <span class="mdc-line-ripple"></span>
+                                        </label>
+                                    </div>
+                                </span>
+                            </div>
+                            <img class="separation-down" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg"/>
+                        </div>
+                    </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- TODO: Third Column -->
+                    <div class="flex-row-7">
                         <div class="flex-col-4">
                             <div class="incidente">
                                 <div class="mdc-select mdc-select--filled demo-width-class" data-id="anima-widget">
@@ -255,7 +561,7 @@
                                     </span>
                                 </button>
                             </div>
-                            <div class="flex-row-4">
+                            <div class="flex-row-6">
                                 <div class="aceptar" id="aceptar">
                                     <button class="mdc-button mdc-button--raised" id="aceptar">
                                         <span class="mdc-button__ripple"></span>
@@ -404,6 +710,30 @@ export default {
     z-index: 6;
     }
 
+    .tipo-de-via{
+        margin-top: 24px;
+    }
+
+    .nombre-via{
+        margin-top: 30px;
+    }
+
+    .punto-kilometrico{
+        margin-top: 30px;
+    }
+
+    .nombre-punto-singular{
+        margin-top: 24px;
+    }
+
+    .escalera{
+        margin-top: 28px;
+    }
+
+    .piso{
+        margin-top: 30px;
+    }
+
     .carta-de-llamada-default .title {
     height: 16px;
     letter-spacing: 0.15px;
@@ -496,8 +826,7 @@ export default {
     }
 
     .referencia {
-    height: 145px;
-    margin-top: 25px;
+    margin-top: 30px;
     width: 263px;
     }
 
@@ -539,6 +868,28 @@ export default {
     align-self: flex-start;
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
+    margin-top: 127px;
+    width: 263px;
+    height: 56px;
+    }
+
+    .flex-row-4 {
+    align-items: flex-start;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 365px;
+    margin-top: -56px;
+    width: 263px;
+    height: 56px;
+    }
+
+    .flex-row-7 {
+    align-items: flex-start;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
     margin-left: 100px;
     margin-top: 127px;
     width: 263px;
@@ -574,7 +925,7 @@ export default {
     transform: scale(1.1);
     }
 
-    .flex-row-4 {
+    .flex-row-6 {
     align-items: flex-start;
     display: flex;
     margin-left: 38px;
