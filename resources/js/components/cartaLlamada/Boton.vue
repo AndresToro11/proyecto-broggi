@@ -1,16 +1,14 @@
 <template>
-    <div>
-        <datos-administrativos></datos-administrativos>
-        <datos-personales @getDataPersonal="getDataPersonal"></datos-personales>
-        <datos-incidentes
-            @getDataIncidente="getDataIncidente"
-        ></datos-incidentes>
-        <!-- <Personals @getDataPersonal="getDataPersonal"></Personals>
-        <Incidente @getDataPersonal="getDataPersonal"></Incidente> -->
-        <h3>boton</h3>
-        <button type="button">Cancelar</button>
-        <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(),insertBD(cartaLlamada)">Aceptar</button>
-        <expedientes-relacionados></expedientes-relacionados>
+    <div class="main">
+        <!-- <datos-administrativos></datos-administrativos> -->
+        <div class="datos-incidentes">
+            <datos-incidentes @getDataIncidente="getDataIncidente"></datos-incidentes>
+        </div>
+        <div class="datos-personales">
+            <datos-personales @getDataPersonal="getDataPersonal"></datos-personales>
+        </div>
+        <!-- <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(),insertBD(cartaLlamada)">Aceptar</button>
+        <expedientes-relacionados></expedientes-relacionados> -->
     </div>
 </template>
 <script>
@@ -118,3 +116,10 @@ export default {
     },
 };
 </script>
+
+<style>
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+</style>

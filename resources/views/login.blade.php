@@ -1,9 +1,7 @@
-@extends('layouts.plantilla')
+@extends('layouts.plantilla-NOHEADER')
 
-@section('titulo', 'pruebita')
+@section('titulo', 'login')
 
 @section('contenido')
-
-    <h1>Hola</h1>
-
+<vista-login></vista-login>
 @endsection
