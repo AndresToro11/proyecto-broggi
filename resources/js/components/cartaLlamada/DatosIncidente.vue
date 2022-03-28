@@ -4,33 +4,33 @@
         <label for="provincia">Provincia</label>
         <select class="form-control" id="provincia" v-model="datos_incidente.provincia" @blur="setDataIncidente(datos_incidente)">
             <option value=""></option>
-            <option v-for="provincia in provincias" :key="provincia.id">
+            <option v-for="provincia in provincias" :key="provincia.id" :value="provincia.id">
                 {{ provincia.nom }}
             </option>
         </select>
         <label for="comarca">Comarca</label>
         <select class="form-control" id="comarca" v-model="datos_incidente.comarca" @change="activarFunciones()">
             <option value=""></option>
-            <option v-for="comarca in comarcas" :key="comarca.id">
+            <option v-for="comarca in comarcas" :key="comarca.id" :value="comarca.id">
                 {{ comarca.nom }}
             </option>
         </select>
         <label for="mucipio">Municipio</label>
          <select class="form-control" id="municipio" v-model="datos_incidente.municipio" @change="activarFunciones()">
             <option value=""></option>
-            <option v-for="municipio in municipios" :key="municipio.id">
+            <option v-for="municipio in municipios" :key="municipio.id" :value="municipio.id">
                 {{ municipio.nom }}
             </option>
         </select>
         <h4>Tipos de localizacion</h4>
         <select class="form-control" id="tiposLocalizacion" v-model="datos_incidente.localizacion" @change="activarFunciones()" required >
             <option value=""></option>
-            <option v-for="tiposLocalizacion in tiposLocalizaciones" :key="tiposLocalizacion.id"  >
+            <option v-for="tiposLocalizacion in tiposLocalizaciones" :key="tiposLocalizacion.id"  :value="tiposLocalizacion.id">
                 {{ tiposLocalizacion.tipus   }}
             </option>
         </select>
 
-        <span v-if="datos_incidente.localizacion == 'Carrers'">
+        <span v-if="datos_incidente.localizacion == '1'">
             <label for="via">Via</label>
             <input type="text" name="via" id="via" v-model="calle.via" @blur="descripcioLocalitzacio()">
             <label for="direccion">Direccion</label>
@@ -44,11 +44,11 @@
             <label for="puerta">Puerta</label>
             <input type="number" name="puerta" id="puerta" v-model="calle2.puerta" @blur="detallLocalitzacio()">
         </span>
-        <span v-else-if="datos_incidente.localizacion === 'Punt Singular'">
+        <span v-else-if="datos_incidente.localizacion === '2'">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" v-model="puntoSingular.nombre" @blur="descripcioLocalitzacio()">
         </span>
-        <span v-else-if="datos_incidente.localizacion === 'Carretera'">
+        <span v-else-if="datos_incidente.localizacion === '4 '">
             <label for="carretera">Carretera</label>
             <input type="text" name="carretera" id="carretera" v-model="carretera.carretera" @blur="descripcioLocalitzacio()">
             <label for="puntoKM">Punto kilometrico</label>
@@ -56,7 +56,7 @@
             <label for="sentido">Sentido</label>
             <input type="text" name="sentido" id="sentido" v-model="carretera2.sentido" @blur="detallLocalitzacio()">
         </span>
-        <span v-else-if="datos_incidente.localizacion === 'Fuera Cataluña'">
+        <span v-else-if="datos_incidente.localizacion === '5'">
             <label for="provincia">Provincia</label>
             <input type="text" id="provinciaOut" v-model="fueraCatalunya.provincia" @blur="descripcioLocalitzacio()">
         </span>
@@ -64,14 +64,14 @@
         <label for="tiposIncidete">Tipo Incidente</label>
         <select class="form-control" id="tiposIncidete" v-model="datos_incidente.tiposIncidente"  @change="activarFunciones()">
             <option value=""></option>
-            <option v-for="tIncidente in tIncidentes" :key="tIncidente.id">
+            <option v-for="tIncidente in tIncidentes" :key="tIncidente.id" :value="tIncidente.id">
                 {{ tIncidente.descripcio }}
             </option>
         </select>
         <label for="incidente">Incidente</label>
         <select class="form-control" id="incidente" v-model="datos_incidente.incidente"  @change="activarFunciones()">
             <option value=""></option>
-            <option v-for="incidente in incidentes" :key="incidente.id">
+            <option v-for="incidente in incidentes" :key="incidente.id" :value="incidente.id">
                 {{ incidente.descripcio }}
             </option>
         </select>
@@ -116,9 +116,9 @@ export default {
                 provincia: "",
                 municipio: "",
                 localizacion: "",
-                descripcio_localitzacio: "",
-                detall_localitzacio: "",
-                altres_ref_localitzacio: "",
+                descripcio_localitzacio: null,
+                detall_localitzacio: null,
+                altres_ref_localitzacio: null,
                 tiposIncidente: "",
                 incidente: ""
             }
@@ -199,27 +199,24 @@ export default {
             let varianle;
             this.datos_incidente.descripcio_localitzacio = " ";
             switch (this.datos_incidente.localizacion) {
-                case 'Carrers':
+                case 1:
                     varianle=this.calle.via+" "+this.calle.direccion+" "+this.calle.numPuerta;
                     break;
-                case 'Punt Singular':
+                case 2:
                     varianle=this.puntoSingular.nombre;
                     break;
-                case 'Entitat Població':
+                case 3:
                     varianle=" ";
                     break;
-                case 'Carretera':
+                case 4:
                     varianle=this.carretera.carretera+" "+this.carretera.puntoKm;
                     break;
-                case 'Fuera Cataluña':
+                case 5:
                     varianle=this.fueraCatalunya.provincia;
                     break;
 
                 default:
                     break;
-            }
-            if (this.datos_incidente.localizacion=='Carrers') {
-
             }
             this.datos_incidente.descripcio_localitzacio = varianle;
             this.setDataIncidente();
@@ -229,19 +226,19 @@ export default {
             let varianle;
              this.datos_incidente.detall_localitzacio = " ";
             switch (this.datos_incidente.localizacion) {
-                case 'Carrers':
+                case 1:
                     varianle=this.calle2.escalera+" "+this.calle2.piso+" "+this.calle2.puerta;
                     break;
-                case 'Entitat Població':
+                case 2:
                     varianle=" ";
                     break;
-                case 'Punt Singular':
+                case 3:
                     varianle=" ";
                     break;
-                case 'Carretera':
+                case 4:
                     varianle=this.carretera2.sentido;
                     break;
-                case 'Fuera Cataluña':
+                case 5:
                     varianle=" ";
                     break;
 

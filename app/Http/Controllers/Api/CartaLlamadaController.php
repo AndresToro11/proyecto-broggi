@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Clases\Utilitat;
 use Illuminate\Http\Request;
 use App\Models\Carta_trucada;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\QueryException;
 use App\Http\Resources\CartaTrucadaResource;
 
 class CartaLlamadaController extends Controller
@@ -29,7 +31,9 @@ class CartaLlamadaController extends Controller
     public function store(Request $request)
     {
         $carta_trucada = new Carta_trucada();
-        
+
+        $carta_trucada->codi_trucada = $request->codi_trucada;
+        $carta_trucada->data_hora = $request->data_hora;
         $carta_trucada->adreca_trucada = $request->adreca_trucada;
         $carta_trucada->altres_ref_localitzacio = $request->altres_ref_localitzacio;
         $carta_trucada->dades_personals_id = $request->dades_personals_id;
@@ -49,8 +53,16 @@ class CartaLlamadaController extends Controller
         $carta_trucada->temps_trucada = $request->temps_trucada;
         $carta_trucada->tipus_localitzacions_id = $request->tipus_localitzacions_id;
         $carta_trucada->usuaris_id = $request->usuaris_id;
-        $carta_trucada->save();
-        return redirect()->action([CartaLlamadaController::class, 'home']);
+        try {
+            $carta_trucada->save();
+            $response = response()->json(['message'=> 'OK ALL'],201);
+        } catch (QueryException $ex) {
+            $mensaje = Utilitat::errorMessage($ex);
+            $response = \response()
+                        ->json(['error'=>$mensaje],400);
+        }
+
+    return $response;
     }
 
     /**

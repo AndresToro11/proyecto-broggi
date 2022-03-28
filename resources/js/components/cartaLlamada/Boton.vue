@@ -5,7 +5,7 @@
         <datos-incidentes @get-dataincidente="getDataIncidente"></datos-incidentes>
         <h3>boton</h3>
         <button type="button">Cancelar</button>
-        <button type="button" @click="insertBD()">Aceptar</button>
+        <button type="button" @click="dataHora()">Aceptar</button>
         <expedientes-relacionados></expedientes-relacionados>
         <h4>Funciona</h4>
     </div>
@@ -16,8 +16,10 @@ export default {
         return {
             idDatosPersonales: [],
             cartaLlamada: {
-                temps_trucada: "contador",
-                dades_personals_id: " ",
+                codi_trucada: "244",
+                data_hora: "",
+                temps_trucada: 3,
+                dades_personals_id: "1",
                 telefon: " ",
                 procedencia_trucada: " ",
                 origen_trucada: " ",
@@ -33,8 +35,8 @@ export default {
                 altres_ref_localitzacio: "",
                 incidents_id: " ",
                 nota_comuna: " ",
-                expedients_id: " ",
-                usuaris_id: " ",
+                expedients_id: "1",
+                usuaris_id: "1",
             },
         };
     },
@@ -78,18 +80,27 @@ export default {
         getDataAdministrativos(contador) {
             this.contador = contador;
         },
-        insertBD() {
+        dataHora() {
+            var hoy = new Date();
+            var fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
+            var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+            var fechaYHora = fecha + ' ' + hora;
+            this.cartaLlamada.data_hora = fechaYHora;
+            setTimeout(this.insertBD,2000);
+        },
+        insertBD(){
             let me = this;
             axios
-                .post("/llamada", me.cartaLlamada)
+                .post("/llamadas", me.cartaLlamada)
                 .then(function (response) {
                     console.log("Insert OK");
+
                 })
                 .catch(function (error) {
                     this.console.log("Error:");
                     console.log(error);
                 });
-        },
+        }
     },
     computed: {
         descripcioLocalitzacio: function () {

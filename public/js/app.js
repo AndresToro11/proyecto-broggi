@@ -5381,8 +5381,10 @@ __webpack_require__.r(__webpack_exports__);
     return {
       idDatosPersonales: [],
       cartaLlamada: {
-        temps_trucada: "contador",
-        dades_personals_id: " ",
+        codi_trucada: "244",
+        data_hora: "",
+        temps_trucada: 3,
+        dades_personals_id: "1",
         telefon: " ",
         procedencia_trucada: " ",
         origen_trucada: " ",
@@ -5398,8 +5400,8 @@ __webpack_require__.r(__webpack_exports__);
         altres_ref_localitzacio: "",
         incidents_id: " ",
         nota_comuna: " ",
-        expedients_id: " ",
-        usuaris_id: " "
+        expedients_id: "1",
+        usuaris_id: "1"
       }
     };
   },
@@ -5435,9 +5437,17 @@ __webpack_require__.r(__webpack_exports__);
     getDataAdministrativos: function getDataAdministrativos(contador) {
       this.contador = contador;
     },
+    dataHora: function dataHora() {
+      var hoy = new Date();
+      var fecha = hoy.getDate() + '-' + (hoy.getMonth() + 1) + '-' + hoy.getFullYear();
+      var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+      var fechaYHora = fecha + ' ' + hora;
+      this.cartaLlamada.data_hora = fechaYHora;
+      setTimeout(this.insertBD, 2000);
+    },
     insertBD: function insertBD() {
       var me = this;
-      axios.post("/llamada", me.cartaLlamada).then(function (response) {
+      axios.post("/llamadas", me.cartaLlamada).then(function (response) {
         console.log("Insert OK");
       })["catch"](function (error) {
         this.console.log("Error:");
@@ -5628,9 +5638,9 @@ __webpack_require__.r(__webpack_exports__);
         provincia: "",
         municipio: "",
         localizacion: "",
-        descripcio_localitzacio: "",
-        detall_localitzacio: "",
-        altres_ref_localitzacio: "",
+        descripcio_localitzacio: null,
+        detall_localitzacio: null,
+        altres_ref_localitzacio: null,
         tiposIncidente: "",
         incidente: ""
       }
@@ -5704,31 +5714,29 @@ __webpack_require__.r(__webpack_exports__);
       this.datos_incidente.descripcio_localitzacio = " ";
 
       switch (this.datos_incidente.localizacion) {
-        case 'Carrers':
+        case 1:
           varianle = this.calle.via + " " + this.calle.direccion + " " + this.calle.numPuerta;
           break;
 
-        case 'Punt Singular':
+        case 2:
           varianle = this.puntoSingular.nombre;
           break;
 
-        case 'Entitat Població':
+        case 3:
           varianle = " ";
           break;
 
-        case 'Carretera':
+        case 4:
           varianle = this.carretera.carretera + " " + this.carretera.puntoKm;
           break;
 
-        case 'Fuera Cataluña':
+        case 5:
           varianle = this.fueraCatalunya.provincia;
           break;
 
         default:
           break;
       }
-
-      if (this.datos_incidente.localizacion == 'Carrers') {}
 
       this.datos_incidente.descripcio_localitzacio = varianle;
       this.setDataIncidente();
@@ -5739,23 +5747,23 @@ __webpack_require__.r(__webpack_exports__);
       this.datos_incidente.detall_localitzacio = " ";
 
       switch (this.datos_incidente.localizacion) {
-        case 'Carrers':
+        case 1:
           varianle = this.calle2.escalera + " " + this.calle2.piso + " " + this.calle2.puerta;
           break;
 
-        case 'Entitat Població':
+        case 2:
           varianle = " ";
           break;
 
-        case 'Punt Singular':
+        case 3:
           varianle = " ";
           break;
 
-        case 'Carretera':
+        case 4:
           varianle = this.carretera2.sentido;
           break;
 
-        case 'Fuera Cataluña':
+        case 5:
           varianle = " ";
           break;
 
@@ -42985,7 +42993,7 @@ var render = function () {
           attrs: { type: "button" },
           on: {
             click: function ($event) {
-              return _vm.insertBD()
+              return _vm.dataHora()
             },
           },
         },
@@ -43101,9 +43109,11 @@ var render = function () {
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
         _vm._l(_vm.provincias, function (provincia) {
-          return _c("option", { key: provincia.id }, [
-            _vm._v("\n            " + _vm._s(provincia.nom) + "\n        "),
-          ])
+          return _c(
+            "option",
+            { key: provincia.id, domProps: { value: provincia.id } },
+            [_vm._v("\n            " + _vm._s(provincia.nom) + "\n        ")]
+          )
         }),
       ],
       2
@@ -43151,9 +43161,11 @@ var render = function () {
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
         _vm._l(_vm.comarcas, function (comarca) {
-          return _c("option", { key: comarca.id }, [
-            _vm._v("\n            " + _vm._s(comarca.nom) + "\n        "),
-          ])
+          return _c(
+            "option",
+            { key: comarca.id, domProps: { value: comarca.id } },
+            [_vm._v("\n            " + _vm._s(comarca.nom) + "\n        ")]
+          )
         }),
       ],
       2
@@ -43201,9 +43213,11 @@ var render = function () {
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
         _vm._l(_vm.municipios, function (municipio) {
-          return _c("option", { key: municipio.id }, [
-            _vm._v("\n            " + _vm._s(municipio.nom) + "\n        "),
-          ])
+          return _c(
+            "option",
+            { key: municipio.id, domProps: { value: municipio.id } },
+            [_vm._v("\n            " + _vm._s(municipio.nom) + "\n        ")]
+          )
         }),
       ],
       2
@@ -43251,17 +43265,26 @@ var render = function () {
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
         _vm._l(_vm.tiposLocalizaciones, function (tiposLocalizacion) {
-          return _c("option", { key: tiposLocalizacion.id }, [
-            _vm._v(
-              "\n            " + _vm._s(tiposLocalizacion.tipus) + "\n        "
-            ),
-          ])
+          return _c(
+            "option",
+            {
+              key: tiposLocalizacion.id,
+              domProps: { value: tiposLocalizacion.id },
+            },
+            [
+              _vm._v(
+                "\n            " +
+                  _vm._s(tiposLocalizacion.tipus) +
+                  "\n        "
+              ),
+            ]
+          )
         }),
       ],
       2
     ),
     _vm._v(" "),
-    _vm.datos_incidente.localizacion == "Carrers"
+    _vm.datos_incidente.localizacion == "1"
       ? _c("span", [
           _c("label", { attrs: { for: "via" } }, [_vm._v("Via")]),
           _vm._v(" "),
@@ -43419,7 +43442,7 @@ var render = function () {
             },
           }),
         ])
-      : _vm.datos_incidente.localizacion === "Punt Singular"
+      : _vm.datos_incidente.localizacion === "2"
       ? _c("span", [
           _c("label", { attrs: { for: "nombre" } }, [_vm._v("Nombre")]),
           _vm._v(" "),
@@ -43447,7 +43470,7 @@ var render = function () {
             },
           }),
         ])
-      : _vm.datos_incidente.localizacion === "Carretera"
+      : _vm.datos_incidente.localizacion === "4 "
       ? _c("span", [
           _c("label", { attrs: { for: "carretera" } }, [_vm._v("Carretera")]),
           _vm._v(" "),
@@ -43529,7 +43552,7 @@ var render = function () {
             },
           }),
         ])
-      : _vm.datos_incidente.localizacion === "Fuera Cataluña"
+      : _vm.datos_incidente.localizacion === "5"
       ? _c("span", [
           _c("label", { attrs: { for: "provincia" } }, [_vm._v("Provincia")]),
           _vm._v(" "),
@@ -43605,11 +43628,15 @@ var render = function () {
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
         _vm._l(_vm.tIncidentes, function (tIncidente) {
-          return _c("option", { key: tIncidente.id }, [
-            _vm._v(
-              "\n            " + _vm._s(tIncidente.descripcio) + "\n        "
-            ),
-          ])
+          return _c(
+            "option",
+            { key: tIncidente.id, domProps: { value: tIncidente.id } },
+            [
+              _vm._v(
+                "\n            " + _vm._s(tIncidente.descripcio) + "\n        "
+              ),
+            ]
+          )
         }),
       ],
       2
@@ -43657,11 +43684,15 @@ var render = function () {
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
         _vm._l(_vm.incidentes, function (incidente) {
-          return _c("option", { key: incidente.id }, [
-            _vm._v(
-              "\n            " + _vm._s(incidente.descripcio) + "\n        "
-            ),
-          ])
+          return _c(
+            "option",
+            { key: incidente.id, domProps: { value: incidente.id } },
+            [
+              _vm._v(
+                "\n            " + _vm._s(incidente.descripcio) + "\n        "
+              ),
+            ]
+          )
         }),
       ],
       2
@@ -43854,9 +43885,11 @@ var render = function () {
         _c("option", { attrs: { value: "" } }),
         _vm._v(" "),
         _vm._l(_vm.municipios, function (municipio) {
-          return _c("option", { key: municipio.id }, [
-            _vm._v("\n            " + _vm._s(municipio.nom) + "\n        "),
-          ])
+          return _c(
+            "option",
+            { key: municipio.id, domProps: { value: municipio.id } },
+            [_vm._v("\n            " + _vm._s(municipio.nom) + "\n        ")]
+          )
         }),
       ],
       2

@@ -14,7 +14,7 @@
         <label for="municipio">Municipio</label>
         <select class="form-control" id="municipio" v-model="datos_personales.municipio" @change="activarFunciones()" required>
             <option value=""></option>
-            <option v-for="municipio in municipios" :key="municipio.id" >
+            <option v-for="municipio in municipios" :key="municipio.id" :value="municipio.id">
                 {{ municipio.nom }}
             </option>
         </select>

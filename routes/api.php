@@ -40,6 +40,6 @@ Route::apiResource('incidente', IncidenteController::class);
 Route::apiResource('tiposIncidente', TiposIncidenteController::class);
 Route::apiResource('tiposLocalitzacion', TiposLocalizacionController::class);
 Route::apiResource('datosPersonales', DatosPersonalesController::class);
-Route::apiResource('llamada', CartaLlamadaController::class);
+Route::apiResource('llamadas', CartaLlamadaController::class);
 Route::apiResource('expediente', ExpedientController::class); //->only(['index', 'provincias']);
 Route::get('expediente/provincias', [ExpedientController::class, 'provincias']);
