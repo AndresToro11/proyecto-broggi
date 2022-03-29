@@ -35,7 +35,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('user', UsuariController::class);
 
-//-------------------------- Carta de llamada ------------------------------------
+//-------------------------- Carta de llamada -------------------------------------
 
 Route::apiResource('municipio', MunicipioController::class);
 Route::apiResource('provincia', ProvinciaController::class);
@@ -45,11 +45,11 @@ Route::apiResource('tiposIncidente', TiposIncidenteController::class);
 Route::apiResource('tiposLocalitzacion', TiposLocalizacionController::class);
 Route::apiResource('datosPersonales', DatosPersonalesController::class);
 
-//-------------------------------- Expedientes -----------------------------------
+//-------------------------------- Expedientes ------------------------------------
 
 Route::apiResource('expedientes', ExpedientController::class);
 
-//-------------------------------- Grafico ---------------------------------------
+//----------------------------------- Grafico ---------------------------------------
 
 Route::get('grafico/provincias', [GraficoController::class, 'provincias']);
 Route::get('grafico/municipios', [GraficoController::class, 'municipios']);
@@ -64,5 +64,12 @@ Route::get('admin/operadores', [AdminController::class, 'operadores']);
 Route::get('admin/supervisores', [AdminController::class, 'supervisores']);
 Route::get('admin/roles', [AdminController::class, 'roles']);
 Route::post('admin/insertUsuario', [AdminController::class, 'insertUsuario']);
+Route::get('admin/inactivos', [AdminController::class, 'inactivos']);
 
-//---------------------------------------------------------------------------------
+//-------------------------------------- Perfil -------------------------------------
+
+Route::put('admin/updateUsuario/{usuario}', [AdminController::class, 'updateUsuario']);
+Route::put('admin/deleteUsuario/{usuario}', [AdminController::class, 'deleteUsuario']);
+Route::put('admin/activarUsuario/{usuario}', [AdminController::class, 'activarUsuario']);
+
+//-----------------------------------------------------------------------------------

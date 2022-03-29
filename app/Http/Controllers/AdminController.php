@@ -17,6 +17,7 @@ class AdminController extends Controller
     {
         $result = Usuari::with('perfil')
                         ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->where('activo', 1)
                         ->orderBy('perfils_id')
                         ->get();
 
@@ -27,7 +28,8 @@ class AdminController extends Controller
     {
         $result = Usuari::with('perfil')
                         ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
-                        ->where('perfils_id', 1)
+                        ->where('activo', 1)
+                        ->where(['perfils_id', 1])
                         ->get();
 
         return RolesResource::collection($result);               
@@ -37,7 +39,18 @@ class AdminController extends Controller
     {
         $result = Usuari::with('perfil')
                         ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->where('activo', 1)
                         ->where('perfils_id', 2)
+                        ->get();
+
+        return RolesResource::collection($result);               
+    }
+
+    public function inactivos()
+    {
+        $result = Usuari::with('perfil')
+                        ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->where('activo', 0)
                         ->get();
 
         return RolesResource::collection($result);               
@@ -76,13 +89,70 @@ class AdminController extends Controller
          return $response;
     }
 
-    public function update(Request $request, Usuari $usuari)
-    {
-        
+    public function updateUsuario(Request $request, Usuari $usuario){
+
+        if($request->accion == 'datos'){
+            try{
+                Usuari::where('id', $usuario->id)
+                    ->update(['nom' => $request->nombre,
+                            'cognoms' => $request->apellidos,
+                            'mail' => $request->mail,
+                            'perfils_id' => $request->rol
+                            ]);
+
+                $response = response()->json(['Mensaje' => 'Todo correcto y yo que me alegro'], 201);
+            }
+            catch(QueryException $e){
+                $mensaje = Utilitat::errorMessage($e);
+                $response = \response()
+                            ->json(['error' => $mensaje], 400);
+            }
+        }
+
+        elseif($request->accion == 'contrasena'){
+            try{
+                Usuari::where('id', $usuario->id)
+                    ->update(['contrassenya' => $request->contrasena]);
+
+                $response = response()->json(['Mensaje' => 'Todo correcto y yo que me alegro'], 201);
+            }
+            catch(QueryException $e){
+                $mensaje = Utilitat::errorMessage($e);
+                $response = \response()
+                            ->json(['error' => $mensaje], 400);
+            }
+        }
+
+         return $response;
     }
 
-    public function destroy(Usuari $usuari)
-    {
-        //
+    public function activarUsuario(Usuari $usuario){
+        try{
+            Usuari::where('id', $usuario->id)
+                ->update(['activo' => 1]);
+
+            $response = response()->json(['Mensaje' => 'Usuario activado'], 201);
+        }
+        catch(QueryException $e){
+            $mensaje = Utilitat::errorMessage($e);
+            $response = \response()
+                        ->json(['error' => $mensaje], 400);
+        }
+        return $response;
+    }
+
+    public function deleteUsuario(Usuari $usuario){
+        try{
+            Usuari::where('id', $usuario->id)
+                ->update(['activo' => 0]);
+
+            $response = response()->json(['Mensaje' => 'Usuario desactivado'], 201);
+        }
+        catch(QueryException $e){
+            $mensaje = Utilitat::errorMessage($e);
+            $response = \response()
+                        ->json(['error' => $mensaje], 400);
+        }
+        return $response;
     }
 }

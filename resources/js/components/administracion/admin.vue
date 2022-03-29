@@ -13,6 +13,9 @@
                     <li class="nav-item">
                         <a @click="selectSupervisores()" id="supervisores" class="nav-link text-dark" href="#">Supervisores</a>
                     </li>
+                    <li class="nav-item">
+                        <a @click="selectInactivos()" id="inactivos" class="nav-link text-dark" href="#">Inactivos</a>
+                    </li>
                 </ul>
             </div>
 
@@ -48,8 +51,11 @@
                                 <td class="text-center">{{ user.perfil.nom }}</td>
                                 <td class="text-center">{{ user.mail }}</td>
                                 <td class="text-center">
-                                    <a href="http://localhost/proyecto-broggi/public/admin/editarUsuario/" type="button" class="btn btn-light"><i class="fal fa-edit"></i></a>
-                                    <a type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal"
+                                        data-bs-nombre="user.nom">
+                                            <i class="fal fa-edit"></i>
+                                        </button>
+                                    <a @click="deleteUsuario(user.id)" type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -92,8 +98,10 @@
                                     <td class="text-center">{{ user.rol }}</td>
                                     <td class="text-center">{{ user.mail }}</td>
                                     <td class="text-center">
-                                        <a href="http://localhost/proyecto-broggi/public/admin/editarUsuario" type="button" class="btn btn-light"><i class="fal fa-edit"></i></a>
-                                        <a type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">
+                                            <i class="fal fa-edit"></i>
+                                        </button>
+                                        <a @click="deleteUsuario(user.id)" type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -135,8 +143,10 @@
                                     <td class="text-center">{{ user.rol }}</td>
                                     <td class="text-center">{{ user.mail }}</td>
                                     <td class="text-center">
-                                        <a href="http://localhost/proyecto-broggi/public/admin/editarUsuario" type="button" class="btn btn-light"><i class="fal fa-edit"></i></a>
-                                        <a type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">
+                                            <i class="fal fa-edit"></i>
+                                        </button>
+                                        <a @click="deleteUsuario(user.id)" type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -146,22 +156,62 @@
                 </div>
             </div>
 
+            <div v-else-if="seccion == 'inactivos'">
+                <div class="card-body">
+                    <div class="mt-4" v-if="loading == true">
+                        <div id="loader" class="text-center">
+                            <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
+                        </div>
+                    </div>
+
+                    <div v-else>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Codigo</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellidos</th>
+                                    <th scope="col">Rol</th>
+                                    <th scope="col">Mail</th>
+                                    <th scope="col">
+                                        <a href="http://localhost/proyecto-broggi/public/admin/nuevoUsuario" type="button" class="btn btn-light rounded-circle"><i class="fas fa-plus"></i></a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="user in data" :key="user.id">
+                                    <td class="text-center">{{ user.codi }}</td>
+                                    <td class="text-center">{{ user.nombre }}</td>
+                                    <td class="text-center">{{ user.apellidos }}</td>
+                                    <td class="text-center">{{ user.rol }}</td>
+                                    <td class="text-center">{{ user.mail }}</td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">
+                                            <i class="fal fa-edit"></i>
+                                        </button>
+                                        <a @click="deleteUsuario(user.id)" type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Modal
-        </button>
 
         <!-- Modal -->
-        <div class=" modal modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+        <div class=" modal modal-xl" id="editarModal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="modal">Usuario</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-
 
                     <div class="modal-body">
 
@@ -180,7 +230,7 @@
                             <div class="col-10">
                                 <div class="input-field col s6">
                                     <input v-model="usuario.nombre" id="first_name" type="text" class="validate">
-                                    <label for="first_name">Nombre</label>
+                                    <label class="inputNombre" for="first_name">Nombre</label>
                                 </div>
                                 <div class="input-field col s6">
                                     <input v-model="usuario.apellidos" id="last_name" type="text" class="validate">
@@ -190,11 +240,11 @@
                         </div>
 
                         <div class="row">
-                            <div class="input-field col s8">
+                            <div class="input-field col s6">
                                 <input v-model="usuario.mail" id="email" type="email" class="validate">
                                 <label for="email">Mail</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s6">
                                 <select v-model="usuario.rol" class="form-select" aria-label="Default select example">
                                     <option selected disabled>Rol</option>
                                     <option value="1">Operador</option>
@@ -205,10 +255,9 @@
 
                     </div>
 
-
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                        <button type="button" class="btn btn-danger">Cancelar</button>
                     </div>
                 </div>
             </div>
@@ -218,6 +267,17 @@
 </template>
 
 <script>
+
+    /*var modal = document.getElementById('editarModal');
+    modal.addEventListener('show.bs.modal', function (event){
+        let info = event.relatedTarget;
+        let nombre = info.getAttribute('data-bs-nombre');
+
+        let inputNombre = modal.querySelector('.inputNombre');
+        inputNombre.innerHTML = nombre;
+    });*/
+    
+
     export default {
 
         data(){
@@ -227,6 +287,7 @@
                 seccion: 'todos',
 
                 usuario: {
+                    id: '',
                     nombre: '',
                     apellidos: '',
                     contrasena: '',
@@ -245,6 +306,7 @@
                 document.getElementById('todos').setAttribute('class', 'nav-link active');
                 document.getElementById('operadores').setAttribute('class', 'nav-link');
                 document.getElementById('supervisores').setAttribute('class', 'nav-link');
+                document.getElementById('inactivos').setAttribute('class', 'nav-link');
                 this.seccion = 'todos';
 
                 this.loading = true;
@@ -265,6 +327,7 @@
                 document.getElementById('todos').setAttribute('class', 'nav-link');
                 document.getElementById('operadores').setAttribute('class', 'nav-link active');
                 document.getElementById('supervisores').setAttribute('class', 'nav-link');
+                document.getElementById('inactivos').setAttribute('class', 'nav-link');
                 this.seccion = 'operadores';
 
                 this.loading = true;
@@ -285,6 +348,7 @@
                 document.getElementById('todos').setAttribute('class', 'nav-link');
                 document.getElementById('operadores').setAttribute('class', 'nav-link');
                 document.getElementById('supervisores').setAttribute('class', 'nav-link active');
+                document.getElementById('inactivos').setAttribute('class', 'nav-link');
                 this.seccion = 'supervisores';
 
                 this.loading = true;
@@ -299,6 +363,44 @@
                     })
                     .finally(() => this.loading = false);
             },
+
+            selectInactivos(){
+
+                document.getElementById('todos').setAttribute('class', 'nav-link');
+                document.getElementById('operadores').setAttribute('class', 'nav-link');
+                document.getElementById('supervisores').setAttribute('class', 'nav-link');
+                document.getElementById('inactivos').setAttribute('class', 'nav-link active');
+                this.seccion = 'inactivos';
+
+                this.loading = true;
+                let me = this;
+                axios
+                    .get('/admin/inactivos')
+                    .then(response => {
+                        me.data = response.data;
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+                    .finally(() => this.loading = false);
+            },
+
+            deleteUsuario(usuario){
+                this.loading = true;
+                let me = this;
+                axios
+                    .put('admin/deleteUsuario/' + usuario)
+                    if(me.seccion == 'todos'){
+                        this.selectTodos();
+                    }
+                    else if(me.seccion == 'operadores'){
+                        this.selectOperadores();
+                    }
+                    else if(me.seccion == 'supervisores'){
+                        this.selectSupervisores();
+                    }
+                    this.loading = false;
+            }
         },
         mounted() {
             this.selectTodos();

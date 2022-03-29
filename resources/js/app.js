@@ -52,6 +52,10 @@ Vue.component('admin', require('./components/administracion/admin.vue').default)
 Vue.component('nuevousuario', require('./components/administracion/nuevousuario.vue').default);
 Vue.component('editarusuario', require('./components/administracion/editarusuario.vue').default);
 
+//----------------------------------------------- Perfil -----------------------------------------
+
+Vue.component('perfil', require('./components/perfil.vue').default);
+
 //-----------------------------------------------------------------------------------------
 
 
