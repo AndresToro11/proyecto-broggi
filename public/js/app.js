@@ -15430,19 +15430,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -15485,7 +15472,38 @@ __webpack_require__.r(__webpack_exports__);
     new mdc.select.MDCSelect(document.querySelector(".provincia .mdc-select"));
     new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
     new mdc.select.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
-    new mdc.textField.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".provincia-fuera .mdc-text-field")); //Fuera de Catalunya
+
+    new mdc.textField.MDCTextField(document.querySelector(".referencia-poblacion .mdc-text-field")); //POBLACION
+
+    new mdc.textField.MDCTextField(document.querySelector(".referencia-fuera .mdc-text-field")); //Fuera de Catalunya
+
+    new mdc.select.MDCSelect(document.querySelector(".tipo-de-via .mdc-select")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".nombre-via-calle .mdc-text-field")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".numero-portal .mdc-text-field")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".escalera .mdc-text-field")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".piso .mdc-text-field")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".puerta .mdc-text-field")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".referencia-calle .mdc-text-field")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".nombre-via-carretera .mdc-text-field")); //CARRETERA
+
+    new mdc.textField.MDCTextField(document.querySelector(".punto-kilometrico .mdc-text-field")); //CARRETERA
+
+    new mdc.select.MDCSelect(document.querySelector(".sentido-circulacion .mdc-select")); //CARRETERA
+
+    new mdc.textField.MDCTextField(document.querySelector(".referencia-carretera .mdc-text-field")); //CARRETERA
+
+    new mdc.textField.MDCTextField(document.querySelector(".nombre-punto-singular .mdc-text-field")); //Punto Singular
+
+    new mdc.textField.MDCTextField(document.querySelector(".referencia-punto-singular .mdc-text-field")); //Punto Singular
+
     new mdc.select.MDCSelect(document.querySelector(".incidente .mdc-select"));
     new mdc.select.MDCSelect(document.querySelector(".tipo-de-incidente .mdc-select"));
     mdc.autoInit();
@@ -15533,75 +15551,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -34549,7 +34498,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    display: flex;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    width: 954px;\n    /* height: 908px; */\n    left: 92px;\n    top: 480px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 125px;\n    min-height: 265px;\n    margin-left: -263px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 265px;\n    margin-top: 2px;\n    min-width: 265px;\n    z-index: 6;\n}\n.tipo-de-via{\n        margin-top: 24px;\n}\n.nombre-via{\n        margin-top: 30px;\n}\n.punto-kilometrico{\n        margin-top: 30px;\n}\n.nombre-punto-singular{\n        margin-top: 24px;\n}\n.escalera{\n        margin-top: 28px;\n}\n.piso{\n        margin-top: 30px;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.comarca {\n    height: 60px;\n    width: 263px;\n}\n.provincia {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.municipio {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n}\n.comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.comarca .custom-enhanced-select-width {\n    width: 200px;\n}\n.provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.provincia .custom-enhanced-select-width {\n    width: 200px;\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\n    width: 200px;\n}\n\n    /* Global */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Column */\n.flex-row-2 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: -213px;\n    margin-top: 127px;\n    width: 263px;\n    z-index: 6;\n}\n.tipo-de-localizacin {\n    height: 60px;\n    width: 263px;\n}\n.referencia {\n    margin-top: 30px;\n    width: 263px;\n}\n.separation-down {\n    height: 183px;\n    margin-left: 313px;\n    margin-top: -203px;\n    width: 1px;\n}\n.tipo-de-localizacin .custom-enhanced-select-width {\n    width: 200px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n}\n.tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    /* position: relative; */\n}\n\n    /* Third Column */\n.flex-row-3 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 50px;\n    margin-top: 127px;\n    width: 263px;\n    height: 56px;\n}\n.flex-row-4 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 365px;\n    margin-top: -56px;\n    width: 263px;\n    height: 56px;\n}\n.flex-row-7 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 100px;\n    margin-top: 127px;\n    width: 263px;\n    height: 56px;\n}\n.incidente {\n    height: 60px;\n    width: 263px;\n}\n.tipo-de-incidente {\n    height: 60px;\n    margin-top: 24px;\n    width: 263px;\n}\n.mapa-up #mapa-up{\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 89px;\n    margin-left: 80px;\n    transition: all 0.2s ease-in-out;\n    background-color: #0040FF;\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n#mapa-up:hover,\n    #aceptar:hover,\n    #cancelar:hover {\n    transform: scale(1.1);\n}\n.flex-row-6 {\n    align-items: flex-start;\n    display: flex;\n    margin-left: 38px;\n    margin-top: 24px;\n    min-width: 188px;\n}\n.aceptar #aceptar {\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 103px;\n    margin-left: 74px;\n    margin-top: 20px;\n    transition: all 0.2s ease-in-out;\n    background-color: #0040FF;\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n.cancelar #cancelar{\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 103px;\n    margin-left: 74px;\n    margin-top: 20px;\n    transition: all 0.2s ease-in-out;\n    background-color: rgb(207, 0, 0);\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n.mapa-up {\n    margin-top: 50px;\n    height: auto !important;\n    width: auto !important;\n}\n.incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n}\n.cancelar {\n    height: auto !important;\n    width: auto !important;\n    margin-top: -20px;\n    margin-left: -50px;\n}\n.tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.aceptar {\n    height: auto !important;\n    width: auto !important;\n    margin-top: -20px;\n    margin-left: -100px;\n}\n.tipo-de-incidente .custom-enhanced-select-width {\n    width: 200px;\n}\n.incidente .custom-enhanced-select-width {\n    width: 200px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    display: flex;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    width: 954px;\n    /* height: 908px; */\n    left: 92px;\n    top: 480px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 125px;\n    min-height: 265px;\n    margin-left: -263px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 265px;\n    margin-top: 2px;\n    min-width: 265px;\n    z-index: 6;\n}\n.tipo-de-via{\n        margin-top: 24px;\n}\n.nombre-via-calle{\n        margin-top: 30px;\n}\n.nombre-via-carretera{\n        margin-top: 25px;\n}\n.punto-kilometrico{\n        margin-top: 29px;\n}\n.nombre-punto-singular{\n        margin-top: 24px;\n}\n.escalera{\n        margin-top: 28px;\n}\n.piso{\n        margin-top: 30px;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.comarca {\n    height: 60px;\n    width: 263px;\n}\n.provincia {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.provincia-fuera {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.municipio {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n}\n.comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.comarca .custom-enhanced-select-width {\n    width: 200px;\n}\n.provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.provincia .custom-enhanced-select-width {\n    width: 200px;\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\n    width: 200px;\n}\n\n    /* Global */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Column */\n.flex-row-2 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: -213px;\n    margin-top: 127px;\n    width: 263px;\n    z-index: 6;\n}\n.tipo-de-localizacin {\n    height: 60px;\n    width: 263px;\n}\n.referencia-poblacion{\n    margin-top: 25px;\n    width: 263px;\n}\n.referencia-poblacion .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia-fuera{\n    margin-top: 25px;\n    width: 263px;\n}\n.referencia-fuera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia-calle{\n    margin-top: 28px;\n    width: 263px;\n}\n.referencia-calle .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia-carretera{\n    margin-top: 28px;\n    width: 263px;\n}\n.referencia-carretera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia-punto-singular{\n    margin-top: 30px;\n    width: 263px;\n}\n.referencia-punto-singular .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.separation-down {\n    height: 183px;\n    margin-left: 50px;\n    margin-top: 153px;\n    width: 1px;\n}\n.tipo-de-localizacin .custom-enhanced-select-width {\n    width: 200px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n}\n.tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    /* position: relative; */\n}\n\n    /* Third Column */\n.flex-row-3 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 50px;\n    margin-top: 127px;\n    width: 263px;\n    height: 56px;\n}\n.flex-row-4 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 365px;\n    margin-top: -56px;\n    width: 263px;\n    height: 56px;\n}\n.flex-row-7 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 50px;\n    margin-top: 127px;\n    width: 263px;\n    height: 56px;\n}\n.incidente {\n    height: 60px;\n    width: 263px;\n}\n.tipo-de-incidente {\n    height: 60px;\n    margin-top: 24px;\n    width: 263px;\n}\n.mapa-up #mapa-up{\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 89px;\n    margin-left: 80px;\n    transition: all 0.2s ease-in-out;\n    background-color: #0040FF;\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n#mapa-up:hover,\n    #aceptar:hover,\n    #cancelar:hover {\n    transform: scale(1.1);\n}\n.flex-row-6 {\n    align-items: flex-start;\n    display: flex;\n    margin-left: 38px;\n    margin-top: 24px;\n    min-width: 188px;\n}\n.aceptar #aceptar {\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 103px;\n    margin-left: 74px;\n    margin-top: 20px;\n    transition: all 0.2s ease-in-out;\n    background-color: #0040FF;\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n.cancelar #cancelar{\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 103px;\n    margin-left: 74px;\n    margin-top: 20px;\n    transition: all 0.2s ease-in-out;\n    background-color: rgb(207, 0, 0);\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n.mapa-up {\n    margin-top: 50px;\n    height: auto !important;\n    width: auto !important;\n}\n.incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n}\n.cancelar {\n    height: auto !important;\n    width: auto !important;\n    margin-top: -20px;\n    margin-left: -50px;\n}\n.tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.aceptar {\n    height: auto !important;\n    width: auto !important;\n    margin-top: -20px;\n    margin-left: -100px;\n}\n.tipo-de-incidente .custom-enhanced-select-width {\n    width: 200px;\n}\n.incidente .custom-enhanced-select-width {\n    width: 200px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -54691,32 +54640,6 @@ var staticRenderFns = [
                                 {
                                   staticClass: "mdc-list-item",
                                   attrs: {
-                                    "data-value": "Fuera de Catalunya",
-                                    role: "option",
-                                  },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [
-                                      _vm._v(
-                                        "\n                                                Fuera de Catalunya\n                                            "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: {
                                     "data-value": "Población",
                                     role: "option",
                                   },
@@ -54815,6 +54738,32 @@ var staticRenderFns = [
                                   ),
                                 ]
                               ),
+                              _vm._v(" "),
+                              _c(
+                                "li",
+                                {
+                                  staticClass: "mdc-list-item",
+                                  attrs: {
+                                    "data-value": "Fuera de Catalunya",
+                                    role: "option",
+                                  },
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "mdc-list-item__ripple",
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "mdc-list-item__text" },
+                                    [
+                                      _vm._v(
+                                        "\n                                                Fuera de Catalunya\n                                            "
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
                             ]
                           ),
                         ]
@@ -54824,7 +54773,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "referencia" }, [
+                  _c("div", { staticClass: "referencia-poblacion" }, [
                     _c(
                       "label",
                       { staticClass: "mdc-text-field mdc-text-field--filled" },
@@ -54858,9 +54807,537 @@ var staticRenderFns = [
                   ]),
                 ]),
                 _vm._v(" "),
-                _c("span", [
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c("div", { staticClass: "provincia-fuera" }, [
+                    _c(
+                      "label",
+                      { staticClass: "mdc-text-field mdc-text-field--filled" },
+                      [
+                        _c("span", { staticClass: "mdc-text-field__ripple" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-floating-label",
+                            attrs: { id: "my-label-id" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Provincia\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "mdc-text-field__input",
+                          attrs: {
+                            type: "text",
+                            "aria-labelledby": "my-label-id",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-line-ripple" }),
+                      ]
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c("div", { staticClass: "referencia-fuera" }, [
+                    _c(
+                      "label",
+                      { staticClass: "mdc-text-field mdc-text-field--filled" },
+                      [
+                        _c("span", { staticClass: "mdc-text-field__ripple" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-floating-label",
+                            attrs: { id: "my-label-id" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Referencia\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "mdc-text-field__input",
+                          attrs: {
+                            type: "text",
+                            "aria-labelledby": "my-label-id",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-line-ripple" }),
+                      ]
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c("div", { staticClass: "tipo-de-via" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "mdc-select mdc-select--filled demo-width-class",
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mdc-select__anchor custom-enhanced-select-width",
+                            attrs: {
+                              role: "button",
+                              "aria-haspopup": "listbox",
+                              "aria-expanded": "false",
+                            },
+                          },
+                          [
+                            _c("span", { staticClass: "mdc-select__ripple" }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass: "mdc-floating-label",
+                                attrs: { id: "demo-label" },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                            Tipo de via\n                                        "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "mdc-select__selected-text-container",
+                              },
+                              [
+                                _c("span", {
+                                  staticClass: "mdc-select__selected-text",
+                                  attrs: { id: "demo-selected-text" },
+                                }),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              { staticClass: "mdc-select__dropdown-icon" },
+                              [
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "mdc-select__dropdown-icon-inactive material-icons",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                                arrow_drop_down\n                                            "
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "mdc-select__dropdown-icon-active material-icons",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                                arrow_drop_up\n                                            "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-line-ripple" }),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                          },
+                          [
+                            _c(
+                              "ul",
+                              {
+                                staticClass: "mdc-list",
+                                attrs: {
+                                  id: "select_dropdown",
+                                  role: "listbox",
+                                  "aria-label": "listbox",
+                                },
+                              },
+                              [
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "#",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                                    #\n                                                "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "#",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                                    #\n                                                "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "#",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                                    #\n                                                "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "#",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                                    #\n                                                "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "#",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                                    #\n                                                "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c("div", { staticClass: "nombre-via-calle" }, [
+                    _c(
+                      "label",
+                      { staticClass: "mdc-text-field mdc-text-field--filled" },
+                      [
+                        _c("span", { staticClass: "mdc-text-field__ripple" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-floating-label",
+                            attrs: { id: "my-label-id" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Nombre de la via\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "mdc-text-field__input",
+                          attrs: {
+                            type: "text",
+                            "aria-labelledby": "my-label-id",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-line-ripple" }),
+                      ]
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c("div", { staticClass: "nombre-via-carretera" }, [
+                    _c(
+                      "label",
+                      { staticClass: "mdc-text-field mdc-text-field--filled" },
+                      [
+                        _c("span", { staticClass: "mdc-text-field__ripple" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-floating-label",
+                            attrs: { id: "my-label-id" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Nombre de la via\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "mdc-text-field__input",
+                          attrs: {
+                            type: "text",
+                            "aria-labelledby": "my-label-id",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-line-ripple" }),
+                      ]
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c("div", { staticClass: "punto-kilometrico" }, [
+                    _c(
+                      "label",
+                      { staticClass: "mdc-text-field mdc-text-field--filled" },
+                      [
+                        _c("span", { staticClass: "mdc-text-field__ripple" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-floating-label",
+                            attrs: { id: "my-label-id" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Punto kilometrico\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "mdc-text-field__input",
+                          attrs: {
+                            type: "text",
+                            "aria-labelledby": "my-label-id",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-line-ripple" }),
+                      ]
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c("div", { staticClass: "nombre-punto-singular" }, [
+                    _c(
+                      "label",
+                      { staticClass: "mdc-text-field mdc-text-field--filled" },
+                      [
+                        _c("span", { staticClass: "mdc-text-field__ripple" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-floating-label",
+                            attrs: { id: "my-label-id" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Nombre del punto singular\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "mdc-text-field__input",
+                          attrs: {
+                            type: "text",
+                            "aria-labelledby": "my-label-id",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-line-ripple" }),
+                      ]
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c("div", { staticClass: "referencia-punto-singular" }, [
+                    _c(
+                      "label",
+                      { staticClass: "mdc-text-field mdc-text-field--filled" },
+                      [
+                        _c("span", { staticClass: "mdc-text-field__ripple" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-floating-label",
+                            attrs: { id: "my-label-id" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Referencia\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "mdc-text-field__input",
+                          attrs: {
+                            type: "text",
+                            "aria-labelledby": "my-label-id",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-line-ripple" }),
+                      ]
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("span", { attrs: { hidden: "" } }, [
+              _c("div", { staticClass: "flex-row-3" }, [
+                _c("div", { staticClass: "flex-col-4" }, [
                   _c("span", { attrs: { hidden: "" } }, [
-                    _c("div", { staticClass: "tipo-de-via" }, [
+                    _c("div", { staticClass: "numero-portal" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                            Numero del portal\n                                        "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { attrs: { hidden: "" } }, [
+                    _c("div", { staticClass: "sentido-circulacion" }, [
                       _c(
                         "div",
                         {
@@ -54890,7 +55367,7 @@ var staticRenderFns = [
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                                Tipo de via\n                                            "
+                                    "\n                                                Sentido de la circulación\n                                            "
                                   ),
                                 ]
                               ),
@@ -55101,440 +55578,7 @@ var staticRenderFns = [
                     ]),
                   ]),
                   _vm._v(" "),
-                  _c("span", [
-                    _c("div", { staticClass: "nombre-punto-singular" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                            Nombre del punto singular\n                                        "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
                   _c("span", { attrs: { hidden: "" } }, [
-                    _c("div", { staticClass: "nombre-via" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                            Nombre de la via\n                                        "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { attrs: { hidden: "" } }, [
-                    _c("div", { staticClass: "punto-kilometrico" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                            Punto kilometrico\n                                        "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("span", [
-                    _c("div", { staticClass: "referencia" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                            Referencia\n                                        "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("span", [
-              _c("div", { staticClass: "flex-row-3" }, [
-                _c("div", { staticClass: "flex-col-4" }, [
-                  _c("span", { attrs: { hidden: "" } }, [
-                    _c("div", { staticClass: "numero-portal" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                            Numero del portal\n                                        "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("span", [
-                    _c("div", { staticClass: "sentido-circulacion" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select mdc-select--filled demo-width-class",
-                        },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "mdc-select__anchor custom-enhanced-select-width",
-                              attrs: {
-                                role: "button",
-                                "aria-haspopup": "listbox",
-                                "aria-expanded": "false",
-                              },
-                            },
-                            [
-                              _c("span", { staticClass: "mdc-select__ripple" }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass: "mdc-floating-label",
-                                  attrs: { id: "demo-label" },
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                            Sentido de la circulación\n                                        "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__selected-text-container",
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-select__selected-text",
-                                    attrs: { id: "demo-selected-text" },
-                                  }),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                { staticClass: "mdc-select__dropdown-icon" },
-                                [
-                                  _c(
-                                    "span",
-                                    {
-                                      staticClass:
-                                        "mdc-select__dropdown-icon-inactive material-icons",
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                                arrow_drop_down\n                                            "
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    {
-                                      staticClass:
-                                        "mdc-select__dropdown-icon-active material-icons",
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                                arrow_drop_up\n                                            "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "mdc-line-ripple" }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                            },
-                            [
-                              _c(
-                                "ul",
-                                {
-                                  staticClass: "mdc-list",
-                                  attrs: {
-                                    id: "select_dropdown",
-                                    role: "listbox",
-                                    "aria-label": "listbox",
-                                  },
-                                },
-                                [
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                                    #\n                                                "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                                    #\n                                                "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                                    #\n                                                "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                                    #\n                                                "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                                    #\n                                                "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("span", [
                     _c("div", { staticClass: "escalera" }, [
                       _c(
                         "label",
@@ -55572,7 +55616,7 @@ var staticRenderFns = [
                   ]),
                   _vm._v(" "),
                   _c("span", { attrs: { hidden: "" } }, [
-                    _c("div", { staticClass: "referencia" }, [
+                    _c("div", { staticClass: "referencia-carretera" }, [
                       _c(
                         "label",
                         {
@@ -55608,122 +55652,138 @@ var staticRenderFns = [
                     ]),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "piso" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                        Piso\n                                    "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
+                  _c("span", { attrs: { hidden: "" } }, [
+                    _c("div", { staticClass: "piso" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                            Piso\n                                        "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]),
                   ]),
                 ]),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "flex-row-4" }, [
-                _c("div", { staticClass: "flex-col-5" }, [
-                  _c("div", { staticClass: "puerta" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
+              _c("span", { attrs: { hidden: "" } }, [
+                _c("div", { staticClass: "flex-row-4" }, [
+                  _c("div", { staticClass: "flex-col-5" }, [
+                    _c("span", { attrs: { hidden: "" } }, [
+                      _c("div", { staticClass: "puerta" }, [
                         _c(
-                          "span",
+                          "label",
                           {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
+                            staticClass:
+                              "mdc-text-field mdc-text-field--filled",
                           },
                           [
-                            _vm._v(
-                              "\n                                        Puerta\n                                    "
+                            _c("span", {
+                              staticClass: "mdc-text-field__ripple",
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass: "mdc-floating-label",
+                                attrs: { id: "my-label-id" },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                                Puerta\n                                            "
+                                ),
+                              ]
                             ),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass: "mdc-text-field__input",
+                              attrs: {
+                                type: "text",
+                                "aria-labelledby": "my-label-id",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-line-ripple" }),
                           ]
                         ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { attrs: { hidden: "" } }, [
+                      _c("div", { staticClass: "referencia-calle" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "mdc-text-field mdc-text-field--filled",
                           },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("span", [
-                    _c("div", { staticClass: "referencia" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                            Referencia\n                                        "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
+                          [
+                            _c("span", {
+                              staticClass: "mdc-text-field__ripple",
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass: "mdc-floating-label",
+                                attrs: { id: "my-label-id" },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                                Referencia\n                                            "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass: "mdc-text-field__input",
+                              attrs: {
+                                type: "text",
+                                "aria-labelledby": "my-label-id",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-line-ripple" }),
+                          ]
+                        ),
+                      ]),
                     ]),
                   ]),
                 ]),
-                _vm._v(" "),
-                _c("img", {
-                  staticClass: "separation-down",
-                  attrs: {
-                    src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg",
-                  },
-                }),
               ]),
             ]),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "separation-down",
+              attrs: {
+                src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg",
+              },
+            }),
             _vm._v(" "),
             _c("div", { staticClass: "flex-row-7" }, [
               _c("div", { staticClass: "flex-col-4" }, [
@@ -56112,181 +56172,9 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mt-4" }, [
-    _vm.loading == true
-      ? _c("div", { staticClass: "mt-4" }, [_vm._m(0)])
-      : _c(
-          "div",
-          _vm._l(_vm.expedientes, function (expediente) {
-            return _c("div", { key: expediente.id, staticClass: "test" }, [
-              _c("p", [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn btn-primary",
-                    staticStyle: { width: "1000px" },
-                    attrs: {
-                      "data-bs-toggle": "collapse",
-                      href: "#collapseExample",
-                      role: "button",
-                      "aria-expanded": "false",
-                      "aria-controls": "collapseExample",
-                    },
-                  },
-                  [
-                    _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col" }, [
-                        _vm._v(
-                          "\n                            Expediente: " +
-                            _vm._s(expediente.id) +
-                            "\n                        "
-                        ),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col" }, [
-                        _vm._v(
-                          "\n                            Operador: " +
-                            _vm._s(
-                              expediente.cartas_trucades[
-                                expediente.cartas_trucades.length - 1
-                              ].usuari.codi
-                            ) +
-                            "\n                        "
-                        ),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col" }, [
-                        _vm._v(
-                          "\n                            fecha: " +
-                            _vm._s(expediente.data_creacio) +
-                            "\n                        "
-                        ),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col" }, [
-                        _vm._v(
-                          "\n                            estado: " +
-                            _vm._s(expediente.estat_expedient.estat) +
-                            "\n                        "
-                        ),
-                      ]),
-                    ]),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse border m-4",
-                  attrs: { id: "collapseExample" },
-                },
-                _vm._l(expediente.cartas_trucades, function (carta) {
-                  return _c(
-                    "div",
-                    { key: carta.id, staticClass: "border m-4 p-4" },
-                    [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col" }, [
-                          _vm._v(
-                            "\n                            Codigo llamada: " +
-                              _vm._s(carta.id) +
-                              "\n                        "
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col" }, [
-                          _vm._v(
-                            "\n                            Provincia: " +
-                              _vm._s(carta.provincia.nom) +
-                              "\n                        "
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col" }, [
-                          _vm._v(
-                            "\n                            Municipio: " +
-                              _vm._s(carta.municipi.nom) +
-                              "\n                        "
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col" }, [
-                          _vm._v(
-                            "\n                            Incidente: " +
-                              _vm._s(carta.incident.descripcio) +
-                              "\n                        "
-                          ),
-                        ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-4" }, [
-                          _vm._v(
-                            '\n                            Nota común: "' +
-                              _vm._s(carta.nota_comuna) +
-                              '"\n                        '
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-2" }, [
-                          _vm._v(
-                            "\n                            Fuera de cataluña:\n                            "
-                          ),
-                          carta.fora_catalunya
-                            ? _c("div", [
-                                _vm._v(
-                                  "\n                                Si\n                            "
-                                ),
-                              ])
-                            : _c("div", [
-                                _vm._v(
-                                  "\n                                No\n                            "
-                                ),
-                              ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-3" }, [
-                          _vm._v(
-                            "\n                            Tiempo de la llamada: " +
-                              _vm._s(carta.temps_trucada) +
-                              "\n                        "
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-3" }, [
-                          _vm._v(
-                            "\n                            Direccion: " +
-                              _vm._s(carta.adreca_trucada) +
-                              "\n                        "
-                          ),
-                        ]),
-                      ]),
-                    ]
-                  )
-                }),
-                0
-              ),
-            ])
-          }),
-          0
-        ),
-  ])
+  return _c("div")
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center", attrs: { id: "loader" } }, [
-      _c("div", {
-        staticClass: "spinner-border text-danger",
-        staticStyle: { width: "9rem", height: "9rem" },
-        attrs: { role: "status" },
-      }),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

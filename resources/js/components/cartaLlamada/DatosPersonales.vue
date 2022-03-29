@@ -1,5 +1,12 @@
 <template>
-    <div> <!-- TODO:  -->
+    <!-- TODO: Amarillo = columna -->
+    <!-- FIXME: Rosa = seccion
+    Población: referencias.
+    Calle: tipo de via, nombre de la via, numero del portal, escalera, piso, puerta, referencias.
+    Carretera: nombre de la via, punto kilometrico, sentido de la circulación, referencias.
+    Punto Singular: nombre del punto singular, referencias.
+    Fuera de Catalunya: provincia, referencias. -->
+    <div> <!-- TODO: First column -->
         <input type="hidden" id="anPageName" name="page" value="carta-de-llamada-default" />
         <div class="container-center-horizontal">
             <div class="carta-de-llamada-default screen">
@@ -138,55 +145,42 @@
                                     </div>
                                     <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
                                         <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                            <li class="mdc-list-item" data-value="Fuera de Catalunya" role="option">
-                                                <span class="mdc-list-item__ripple"></span>
-                                                <span class="mdc-list-item__text">
-                                                    Fuera de Catalunya
-                                                </span>
-                                            </li>
-                                            <li class="mdc-list-item" data-value="Población" role="option">
+                                            <li class="mdc-list-item" data-value="Población" role="option"> <!-- FIXME: Población -->
                                                 <span class="mdc-list-item__ripple"></span>
                                                 <span class="mdc-list-item__text">
                                                     Población
                                                 </span>
                                             </li>
-                                            <li class="mdc-list-item" data-value="Carretera" role="option">
+                                            <li class="mdc-list-item" data-value="Carretera" role="option"> <!-- FIXME: Carretera -->
                                                 <span class="mdc-list-item__ripple"></span>
                                                 <span class="mdc-list-item__text">
                                                     Carretera
                                                 </span>
                                             </li>
-                                            <li class="mdc-list-item" data-value="Calle" role="option">
+                                            <li class="mdc-list-item" data-value="Calle" role="option"> <!-- FIXME: Calle -->
                                                 <span class="mdc-list-item__ripple"></span>
                                                 <span class="mdc-list-item__text">
                                                     Calle
                                                 </span>
                                             </li>
-                                            <li class="mdc-list-item" data-value="Punto Singular" role="option">
+                                            <li class="mdc-list-item" data-value="Punto Singular" role="option"> <!-- FIXME: Punto Singular -->
                                                 <span class="mdc-list-item__ripple"></span>
                                                 <span class="mdc-list-item__text">
                                                     Punto Singular
+                                                </span>
+                                            </li>
+                                            <li class="mdc-list-item" data-value="Fuera de Catalunya" role="option"> <!-- FIXME: Fuera de Catalunya -->
+                                                <span class="mdc-list-item__ripple"></span>
+                                                <span class="mdc-list-item__text">
+                                                    Fuera de Catalunya
                                                 </span>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <span hidden> <!-- TODO: POBLACIÓN: Solo sale la Referencia -->
-                                <div class="referencia">
+                            <span hidden> <!-- FIXME: POBLACIÓN -->
+                                <div class="referencia-poblacion">
                                     <label class="mdc-text-field mdc-text-field--filled">
                                         <span class="mdc-text-field__ripple"></span>
                                         <span class="mdc-floating-label" id="my-label-id">
@@ -197,14 +191,172 @@
                                     </label>
                                 </div>
                             </span>
-                            <span> <!-- TODO: CALLE: Sale el tipo de la via, el nombre de la via, el numero del portal, la escalera, el piso, la puerta y la referencia -->
-                                <span hidden>
-                                    <div class="tipo-de-via">
+                            <span hidden> <!-- FIXME: Fuera de Catalunya -->
+                                <div class="provincia-fuera">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">
+                                            Provincia
+                                        </span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                            </span>
+                            <span hidden> <!-- FIXME: Fuera de Catalunya -->
+                                <div class="referencia-fuera">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">
+                                            Referencia
+                                        </span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                            </span>
+                            <span hidden> <!-- FIXME: CALLE -->
+                                <div class="tipo-de-via">
+                                    <div class="mdc-select mdc-select--filled demo-width-class">
+                                        <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                            <span class="mdc-select__ripple"></span>
+                                            <span id="demo-label" class="mdc-floating-label">
+                                                Tipo de via
+                                            </span>
+                                            <span class="mdc-select__selected-text-container">
+                                                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                            </span>
+                                            <span class="mdc-select__dropdown-icon">
+                                                <span class="mdc-select__dropdown-icon-inactive material-icons">
+                                                    arrow_drop_down
+                                                </span>
+                                                <span class="mdc-select__dropdown-icon-active material-icons">
+                                                    arrow_drop_up
+                                                </span>
+                                            </span>
+                                            <span class="mdc-line-ripple"></span>
+                                        </div>
+                                        <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                            <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                                                <li class="mdc-list-item" data-value="#" role="option">
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">
+                                                        #
+                                                    </span>
+                                                </li>
+                                                <li class="mdc-list-item" data-value="#" role="option">
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">
+                                                        #
+                                                    </span>
+                                                </li>
+                                                <li class="mdc-list-item" data-value="#" role="option">
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">
+                                                        #
+                                                    </span>
+                                                </li>
+                                                <li class="mdc-list-item" data-value="#" role="option">
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">
+                                                        #
+                                                    </span>
+                                                </li>
+                                                <li class="mdc-list-item" data-value="#" role="option">
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                    <span class="mdc-list-item__text">
+                                                        #
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                            <span hidden> <!-- FIXME: CALLE -->
+                                <div class="nombre-via-calle">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">
+                                            Nombre de la via
+                                        </span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                            </span>
+                            <span hidden> <!-- FIXME: CARRETERA -->
+                                <div class="nombre-via-carretera">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">
+                                            Nombre de la via
+                                        </span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                            </span>
+                            <span hidden> <!-- FIXME: CARRETERA -->
+                                <div class="punto-kilometrico">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">
+                                            Punto kilometrico
+                                        </span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                            </span>
+                            <span hidden> <!-- FIXME: PUNTO SINGULAR -->
+                                <div class="nombre-punto-singular">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">
+                                            Nombre del punto singular
+                                        </span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                            </span>
+                            <span hidden> <!-- FIXME: PUNTO SINGULAR -->
+                                <div class="referencia-punto-singular">
+                                    <label class="mdc-text-field mdc-text-field--filled">
+                                        <span class="mdc-text-field__ripple"></span>
+                                        <span class="mdc-floating-label" id="my-label-id">
+                                            Referencia
+                                        </span>
+                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                        <span class="mdc-line-ripple"></span>
+                                    </label>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <span hidden> <!-- FIXME: CALLE COLUMN --> <!-- FIXME: CARRETERA COLUMN --> <!-- TODO: Third column -->
+                        <div class="flex-row-3">
+                            <div class="flex-col-4">
+                                <span hidden> <!-- FIXME: CALLE -->
+                                    <div class="numero-portal">
+                                        <label class="mdc-text-field mdc-text-field--filled">
+                                            <span class="mdc-text-field__ripple"></span>
+                                            <span class="mdc-floating-label" id="my-label-id">
+                                                Numero del portal
+                                            </span>
+                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                            <span class="mdc-line-ripple"></span>
+                                        </label>
+                                    </div>
+                                </span>
+                                <span hidden> <!-- FIXME: CARRETERA -->
+                                    <div class="sentido-circulacion">
                                         <div class="mdc-select mdc-select--filled demo-width-class">
                                             <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                                 <span class="mdc-select__ripple"></span>
                                                 <span id="demo-label" class="mdc-floating-label">
-                                                    Tipo de via
+                                                    Sentido de la circulación
                                                 </span>
                                                 <span class="mdc-select__selected-text-container">
                                                     <span id="demo-selected-text" class="mdc-select__selected-text"></span>
@@ -256,131 +408,7 @@
                                         </div>
                                     </div>
                                 </span>
-                                <span>
-                                    <div class="nombre-punto-singular">
-                                        <label class="mdc-text-field mdc-text-field--filled">
-                                            <span class="mdc-text-field__ripple"></span>
-                                            <span class="mdc-floating-label" id="my-label-id">
-                                                Nombre del punto singular
-                                            </span>
-                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                            <span class="mdc-line-ripple"></span>
-                                        </label>
-                                    </div>
-                                </span>
-                                <span hidden>
-                                    <div class="nombre-via">
-                                        <label class="mdc-text-field mdc-text-field--filled">
-                                            <span class="mdc-text-field__ripple"></span>
-                                            <span class="mdc-floating-label" id="my-label-id">
-                                                Nombre de la via
-                                            </span>
-                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                            <span class="mdc-line-ripple"></span>
-                                        </label>
-                                    </div>
-                                </span>
-                                <span hidden>
-                                    <div class="punto-kilometrico">
-                                        <label class="mdc-text-field mdc-text-field--filled">
-                                            <span class="mdc-text-field__ripple"></span>
-                                            <span class="mdc-floating-label" id="my-label-id">
-                                                Punto kilometrico
-                                            </span>
-                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                            <span class="mdc-line-ripple"></span>
-                                        </label>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div class="referencia">
-                                        <label class="mdc-text-field mdc-text-field--filled">
-                                            <span class="mdc-text-field__ripple"></span>
-                                            <span class="mdc-floating-label" id="my-label-id">
-                                                Referencia
-                                            </span>
-                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                            <span class="mdc-line-ripple"></span>
-                                        </label>
-                                    </div>
-                                </span>
-                            </span>
-                        </div>
-                    </div>
-                    <span>
-                        <div class="flex-row-3"><!-- FIXME: -->
-                            <div class="flex-col-4">
-                                <span hidden>
-                                    <div class="numero-portal">
-                                        <label class="mdc-text-field mdc-text-field--filled">
-                                            <span class="mdc-text-field__ripple"></span>
-                                            <span class="mdc-floating-label" id="my-label-id">
-                                                Numero del portal
-                                            </span>
-                                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                            <span class="mdc-line-ripple"></span>
-                                        </label>
-                                    </div>
-                                </span>
-                                <span>
-                                <div class="sentido-circulacion">
-                                    <div class="mdc-select mdc-select--filled demo-width-class">
-                                        <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
-                                            <span class="mdc-select__ripple"></span>
-                                            <span id="demo-label" class="mdc-floating-label">
-                                                Sentido de la circulación
-                                            </span>
-                                            <span class="mdc-select__selected-text-container">
-                                                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
-                                            </span>
-                                            <span class="mdc-select__dropdown-icon">
-                                                <span class="mdc-select__dropdown-icon-inactive material-icons">
-                                                    arrow_drop_down
-                                                </span>
-                                                <span class="mdc-select__dropdown-icon-active material-icons">
-                                                    arrow_drop_up
-                                                </span>
-                                            </span>
-                                            <span class="mdc-line-ripple"></span>
-                                        </div>
-                                        <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                                            <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                                <li class="mdc-list-item" data-value="#" role="option">
-                                                    <span class="mdc-list-item__ripple"></span>
-                                                    <span class="mdc-list-item__text">
-                                                        #
-                                                    </span>
-                                                </li>
-                                                <li class="mdc-list-item" data-value="#" role="option">
-                                                    <span class="mdc-list-item__ripple"></span>
-                                                    <span class="mdc-list-item__text">
-                                                        #
-                                                    </span>
-                                                </li>
-                                                <li class="mdc-list-item" data-value="#" role="option">
-                                                    <span class="mdc-list-item__ripple"></span>
-                                                    <span class="mdc-list-item__text">
-                                                        #
-                                                    </span>
-                                                </li>
-                                                <li class="mdc-list-item" data-value="#" role="option">
-                                                    <span class="mdc-list-item__ripple"></span>
-                                                    <span class="mdc-list-item__text">
-                                                        #
-                                                    </span>
-                                                </li>
-                                                <li class="mdc-list-item" data-value="#" role="option">
-                                                    <span class="mdc-list-item__ripple"></span>
-                                                    <span class="mdc-list-item__text">
-                                                        #
-                                                    </span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                </span>
-                                <span>
+                                <span hidden> <!-- FIXME: CALLE -->
                                     <div class="escalera">
                                         <label class="mdc-text-field mdc-text-field--filled">
                                             <span class="mdc-text-field__ripple"></span>
@@ -392,8 +420,8 @@
                                         </label>
                                     </div>
                                 </span>
-                                <span hidden>
-                                    <div class="referencia">
+                                <span hidden> <!-- FIXME: CARRETERA -->
+                                    <div class="referencia-carretera">
                                         <label class="mdc-text-field mdc-text-field--filled">
                                             <span class="mdc-text-field__ripple"></span>
                                             <span class="mdc-floating-label" id="my-label-id">
@@ -404,36 +432,12 @@
                                         </label>
                                     </div>
                                 </span>
-                                <div class="piso">
-                                    <label class="mdc-text-field mdc-text-field--filled">
-                                        <span class="mdc-text-field__ripple"></span>
-                                        <span class="mdc-floating-label" id="my-label-id">
-                                            Piso
-                                        </span>
-                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                        <span class="mdc-line-ripple"></span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div> <!-- FIXME: -->
-                        <div class="flex-row-4">
-                            <div class="flex-col-5">
-                                <div class="puerta">
-                                    <label class="mdc-text-field mdc-text-field--filled">
-                                        <span class="mdc-text-field__ripple"></span>
-                                        <span class="mdc-floating-label" id="my-label-id">
-                                            Puerta
-                                        </span>
-                                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                        <span class="mdc-line-ripple"></span>
-                                    </label>
-                                </div>
-                                <span>
-                                    <div class="referencia">
+                                <span hidden> <!-- FIXME: CALLE -->
+                                    <div class="piso">
                                         <label class="mdc-text-field mdc-text-field--filled">
                                             <span class="mdc-text-field__ripple"></span>
                                             <span class="mdc-floating-label" id="my-label-id">
-                                                Referencia
+                                                Piso
                                             </span>
                                             <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
                                             <span class="mdc-line-ripple"></span>
@@ -441,57 +445,40 @@
                                     </div>
                                 </span>
                             </div>
-                            <img class="separation-down" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg"/>
                         </div>
+                        <span hidden> <!-- FIXME: CALLE COLUMN --> <!-- TODO: Forth column -->
+                            <div class="flex-row-4">
+                                <div class="flex-col-5">
+                                    <span hidden> <!-- FIXME: CALLE -->
+                                        <div class="puerta">
+                                            <label class="mdc-text-field mdc-text-field--filled">
+                                                <span class="mdc-text-field__ripple"></span>
+                                                <span class="mdc-floating-label" id="my-label-id">
+                                                    Puerta
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                                <span class="mdc-line-ripple"></span>
+                                            </label>
+                                        </div>
+                                    </span>
+                                    <span hidden> <!-- FIXME: CALLE -->
+                                        <div class="referencia-calle">
+                                            <label class="mdc-text-field mdc-text-field--filled">
+                                                <span class="mdc-text-field__ripple"></span>
+                                                <span class="mdc-floating-label" id="my-label-id">
+                                                    Referencia
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                                <span class="mdc-line-ripple"></span>
+                                            </label>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </span>
                     </span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <!-- TODO: Third Column -->
+                    <!-- TODO: Last Column -->
+                    <img class="separation-down" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg"/>
                     <div class="flex-row-7">
                         <div class="flex-col-4">
                             <div class="incidente">
@@ -634,7 +621,22 @@ export default {
         new mdc.select.MDCSelect(document.querySelector(".provincia .mdc-select"));
         new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
         new mdc.select.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
-        new mdc.textField.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
+        new mdc.textField.MDCTextField(document.querySelector(".provincia-fuera .mdc-text-field")); //Fuera de Catalunya
+        new mdc.textField.MDCTextField(document.querySelector(".referencia-poblacion .mdc-text-field")); //POBLACION
+        new mdc.textField.MDCTextField(document.querySelector(".referencia-fuera .mdc-text-field")); //Fuera de Catalunya
+        new mdc.select.MDCSelect(document.querySelector(".tipo-de-via .mdc-select")); //CALLE
+        new mdc.textField.MDCTextField(document.querySelector(".nombre-via-calle .mdc-text-field")); //CALLE
+        new mdc.textField.MDCTextField(document.querySelector(".numero-portal .mdc-text-field")); //CALLE
+        new mdc.textField.MDCTextField(document.querySelector(".escalera .mdc-text-field")); //CALLE
+        new mdc.textField.MDCTextField(document.querySelector(".piso .mdc-text-field")); //CALLE
+        new mdc.textField.MDCTextField(document.querySelector(".puerta .mdc-text-field")); //CALLE
+        new mdc.textField.MDCTextField(document.querySelector(".referencia-calle .mdc-text-field"));//CALLE
+        new mdc.textField.MDCTextField(document.querySelector(".nombre-via-carretera .mdc-text-field")); //CARRETERA
+        new mdc.textField.MDCTextField(document.querySelector(".punto-kilometrico .mdc-text-field")); //CARRETERA
+        new mdc.select.MDCSelect(document.querySelector(".sentido-circulacion .mdc-select")); //CARRETERA
+        new mdc.textField.MDCTextField(document.querySelector(".referencia-carretera .mdc-text-field")); //CARRETERA
+        new mdc.textField.MDCTextField(document.querySelector(".nombre-punto-singular .mdc-text-field")); //Punto Singular
+        new mdc.textField.MDCTextField(document.querySelector(".referencia-punto-singular .mdc-text-field")); //Punto Singular
         new mdc.select.MDCSelect(document.querySelector(".incidente .mdc-select"));
         new mdc.select.MDCSelect(document.querySelector(".tipo-de-incidente .mdc-select"));
         mdc.autoInit();
@@ -714,12 +716,16 @@ export default {
         margin-top: 24px;
     }
 
-    .nombre-via{
+    .nombre-via-calle{
         margin-top: 30px;
     }
 
+    .nombre-via-carretera{
+        margin-top: 25px;
+    }
+
     .punto-kilometrico{
-        margin-top: 30px;
+        margin-top: 29px;
     }
 
     .nombre-punto-singular{
@@ -756,6 +762,12 @@ export default {
     }
 
     .provincia {
+    height: 60px;
+    margin-top: 25px;
+    width: 263px;
+    }
+
+    .provincia-fuera {
     height: 60px;
     margin-top: 25px;
     width: 263px;
@@ -825,15 +837,55 @@ export default {
     width: 263px;
     }
 
-    .referencia {
+    .referencia-poblacion{
+    margin-top: 25px;
+    width: 263px;
+    }
+
+    .referencia-poblacion .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .referencia-fuera{
+    margin-top: 25px;
+    width: 263px;
+    }
+
+    .referencia-fuera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .referencia-calle{
+    margin-top: 28px;
+    width: 263px;
+    }
+
+    .referencia-calle .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .referencia-carretera{
+    margin-top: 28px;
+    width: 263px;
+    }
+
+    .referencia-carretera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .referencia-punto-singular{
     margin-top: 30px;
     width: 263px;
     }
 
+    .referencia-punto-singular .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
     .separation-down {
     height: 183px;
-    margin-left: 313px;
-    margin-top: -203px;
+    margin-left: 50px;
+    margin-top: 153px;
     width: 1px;
     }
 
@@ -848,10 +900,6 @@ export default {
     }
 
     .tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
-    color: var(--mdc-theme-primary);
-    }
-
-    .referencia .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
@@ -890,7 +938,7 @@ export default {
     align-self: flex-start;
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-top: 127px;
     width: 263px;
     height: 56px;
