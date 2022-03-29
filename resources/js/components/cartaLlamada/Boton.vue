@@ -15,15 +15,15 @@ export default {
     data() {
         return {
             idDatosPersonales: [],
+            pruebaCarta: [],
             cartaLlamada: {
-                codi_trucada: "244",
+                codi_trucada: 32135,
                 data_hora: "",
                 temps_trucada: 3,
-                dades_personals_id: "1",
+                dades_personals_id: 1,
                 telefon: " ",
                 procedencia_trucada: " ",
                 origen_trucada: " ",
-                nom_trucada: "null",
                 municipis_id_trucada: " ",
                 adreca_trucada: " ",
                 fora_catalunya: " ",
@@ -32,11 +32,11 @@ export default {
                 tipus_localitzacions_id: " ",
                 descripcio_localitzacio: " ",
                 detall_localitzacio: " ",
-                altres_ref_localitzacio: "",
+                // altres_ref_localitzacio: "",
                 incidents_id: " ",
                 nota_comuna: " ",
-                expedients_id: "1",
-                usuaris_id: "1",
+                expedients_id: 1,
+                usuaris_id: 1,
             },
         };
     },
@@ -49,6 +49,17 @@ export default {
                 .then((response) => {
                     console.log("Datos Personales");
                     me.idDatosPersonales = response.data;
+                })
+                .catch((error) => {
+                    this.console.log("Error:");
+                    console.log(error);
+                })
+                .finally(() => (this.loading = false));
+            axios
+                .get("/llamadas")
+                .then((response) => {
+                    console.log("Datos Personales");
+                    me.pruebaCarta = response.data;
                 })
                 .catch((error) => {
                     this.console.log("Error:");
@@ -81,11 +92,20 @@ export default {
             this.contador = contador;
         },
         dataHora() {
-            var hoy = new Date();
-            var fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
-            var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
-            var fechaYHora = fecha + ' ' + hora;
+            let hoy = new Date();
+            let fecha = hoy.getFullYear() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getDate();
+            let hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+            let fechaYHora = fecha + ' ' + hora;
+            console.log('string:'+fechaYHora);
             this.cartaLlamada.data_hora = fechaYHora;
+            console.log('objeto:'+this.cartaLlamada.data_hora);
+            let codi_trucada = 0;
+            for (let index = 0; index < this.pruebaCarta.length; index++) {
+                if (this.pruebaCarta[index].codi_trucada > codi_trucada) {
+                    codi_trucada = this.pruebaCarta[index].codi_trucada;
+                }
+            }
+            this.cartaLlamada.codi_trucada = codi_trucada+1;
             setTimeout(this.insertBD,2000);
         },
         insertBD(){
@@ -120,6 +140,10 @@ export default {
             if (varianle != -1) {
                 this.cartaLlamada.dades_personals_id = varianle;
             }
+        },
+
+        empezarContador: function () {
+            tiempo();
         },
     },
     mounted() {

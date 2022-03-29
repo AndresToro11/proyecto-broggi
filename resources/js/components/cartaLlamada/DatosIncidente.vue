@@ -30,7 +30,7 @@
             </option>
         </select>
 
-        <span v-if="datos_incidente.localizacion == '1'">
+        <span v-if="datos_incidente.localizacion == 1">
             <label for="via">Via</label>
             <input type="text" name="via" id="via" v-model="calle.via" @blur="descripcioLocalitzacio()">
             <label for="direccion">Direccion</label>
@@ -44,11 +44,11 @@
             <label for="puerta">Puerta</label>
             <input type="number" name="puerta" id="puerta" v-model="calle2.puerta" @blur="detallLocalitzacio()">
         </span>
-        <span v-else-if="datos_incidente.localizacion === '2'">
+        <span v-else-if="datos_incidente.localizacion == 2">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" v-model="puntoSingular.nombre" @blur="descripcioLocalitzacio()">
         </span>
-        <span v-else-if="datos_incidente.localizacion === '4 '">
+        <span v-else-if="datos_incidente.localizacion == 4">
             <label for="carretera">Carretera</label>
             <input type="text" name="carretera" id="carretera" v-model="carretera.carretera" @blur="descripcioLocalitzacio()">
             <label for="puntoKM">Punto kilometrico</label>
@@ -56,7 +56,7 @@
             <label for="sentido">Sentido</label>
             <input type="text" name="sentido" id="sentido" v-model="carretera2.sentido" @blur="detallLocalitzacio()">
         </span>
-        <span v-else-if="datos_incidente.localizacion === '5'">
+        <span v-else-if="datos_incidente.localizacion == 5">
             <label for="provincia">Provincia</label>
             <input type="text" id="provinciaOut" v-model="fueraCatalunya.provincia" @blur="descripcioLocalitzacio()">
         </span>
@@ -118,7 +118,7 @@ export default {
                 localizacion: "",
                 descripcio_localitzacio: null,
                 detall_localitzacio: null,
-                altres_ref_localitzacio: null,
+                // altres_ref_localitzacio: null,
                 tiposIncidente: "",
                 incidente: ""
             }

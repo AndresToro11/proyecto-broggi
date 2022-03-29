@@ -5380,15 +5380,15 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       idDatosPersonales: [],
+      pruebaCarta: [],
       cartaLlamada: {
-        codi_trucada: "244",
+        codi_trucada: 32135,
         data_hora: "",
         temps_trucada: 3,
-        dades_personals_id: "1",
+        dades_personals_id: 1,
         telefon: " ",
         procedencia_trucada: " ",
         origen_trucada: " ",
-        nom_trucada: "null",
         municipis_id_trucada: " ",
         adreca_trucada: " ",
         fora_catalunya: " ",
@@ -5397,11 +5397,11 @@ __webpack_require__.r(__webpack_exports__);
         tipus_localitzacions_id: " ",
         descripcio_localitzacio: " ",
         detall_localitzacio: " ",
-        altres_ref_localitzacio: "",
+        // altres_ref_localitzacio: "",
         incidents_id: " ",
         nota_comuna: " ",
-        expedients_id: "1",
-        usuaris_id: "1"
+        expedients_id: 1,
+        usuaris_id: 1
       }
     };
   },
@@ -5414,6 +5414,16 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("/datosPersonales").then(function (response) {
         console.log("Datos Personales");
         me.idDatosPersonales = response.data;
+      })["catch"](function (error) {
+        _this.console.log("Error:");
+
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+      axios.get("/llamadas").then(function (response) {
+        console.log("Datos Personales");
+        me.pruebaCarta = response.data;
       })["catch"](function (error) {
         _this.console.log("Error:");
 
@@ -5439,10 +5449,21 @@ __webpack_require__.r(__webpack_exports__);
     },
     dataHora: function dataHora() {
       var hoy = new Date();
-      var fecha = hoy.getDate() + '-' + (hoy.getMonth() + 1) + '-' + hoy.getFullYear();
+      var fecha = hoy.getFullYear() + '-' + (hoy.getMonth() + 1) + '-' + hoy.getDate();
       var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
       var fechaYHora = fecha + ' ' + hora;
+      console.log('string:' + fechaYHora);
       this.cartaLlamada.data_hora = fechaYHora;
+      console.log('objeto:' + this.cartaLlamada.data_hora);
+      var codi_trucada = 0;
+
+      for (var index = 0; index < this.pruebaCarta.length; index++) {
+        if (this.pruebaCarta[index].codi_trucada > codi_trucada) {
+          codi_trucada = this.pruebaCarta[index].codi_trucada;
+        }
+      }
+
+      this.cartaLlamada.codi_trucada = codi_trucada + 1;
       setTimeout(this.insertBD, 2000);
     },
     insertBD: function insertBD() {
@@ -5468,6 +5489,9 @@ __webpack_require__.r(__webpack_exports__);
       if (varianle != -1) {
         this.cartaLlamada.dades_personals_id = varianle;
       }
+    },
+    empezarContador: function empezarContador() {
+      tiempo();
     }
   },
   mounted: function mounted() {
@@ -5499,13 +5523,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      contador: " "
+      crono: 4
     };
   },
-  setDataAdministrativos: function setDataAdministrativos() {
-    console.log('Admin');
-    this.$emit("getDataAdministrativos", this.contador);
-  }
+  methods: {
+    setDataAdministrativos: function setDataAdministrativos() {
+      console.log('Admin');
+      this.$emit("getDataAdministrativos", this.crono);
+    },
+    tiempo: function tiempo() {
+      console.log("cronoooooooooooooooooooooooooooooooooooooo");
+      setInterval(function () {
+        this.crono = this.crono + 1;
+      }, 1000);
+    }
+  },
+  computed: {}
 });
 
 /***/ }),
@@ -5640,7 +5673,7 @@ __webpack_require__.r(__webpack_exports__);
         localizacion: "",
         descripcio_localitzacio: null,
         detall_localitzacio: null,
-        altres_ref_localitzacio: null,
+        // altres_ref_localitzacio: null,
         tiposIncidente: "",
         incidente: ""
       }
@@ -43030,20 +43063,13 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("h3", [_vm._v("Datos Administrativos")]),
+    _vm._v(" "),
+    _c("p", [_vm._v("Contador:" + _vm._s(_vm.crono) + " ")]),
+  ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("h3", [_vm._v("Datos Administrativos")]),
-      _vm._v(" "),
-      _c("p", [_vm._v("Contador: 00:00")]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -43284,7 +43310,7 @@ var render = function () {
       2
     ),
     _vm._v(" "),
-    _vm.datos_incidente.localizacion == "1"
+    _vm.datos_incidente.localizacion == 1
       ? _c("span", [
           _c("label", { attrs: { for: "via" } }, [_vm._v("Via")]),
           _vm._v(" "),
@@ -43442,7 +43468,7 @@ var render = function () {
             },
           }),
         ])
-      : _vm.datos_incidente.localizacion === "2"
+      : _vm.datos_incidente.localizacion == 2
       ? _c("span", [
           _c("label", { attrs: { for: "nombre" } }, [_vm._v("Nombre")]),
           _vm._v(" "),
@@ -43470,7 +43496,7 @@ var render = function () {
             },
           }),
         ])
-      : _vm.datos_incidente.localizacion === "4 "
+      : _vm.datos_incidente.localizacion == 4
       ? _c("span", [
           _c("label", { attrs: { for: "carretera" } }, [_vm._v("Carretera")]),
           _vm._v(" "),
@@ -43552,7 +43578,7 @@ var render = function () {
             },
           }),
         ])
-      : _vm.datos_incidente.localizacion === "5"
+      : _vm.datos_incidente.localizacion == 5
       ? _c("span", [
           _c("label", { attrs: { for: "provincia" } }, [_vm._v("Provincia")]),
           _vm._v(" "),

@@ -62,22 +62,23 @@ CREATE TABLE `cartes_trucades` (
   `codi_trucada` varchar(45) NOT NULL,
   `data_hora` datetime DEFAULT NULL,
   `temps_trucada` int(11) DEFAULT NULL,
-  `dades_personals_id` int(11) NOT NULL,
+  `dades_personals_id` int(11),
   `telefon` varchar(45) DEFAULT NULL,
   `procedencia_trucada` varchar(45) DEFAULT NULL,
   `origen_trucada` varchar(45) DEFAULT NULL,
   `nom_trucada` varchar(45) DEFAULT NULL,
   `municipis_id_trucada` int(11) NOT NULL,
   `adreca_trucada` varchar(45) DEFAULT NULL,
-  `fora_catalunya` tinyint(4) NOT NULL,
+  `fora_catalunya` boolean NOT NULL, 
+	/*Cambiado fora catalunya tinyint por boolean*/
   `provincies_id` int(11) DEFAULT NULL,
   `municipis_id` int(11) DEFAULT NULL,
   `tipus_localitzacions_id` int(11) NOT NULL,
-  `descripcio_localitzacio` varchar(45) DEFAULT NULL,
-  `detall_localitzacio` varchar(45) DEFAULT NULL,
+  `descripcio_localitzacio` varchar(70) DEFAULT NULL,
+  `detall_localitzacio` varchar(70) DEFAULT NULL,
   `altres_ref_localitzacio` varchar(45) DEFAULT NULL,
   `incidents_id` int(11) NOT NULL,
-  `nota_comuna` varchar(45) NOT NULL,
+  `nota_comuna` varchar(55) NOT NULL,
   `expedients_id` int(11) NOT NULL,
   `usuaris_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
@@ -186,7 +187,7 @@ CREATE TABLE `dades_personals` (
 --
 -- Dumping data for table `dades_personals`
 --
-
+insert into dades_personals values (null,'642539655','Prueba 12 2 2','Esto es de prueba');
 LOCK TABLES `dades_personals` WRITE;
 /*!40000 ALTER TABLE `dades_personals` DISABLE KEYS */;
 /*!40000 ALTER TABLE `dades_personals` ENABLE KEYS */;
@@ -436,6 +437,7 @@ DROP TABLE IF EXISTS `usuaris`;
 CREATE TABLE `usuaris` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `codi` varchar(45) NOT NULL,
+  `mail` varchar(50) NOT NULL,
   `contrassenya` varchar(256) NOT NULL,
   `nom` varchar(45) NOT NULL,
   `cognoms` varchar(45) NOT NULL,
@@ -450,6 +452,7 @@ CREATE TABLE `usuaris` (
 --
 -- Dumping data for table `usuaris`
 --
+INSERT INTO usuaris VALUES (null,'00000','alexPro@gmail.com','123321','Alex','Cubells',2);
 
 LOCK TABLES `usuaris` WRITE;
 /*!40000 ALTER TABLE `usuaris` DISABLE KEYS */;

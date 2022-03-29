@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>Datos Administrativos</h3>
-        <p>Contador: 00:00</p>
+        <p>Contador:{{ crono }} </p>
     </div>
 </template>
 
@@ -9,13 +9,24 @@
 export default {
     data() {
         return {
-            contador: " ",
+            crono:4,
         };
 
     },
-    setDataAdministrativos(){
+    methods: {
+        setDataAdministrativos(){
             console.log('Admin');
-            this.$emit("getDataAdministrativos", this.contador);
+            this.$emit("getDataAdministrativos", this.crono);
         },
+        tiempo(){
+            console.log("cronoooooooooooooooooooooooooooooooooooooo");
+            setInterval(function() {this.crono=this.crono+1}, 1000);
+        },
+
+    },
+    computed:{
+
+    },
+
 };
 </script>

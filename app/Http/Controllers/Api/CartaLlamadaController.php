@@ -32,10 +32,9 @@ class CartaLlamadaController extends Controller
     {
         $carta_trucada = new Carta_trucada();
 
-        $carta_trucada->codi_trucada = $request->codi_trucada;
+        $carta_trucada->codi_trucada= $request->codi_trucada;
         $carta_trucada->data_hora = $request->data_hora;
         $carta_trucada->adreca_trucada = $request->adreca_trucada;
-        $carta_trucada->altres_ref_localitzacio = $request->altres_ref_localitzacio;
         $carta_trucada->dades_personals_id = $request->dades_personals_id;
         $carta_trucada->descripcio_localitzacio = $request->descripcio_localitzacio;
         $carta_trucada->detall_localitzacio = $request->detall_localitzacio;
@@ -44,7 +43,6 @@ class CartaLlamadaController extends Controller
         $carta_trucada->incidents_id = $request->incidents_id;
         $carta_trucada->municipis_id = $request->municipis_id;
         $carta_trucada->municipis_id_trucada = $request->municipis_id_trucada;
-        $carta_trucada->nom_trucada = $request->nom_trucada;
         $carta_trucada->nota_comuna = $request->nota_comuna;
         $carta_trucada->origen_trucada = $request->origen_trucada;
         $carta_trucada->procedencia_trucada = $request->procedencia_trucada;
