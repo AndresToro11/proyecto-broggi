@@ -16,44 +16,44 @@ class AdminController extends Controller
     public function usuarios()
     {
         $result = Usuari::with('perfil')
-                        ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->select(['id','codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
                         ->where('activo', 1)
                         ->orderBy('perfils_id')
                         ->get();
 
-        return UsuariosResource::collection($result);               
+        return RolesResource::collection($result);
     }
 
     public function operadores()
     {
         $result = Usuari::with('perfil')
-                        ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->select(['id', 'codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
                         ->where('activo', 1)
-                        ->where(['perfils_id', 1])
+                        ->where('perfils_id', 1)
                         ->get();
 
-        return RolesResource::collection($result);               
+        return RolesResource::collection($result);
     }
 
     public function supervisores()
     {
         $result = Usuari::with('perfil')
-                        ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->select(['id', 'codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
                         ->where('activo', 1)
                         ->where('perfils_id', 2)
                         ->get();
 
-        return RolesResource::collection($result);               
+        return RolesResource::collection($result);
     }
 
     public function inactivos()
     {
         $result = Usuari::with('perfil')
-                        ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->select(['id', 'codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
                         ->where('activo', 0)
                         ->get();
 
-        return RolesResource::collection($result);               
+        return RolesResource::collection($result);
     }
 
     public function roles()
@@ -62,7 +62,7 @@ class AdminController extends Controller
                         ->where('id','!=', 3)
                         ->get();
 
-        return UsuariosResource::collection($result);               
+        return UsuariosResource::collection($result);
     }
 
     public function insertUsuario(Request $request)
@@ -78,7 +78,7 @@ class AdminController extends Controller
         $usuario->activo = 1;
 
         try{
-            $usuario->save(); 
+            $usuario->save();
             $response = response()->json(['message' => 'Tot correcte'], 201);
          }
          catch(QueryException $e){

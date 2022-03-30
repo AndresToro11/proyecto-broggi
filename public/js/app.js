@@ -5364,289 +5364,292 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
-/*var modal = document.getElementById('editarModal');
-modal.addEventListener('show.bs.modal', function (event){
-    let info = event.relatedTarget;
-    let nombre = info.getAttribute('data-bs-nombre');
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-    let inputNombre = modal.querySelector('.inputNombre');
-    inputNombre.innerHTML = nombre;
-});*/
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       data: [],
       loading: false,
       seccion: 'todos',
+      buscar: '',
+      actual: [],
       usuario: {
         id: '',
         nombre: '',
@@ -5673,6 +5676,7 @@ modal.addEventListener('show.bs.modal', function (event){
       var me = this;
       axios.get('/admin/usuarios').then(function (response) {
         me.data = response.data;
+        _this.actual = _this.data;
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
@@ -5691,6 +5695,7 @@ modal.addEventListener('show.bs.modal', function (event){
       var me = this;
       axios.get('/admin/operadores').then(function (response) {
         me.data = response.data;
+        _this2.actual = _this2.data;
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
@@ -5709,6 +5714,7 @@ modal.addEventListener('show.bs.modal', function (event){
       var me = this;
       axios.get('/admin/supervisores').then(function (response) {
         me.data = response.data;
+        _this3.actual = _this3.data;
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
@@ -5727,6 +5733,7 @@ modal.addEventListener('show.bs.modal', function (event){
       var me = this;
       axios.get('/admin/inactivos').then(function (response) {
         me.data = response.data;
+        _this4.actual = _this4.data;
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
@@ -5734,19 +5741,66 @@ modal.addEventListener('show.bs.modal', function (event){
       });
     },
     deleteUsuario: function deleteUsuario(usuario) {
-      this.loading = true;
+      var _this5 = this;
+
       var me = this;
-      axios.put('admin/deleteUsuario/' + usuario);
+      axios.put('admin/deleteUsuario/' + usuario).then(function (response) {
+        if (me.seccion == 'todos') {
+          _this5.selectTodos();
+        } else if (me.seccion == 'operadores') {
+          _this5.selectOperadores();
+        } else if (me.seccion == 'supervisores') {
+          _this5.selectSupervisores();
+        } else if (me.seccion == 'inactivos') {
+          _this5.selectInactivos();
+        }
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"]();
+    },
+    activarUsuario: function activarUsuario(usuario) {
+      var _this6 = this;
 
-      if (me.seccion == 'todos') {
-        this.selectTodos();
-      } else if (me.seccion == 'operadores') {
-        this.selectOperadores();
-      } else if (me.seccion == 'supervisores') {
-        this.selectSupervisores();
+      var me = this;
+      axios.put('admin/activarUsuario/' + usuario).then(function (response) {
+        if (me.seccion == 'todos') {
+          _this6.selectTodos();
+        } else if (me.seccion == 'operadores') {
+          _this6.selectOperadores();
+        } else if (me.seccion == 'supervisores') {
+          _this6.selectSupervisores();
+        } else if (me.seccion == 'inactivos') {
+          _this6.selectInactivos();
+        }
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"]();
+    },
+    buscarUsuario: function buscarUsuario() {
+      var response = [];
+
+      if (this.buscar != '') {
+        var _iterator = _createForOfIteratorHelper(this.data),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var user = _step.value;
+
+            if (user.nombre.toLowerCase().indexOf(this.buscar.toLowerCase()) >= 0 || user.apellidos.toLowerCase().indexOf(this.buscar.toLowerCase()) >= 0) {
+              response.push(user);
+            }
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+
+        this.data = response;
+      } else {
+        this.data = this.actual;
       }
-
-      this.loading = false;
     }
   },
   mounted: function mounted() {
@@ -45105,6 +45159,32 @@ var render = function () {
               [_vm._v("Inactivos")]
             ),
           ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "nav-item" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.buscar,
+                  expression: "buscar",
+                },
+              ],
+              attrs: { type: "text", name: "", id: "", placeholder: "Buscar" },
+              domProps: { value: _vm.buscar },
+              on: {
+                input: [
+                  function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.buscar = $event.target.value
+                  },
+                  _vm.buscarUsuario,
+                ],
+              },
+            }),
+          ]),
         ]),
       ]),
       _vm._v(" "),
@@ -45126,15 +45206,15 @@ var render = function () {
                             ]),
                             _vm._v(" "),
                             _c("td", { staticClass: "text-center" }, [
-                              _vm._v(_vm._s(user.nom)),
+                              _vm._v(_vm._s(user.nombre)),
                             ]),
                             _vm._v(" "),
                             _c("td", { staticClass: "text-center" }, [
-                              _vm._v(_vm._s(user.cognoms)),
+                              _vm._v(_vm._s(user.apellidos)),
                             ]),
                             _vm._v(" "),
                             _c("td", { staticClass: "text-center" }, [
-                              _vm._v(_vm._s(user.perfil.nom)),
+                              _vm._v(_vm._s(user.rol)),
                             ]),
                             _vm._v(" "),
                             _c("td", { staticClass: "text-center" }, [
@@ -45145,10 +45225,9 @@ var render = function () {
                               _vm._m(2, true),
                               _vm._v(" "),
                               _c(
-                                "a",
+                                "button",
                                 {
                                   staticClass: "btn btn-danger",
-                                  attrs: { type: "button" },
                                   on: {
                                     click: function ($event) {
                                       return _vm.deleteUsuario(user.id)
@@ -45321,15 +45400,15 @@ var render = function () {
                               _c(
                                 "a",
                                 {
-                                  staticClass: "btn btn-danger",
+                                  staticClass: "btn btn-success",
                                   attrs: { type: "button" },
                                   on: {
                                     click: function ($event) {
-                                      return _vm.deleteUsuario(user.id)
+                                      return _vm.activarUsuario(user.id)
                                     },
                                   },
                                 },
-                                [_c("i", { staticClass: "fal fa-trash-alt" })]
+                                [_c("i", { staticClass: "fas fa-folder-plus" })]
                               ),
                             ]),
                           ])

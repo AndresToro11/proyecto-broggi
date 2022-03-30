@@ -62,10 +62,10 @@
                         </button>
                     </div>
                 </div>
-                    
+
             </div>
         </div>
-            
+
     </div>
 </template>
 
@@ -97,6 +97,14 @@
 
                 axios
                     .post('/admin/insertUsuario', me.usuario)
+                    .then(response => {
+                        window.location.href = "http://localhost/proyecto-broggi/public/admin";
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+                    .finally();
+
             },
 
             verificarContrasena(){
@@ -104,13 +112,13 @@
                     if(this.usuario.contrasena != this.contrasenaC){
                     console.log("Son diferentes las contraseñas");
                     }
-                    
+
                     else{
                     console.log('Contraseña correcta')
                     }
                 }
             },
-            
+
 
         },
         mounted() {

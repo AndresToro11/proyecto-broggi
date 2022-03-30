@@ -16,6 +16,9 @@
                     <li class="nav-item">
                         <a @click="selectInactivos()" id="inactivos" class="nav-link text-dark" href="#">Inactivos</a>
                     </li>
+                    <li class="nav-item">
+                        <input @input="buscarUsuario" v-model="buscar" type="text" name="" id="" placeholder="Buscar">
+                    </li>
                 </ul>
             </div>
 
@@ -46,16 +49,16 @@
                         <tbody>
                             <tr v-for="user in data" :key="user.id">
                                 <td class="text-center">{{ user.codi }}</td>
-                                <td class="text-center">{{ user.nom }}</td>
-                                <td class="text-center">{{ user.cognoms }}</td>
-                                <td class="text-center">{{ user.perfil.nom }}</td>
+                                <td class="text-center">{{ user.nombre }}</td>
+                                <td class="text-center">{{ user.apellidos }}</td>
+                                <td class="text-center">{{ user.rol }}</td>
                                 <td class="text-center">{{ user.mail }}</td>
                                 <td class="text-center">
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal"
                                         data-bs-nombre="user.nom">
                                             <i class="fal fa-edit"></i>
                                         </button>
-                                    <a @click="deleteUsuario(user.id)" type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
+                                    <button @click="deleteUsuario(user.id)" class="btn btn-danger"><i class="fal fa-trash-alt"></i></button>
                                 </td>
                             </tr>
                         </tbody>
@@ -156,6 +159,7 @@
                 </div>
             </div>
 
+            <!-- Inactivos -->
             <div v-else-if="seccion == 'inactivos'">
                 <div class="card-body">
                     <div class="mt-4" v-if="loading == true">
@@ -190,7 +194,7 @@
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">
                                             <i class="fal fa-edit"></i>
                                         </button>
-                                        <a @click="deleteUsuario(user.id)" type="button" class="btn btn-danger"><i class="fal fa-trash-alt"></i></a>
+                                        <a @click="activarUsuario(user.id)" type="button" class="btn btn-success"><i class="fas fa-folder-plus"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -267,17 +271,6 @@
 </template>
 
 <script>
-
-    /*var modal = document.getElementById('editarModal');
-    modal.addEventListener('show.bs.modal', function (event){
-        let info = event.relatedTarget;
-        let nombre = info.getAttribute('data-bs-nombre');
-
-        let inputNombre = modal.querySelector('.inputNombre');
-        inputNombre.innerHTML = nombre;
-    });*/
-    
-
     export default {
 
         data(){
@@ -285,6 +278,8 @@
                 data: [],
                 loading: false,
                 seccion: 'todos',
+                buscar: '',
+                actual: [],
 
                 usuario: {
                     id: '',
@@ -315,6 +310,7 @@
                     .get('/admin/usuarios')
                     .then(response => {
                         me.data = response.data;
+                        this.actual = this.data;
                     })
                     .catch(error => {
                         console.log(error);
@@ -336,6 +332,7 @@
                     .get('/admin/operadores')
                     .then(response => {
                         me.data = response.data;
+                        this.actual = this.data;
                     })
                     .catch(error => {
                         console.log(error);
@@ -357,6 +354,7 @@
                     .get('/admin/supervisores')
                     .then(response => {
                         me.data = response.data;
+                        this.actual = this.data;
                     })
                     .catch(error => {
                         console.log(error);
@@ -378,6 +376,7 @@
                     .get('/admin/inactivos')
                     .then(response => {
                         me.data = response.data;
+                        this.actual = this.data;
                     })
                     .catch(error => {
                         console.log(error);
@@ -386,20 +385,65 @@
             },
 
             deleteUsuario(usuario){
-                this.loading = true;
                 let me = this;
                 axios
                     .put('admin/deleteUsuario/' + usuario)
-                    if(me.seccion == 'todos'){
-                        this.selectTodos();
+                    .then(response => {
+                        if(me.seccion == 'todos'){
+                            this.selectTodos();
+                        }
+                        else if(me.seccion == 'operadores'){
+                            this.selectOperadores();
+                        }
+                        else if(me.seccion == 'supervisores'){
+                            this.selectSupervisores();
+                        }
+                        else if(me.seccion == 'inactivos'){
+                            this.selectInactivos();
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+                    .finally();
+
+            },
+            activarUsuario(usuario){
+                let me = this;
+                axios
+                    .put('admin/activarUsuario/' + usuario)
+                    .then(response => {
+                        if(me.seccion == 'todos'){
+                            this.selectTodos();
+                        }
+                        else if(me.seccion == 'operadores'){
+                            this.selectOperadores();
+                        }
+                        else if(me.seccion == 'supervisores'){
+                            this.selectSupervisores();
+                        }
+                        else if(me.seccion == 'inactivos'){
+                            this.selectInactivos();
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+                    .finally();
+            },
+            buscarUsuario(){
+                let response = [];
+                if(this.buscar != ''){
+                    for(let user of this.data){
+                        if(user.nombre.toLowerCase().indexOf(this.buscar.toLowerCase()) >= 0 || user.apellidos.toLowerCase().indexOf(this.buscar.toLowerCase()) >= 0){
+                            response.push(user);
+                        }
                     }
-                    else if(me.seccion == 'operadores'){
-                        this.selectOperadores();
-                    }
-                    else if(me.seccion == 'supervisores'){
-                        this.selectSupervisores();
-                    }
-                    this.loading = false;
+                    this.data = response;
+                }
+                else{
+                    this.data = this.actual;
+                }
             }
         },
         mounted() {
