@@ -23,13 +23,19 @@ window.Vue = require('vue').default;
 
 Vue.component('vista-login', require('./components/login.vue').default); //Acabado
 
+//----------------------------------------------- Home ------------------------------------
+
+Vue.component('administrador', require('./components/home/administrador.vue').default); //Acabado
+Vue.component('operador', require('./components/home/operador.vue').default); //Acabado
+Vue.component('supervisor', require('./components/home/supervisor.vue').default); //Acabado
+
 //-----------------------------------------------Llamada----------------------------------------------------
 
 Vue.component('datos-administrativos', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
 Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncidente.vue').default); //Acabado
 Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default); //Acabado
 Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
-Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
+Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default); //Acabado
 
 //------------------------------------------- Expedientes --------------------------------
 
@@ -39,12 +45,9 @@ Vue.component('expedientes', require('./components/expedientes.vue').default);
 
 Vue.component('grafico', require('./components/grafico.vue').default);
 
-//----------------------------------------------- Home ------------------------------------
+//--------------------------------------------- Perfil ----------------------------------
 
-Vue.component('administrador', require('./components/home/administrador.vue').default);
-Vue.component('operador', require('./components/home/operador.vue').default);
-Vue.component('supervisor', require('./components/home/supervisor.vue').default);
-
+Vue.component('editar-perfil', require('./components/editar-perfil.vue').default);
 
 //-----------------------------------------------------------------------------------------
 
