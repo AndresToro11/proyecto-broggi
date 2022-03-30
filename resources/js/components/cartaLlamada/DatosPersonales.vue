@@ -86,7 +86,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="municipio">
+                            <div class="municipio-personales">
                                 <div class="mdc-select mdc-select--filled demo-width-class" data-id="anima-widget">
                                     <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                         <span class="mdc-select__ripple"></span>
@@ -619,7 +619,7 @@ export default {
         console.log("Component mounted.");
         new mdc.select.MDCSelect(document.querySelector(".comarca .mdc-select"));
         new mdc.select.MDCSelect(document.querySelector(".provincia .mdc-select"));
-        new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
+        new mdc.select.MDCSelect(document.querySelector(".municipio-personales .mdc-select"));
         new mdc.select.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
         new mdc.textField.MDCTextField(document.querySelector(".provincia-fuera .mdc-text-field")); //Fuera de Catalunya
         new mdc.textField.MDCTextField(document.querySelector(".referencia-poblacion .mdc-text-field")); //POBLACION
@@ -773,7 +773,7 @@ export default {
     width: 263px;
     }
 
-    .municipio {
+    .municipio-personales {
     height: 60px;
     margin-top: 25px;
     width: 263px;
@@ -801,11 +801,11 @@ export default {
     width: 200px;
     }
 
-    .municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    .municipio-personales .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .municipio .custom-enhanced-select-width {
+    .municipio-personales .custom-enhanced-select-width {
     width: 200px;
     }
 
