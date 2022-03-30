@@ -2,16 +2,16 @@
     <div>
         <input type="hidden" id="anPageName" name="page" value="scrolling0" />
         <h1 class="title valign-text-middle gothica1-normal-black-28px">
-                    Expedientes
-                </h1>
+            Expedientes
+        </h1>
         <div class="scrolling">
             <div class="flex-col-10">
-                <div class="overlap-group">
-                    <div class="window-expediente-container">
+                <div class="file">
+                    <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
                         <div class="window-expediente-shadow"></div>
                         <div class="window-expediente"></div>
                     </div>
-                    <div class="info gothica1-normal-black-21px">
+                    <div class="info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
                         <div class="flex-row">
                             <div class="expediente valign-text-middle">
                                 Expediente
@@ -20,47 +20,45 @@
                                 00000001
                             </div>
                         </div>
-                        <span hidden>
-                            <div class="flex-row-1">
-                                <div class="operador valign-text-middle">
-                                    Operador
-                                </div>
-                                <div class="name-profile valign-text-middle">
-                                    Andrés Toro
-                                </div>
+                        <div class="flex-row-1">
+                            <div class="operador valign-text-middle">
+                                Operador
                             </div>
-                            <div class="flex-row-2">
-                                <div class="fecha valign-text-middle">
-                                    Fecha
-                                </div>
-                                <div class="date valign-text-middle">
-                                    13/10/2022
-                                </div>
+                            <div class="name-profile valign-text-middle">
+                                Andrés Toro
                             </div>
-                            <div class="flex-row-3">
-                                <div class="hora valign-text-middle">
-                                    Hora
-                                </div>
-                                <div class="text valign-text-middle">
-                                    22:34
-                                </div>
+                        </div>
+                        <div class="flex-row-2">
+                            <div class="fecha valign-text-middle">
+                                Fecha
                             </div>
-                            <div class="flex-row-4">
-                                <div class="estado valign-text-middle">
-                                    Estado
-                                </div>
-                                <div class="pendiente">
-                                    <div class="icon">
-                                        <div class="vector-container">
-                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
-                                        </div>
+                            <div class="date valign-text-middle">
+                                13/10/2022
+                            </div>
+                        </div>
+                        <div class="flex-row-3">
+                            <div class="hora valign-text-middle">
+                                Hora
+                            </div>
+                            <div class="text valign-text-middle">
+                                22:34
+                            </div>
+                        </div>
+                        <div class="flex-row-4">
+                            <div class="estado valign-text-middle">
+                                Estado
+                            </div>
+                            <div class="pendiente">
+                                <div class="icon">
+                                    <div class="vector-container">
+                                        <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
                                     </div>
-                                    <span class="material-icons">
-                                        schedule
-                                    </span>
                                 </div>
+                                <span class="material-icons">
+                                    schedule
+                                </span>
                             </div>
-                        </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -100,26 +98,10 @@
 
 <style>
     .scrolling {
-    align-items: flex-end;
-    display: flex;
-    min-width: 1716px;
-    }
-
-    .overlap-group {
-    height: 279px;
-    margin-top: 45px;
-    position: relative;
-    width: 488px;
-    }
-
-    .info {
     align-items: flex-start;
     display: flex;
-    height: 180px;
-    width: 414px;
-    left: 37px;
-    position: absolute;
-    top: 50px;
+    width: 1920px;
+    height: 324px;
     }
 
     .flex-col-10 {
@@ -130,11 +112,34 @@
     width: 488px;
     }
 
+    .file {
+    height: 279px;
+    margin-top: 45px;
+    position: relative;
+    width: 488px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    }
+
+    .file:hover {
+    transform: scale(1.1);
+    }
+
+    .info {
+    align-items: flex-start;
+    display: flex;
+    height: 180px;
+    width: 414px;
+    left: 37px;
+    position: absolute;
+    top: 32px;
+    }
+
     .flex-row {
     align-items: flex-start;
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 189px;
+    gap: 188px;
     flex-direction: row;
     width: 414px;
     height: 16px;
@@ -142,10 +147,47 @@
 
     .flex-row-1 {
     align-items: flex-start;
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-left: -412px;
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 189px;
+    gap: 183px;
+    flex-direction: row;
+    width: 414px;
+    height: 16px;
+    }
+
+    .flex-row-2 {
+    align-items: flex-start;
+    margin-top: 75px;
+    margin-left: -412px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 227px;
+    flex-direction: row;
+    width: 414px;
+    height: 16px;
+    }
+
+    .flex-row-3 {
+    align-items: flex-start;
+    margin-top: 125px;
+    margin-left: -412px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 300px;
+    flex-direction: row;
+    width: 414px;
+    height: 16px;
+    }
+
+    .flex-row-4 {
+    align-items: flex-start;
+    margin-top: 175px;
+    margin-left: -412px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 270px;
     flex-direction: row;
     width: 414px;
     height: 16px;
@@ -281,6 +323,7 @@
 
     .pendiente span {
     color: var(--mdc-theme-secondary);
+    margin-top: -5px;
     font-size: 32px;
     }
 

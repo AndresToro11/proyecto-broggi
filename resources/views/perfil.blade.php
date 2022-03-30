@@ -1,9 +1,7 @@
 @extends('layouts.plantilla')
 
-@section('titulo', 'Perfil')
+@section('titulo', 'perfil')
 
 @section('contenido')
-
-    <editar-perfil></editar-perfil>
-
+    <perfil></perfil>
 @endsection
