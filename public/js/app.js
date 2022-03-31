@@ -9069,30 +9069,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    select: function select() {
-      var _this = this;
-
-      var me = this;
-      console.log("Entrando a la select");
-      axios.get("/idLocalizacion").then(function (response) {
-        console.log("ol");
-        me.idLocalizaciones = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-      axios.get("/datosPersonales").then(function (response) {
-        console.log("Datos Personales");
-        me.idDatosPersonales = response.data;
-      })["catch"](function (error) {
-        _this.console.log("Error:");
-
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-    },
+    select: function select() {},
     getDataPersonal: function getDataPersonal(array) {
       cartaLlamada.telefon = array.telefono, cartaLlamada.procedencia_trucada = array.procedencia, cartaLlamada.origen_trucada = array.origen, cartaLlamada.municipis_id_trucada = array.municipio, cartaLlamada.adreca_trucada = array.direccion, cartaLlamada.nota_comuna = array.notaComun;
     },
@@ -9102,15 +9079,7 @@ __webpack_require__.r(__webpack_exports__);
     getDataAdministrativos: function getDataAdministrativos(contador) {
       this.contador = contador;
     },
-    insertBD: function insertBD(cartaLlamada) {
-      var me = this;
-      axios.post('/llamada', me.cartaLlamada).then(function (response) {
-        console.log('Insert OK');
-      })["catch"](function (error) {
-        this.console.log("Error:");
-        console.log(error);
-      });
-    }
+    insertBD: function insertBD(cartaLlamada) {}
   },
   computed: {
     descripcioLocalitzacio: function descripcioLocalitzacio() {
@@ -9418,60 +9387,7 @@ __webpack_require__.r(__webpack_exports__);
     emit: function emit() {
       this.$emit();
     },
-    select: function select() {
-      var _this = this;
-
-      var me = this;
-      console.log("Entrando a la select 2");
-      axios.get("/municipio").then(function (response) {
-        console.log("Municipio OK");
-        me.municipios = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-      axios.get("/provincia").then(function (response) {
-        console.log("Provincia OK");
-        me.provincias = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-      axios.get("/comarca").then(function (response) {
-        console.log("Comarca OK");
-        me.comarcas = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-      axios.get("/tiposIncidente").then(function (response) {
-        console.log("Comarca OK");
-        me.tIncidentes = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-      axios.get("/incidente").then(function (response) {
-        console.log("Comarca OK");
-        me.incidentes = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-      axios.get("/tiposLocalitzacion").then(function (response) {
-        console.log("Tipos Localizacion OK");
-        me.tiposLocalizaciones = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-    },
+    select: function select() {},
     setDataIncidente: function setDataIncidente() {
       this.$emit("getDataIncidente", this.datos_incidente);
     }
@@ -10095,20 +10011,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: ["cartaDeLlamada", "datosDelInterlocutor"],
   methods: {
-    select: function select() {
-      var _this = this;
-
-      var me = this;
-      console.log("Entrando a la select");
-      axios.get("/municipio").then(function (response) {
-        console.log("ol");
-        me.municipios = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-    },
+    select: function select() {},
     setDataPersonal: function setDataPersonal() {
       this.$emit("getDataPersonal", this.datos_personales);
     }
@@ -10207,6 +10110,128 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -10215,22 +10240,18 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    selectExpedientes: function selectExpedientes() {
-      var _this = this;
-
-      this.loading = true;
-      var me = this;
-      axios.get('/expedientes').then(function (response) {
-        me.expedientes = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-    }
+    selectExpedientes: function selectExpedientes() {}
   },
   mounted: function mounted() {
-    console.log('¡¡Componente expedientes up!!');
+    new mdc.textField.MDCTextField(document.querySelector(".nick .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".nombre .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".contrasea-actual .mdc-text-field"));
+    mdc.autoInit();
+    new mdc.ripple.MDCRipple(document.querySelector(".aceptar-cambios .mdc-button"));
+    mdc.autoInit();
+    new mdc.ripple.MDCRipple(document.querySelector(".cancelar .mdc-button"));
+    new mdc.textField.MDCTextField(document.querySelector(".apellidos .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".contrasea-nueva .mdc-text-field"));
     this.selectExpedientes();
   }
 });
@@ -24175,7 +24196,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\nalign-items: flex-start;\ndisplay: flex;\nheight: 320px;\nwidth: 891px;\n}\n.carta-de-llamada-default .container-scrolling {\nalign-items: flex-start;\ndisplay: flex;\nmargin-left: 100px;\nheight: 320px;\nwidth: 891px;\nleft: 92px;\ntop: 172px;\nz-index: 1;\n}\n.carta-de-llamada-default .flex-col {\nalign-items: flex-start;\nalign-self: flex-end;\ndisplay: flex;\nflex-direction: column;\nmin-height: 265px;\nwidth: 265px;\n}\n.carta-de-llamada-default .flex-col-1 {\nalign-items: flex-start;\nalign-self: flex-start;\ndisplay: flex;\nflex-direction: column;\nmin-height: 68px;\nwidth: 218px;\n}\n.carta-de-llamada-default .flex-col-2 {\nalign-items: flex-start;\ndisplay: flex;\nflex-direction: column;\nmargin-top: 4px;\nwidth: 265px;\n}\n.carta-de-llamada-default .flex-row {\nalign-items: flex-end;\ndisplay: flex;\nheight: 80px;\n}\n.carta-de-llamada-default .flex-row-1 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 265px;\nmargin-top: 2px;\n}\n.carta-de-llamada-default .title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 2px;\nmargin-top: 36px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-default .telefono {\nheight: 56px;\nmargin-left: 2px;\nwidth: 263px;\n}\n.telefono .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.telefono\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.carta-de-llamada-default .flex-col-item-Direccion-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.flex-col-item-Direccion-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.flex-col-item-Direccion-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.carta-de-llamada-default .flex-col-item-Antedecendes-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.flex-col-item-Antedecendes-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.flex-col-item-Antedecendes-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.flex-col-item-Antedecendes-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n\n/* Second Column */\n.flex-row-2 {\nalign-items: flex-start;\nalign-self: flex-start;\ndisplay: flex;\nflex-direction: column;\nmargin-left: 315px;\nmargin-top: -261px;\nwidth: 263px;\n}\n.procedencia-de-la-llamada {\nheight: 60px;\nwidth: 263px;\n}\n.origen-de-la-llamada {\nheight: 60px;\nmargin-top: 21px;\nwidth: 263px;\n}\n.municipio {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\nwidth: 200px;\n}\n.mdc-list-item {\nalign-items: center;\ndisplay: flex;\nheight: 48px;\n/* position: relative; */\n}\n\n/* Third Column */\n.flex-row-3 {\nalign-items: flex-start;\nalign-self: flex-start;\ndisplay: flex;\nflex-direction: column;\nmargin-left: 628px;\nmargin-top: -392px;\nwidth: 263px;\nheight: 56px;\n}\n.nota-comun {\nheight: 56px;\nmargin-top: 166px;\nwidth: 263px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\nalign-items: flex-start;\ndisplay: flex;\nheight: 320px;\nwidth: 891px;\n}\n.carta-de-llamada-default .container-scrolling-incidente {\nalign-items: flex-start;\ndisplay: flex;\nmargin-left: 100px;\nheight: 320px;\nwidth: 891px;\nleft: 92px;\ntop: 172px;\nz-index: 1;\n}\n.carta-de-llamada-default .flex-col {\nalign-items: flex-start;\nalign-self: flex-end;\ndisplay: flex;\nflex-direction: column;\nmin-height: 265px;\nwidth: 265px;\n}\n.carta-de-llamada-default .flex-col-1 {\nalign-items: flex-start;\nalign-self: flex-start;\ndisplay: flex;\nflex-direction: column;\nmin-height: 68px;\nwidth: 218px;\n}\n.carta-de-llamada-default .flex-col-2 {\nalign-items: flex-start;\ndisplay: flex;\nflex-direction: column;\nmargin-top: 4px;\nwidth: 265px;\n}\n.carta-de-llamada-default .flex-row {\nalign-items: flex-end;\ndisplay: flex;\nheight: 80px;\n}\n.carta-de-llamada-default .flex-row-1 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 265px;\nmargin-top: 2px;\n}\n.carta-de-llamada-default .title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 2px;\nmargin-top: 36px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-default .telefono {\nheight: 56px;\nmargin-left: 2px;\nwidth: 263px;\n}\n.telefono .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.telefono\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.carta-de-llamada-default .flex-col-item-Direccion-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.flex-col-item-Direccion-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Direccion-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.flex-col-item-Direccion-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.carta-de-llamada-default .flex-col-item-Antedecendes-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.flex-col-item-Antedecendes-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.flex-col-item-Antedecendes-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.flex-col-item-Antedecendes-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.flex-col-item-Antedecendes-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n\n/* Second Column */\n.flex-row-2 {\nalign-items: flex-start;\nalign-self: flex-start;\ndisplay: flex;\nflex-direction: column;\nmargin-left: 315px;\nmargin-top: -261px;\nwidth: 263px;\n}\n.procedencia-de-la-llamada {\nheight: 60px;\nwidth: 263px;\n}\n.origen-de-la-llamada {\nheight: 60px;\nmargin-top: 21px;\nwidth: 263px;\n}\n.municipio {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.municipio .custom-enhanced-select-width {\nwidth: 200px;\n}\n.mdc-list-item {\nalign-items: center;\ndisplay: flex;\nheight: 48px;\n/* position: relative; */\n}\n\n/* Third Column */\n.flex-row-3 {\nalign-items: flex-start;\nalign-self: flex-start;\ndisplay: flex;\nflex-direction: column;\nmargin-left: 628px;\nmargin-top: -392px;\nwidth: 263px;\nheight: 56px;\n}\n.nota-comun {\nheight: 56px;\nmargin-top: 166px;\nwidth: 263px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -24200,6 +24221,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.carta-de-llamada-default {\n    align-items: flex-start;\n    display: flex;\n}\n.carta-de-llamada-default .container-scrolling {\n    align-items: flex-start;\n    display: flex;\n    width: 954px;\n    /* height: 908px; */\n    left: 92px;\n    top: 480px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col {\n    align-items: flex-start;\n    align-self: flex-end;\n    display: flex;\n    flex-direction: column;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-1 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    min-height: 68px;\n    width: 218px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-col-2 {\n    align-items: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-top: 125px;\n    min-height: 265px;\n    margin-left: -263px;\n    width: 265px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row {\n    align-items: flex-end;\n    display: flex;\n    height: 80px;\n    min-width: 402px;\n    z-index: 5;\n}\n.carta-de-llamada-default .flex-row-1 {\n    align-items: flex-start;\n    display: flex;\n    height: 265px;\n    margin-top: 2px;\n    min-width: 265px;\n    z-index: 6;\n}\n.tipo-de-via{\n        margin-top: 24px;\n}\n.nombre-via-calle{\n        margin-top: 30px;\n}\n.nombre-via-carretera{\n        margin-top: 25px;\n}\n.punto-kilometrico{\n        margin-top: 29px;\n}\n.nombre-punto-singular{\n        margin-top: 24px;\n}\n.escalera{\n        margin-top: 28px;\n}\n.piso{\n        margin-top: 30px;\n}\n.carta-de-llamada-default .title {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    white-space: nowrap;\n}\n.carta-de-llamada-default .datos-del-interlocutor {\n    height: 16px;\n    letter-spacing: 0.15px;\n    line-height: 16px;\n    margin-left: 2px;\n    margin-top: 36px;\n    white-space: nowrap;\n}\n.comarca {\n    height: 60px;\n    width: 263px;\n}\n.provincia {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.provincia-fuera {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.municipio-personales {\n    height: 60px;\n    margin-top: 25px;\n    width: 263px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n}\n.comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.comarca .custom-enhanced-select-width {\n    width: 200px;\n}\n.provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.provincia .custom-enhanced-select-width {\n    width: 200px;\n}\n.municipio-personales .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.municipio-personales .custom-enhanced-select-width {\n    width: 200px;\n}\n\n    /* Global */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\n    background-color: #ffffff;\n    width: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\n    background-color: #ffffff;\n    width: 263px;\n}\n\n    /* Second Column */\n.flex-row-2 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: -213px;\n    margin-top: 127px;\n    width: 263px;\n    z-index: 6;\n}\n.tipo-de-localizacin {\n    height: 60px;\n    width: 263px;\n}\n.referencia-poblacion{\n    margin-top: 25px;\n    width: 263px;\n}\n.referencia-poblacion .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia-fuera{\n    margin-top: 25px;\n    width: 263px;\n}\n.referencia-fuera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia-calle{\n    margin-top: 28px;\n    width: 263px;\n}\n.referencia-calle .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia-carretera{\n    margin-top: 28px;\n    width: 263px;\n}\n.referencia-carretera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.referencia-punto-singular{\n    margin-top: 30px;\n    width: 263px;\n}\n.referencia-punto-singular .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.separation-down {\n    height: 183px;\n    margin-left: 50px;\n    margin-top: 153px;\n    width: 1px;\n}\n.tipo-de-localizacin .custom-enhanced-select-width {\n    width: 200px;\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n}\n.tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n    /* position: relative; */\n}\n\n    /* Third Column */\n.flex-row-3 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 50px;\n    margin-top: 127px;\n    width: 263px;\n    height: 56px;\n}\n.flex-row-4 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 365px;\n    margin-top: -56px;\n    width: 263px;\n    height: 56px;\n}\n.flex-row-7 {\n    align-items: flex-start;\n    align-self: flex-start;\n    display: flex;\n    flex-direction: column;\n    margin-left: 50px;\n    margin-top: 127px;\n    width: 263px;\n    height: 56px;\n}\n.incidente {\n    height: 60px;\n    width: 263px;\n}\n.tipo-de-incidente {\n    height: 60px;\n    margin-top: 24px;\n    width: 263px;\n}\n.mapa-up #mapa-up{\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 89px;\n    margin-left: 80px;\n    transition: all 0.2s ease-in-out;\n    background-color: #0040FF;\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n#mapa-up:hover,\n    #aceptar:hover,\n    #cancelar:hover {\n    transform: scale(1.1);\n}\n.flex-row-6 {\n    align-items: flex-start;\n    display: flex;\n    margin-left: 38px;\n    margin-top: 24px;\n    min-width: 188px;\n}\n.aceptar #aceptar {\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 103px;\n    margin-left: 74px;\n    margin-top: 20px;\n    transition: all 0.2s ease-in-out;\n    background-color: #0040FF;\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n.cancelar #cancelar{\n    border-radius: 32px;\n    cursor: pointer;\n    height: 36px;\n    width: 103px;\n    margin-left: 74px;\n    margin-top: 20px;\n    transition: all 0.2s ease-in-out;\n    background-color: rgb(207, 0, 0);\n    font-family: var(--font-family-gothic_a1);\n    text-transform: capitalize;\n}\n.mapa-up {\n    margin-top: 50px;\n    height: auto !important;\n    width: auto !important;\n}\n.incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.mdc-list-item {\n    align-items: center;\n    display: flex;\n    height: 48px;\n}\n.cancelar {\n    height: auto !important;\n    width: auto !important;\n    margin-top: -20px;\n    margin-left: -50px;\n}\n.tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\n    color: var(--mdc-theme-primary);\n}\n.aceptar {\n    height: auto !important;\n    width: auto !important;\n    margin-top: -20px;\n    margin-left: -100px;\n}\n.tipo-de-incidente .custom-enhanced-select-width {\n    width: 200px;\n}\n.incidente .custom-enhanced-select-width {\n    width: 200px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/editar-perfil.vue?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/editar-perfil.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.editar-perfil-operador {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nwidth: 1920px;\n}\n.editar-perfil-operador .editar-perfil {\nheight: 16px;\nleft: 100px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 222px;\nwhite-space: nowrap;\nz-index: 4;\n}\n.editar-perfil-operador .datos-personales {\nheight: 16px;\nleft: 102px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 274px;\nwhite-space: nowrap;\nz-index: 5;\n}\n\n/* .editar-perfil-operador .information {\nalign-items: flex-start;\ndisplay: flex;\nwidth: 1920px;\n} */\n.editar-perfil-operador .nick {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 308px;\nwidth: 350px;\nz-index: 6;\n}\n.editar-perfil-operador .nombre {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 393px;\nwidth: 350px;\nz-index: 8;\n}\n.editar-perfil-operador .contrasea-actual {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 482px;\nwidth: 350px;\nz-index: 9;\n}\n.editar-perfil-operador .aceptar-cambios #aceptar-cambios{\nborder-radius: 32px;\nheight: 36px;\nleft: 385px;\nposition: fixed;\ntop: 599px;\nwidth: 141px;\nz-index: 11;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n.editar-perfil-operador .cancelar #cancelar {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nheight: 36px;\nleft: 465px;\nposition: fixed;\ntop: 679px;\nwidth: 89px;\nz-index: 12;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.editar-perfil-operador .apellidos {\nheight: 60px;\nleft: 502px;\nposition: fixed;\ntop: 393px;\nwidth: 350px;\nz-index: 7;\n}\n.editar-perfil-operador .contrasea-nueva {\nheight: 60px;\nleft: 502px;\nposition: fixed;\ntop: 482px;\nwidth: 350px;\nz-index: 10;\n}\n.editar-perfil-operador .name {\nheight: 16px;\nleft: 705px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 643px;\nwhite-space: nowrap;\nz-index: 23;\n}\n.editar-perfil-operador .degradado {\nheight: 630px;\nleft: 1197px;\nposition: fixed;\ntop: 421px;\nwidth: 491px;\nz-index: 3;\n}\n.editar-perfil-operador .ellipse-1 {\nheight: 308px;\nleft: 1268px;\nposition: fixed;\ntop: 291px;\nwidth: 308px;\nz-index: 2;\n}\n.editar-perfil-operador .peep-standing-30 {\nalign-items: flex-end;\ndisplay: flex;\nheight: 780px;\njustify-content: flex-end;\nleft: 1246px;\nmin-width: 280px;\npadding: 37.2px 0;\nposition: fixed;\ntop: 299px;\nz-index: 1;\n}\n.editar-perfil-operador .overlap-group2 {\nheight: 700px;\nposition: relative;\nwidth: 391px;\n}\n.editar-perfil-operador .posestandingshirt-3 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 593px;\nleft: 0;\nmin-width: 391px;\npadding: 0 75.7px;\nposition: absolute;\ntop: 108px;\n}\n.editar-perfil-operador .overlap-group {\nheight: 612px;\nmargin-top: -15.42px;\nposition: relative;\nwidth: 212px;\n}\n.editar-perfil-operador .skin {\nheight: 610px;\nleft: 1px;\nposition: absolute;\ntop: 0;\nwidth: 209px;\n}\n.editar-perfil-operador .shoes {\nheight: 78px;\nleft: 0;\nposition: absolute;\ntop: 532px;\nwidth: 205px;\n}\n.editar-perfil-operador .top {\nheight: 277px;\nleft: 11px;\nposition: absolute;\ntop: 23px;\nwidth: 200px;\n}\n.editar-perfil-operador .ink {\nheight: 600px;\nleft: 0;\nposition: absolute;\ntop: 11px;\nwidth: 212px;\n}\n.editar-perfil-operador .overlap-group1 {\nheight: 134px;\nleft: 125px;\nposition: absolute;\ntop: 0;\nwidth: 112px;\n}\n.editar-perfil-operador .head-short-4 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 134px;\njustify-content: flex-end;\nleft: 0;\nmin-width: 112px;\npadding: 3.0px 9.2px;\nposition: absolute;\ntop: 0;\n}\n.editar-perfil-operador .overlap-group-1 {\nheight: 121px;\nposition: relative;\nwidth: 91px;\n}\n.editar-perfil-operador .skin-1 {\nheight: 116px;\nleft: 4px;\nposition: absolute;\ntop: 2px;\nwidth: 86px;\n}\n.editar-perfil-operador .hair {\nheight: 69px;\nleft: 7px;\nposition: absolute;\ntop: 4px;\nwidth: 83px;\n}\n.editar-perfil-operador .fill-4 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 24px;\nwidth: 1px;\n}\n.editar-perfil-operador .fill-6 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 25px;\nwidth: 1px;\n}\n.editar-perfil-operador .ink-1 {\nheight: 121px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 91px;\n}\n.editar-perfil-operador .facial-hair-moustache-7 {\nheight: 55px;\nleft: 28px;\nposition: absolute;\ntop: 79px;\nwidth: 67px;\n}\n.editar-perfil-operador .face-old {\nalign-items: flex-end;\ndisplay: flex;\nheight: 69px;\nleft: 38px;\nmin-width: 69px;\npadding: 13.0px 11.4px;\nposition: absolute;\ntop: 44px;\n}\n.editar-perfil-operador .ink-2 {\nheight: 42px;\nwidth: 45px;\n}\n.nick .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.nombre .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.contrasea-actual .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.aceptar-cambios {\nheight: auto !important;\nwidth: auto !important;\n}\n.cancelar {\nheight: auto !important;\nwidth: auto !important;\n}\n.apellidos .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.contrasea-nueva .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nwidth: 350px;\nheight: 60px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -24430,6 +24475,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_DatosPersonales_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/editar-perfil.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/editar-perfil.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_editar_perfil_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./editar-perfil.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/editar-perfil.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_editar_perfil_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_editar_perfil_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -25263,15 +25338,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _editar_perfil_vue_vue_type_template_id_de7d8e3a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./editar-perfil.vue?vue&type=template&id=de7d8e3a& */ "./resources/js/components/editar-perfil.vue?vue&type=template&id=de7d8e3a&");
 /* harmony import */ var _editar_perfil_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./editar-perfil.vue?vue&type=script&lang=js& */ "./resources/js/components/editar-perfil.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _editar_perfil_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editar-perfil.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/editar-perfil.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _editar_perfil_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _editar_perfil_vue_vue_type_template_id_de7d8e3a___WEBPACK_IMPORTED_MODULE_0__.render,
   _editar_perfil_vue_vue_type_template_id_de7d8e3a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -25758,6 +25835,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/editar-perfil.vue?vue&type=style&index=0&lang=css&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/editar-perfil.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_editar_perfil_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./editar-perfil.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/editar-perfil.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/expedientes.vue?vue&type=style&index=0&lang=css&":
 /*!**********************************************************************************!*\
   !*** ./resources/js/components/expedientes.vue?vue&type=style&index=0&lang=css& ***!
@@ -26106,7 +26196,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "container-center-horizontal" }, [
         _c("div", { staticClass: "carta-de-llamada-default screen" }, [
-          _c("div", { staticClass: "container-scrolling" }, [
+          _c("div", { staticClass: "container-scrolling-incidente" }, [
             _c("div", { staticClass: "flex-col" }, [
               _c("div", { staticClass: "flex-row" }, [
                 _c("div", { staticClass: "flex-col-1" }, [
@@ -28616,8 +28706,403 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("h1", [
-        _vm._v("\n        Hola caracola, esto es editar perfil\n    "),
+      _c("input", {
+        attrs: {
+          type: "hidden",
+          id: "anPageName",
+          name: "page",
+          value: "editar-perfil-operador",
+        },
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "container-center-horizontal" }, [
+        _c("div", { staticClass: "editar-perfil-operador screen" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "editar-perfil valign-text-middle gothica1-normal-black-28px",
+            },
+            [_vm._v("\n                Editar perfil\n            ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "datos-personales valign-text-middle gothica1-normal-black-21px",
+            },
+            [_vm._v("\n                Datos personales\n            ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "nick" }, [
+            _c(
+              "label",
+              {
+                staticClass:
+                  "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
+              },
+              [
+                _c("span", { staticClass: "mdc-text-field__ripple" }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "mdc-floating-label",
+                    attrs: { id: "my-label-id" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            Dirección de correo electrónico\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "mdc-text-field__input",
+                  attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                }),
+                _vm._v(" "),
+                _c(
+                  "i",
+                  {
+                    staticClass:
+                      "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
+                    attrs: { tabindex: "0", role: "button" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            account_box\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-line-ripple" }),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "nombre" }, [
+            _c(
+              "label",
+              {
+                staticClass:
+                  "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
+              },
+              [
+                _c("span", { staticClass: "mdc-text-field__ripple" }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "mdc-floating-label",
+                    attrs: { id: "my-label-id" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            Nombre\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "mdc-text-field__input",
+                  attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                }),
+                _vm._v(" "),
+                _c(
+                  "i",
+                  {
+                    staticClass:
+                      "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
+                    attrs: { tabindex: "0", role: "button" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            account_circle\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-line-ripple" }),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "contrasea-actual" }, [
+            _c(
+              "label",
+              {
+                staticClass:
+                  "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
+              },
+              [
+                _c("span", { staticClass: "mdc-text-field__ripple" }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "mdc-floating-label",
+                    attrs: { id: "my-label-id" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            Contraseña actual\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "mdc-text-field__input",
+                  attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                }),
+                _vm._v(" "),
+                _c(
+                  "i",
+                  {
+                    staticClass:
+                      "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
+                    attrs: { tabindex: "0", role: "button" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            lock\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-line-ripple" }),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "aceptar-cambios" }, [
+            _c("button", { staticClass: "mdc-button mdc-button--raised" }, [
+              _c("span", { staticClass: "mdc-button__ripple" }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-button__label" }, [
+                _vm._v(
+                  "\n                            Aceptar cambios\n                        "
+                ),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "cancelar" }, [
+            _c("button", { staticClass: "mdc-button mdc-button--raised" }, [
+              _c("span", { staticClass: "mdc-button__ripple" }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-button__label" }, [
+                _vm._v(
+                  "\n                            Cancelar\n                        "
+                ),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "apellidos" }, [
+            _c(
+              "label",
+              {
+                staticClass:
+                  "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
+              },
+              [
+                _c("span", { staticClass: "mdc-text-field__ripple" }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "mdc-floating-label",
+                    attrs: { id: "my-label-id" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            Apellidos\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "mdc-text-field__input",
+                  attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                }),
+                _vm._v(" "),
+                _c(
+                  "i",
+                  {
+                    staticClass:
+                      "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
+                    attrs: { tabindex: "0", role: "button" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            account_circle\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-line-ripple" }),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "contrasea-nueva" }, [
+            _c(
+              "label",
+              {
+                staticClass:
+                  "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
+              },
+              [
+                _c("span", { staticClass: "mdc-text-field__ripple" }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "mdc-floating-label",
+                    attrs: { id: "my-label-id" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            Contraseña nueva\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "mdc-text-field__input",
+                  attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                }),
+                _vm._v(" "),
+                _c(
+                  "i",
+                  {
+                    staticClass:
+                      "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
+                    attrs: { tabindex: "0", role: "button" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                            lock\n                        "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-line-ripple" }),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("span", [
+            _c("img", {
+              staticClass: "degradado",
+              attrs: {
+                src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/degradado@1x.svg",
+              },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "ellipse-1",
+              attrs: {
+                src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/ellipse-1@2x.svg",
+              },
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "peep-standing-30" }, [
+              _c("div", { staticClass: "overlap-group2" }, [
+                _c("div", { staticClass: "posestandingshirt-3" }, [
+                  _c("div", { staticClass: "overlap-group" }, [
+                    _c("img", {
+                      staticClass: "skin",
+                      attrs: {
+                        src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/--skin@1x.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "shoes",
+                      attrs: {
+                        src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/---shoes@2x.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "top",
+                      attrs: {
+                        src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/---top@2x.svg",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "ink",
+                      attrs: {
+                        src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/---ink@1x.svg",
+                      },
+                    }),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "overlap-group1" }, [
+                  _c("div", { staticClass: "head-short-4" }, [
+                    _c("div", { staticClass: "overlap-group-1" }, [
+                      _c("img", {
+                        staticClass: "skin-1",
+                        attrs: {
+                          src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/--skin-1@2x.svg",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "hair",
+                        attrs: {
+                          src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/---hair@2x.svg",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "fill-4",
+                        attrs: {
+                          src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/fill-4@2x.svg",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "fill-6",
+                        attrs: {
+                          src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/fill-6@2x.svg",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "ink-1",
+                        attrs: {
+                          src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/---ink-1@2x.svg",
+                        },
+                      }),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("img", {
+                    staticClass: "facial-hair-moustache-7",
+                    attrs: {
+                      src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/facial-hair-moustache-7@2x.svg",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "face-old" }, [
+                    _c("img", {
+                      staticClass: "ink-2",
+                      attrs: {
+                        src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/---ink-2@2x.svg",
+                      },
+                    }),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
       ]),
     ])
   },

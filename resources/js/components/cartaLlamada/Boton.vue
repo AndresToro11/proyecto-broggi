@@ -41,29 +41,6 @@ export default {
     },
     methods: {
         select() {
-            let me = this;
-            console.log("Entrando a la select");
-            axios
-                .get("/idLocalizacion")
-                .then((response) => {
-                    console.log("ol");
-                    me.idLocalizaciones = response.data;
-                })
-                .catch((error) => {
-                    console.log(error);
-                })
-                .finally(() => (this.loading = false));
-            axios
-                .get("/datosPersonales")
-                .then((response) => {
-                    console.log("Datos Personales");
-                    me.idDatosPersonales = response.data;
-                })
-                .catch((error) => {
-                    this.console.log("Error:");
-                    console.log(error);
-                })
-                .finally(() => (this.loading = false));
         },
         getDataPersonal(array) {
                 cartaLlamada.telefon= array.telefono,
@@ -86,15 +63,6 @@ export default {
             this.contador = contador;
         },
         insertBD(cartaLlamada) {
-            let me = this;
-            axios
-                .post('/llamada', me.cartaLlamada)
-                .then(function(response){
-                    console.log('Insert OK')
-                }).catch(function(error){
-                    this.console.log("Error:");
-                    console.log(error);
-                })
         }
     },
     computed:{

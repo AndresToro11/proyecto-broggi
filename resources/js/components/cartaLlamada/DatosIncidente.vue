@@ -3,7 +3,7 @@
         <input type="hidden" id="anPageName" name="page" value="carta-de-llamada-default" />
         <div class="container-center-horizontal">
             <div class="carta-de-llamada-default screen">
-                <div class="container-scrolling">
+                <div class="container-scrolling-incidente">
                     <div class="flex-col">
                         <div class="flex-row">
                             <div class="flex-col-1">
@@ -231,68 +231,6 @@
                 this.$emit();
             },
             select() {
-                let me = this;
-                console.log("Entrando a la select 2");
-                axios
-                    .get("/municipio")
-                    .then((response) => {
-                        console.log("Municipio OK");
-                        me.municipios = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
-                axios
-                    .get("/provincia")
-                    .then((response) => {
-                        console.log("Provincia OK");
-                        me.provincias = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
-                axios
-                    .get("/comarca")
-                    .then((response) => {
-                        console.log("Comarca OK");
-                        me.comarcas = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
-                axios
-                    .get("/tiposIncidente")
-                    .then((response) => {
-                        console.log("Comarca OK");
-                        me.tIncidentes = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
-                axios
-                    .get("/incidente")
-                    .then((response) => {
-                        console.log("Comarca OK");
-                        me.incidentes = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
-                axios
-                    .get("/tiposLocalitzacion")
-                    .then((response) => {
-                        console.log("Tipos Localizacion OK");
-                        me.tiposLocalizaciones = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
             },setDataIncidente(){
                 this.$emit("getDataIncidente", this.datos_incidente);
             },
@@ -319,7 +257,7 @@
     width: 891px;
     }
 
-    .carta-de-llamada-default .container-scrolling {
+    .carta-de-llamada-default .container-scrolling-incidente {
     align-items: flex-start;
     display: flex;
     margin-left: 100px;

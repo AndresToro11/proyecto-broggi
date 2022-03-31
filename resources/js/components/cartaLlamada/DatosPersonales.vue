@@ -596,18 +596,6 @@ export default {
     ],
     methods: {
         select() {
-            let me = this;
-            console.log("Entrando a la select");
-            axios
-                .get("/municipio")
-                .then((response) => {
-                    console.log("ol");
-                    me.municipios = response.data;
-                })
-                .catch((error) => {
-                    console.log(error);
-                })
-                .finally(() => (this.loading = false));
         },
         setDataPersonal(){
             this.$emit("getDataPersonal", this.datos_personales);
