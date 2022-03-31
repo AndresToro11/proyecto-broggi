@@ -1,6 +1,5 @@
 <template>
     <div>
-        <input type="hidden" id="anPageName" name="page" value="editar-perfil-operador" />
         <div class="container-center-horizontal">
             <div class="editar-perfil-operador screen">
                 <div class="editar-perfil valign-text-middle gothica1-normal-black-28px"> <!-- FIXME: Editar perfil -->
@@ -9,89 +8,87 @@
                 <div class="datos-personales valign-text-middle gothica1-normal-black-21px"> <!-- FIXME: Datos personales -->
                     Datos personales
                 </div>
-                <!-- <div class="information"> -->
-                    <div class="nick"> <!-- FIXME: Correo electronico -->
-                        <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
-                            <span class="mdc-text-field__ripple"></span>
-                            <span class="mdc-floating-label" id="my-label-id">
-                                Dirección de correo electrónico
-                            </span>
-                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
-                            <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
-                                account_box
-                            </i>
-                            <span class="mdc-line-ripple"></span>
-                        </label>
-                    </div>
-                    <div class="nombre"> <!-- FIXME: Nombre -->
-                        <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
-                            <span class="mdc-text-field__ripple"></span>
-                            <span class="mdc-floating-label" id="my-label-id">
-                                Nombre
-                            </span>
-                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
-                            <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
-                                account_circle
-                            </i>
-                            <span class="mdc-line-ripple"></span>
-                        </label>
-                    </div>
-                    <div class="contrasea-actual"> <!-- FIXME: Contraseña -->
-                        <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
-                            <span class="mdc-text-field__ripple"></span>
-                            <span class="mdc-floating-label" id="my-label-id">
-                                Contraseña actual
-                            </span>
-                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                            <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
-                                lock
-                            </i>
-                            <span class="mdc-line-ripple"></span>
-                        </label>
-                    </div>
-                    <div class="aceptar-cambios"> <!-- FIXME: Aceptar cambios -->
-                        <button class="mdc-button mdc-button--raised">
-                            <span class="mdc-button__ripple"></span>
-                            <span class="mdc-button__label">
-                                Aceptar cambios
-                            </span>
-                        </button>
-                    </div>
-                    <div class="cancelar"> <!-- FIXME: Cancelar -->
-                        <button class="mdc-button mdc-button--raised">
-                            <span class="mdc-button__ripple"></span>
-                            <span class="mdc-button__label">
-                                Cancelar
-                            </span>
-                        </button>
-                    </div>
-                    <div class="apellidos"> <!-- FIXME: Apellidos -->
-                        <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
-                            <span class="mdc-text-field__ripple"></span>
-                            <span class="mdc-floating-label" id="my-label-id">
-                                Apellidos
-                            </span>
-                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
-                            <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
-                                account_circle
-                            </i>
-                            <span class="mdc-line-ripple"></span>
-                        </label>
-                    </div>
-                    <div class="contrasea-nueva"> <!-- FIXME: Contraseña nueva -->
-                        <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
-                            <span class="mdc-text-field__ripple"></span>
-                            <span class="mdc-floating-label" id="my-label-id">
-                                Contraseña nueva
-                            </span>
-                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
-                            <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
-                                lock
-                            </i>
-                            <span class="mdc-line-ripple"></span>
-                        </label>
-                    </div>
-                <!-- </div> -->
+                <div class="nick"> <!-- FIXME: Correo electronico -->
+                    <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">
+                            Dirección de correo electrónico
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
+                        <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
+                            account_box
+                        </i>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                <div class="nombre"> <!-- FIXME: Nombre -->
+                    <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">
+                            Nombre
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
+                        <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
+                            account_circle
+                        </i>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                <div class="contrasea-actual"> <!-- FIXME: Contraseña -->
+                    <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">
+                            Contraseña actual
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                        <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
+                            lock
+                        </i>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                <div class="aceptar-cambios"> <!-- FIXME: Aceptar cambios -->
+                    <button class="mdc-button mdc-button--raised">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">
+                            Aceptar cambios
+                        </span>
+                    </button>
+                </div>
+                <div class="cancelar"> <!-- FIXME: Cancelar -->
+                    <button class="mdc-button mdc-button--raised">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">
+                            Cancelar
+                        </span>
+                    </button>
+                </div>
+                <div class="apellidos"> <!-- FIXME: Apellidos -->
+                    <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">
+                            Apellidos
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
+                        <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
+                            account_circle
+                        </i>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                <div class="contrasea-nueva"> <!-- FIXME: Contraseña nueva -->
+                    <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">
+                            Contraseña nueva
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
+                        <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
+                            lock
+                        </i>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
                 <span> <!-- FIXME: Personaje -->
                     <img class="degradado" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/degradado@1x.svg"/>
                     <img class="ellipse-1" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/ellipse-1@2x.svg"/>
@@ -156,6 +153,7 @@
 </script>
 
 <style>
+
     .editar-perfil-operador {
     align-items: flex-start;
     background-color: var(--white);
@@ -218,10 +216,10 @@
     z-index: 9;
     }
 
-    .editar-perfil-operador .aceptar-cambios #aceptar-cambios{
+    .editar-perfil-operador .aceptar-cambios{
     border-radius: 32px;
     height: 36px;
-    left: 385px;
+    left: 275px;
     position: fixed;
     top: 599px;
     width: 141px;
@@ -231,18 +229,28 @@
     text-transform: none;
     }
 
-    .editar-perfil-operador .cancelar #cancelar {
+    .aceptar-cambios {
+    height: auto !important;
+    width: auto !important;
+    }
+
+    .editar-perfil-operador .cancelar {
     border-radius: 32px;
     background-color: rgb(207, 0, 0);
     height: 36px;
-    left: 465px;
+    left: 552px;
     position: fixed;
-    top: 679px;
+    top: 619px;
     width: 89px;
     z-index: 12;
     transition: all 0.2s ease-in-out;
     font-family: var(--font-family-gothic_a1);
     text-transform: capitalize;
+    }
+
+    .cancelar {
+    height: auto !important;
+    width: auto !important;
     }
 
     .editar-perfil-operador .apellidos {
@@ -461,16 +469,6 @@
 
     .contrasea-actual .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: var(--mdc-theme-primary);
-    }
-
-    .aceptar-cambios {
-    height: auto !important;
-    width: auto !important;
-    }
-
-    .cancelar {
-    height: auto !important;
-    width: auto !important;
     }
 
     .apellidos .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {

@@ -36,8 +36,8 @@
         </script>
     </head>
 
-    <body onload="" style="margin: 0">
-        <input type="hidden" id="anPageName" name="page" value="header" />
+    <body>
+        {{-- <input type="hidden" id="anPageName" name="page" value="header" /> --}}
         <div class="container-center-horizontal">
             <div class="header screen">
                 {{-- Header Operador --}}
@@ -47,7 +47,7 @@
                             <img class="background-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png"/>
                             <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
                             <h1 class="title-operador valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
-                            <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Video Interactivo</div>
+                            <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Video interactivo</div>
                             <div class="sergi-prez-jimnez-operador valign-text-middle gothica1-normal-white-18px">Sergi Pérez Jiménez</div>
                             <img class="separate-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/separate@2x.svg"/>
                             <div class="cerrar-sesin-operador valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
@@ -88,7 +88,7 @@
                 </span>
             </div>
         </div>
-        <div id="app" class="container">
+        <div id="app" class="container-app">
             @yield('contenido')
         </div>
 
@@ -96,11 +96,19 @@
         </script>
 
         <style>
+
+            .container-app {
+            display: flex;
+            margin-top: 198px;
+            z-index: 99;
+            }
+
             .header {
             align-items: flex-start;
             display: flex;
             height: 198px;
             width: 1920px;
+            position: fixed;
             }
 
             /* TODO: Header Operador */

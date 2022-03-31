@@ -1,11 +1,10 @@
 <template>
     <div>
-        <input type="hidden" id="anPageName" name="page" value="scrolling0" />
         <h1 class="title valign-text-middle gothica1-normal-black-28px">
             Expedientes
         </h1>
-        <div class="scrolling">
-            <div class="flex-col-10">
+        <div class="margin-container">
+            <div class="container">
                 <div class="file">
                     <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
                         <div class="window-expediente-shadow"></div>
@@ -97,19 +96,20 @@
 </script>
 
 <style>
-    .scrolling {
-    align-items: flex-start;
-    display: flex;
-    width: 1920px;
-    height: 324px;
+    .margin-container {
+    margin-left: 102px;
+    margin-right: 102px;
+    z-index: inherit;
     }
 
-    .flex-col-10 {
-    align-items: flex-start;
+    .container {
     display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-    width: 488px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    row-gap: 50px;
+    column-gap: 115px;
     }
 
     .file {

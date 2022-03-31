@@ -10229,9 +10229,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -10269,7 +10266,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
 //
 //
 //
@@ -24244,7 +24240,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.editar-perfil-operador {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nwidth: 1920px;\n}\n.editar-perfil-operador .editar-perfil {\nheight: 16px;\nleft: 100px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 222px;\nwhite-space: nowrap;\nz-index: 4;\n}\n.editar-perfil-operador .datos-personales {\nheight: 16px;\nleft: 102px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 274px;\nwhite-space: nowrap;\nz-index: 5;\n}\n\n/* .editar-perfil-operador .information {\nalign-items: flex-start;\ndisplay: flex;\nwidth: 1920px;\n} */\n.editar-perfil-operador .nick {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 308px;\nwidth: 350px;\nz-index: 6;\n}\n.editar-perfil-operador .nombre {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 393px;\nwidth: 350px;\nz-index: 8;\n}\n.editar-perfil-operador .contrasea-actual {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 482px;\nwidth: 350px;\nz-index: 9;\n}\n.editar-perfil-operador .aceptar-cambios #aceptar-cambios{\nborder-radius: 32px;\nheight: 36px;\nleft: 385px;\nposition: fixed;\ntop: 599px;\nwidth: 141px;\nz-index: 11;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n.editar-perfil-operador .cancelar #cancelar {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nheight: 36px;\nleft: 465px;\nposition: fixed;\ntop: 679px;\nwidth: 89px;\nz-index: 12;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.editar-perfil-operador .apellidos {\nheight: 60px;\nleft: 502px;\nposition: fixed;\ntop: 393px;\nwidth: 350px;\nz-index: 7;\n}\n.editar-perfil-operador .contrasea-nueva {\nheight: 60px;\nleft: 502px;\nposition: fixed;\ntop: 482px;\nwidth: 350px;\nz-index: 10;\n}\n.editar-perfil-operador .name {\nheight: 16px;\nleft: 705px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 643px;\nwhite-space: nowrap;\nz-index: 23;\n}\n.editar-perfil-operador .degradado {\nheight: 630px;\nleft: 1197px;\nposition: fixed;\ntop: 421px;\nwidth: 491px;\nz-index: 3;\n}\n.editar-perfil-operador .ellipse-1 {\nheight: 308px;\nleft: 1268px;\nposition: fixed;\ntop: 291px;\nwidth: 308px;\nz-index: 2;\n}\n.editar-perfil-operador .peep-standing-30 {\nalign-items: flex-end;\ndisplay: flex;\nheight: 780px;\njustify-content: flex-end;\nleft: 1246px;\nmin-width: 280px;\npadding: 37.2px 0;\nposition: fixed;\ntop: 299px;\nz-index: 1;\n}\n.editar-perfil-operador .overlap-group2 {\nheight: 700px;\nposition: relative;\nwidth: 391px;\n}\n.editar-perfil-operador .posestandingshirt-3 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 593px;\nleft: 0;\nmin-width: 391px;\npadding: 0 75.7px;\nposition: absolute;\ntop: 108px;\n}\n.editar-perfil-operador .overlap-group {\nheight: 612px;\nmargin-top: -15.42px;\nposition: relative;\nwidth: 212px;\n}\n.editar-perfil-operador .skin {\nheight: 610px;\nleft: 1px;\nposition: absolute;\ntop: 0;\nwidth: 209px;\n}\n.editar-perfil-operador .shoes {\nheight: 78px;\nleft: 0;\nposition: absolute;\ntop: 532px;\nwidth: 205px;\n}\n.editar-perfil-operador .top {\nheight: 277px;\nleft: 11px;\nposition: absolute;\ntop: 23px;\nwidth: 200px;\n}\n.editar-perfil-operador .ink {\nheight: 600px;\nleft: 0;\nposition: absolute;\ntop: 11px;\nwidth: 212px;\n}\n.editar-perfil-operador .overlap-group1 {\nheight: 134px;\nleft: 125px;\nposition: absolute;\ntop: 0;\nwidth: 112px;\n}\n.editar-perfil-operador .head-short-4 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 134px;\njustify-content: flex-end;\nleft: 0;\nmin-width: 112px;\npadding: 3.0px 9.2px;\nposition: absolute;\ntop: 0;\n}\n.editar-perfil-operador .overlap-group-1 {\nheight: 121px;\nposition: relative;\nwidth: 91px;\n}\n.editar-perfil-operador .skin-1 {\nheight: 116px;\nleft: 4px;\nposition: absolute;\ntop: 2px;\nwidth: 86px;\n}\n.editar-perfil-operador .hair {\nheight: 69px;\nleft: 7px;\nposition: absolute;\ntop: 4px;\nwidth: 83px;\n}\n.editar-perfil-operador .fill-4 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 24px;\nwidth: 1px;\n}\n.editar-perfil-operador .fill-6 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 25px;\nwidth: 1px;\n}\n.editar-perfil-operador .ink-1 {\nheight: 121px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 91px;\n}\n.editar-perfil-operador .facial-hair-moustache-7 {\nheight: 55px;\nleft: 28px;\nposition: absolute;\ntop: 79px;\nwidth: 67px;\n}\n.editar-perfil-operador .face-old {\nalign-items: flex-end;\ndisplay: flex;\nheight: 69px;\nleft: 38px;\nmin-width: 69px;\npadding: 13.0px 11.4px;\nposition: absolute;\ntop: 44px;\n}\n.editar-perfil-operador .ink-2 {\nheight: 42px;\nwidth: 45px;\n}\n.nick .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.nombre .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.contrasea-actual .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.aceptar-cambios {\nheight: auto !important;\nwidth: auto !important;\n}\n.cancelar {\nheight: auto !important;\nwidth: auto !important;\n}\n.apellidos .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.contrasea-nueva .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nwidth: 350px;\nheight: 60px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.editar-perfil-operador {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nwidth: 1920px;\n}\n.editar-perfil-operador .editar-perfil {\nheight: 16px;\nleft: 100px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 222px;\nwhite-space: nowrap;\nz-index: 4;\n}\n.editar-perfil-operador .datos-personales {\nheight: 16px;\nleft: 102px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 274px;\nwhite-space: nowrap;\nz-index: 5;\n}\n\n/* .editar-perfil-operador .information {\nalign-items: flex-start;\ndisplay: flex;\nwidth: 1920px;\n} */\n.editar-perfil-operador .nick {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 308px;\nwidth: 350px;\nz-index: 6;\n}\n.editar-perfil-operador .nombre {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 393px;\nwidth: 350px;\nz-index: 8;\n}\n.editar-perfil-operador .contrasea-actual {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 482px;\nwidth: 350px;\nz-index: 9;\n}\n.editar-perfil-operador .aceptar-cambios{\nborder-radius: 32px;\nheight: 36px;\nleft: 275px;\nposition: fixed;\ntop: 599px;\nwidth: 141px;\nz-index: 11;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n.aceptar-cambios {\nheight: auto !important;\nwidth: auto !important;\n}\n.editar-perfil-operador .cancelar {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nheight: 36px;\nleft: 552px;\nposition: fixed;\ntop: 619px;\nwidth: 89px;\nz-index: 12;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.cancelar {\nheight: auto !important;\nwidth: auto !important;\n}\n.editar-perfil-operador .apellidos {\nheight: 60px;\nleft: 502px;\nposition: fixed;\ntop: 393px;\nwidth: 350px;\nz-index: 7;\n}\n.editar-perfil-operador .contrasea-nueva {\nheight: 60px;\nleft: 502px;\nposition: fixed;\ntop: 482px;\nwidth: 350px;\nz-index: 10;\n}\n.editar-perfil-operador .name {\nheight: 16px;\nleft: 705px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 643px;\nwhite-space: nowrap;\nz-index: 23;\n}\n.editar-perfil-operador .degradado {\nheight: 630px;\nleft: 1197px;\nposition: fixed;\ntop: 421px;\nwidth: 491px;\nz-index: 3;\n}\n.editar-perfil-operador .ellipse-1 {\nheight: 308px;\nleft: 1268px;\nposition: fixed;\ntop: 291px;\nwidth: 308px;\nz-index: 2;\n}\n.editar-perfil-operador .peep-standing-30 {\nalign-items: flex-end;\ndisplay: flex;\nheight: 780px;\njustify-content: flex-end;\nleft: 1246px;\nmin-width: 280px;\npadding: 37.2px 0;\nposition: fixed;\ntop: 299px;\nz-index: 1;\n}\n.editar-perfil-operador .overlap-group2 {\nheight: 700px;\nposition: relative;\nwidth: 391px;\n}\n.editar-perfil-operador .posestandingshirt-3 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 593px;\nleft: 0;\nmin-width: 391px;\npadding: 0 75.7px;\nposition: absolute;\ntop: 108px;\n}\n.editar-perfil-operador .overlap-group {\nheight: 612px;\nmargin-top: -15.42px;\nposition: relative;\nwidth: 212px;\n}\n.editar-perfil-operador .skin {\nheight: 610px;\nleft: 1px;\nposition: absolute;\ntop: 0;\nwidth: 209px;\n}\n.editar-perfil-operador .shoes {\nheight: 78px;\nleft: 0;\nposition: absolute;\ntop: 532px;\nwidth: 205px;\n}\n.editar-perfil-operador .top {\nheight: 277px;\nleft: 11px;\nposition: absolute;\ntop: 23px;\nwidth: 200px;\n}\n.editar-perfil-operador .ink {\nheight: 600px;\nleft: 0;\nposition: absolute;\ntop: 11px;\nwidth: 212px;\n}\n.editar-perfil-operador .overlap-group1 {\nheight: 134px;\nleft: 125px;\nposition: absolute;\ntop: 0;\nwidth: 112px;\n}\n.editar-perfil-operador .head-short-4 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 134px;\njustify-content: flex-end;\nleft: 0;\nmin-width: 112px;\npadding: 3.0px 9.2px;\nposition: absolute;\ntop: 0;\n}\n.editar-perfil-operador .overlap-group-1 {\nheight: 121px;\nposition: relative;\nwidth: 91px;\n}\n.editar-perfil-operador .skin-1 {\nheight: 116px;\nleft: 4px;\nposition: absolute;\ntop: 2px;\nwidth: 86px;\n}\n.editar-perfil-operador .hair {\nheight: 69px;\nleft: 7px;\nposition: absolute;\ntop: 4px;\nwidth: 83px;\n}\n.editar-perfil-operador .fill-4 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 24px;\nwidth: 1px;\n}\n.editar-perfil-operador .fill-6 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 25px;\nwidth: 1px;\n}\n.editar-perfil-operador .ink-1 {\nheight: 121px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 91px;\n}\n.editar-perfil-operador .facial-hair-moustache-7 {\nheight: 55px;\nleft: 28px;\nposition: absolute;\ntop: 79px;\nwidth: 67px;\n}\n.editar-perfil-operador .face-old {\nalign-items: flex-end;\ndisplay: flex;\nheight: 69px;\nleft: 38px;\nmin-width: 69px;\npadding: 13.0px 11.4px;\nposition: absolute;\ntop: 44px;\n}\n.editar-perfil-operador .ink-2 {\nheight: 42px;\nwidth: 45px;\n}\n.nick .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.nombre .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.contrasea-actual .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.apellidos .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.contrasea-nueva .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nwidth: 350px;\nheight: 60px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -24268,7 +24264,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.scrolling {\nalign-items: flex-start;\ndisplay: flex;\nwidth: 1920px;\nheight: 324px;\n}\n.flex-col-10 {\nalign-items: flex-start;\ndisplay: flex;\nflex-direction: column;\nmargin-left: 100px;\nwidth: 488px;\n}\n.file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.file:hover {\ntransform: scale(1.1);\n}\n.info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: var(--white);\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.pendiente {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.pendiente {\nheight: auto !important;\nwidth: auto !important;\n}\n.pendiente span {\ncolor: var(--mdc-theme-secondary);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.margin-container {\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\n}\n.file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.file:hover {\ntransform: scale(1.1);\n}\n.info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: var(--white);\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.pendiente {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.pendiente {\nheight: auto !important;\nwidth: auto !important;\n}\n.pendiente span {\ncolor: var(--mdc-theme-secondary);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28706,15 +28702,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("input", {
-        attrs: {
-          type: "hidden",
-          id: "anPageName",
-          name: "page",
-          value: "editar-perfil-operador",
-        },
-      }),
-      _vm._v(" "),
       _c("div", { staticClass: "container-center-horizontal" }, [
         _c("div", { staticClass: "editar-perfil-operador screen" }, [
           _c(
@@ -28753,7 +28740,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                            Dirección de correo electrónico\n                        "
+                      "\n                        Dirección de correo electrónico\n                    "
                     ),
                   ]
                 ),
@@ -28772,7 +28759,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                            account_box\n                        "
+                      "\n                        account_box\n                    "
                     ),
                   ]
                 ),
@@ -28800,7 +28787,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                            Nombre\n                        "
+                      "\n                        Nombre\n                    "
                     ),
                   ]
                 ),
@@ -28819,7 +28806,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                            account_circle\n                        "
+                      "\n                        account_circle\n                    "
                     ),
                   ]
                 ),
@@ -28847,7 +28834,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                            Contraseña actual\n                        "
+                      "\n                        Contraseña actual\n                    "
                     ),
                   ]
                 ),
@@ -28866,7 +28853,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                            lock\n                        "
+                      "\n                        lock\n                    "
                     ),
                   ]
                 ),
@@ -28882,7 +28869,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("span", { staticClass: "mdc-button__label" }, [
                 _vm._v(
-                  "\n                            Aceptar cambios\n                        "
+                  "\n                        Aceptar cambios\n                    "
                 ),
               ]),
             ]),
@@ -28894,7 +28881,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("span", { staticClass: "mdc-button__label" }, [
                 _vm._v(
-                  "\n                            Cancelar\n                        "
+                  "\n                        Cancelar\n                    "
                 ),
               ]),
             ]),
@@ -28918,7 +28905,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                            Apellidos\n                        "
+                      "\n                        Apellidos\n                    "
                     ),
                   ]
                 ),
@@ -28937,7 +28924,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                            account_circle\n                        "
+                      "\n                        account_circle\n                    "
                     ),
                   ]
                 ),
@@ -28965,7 +28952,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                            Contraseña nueva\n                        "
+                      "\n                        Contraseña nueva\n                    "
                     ),
                   ]
                 ),
@@ -28984,7 +28971,7 @@ var staticRenderFns = [
                   },
                   [
                     _vm._v(
-                      "\n                            lock\n                        "
+                      "\n                        lock\n                    "
                     ),
                   ]
                 ),
@@ -29137,23 +29124,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("input", {
-        attrs: {
-          type: "hidden",
-          id: "anPageName",
-          name: "page",
-          value: "scrolling0",
-        },
-      }),
-      _vm._v(" "),
       _c(
         "h1",
         { staticClass: "title valign-text-middle gothica1-normal-black-28px" },
         [_vm._v("\n        Expedientes\n    ")]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "scrolling" }, [
-        _c("div", { staticClass: "flex-col-10" }, [
+      _c("div", { staticClass: "margin-container" }, [
+        _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "file" }, [
             _c("div", { staticClass: "window-expediente-container" }, [
               _c("div", { staticClass: "window-expediente-shadow" }),
