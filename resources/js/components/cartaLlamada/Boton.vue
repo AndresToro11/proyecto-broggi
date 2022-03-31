@@ -6,7 +6,29 @@
         <h3>boton</h3>
         <button type="button">Cancelar</button>
         <button type="button" @click="dataHora()">Aceptar</button>
-        <expedientes-relacionados></expedientes-relacionados>
+        <h3>Expedientes Relacionados: {{expedienteRelacionado}}</h3>
+        <span>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nº Expediente</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Localizacion</th>
+                        <th scope="col">Tipificacion</th>
+                        <th scope="col">Boton</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(pruebaCarta, index) in pruebaCartas" :key="index">
+                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">{{pruebaCarta.expedients_id}}</td>
+                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">{{pruebaCarta.telefon}}</td>
+                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">{{pruebaCarta.municipis_id}}</td>
+                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">{{pruebaCarta.incidents_id}}</td>
+                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id"> <button type="button" @click="expedienteRela(pruebaCarta.expedients_id)">Check</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </span>
         <h4>Funciona</h4>
     </div>
 </template>
@@ -14,8 +36,9 @@
 export default {
     data() {
         return {
+            expedienteRelacionado: null,
             idDatosPersonales: [],
-            pruebaCarta: [],
+            pruebaCartas: [],
             cartaLlamada: {
                 codi_trucada: 32135,
                 data_hora: "",
@@ -59,7 +82,7 @@ export default {
                 .get("/llamadas")
                 .then((response) => {
                     console.log("Datos Personales");
-                    me.pruebaCarta = response.data;
+                    me.pruebaCartas = response.data;
                 })
                 .catch((error) => {
                     this.console.log("Error:");
@@ -100,6 +123,11 @@ export default {
             this.cartaLlamada.data_hora = fechaYHora;
             console.log('objeto:'+this.cartaLlamada.data_hora);
             let codi_trucada = 0;
+            if (this.expedienteRelacionado!= null) {
+                this.cartaLlamada.expedients_id=this.expedienteRelacionado;
+            }else{
+                this.cartaLlamada.expedients_id=null;
+            }
             for (let index = 0; index < this.pruebaCarta.length; index++) {
                 if (this.pruebaCarta[index].codi_trucada > codi_trucada) {
                     codi_trucada = this.pruebaCarta[index].codi_trucada;
@@ -107,6 +135,9 @@ export default {
             }
             this.cartaLlamada.codi_trucada = codi_trucada+1;
             setTimeout(this.insertBD,2000);
+        },
+        expedienteRela(idExpediente){
+            this.expedienteRelacionado = idExpediente;
         },
         insertBD(){
             let me = this;

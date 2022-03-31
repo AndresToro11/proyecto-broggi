@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Clases\Utilitat;
 use App\Models\Expedient;
 use Illuminate\Http\Request;
 use App\Models\Carta_trucada;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\QueryException;
 use App\Http\Resources\ExpedientResource;
 
 class ExpedientController extends Controller
@@ -40,7 +42,19 @@ class ExpedientController extends Controller
      */
     public function store(Request $request)
     {
+        $expediente = new Expedient();
 
+        $expediente->codi_trucada = $request->codi_trucada;
+        try {
+            $expediente->save();
+            $response = response()->json(['message' => 'OK ALL'], 201);
+        } catch (QueryException $ex) {
+            $mensaje = Utilitat::errorMessage($ex);
+            $response = \response()
+                ->json(['error' => $mensaje], 400);
+        }
+
+        return $response;
     }
 
     /**

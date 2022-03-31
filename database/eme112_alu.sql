@@ -59,7 +59,7 @@ DROP TABLE IF EXISTS `cartes_trucades`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cartes_trucades` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `codi_trucada` varchar(45) NOT NULL,
+  `codi_trucada` int(11) NOT NULL,
   `data_hora` datetime DEFAULT NULL,
   `temps_trucada` int(11) DEFAULT NULL,
   `dades_personals_id` int(11),
@@ -258,7 +258,7 @@ CREATE TABLE `expedients` (
   CONSTRAINT `fk_expedients_estats_expedients1` FOREIGN KEY (`estats_expedients_id`) REFERENCES `estats_expedients` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
+INSERT INTO expedients VALUES (null,'2022-03-22 11:29:47','2022-03-22 11:29:47',1);
 --
 -- Dumping data for table `expedients`
 --

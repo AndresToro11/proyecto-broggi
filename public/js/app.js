@@ -5376,11 +5376,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      expedienteRelacionado: null,
       idDatosPersonales: [],
-      pruebaCarta: [],
+      pruebaCartas: [],
       cartaLlamada: {
         codi_trucada: 32135,
         data_hora: "",
@@ -5423,7 +5446,7 @@ __webpack_require__.r(__webpack_exports__);
       });
       axios.get("/llamadas").then(function (response) {
         console.log("Datos Personales");
-        me.pruebaCarta = response.data;
+        me.pruebaCartas = response.data;
       })["catch"](function (error) {
         _this.console.log("Error:");
 
@@ -5457,6 +5480,12 @@ __webpack_require__.r(__webpack_exports__);
       console.log('objeto:' + this.cartaLlamada.data_hora);
       var codi_trucada = 0;
 
+      if (this.expedienteRelacionado != null) {
+        this.cartaLlamada.expedients_id = this.expedienteRelacionado;
+      } else {
+        this.cartaLlamada.expedients_id = null;
+      }
+
       for (var index = 0; index < this.pruebaCarta.length; index++) {
         if (this.pruebaCarta[index].codi_trucada > codi_trucada) {
           codi_trucada = this.pruebaCarta[index].codi_trucada;
@@ -5465,6 +5494,9 @@ __webpack_require__.r(__webpack_exports__);
 
       this.cartaLlamada.codi_trucada = codi_trucada + 1;
       setTimeout(this.insertBD, 2000);
+    },
+    expedienteRela: function expedienteRela(idExpediente) {
+      this.expedienteRelacionado = idExpediente;
     },
     insertBD: function insertBD() {
       var me = this;
@@ -5914,29 +5946,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  mounted: function mounted() {
-    console.log("Component mounted.");
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/expedientes.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/expedientes.vue?vue&type=script&lang=js& ***!
@@ -6335,7 +6344,6 @@ Vue.component('login', (__webpack_require__(/*! ./components/login.vue */ "./res
 Vue.component('datos-administrativos', (__webpack_require__(/*! ./components/cartaLlamada/DatosAdministrativos.vue */ "./resources/js/components/cartaLlamada/DatosAdministrativos.vue")["default"]));
 Vue.component('datos-incidentes', (__webpack_require__(/*! ./components/cartaLlamada/DatosIncidente.vue */ "./resources/js/components/cartaLlamada/DatosIncidente.vue")["default"]));
 Vue.component('datos-personales', (__webpack_require__(/*! ./components/cartaLlamada/DatosPersonales.vue */ "./resources/js/components/cartaLlamada/DatosPersonales.vue")["default"]));
-Vue.component('expedientes-relacionados', (__webpack_require__(/*! ./components/cartaLlamada/ExpedientesRelacionados.vue */ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue")["default"]));
 Vue.component('enviar-datos', (__webpack_require__(/*! ./components/cartaLlamada/Boton.vue */ "./resources/js/components/cartaLlamada/Boton.vue")["default"])); //------------------------------------------- Expedientes --------------------------------
 
 Vue.component('expedientes', (__webpack_require__(/*! ./components/expedientes.vue */ "./resources/js/components/expedientes.vue")["default"])); //--------------------------------------------- Grafico ----------------------------------
@@ -42351,45 +42359,6 @@ component.options.__file = "resources/js/components/cartaLlamada/DatosPersonales
 
 /***/ }),
 
-/***/ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue":
-/*!**************************************************************************!*\
-  !*** ./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6& */ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6&");
-/* harmony import */ var _ExpedientesRelacionados_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExpedientesRelacionados.vue?vue&type=script&lang=js& */ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ExpedientesRelacionados_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__.render,
-  _ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/cartaLlamada/ExpedientesRelacionados.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/components/expedientes.vue":
 /*!*************************************************!*\
   !*** ./resources/js/components/expedientes.vue ***!
@@ -42688,22 +42657,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************!*\
-  !*** ./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ExpedientesRelacionados.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
 /***/ "./resources/js/components/expedientes.vue?vue&type=script&lang=js&":
 /*!**************************************************************************!*\
   !*** ./resources/js/components/expedientes.vue?vue&type=script&lang=js& ***!
@@ -42868,23 +42821,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6&":
-/*!*********************************************************************************************************!*\
-  !*** ./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6& ***!
-  \*********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpedientesRelacionados_vue_vue_type_template_id_0d42e0a6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6&");
-
-
-/***/ }),
-
 /***/ "./resources/js/components/expedientes.vue?vue&type=template&id=0457f391&":
 /*!********************************************************************************!*\
   !*** ./resources/js/components/expedientes.vue?vue&type=template&id=0457f391& ***!
@@ -43033,14 +42969,96 @@ var render = function () {
         [_vm._v("Aceptar")]
       ),
       _vm._v(" "),
-      _c("expedientes-relacionados"),
+      _c("h3", [
+        _vm._v(
+          "Expedientes Relacionados: " + _vm._s(_vm.expedienteRelacionado)
+        ),
+      ]),
+      _vm._v(" "),
+      _c("span", [
+        _c("table", { staticClass: "table" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.pruebaCartas, function (pruebaCarta, index) {
+              return _c("tr", { key: index }, [
+                pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
+                pruebaCarta.municipis_id == _vm.cartaLlamada.municipis_id ||
+                pruebaCarta.incidents_id == _vm.cartaLlamada.incidents_id
+                  ? _c("td", [_vm._v(_vm._s(pruebaCarta.expedients_id))])
+                  : _vm._e(),
+                _vm._v(" "),
+                pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
+                pruebaCarta.municipis_id == _vm.cartaLlamada.municipis_id ||
+                pruebaCarta.incidents_id == _vm.cartaLlamada.incidents_id
+                  ? _c("td", [_vm._v(_vm._s(pruebaCarta.telefon))])
+                  : _vm._e(),
+                _vm._v(" "),
+                pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
+                pruebaCarta.municipis_id == _vm.cartaLlamada.municipis_id ||
+                pruebaCarta.incidents_id == _vm.cartaLlamada.incidents_id
+                  ? _c("td", [_vm._v(_vm._s(pruebaCarta.municipis_id))])
+                  : _vm._e(),
+                _vm._v(" "),
+                pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
+                pruebaCarta.municipis_id == _vm.cartaLlamada.municipis_id ||
+                pruebaCarta.incidents_id == _vm.cartaLlamada.incidents_id
+                  ? _c("td", [_vm._v(_vm._s(pruebaCarta.incidents_id))])
+                  : _vm._e(),
+                _vm._v(" "),
+                pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
+                pruebaCarta.municipis_id == _vm.cartaLlamada.municipis_id ||
+                pruebaCarta.incidents_id == _vm.cartaLlamada.incidents_id
+                  ? _c("td", [
+                      _c(
+                        "button",
+                        {
+                          attrs: { type: "button" },
+                          on: {
+                            click: function ($event) {
+                              return _vm.expedienteRela(
+                                pruebaCarta.expedients_id
+                              )
+                            },
+                          },
+                        },
+                        [_vm._v("Check")]
+                      ),
+                    ])
+                  : _vm._e(),
+              ])
+            }),
+            0
+          ),
+        ]),
+      ]),
       _vm._v(" "),
       _c("h4", [_vm._v("Funciona")]),
     ],
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Nº Expediente")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Telefono")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Localizacion")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Tipificacion")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Boton")]),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -43979,31 +43997,6 @@ var render = function () {
       },
     }),
   ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6&":
-/*!************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cartaLlamada/ExpedientesRelacionados.vue?vue&type=template&id=0d42e0a6& ***!
-  \************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("h3", [_vm._v("Expedientes Relacionados")])
 }
 var staticRenderFns = []
 render._withStripped = true
