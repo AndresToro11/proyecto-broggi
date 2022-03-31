@@ -30,9 +30,6 @@ Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncide
 Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default); //Acabado
 Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
 Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
-Vue.component('deCualquierManera', require('./components/cartaLlamada/CartaDeLlamada.vue').default);
-Vue.component('deCualquierManera', require('./components/cartaLlamada/CartaDeLlamada.vue').default);
-Vue.component('carta-llamada', require('./components/cartaLlamada/Carta_de_llamada.vue').default);
 
 //------------------------------------------- Expedientes --------------------------------
 
