@@ -5,7 +5,7 @@
         </h1>
         <div class="margin-container">
             <div class="container">
-                <div class="file">
+                <div class="file" data-open="modalWindow" @click="modalVisible">
                     <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
                         <div class="window-expediente-shadow"></div>
                         <div class="window-expediente"></div>
@@ -62,6 +62,14 @@
                 </div>
             </div>
         </div>
+        <div class="modal" id="modalWindow">
+            <button class="close-modal" data-close @click="modalInvisible">
+                X
+            </button>
+            <h1 class="textModal">
+                Esto es un modal
+            </h1>
+        </div>
     </div>
 </template>
 
@@ -74,28 +82,82 @@
             }
         },
         methods:{
-            selectExpedientes(){
-                this.loading = true;
-                let me = this;
-                axios
-                    .get('/expedientes')
-                    .then(response => {
-                        me.expedientes = response.data;
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    })
-                    .finally(() => this.loading = false);
+            modalVisible(){
+                const openEls = document.querySelector("[data-open]");
+                const modalId = openEls.dataset.open;
+                const isVisible = "is-visible";
+                document.getElementById(modalId).classList.add(isVisible);
+            },
+            modalInvisible(){
+                const closeEls = document.querySelectorAll("[data-close]");
+                const modalIdClose = closeEls.dataset.close;
+                document.getElementById(modalIdClose).classList.remove(isVisible);
+            },
+            modalFunction() {
+                document.addEventListener("click", e => {
+                    if (e.target == document.querySelector(".modal.is-visible")) {
+                    document.querySelector(".modal.is-visible [data-close]").click();
+                    }
+                });
+                document.addEventListener("keyup", e => {
+                    if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+                    document.querySelector(".modal.is-visible [data-close]").click();
+                    }
+                });
             }
-        },
-        mounted() {
-            console.log('¡¡Componente expedientes up!!')
-            this.selectExpedientes();
         }
     }
 </script>
 
 <style>
+    /* Modal: */
+    /* Modal: */
+    /* Modal: */
+    /* Modal: */
+    /* Modal: */
+
+    button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    color: #fff;
+    }
+
+    .modal .close-modal {
+    font-size: 1.5rem;
+    }
+    .textModal {
+    color: #fff;
+    }
+
+    .modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: black;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+    }
+
+    .modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+    }
+    /* Modal: */
+    /* Modal: */
+    /* Modal: */
+    /* Modal: */
+    /* Modal: */
     .margin-container {
     margin-left: 102px;
     margin-right: 102px;

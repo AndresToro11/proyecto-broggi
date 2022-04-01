@@ -10333,6 +10333,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -10341,23 +10349,29 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    selectExpedientes: function selectExpedientes() {
-      var _this = this;
-
-      this.loading = true;
-      var me = this;
-      axios.get('/expedientes').then(function (response) {
-        me.expedientes = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
+    modalVisible: function modalVisible() {
+      var openEls = document.querySelector("[data-open]");
+      var modalId = openEls.dataset.open;
+      var isVisible = "is-visible";
+      document.getElementById(modalId).classList.add(isVisible);
+    },
+    modalInvisible: function modalInvisible() {
+      var closeEls = document.querySelectorAll("[data-close]");
+      var modalIdClose = closeEls.dataset.close;
+      document.getElementById(modalIdClose).classList.remove(isVisible);
+    },
+    modalFunction: function modalFunction() {
+      document.addEventListener("click", function (e) {
+        if (e.target == document.querySelector(".modal.is-visible")) {
+          document.querySelector(".modal.is-visible [data-close]").click();
+        }
+      });
+      document.addEventListener("keyup", function (e) {
+        if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+          document.querySelector(".modal.is-visible [data-close]").click();
+        }
       });
     }
-  },
-  mounted: function mounted() {
-    console.log('¡¡Componente expedientes up!!');
-    this.selectExpedientes();
   }
 });
 
@@ -24264,7 +24278,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.margin-container {\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\n}\n.file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.file:hover {\ntransform: scale(1.1);\n}\n.info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: var(--white);\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.pendiente {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.pendiente {\nheight: auto !important;\nwidth: auto !important;\n}\n.pendiente span {\ncolor: var(--mdc-theme-secondary);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\nbutton {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: #fff;\n}\n.modal .close-modal {\nfont-size: 1.5rem;\n}\n.textModal {\ncolor: #fff;\n}\n.modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: black;\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\n}\n.modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.margin-container {\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\n}\n.file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.file:hover {\ntransform: scale(1.1);\n}\n.info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: var(--white);\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.pendiente {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.pendiente {\nheight: auto !important;\nwidth: auto !important;\n}\n.pendiente span {\ncolor: var(--mdc-theme-secondary);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29116,113 +29130,139 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c(
+      "h1",
+      { staticClass: "title valign-text-middle gothica1-normal-black-28px" },
+      [_vm._v("\n        Expedientes\n    ")]
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "margin-container" }, [
+      _c("div", { staticClass: "container" }, [
+        _c(
+          "div",
+          {
+            staticClass: "file",
+            attrs: { "data-open": "modalWindow" },
+            on: { click: _vm.modalVisible },
+          },
+          [_vm._m(0), _vm._v(" "), _vm._m(1)]
+        ),
+      ]),
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "modal", attrs: { id: "modalWindow" } }, [
+      _c(
+        "button",
+        {
+          staticClass: "close-modal",
+          attrs: { "data-close": "" },
+          on: { click: _vm.modalInvisible },
+        },
+        [_vm._v("\n            X\n        ")]
+      ),
+      _vm._v(" "),
+      _c("h1", { staticClass: "textModal" }, [
+        _vm._v("\n            Esto es un modal\n        "),
+      ]),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "h1",
-        { staticClass: "title valign-text-middle gothica1-normal-black-28px" },
-        [_vm._v("\n        Expedientes\n    ")]
-      ),
+    return _c("div", { staticClass: "window-expediente-container" }, [
+      _c("div", { staticClass: "window-expediente-shadow" }),
       _vm._v(" "),
-      _c("div", { staticClass: "margin-container" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "file" }, [
-            _c("div", { staticClass: "window-expediente-container" }, [
-              _c("div", { staticClass: "window-expediente-shadow" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "window-expediente" }),
+      _c("div", { staticClass: "window-expediente" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "info gothica1-normal-black-21px" }, [
+      _c("div", { staticClass: "flex-row" }, [
+        _c("div", { staticClass: "expediente valign-text-middle" }, [
+          _vm._v(
+            "\n                            Expediente\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "number valign-text-middle" }, [
+          _vm._v(
+            "\n                            00000001\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-1" }, [
+        _c("div", { staticClass: "operador valign-text-middle" }, [
+          _vm._v(
+            "\n                            Operador\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "name-profile valign-text-middle" }, [
+          _vm._v(
+            "\n                            Andrés Toro\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-2" }, [
+        _c("div", { staticClass: "fecha valign-text-middle" }, [
+          _vm._v(
+            "\n                            Fecha\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "date valign-text-middle" }, [
+          _vm._v(
+            "\n                            13/10/2022\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-3" }, [
+        _c("div", { staticClass: "hora valign-text-middle" }, [
+          _vm._v(
+            "\n                            Hora\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text valign-text-middle" }, [
+          _vm._v(
+            "\n                            22:34\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-4" }, [
+        _c("div", { staticClass: "estado valign-text-middle" }, [
+          _vm._v(
+            "\n                            Estado\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "pendiente" }, [
+          _c("div", { staticClass: "icon" }, [
+            _c("div", { staticClass: "vector-container" }, [
+              _c("img", {
+                staticClass: "vector",
+                attrs: {
+                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png",
+                },
+              }),
             ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "info gothica1-normal-black-21px" }, [
-              _c("div", { staticClass: "flex-row" }, [
-                _c("div", { staticClass: "expediente valign-text-middle" }, [
-                  _vm._v(
-                    "\n                            Expediente\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "number valign-text-middle" }, [
-                  _vm._v(
-                    "\n                            00000001\n                        "
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "flex-row-1" }, [
-                _c("div", { staticClass: "operador valign-text-middle" }, [
-                  _vm._v(
-                    "\n                            Operador\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "name-profile valign-text-middle" }, [
-                  _vm._v(
-                    "\n                            Andrés Toro\n                        "
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "flex-row-2" }, [
-                _c("div", { staticClass: "fecha valign-text-middle" }, [
-                  _vm._v(
-                    "\n                            Fecha\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "date valign-text-middle" }, [
-                  _vm._v(
-                    "\n                            13/10/2022\n                        "
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "flex-row-3" }, [
-                _c("div", { staticClass: "hora valign-text-middle" }, [
-                  _vm._v(
-                    "\n                            Hora\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "text valign-text-middle" }, [
-                  _vm._v(
-                    "\n                            22:34\n                        "
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "flex-row-4" }, [
-                _c("div", { staticClass: "estado valign-text-middle" }, [
-                  _vm._v(
-                    "\n                            Estado\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "pendiente" }, [
-                  _c("div", { staticClass: "icon" }, [
-                    _c("div", { staticClass: "vector-container" }, [
-                      _c("img", {
-                        staticClass: "vector",
-                        attrs: {
-                          src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png",
-                        },
-                      }),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "material-icons" }, [
-                    _vm._v(
-                      "\n                                schedule\n                            "
-                    ),
-                  ]),
-                ]),
-              ]),
-            ]),
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "material-icons" }, [
+            _vm._v(
+              "\n                                schedule\n                            "
+            ),
           ]),
         ]),
       ]),
