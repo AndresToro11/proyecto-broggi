@@ -10341,6 +10341,82 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -10356,22 +10432,27 @@ __webpack_require__.r(__webpack_exports__);
       document.getElementById(modalId).classList.add(isVisible);
     },
     modalInvisible: function modalInvisible() {
-      var closeEls = document.querySelectorAll("[data-close]");
+      var closeEls = document.querySelector("[data-close]");
       var modalIdClose = closeEls.dataset.close;
+      var isVisible = "is-visible";
       document.getElementById(modalIdClose).classList.remove(isVisible);
-    },
-    modalFunction: function modalFunction() {
-      document.addEventListener("click", function (e) {
-        if (e.target == document.querySelector(".modal.is-visible")) {
-          document.querySelector(".modal.is-visible [data-close]").click();
-        }
-      });
-      document.addEventListener("keyup", function (e) {
-        if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
-          document.querySelector(".modal.is-visible [data-close]").click();
-        }
-      });
-    }
+    } // modalOut(){
+    //     const closeEls = document.querySelector("[data-close]");
+    //     const modalIdClose = closeEls.dataset.close;
+    //     const isVisible = "is-visible";
+    //     document.getElementById(modalIdClose).classList.remove(isVisible);
+    //     document.addEventListener("click", e => {
+    //         if (e.target == document.querySelector(".modal.is-visible")) {
+    //         document.querySelector(".modal .is-visible [data-close]").click();
+    //         }
+    //     });
+    //     document.addEventListener("keyup", e => {
+    //         if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+    //         document.querySelector(".modal .is-visible [data-close]").click();
+    //         }
+    //     });
+    // }
+
   }
 });
 
@@ -24278,7 +24359,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\nbutton {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: #fff;\n}\n.modal .close-modal {\nfont-size: 1.5rem;\n}\n.textModal {\ncolor: #fff;\n}\n.modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: black;\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\n}\n.modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.margin-container {\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\n}\n.file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.file:hover {\ntransform: scale(1.1);\n}\n.info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: var(--white);\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.pendiente {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.pendiente {\nheight: auto !important;\nwidth: auto !important;\n}\n.pendiente span {\ncolor: var(--mdc-theme-secondary);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n#close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 1040px;\nmargin-top: 18px;\n}\n.modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\n}\n.modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\n}\n.x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nwidth: 32px;\n}\n.x span {\n    color: black;\n    font-size: 32px;\n}\n.modal-window {\nwidth: 1104px;\nheight: 526px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n.modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.expediente-modal {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n.modal-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.margin-container {\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\n}\n.file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.file:hover {\ntransform: scale(1.1);\n}\n.info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: var(--white);\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.pendiente {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.pendiente {\nheight: auto !important;\nwidth: auto !important;\n}\n.pendiente span {\ncolor: var(--mdc-theme-secondary);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29143,7 +29224,7 @@ var render = function () {
           "div",
           {
             staticClass: "file",
-            attrs: { "data-open": "modalWindow" },
+            attrs: { "data-open": "modalScreen" },
             on: { click: _vm.modalVisible },
           },
           [_vm._m(0), _vm._v(" "), _vm._m(1)]
@@ -29151,19 +29232,21 @@ var render = function () {
       ]),
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "modal", attrs: { id: "modalWindow" } }, [
-      _c(
-        "button",
-        {
-          staticClass: "close-modal",
-          attrs: { "data-close": "" },
-          on: { click: _vm.modalInvisible },
-        },
-        [_vm._v("\n            X\n        ")]
-      ),
-      _vm._v(" "),
-      _c("h1", { staticClass: "textModal" }, [
-        _vm._v("\n            Esto es un modal\n        "),
+    _c("div", { staticClass: "modal", attrs: { id: "modalScreen" } }, [
+      _c("div", { staticClass: "modal-window" }, [
+        _c("header", { staticClass: "modal-header" }, [
+          _c(
+            "div",
+            {
+              staticClass: "x",
+              attrs: { id: "close-modal", "data-close": "modalScreen" },
+              on: { click: _vm.modalInvisible },
+            },
+            [_c("span", { staticClass: "material-icons" }, [_vm._v("close")])]
+          ),
+        ]),
+        _vm._v(" "),
+        _vm._m(2),
       ]),
     ]),
   ])
@@ -29267,6 +29350,142 @@ var staticRenderFns = [
         ]),
       ]),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "modal-information gothica1-normal-black-21px" },
+      [
+        _c("div", { staticClass: "expediente-modal valign-text-middle" }, [
+          _vm._v("\n                        Expediente\n                    "),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-flex-row-1" }, [
+          _c("div", { staticClass: "codigo-modal valign-text-middle" }, [
+            _vm._v(
+              "\n                        Codigo de la llamada:\n                    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "info-codigo-modal valign-text-middle" }, [
+            _vm._v("\n                        00000001\n                    "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-flex-row-2" }, [
+          _c("div", { staticClass: "provincia-modal valign-text-middle" }, [
+            _vm._v(
+              "\n                        Provincia:\n                    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "info-provincia-modal valign-text-middle" },
+            [_vm._v("\n                        Lleida\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-flex-row-3" }, [
+          _c("div", { staticClass: "municipio-modal valign-text-middle" }, [
+            _vm._v("\n                        Municipio\n                    "),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "info-municipio-modal valign-text-middle" },
+            [_vm._v("\n                        Agramunt\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-flex-row-4" }, [
+          _c(
+            "div",
+            { staticClass: "fuera-Catalunya-modal valign-text-middle" },
+            [
+              _vm._v(
+                "\n                        Fuera de Catalunya:\n                    "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "info-fuera-Catalunya-modal valign-text-middle" },
+            [_vm._v("\n                        No\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-flex-row-5" }, [
+          _c("div", { staticClass: "incidente-modal valign-text-middle" }, [
+            _vm._v(
+              "\n                        Incidente:\n                    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "info-incidente-modal valign-text-middle" },
+            [
+              _vm._v(
+                "\n                        Derrumbamiento de un edificio\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-flex-row-6" }, [
+          _c("div", { staticClass: "direccion-modal valign-text-middle" }, [
+            _vm._v(
+              "\n                        Direccion:\n                    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "info-direccion-modal valign-text-middle" },
+            [_vm._v("\n                        SQY\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-flex-row-7" }, [
+          _c("div", { staticClass: "duracion-modal valign-text-middle" }, [
+            _vm._v(
+              "\n                        Duracion de la llamada:\n                    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "info-duracion-modal valign-text-middle" }, [
+            _vm._v("\n                        00:04:31\n                    "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-flex-col" }, [
+          _c("div", { staticClass: "modal-flex-row-8" }, [
+            _c("div", { staticClass: "notaComun-modal valign-text-middle" }, [
+              _vm._v(
+                "\n                            Nota comun:\n                        "
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "modal-flex-row-9" }, [
+            _c(
+              "div",
+              { staticClass: "info-notaComun-modal valign-text-middle" },
+              [
+                _vm._v(
+                  "\n                            Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.\n                        "
+                ),
+              ]
+            ),
+          ]),
+        ]),
+      ]
+    )
   },
 ]
 render._withStripped = true

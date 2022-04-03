@@ -3,9 +3,9 @@
         <h1 class="title valign-text-middle gothica1-normal-black-28px">
             Expedientes
         </h1>
-        <div class="margin-container">
+        <div class="margin-container"> <!-- TODO: File -->
             <div class="container">
-                <div class="file" data-open="modalWindow" @click="modalVisible">
+                <div class="file" data-open="modalScreen" @click="modalVisible">
                     <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
                         <div class="window-expediente-shadow"></div>
                         <div class="window-expediente"></div>
@@ -62,13 +62,89 @@
                 </div>
             </div>
         </div>
-        <div class="modal" id="modalWindow">
-            <button class="close-modal" data-close @click="modalInvisible">
-                X
-            </button>
-            <h1 class="textModal">
-                Esto es un modal
-            </h1>
+        <div class="modal" id="modalScreen"> <!-- TODO: Modal --> <!-- modalOut -->
+            <div class="modal-window">
+                <header class="modal-header">
+                    <div class="x" id="close-modal" data-close="modalScreen" @click="modalInvisible">
+                        <span class="material-icons">close</span>
+                    </div>
+                </header>
+                <div class="modal-information gothica1-normal-black-21px">
+                    <!-- <div class="modal-flex-row"> FIXME: Expediente -->
+                        <div class="expediente-modal valign-text-middle">
+                            Expediente
+                        </div>
+                    <!-- </div> -->
+                    <div class="modal-flex-row-1"> <!-- FIXME: Codigo de la llamada -->
+                        <div class="codigo-modal valign-text-middle">
+                            Codigo de la llamada:
+                        </div>
+                        <div class="info-codigo-modal valign-text-middle">
+                            00000001
+                        </div>
+                    </div>
+                    <div class="modal-flex-row-2"> <!-- FIXME: Provincia -->
+                        <div class="provincia-modal valign-text-middle">
+                            Provincia:
+                        </div>
+                        <div class="info-provincia-modal valign-text-middle">
+                            Lleida
+                        </div>
+                    </div>
+                    <div class="modal-flex-row-3"> <!-- FIXME: Municipio -->
+                        <div class="municipio-modal valign-text-middle">
+                            Municipio
+                        </div>
+                        <div class="info-municipio-modal valign-text-middle">
+                            Agramunt
+                        </div>
+                    </div>
+                    <div class="modal-flex-row-4"> <!-- FIXME: Fuera de Catalunya -->
+                        <div class="fuera-Catalunya-modal valign-text-middle">
+                            Fuera de Catalunya:
+                        </div>
+                        <div class="info-fuera-Catalunya-modal valign-text-middle">
+                            No
+                        </div>
+                    </div>
+                    <div class="modal-flex-row-5"> <!-- FIXME: Incidente -->
+                        <div class="incidente-modal valign-text-middle">
+                            Incidente:
+                        </div>
+                        <div class="info-incidente-modal valign-text-middle">
+                            Derrumbamiento de un edificio
+                        </div>
+                    </div>
+                    <div class="modal-flex-row-6"> <!-- FIXME: Direccion -->
+                        <div class="direccion-modal valign-text-middle">
+                            Direccion:
+                        </div>
+                        <div class="info-direccion-modal valign-text-middle">
+                            SQY
+                        </div>
+                    </div>
+                    <div class="modal-flex-row-7"> <!-- FIXME: Duracion de la llamada -->
+                        <div class="duracion-modal valign-text-middle">
+                            Duracion de la llamada:
+                        </div>
+                        <div class="info-duracion-modal valign-text-middle">
+                            00:04:31
+                        </div>
+                    </div>
+                    <div class="modal-flex-col"> <!-- FIXME: Nota comun -->
+                        <div class="modal-flex-row-8">
+                            <div class="notaComun-modal valign-text-middle">
+                                Nota comun:
+                            </div>
+                        </div>
+                        <div class="modal-flex-row-9">
+                            <div class="info-notaComun-modal valign-text-middle">
+                                Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -82,29 +158,34 @@
             }
         },
         methods:{
-            modalVisible(){
+            modalVisible() {
                 const openEls = document.querySelector("[data-open]");
                 const modalId = openEls.dataset.open;
                 const isVisible = "is-visible";
                 document.getElementById(modalId).classList.add(isVisible);
             },
-            modalInvisible(){
-                const closeEls = document.querySelectorAll("[data-close]");
+            modalInvisible() {
+                const closeEls = document.querySelector("[data-close]");
                 const modalIdClose = closeEls.dataset.close;
+                const isVisible = "is-visible";
                 document.getElementById(modalIdClose).classList.remove(isVisible);
             },
-            modalFunction() {
-                document.addEventListener("click", e => {
-                    if (e.target == document.querySelector(".modal.is-visible")) {
-                    document.querySelector(".modal.is-visible [data-close]").click();
-                    }
-                });
-                document.addEventListener("keyup", e => {
-                    if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
-                    document.querySelector(".modal.is-visible [data-close]").click();
-                    }
-                });
-            }
+            // modalOut(){
+            //     const closeEls = document.querySelector("[data-close]");
+            //     const modalIdClose = closeEls.dataset.close;
+            //     const isVisible = "is-visible";
+            //     document.getElementById(modalIdClose).classList.remove(isVisible);
+            //     document.addEventListener("click", e => {
+            //         if (e.target == document.querySelector(".modal.is-visible")) {
+            //         document.querySelector(".modal .is-visible [data-close]").click();
+            //         }
+            //     });
+            //     document.addEventListener("keyup", e => {
+            //         if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+            //         document.querySelector(".modal .is-visible [data-close]").click();
+            //         }
+            //     });
+            // }
         }
     }
 </script>
@@ -115,21 +196,15 @@
     /* Modal: */
     /* Modal: */
     /* Modal: */
-
-    button {
+    #close-modal {
     cursor: pointer;
     background: transparent;
     border: none;
     outline: none;
     font-size: inherit;
-    color: #fff;
-    }
-
-    .modal .close-modal {
-    font-size: 1.5rem;
-    }
-    .textModal {
-    color: #fff;
+    color: black;
+    margin-left: 1040px;
+    margin-top: 18px;
     }
 
     .modal{
@@ -142,16 +217,63 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background: black;
+    background: rgba(0, 0, 0, 0.800);
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
     transition: all 0.35s ease-in;
     }
 
+    .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .x {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    width: 32px;
+    }
+
+    .x span {
+        color: black;
+        font-size: 32px;
+    }
+
+    .modal-window {
+    width: 1104px;
+    height: 526px;
+    border-radius: 32px;
+    background: white;
+    cursor: default;
+    z-index: 99;
+    }
+
     .modal.is-visible {
     visibility: visible;
     opacity: 1;
+    }
+
+    .expediente-modal {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    white-space: nowrap;
+    font-size: 28px;
+    margin-left: 40px
+    }
+
+    .modal-flex-row-1 {
+    height: 16px;
+    width: 411px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-left: 40px;
+    margin-top: 53px;
     }
     /* Modal: */
     /* Modal: */
