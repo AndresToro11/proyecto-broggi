@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Clases\Utilitat;
 use App\Models\Perfil;
 use App\Models\Usuari;
+use App\Clases\Utilitat;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\Http\Resources\Admin\RolesResource;
-use App\Http\Resources\Admin\UsuariosResource;
+use App\Http\Resources\Admin\DefaultResource;
 
 class AdminController extends Controller
 {
@@ -62,7 +62,7 @@ class AdminController extends Controller
                         ->where('id','!=', 3)
                         ->get();
 
-        return UsuariosResource::collection($result);
+        return DefaultResource::collection($result);
     }
 
     public function insertUsuario(Request $request)
