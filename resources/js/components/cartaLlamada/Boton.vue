@@ -5,7 +5,7 @@
         <datos-incidentes @get-dataincidente="getDataIncidente"></datos-incidentes>
         <h3>boton</h3>
         <button type="button">Cancelar</button>
-        <button type="button" @click="dataHora()">Aceptar</button>
+        <button type="button" @click="camposExtra()">Aceptar</button>
         <h3>Expedientes Relacionados: {{expedienteRelacionado}}</h3>
         <span>
             <table class="table">
@@ -15,7 +15,7 @@
                         <th scope="col">Telefono</th>
                         <th scope="col">Localizacion</th>
                         <th scope="col">Tipificacion</th>
-                        <th scope="col">Boton</th>
+                        <th scope="col"><button type="button" @click="expedienteRela(null)">Check</button></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,7 +29,6 @@
                 </tbody>
             </table>
         </span>
-        <h4>Funciona</h4>
     </div>
 </template>
 <script>
@@ -39,11 +38,16 @@ export default {
             expedienteRelacionado: null,
             idDatosPersonales: [],
             pruebaCartas: [],
+            expediente:{
+                id: null,
+                data_creacio: "",
+                data_ultima_modificacio:"",
+                estats_expedients_id: 2,
+            },
             cartaLlamada: {
-                codi_trucada: 32135,
                 data_hora: "",
                 temps_trucada: 3,
-                dades_personals_id: 1,
+                dades_personals_id: null,
                 telefon: " ",
                 procedencia_trucada: " ",
                 origen_trucada: " ",
@@ -58,7 +62,7 @@ export default {
                 // altres_ref_localitzacio: "",
                 incidents_id: " ",
                 nota_comuna: " ",
-                expedients_id: 1,
+                expedients_id: null,
                 usuaris_id: 1,
             },
         };
@@ -114,26 +118,19 @@ export default {
         getDataAdministrativos(contador) {
             this.contador = contador;
         },
-        dataHora() {
+        camposExtra() {
             let hoy = new Date();
             let fecha = hoy.getFullYear() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getDate();
             let hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
             let fechaYHora = fecha + ' ' + hora;
-            console.log('string:'+fechaYHora);
             this.cartaLlamada.data_hora = fechaYHora;
             console.log('objeto:'+this.cartaLlamada.data_hora);
             let codi_trucada = 0;
             if (this.expedienteRelacionado!= null) {
                 this.cartaLlamada.expedients_id=this.expedienteRelacionado;
             }else{
-                this.cartaLlamada.expedients_id=null;
+                this.cartaLlamada.expedients_id = null;
             }
-            for (let index = 0; index < this.pruebaCarta.length; index++) {
-                if (this.pruebaCarta[index].codi_trucada > codi_trucada) {
-                    codi_trucada = this.pruebaCarta[index].codi_trucada;
-                }
-            }
-            this.cartaLlamada.codi_trucada = codi_trucada+1;
             setTimeout(this.insertBD,2000);
         },
         expedienteRela(idExpediente){
@@ -141,30 +138,51 @@ export default {
         },
         insertBD(){
             let me = this;
+            if (this.cartaLlamada.expedients_id==null) {
+                this.expediente.data_creacio=this.cartaLlamada.data_hora;
+                this.expediente.data_ultima_modificacio=this.cartaLlamada.data_hora;
             axios
-                .post("/llamadas", me.cartaLlamada)
+                .post("/expediente", me.expediente)
                 .then(function (response) {
-                    console.log("Insert OK");
+                    console.log("expediente OK");
+                     me.cartaLlamada.expedients_id = response.data.id;
 
-                })
+                        axios
+                        .post("/llamadas", me.cartaLlamada)
+                        .then(function (response) {
+                            console.log("CartaLlamada OK");
+
+                        })
+                        .catch(function (error) {
+                            this.console.log("Error:");
+                            console.log(error);
+                        });
+
+                    })
                 .catch(function (error) {
                     this.console.log("Error:");
                     console.log(error);
                 });
+            }else{
+                axios
+                        .post("/llamadas", me.cartaLlamada)
+                        .then(function (response) {
+                            console.log("CartaLlamada OK");
+                        })
+                        .catch(function (error) {
+                            this.console.log("Error:");
+                            console.log(error);
+                        });
+            }
+
         }
     },
     computed: {
         descripcioLocalitzacio: function () {
             let varianle = -1;
             for (
-                let index = 0;
-                index < this.idDatosPersonales.length;
-                index++
-            ) {
-                if (
-                    cartaLlamada.telefon ==
-                    this.idDatosPersonales.telefono[index]
-                ) {
+                let index = 0; index < this.idDatosPersonales.length; index++) {
+                if (  cartaLlamada.telefon == this.idDatosPersonales.telefono[index] ) {
                     varianle = this.idDatosPersonales.id[index];
                 }
             }

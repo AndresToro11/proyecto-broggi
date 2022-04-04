@@ -8,6 +8,7 @@ use App\Models\Carta_trucada;
 use App\Http\Controllers\Controller;
 use Illuminate\Database\QueryException;
 use App\Http\Resources\CartaTrucadaResource;
+use SebastianBergmann\Environment\Console;
 
 class CartaLlamadaController extends Controller
 {
@@ -32,7 +33,6 @@ class CartaLlamadaController extends Controller
     {
         $carta_trucada = new Carta_trucada();
 
-        $carta_trucada->codi_trucada= $request->codi_trucada;
         $carta_trucada->data_hora = $request->data_hora;
         $carta_trucada->adreca_trucada = $request->adreca_trucada;
         $carta_trucada->dades_personals_id = $request->dades_personals_id;

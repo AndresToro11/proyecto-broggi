@@ -5397,18 +5397,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       expedienteRelacionado: null,
       idDatosPersonales: [],
       pruebaCartas: [],
+      expediente: {
+        id: null,
+        data_creacio: "",
+        data_ultima_modificacio: "",
+        estats_expedients_id: 2
+      },
       cartaLlamada: {
-        codi_trucada: 32135,
         data_hora: "",
         temps_trucada: 3,
-        dades_personals_id: 1,
+        dades_personals_id: null,
         telefon: " ",
         procedencia_trucada: " ",
         origen_trucada: " ",
@@ -5423,7 +5427,7 @@ __webpack_require__.r(__webpack_exports__);
         // altres_ref_localitzacio: "",
         incidents_id: " ",
         nota_comuna: " ",
-        expedients_id: 1,
+        expedients_id: null,
         usuaris_id: 1
       }
     };
@@ -5470,12 +5474,11 @@ __webpack_require__.r(__webpack_exports__);
     getDataAdministrativos: function getDataAdministrativos(contador) {
       this.contador = contador;
     },
-    dataHora: function dataHora() {
+    camposExtra: function camposExtra() {
       var hoy = new Date();
       var fecha = hoy.getFullYear() + '-' + (hoy.getMonth() + 1) + '-' + hoy.getDate();
       var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
       var fechaYHora = fecha + ' ' + hora;
-      console.log('string:' + fechaYHora);
       this.cartaLlamada.data_hora = fechaYHora;
       console.log('objeto:' + this.cartaLlamada.data_hora);
       var codi_trucada = 0;
@@ -5486,13 +5489,6 @@ __webpack_require__.r(__webpack_exports__);
         this.cartaLlamada.expedients_id = null;
       }
 
-      for (var index = 0; index < this.pruebaCarta.length; index++) {
-        if (this.pruebaCarta[index].codi_trucada > codi_trucada) {
-          codi_trucada = this.pruebaCarta[index].codi_trucada;
-        }
-      }
-
-      this.cartaLlamada.codi_trucada = codi_trucada + 1;
       setTimeout(this.insertBD, 2000);
     },
     expedienteRela: function expedienteRela(idExpediente) {
@@ -5500,12 +5496,31 @@ __webpack_require__.r(__webpack_exports__);
     },
     insertBD: function insertBD() {
       var me = this;
-      axios.post("/llamadas", me.cartaLlamada).then(function (response) {
-        console.log("Insert OK");
-      })["catch"](function (error) {
-        this.console.log("Error:");
-        console.log(error);
-      });
+
+      if (this.cartaLlamada.expedients_id == null) {
+        this.expediente.data_creacio = this.cartaLlamada.data_hora;
+        this.expediente.data_ultima_modificacio = this.cartaLlamada.data_hora;
+        axios.post("/expediente", me.expediente).then(function (response) {
+          console.log("expediente OK");
+          me.cartaLlamada.expedients_id = response.data.id;
+          axios.post("/llamadas", me.cartaLlamada).then(function (response) {
+            console.log("CartaLlamada OK");
+          })["catch"](function (error) {
+            this.console.log("Error:");
+            console.log(error);
+          });
+        })["catch"](function (error) {
+          this.console.log("Error:");
+          console.log(error);
+        });
+      } else {
+        axios.post("/llamadas", me.cartaLlamada).then(function (response) {
+          console.log("CartaLlamada OK");
+        })["catch"](function (error) {
+          this.console.log("Error:");
+          console.log(error);
+        });
+      }
     }
   },
   computed: {
@@ -42962,7 +42977,7 @@ var render = function () {
           attrs: { type: "button" },
           on: {
             click: function ($event) {
-              return _vm.dataHora()
+              return _vm.camposExtra()
             },
           },
         },
@@ -42977,7 +42992,32 @@ var render = function () {
       _vm._v(" "),
       _c("span", [
         _c("table", { staticClass: "table" }, [
-          _vm._m(0),
+          _c("thead", [
+            _c("tr", [
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Nº Expediente")]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Telefono")]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Localizacion")]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Tipificacion")]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [
+                _c(
+                  "button",
+                  {
+                    attrs: { type: "button" },
+                    on: {
+                      click: function ($event) {
+                        return _vm.expedienteRela(null)
+                      },
+                    },
+                  },
+                  [_vm._v("Check")]
+                ),
+              ]),
+            ]),
+          ]),
           _vm._v(" "),
           _c(
             "tbody",
@@ -43033,32 +43073,11 @@ var render = function () {
           ),
         ]),
       ]),
-      _vm._v(" "),
-      _c("h4", [_vm._v("Funciona")]),
     ],
     1
   )
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Nº Expediente")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Telefono")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Localizacion")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Tipificacion")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Boton")]),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

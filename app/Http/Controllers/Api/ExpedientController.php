@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Clases\Utilitat;
 use App\Models\Expedient;
 use Illuminate\Http\Request;
-use App\Models\Carta_trucada;
 use App\Http\Controllers\Controller;
 use Illuminate\Database\QueryException;
 use App\Http\Resources\ExpedientResource;
@@ -33,7 +32,6 @@ class ExpedientController extends Controller
 
         return new ExpedientResource($expedientes);
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -43,11 +41,14 @@ class ExpedientController extends Controller
     public function store(Request $request)
     {
         $expediente = new Expedient();
-
-        $expediente->codi_trucada = $request->codi_trucada;
+        $expediente->data_creacio = $request->data_creacio;
+        $expediente->data_ultima_modificacio = $request->data_ultima_modificacio;
+        $expediente->estats_expedients_id = $request->estats_expedients_id;
         try {
             $expediente->save();
-            $response = response()->json(['message' => 'OK ALL'], 201);
+            $response = (new ExpedientResource($expediente))
+                        ->response()
+                        ->setStatusCode(201);
         } catch (QueryException $ex) {
             $mensaje = Utilitat::errorMessage($ex);
             $response = \response()
