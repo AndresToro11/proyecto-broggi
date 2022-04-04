@@ -23,7 +23,7 @@
                     .get('/mapa/agencias')
                     .then(response => {
                         me.agencias = response.data;
-                        this.añadirMarca()
+                        this.crearMapa('Barcelona, Barcelona', me.agencias);
                     })
                     .catch(error => {
                         console.log(error);
@@ -31,7 +31,7 @@
                     .finally(() => this.loading = false);
             },
 
-            marcaAgencia(place) {
+            crearMapa(place, store) {
                 let me = this;
                 mapboxgl.accessToken = this.accessToken;
 
@@ -63,20 +63,64 @@
                         center: feature.center,
                         zoom: 12
                     });
+                })
 
-                // Create a marker and add it to the map.
-                new mapboxgl.Marker({
-                    color: '#E74C3C',
-                }).setLngLat(feature.center).addTo(me.map);
-                });
+                this.añadirMarker(store);
             },
 
-            añadirMarca(){
-                for(let agencia of this.agencias){
-                    console.log(agencia);
-                }
-            }
+            añadirMarker(agencias){
+                
+                for(let i = 0; i < agencias.length; i++){
 
+                    let me = this;
+                    mapboxgl.accessToken = this.accessToken;
+                    const mapboxClient = mapboxSdk({ accessToken: mapboxgl.accessToken });
+                    mapboxClient.geocoding
+                    .forwardGeocode({
+                        query: agencias[i].carrer + ', ' + agencias[i].municipi.nom + ', spain',
+                        autocomplete: false,
+                        limit: 1
+                    })
+                    .send()
+                    .then((response) => {
+                        if (
+                            !response ||
+                            !response.body ||
+                            !response.body.features ||
+                            !response.body.features.length
+                        ) {
+                            console.error('Invalid response:');
+                            console.error(response);
+                            return;
+                        }
+
+                        const feature = response.body.features[0];
+
+                        const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+                            agencias[i].nom + ' <br> ' + agencias[i].municipi.nom
+                        );
+
+                            // Crear marker y añadirlo al mapa
+                            new mapboxgl.Marker({
+                            color: '#E74C3C',})
+                            .setLngLat(feature.center)
+                            .setPopup(popup)
+                            .addTo(me.map);
+                    })
+
+                }
+
+            },
+
+            crearStore(agencias){
+                let result = [];
+                let aux;
+                for(let agencia of agencias){
+                    aux = agencia.carrer + ', ' + agencia.municipi.nom;
+                    result.push(aux);
+                }
+                return result;
+            }
         },
 
         created() {

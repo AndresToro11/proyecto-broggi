@@ -7506,14 +7506,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       axios.get('/mapa/agencias').then(function (response) {
         me.agencias = response.data;
 
-        _this.añadirMarca();
+        _this.crearMapa('Barcelona, Barcelona', me.agencias);
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
         return _this.loading = false;
       });
     },
-    marcaAgencia: function marcaAgencia(place) {
+    crearMapa: function crearMapa(place, store) {
       var me = this;
       mapboxgl.accessToken = this.accessToken;
       var mapboxClient = mapboxSdk({
@@ -7536,27 +7536,65 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           style: 'mapbox://styles/mapbox/streets-v11',
           center: feature.center,
           zoom: 12
-        }); // Create a marker and add it to the map.
-
-        new mapboxgl.Marker({
-          color: '#E74C3C'
-        }).setLngLat(feature.center).addTo(me.map);
+        });
       });
+      this.añadirMarker(store);
     },
-    añadirMarca: function añadirMarca() {
-      var _iterator = _createForOfIteratorHelper(this.agencias),
+    añadirMarker: function añadirMarker(agencias) {
+      var _this2 = this;
+
+      var _loop = function _loop(i) {
+        var me = _this2;
+        mapboxgl.accessToken = _this2.accessToken;
+        var mapboxClient = mapboxSdk({
+          accessToken: mapboxgl.accessToken
+        });
+        mapboxClient.geocoding.forwardGeocode({
+          query: agencias[i].carrer + ', ' + agencias[i].municipi.nom + ', spain',
+          autocomplete: false,
+          limit: 1
+        }).send().then(function (response) {
+          if (!response || !response.body || !response.body.features || !response.body.features.length) {
+            console.error('Invalid response:');
+            console.error(response);
+            return;
+          }
+
+          var feature = response.body.features[0];
+          var popup = new mapboxgl.Popup({
+            offset: 25
+          }).setText(agencias[i].nom + ' <br> ' + agencias[i].municipi.nom); // Crear marker y añadirlo al mapa
+
+          new mapboxgl.Marker({
+            color: '#E74C3C'
+          }).setLngLat(feature.center).setPopup(popup).addTo(me.map);
+        });
+      };
+
+      for (var i = 0; i < agencias.length; i++) {
+        _loop(i);
+      }
+    },
+    crearStore: function crearStore(agencias) {
+      var result = [];
+      var aux;
+
+      var _iterator = _createForOfIteratorHelper(agencias),
           _step;
 
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var agencia = _step.value;
-          console.log(agencia);
+          aux = agencia.carrer + ', ' + agencia.municipi.nom;
+          result.push(aux);
         }
       } catch (err) {
         _iterator.e(err);
       } finally {
         _iterator.f();
       }
+
+      return result;
     }
   },
   created: function created() {},
@@ -7783,8 +7821,9 @@ try {
 
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-window.axios.defaults.baseURL = '/proyecto-broggi/public/api';
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'; // window.axios.defaults.baseURL = '/proyecto-broggi/public/api';
+
+window.axios.defaults.baseURL = '/api/';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

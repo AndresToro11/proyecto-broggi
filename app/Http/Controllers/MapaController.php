@@ -11,7 +11,9 @@ use App\Http\Resources\Admin\DefaultResource;
 class MapaController extends Controller
 {
     public function selectAgencias(){
-        $result = Agencia::all();
+        $result = Agencia::with('municipi')
+                            ->select('*')
+                            ->get();
 
         return DefaultResource::collection($result);
     }
