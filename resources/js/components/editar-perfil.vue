@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container-center-horizontal">
+        <!-- <div class="container-center-horizontal"> -->
             <div class="editar-perfil-operador">
                 <div class="editar-perfil-operador-editar-perfil valign-text-middle gothica1-normal-black-28px"> <!-- FIXME: Editar perfil -->
                     Editar perfil
@@ -136,7 +136,7 @@
                     </div>
                 </span>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 

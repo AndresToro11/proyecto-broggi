@@ -1,167 +1,164 @@
 <template>
     <div>
-        <h1 class="title valign-text-middle gothica1-normal-black-28px">
+        <h1 class="expedientes-title valign-text-middle gothica1-normal-black-28px">
             Expedientes
         </h1>
-        <div class="margin-container">
-            <div class="container"> <!-- TODO: File --onProcess  -->
-                <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
-                    <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
-                        <div class="window-expediente-shadow"></div>
-                        <div class="window-expediente-shadow-onProcess"></div>
-                        <div class="window-expediente"></div>
+        <div class="expedientes-container"> <!-- TODO: File --onProcess  -->
+            <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
+                <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
+                    <div class="window-expediente-shadow"></div>
+                    <div class="window-expediente-shadow-onProcess"></div>
+                    <div class="window-expediente"></div>
+                </div>
+                <div class="expedientes-info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
+                    <div class="expedientes-flex-row">
+                        <div class="expedientes-expediente valign-text-middle">
+                            Expediente
+                        </div>
+                        <div class="expedientes-number valign-text-middle">
+                            00000001
+                        </div>
                     </div>
-                    <div class="info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
-                        <div class="flex-row">
-                            <div class="expediente valign-text-middle">
-                                Expediente
-                            </div>
-                            <div class="number valign-text-middle">
-                                00000001
-                            </div>
+                    <div class="expedientes-flex-row-1">
+                        <div class="expedientes-operador valign-text-middle">
+                            Operador
                         </div>
-                        <div class="flex-row-1">
-                            <div class="operador valign-text-middle">
-                                Operador
-                            </div>
-                            <div class="name-profile valign-text-middle">
-                                Andrés Toro
-                            </div>
+                        <div class="expedientes-name-profile valign-text-middle">
+                            Andrés Toro
                         </div>
-                        <div class="flex-row-2">
-                            <div class="fecha valign-text-middle">
-                                Fecha
-                            </div>
-                            <div class="date valign-text-middle">
-                                13/10/2022
-                            </div>
+                    </div>
+                    <div class="expedientes-flex-row-2">
+                        <div class="expedientes-fecha valign-text-middle">
+                            Fecha
                         </div>
-                        <div class="flex-row-3">
-                            <div class="hora valign-text-middle">
-                                Hora
-                            </div>
-                            <div class="text valign-text-middle">
-                                22:34
-                            </div>
+                        <div class="expedientes-date valign-text-middle">
+                            13/10/2022
                         </div>
-                        <div class="flex-row-4">
-                            <div class="estado valign-text-middle">
-                                Estado
-                            </div>
-                            <div class="onProcess">
-                                <div class="icon">
-                                    <div class="vector-container">
-                                        <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
-                                    </div>
+                    </div>
+                    <div class="expedientes-flex-row-3">
+                        <div class="expedientes-hora valign-text-middle">
+                            Hora
+                        </div>
+                        <div class="expedientes-text valign-text-middle">
+                            22:34
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-4">
+                        <div class="expedientes-estado valign-text-middle">
+                            Estado
+                        </div>
+                        <div class="onProcess">
+                            <div class="icon">
+                                <div class="vector-container">
+                                    <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
                                 </div>
-                                <span class="material-icons">
-                                    schedule
-                                </span>
                             </div>
+                            <span class="material-icons">
+                                schedule
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container"> <!-- TODO: File --inmobilized -->
-                <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
-                    <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
-                        <div class="window-expediente-shadow"></div>
-                        <div class="window-expediente-shadow-inmobilized"></div>
-                        <div class="window-expediente"></div>
+        </div>
+            <!-- <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
+                <div class="window-expediente-container">
+                    <div class="window-expediente-shadow"></div>
+                    <div class="window-expediente-shadow-inmobilized"></div>
+                    <div class="window-expediente"></div>
+                </div>
+                <div class="info gothica1-normal-black-21px">
+                    <div class="expedientes-flex-row">
+                        <div class="expedientes-expediente valign-text-middle">
+                            Expediente
+                        </div>
+                        <div class="expedientes-number valign-text-middle">
+                            00000001
+                        </div>
                     </div>
-                    <div class="info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
-                        <div class="flex-row">
-                            <div class="expediente valign-text-middle">
-                                Expediente
-                            </div>
-                            <div class="number valign-text-middle">
-                                00000001
-                            </div>
+                    <div class="expedientes-flex-row-1">
+                        <div class="expedientes-operador valign-text-middle">
+                            Operador
                         </div>
-                        <div class="flex-row-1">
-                            <div class="operador valign-text-middle">
-                                Operador
-                            </div>
-                            <div class="name-profile valign-text-middle">
-                                Andrés Toro
-                            </div>
+                        <div class="expedientes-name-profile valign-text-middle">
+                            Andrés Toro
                         </div>
-                        <div class="flex-row-2">
-                            <div class="fecha valign-text-middle">
-                                Fecha
-                            </div>
-                            <div class="date valign-text-middle">
-                                13/10/2022
-                            </div>
+                    </div>
+                    <div class="expedientes-flex-row-2">
+                        <div class="expedientes-fecha valign-text-middle">
+                            Fecha
                         </div>
-                        <div class="flex-row-3">
-                            <div class="hora valign-text-middle">
-                                Hora
-                            </div>
-                            <div class="text valign-text-middle">
-                                22:34
-                            </div>
+                        <div class="expedientes-date valign-text-middle">
+                            13/10/2022
                         </div>
-                        <div class="flex-row-4">
-                            <div class="estado valign-text-middle">
-                                Estado
-                            </div>
-                            <div class="immobilized">
-                                <div class="icon">
-                                    <div class="vector-container">
-                                        <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
-                                    </div>
+                    </div>
+                    <div class="expedientes-flex-row-3">
+                        <div class="expedientes-hora valign-text-middle">
+                            Hora
+                        </div>
+                        <div class="expedientes-text valign-text-middle">
+                            22:34
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-4">
+                        <div class="expedientes-estado valign-text-middle">
+                            Estado
+                        </div>
+                        <div class="immobilized">
+                            <div class="icon">
+                                <div class="vector-container">
+                                    <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
                                 </div>
-                                <span class="material-icons">
-                                    do_disturb_on
-                                </span>
                             </div>
+                            <span class="material-icons">
+                                do_disturb_on
+                            </span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container"> <!-- TODO: File --requested -->
+            </div> -->
+            <!-- <div class="expedientes-container">
                 <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
-                    <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
+                    <div class="window-expediente-container">
                         <div class="window-expediente-shadow"></div>
                         <div class="window-expediente-shadow-requested"></div>
                         <div class="window-expediente"></div>
                     </div>
-                    <div class="info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
-                        <div class="flex-row">
-                            <div class="expediente valign-text-middle">
+                    <div class="info gothica1-normal-black-21px">
+                        <div class="expedientes-flex-row">
+                            <div class="expedientes-expediente valign-text-middle">
                                 Expediente
                             </div>
-                            <div class="number valign-text-middle">
+                            <div class="expedientes-number valign-text-middle">
                                 00000001
                             </div>
                         </div>
-                        <div class="flex-row-1">
-                            <div class="operador valign-text-middle">
+                        <div class="expedientes-flex-row-1">
+                            <div class="expedientes-operador valign-text-middle">
                                 Operador
                             </div>
-                            <div class="name-profile valign-text-middle">
+                            <div class="expedientes-name-profile valign-text-middle">
                                 Andrés Toro
                             </div>
                         </div>
-                        <div class="flex-row-2">
-                            <div class="fecha valign-text-middle">
+                        <div class="expedientes-flex-row-2">
+                            <div class="expedientes-fecha valign-text-middle">
                                 Fecha
                             </div>
-                            <div class="date valign-text-middle">
+                            <div class="expedientes-date valign-text-middle">
                                 13/10/2022
                             </div>
                         </div>
-                        <div class="flex-row-3">
-                            <div class="hora valign-text-middle">
+                        <div class="expedientes-flex-row-3">
+                            <div class="expedientes-hora valign-text-middle">
                                 Hora
                             </div>
-                            <div class="text valign-text-middle">
+                            <div class="expedientes-text valign-text-middle">
                                 22:34
                             </div>
                         </div>
-                        <div class="flex-row-4">
-                            <div class="estado valign-text-middle">
+                        <div class="expedientes-flex-row-4">
+                            <div class="expedientes-estado valign-text-middle">
                                 Estado
                             </div>
                             <div class="requested">
@@ -177,49 +174,49 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container"> <!-- TODO: File --closed -->
+            </div> -->
+            <!-- <div class="expedientes-container">
                 <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
-                    <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
+                    <div class="window-expediente-container">
                         <div class="window-expediente-shadow"></div>
                         <div class="window-expediente-shadow-closed"></div>
                         <div class="window-expediente"></div>
                     </div>
-                    <div class="info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
-                        <div class="flex-row">
-                            <div class="expediente valign-text-middle">
+                    <div class="info gothica1-normal-black-21px">
+                        <div class="expedientes-flex-row">
+                            <div class="expedientes-expediente valign-text-middle">
                                 Expediente
                             </div>
-                            <div class="number valign-text-middle">
+                            <div class="expedientes-number valign-text-middle">
                                 00000001
                             </div>
                         </div>
-                        <div class="flex-row-1">
-                            <div class="operador valign-text-middle">
+                        <div class="expedientes-flex-row-1">
+                            <div class="expedientes-operador valign-text-middle">
                                 Operador
                             </div>
-                            <div class="name-profile valign-text-middle">
+                            <div class="expedientes-name-profile valign-text-middle">
                                 Andrés Toro
                             </div>
                         </div>
-                        <div class="flex-row-2">
-                            <div class="fecha valign-text-middle">
+                        <div class="expedientes-flex-row-2">
+                            <div class="expedientes-fecha valign-text-middle">
                                 Fecha
                             </div>
-                            <div class="date valign-text-middle">
+                            <div class="expedientes-date valign-text-middle">
                                 13/10/2022
                             </div>
                         </div>
-                        <div class="flex-row-3">
-                            <div class="hora valign-text-middle">
+                        <div class="expedientes-flex-row-3">
+                            <div class="expedientes-hora valign-text-middle">
                                 Hora
                             </div>
-                            <div class="text valign-text-middle">
+                            <div class="expedientes-text valign-text-middle">
                                 22:34
                             </div>
                         </div>
-                        <div class="flex-row-4">
-                            <div class="estado valign-text-middle">
+                        <div class="expedientes-flex-row-4">
+                            <div class="expedientes-estado valign-text-middle">
                                 Estado
                             </div>
                             <div class="closed">
@@ -235,49 +232,49 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container"> <!-- TODO: File --accepted -->
+            </div> -->
+            <!-- <div class="expedientes-container">
                 <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
-                    <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
+                    <div class="window-expediente-container">
                         <div class="window-expediente-shadow"></div>
                         <div class="window-expediente-shadow-accepted"></div>
                         <div class="window-expediente"></div>
                     </div>
-                    <div class="info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
-                        <div class="flex-row">
-                            <div class="expediente valign-text-middle">
+                    <div class="info gothica1-normal-black-21px">
+                        <div class="expedientes-flex-row">
+                            <div class="expedientes-expediente valign-text-middle">
                                 Expediente
                             </div>
-                            <div class="number valign-text-middle">
+                            <div class="expedientes-number valign-text-middle">
                                 00000001
                             </div>
                         </div>
-                        <div class="flex-row-1">
-                            <div class="operador valign-text-middle">
+                        <div class="expedientes-flex-row-1">
+                            <div class="expedientes-operador valign-text-middle">
                                 Operador
                             </div>
-                            <div class="name-profile valign-text-middle">
+                            <div class="expedientes-name-profile valign-text-middle">
                                 Andrés Toro
                             </div>
                         </div>
-                        <div class="flex-row-2">
-                            <div class="fecha valign-text-middle">
+                        <div class="expedientes-flex-row-2">
+                            <div class="expedientes-fecha valign-text-middle">
                                 Fecha
                             </div>
-                            <div class="date valign-text-middle">
+                            <div class="expedientes-date valign-text-middle">
                                 13/10/2022
                             </div>
                         </div>
-                        <div class="flex-row-3">
-                            <div class="hora valign-text-middle">
+                        <div class="expedientes-flex-row-3">
+                            <div class="expedientes-hora valign-text-middle">
                                 Hora
                             </div>
-                            <div class="text valign-text-middle">
+                            <div class="expedientes-text valign-text-middle">
                                 22:34
                             </div>
                         </div>
-                        <div class="flex-row-4">
-                            <div class="estado valign-text-middle">
+                        <div class="expedientes-flex-row-4">
+                            <div class="expedientes-estado valign-text-middle">
                                 Estado
                             </div>
                             <div class="accepted">
@@ -293,241 +290,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container"> <!-- TODO: File --closed -->
-                <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
-                    <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
-                        <div class="window-expediente-shadow"></div>
-                        <div class="window-expediente-shadow-closed"></div>
-                        <div class="window-expediente"></div>
-                    </div>
-                    <div class="info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
-                        <div class="flex-row">
-                            <div class="expediente valign-text-middle">
-                                Expediente
-                            </div>
-                            <div class="number valign-text-middle">
-                                00000001
-                            </div>
-                        </div>
-                        <div class="flex-row-1">
-                            <div class="operador valign-text-middle">
-                                Operador
-                            </div>
-                            <div class="name-profile valign-text-middle">
-                                Andrés Toro
-                            </div>
-                        </div>
-                        <div class="flex-row-2">
-                            <div class="fecha valign-text-middle">
-                                Fecha
-                            </div>
-                            <div class="date valign-text-middle">
-                                13/10/2022
-                            </div>
-                        </div>
-                        <div class="flex-row-3">
-                            <div class="hora valign-text-middle">
-                                Hora
-                            </div>
-                            <div class="text valign-text-middle">
-                                22:34
-                            </div>
-                        </div>
-                        <div class="flex-row-4">
-                            <div class="estado valign-text-middle">
-                                Estado
-                            </div>
-                            <div class="closed">
-                                <div class="icon">
-                                    <div class="vector-container">
-                                        <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg"/>
-                                    </div>
-                                </div>
-                                <span class="material-icons">
-                                    cancel
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container"> <!-- TODO: File --inmobilized -->
-                <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
-                    <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
-                        <div class="window-expediente-shadow"></div>
-                        <div class="window-expediente-shadow-inmobilized"></div>
-                        <div class="window-expediente"></div>
-                    </div>
-                    <div class="info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
-                        <div class="flex-row">
-                            <div class="expediente valign-text-middle">
-                                Expediente
-                            </div>
-                            <div class="number valign-text-middle">
-                                00000001
-                            </div>
-                        </div>
-                        <div class="flex-row-1">
-                            <div class="operador valign-text-middle">
-                                Operador
-                            </div>
-                            <div class="name-profile valign-text-middle">
-                                Andrés Toro
-                            </div>
-                        </div>
-                        <div class="flex-row-2">
-                            <div class="fecha valign-text-middle">
-                                Fecha
-                            </div>
-                            <div class="date valign-text-middle">
-                                13/10/2022
-                            </div>
-                        </div>
-                        <div class="flex-row-3">
-                            <div class="hora valign-text-middle">
-                                Hora
-                            </div>
-                            <div class="text valign-text-middle">
-                                22:34
-                            </div>
-                        </div>
-                        <div class="flex-row-4">
-                            <div class="estado valign-text-middle">
-                                Estado
-                            </div>
-                            <div class="immobilized">
-                                <div class="icon">
-                                    <div class="vector-container">
-                                        <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
-                                    </div>
-                                </div>
-                                <span class="material-icons">
-                                    do_disturb_on
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container"> <!-- TODO: File --requested -->
-                <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
-                    <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
-                        <div class="window-expediente-shadow"></div>
-                        <div class="window-expediente-shadow-requested"></div>
-                        <div class="window-expediente"></div>
-                    </div>
-                    <div class="info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
-                        <div class="flex-row">
-                            <div class="expediente valign-text-middle">
-                                Expediente
-                            </div>
-                            <div class="number valign-text-middle">
-                                00000001
-                            </div>
-                        </div>
-                        <div class="flex-row-1">
-                            <div class="operador valign-text-middle">
-                                Operador
-                            </div>
-                            <div class="name-profile valign-text-middle">
-                                Andrés Toro
-                            </div>
-                        </div>
-                        <div class="flex-row-2">
-                            <div class="fecha valign-text-middle">
-                                Fecha
-                            </div>
-                            <div class="date valign-text-middle">
-                                13/10/2022
-                            </div>
-                        </div>
-                        <div class="flex-row-3">
-                            <div class="hora valign-text-middle">
-                                Hora
-                            </div>
-                            <div class="text valign-text-middle">
-                                22:34
-                            </div>
-                        </div>
-                        <div class="flex-row-4">
-                            <div class="estado valign-text-middle">
-                                Estado
-                            </div>
-                            <div class="requested">
-                                <div class="icon">
-                                    <div class="vector-container">
-                                        <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
-                                    </div>
-                                </div>
-                                <span class="material-icons">
-                                    ios_share
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container"> <!-- TODO: File --onProcess  -->
-                <div class="expediente-file" data-open="modalScreen" @click="modalVisible">
-                    <div class="window-expediente-container"> <!-- FIXME: ELEMENTS -->
-                        <div class="window-expediente-shadow"></div>
-                        <div class="window-expediente-shadow-onProcess"></div>
-                        <div class="window-expediente"></div>
-                    </div>
-                    <div class="info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
-                        <div class="flex-row">
-                            <div class="expediente valign-text-middle">
-                                Expediente
-                            </div>
-                            <div class="number valign-text-middle">
-                                00000001
-                            </div>
-                        </div>
-                        <div class="flex-row-1">
-                            <div class="operador valign-text-middle">
-                                Operador
-                            </div>
-                            <div class="name-profile valign-text-middle">
-                                Andrés Toro
-                            </div>
-                        </div>
-                        <div class="flex-row-2">
-                            <div class="fecha valign-text-middle">
-                                Fecha
-                            </div>
-                            <div class="date valign-text-middle">
-                                13/10/2022
-                            </div>
-                        </div>
-                        <div class="flex-row-3">
-                            <div class="hora valign-text-middle">
-                                Hora
-                            </div>
-                            <div class="text valign-text-middle">
-                                22:34
-                            </div>
-                        </div>
-                        <div class="flex-row-4">
-                            <div class="estado valign-text-middle">
-                                Estado
-                            </div>
-                            <div class="onProcess">
-                                <div class="icon">
-                                    <div class="vector-container">
-                                        <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
-                                    </div>
-                                </div>
-                                <span class="material-icons">
-                                    schedule
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal" id="modalScreen"> <!-- TODO: Modal --> <!-- modalOut -->
+            </div> -->
+        <div class="expedientes-modal" id="modalScreen"> <!-- TODO: Modal --> <!-- modalOut -->
             <div class="modal-window">
                 <header class="modal-header">
                     <div class="x" id="close-modal" data-close="modalScreen" @click="modalInvisible">
@@ -664,6 +428,10 @@
     --closed: rgb(0, 83, 199);
     --immobilized: rgb(182,149,192);
     }
+    .expedientes-title {
+    display: flex;
+    }
+
     /* Modal: */
     /* Modal: */
     /* Modal: */
@@ -680,7 +448,7 @@
     margin-top: 18px;
     }
 
-    .modal{
+    .expeientes-modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -819,27 +587,17 @@
     /* Modal: */
     /* Modal: */
     /* Modal: */
-    /* .margin-container {
+    .expeientes-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    row-gap: 50px;
     justify-content: flex-start;
     align-content: flex-start;
+    row-gap: 50px;
     column-gap: 115px;
     margin-left: 102px;
     margin-right: 102px;
     z-index: inherit;
-    } Es posible que este cambio de poner aquí lo de abajo de problemas, o por lo menos me da esa sensación */
-
-    .container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: flex-start;
-    row-gap: 50px;
-    column-gap: 115px;
     }
 
     .expediente-file {
@@ -855,7 +613,7 @@
     transform: scale(1.1);
     }
 
-    .info {
+    .expeientes-info {
     align-items: flex-start;
     display: flex;
     height: 180px;
@@ -865,7 +623,7 @@
     top: 32px;
     }
 
-    .flex-row {
+    .expeientes-flex-row {
     align-items: flex-start;
     display: inline-flex;
     flex-wrap: wrap;
@@ -875,7 +633,7 @@
     height: 16px;
     }
 
-    .flex-row-1 {
+    .expeientes-flex-row-1 {
     align-items: flex-start;
     margin-top: 25px;
     margin-left: -412px;
@@ -887,7 +645,7 @@
     height: 16px;
     }
 
-    .flex-row-2 {
+    .expeientes-flex-row-2 {
     align-items: flex-start;
     margin-top: 75px;
     margin-left: -412px;
@@ -899,7 +657,7 @@
     height: 16px;
     }
 
-    .flex-row-3 {
+    .expeientes-flex-row-3 {
     align-items: flex-start;
     margin-top: 125px;
     margin-left: -412px;
@@ -911,7 +669,7 @@
     height: 16px;
     }
 
-    .flex-row-4 {
+    .expeientes-flex-row-4 {
     align-items: flex-start;
     margin-top: 175px;
     margin-left: -412px;
@@ -1009,7 +767,7 @@
     width: 478px;
     }
 
-    .title {
+    .expeientes-title {
     height: 16px;
     letter-spacing: 0.15px;
     line-height: 16px;
@@ -1018,22 +776,14 @@
     white-space: nowrap;
     }
 
-    .expediente {
+    .expeientes-expediente {
     height: 16px;
     letter-spacing: 1.25px;
     line-height: 16px;
     white-space: nowrap;
     }
 
-    .operador {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    margin-top: 25px;
-    white-space: nowrap;
-    }
-
-    .fecha {
+    .expeientes-operador {
     height: 16px;
     letter-spacing: 1.25px;
     line-height: 16px;
@@ -1041,7 +791,7 @@
     white-space: nowrap;
     }
 
-    .hora {
+    .expeientes-fecha {
     height: 16px;
     letter-spacing: 1.25px;
     line-height: 16px;
@@ -1049,7 +799,7 @@
     white-space: nowrap;
     }
 
-    .estado {
+    .expeientes-hora {
     height: 16px;
     letter-spacing: 1.25px;
     line-height: 16px;
@@ -1057,7 +807,15 @@
     white-space: nowrap;
     }
 
-    .number {
+    .expeientes-estado {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    margin-top: 25px;
+    white-space: nowrap;
+    }
+
+    .expeientes-number {
     height: 16px;
     letter-spacing: 1.25px;
     line-height: 16px;
@@ -1065,7 +823,7 @@
     white-space: nowrap;
     }
 
-    .name-profile {
+    .expeientes-name-profile {
     height: 16px;
     letter-spacing: 1.25px;
     line-height: 16px;
@@ -1074,7 +832,7 @@
     white-space: nowrap;
     }
 
-    .date {
+    .expeientes-date {
     height: 16px;
     letter-spacing: 1.25px;
     line-height: 16px;
@@ -1083,7 +841,7 @@
     white-space: nowrap;
     }
 
-    .text {
+    .expeientes-text {
     height: 16px;
     letter-spacing: 1.25px;
     line-height: 16px;
