@@ -10650,6 +10650,238 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -29511,6 +29743,54 @@ var render = function () {
           [_vm._m(8), _vm._v(" "), _vm._m(9)]
         ),
       ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c(
+          "div",
+          {
+            staticClass: "expediente-file",
+            attrs: { "data-open": "modalScreen" },
+            on: { click: _vm.modalVisible },
+          },
+          [_vm._m(10), _vm._v(" "), _vm._m(11)]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c(
+          "div",
+          {
+            staticClass: "expediente-file",
+            attrs: { "data-open": "modalScreen" },
+            on: { click: _vm.modalVisible },
+          },
+          [_vm._m(12), _vm._v(" "), _vm._m(13)]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c(
+          "div",
+          {
+            staticClass: "expediente-file",
+            attrs: { "data-open": "modalScreen" },
+            on: { click: _vm.modalVisible },
+          },
+          [_vm._m(14), _vm._v(" "), _vm._m(15)]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c(
+          "div",
+          {
+            staticClass: "expediente-file",
+            attrs: { "data-open": "modalScreen" },
+            on: { click: _vm.modalVisible },
+          },
+          [_vm._m(16), _vm._v(" "), _vm._m(17)]
+        ),
+      ]),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "modal", attrs: { id: "modalScreen" } }, [
@@ -29527,7 +29807,7 @@ var render = function () {
           ),
         ]),
         _vm._v(" "),
-        _vm._m(10),
+        _vm._m(18),
       ]),
     ]),
   ])
@@ -30032,6 +30312,410 @@ var staticRenderFns = [
           _c("span", { staticClass: "material-icons" }, [
             _vm._v(
               "\n                                check_circle_outline\n                            "
+            ),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "window-expediente-container" }, [
+      _c("div", { staticClass: "window-expediente-shadow" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente-shadow-closed" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "info gothica1-normal-black-21px" }, [
+      _c("div", { staticClass: "flex-row" }, [
+        _c("div", { staticClass: "expediente valign-text-middle" }, [
+          _vm._v(
+            "\n                            Expediente\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "number valign-text-middle" }, [
+          _vm._v(
+            "\n                            00000001\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-1" }, [
+        _c("div", { staticClass: "operador valign-text-middle" }, [
+          _vm._v(
+            "\n                            Operador\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "name-profile valign-text-middle" }, [
+          _vm._v(
+            "\n                            Andrés Toro\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-2" }, [
+        _c("div", { staticClass: "fecha valign-text-middle" }, [
+          _vm._v(
+            "\n                            Fecha\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "date valign-text-middle" }, [
+          _vm._v(
+            "\n                            13/10/2022\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-3" }, [
+        _c("div", { staticClass: "hora valign-text-middle" }, [
+          _vm._v(
+            "\n                            Hora\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text valign-text-middle" }, [
+          _vm._v(
+            "\n                            22:34\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-4" }, [
+        _c("div", { staticClass: "estado valign-text-middle" }, [
+          _vm._v(
+            "\n                            Estado\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "closed" }, [
+          _c("div", { staticClass: "icon" }, [
+            _c("div", { staticClass: "vector-container" }, [
+              _c("img", {
+                staticClass: "vector",
+                attrs: {
+                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg",
+                },
+              }),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "material-icons" }, [
+            _vm._v(
+              "\n                                cancel\n                            "
+            ),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "window-expediente-container" }, [
+      _c("div", { staticClass: "window-expediente-shadow" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente-shadow-inmobilized" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "info gothica1-normal-black-21px" }, [
+      _c("div", { staticClass: "flex-row" }, [
+        _c("div", { staticClass: "expediente valign-text-middle" }, [
+          _vm._v(
+            "\n                            Expediente\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "number valign-text-middle" }, [
+          _vm._v(
+            "\n                            00000001\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-1" }, [
+        _c("div", { staticClass: "operador valign-text-middle" }, [
+          _vm._v(
+            "\n                            Operador\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "name-profile valign-text-middle" }, [
+          _vm._v(
+            "\n                            Andrés Toro\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-2" }, [
+        _c("div", { staticClass: "fecha valign-text-middle" }, [
+          _vm._v(
+            "\n                            Fecha\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "date valign-text-middle" }, [
+          _vm._v(
+            "\n                            13/10/2022\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-3" }, [
+        _c("div", { staticClass: "hora valign-text-middle" }, [
+          _vm._v(
+            "\n                            Hora\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text valign-text-middle" }, [
+          _vm._v(
+            "\n                            22:34\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-4" }, [
+        _c("div", { staticClass: "estado valign-text-middle" }, [
+          _vm._v(
+            "\n                            Estado\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "immobilized" }, [
+          _c("div", { staticClass: "icon" }, [
+            _c("div", { staticClass: "vector-container" }, [
+              _c("img", {
+                staticClass: "vector",
+                attrs: {
+                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg",
+                },
+              }),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "material-icons" }, [
+            _vm._v(
+              "\n                                do_disturb_on\n                            "
+            ),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "window-expediente-container" }, [
+      _c("div", { staticClass: "window-expediente-shadow" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente-shadow-requested" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "info gothica1-normal-black-21px" }, [
+      _c("div", { staticClass: "flex-row" }, [
+        _c("div", { staticClass: "expediente valign-text-middle" }, [
+          _vm._v(
+            "\n                            Expediente\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "number valign-text-middle" }, [
+          _vm._v(
+            "\n                            00000001\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-1" }, [
+        _c("div", { staticClass: "operador valign-text-middle" }, [
+          _vm._v(
+            "\n                            Operador\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "name-profile valign-text-middle" }, [
+          _vm._v(
+            "\n                            Andrés Toro\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-2" }, [
+        _c("div", { staticClass: "fecha valign-text-middle" }, [
+          _vm._v(
+            "\n                            Fecha\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "date valign-text-middle" }, [
+          _vm._v(
+            "\n                            13/10/2022\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-3" }, [
+        _c("div", { staticClass: "hora valign-text-middle" }, [
+          _vm._v(
+            "\n                            Hora\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text valign-text-middle" }, [
+          _vm._v(
+            "\n                            22:34\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-4" }, [
+        _c("div", { staticClass: "estado valign-text-middle" }, [
+          _vm._v(
+            "\n                            Estado\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "requested" }, [
+          _c("div", { staticClass: "icon" }, [
+            _c("div", { staticClass: "vector-container" }, [
+              _c("img", {
+                staticClass: "vector",
+                attrs: {
+                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg",
+                },
+              }),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "material-icons" }, [
+            _vm._v(
+              "\n                                ios_share\n                            "
+            ),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "window-expediente-container" }, [
+      _c("div", { staticClass: "window-expediente-shadow" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente-shadow-onProcess" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "info gothica1-normal-black-21px" }, [
+      _c("div", { staticClass: "flex-row" }, [
+        _c("div", { staticClass: "expediente valign-text-middle" }, [
+          _vm._v(
+            "\n                            Expediente\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "number valign-text-middle" }, [
+          _vm._v(
+            "\n                            00000001\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-1" }, [
+        _c("div", { staticClass: "operador valign-text-middle" }, [
+          _vm._v(
+            "\n                            Operador\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "name-profile valign-text-middle" }, [
+          _vm._v(
+            "\n                            Andrés Toro\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-2" }, [
+        _c("div", { staticClass: "fecha valign-text-middle" }, [
+          _vm._v(
+            "\n                            Fecha\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "date valign-text-middle" }, [
+          _vm._v(
+            "\n                            13/10/2022\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-3" }, [
+        _c("div", { staticClass: "hora valign-text-middle" }, [
+          _vm._v(
+            "\n                            Hora\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "text valign-text-middle" }, [
+          _vm._v(
+            "\n                            22:34\n                        "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex-row-4" }, [
+        _c("div", { staticClass: "estado valign-text-middle" }, [
+          _vm._v(
+            "\n                            Estado\n                        "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "onProcess" }, [
+          _c("div", { staticClass: "icon" }, [
+            _c("div", { staticClass: "vector-container" }, [
+              _c("img", {
+                staticClass: "vector",
+                attrs: {
+                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png",
+                },
+              }),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "material-icons" }, [
+            _vm._v(
+              "\n                                schedule\n                            "
             ),
           ]),
         ]),
