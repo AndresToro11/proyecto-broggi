@@ -11361,8 +11361,14 @@ Vue.component('operador', (__webpack_require__(/*! ./components/home/operador.vu
 
 Vue.component('supervisor', (__webpack_require__(/*! ./components/home/supervisor.vue */ "./resources/js/components/home/supervisor.vue")["default"])); //Acabado
 //-----------------------------------------------Llamada----------------------------------------------------
+// Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default); //Acabado
+// Vue.component('datos-administrativos', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
+// Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncidente.vue').default); //Acabado
+// Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default); //Acabado
+// Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
+// Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
+// Vue.component('carta-llamada', require('./components/cartaLlamada/Carta_de_llamada.vue').default);
 
-Vue.component('enviar-datos', (__webpack_require__(/*! ./components/cartaLlamada/Boton.vue */ "./resources/js/components/cartaLlamada/Boton.vue")["default"])); //Acabado
 
 Vue.component('datos-administrativos', (__webpack_require__(/*! ./components/cartaLlamada/DatosAdministrativos.vue */ "./resources/js/components/cartaLlamada/DatosAdministrativos.vue")["default"]));
 Vue.component('datos-incidentes', (__webpack_require__(/*! ./components/cartaLlamada/DatosIncidente.vue */ "./resources/js/components/cartaLlamada/DatosIncidente.vue")["default"])); //Acabado
@@ -11373,8 +11379,6 @@ Vue.component('expedientes-relacionados', (__webpack_require__(/*! ./components/
 Vue.component('enviar-datos', (__webpack_require__(/*! ./components/cartaLlamada/Boton.vue */ "./resources/js/components/cartaLlamada/Boton.vue")["default"]));
 Vue.component('carta-llamada', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/cartaLlamada/Carta_de_llamada.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 Vue.component('mapa', (__webpack_require__(/*! ./components/mapa.vue */ "./resources/js/components/mapa.vue")["default"])); //------------------------------------------- Expedientes --------------------------------
-
-Vue.component('expedientes', (__webpack_require__(/*! ./components/expedientes.vue */ "./resources/js/components/expedientes.vue")["default"])); //--------------------------------------------- Grafico ----------------------------------
 
 Vue.component('grafico', (__webpack_require__(/*! ./components/grafico.vue */ "./resources/js/components/grafico.vue")["default"])); //Andres
 //--------------------------------------------- Perfil ----------------------------------
@@ -30714,7 +30718,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
