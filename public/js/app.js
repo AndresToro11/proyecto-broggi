@@ -1498,17 +1498,14 @@ Vue.component('operador', (__webpack_require__(/*! ./components/home/operador.vu
 
 Vue.component('supervisor', (__webpack_require__(/*! ./components/home/supervisor.vue */ "./resources/js/components/home/supervisor.vue")["default"])); //Acabado
 //-----------------------------------------------Llamada----------------------------------------------------
+// Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default); //Acabado
+// Vue.component('datos-administrativos', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
+// Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncidente.vue').default); //Acabado
+// Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default); //Acabado
+// Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
+// Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
+// Vue.component('carta-llamada', require('./components/cartaLlamada/Carta_de_llamada.vue').default);
 
-Vue.component('enviar-datos', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/cartaLlamada/Boton.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())); //Acabado
-
-Vue.component('datos-administrativos', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/cartaLlamada/DatosAdministrativos.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-Vue.component('datos-incidentes', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/cartaLlamada/DatosIncidente.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())); //Acabado
-
-Vue.component('datos-personales', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/cartaLlamada/DatosPersonales.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())); //Acabado
-
-Vue.component('expedientes-relacionados', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/cartaLlamada/ExpedientesRelacionados.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-Vue.component('enviar-datos', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/cartaLlamada/Boton.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-Vue.component('carta-llamada', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/cartaLlamada/Carta_de_llamada.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 Vue.component('mapa', (__webpack_require__(/*! ./components/mapa.vue */ "./resources/js/components/mapa.vue")["default"])); //------------------------------------------- Expedientes --------------------------------
 
 Vue.component('expedientes', (__webpack_require__(/*! ./components/expedientes.vue */ "./resources/js/components/expedientes.vue")["default"])); //--------------------------------------------- Grafico ----------------------------------
