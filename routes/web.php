@@ -33,7 +33,6 @@ Route::middleware(['auth'])->group(function () {
 
         return view('home', compact('user'));
     });
-});
 
 //-------------------------------- índex ---------------------------
 
@@ -62,7 +61,6 @@ Route::get('/expedientes', function () {
 //-------------------------- Paginas logeadas ---------------------
 
 Route::middleware(['auth'])->group(function () {
-
 });
 
 //----------------------------- Grafico -----------------------------
@@ -85,15 +83,10 @@ Route::get('/admin/editarUsuario', function () {
     return view('administracion.editarUsuario');
 });
 
-Route::get('/admin', function () {
-    return view('administracion.admin');
-});
 
-//--------------------------------- Perfil --------------------------------
 
-Route::get('/perfil', function () {
-    return view('perfil');
 });
 
 
-//---------------------------------  --------------------------------
+
+
