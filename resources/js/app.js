@@ -29,7 +29,7 @@ Vue.component('administrador', require('./components/home/administrador.vue').de
 Vue.component('operador', require('./components/home/operador.vue').default); //Acabado
 Vue.component('supervisor', require('./components/home/supervisor.vue').default); //Acabado
 
-//-----------------------------------------------Llamada----------------------------------------------------
+//----------------------------------------------- Llamada ----------------------------------------------------
 
 // Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default); //Acabado
 // Vue.component('datos-administrativos', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
@@ -50,15 +50,16 @@ Vue.component('grafico', require('./components/grafico.vue').default); //Andres
 
 //--------------------------------------------- Perfil ----------------------------------
 
-Vue.component('perfil', require('./components/editar-perfil.vue').default);
-
-//----------------------------------------------- Perfil -----------------------------------------
+Vue.component('perfil-editar', require('./components/editar-perfil.vue').default);
 
 Vue.component('perfil', require('./components/perfil.vue').default);
 
-//-----------------------------------------------------------------------------------------
+//---------------------------------------------------- Admin -------------------------------------
 
+Vue.component('admin', require('./components/administracion/admin.vue').default);
+Vue.component('nuevousuario', require('./components/administracion/nuevoUsuario.vue').default);
 
+//-------------------------------------------------------------------------------------------------
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

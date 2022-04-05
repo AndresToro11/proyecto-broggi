@@ -13,22 +13,22 @@ class UsuariController extends Controller
 
 {
 
-    public function showLogin()
-    {
-         /*user = new Usuari();
+    // public function showLogin()
+    // {
+    //      $user = new Usuari();
 
-         $user->codi = 'Andrés';
-         $user->mail = 'atoro2021@cepnet.net';
-         $user->nom = 'Andrés';
-         $user->cognoms = 'Toro';
-         $user->contrassenya = \bcrypt('9876');
-         $user->activo = true;
-         $user->perfils_id = 1;
+    //      $user->codi = 'Andrés';
+    //      $user->mail = 'cubo@cepnet.net';
+    //      $user->nom = 'Andrés';
+    //      $user->cognoms = 'Toro';
+    //      $user->contrassenya = \bcrypt('9876');
+    //      $user->activo = true;
+    //      $user->perfils_id = 1;
 
-         $user->save();*/
+    //      $user->save();
 
-        return view('auth.login');
-    }
+    //     return view('auth.login');
+    // }
 
     public function login(Request $request)
     {
@@ -48,18 +48,18 @@ class UsuariController extends Controller
         return $response;
     }
 
-    public function store(Request $request)
-    {
-        $user = new Usuari();
+    // public function store(Request $request)
+    // {
+    //     $user = new Usuari();
 
-        $user->codi = $request->input('id');
-        $user->contrassenya = $request->input('contrassenya');
-        $user->nom = $request->input('nom');
-        $user->cognoms = $request->input('cognoms');
-        $user->perfil = $request->input('perfil');
+    //     $user->codi = $request->input('id');
+    //     $user->contrassenya = $request->input('contrassenya');
+    //     $user->nom = $request->input('nom');
+    //     $user->cognoms = $request->input('cognoms');
+    //     $user->perfil = $request->input('perfil');
 
-        $user->save();
-    }
+    //     $user->save();
+    // }
 
     public function logout()
     {
@@ -67,19 +67,19 @@ class UsuariController extends Controller
         return redirect('/login');
     }
 
-    public function update(Request $request, Usuari $user)
-    {
-        $user->codi = $request->input('id');
-        $user->contrassenya = $request->input('contrassenya');
-        $user->nom = $request->input('nom');
-        $user->cognoms = $request->input('cognoms');
+    // public function update(Request $request, Usuari $user)
+    // {
+    //     $user->codi = $request->input('id');
+    //     $user->contrassenya = $request->input('contrassenya');
+    //     $user->nom = $request->input('nom');
+    //     $user->cognoms = $request->input('cognoms');
 
-        $user->save();
-    }
+    //     $user->save();
+    // }
 
-    public function destroy(Usuari $usuari)
-    {
-        $usuari->actiu = false;
-        $usuari->save();
-    }
+    // public function destroy(Usuari $usuari)
+    // {
+    //     $usuari->actiu = false;
+    //     $usuari->save();
+    // }
 }

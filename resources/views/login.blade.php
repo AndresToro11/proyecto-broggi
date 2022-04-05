@@ -3,5 +3,5 @@
 @section('titulo', 'login')
 
 @section('contenido')
-<vista-login></vista-login>
+    <vista-login></vista-login>
 @endsection

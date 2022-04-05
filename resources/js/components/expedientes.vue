@@ -819,7 +819,7 @@
     /* Modal: */
     /* Modal: */
     /* Modal: */
-    .margin-container {
+    /* .margin-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -830,9 +830,9 @@
     margin-left: 102px;
     margin-right: 102px;
     z-index: inherit;
-    } /* Es posible que este cambio de poner aquí lo de abajo de problemas, o por lo menos me da esa sensación */
+    } Es posible que este cambio de poner aquí lo de abajo de problemas, o por lo menos me da esa sensación */
 
-    /* .container {
+    .container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -840,7 +840,7 @@
     align-content: flex-start;
     row-gap: 50px;
     column-gap: 115px;
-    } */
+    }
 
     .expediente-file {
     height: 279px;
