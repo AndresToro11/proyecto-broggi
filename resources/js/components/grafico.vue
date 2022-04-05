@@ -121,6 +121,7 @@ import axios from 'axios';
                 let type = 'doughnut';
                 let usuarios = [];
                 let titulo;
+                import axios from 'axios';
                 axios
                 .get('/grafico/usuarios/' + this.selected)
                 .then(response => {
