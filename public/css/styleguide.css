@@ -1,6 +1,7 @@
 :root {
   --black: #000000;
   --black-2: #00000099;
+  --black-3: #0000003d;
   --white: #ffffff;
 
   --font-size-xxxl: 48px;
@@ -61,5 +62,4 @@
       font-size: var(--font-size-m2);
       font-style: normal;
       font-weight: 500;
-
   }

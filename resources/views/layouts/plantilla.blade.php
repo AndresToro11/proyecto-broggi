@@ -49,9 +49,17 @@
                 </ul>
             </div>
         </nav>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href={{ asset('css/styleguide.css') }} />
+        <link rel=" stylesheet" type="text/css" href={{ asset('css/globals.css') }} />
+        <link rel=" stylesheet" type="text/css" href={{ asset('css/login.css') }} />
 
-    <body onload="" style="margin: 0">
-        <input type="hidden" id="anPageName" name="page" value="header" />
+    </head>
+
+
+    <body>
+        {{-- <input type="hidden" id="anPageName" name="page" value="header" /> --}}
         <div class="container-center-horizontal">
             <div class="header screen">
                 {{-- Header Operador --}}
@@ -60,17 +68,31 @@
                         <div class="overlap-group-operador">
                             <img class="background-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png"/>
                             <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
+
                             <h1 class="title-operador valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
                             <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Video Interactivo</div>
-                            <div class="sergi-prez-jimnez-operador valign-text-middle gothica1-normal-white-18px">Sergi Pérez Jiménez</div>
+                             <div class="sergi-prez-jimnez-operador valign-text-middle gothica1-normal-white-18px">
+                                 @if (Auth::check())
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" valign-text-middle gothica1-normal-white-18px>
+                                    {{ Auth::user()->nom }} {{ Auth::user()->cognoms }}
+                                </a>
+
+                                @endif
+                            </div>
+
+                            @if (Auth::check())
                             <img class="separate-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/separate@2x.svg"/>
-                            <div class="cerrar-sesin-operador valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
+                             <div class="cerrar-sesin-operador valign-text-middle gothica1-normal-white-18px">
+                                <a class="" href="{{ url('/logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Cerrar sesión</a>
+                                @endif
+                             </div>
+
                             <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/white-gradient@1x.svg"/>
                         </div>
                     </div>
                 </span>
                 {{-- Header Supervisor --}}
-                    {{-- <span>
+                    <span hidden>
                         <div class="header-supervisor">
                             <div class="overlap-group-supervisor">
                                 <img class="overlap-group-item-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
@@ -84,9 +106,9 @@
                                 <div class="cerrar-sesin-supervisor valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
                             </div>
                         </div>
-                    </span> --}}
+                    </span>
                 {{-- Header Administrador --}}
-                {{-- <span>
+                <span hidden>
                     <div class="header-administrador">
                         <div class="overlap-group-administrador">
                             <img class="overlap-group-item-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
@@ -99,23 +121,33 @@
                             <div class="cerrar-sesin-administrador valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
                         </div>
                     </div>
-                </span> --}}
+                </span>
             </div>
         </div>
-        <div id="app" class="container">
+        <div id="app" class="container-app">
             @yield('contenido')
         </div>
         <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/app.js') }}">
         </script>
 
+
         <style>
+
+            .container-app {
+            display: flex;
+            margin-top: 198px;
+            z-index: 99;
+            }
+
             .header {
             align-items: flex-start;
             display: flex;
             height: 198px;
             width: 1920px;
+            position: fixed;
             }
 
             /* TODO: Header Operador */

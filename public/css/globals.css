@@ -17,8 +17,9 @@
 }
 
 .screen a {
-  display: contents;
+  /* display: contents; */
   text-decoration: none;
+  z-index: 300;
 }
 
 .container-center-horizontal {

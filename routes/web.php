@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UsuariController;
 
@@ -14,29 +15,38 @@ use App\Http\Controllers\Api\UsuariController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
 
 //------------------------------ Login -----------------------------
 
-Route::get('/login', function () {
+/*Route::get('/login', function () {
     return view('login');
-});
+});*/
 
-//------------------------------ Home -----------------------------
+Route::get('/login', [UsuariController::class, 'showLogin'])->name('login');
+Route::post('/login', [UsuariController::class, 'login'] );
+Route::get('/logout', [UsuariController::class, 'logout']);
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', function () {
+        $user = Auth::user();
 
-//------------------------------ Llamada -----------------------------
+        return view('home', compact('user'));
+    });
 
-Route::get('/llamada', function () {
-    return view('llamada');
-});
+//-------------------------------- índex ---------------------------
 
-//-------------------------------- Video ---------------------------
+    Route::get('/index', function () {
+        return view('index');
+    });
+
+    //-------------------------------- Llamada ---------------------------
+
+    Route::get('/llamada', function () {
+        return view('llamada');
+    });
+
+    //-------------------------------- Video ---------------------------
 
 Route::get('/video', function () {
     return view('video');
@@ -51,6 +61,7 @@ Route::get('/expedientes', function () {
 //-------------------------- Paginas logeadas ---------------------
 
 Route::middleware(['auth'])->group(function () {
+
 });
 
 //----------------------------- Grafico -----------------------------
@@ -59,10 +70,10 @@ Route::get('/grafico', function () {
     return view('grafico');
 });
 
-//------------------------------ Admin -----------------------------
+//----------------------------- Perfil -----------------------------
 
-Route::get('/admin', function () {
-    return view('administracion.admin');
+Route::get('/perfil', function () {
+    return view('perfil');
 });
 
 Route::get('/admin/nuevoUsuario', function () {
@@ -77,6 +88,8 @@ Route::get('/admin/editarUsuario', function () {
 
 Route::get('/perfil', function () {
     return view('perfil');
+});
+
 });
 
 //---------------------------------  --------------------------------

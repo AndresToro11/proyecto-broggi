@@ -6,15 +6,15 @@
 
 @section('contenido')
 
-    @if(session('rol') == "administrador")
-    <administrador></administrador>
+@if(session('rol') == "administrador")
+<user-administrador></user-administrador>
 
-    @elseif(session('rol') == "operador")
-    <operador></operador>
+@elseif(session('rol') == "operador")
+<user-operador></user-operador>
 
-    @elseif(session('rol') == "supervisor")
-    <supervisor></supervisor>
+@elseif(session('rol') == "supervisor")
+<user-supervisor></user-supervisor>
 
-    @endif
+@endif
 
 @endsection
