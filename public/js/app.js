@@ -3948,10 +3948,10 @@ __webpack_require__.r(__webpack_exports__);
   //     },
   // },
   mounted: function mounted() {
-    new mdc.textField.MDCTextField(document.querySelector(".e-mail .mdc-text-field"));
-    new mdc.textField.MDCTextField(document.querySelector(".contrasea .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".inicio-de-sesion-e-mail .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".inicio-de-sesion-contrasea .mdc-text-field"));
     mdc.autoInit();
-    new mdc.ripple.MDCRipple(document.querySelector(".crear-cuenta-boton .mdc-button"));
+    new mdc.ripple.MDCRipple(document.querySelector(".inicio-de-sesion-crear-cuenta-boton .mdc-button"));
   }
 });
 
@@ -17583,7 +17583,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.inicio-de-sesion {\n/* align-items: flex-start; */\n/* background-color: var(--white); */\n/* display: flex; */\nwidth: 1920px;\nheight: 1080px;\noverflow-block: hidden;\n}\n.inicio-de-sesion .background {\n/* left: 0; */\n-o-object-fit: fill;\n   object-fit: fill;\nposition: fixed;\n/* top: 0; */\nwidth: 1920px;\nheight: 1080px;\nz-index: 1;\noverflow: hidden;\n}\n.inicio-de-sesion .inicio-de-sesin {\nalign-items: flex-start;\nbackground-color: var(--white);\nborder-radius: 8px;\nbox-shadow: 0px 4px 4px #00000040 , 0px 4px 4px #00000040;\ndisplay: flex;\nflex-direction: column;\nleft: 1121px;\npadding: 37px 41px;\nposition: fixed;\ntop: 186px;\nwidth: 698px;\nz-index: 2;\n}\n.inicio-de-sesion .title {\nletter-spacing: 0.15px;\nline-height: 24px;\nmargin-left: 2px;\nmargin-top: 26px;\nmin-height: 24px;\nwhite-space: nowrap;\n}\n.inicio-de-sesion .flex-row {\nalign-items: center;\ndisplay: flex;\nheight: 24px;\nmargin-left: 2px;\nmargin-top: 17px;\nmin-width: 296px;\n}\n.inicio-de-sesion .e-mail {\nheight: 64px;\nmargin-left: 3px;\nmargin-top: 29px;\nwidth: 360px;\n}\n.inicio-de-sesion .contrasea {\nheight: 63px;\nmargin-left: 2px;\nmargin-top: 23px;\nwidth: 360px;\n}\n.inicio-de-sesion .crear-cuenta-boton #boton{\nalign-self: flex-end;\nborder-radius: 32px;\nheight: 44px;\nmargin-top: 70px;\nmargin-left: 486px;\nwidth: 135px;\ncursor: pointer;\nbackground-color: #0040FF;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n.inicia-sesin {\nheight: auto !important;\nwidth: auto !important;\n}\n.e-mail .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\nwidth: 360px;\n}\n.contrasea .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\nwidth: 360px;\n}\n.crear-cuenta-boton {\nheight: auto !important;\nwidth: auto !important;\n}\n.e-mail .mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 360px;\n}\n.contrasea .mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 360px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.inicio-de-sesion {\n/* align-items: flex-start; */\n/* background-color: var(--white); */\n/* display: flex; */\nwidth: 1920px;\nheight: 1080px;\noverflow-block: hidden;\n}\n.inicio-de-sesion-background {\n/* left: 0; */\n-o-object-fit: fill;\n   object-fit: fill;\nposition: fixed;\n/* top: 0; */\nwidth: 1920px;\nheight: 1080px;\nz-index: 1;\noverflow: hidden;\n}\n.inicio-de-sesion-inicio-de-sesin {\nalign-items: flex-start;\nbackground-color: var(--white);\nborder-radius: 8px;\nbox-shadow: 0px 4px 4px #00000040 , 0px 4px 4px #00000040;\ndisplay: flex;\nflex-direction: column;\nleft: 1121px;\npadding: 37px 41px;\nposition: fixed;\ntop: 186px;\nwidth: 698px;\nz-index: 2;\n}\n.inicio-de-sesion-title {\nletter-spacing: 0.15px;\nline-height: 24px;\nmargin-left: 2px;\nmargin-top: 26px;\nmin-height: 24px;\nwhite-space: nowrap;\n}\ninicio-de-sesion-flex-row {\nalign-items: center;\ndisplay: flex;\nheight: 24px;\nmargin-left: 2px;\nmargin-top: 17px;\nmin-width: 296px;\n}\n.inicio-de-sesion-e-mail {\nheight: 64px;\nmargin-left: 3px;\nmargin-top: 29px;\nwidth: 360px;\n}\n.inicio-de-sesion-contrasea {\nheight: 63px;\nmargin-left: 2px;\nmargin-top: 23px;\nwidth: 360px;\n}\n.inicio-de-sesion-crear-cuenta-boton #boton{\nalign-self: flex-end;\nborder-radius: 32px;\nheight: 44px;\nmargin-top: 70px;\nmargin-left: 486px;\nwidth: 135px;\ncursor: pointer;\nbackground-color: #0040FF;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n.inicio-de-sesion-inicia-sesin {\nheight: auto !important;\nwidth: auto !important;\n}\n.inicio-de-sesion-e-mail .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\nwidth: 360px;\n}\n.inicio-de-sesion-contrasea .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\nwidth: 360px;\n}\n.inicio-de-sesion-crear-cuenta-boton {\nheight: auto !important;\nwidth: auto !important;\n}\n.inicio-de-sesion-e-mail .mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 360px;\n}\n.inicio-de-sesion-contrasea .mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 360px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22299,31 +22299,27 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("input", {
-        attrs: {
-          type: "hidden",
-          id: "anPageName",
-          name: "page",
-          value: "inicio-de-sesion",
-        },
-      }),
-      _vm._v(" "),
       _c("div", { staticClass: "inicio-de-sesion screen" }, [
         _c("img", {
-          staticClass: "background",
+          staticClass: "inicio-de-sesion-background",
           attrs: {
             src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623dbabddd12e5a0113de8d8/img/background@1x.png",
           },
         }),
         _vm._v(" "),
-        _c("div", { staticClass: "inicio-de-sesin" }, [
-          _c("h1", { staticClass: "title gothica1-extra-bold-black-48px" }, [
-            _vm._v("\n                Inicio de sesion\n            "),
-          ]),
+        _c("div", { staticClass: "inicio-de-sesion-inicio-de-sesin" }, [
+          _c(
+            "h1",
+            {
+              staticClass:
+                "inicio-de-sesion-title gothica1-extra-bold-black-48px",
+            },
+            [_vm._v("\n                Inicio de sesion\n            ")]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "flex-row" }),
+          _c("div", { staticClass: "inicio-de-sesion-flex-row" }),
           _vm._v(" "),
-          _c("div", { staticClass: "e-mail" }, [
+          _c("div", { staticClass: "inicio-de-sesion-e-mail" }, [
             _c(
               "label",
               { staticClass: "mdc-text-field mdc-text-field--filled" },
@@ -22353,7 +22349,7 @@ var staticRenderFns = [
             ),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "contrasea" }, [
+          _c("div", { staticClass: "inicio-de-sesion-contrasea" }, [
             _c(
               "label",
               { staticClass: "mdc-text-field mdc-text-field--filled" },
@@ -22381,7 +22377,10 @@ var staticRenderFns = [
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "crear-cuenta-boton", attrs: { id: "boton" } },
+            {
+              staticClass: "inicio-de-sesion-crear-cuenta-boton",
+              attrs: { id: "boton" },
+            },
             [
               _c(
                 "button",
