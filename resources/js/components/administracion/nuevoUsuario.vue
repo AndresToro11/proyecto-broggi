@@ -45,9 +45,8 @@
                     <div class="input-field col s4">
                         <select v-model="usuario.rol" class="form-select" aria-label="Default select example">
                             <option selected disabled>Rol</option>
-                            <option v-for="rol in data" :key="rol.id" :value="rol.id" >
-                            {{ rol.nom}}
-                        </option>
+                            <option value="1">Operador</option>
+                            <option value="2">Supervisor</option>
                         </select>
                     </div>
                 </div>
@@ -63,10 +62,10 @@
                         </button>
                     </div>
                 </div>
-                    
+
             </div>
         </div>
-            
+
     </div>
 </template>
 
@@ -88,31 +87,24 @@
                     nick: ''
                 },
                 image: '/images/usuario.jpg',
-                contrasenaC: '',
-                
+                contrasenaC: ''
             }
         },
 
         methods:{
-            selectRoles(){
-                this.loading = true;
-                let me = this;
-                axios
-                    .get('/admin/roles')
-                    .then(response => {
-                        me.data = response.data;
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    })
-                    .finally(() => this.loading = false);
-            },
-
             insertUsuario(){
                 let me = this;
 
                 axios
                     .post('/admin/insertUsuario', me.usuario)
+                    .then(response => {
+                        window.location.href = "http://localhost/proyecto-broggi/public/admin";
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+                    .finally();
+
             },
 
             verificarContrasena(){
@@ -120,17 +112,17 @@
                     if(this.usuario.contrasena != this.contrasenaC){
                     console.log("Son diferentes las contraseñas");
                     }
-                    
+
                     else{
                     console.log('Contraseña correcta')
                     }
                 }
             },
-            
+
 
         },
         mounted() {
-            this.selectRoles();
+            
         }
     }
 

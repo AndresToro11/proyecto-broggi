@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Clases\Utilitat;
 use App\Models\Perfil;
 use App\Models\Usuari;
+use App\Clases\Utilitat;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\Http\Resources\Admin\RolesResource;
-use App\Http\Resources\Admin\UsuariosResource;
+use App\Http\Resources\Admin\DefaultResource;
 
 class AdminController extends Controller
 {
@@ -16,31 +16,44 @@ class AdminController extends Controller
     public function usuarios()
     {
         $result = Usuari::with('perfil')
-                        ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->select(['id','codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->where('activo', 1)
                         ->orderBy('perfils_id')
                         ->get();
 
-        return UsuariosResource::collection($result);               
+        return RolesResource::collection($result);
     }
 
     public function operadores()
     {
         $result = Usuari::with('perfil')
-                        ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->select(['id', 'codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->where('activo', 1)
                         ->where('perfils_id', 1)
                         ->get();
 
-        return RolesResource::collection($result);               
+        return RolesResource::collection($result);
     }
 
     public function supervisores()
     {
         $result = Usuari::with('perfil')
-                        ->select(['codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->select(['id', 'codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->where('activo', 1)
                         ->where('perfils_id', 2)
                         ->get();
 
-        return RolesResource::collection($result);               
+        return RolesResource::collection($result);
+    }
+
+    public function inactivos()
+    {
+        $result = Usuari::with('perfil')
+                        ->select(['id', 'codi', 'nom', 'cognoms', 'perfils_id', 'mail'])
+                        ->where('activo', 0)
+                        ->get();
+
+        return RolesResource::collection($result);
     }
 
     public function roles()
@@ -49,7 +62,7 @@ class AdminController extends Controller
                         ->where('id','!=', 3)
                         ->get();
 
-        return UsuariosResource::collection($result);               
+        return DefaultResource::collection($result);
     }
 
     public function insertUsuario(Request $request)
@@ -65,10 +78,7 @@ class AdminController extends Controller
         $usuario->activo = 1;
 
         try{
-            $usuario->save(); 
-            // $response = (new Usuari($usuario))
-            //              ->response()
-            //              ->setStatusCode(201);
+            $usuario->save();
             $response = response()->json(['message' => 'Tot correcte'], 201);
          }
          catch(QueryException $e){
@@ -79,13 +89,70 @@ class AdminController extends Controller
          return $response;
     }
 
-    public function update(Request $request, Usuari $usuari)
-    {
-        //
+    public function updateUsuario(Request $request, Usuari $usuario){
+
+        if($request->accion == 'datos'){
+            try{
+                Usuari::where('id', $usuario->id)
+                    ->update(['nom' => $request->nombre,
+                            'cognoms' => $request->apellidos,
+                            'mail' => $request->mail,
+                            'perfils_id' => $request->rol
+                            ]);
+
+                $response = response()->json(['Mensaje' => 'Todo correcto y yo que me alegro'], 201);
+            }
+            catch(QueryException $e){
+                $mensaje = Utilitat::errorMessage($e);
+                $response = \response()
+                            ->json(['error' => $mensaje], 400);
+            }
+        }
+
+        elseif($request->accion == 'contrasena'){
+            try{
+                Usuari::where('id', $usuario->id)
+                    ->update(['contrassenya' => $request->contrasena]);
+
+                $response = response()->json(['Mensaje' => 'Todo correcto y yo que me alegro'], 201);
+            }
+            catch(QueryException $e){
+                $mensaje = Utilitat::errorMessage($e);
+                $response = \response()
+                            ->json(['error' => $mensaje], 400);
+            }
+        }
+
+         return $response;
     }
 
-    public function destroy(Usuari $usuari)
-    {
-        //
+    public function activarUsuario(Usuari $usuario){
+        try{
+            Usuari::where('id', $usuario->id)
+                ->update(['activo' => 1]);
+
+            $response = response()->json(['Mensaje' => 'Usuario activado'], 201);
+        }
+        catch(QueryException $e){
+            $mensaje = Utilitat::errorMessage($e);
+            $response = \response()
+                        ->json(['error' => $mensaje], 400);
+        }
+        return $response;
+    }
+
+    public function deleteUsuario(Usuari $usuario){
+        try{
+            Usuari::where('id', $usuario->id)
+                ->update(['activo' => 0]);
+
+            $response = response()->json(['Mensaje' => 'Usuario desactivado'], 201);
+        }
+        catch(QueryException $e){
+            $mensaje = Utilitat::errorMessage($e);
+            $response = \response()
+                        ->json(['error' => $mensaje], 400);
+        }
+        return $response;
     }
 }

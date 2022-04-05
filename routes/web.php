@@ -61,6 +61,7 @@ Route::get('/expedientes', function () {
 //-------------------------- Paginas logeadas ---------------------
 
 Route::middleware(['auth'])->group(function () {
+
 });
 
 //----------------------------- Grafico -----------------------------
@@ -83,10 +84,12 @@ Route::get('/admin/editarUsuario', function () {
     return view('administracion.editarUsuario');
 });
 
+//--------------------------------- Perfil --------------------------------
 
+Route::get('/perfil', function () {
+    return view('perfil');
+});
 
 });
 
-
-
-
+//---------------------------------  --------------------------------
