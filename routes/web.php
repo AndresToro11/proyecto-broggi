@@ -59,18 +59,8 @@ Route::get('/grafico', function () {
     return view('grafico');
 });
 
-//------------------------------ Admin -----------------------------
+//----------------------------- Perfil -----------------------------
 
-Route::get('/admin', function () {
-    return view('administracion.admin');
+Route::get('/perfil', function () {
+    return view('perfil');
 });
-
-Route::get('/admin/nuevoUsuario', function () {
-    return view('administracion.nuevoUsuario');
-});
-
-Route::get('/admin/editarUsuario', function () {
-    return view('administracion.editarUsuario');
-});
-
-//---------------------------------  --------------------------------

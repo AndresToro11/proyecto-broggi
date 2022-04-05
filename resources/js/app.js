@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+// require('./bootstrap');
 
 window.Vue = require('vue').default;
 
@@ -23,21 +23,21 @@ window.Vue = require('vue').default;
 
 Vue.component('vista-login', require('./components/login.vue').default); //Acabado
 
+//----------------------------------------------- Home ------------------------------------
+
+Vue.component('administrador', require('./components/home/administrador.vue').default); //Acabado
+Vue.component('operador', require('./components/home/operador.vue').default); //Acabado
+Vue.component('supervisor', require('./components/home/supervisor.vue').default); //Acabado
+
 //-----------------------------------------------Llamada----------------------------------------------------
 
+Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default); //Acabado
 Vue.component('datos-administrativos', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
 Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncidente.vue').default); //Acabado
 Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default); //Acabado
 Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
 Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
-<<<<<<< HEAD
-<<<<<<< HEAD
-Vue.component('deCualquierManera', require('./components/cartaLlamada/CartaDeLlamada.vue').default);
-=======
 Vue.component('carta-llamada', require('./components/cartaLlamada/Carta_de_llamada.vue').default);
->>>>>>> Andres
-=======
->>>>>>> Sergi
 
 //------------------------------------------- Expedientes --------------------------------
 
@@ -45,19 +45,11 @@ Vue.component('expedientes', require('./components/expedientes.vue').default);
 
 //--------------------------------------------- Grafico ----------------------------------
 
-Vue.component('grafico', require('./components/grafico.vue').default);
+Vue.component('grafico', require('./components/grafico.vue').default); //Andres
 
-//----------------------------------------------- Home ------------------------------------
+//--------------------------------------------- Perfil ----------------------------------
 
-Vue.component('administrador', require('./components/home/administrador.vue').default);
-Vue.component('operador', require('./components/home/operador.vue').default);
-Vue.component('supervisor', require('./components/home/supervisor.vue').default);
-
-//----------------------------------------------- Admin -----------------------------------
-
-Vue.component('admin', require('./components/administracion/admin.vue').default);
-Vue.component('nuevousuario', require('./components/administracion/nuevousuario.vue').default);
-Vue.component('editarusuario', require('./components/administracion/editarusuario.vue').default);
+Vue.component('perfil', require('./components/editar-perfil.vue').default);
 
 //-----------------------------------------------------------------------------------------
 
