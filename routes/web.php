@@ -73,4 +73,10 @@ Route::get('/admin/editarUsuario', function () {
     return view('administracion.editarUsuario');
 });
 
+//--------------------------------- Perfil --------------------------------
+
+Route::get('/perfil', function () {
+    return view('perfil');
+});
+
 //---------------------------------  --------------------------------

@@ -34,9 +34,8 @@
                     <div class="input-field col s4">
                         <select v-model="usuario.rol" class="form-select" aria-label="Default select example">
                             <option selected disabled>Rol</option>
-                            <option v-for="rol in data" :key="rol.id" :value="rol.id" >
-                            {{ rol.nom}}
-                        </option>
+                            <option value="1">Operador</option>
+                            <option value="2">Supervisor</option>
                         </select>
                     </div>
                 </div>
@@ -57,7 +56,9 @@
         </div>
 
         <div class="row m-4">
-            <div class="card m-4">
+            <div class="col-4">
+            </div>
+            <div class="card col-8 m-4">
                 <div class="row">
                     <div class="input-field col s6">
                         <input @blur="verificarContrasena()" v-model="usuario.contrasena" id="password" type="password" class="validate">
@@ -98,20 +99,6 @@
         },
 
         methods:{
-            selectRoles(){
-                this.loading = true;
-                let me = this;
-                axios
-                    .get('/admin/roles')
-                    .then(response => {
-                        me.data = response.data;
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    })
-                    .finally(() => this.loading = false);
-            },
-
             insertUsuario(){
                 let me = this;
 

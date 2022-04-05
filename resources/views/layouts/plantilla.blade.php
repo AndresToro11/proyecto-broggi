@@ -6,13 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>@yield('titulo')</title>
 
+        <!-- MapBox -->
+        
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
         <!-- font awesome -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-        <!-- Compiled and minified CSS -->
+        <!-- Materialize CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-        <!-- Compiled and minified JavaScript -->
+        <!-- Materialize JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
         {{-- Datos incidentes --}}
@@ -23,10 +27,15 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
         <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        
         <link rel="stylesheet" type="text/css" href={{ asset('css/styleguide.css') }} />
         <link rel=" stylesheet" type="text/css" href={{ asset('css/globals.css') }} />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<<<<<<< HEAD
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
     </head>
     <body>
         <nav>
@@ -40,18 +49,6 @@
                 </ul>
             </div>
         </nav>
-=======
-        <script>
-            function loader() {
-                var loader = document.createElement("div");
-                loader.setAttribute('id', 'div1');
-                loader.setAttribute('class', 'spinner-border text-primary');
-                loader.setAttribute('role', 'status');
-                document.body.appendChild(loader);
-            }
-        </script>
-    </head>
->>>>>>> Sergi
 
     <body onload="" style="margin: 0">
         <input type="hidden" id="anPageName" name="page" value="header" />
@@ -108,10 +105,8 @@
         <div id="app" class="container">
             @yield('contenido')
         </div>
-
-<<<<<<< HEAD
+        <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
         <script src="{{ asset('js/app.js') }}"></script>
-=======
         <script src="{{ asset('js/app.js') }}">
         </script>
 
@@ -498,6 +493,5 @@
             }
 
         </style>
->>>>>>> Sergi
     </body>
 </html>

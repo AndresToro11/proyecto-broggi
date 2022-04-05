@@ -33,6 +33,7 @@ Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').def
 Vue.component('deCualquierManera', require('./components/cartaLlamada/CartaDeLlamada.vue').default);
 Vue.component('deCualquierManera', require('./components/cartaLlamada/CartaDeLlamada.vue').default);
 Vue.component('carta-llamada', require('./components/cartaLlamada/Carta_de_llamada.vue').default);
+Vue.component('mapa', require('./components/mapa.vue').default);
 
 //------------------------------------------- Expedientes --------------------------------
 
@@ -53,6 +54,10 @@ Vue.component('supervisor', require('./components/home/supervisor.vue').default)
 Vue.component('admin', require('./components/administracion/admin.vue').default);
 Vue.component('nuevousuario', require('./components/administracion/nuevousuario.vue').default);
 Vue.component('editarusuario', require('./components/administracion/editarusuario.vue').default);
+
+//----------------------------------------------- Perfil -----------------------------------------
+
+Vue.component('perfil', require('./components/perfil.vue').default);
 
 //-----------------------------------------------------------------------------------------
 
