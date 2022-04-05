@@ -6055,9 +6055,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  mounted: function mounted() {
-    this.selectRoles();
-  }
+  mounted: function mounted() {}
 }); // https://screeps.com/
 
 /***/ }),
@@ -7487,7 +7485,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -7513,7 +7510,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         return _this.loading = false;
       });
     },
-    crearMapa: function crearMapa(place, store) {
+    crearMapa: function crearMapa(place, agencias) {
       var me = this;
       mapboxgl.accessToken = this.accessToken;
       var mapboxClient = mapboxSdk({
@@ -7538,7 +7535,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           zoom: 12
         });
       });
-      this.añadirMarker(store);
+      this.añadirMarker(agencias);
     },
     añadirMarker: function añadirMarker(agencias) {
       var _this2 = this;
@@ -7563,7 +7560,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           var feature = response.body.features[0];
           var popup = new mapboxgl.Popup({
             offset: 25
-          }).setText(agencias[i].nom + ' <br> ' + agencias[i].municipi.nom); // Crear marker y añadirlo al mapa
+          }).setText(agencias[i].nom + ', ' + agencias[i].municipi.nom + ', ' + agencias[i].carrer); // Crear marker y añadirlo al mapa
 
           new mapboxgl.Marker({
             color: '#E74C3C'
@@ -7821,9 +7818,9 @@ try {
 
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'; // window.axios.defaults.baseURL = '/proyecto-broggi/public/api';
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.baseURL = '/proyecto-broggi/public/api'; //window.axios.defaults.baseURL = '/api/';
 
-window.axios.defaults.baseURL = '/api/';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -49555,12 +49552,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container m-4" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-primary", attrs: { id: "sortir" } },
-        [_vm._v("Salir")]
-      ),
-      _vm._v(" "),
       _c("div", { attrs: { id: "map" } }),
     ])
   },
