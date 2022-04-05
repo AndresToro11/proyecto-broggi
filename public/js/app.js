@@ -14829,7 +14829,11 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     insertUsuario: function insertUsuario() {
       var me = this;
-      axios.post('/admin/insertUsuario', me.usuario);
+      axios.post('/admin/insertUsuario', me.usuario).then(function (response) {
+        window.location.href = "http://localhost/proyecto-broggi/public/admin";
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"]();
     },
     verificarContrasena: function verificarContrasena() {
       if (this.usuario.contrasena != '' && this.contrasenaC != '') {
@@ -14841,9 +14845,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  mounted: function mounted() {
-    this.selectRoles();
-  }
+  mounted: function mounted() {}
 }); // https://screeps.com/
 
 /***/ }),
