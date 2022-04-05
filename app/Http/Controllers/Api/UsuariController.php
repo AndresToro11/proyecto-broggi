@@ -9,23 +9,43 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UsuariController extends Controller
+
+
 {
+
+    public function showLogin()
+    {
+         /*user = new Usuari();
+
+         $user->codi = 'Andrés';
+         $user->mail = 'atoro2021@cepnet.net';
+         $user->nom = 'Andrés';
+         $user->cognoms = 'Toro';
+         $user->contrassenya = \bcrypt('9876');
+         $user->activo = true;
+         $user->perfils_id = 1;
+
+         $user->save();*/
+
+        return view('auth.login');
+    }
+
     public function login(Request $request)
     {
-        $codi = $request->input('codi');
+        $mail = $request->input('mail');
         $contrassenya = $request->input('contrassenya');
 
-        $user = Usuari::where('codi', $codi)->first();
+        $user = Usuari::where('mail', $mail)->first();
 
         if ($user != null && Hash::check($contrassenya, $user->contrassenya)) {
             Auth::login($user);
-            //$response = redirect('/home');
+            $response = redirect('/home');
         }
         else{
-            //$request->session()->flash('error', 'Usuario o contraseña incorrecta');
-            //$response = redirect('/login')->withInput();
+            $request->session()->flash('error', 'Usuario o contraseña incorrecta');
+            $response = redirect('/login')->withInput();
         }
-        //return $response;
+        return $response;
     }
 
     public function store(Request $request)
@@ -44,6 +64,7 @@ class UsuariController extends Controller
     public function logout()
     {
         Auth::logout();
+        return redirect('/login');
     }
 
     public function update(Request $request, Usuari $user)

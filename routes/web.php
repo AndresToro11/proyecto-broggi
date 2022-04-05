@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UsuariController;
 
@@ -20,23 +21,27 @@ Route::get('/', function () {
 
 //------------------------------ Login -----------------------------
 
-Route::get('/login', function () {
+/*Route::get('/login', function () {
     return view('login');
-});
+});*/
 
-//------------------------------ Home -----------------------------
+Route::get('/login', [UsuariController::class, 'showLogin'])->name('login');
+Route::post('/login', [UsuariController::class, 'login'] );
+Route::get('/logout', [UsuariController::class, 'logout']);
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', function () {
+        $user = Auth::user();
 
-//------------------------------ Llamada -----------------------------
+        return view('home', compact('user'));
+    });
 
-Route::get('/llamada', function () {
-    return view('llamada');
-});
 
-//-------------------------------- Video ---------------------------
+    Route::get('/llamada', function () {
+        return view('llamada');
+    });
+
+    //-------------------------------- Video ---------------------------
 
 Route::get('/video', function () {
     return view('video');
@@ -63,4 +68,12 @@ Route::get('/grafico', function () {
 
 Route::get('/perfil', function () {
     return view('perfil');
+});
+
+Route::get('/admin/nuevoUsuario', function () {
+    return view('administracion.nuevoUsuario');
+});
+
+Route::get('/admin/editarUsuario', function () {
+    return view('administracion.editarUsuario');
 });

@@ -27,33 +27,10 @@
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href={{ asset('css/styleguide.css') }} />
         <link rel=" stylesheet" type="text/css" href={{ asset('css/globals.css') }} />
+        <link rel=" stylesheet" type="text/css" href={{ asset('css/login.css') }} />
 
-<<<<<<< HEAD
     </head>
-    <body>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="{{ url('/home') }}" class="brand-logo">Logo</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{ url('/expedientes') }}">Expedientes</a></li>
-                    <li><a href="{{ url('/grafico') }}">Grafico</a></li>
-                    <li><a href="{{ url('/admin') }}">Admin</a></li>
-                    <li><a href="">login</a></li>
-                </ul>
-            </div>
-        </nav>
-=======
-        <script>
-            function loader() {
-                var loader = document.createElement("div");
-                loader.setAttribute('id', 'div1');
-                loader.setAttribute('class', 'spinner-border text-primary');
-                loader.setAttribute('role', 'status');
-                document.body.appendChild(loader);
-            }
-        </script>
-    </head>
->>>>>>> Sergi
+
 
     <body>
         {{-- <input type="hidden" id="anPageName" name="page" value="header" /> --}}
@@ -65,11 +42,25 @@
                         <div class="overlap-group-operador">
                             <img class="background-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png"/>
                             <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
+
                             <h1 class="title-operador valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
-                            <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Video interactivo</div>
-                            <div class="sergi-prez-jimnez-operador valign-text-middle gothica1-normal-white-18px">Sergi Pérez Jiménez</div>
+                            <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Video Interactivo</div>
+                             <div class="sergi-prez-jimnez-operador valign-text-middle gothica1-normal-white-18px">
+                                 @if (Auth::check())
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" valign-text-middle gothica1-normal-white-18px>
+                                    {{ Auth::user()->nom }} {{ Auth::user()->cognoms }}
+                                </a>
+
+                                @endif
+                            </div>
+
+                            @if (Auth::check())
                             <img class="separate-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/separate@2x.svg"/>
-                            <div class="cerrar-sesin-operador valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
+                             <div class="cerrar-sesin-operador valign-text-middle gothica1-normal-white-18px">
+                                <a class="" href="{{ url('/logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Cerrar sesión</a>
+                                @endif
+                             </div>
+
                             <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/white-gradient@1x.svg"/>
                         </div>
                     </div>
@@ -111,9 +102,7 @@
             @yield('contenido')
         </div>
 
-<<<<<<< HEAD
         <script src="{{ asset('js/app.js') }}"></script>
-=======
         <script src="{{ asset('js/app.js') }}">
         </script>
 
@@ -508,6 +497,5 @@
             }
 
         </style>
->>>>>>> Sergi
     </body>
 </html>
