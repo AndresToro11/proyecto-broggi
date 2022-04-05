@@ -50,9 +50,9 @@ Vue.component('grafico', require('./components/grafico.vue').default); //Andres
 
 //--------------------------------------------- Perfil ----------------------------------
 
-Vue.component('perfil-editar', require('./components/editar-perfil.vue').default);
+Vue.component('perfil', require('./components/editar-perfil.vue').default); //Acabado
 
-Vue.component('perfil', require('./components/perfil.vue').default);
+// Vue.component('perfil', require('./components/perfil.vue').default);
 
 //---------------------------------------------------- Admin -------------------------------------
 

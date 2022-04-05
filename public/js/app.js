@@ -2874,6 +2874,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2881,20 +2896,17 @@ __webpack_require__.r(__webpack_exports__);
       loading: false
     };
   },
-  methods: {
-    selectExpedientes: function selectExpedientes() {}
-  },
+  methods: {},
   mounted: function mounted() {
-    new mdc.textField.MDCTextField(document.querySelector(".nick .mdc-text-field"));
-    new mdc.textField.MDCTextField(document.querySelector(".nombre .mdc-text-field"));
-    new mdc.textField.MDCTextField(document.querySelector(".contrasea-actual .mdc-text-field"));
-    mdc.autoInit();
-    new mdc.ripple.MDCRipple(document.querySelector(".aceptar-cambios .mdc-button"));
-    mdc.autoInit();
-    new mdc.ripple.MDCRipple(document.querySelector(".cancelar .mdc-button"));
-    new mdc.textField.MDCTextField(document.querySelector(".apellidos .mdc-text-field"));
-    new mdc.textField.MDCTextField(document.querySelector(".contrasea-nueva .mdc-text-field"));
-    this.selectExpedientes();
+    new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-nick .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector("editar-perfil-operador-nombre .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-apellidos .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-contrasea-actual .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-contrasea-nueva .mdc-text-field")); // mdc.autoInit();
+
+    new mdc.ripple.MDCRipple(document.querySelector(".editar-perfil-operador-aceptar-cambios .mdc-button")); // mdc.autoInit();
+
+    new mdc.ripple.MDCRipple(document.querySelector("editar-perfil-operador-cancelar .mdc-button"));
   }
 });
 
@@ -4085,132 +4097,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/perfil.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/perfil.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      data: [],
-      loading: false,
-      usuario: {
-        id: '',
-        nombre: '',
-        apellidos: '',
-        contrasena: '',
-        mail: '',
-        rol: '',
-        nick: ''
-      },
-      image: '/images/usuario.jpg',
-      contrasenaC: ''
-    };
-  },
-  methods: {
-    editarUsuario: function editarUsuario() {
-      var me = this;
-      axios.put('/admin/updateUsuario/' + me.usuario.id, me.usuario);
-    },
-    verificarContrasena: function verificarContrasena() {
-      if (this.usuario.contrasena != '' && this.contrasenaC != '') {
-        if (this.usuario.contrasena != this.contrasenaC) {
-          console.log("Son diferentes las contraseñas");
-        } else {
-          console.log('Contraseña correcta');
-        }
-      }
-    }
-  },
-  mounted: function mounted() {}
-}); // https://screeps.com/
-
-/***/ }),
-
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -4259,8 +4145,9 @@ Vue.component('expedientes', (__webpack_require__(/*! ./components/expedientes.v
 Vue.component('grafico', (__webpack_require__(/*! ./components/grafico.vue */ "./resources/js/components/grafico.vue")["default"])); //Andres
 //--------------------------------------------- Perfil ----------------------------------
 
-Vue.component('perfil-editar', (__webpack_require__(/*! ./components/editar-perfil.vue */ "./resources/js/components/editar-perfil.vue")["default"]));
-Vue.component('perfil', (__webpack_require__(/*! ./components/perfil.vue */ "./resources/js/components/perfil.vue")["default"])); //---------------------------------------------------- Admin -------------------------------------
+Vue.component('perfil', (__webpack_require__(/*! ./components/editar-perfil.vue */ "./resources/js/components/editar-perfil.vue")["default"])); //Acabado
+// Vue.component('perfil', require('./components/perfil.vue').default);
+//---------------------------------------------------- Admin -------------------------------------
 
 Vue.component('admin', (__webpack_require__(/*! ./components/administracion/admin.vue */ "./resources/js/components/administracion/admin.vue")["default"]));
 Vue.component('nuevousuario', (__webpack_require__(/*! ./components/administracion/nuevoUsuario.vue */ "./resources/js/components/administracion/nuevoUsuario.vue")["default"])); //-------------------------------------------------------------------------------------------------
@@ -17648,7 +17535,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.editar-perfil-operador {\nalign-items: flex-start;\nbackground-color: var(--white);\ndisplay: flex;\nwidth: 1920px;\n}\n.editar-perfil-operador .editar-perfil {\nheight: 16px;\nleft: 100px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 222px;\nwhite-space: nowrap;\nz-index: 4;\n}\n.editar-perfil-operador .datos-personales {\nheight: 16px;\nleft: 102px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 274px;\nwhite-space: nowrap;\nz-index: 5;\n}\n\n/* .editar-perfil-operador .information {\nalign-items: flex-start;\ndisplay: flex;\nwidth: 1920px;\n} */\n.editar-perfil-operador .nick {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 308px;\nwidth: 350px;\nz-index: 6;\n}\n.editar-perfil-operador .nombre {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 393px;\nwidth: 350px;\nz-index: 8;\n}\n.editar-perfil-operador .contrasea-actual {\nheight: 60px;\nleft: 102px;\nposition: fixed;\ntop: 482px;\nwidth: 350px;\nz-index: 9;\n}\n.editar-perfil-operador .aceptar-cambios{\nborder-radius: 32px;\nheight: 36px;\nleft: 275px;\nposition: fixed;\ntop: 599px;\nwidth: 141px;\nz-index: 11;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n.aceptar-cambios {\nheight: auto !important;\nwidth: auto !important;\n}\n.editar-perfil-operador .cancelar {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nheight: 36px;\nleft: 552px;\nposition: fixed;\ntop: 619px;\nwidth: 89px;\nz-index: 12;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.cancelar {\nheight: auto !important;\nwidth: auto !important;\n}\n.editar-perfil-operador .apellidos {\nheight: 60px;\nleft: 502px;\nposition: fixed;\ntop: 393px;\nwidth: 350px;\nz-index: 7;\n}\n.editar-perfil-operador .contrasea-nueva {\nheight: 60px;\nleft: 502px;\nposition: fixed;\ntop: 482px;\nwidth: 350px;\nz-index: 10;\n}\n.editar-perfil-operador .name {\nheight: 16px;\nleft: 705px;\nletter-spacing: 0.15px;\nline-height: 16px;\nposition: fixed;\ntop: 643px;\nwhite-space: nowrap;\nz-index: 23;\n}\n.editar-perfil-operador .degradado {\nheight: 630px;\nleft: 1197px;\nposition: fixed;\ntop: 421px;\nwidth: 491px;\nz-index: 3;\n}\n.editar-perfil-operador .ellipse-1 {\nheight: 308px;\nleft: 1268px;\nposition: fixed;\ntop: 291px;\nwidth: 308px;\nz-index: 2;\n}\n.editar-perfil-operador .peep-standing-30 {\nalign-items: flex-end;\ndisplay: flex;\nheight: 780px;\njustify-content: flex-end;\nleft: 1246px;\nmin-width: 280px;\npadding: 37.2px 0;\nposition: fixed;\ntop: 299px;\nz-index: 1;\n}\n.editar-perfil-operador .overlap-group2 {\nheight: 700px;\nposition: relative;\nwidth: 391px;\n}\n.editar-perfil-operador .posestandingshirt-3 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 593px;\nleft: 0;\nmin-width: 391px;\npadding: 0 75.7px;\nposition: absolute;\ntop: 108px;\n}\n.editar-perfil-operador .overlap-group {\nheight: 612px;\nmargin-top: -15.42px;\nposition: relative;\nwidth: 212px;\n}\n.editar-perfil-operador .skin {\nheight: 610px;\nleft: 1px;\nposition: absolute;\ntop: 0;\nwidth: 209px;\n}\n.editar-perfil-operador .shoes {\nheight: 78px;\nleft: 0;\nposition: absolute;\ntop: 532px;\nwidth: 205px;\n}\n.editar-perfil-operador .top {\nheight: 277px;\nleft: 11px;\nposition: absolute;\ntop: 23px;\nwidth: 200px;\n}\n.editar-perfil-operador .ink {\nheight: 600px;\nleft: 0;\nposition: absolute;\ntop: 11px;\nwidth: 212px;\n}\n.editar-perfil-operador .overlap-group1 {\nheight: 134px;\nleft: 125px;\nposition: absolute;\ntop: 0;\nwidth: 112px;\n}\n.editar-perfil-operador .head-short-4 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 134px;\njustify-content: flex-end;\nleft: 0;\nmin-width: 112px;\npadding: 3.0px 9.2px;\nposition: absolute;\ntop: 0;\n}\n.editar-perfil-operador .overlap-group-1 {\nheight: 121px;\nposition: relative;\nwidth: 91px;\n}\n.editar-perfil-operador .skin-1 {\nheight: 116px;\nleft: 4px;\nposition: absolute;\ntop: 2px;\nwidth: 86px;\n}\n.editar-perfil-operador .hair {\nheight: 69px;\nleft: 7px;\nposition: absolute;\ntop: 4px;\nwidth: 83px;\n}\n.editar-perfil-operador .fill-4 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 24px;\nwidth: 1px;\n}\n.editar-perfil-operador .fill-6 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 25px;\nwidth: 1px;\n}\n.editar-perfil-operador .ink-1 {\nheight: 121px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 91px;\n}\n.editar-perfil-operador .facial-hair-moustache-7 {\nheight: 55px;\nleft: 28px;\nposition: absolute;\ntop: 79px;\nwidth: 67px;\n}\n.editar-perfil-operador .face-old {\nalign-items: flex-end;\ndisplay: flex;\nheight: 69px;\nleft: 38px;\nmin-width: 69px;\npadding: 13.0px 11.4px;\nposition: absolute;\ntop: 44px;\n}\n.editar-perfil-operador .ink-2 {\nheight: 42px;\nwidth: 45px;\n}\n.nick .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.nombre .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.contrasea-actual .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.apellidos .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.contrasea-nueva .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nwidth: 350px;\nheight: 60px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FIXME: Main container + tittle */\n.editar-perfil-operador {\ndisplay: flex;\nalign-items: flex-start;\nbackground-color: transparent;\nwidth: 1920px;\nheight: 882px;\nflex-direction: column;\nflex-wrap: wrap;\n}\n.editar-perfil-operador-editar-perfil {\nheight: 16px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 222px;\nwhite-space: nowrap;\nz-index: 4;\n}\n\n/* FIXME: Datos personales */\n.editar-perfil-operador-datos-personales-container {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 750px;\nheight: 179px;\nmargin-left: 102px;\nmargin-top: 36px;\nflex-direction: column;\n}\n.editar-perfil-operador-datos-personales {\nheight: 16px;\nleft: 102px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 274px;\nwhite-space: nowrap;\nz-index: 5;\n}\n.editar-perfil-operador-flex-row {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 18px;\n}\n.editar-perfil-operador-nick {\nheight: 60px;\nleft: 102px;\ntop: 308px;\nwidth: 350px;\nz-index: 6;\n}\n.editar-perfil-operador-flex-row-1 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 25px;\ngap: 50px;\n}\n.editar-perfil-operador-nombre {\nheight: 60px;\nleft: 102px;\ntop: 393px;\nwidth: 350px;\nz-index: 8;\n}\n.editar-perfil-operador-apellidos {\nheight: 60px;\nleft: 502px;\ntop: 393px;\nwidth: 350px;\nz-index: 7;\n}\n.editar-perfil-operador-name {\nheight: 16px;\nleft: 705px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 643px;\nwhite-space: nowrap;\nz-index: 23;\n}\n\n/* FIXME: Contraseña */\n.editar-perfil-operador-password-container{\ndisplay: flex;\nalign-items: flex-start;\nwidth: 750px;\nheight: 179px;\nmargin-left: 102px;\nmargin-top: 48px;\nflex-direction: column;\n}\n.editar-perfil-operador-flex-row-2 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 18px;\ngap: 50px;\n}\n.editar-perfil-operador-cambiar-contrasenya {\nheight: 16px;\nleft: 102px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 274px;\nwhite-space: nowrap;\nz-index: 5;\n}\n.editar-perfil-operador-contrasea-actual {\nheight: 60px;\nleft: 102px;\ntop: 482px;\nwidth: 350px;\nz-index: 9;\n}\n.editar-perfil-operador-contrasea-nueva {\nheight: 60px;\nleft: 502px;\ntop: 482px;\nwidth: 350px;\nz-index: 10;\n}\n\n/* FIXME: Botones */\n.editar-perfil-operador-flex-row-3 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 50px;\nmargin-left: 174px;\ngap: 50px;\n}\n.editar-perfil-operador-aceptar-cambios{\nborder-radius: 32px;\nheight: 36px;\nleft: 275px;\ntop: 599px;\nwidth: 141px;\nz-index: 11;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n.editar-perfil-operador-aceptar-cambios {\nheight: auto !important;\nwidth: auto !important;\n}\n.editar-perfil-operador-cancelar {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nheight: 36px;\nleft: 552px;\ntop: 619px;\nwidth: 89px;\nz-index: 12;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.editar-perfil-operador-cancelar {\nheight: auto !important;\nwidth: auto !important;\n}\n\n/* FIXME: Personaje */\n.editar-perfil-operador .degradado {\nheight: 630px;\nleft: 1197px;\nposition: fixed;\ntop: 421px;\nwidth: 491px;\nz-index: 3;\n}\n.editar-perfil-operador .ellipse-1 {\nheight: 308px;\nleft: 1268px;\nposition: fixed;\ntop: 291px;\nwidth: 308px;\nz-index: 2;\n}\n.editar-perfil-operador .peep-standing-30 {\nalign-items: flex-end;\ndisplay: flex;\nheight: 780px;\njustify-content: flex-end;\nleft: 1246px;\nmin-width: 280px;\npadding: 37.2px 0;\nposition: fixed;\ntop: 299px;\nz-index: 1;\n}\n.editar-perfil-operador .overlap-group2 {\nheight: 700px;\nposition: relative;\nwidth: 391px;\n}\n.editar-perfil-operador .posestandingshirt-3 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 593px;\nleft: 0;\nmin-width: 391px;\npadding: 0 75.7px;\nposition: absolute;\ntop: 108px;\n}\n.editar-perfil-operador .overlap-group {\nheight: 612px;\nmargin-top: -15.42px;\nposition: relative;\nwidth: 212px;\n}\n.editar-perfil-operador .skin {\nheight: 610px;\nleft: 1px;\nposition: absolute;\ntop: 0;\nwidth: 209px;\n}\n.editar-perfil-operador .shoes {\nheight: 78px;\nleft: 0;\nposition: absolute;\ntop: 532px;\nwidth: 205px;\n}\n.editar-perfil-operador .top {\nheight: 277px;\nleft: 11px;\nposition: absolute;\ntop: 23px;\nwidth: 200px;\n}\n.editar-perfil-operador .ink {\nheight: 600px;\nleft: 0;\nposition: absolute;\ntop: 11px;\nwidth: 212px;\n}\n.editar-perfil-operador .overlap-group1 {\nheight: 134px;\nleft: 125px;\nposition: absolute;\ntop: 0;\nwidth: 112px;\n}\n.editar-perfil-operador .head-short-4 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 134px;\njustify-content: flex-end;\nleft: 0;\nmin-width: 112px;\npadding: 3.0px 9.2px;\nposition: absolute;\ntop: 0;\n}\n.editar-perfil-operador .overlap-group-1 {\nheight: 121px;\nposition: relative;\nwidth: 91px;\n}\n.editar-perfil-operador .skin-1 {\nheight: 116px;\nleft: 4px;\nposition: absolute;\ntop: 2px;\nwidth: 86px;\n}\n.editar-perfil-operador .hair {\nheight: 69px;\nleft: 7px;\nposition: absolute;\ntop: 4px;\nwidth: 83px;\n}\n.editar-perfil-operador .fill-4 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 24px;\nwidth: 1px;\n}\n.editar-perfil-operador .fill-6 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 25px;\nwidth: 1px;\n}\n.editar-perfil-operador .ink-1 {\nheight: 121px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 91px;\n}\n.editar-perfil-operador .facial-hair-moustache-7 {\nheight: 55px;\nleft: 28px;\nposition: absolute;\ntop: 79px;\nwidth: 67px;\n}\n.editar-perfil-operador .face-old {\nalign-items: flex-end;\ndisplay: flex;\nheight: 69px;\nleft: 38px;\nmin-width: 69px;\npadding: 13.0px 11.4px;\nposition: absolute;\ntop: 44px;\n}\n.editar-perfil-operador .ink-2 {\nheight: 42px;\nwidth: 45px;\n}\n\n/* FIXME: Extras */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nwidth: 350px;\nheight: 60px;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: white;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18822,45 +18709,6 @@ component.options.__file = "resources/js/components/mapa.vue"
 
 /***/ }),
 
-/***/ "./resources/js/components/perfil.vue":
-/*!********************************************!*\
-  !*** ./resources/js/components/perfil.vue ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _perfil_vue_vue_type_template_id_721775d7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./perfil.vue?vue&type=template&id=721775d7& */ "./resources/js/components/perfil.vue?vue&type=template&id=721775d7&");
-/* harmony import */ var _perfil_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./perfil.vue?vue&type=script&lang=js& */ "./resources/js/components/perfil.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _perfil_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _perfil_vue_vue_type_template_id_721775d7___WEBPACK_IMPORTED_MODULE_0__.render,
-  _perfil_vue_vue_type_template_id_721775d7___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/perfil.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/components/administracion/admin.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************!*\
   !*** ./resources/js/components/administracion/admin.vue?vue&type=script&lang=js& ***!
@@ -19018,22 +18866,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_mapa_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./mapa.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/mapa.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_mapa_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/perfil.vue?vue&type=script&lang=js&":
-/*!*********************************************************************!*\
-  !*** ./resources/js/components/perfil.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_perfil_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./perfil.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/perfil.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_perfil_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -19255,23 +19087,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_mapa_vue_vue_type_template_id_ab016260___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_mapa_vue_vue_type_template_id_ab016260___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./mapa.vue?vue&type=template&id=ab016260& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/mapa.vue?vue&type=template&id=ab016260&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/perfil.vue?vue&type=template&id=721775d7&":
-/*!***************************************************************************!*\
-  !*** ./resources/js/components/perfil.vue?vue&type=template&id=721775d7& ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_perfil_vue_vue_type_template_id_721775d7___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_perfil_vue_vue_type_template_id_721775d7___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_perfil_vue_vue_type_template_id_721775d7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./perfil.vue?vue&type=template&id=721775d7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/perfil.vue?vue&type=template&id=721775d7&");
 
 
 /***/ }),
@@ -20431,12 +20246,12 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _c("div", { staticClass: "container-center-horizontal" }, [
-        _c("div", { staticClass: "editar-perfil-operador screen" }, [
+        _c("div", { staticClass: "editar-perfil-operador" }, [
           _c(
             "div",
             {
               staticClass:
-                "editar-perfil valign-text-middle gothica1-normal-black-28px",
+                "editar-perfil-operador-editar-perfil valign-text-middle gothica1-normal-black-28px",
             },
             [_vm._v("\n                Editar perfil\n            ")]
           ),
@@ -20444,270 +20259,340 @@ var staticRenderFns = [
           _c(
             "div",
             {
-              staticClass:
-                "datos-personales valign-text-middle gothica1-normal-black-21px",
+              staticClass: "editar-perfil-operador-datos-personales-container",
             },
-            [_vm._v("\n                Datos personales\n            ")]
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "datos-personales valign-text-middle gothica1-normal-black-21px",
+                },
+                [_vm._v("\n                Datos personales\n                ")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "editar-perfil-operador-flex-row" }, [
+                _c("div", { staticClass: "editar-perfil-operador-nick" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass:
+                        "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
+                    },
+                    [
+                      _c("span", { staticClass: "mdc-text-field__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass: "mdc-floating-label",
+                          attrs: { id: "my-label-id" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                                Dirección de correo electrónico\n                            "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "mdc-text-field__input",
+                        attrs: {
+                          type: "text",
+                          "aria-labelledby": "my-label-id",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "i",
+                        {
+                          staticClass:
+                            "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
+                          attrs: { tabindex: "0", role: "button" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                                account_box\n                            "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "editar-perfil-operador-flex-row-1" }, [
+                _c("div", { staticClass: "editar-perfil-operador-nombre" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass:
+                        "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
+                    },
+                    [
+                      _c("span", { staticClass: "mdc-text-field__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass: "mdc-floating-label",
+                          attrs: { id: "my-label-id" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                                Nombre\n                            "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "mdc-text-field__input",
+                        attrs: {
+                          type: "text",
+                          "aria-labelledby": "my-label-id",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "i",
+                        {
+                          staticClass:
+                            "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
+                          attrs: { tabindex: "0", role: "button" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                                account_circle\n                            "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "editar-perfil-operador-apellidos" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass:
+                        "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
+                    },
+                    [
+                      _c("span", { staticClass: "mdc-text-field__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass: "mdc-floating-label",
+                          attrs: { id: "my-label-id" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                                Apellidos\n                            "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "mdc-text-field__input",
+                        attrs: {
+                          type: "text",
+                          "aria-labelledby": "my-label-id",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "i",
+                        {
+                          staticClass:
+                            "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
+                          attrs: { tabindex: "0", role: "button" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                                account_circle\n                            "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "nick" }, [
-            _c(
-              "label",
-              {
-                staticClass:
-                  "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
-              },
-              [
-                _c("span", { staticClass: "mdc-text-field__ripple" }),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
-                    staticClass: "mdc-floating-label",
-                    attrs: { id: "my-label-id" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        Dirección de correo electrónico\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "mdc-text-field__input",
-                  attrs: { type: "text", "aria-labelledby": "my-label-id" },
-                }),
-                _vm._v(" "),
-                _c(
-                  "i",
-                  {
-                    staticClass:
-                      "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
-                    attrs: { tabindex: "0", role: "button" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        account_box\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-line-ripple" }),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "nombre" }, [
-            _c(
-              "label",
-              {
-                staticClass:
-                  "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
-              },
-              [
-                _c("span", { staticClass: "mdc-text-field__ripple" }),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
-                    staticClass: "mdc-floating-label",
-                    attrs: { id: "my-label-id" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        Nombre\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "mdc-text-field__input",
-                  attrs: { type: "text", "aria-labelledby": "my-label-id" },
-                }),
-                _vm._v(" "),
-                _c(
-                  "i",
-                  {
-                    staticClass:
-                      "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
-                    attrs: { tabindex: "0", role: "button" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        account_circle\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-line-ripple" }),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "contrasea-actual" }, [
-            _c(
-              "label",
-              {
-                staticClass:
-                  "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
-              },
-              [
-                _c("span", { staticClass: "mdc-text-field__ripple" }),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
-                    staticClass: "mdc-floating-label",
-                    attrs: { id: "my-label-id" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        Contraseña actual\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "mdc-text-field__input",
-                  attrs: { type: "text", "aria-labelledby": "my-label-id" },
-                }),
-                _vm._v(" "),
-                _c(
-                  "i",
-                  {
-                    staticClass:
-                      "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
-                    attrs: { tabindex: "0", role: "button" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        lock\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-line-ripple" }),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "aceptar-cambios" }, [
-            _c("button", { staticClass: "mdc-button mdc-button--raised" }, [
-              _c("span", { staticClass: "mdc-button__ripple" }),
+          _c(
+            "div",
+            { staticClass: "editar-perfil-operador-password-container" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "editar-perfil-operador-cambiar-contrasenya valign-text-middle gothica1-normal-black-21px",
+                },
+                [
+                  _vm._v(
+                    "\n                    Cambiar contraseña\n                "
+                  ),
+                ]
+              ),
               _vm._v(" "),
-              _c("span", { staticClass: "mdc-button__label" }, [
-                _vm._v(
-                  "\n                        Aceptar cambios\n                    "
+              _c("div", { staticClass: "editar-perfil-operador-flex-row-2" }, [
+                _c(
+                  "div",
+                  { staticClass: "editar-perfil-operador-contrasea-actual" },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
+                      },
+                      [
+                        _c("span", { staticClass: "mdc-text-field__ripple" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-floating-label",
+                            attrs: { id: "my-label-id" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                Contraseña actual\n                            "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "mdc-text-field__input",
+                          attrs: {
+                            type: "text",
+                            "aria-labelledby": "my-label-id",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "i",
+                          {
+                            staticClass:
+                              "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
+                            attrs: { tabindex: "0", role: "button" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                lock\n                            "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-line-ripple" }),
+                      ]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "editar-perfil-operador-contrasea-nueva" },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
+                      },
+                      [
+                        _c("span", { staticClass: "mdc-text-field__ripple" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-floating-label",
+                            attrs: { id: "my-label-id" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                Contraseña nueva\n                            "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "mdc-text-field__input",
+                          attrs: {
+                            type: "text",
+                            "aria-labelledby": "my-label-id",
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "i",
+                          {
+                            staticClass:
+                              "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
+                            attrs: { tabindex: "0", role: "button" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                lock\n                            "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-line-ripple" }),
+                      ]
+                    ),
+                  ]
                 ),
               ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "cancelar" }, [
-            _c("button", { staticClass: "mdc-button mdc-button--raised" }, [
-              _c("span", { staticClass: "mdc-button__ripple" }),
               _vm._v(" "),
-              _c("span", { staticClass: "mdc-button__label" }, [
-                _vm._v(
-                  "\n                        Cancelar\n                    "
+              _c("div", { staticClass: "editar-perfil-operador-flex-row-3" }, [
+                _c(
+                  "div",
+                  { staticClass: "editar-perfil-operador-aceptar-cambios" },
+                  [
+                    _c(
+                      "button",
+                      { staticClass: "mdc-button mdc-button--raised" },
+                      [
+                        _c("span", { staticClass: "mdc-button__ripple" }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-button__label" }, [
+                          _vm._v(
+                            "\n                                Aceptar cambios\n                            "
+                          ),
+                        ]),
+                      ]
+                    ),
+                  ]
                 ),
+                _vm._v(" "),
+                _c("div", { staticClass: "editar-perfil-operador-cancelar" }, [
+                  _c(
+                    "button",
+                    { staticClass: "mdc-button mdc-button--raised" },
+                    [
+                      _c("span", { staticClass: "mdc-button__ripple" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-button__label" }, [
+                        _vm._v(
+                          "\n                                Cancelar\n                            "
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
               ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "apellidos" }, [
-            _c(
-              "label",
-              {
-                staticClass:
-                  "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
-              },
-              [
-                _c("span", { staticClass: "mdc-text-field__ripple" }),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
-                    staticClass: "mdc-floating-label",
-                    attrs: { id: "my-label-id" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        Apellidos\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "mdc-text-field__input",
-                  attrs: { type: "text", "aria-labelledby": "my-label-id" },
-                }),
-                _vm._v(" "),
-                _c(
-                  "i",
-                  {
-                    staticClass:
-                      "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
-                    attrs: { tabindex: "0", role: "button" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        account_circle\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-line-ripple" }),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "contrasea-nueva" }, [
-            _c(
-              "label",
-              {
-                staticClass:
-                  "mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon",
-              },
-              [
-                _c("span", { staticClass: "mdc-text-field__ripple" }),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
-                    staticClass: "mdc-floating-label",
-                    attrs: { id: "my-label-id" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        Contraseña nueva\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "mdc-text-field__input",
-                  attrs: { type: "text", "aria-labelledby": "my-label-id" },
-                }),
-                _vm._v(" "),
-                _c(
-                  "i",
-                  {
-                    staticClass:
-                      "material-icons mdc-text-field__icon mdc-text-field__icon--trailing",
-                    attrs: { tabindex: "0", role: "button" },
-                  },
-                  [
-                    _vm._v(
-                      "\n                        lock\n                    "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-line-ripple" }),
-              ]
-            ),
-          ]),
+            ]
+          ),
           _vm._v(" "),
           _c("span", [
             _c("img", {
@@ -22553,305 +22438,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container m-4" }, [
       _c("div", { attrs: { id: "map" } }),
     ])
-  },
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/perfil.vue?vue&type=template&id=721775d7&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/perfil.vue?vue&type=template&id=721775d7& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _c("div", { staticClass: "card col-2 m-4" }, [
-      _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
-        _vm._v(" "),
-        _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
-        _vm._v(" "),
-        _vm._m(0),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-content" }),
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "card col-9 m-4" }, [
-      _c("div", { staticClass: "card-title" }, [
-        _vm._v("\n            Usuario\n        "),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-content" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "input-field col s6" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.usuario.nombre,
-                  expression: "usuario.nombre",
-                },
-              ],
-              staticClass: "validate",
-              attrs: { id: "first_name", type: "text" },
-              domProps: { value: _vm.usuario.nombre },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.usuario, "nombre", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "first_name" } }, [_vm._v("Nombre")]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "input-field col s6" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.usuario.apellidos,
-                  expression: "usuario.apellidos",
-                },
-              ],
-              staticClass: "validate",
-              attrs: { id: "last_name", type: "text" },
-              domProps: { value: _vm.usuario.apellidos },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.usuario, "apellidos", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "last_name" } }, [_vm._v("Apellido")]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "input-field col s8" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.usuario.mail,
-                  expression: "usuario.mail",
-                },
-              ],
-              staticClass: "validate",
-              attrs: { id: "email", type: "email" },
-              domProps: { value: _vm.usuario.mail },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.usuario, "mail", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "email" } }, [_vm._v("Mail")]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "input-field col s4" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.usuario.rol,
-                    expression: "usuario.rol",
-                  },
-                ],
-                staticClass: "form-select",
-                attrs: { "aria-label": "Default select example" },
-                on: {
-                  change: function ($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function (o) {
-                        return o.selected
-                      })
-                      .map(function (o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.$set(
-                      _vm.usuario,
-                      "rol",
-                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                    )
-                  },
-                },
-              },
-              [
-                _c("option", { attrs: { selected: "", disabled: "" } }, [
-                  _vm._v("Rol"),
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "1" } }, [_vm._v("Operador")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [_vm._v("Supervisor")]),
-              ]
-            ),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "input-field col s6" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.usuario.nick,
-                  expression: "usuario.nick",
-                },
-              ],
-              staticClass: "validate",
-              attrs: { id: "nick", type: "text" },
-              domProps: { value: _vm.usuario.nick },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.usuario, "nick", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "nick" } }, [_vm._v("Nick")]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col s6 text-center" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn waves-effect waves-light",
-                attrs: { name: "action" },
-                on: {
-                  click: function ($event) {
-                    return _vm.insertUsuario()
-                  },
-                },
-              },
-              [
-                _vm._v("Aceptar\n                        "),
-                _c("i", { staticClass: "material-icons right" }, [
-                  _vm._v("send"),
-                ]),
-              ]
-            ),
-          ]),
-        ]),
-      ]),
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row m-4" }, [
-      _c("div", { staticClass: "col-4" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "card col-8 m-4" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "input-field col s6" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.usuario.contrasena,
-                  expression: "usuario.contrasena",
-                },
-              ],
-              staticClass: "validate",
-              attrs: { id: "password", type: "password" },
-              domProps: { value: _vm.usuario.contrasena },
-              on: {
-                blur: function ($event) {
-                  return _vm.verificarContrasena()
-                },
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.usuario, "contrasena", $event.target.value)
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "password" } }, [_vm._v("Contraseña")]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "input-field col s6" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.contrasenaC,
-                  expression: "contrasenaC",
-                },
-              ],
-              staticClass: "validate",
-              attrs: { id: "cPassword", type: "password" },
-              domProps: { value: _vm.contrasenaC },
-              on: {
-                blur: function ($event) {
-                  return _vm.verificarContrasena()
-                },
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.contrasenaC = $event.target.value
-                },
-              },
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "cPassword" } }, [
-              _vm._v("Confirmar contraseña"),
-            ]),
-          ]),
-        ]),
-      ]),
-    ]),
-  ])
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "btn-floating halfway-fab waves-effect waves-light red" },
-      [_c("i", { staticClass: "material-icons" }, [_vm._v("add")])]
-    )
   },
 ]
 render._withStripped = true
