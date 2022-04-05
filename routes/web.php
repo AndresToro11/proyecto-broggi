@@ -15,9 +15,7 @@ use App\Http\Controllers\Api\UsuariController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
 
 //------------------------------ Login -----------------------------
 
@@ -36,6 +34,13 @@ Route::middleware(['auth'])->group(function () {
         return view('home', compact('user'));
     });
 
+//-------------------------------- índex ---------------------------
+
+    Route::get('/index', function () {
+        return view('index');
+    });
+
+    //-------------------------------- Llamada ---------------------------
 
     Route::get('/llamada', function () {
         return view('llamada');
@@ -84,11 +89,5 @@ Route::get('/admin/editarUsuario', function () {
 });
 
 
-
-//------------------------------ Home -----------------------------
-
-
-
-//------------------------------ Llamada -----------------------------
 
 

@@ -104,6 +104,7 @@
         <script src="{{ asset('js/app.js') }}">
         </script>
 
+
         <style>
             .header {
             align-items: flex-start;
