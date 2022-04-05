@@ -7,7 +7,7 @@
         {
             "name": "Launch Chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
+            "type": "chrome",
             "url": "http://localhost:8080/proyecto-broggi/public",
             "webRoot": "${workspaceFolder}"
         }
