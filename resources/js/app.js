@@ -38,7 +38,7 @@ Vue.component('datos-personales', require('./components/cartaLlamada/DatosPerson
 Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
 Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
 Vue.component('carta-llamada', require('./components/cartaLlamada/Carta_de_llamada.vue').default);
-Vue.component('mapa', require('./components/mapa.vue').defau
+Vue.component('mapa', require('./components/mapa.vue').default);
 
 //------------------------------------------- Expedientes --------------------------------
 
