@@ -88,11 +88,7 @@
         </div>
     </div>-->
 </div>
-<<<<<<< HEAD
 {{-- <script>
-=======
-<script>
->>>>>>> aitor
     export default {
         mounted() {
             new mdc.textField.MDCTextField(document.querySelector(".e-mail .mdc-text-field"));
@@ -101,11 +97,7 @@
             new mdc.ripple.MDCRipple(document.querySelector(".crear-cuenta-boton .mdc-button"));
         }
     }
-<<<<<<< HEAD
 </script> --}}
-=======
-</script>
->>>>>>> aitor
 
 
 @endsection
