@@ -69,10 +69,10 @@ Route::get('/grafico', function () {
     return view('grafico');
 });
 
-//------------------------------ Admin -----------------------------
+//----------------------------- Perfil -----------------------------
 
-Route::get('/admin', function () {
-    return view('administracion.admin');
+Route::get('/perfil', function () {
+    return view('perfil');
 });
 
 Route::get('/admin/nuevoUsuario', function () {
@@ -83,7 +83,6 @@ Route::get('/admin/editarUsuario', function () {
     return view('administracion.editarUsuario');
 });
 
-//---------------------------------  --------------------------------
 
 
 });
