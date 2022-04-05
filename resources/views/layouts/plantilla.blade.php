@@ -7,7 +7,7 @@
         <title>@yield('titulo')</title>
 
         <!-- MapBox -->
-        
+
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
         <!-- font awesome -->
@@ -27,7 +27,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
         <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-        
+
         <link rel="stylesheet" type="text/css" href={{ asset('css/styleguide.css') }} />
         <link rel=" stylesheet" type="text/css" href={{ asset('css/globals.css') }} />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -38,17 +38,17 @@
 
     </head>
     <body>
-        <nav>
+        {{-- <nav>
             <div class="nav-wrapper">
                 <a href="{{ url('/home') }}" class="brand-logo">Logo</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{ url('/expedientes') }}">Expedientes</a></li>
+                    <li><a href="{{ url('/expedientes') }}">AVEZTRUZ</a></li>
                     <li><a href="{{ url('/grafico') }}">Grafico</a></li>
                     <li><a href="{{ url('/admin') }}">Admin</a></li>
                     <li><a href="">login</a></li>
                 </ul>
             </div>
-        </nav>
+        </nav>  !!!!!!!!!!!!!!!!!!!!!!!!!!! BORRRRRAAAAAAAAAARRRRRRRRRR!!!!!!!!!!!!!!!!!!!!!!!!!!!--}}
         <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href={{ asset('css/styleguide.css') }} />

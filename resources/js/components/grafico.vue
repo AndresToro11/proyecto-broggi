@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import axios from 'axios';
     import Chart from "chart.js/auto";
 
     let grafica;

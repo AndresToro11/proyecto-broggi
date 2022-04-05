@@ -26,12 +26,12 @@
                     <span class="mdc-floating-label" id="my-label-id">
                         Contraseña
                     </span>
-                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                    <input type="password" class="mdc-text-field__input" aria-labelledby="my-label-id" />
                     <span class="mdc-line-ripple"></span>
                 </label>
             </div>
             <div class="crear-cuenta-boton" id="boton">
-                <button class="mdc-button mdc-button--raised" id="boton">
+                <button class="mdc-button mdc-button--raised" id="boton" >
                     <span class="mdc-button__ripple"></span>
                     <span class="mdc-button__label">
                         Iniciar sesion
@@ -45,16 +45,21 @@
 
 </template>
 
-// <script>
-//     export default {
-//         mounted() {
-//             new mdc.textField.MDCTextField(document.querySelector(".e-mail .mdc-text-field"));
-//             new mdc.textField.MDCTextField(document.querySelector(".contrasea .mdc-text-field"));
-//             mdc.autoInit();
-//             new mdc.ripple.MDCRipple(document.querySelector(".crear-cuenta-boton .mdc-button"));
-//         }
-//     }
-// </script>
+ <script>
+    export default {
+        // methods:{
+        //     logearse(){
+
+        //     },
+        // },
+        mounted() {
+            new mdc.textField.MDCTextField(document.querySelector(".e-mail .mdc-text-field"));
+            new mdc.textField.MDCTextField(document.querySelector(".contrasea .mdc-text-field"));
+            mdc.autoInit();
+            new mdc.ripple.MDCRipple(document.querySelector(".crear-cuenta-boton .mdc-button"));
+        }
+    }
+</script>
 
 <style>
     .inicio-de-sesion {

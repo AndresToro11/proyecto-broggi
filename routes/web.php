@@ -23,9 +23,11 @@ use App\Http\Controllers\Api\UsuariController;
     return view('login');
 });*/
 
-Route::get('/login', [UsuariController::class, 'showLogin'])->name('login');
-Route::post('/login', [UsuariController::class, 'login'] );
-Route::get('/logout', [UsuariController::class, 'logout']);
+Route::get('/login', function () {
+    return view('login');
+});
+Route::post('/login', [UsuariController::class, 'login']);
+// Route::get('/logout', [UsuariController::class, 'logout']);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', function () {
@@ -33,20 +35,21 @@ Route::middleware(['auth'])->group(function () {
 
         return view('home', compact('user'));
     });
+});
 
 //-------------------------------- índex ---------------------------
 
-    Route::get('/index', function () {
-        return view('index');
-    });
+Route::get('/index', function () {
+    return view('index');
+});
 
-    //-------------------------------- Llamada ---------------------------
+//-------------------------------- Llamada ---------------------------
 
-    Route::get('/llamada', function () {
-        return view('llamada');
-    });
+Route::get('/llamada', function () {
+    return view('llamada');
+});
 
-    //-------------------------------- Video ---------------------------
+//-------------------------------- Video ---------------------------
 
 Route::get('/video', function () {
     return view('video');
@@ -83,10 +86,6 @@ Route::get('/admin/editarUsuario', function () {
     return view('administracion.editarUsuario');
 });
 
-
-
+Route::get('/admin', function () {
+    return view('administracion.admin');
 });
-
-
-
-
