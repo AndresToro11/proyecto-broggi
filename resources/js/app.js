@@ -31,11 +31,13 @@ Vue.component('supervisor', require('./components/home/supervisor.vue').default)
 
 //----------------------------------------------- Llamada ----------------------------------------------------
 
-Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default); //Acabado
-Vue.component('datos-administrativos', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
-Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncidente.vue').default); //Acabado
-Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default); //Acabado
-Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
+// Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default); //Acabado
+// Vue.component('datos-administrativos', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
+// Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncidente.vue').default); //Acabado
+// Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default); //Acabado
+// Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
+// Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
+// Vue.component('carta-llamada', require('./components/cartaLlamada/Carta_de_llamada.vue').default);
 Vue.component('mapa', require('./components/mapa.vue').default);
 
 //------------------------------------------- Expedientes --------------------------------
