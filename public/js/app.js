@@ -3962,7 +3962,6 @@ _dist_chart_esm__WEBPACK_IMPORTED_MODULE_0__.Chart.register(..._dist_chart_esm__
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "defaults": () => (/* reexport safe */ _chunks_helpers_segment_js__WEBPACK_IMPORTED_MODULE_0__.d),
 /* harmony export */   "Animation": () => (/* binding */ Animation),
 /* harmony export */   "Animations": () => (/* binding */ Animations),
 /* harmony export */   "ArcElement": () => (/* binding */ ArcElement),
@@ -4002,6 +4001,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "_detectPlatform": () => (/* binding */ _detectPlatform),
 /* harmony export */   "animator": () => (/* binding */ animator),
 /* harmony export */   "controllers": () => (/* binding */ controllers),
+/* harmony export */   "defaults": () => (/* reexport safe */ _chunks_helpers_segment_js__WEBPACK_IMPORTED_MODULE_0__.d),
 /* harmony export */   "elements": () => (/* binding */ elements),
 /* harmony export */   "layouts": () => (/* binding */ layouts),
 /* harmony export */   "plugins": () => (/* binding */ plugins),
@@ -19218,7 +19218,7 @@ var render = function () {
                 _c("div", { staticClass: "card col-2 m-4" }, [
                   _c("div", { staticClass: "card-image" }, [
                     _c("img", {
-                      attrs: { src: __webpack_require__(/*! ../../../../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") },
+                      attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") },
                     }),
                     _vm._v(" "),
                     _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
@@ -19705,7 +19705,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
