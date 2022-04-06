@@ -377,8 +377,7 @@
         data(){
             return {
                 expedientes: [],
-                loading: false,
-                contador : 0
+                loading: false
             }
         },
         methods:{
@@ -492,7 +491,7 @@
     width: 32px;
     }
 
-    .expedientes-modal.is-visible {
+    .expedientes-modal .is-visible {
     visibility: visible;
     opacity: 1;
     }
