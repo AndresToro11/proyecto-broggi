@@ -14,9 +14,6 @@ use App\Http\Controllers\Api\UsuariController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
 //------------------------------ Login -----------------------------
 
 /*Route::get('/login', function () {
