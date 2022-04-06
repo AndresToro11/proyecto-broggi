@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="expedientes-title valign-text-middle gothica1-normal-black-28px">
+        <h1 class="expedientes-title gothica1-normal-black-28px">
             Expedientes
         </h1>
         <div class="expedientes-container">
@@ -285,7 +285,7 @@
                 </div>
             </div>
         </div>
-        <div class="expedientes-modal" id="expedientes-modalScreen"> <!-- TODO: Modal --> <!-- modalOut -->
+        <div class="expedientes-modal" id="expedientes-modalScreen"> <!-- TODO: Modal -->
             <div class="expedientes-modal-window">
                 <header class="expedientes-modal-header">
                     <div class="expedientes-x" id="close-modal" data-close="expedientes-modalScreen" @click="modalInvisible">
@@ -394,22 +394,22 @@
                 const isVisible = "is-visible";
                 document.getElementById(modalIdClose).classList.remove(isVisible);
             },
-            // modalOut(){
-            //     const closeEls = document.querySelector("[data-close]");
-            //     const modalIdClose = closeEls.dataset.close;
-            //     const isVisible = "is-visible";
-            //     document.getElementById(modalIdClose).classList.remove(isVisible);
-            //     document.addEventListener("click", e => {
-            //         if (e.target == document.querySelector(".modal.is-visible")) {
-            //         document.querySelector(".modal .is-visible [data-close]").click();
-            //         }
-            //     });
-            //     document.addEventListener("keyup", e => {
-            //         if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
-            //         document.querySelector(".modal .is-visible [data-close]").click();
-            //         }
-            //     });
-            // }
+            modalOut(){
+                const closeEls = document.querySelector("[data-close]");
+                const modalIdClose = closeEls.dataset.close;
+                const isVisible = "is-visible";
+                document.getElementById(modalIdClose).classList.remove(isVisible);
+                document.addEventListener("click", e => {
+                    if (e.target == document.querySelector(".modal.is-visible")) {
+                    document.querySelector(".modal .is-visible [data-close]").click();
+                    }
+                });
+                document.addEventListener("keyup", e => {
+                    if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+                    document.querySelector(".modal .is-visible [data-close]").click();
+                    }
+                });
+            },
         }
     }
 </script>
@@ -422,13 +422,14 @@
     --closed: rgb(0, 83, 199);
     --immobilized: rgb(182,149,192);
     }
+
     .expedientes-title {
     display: flex;
     align-items: flex-start;
     height: 16px;
     width: 158px;
     margin-left: 100px;
-    margin-top: 24px;
+    margin-top: 50px;
     letter-spacing: 0.15px;
     line-height: 16px;
     /* top: 222px; */
@@ -491,7 +492,7 @@
     width: 32px;
     }
 
-    .expedientes-modal .is-visible {
+    .expedientes-modal.is-visible {
     visibility: visible;
     opacity: 1;
     }
