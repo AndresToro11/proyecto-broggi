@@ -12767,6 +12767,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -27493,7 +27496,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FIXME: Titulo */\n.carta-de-llamada-datos-personales-datos-del-interlocutor {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\nmargin-top: 36px;\n}\n\n/* FIXME: Columna uno */\n.comarca {\nheight: 60px;\nwidth: 263px;\n}\n.comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.comarca .custom-enhanced-select-width {\nwidth: 200px;\n}\n.provincia {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.provincia .custom-enhanced-select-width {\nwidth: 200px;\n}\n.municipio-personales {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.municipio-personales .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.municipio-personales .custom-enhanced-select-width {\nwidth: 200px;\n}\n\n/* FIXME: Columna dos */\n.tipo-de-localizacin {\nheight: 60px;\nwidth: 263px;\n}\n.tipo-de-localizacin .custom-enhanced-select-width {\nwidth: 200px;\n}\n.tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.referencia-poblacion {\nmargin-top: 25px;\nwidth: 263px;\n}\n.referencia-poblacion .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.provincia-fuera {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.referencia-fuera {\nmargin-top: 25px;\nwidth: 263px;\n}\n.referencia-fuera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.tipo-de-via {\n    margin-top: 24px;\n}\n.nombre-via-calle{\n    margin-top: 30px;\n}\n.nombre-via-carretera{\n    margin-top: 25px;\n}\n.punto-kilometrico{\n    margin-top: 29px;\n}\n.nombre-punto-singular{\n    margin-top: 24px;\n}\n.referencia-punto-singular{\nmargin-top: 30px;\nwidth: 263px;\n}\n.referencia-punto-singular .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* FIXME: Columna tres */\n/* .numero-portal {\n\n} */\n.escalera {\n    margin-top: 28px;\n}\n.piso{\nmargin-top: 30px;\n}\n\n/* .sentido-circulacion {\n\n} */\n.referencia-carretera{\nmargin-top: 28px;\nwidth: 263px;\n}\n.referencia-carretera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* FIXME: Columna cuatro */\n/* .puerta {\n\n} */\n.referencia-calle{\nmargin-top: 28px;\nwidth: 263px;\n}\n.referencia-calle .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* FIXME: Columna cinco */\n.separation-down {\nheight: 183px;\nmargin-left: 50px;\nmargin-top: 153px;\nwidth: 1px;\n}\n.incidente {\nheight: 60px;\nwidth: 263px;\n}\n.incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.incidente .custom-enhanced-select-width {\nwidth: 200px;\n}\n.tipo-de-incidente {\nheight: 60px;\nmargin-top: 24px;\nwidth: 263px;\n}\n.tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.tipo-de-incidente .custom-enhanced-select-width {\nwidth: 200px;\n}\n.mapa-up #mapa-up{\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 89px;\nmargin-left: 80px;\ntransition: all 0.2s ease-in-out;\nbackground-color: #0040FF;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.mapa-up {\nmargin-top: 50px;\nheight: auto !important;\nwidth: auto !important;\n}\n#mapa-up:hover,\n#aceptar:hover,\n#cancelar:hover {\ntransform: scale(1.1);\n}\n.aceptar #aceptar {\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 103px;\nmargin-left: 74px;\nmargin-top: 20px;\ntransition: all 0.2s ease-in-out;\nbackground-color: #0040FF;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.aceptar {\nheight: auto !important;\nwidth: auto !important;\nmargin-top: -20px;\nmargin-left: -100px;\n}\n.cancelar #cancelar{\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 103px;\nmargin-left: 74px;\nmargin-top: 20px;\ntransition: all 0.2s ease-in-out;\nbackground-color: rgb(207, 0, 0);\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.cancelar {\nheight: auto !important;\nwidth: auto !important;\nmargin-top: -20px;\nmargin-left: -50px;\n}\n\n/* FIXME: Global */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-list-item {\nalign-items: center;\ndisplay: flex;\nheight: 48px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FIXME: Titulo */\n.carta-de-llamada-datos-personales-datos-del-interlocutor {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\nmargin-top: 36px;\n}\n\n/* FIXME: Columna uno */\n.carta-de-llamada-datos-personales-flex-row-1{\ndisplay: flex;\nalign-items: flex-start;\nmargin-top: 117px;\nmargin-left: -222px;\n}\n.carta-de-llamada-datos-personales-comarca {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-comarca .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-provincia {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-provincia .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-municipio {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-municipio .custom-enhanced-select-width {\nwidth: 200px;\n}\n\n/* FIXME: Columna dos */\n.carta-de-llamada-datos-personales-tipo-de-localizacin {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-tipo-de-localizacin .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.referencia-poblacion {\nmargin-top: 25px;\nwidth: 263px;\n}\n.referencia-poblacion .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.provincia-fuera {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.referencia-fuera {\nmargin-top: 25px;\nwidth: 263px;\n}\n.referencia-fuera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.tipo-de-via {\n    margin-top: 24px;\n}\n.nombre-via-calle{\n    margin-top: 30px;\n}\n.nombre-via-carretera{\n    margin-top: 25px;\n}\n.punto-kilometrico{\n    margin-top: 29px;\n}\n.nombre-punto-singular{\n    margin-top: 24px;\n}\n.referencia-punto-singular{\nmargin-top: 30px;\nwidth: 263px;\n}\n.referencia-punto-singular .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* FIXME: Columna tres */\n/* .numero-portal {\n\n} */\n.escalera {\n    margin-top: 28px;\n}\n.piso{\nmargin-top: 30px;\n}\n\n/* .sentido-circulacion {\n\n} */\n.referencia-carretera{\nmargin-top: 28px;\nwidth: 263px;\n}\n.referencia-carretera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* FIXME: Columna cuatro */\n/* .puerta {\n\n} */\n.referencia-calle{\nmargin-top: 28px;\nwidth: 263px;\n}\n.referencia-calle .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* Barra */\n.carta-de-llamada-datos-personales-flex-col-4{\n    display: flex;\n\n    margin-right: 51px;\n}\n\n/* FIXME: Columna cinco */\n.carta-de-llamada-datos-personales-separation-down {\nheight: 183px;\nmargin-left: 50px;\nmargin-top: 153px;\nwidth: 1px;\n}\n.carta-de-llamada-datos-personales-incidente {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-incidente .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-tipo-de-incidente {\nheight: 60px;\nmargin-top: 24px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-tipo-de-incidente .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-flex-row-2 {\nalign-items: flex-start;\ndisplay: flex;\nmargin-left: 38px;\nmargin-top: 24px;\nmin-width: 188px;\n}\n.carta-de-llamada-datos-personales-mapa-up #mapa-up{\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 89px;\nmargin-left: 80px;\ntransition: all 0.2s ease-in-out;\nbackground-color: #0040FF;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.carta-de-llamada-datos-personales-mapa-up {\nmargin-top: 50px;\nheight: auto !important;\nwidth: auto !important;\n}\n#carta-de-llamada-datos-personales-mapa-up:hover,\n#carta-de-llamada-datos-personales-aceptar:hover,\n#carta-de-llamada-datos-personales-cancelar:hover {\ntransform: scale(1.1);\n}\n.carta-de-llamada-datos-personales-aceptar #aceptar {\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 103px;\nmargin-left: 74px;\nmargin-top: 20px;\ntransition: all 0.2s ease-in-out;\nbackground-color: #0040FF;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.carta-de-llamada-datos-personales-aceptar {\nheight: auto !important;\nwidth: auto !important;\nmargin-top: -20px;\nmargin-left: -100px;\n}\n.carta-de-llamada-datos-personales-cancelar #cancelar{\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 103px;\nmargin-left: 74px;\nmargin-top: 20px;\ntransition: all 0.2s ease-in-out;\nbackground-color: rgb(207, 0, 0);\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.carta-de-llamada-datos-personales-cancelar {\nheight: auto !important;\nwidth: auto !important;\nmargin-top: -20px;\nmargin-left: -50px;\n}\n\n/* FIXME: Global */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-list-item {\nalign-items: center;\ndisplay: flex;\nheight: 48px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31425,775 +31428,16 @@ var staticRenderFns = [
               "div",
               { staticClass: "carta-de-llamada-datos-personales-flex-col" },
               [
-                _c("div", { staticClass: "comarca" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "mdc-select mdc-select--filled demo-width-class",
-                      attrs: { "data-id": "anima-widget" },
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__anchor custom-enhanced-select-width",
-                          attrs: {
-                            role: "button",
-                            "aria-haspopup": "listbox",
-                            "aria-expanded": "false",
-                          },
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-select__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "demo-label" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Comarca\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "mdc-select__selected-text-container",
-                            },
-                            [
-                              _c("span", {
-                                staticClass: "mdc-select__selected-text",
-                                attrs: { id: "demo-selected-text" },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "mdc-select__dropdown-icon" },
-                            [
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-inactive material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_down\n                                "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-active material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_up\n                                "
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                        },
-                        [
-                          _c(
-                            "ul",
-                            {
-                              staticClass: "mdc-list",
-                              attrs: {
-                                id: "select_dropdown",
-                                role: "listbox",
-                                "aria-label": "listbox",
-                              },
-                            },
-                            [
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: {
-                                    "data-value": "Item",
-                                    role: "option",
-                                  },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [
-                                      _vm._v(
-                                        "\n                                        Item\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "provincia" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "mdc-select mdc-select--filled demo-width-class",
-                      attrs: { "data-id": "anima-widget" },
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__anchor custom-enhanced-select-width",
-                          attrs: {
-                            role: "button",
-                            "aria-haspopup": "listbox",
-                            "aria-expanded": "false",
-                          },
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-select__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "demo-label" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Provincia\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "mdc-select__selected-text-container",
-                            },
-                            [
-                              _c("span", {
-                                staticClass: "mdc-select__selected-text",
-                                attrs: { id: "demo-selected-text" },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "mdc-select__dropdown-icon" },
-                            [
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-inactive material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_down\n                                "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-active material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_up\n                                "
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                        },
-                        [
-                          _c(
-                            "ul",
-                            {
-                              staticClass: "mdc-list",
-                              attrs: {
-                                id: "select_dropdown",
-                                role: "listbox",
-                                "aria-label": "listbox",
-                              },
-                            },
-                            [
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: {
-                                    "data-value": "Item",
-                                    role: "option",
-                                  },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [
-                                      _vm._v(
-                                        "\n                                        Item\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "municipio-personales" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "mdc-select mdc-select--filled demo-width-class",
-                      attrs: { "data-id": "anima-widget" },
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__anchor custom-enhanced-select-width",
-                          attrs: {
-                            role: "button",
-                            "aria-haspopup": "listbox",
-                            "aria-expanded": "false",
-                          },
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-select__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "demo-label" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Municipio\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "mdc-select__selected-text-container",
-                            },
-                            [
-                              _c("span", {
-                                staticClass: "mdc-select__selected-text",
-                                attrs: { id: "demo-selected-text" },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "mdc-select__dropdown-icon" },
-                            [
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-inactive material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_down\n                                "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-active material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_up\n                                "
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                        },
-                        [
-                          _c(
-                            "ul",
-                            {
-                              staticClass: "mdc-list",
-                              attrs: {
-                                id: "select_dropdown",
-                                role: "listbox",
-                                "aria-label": "listbox",
-                              },
-                            },
-                            [
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: {
-                                    "data-value": "Item",
-                                    role: "option",
-                                  },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [
-                                      _vm._v(
-                                        "\n                                        Item\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "carta-de-llamada-datos-personales-flex-col-1" },
-              [
-                _c("div", { staticClass: "tipo-de-localizacin" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "mdc-select mdc-select--filled demo-width-class",
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__anchor custom-enhanced-select-width",
-                          attrs: {
-                            role: "button",
-                            "aria-haspopup": "listbox",
-                            "aria-expanded": "false",
-                          },
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-select__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "demo-label" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Tipo de Localización\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "mdc-select__selected-text-container",
-                            },
-                            [
-                              _c("span", {
-                                staticClass: "mdc-select__selected-text",
-                                attrs: { id: "demo-selected-text" },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "mdc-select__dropdown-icon" },
-                            [
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-inactive material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_down\n                                "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-active material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_up\n                                "
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                        },
-                        [
-                          _c(
-                            "ul",
-                            {
-                              staticClass: "mdc-list",
-                              attrs: {
-                                id: "select_dropdown",
-                                role: "listbox",
-                                "aria-label": "listbox",
-                              },
-                            },
-                            [
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: {
-                                    "data-value": "Fuera de Catalunya",
-                                    role: "option",
-                                  },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [
-                                      _vm._v(
-                                        "\n                                        Fuera de Catalunya\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: {
-                                    "data-value": "Población",
-                                    role: "option",
-                                  },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [
-                                      _vm._v(
-                                        "\n                                        Población\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: {
-                                    "data-value": "Carretera",
-                                    role: "option",
-                                  },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [
-                                      _vm._v(
-                                        "\n                                        Carretera\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: {
-                                    "data-value": "Calle",
-                                    role: "option",
-                                  },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [
-                                      _vm._v(
-                                        "\n                                        Calle\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: {
-                                    "data-value": "Punto Singular",
-                                    role: "option",
-                                  },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [
-                                      _vm._v(
-                                        "\n                                        Punto Singular\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "referencia-poblacion" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Referencia\n                            "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "provincia-fuera" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Provincia\n                            "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "referencia-fuera" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Referencia\n                            "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "tipo-de-via" }, [
+                _c(
+                  "div",
+                  { staticClass: "carta-de-llamada-datos-personales-comarca" },
+                  [
                     _c(
                       "div",
                       {
                         staticClass:
                           "mdc-select mdc-select--filled demo-width-class",
+                        attrs: { "data-id": "anima-widget" },
                       },
                       [
                         _c(
@@ -32218,7 +31462,7 @@ var staticRenderFns = [
                               },
                               [
                                 _vm._v(
-                                  "\n                                    Tipo de via\n                                "
+                                  "\n                                Comarca\n                            "
                                 ),
                               ]
                             ),
@@ -32249,7 +31493,7 @@ var staticRenderFns = [
                                   },
                                   [
                                     _vm._v(
-                                      "\n                                        arrow_drop_down\n                                    "
+                                      "\n                                    arrow_drop_down\n                                "
                                     ),
                                   ]
                                 ),
@@ -32262,7 +31506,7 @@ var staticRenderFns = [
                                   },
                                   [
                                     _vm._v(
-                                      "\n                                        arrow_drop_up\n                                    "
+                                      "\n                                    arrow_drop_up\n                                "
                                     ),
                                   ]
                                 ),
@@ -32296,7 +31540,7 @@ var staticRenderFns = [
                                   {
                                     staticClass: "mdc-list-item",
                                     attrs: {
-                                      "data-value": "#",
+                                      "data-value": "Item",
                                       role: "option",
                                     },
                                   },
@@ -32310,111 +31554,7 @@ var staticRenderFns = [
                                       { staticClass: "mdc-list-item__text" },
                                       [
                                         _vm._v(
-                                          "\n                                            #\n                                        "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "#",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                            #\n                                        "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "#",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                            #\n                                        "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "#",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                            #\n                                        "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "#",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                            #\n                                        "
+                                          "\n                                        Item\n                                    "
                                         ),
                                       ]
                                     ),
@@ -32426,182 +31566,1147 @@ var staticRenderFns = [
                         ),
                       ]
                     ),
-                  ]),
-                ]),
+                  ]
+                ),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "nombre-via-calle" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "carta-de-llamada-datos-personales-provincia",
+                  },
+                  [
                     _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
+                      "div",
+                      {
+                        staticClass:
+                          "mdc-select mdc-select--filled demo-width-class",
+                        attrs: { "data-id": "anima-widget" },
+                      },
                       [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
                         _c(
-                          "span",
+                          "div",
                           {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
+                            staticClass:
+                              "mdc-select__anchor custom-enhanced-select-width",
+                            attrs: {
+                              role: "button",
+                              "aria-haspopup": "listbox",
+                              "aria-expanded": "false",
+                            },
                           },
                           [
-                            _vm._v(
-                              "\n                                Nombre de la via\n                            "
+                            _c("span", { staticClass: "mdc-select__ripple" }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass: "mdc-floating-label",
+                                attrs: { id: "demo-label" },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                Provincia\n                            "
+                                ),
+                              ]
                             ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "mdc-select__selected-text-container",
+                              },
+                              [
+                                _c("span", {
+                                  staticClass: "mdc-select__selected-text",
+                                  attrs: { id: "demo-selected-text" },
+                                }),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              { staticClass: "mdc-select__dropdown-icon" },
+                              [
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "mdc-select__dropdown-icon-inactive material-icons",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    arrow_drop_down\n                                "
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "mdc-select__dropdown-icon-active material-icons",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    arrow_drop_up\n                                "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-line-ripple" }),
                           ]
                         ),
                         _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "nombre-via-carretera" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
                         _c(
-                          "span",
+                          "div",
                           {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
+                            staticClass:
+                              "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
                           },
                           [
-                            _vm._v(
-                              "\n                                Nombre de la via\n                            "
+                            _c(
+                              "ul",
+                              {
+                                staticClass: "mdc-list",
+                                attrs: {
+                                  id: "select_dropdown",
+                                  role: "listbox",
+                                  "aria-label": "listbox",
+                                },
+                              },
+                              [
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "Item",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Item\n                                    "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
                             ),
                           ]
                         ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
                       ]
                     ),
-                  ]),
-                ]),
+                  ]
+                ),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "punto-kilometrico" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "carta-de-llamada-datos-personales-municipio",
+                  },
+                  [
                     _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
+                      "div",
+                      {
+                        staticClass:
+                          "mdc-select mdc-select--filled demo-width-class",
+                        attrs: { "data-id": "anima-widget" },
+                      },
                       [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
                         _c(
-                          "span",
+                          "div",
                           {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
+                            staticClass:
+                              "mdc-select__anchor custom-enhanced-select-width",
+                            attrs: {
+                              role: "button",
+                              "aria-haspopup": "listbox",
+                              "aria-expanded": "false",
+                            },
                           },
                           [
-                            _vm._v(
-                              "\n                                Punto kilometrico\n                            "
+                            _c("span", { staticClass: "mdc-select__ripple" }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass: "mdc-floating-label",
+                                attrs: { id: "demo-label" },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                Municipio\n                            "
+                                ),
+                              ]
                             ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "mdc-select__selected-text-container",
+                              },
+                              [
+                                _c("span", {
+                                  staticClass: "mdc-select__selected-text",
+                                  attrs: { id: "demo-selected-text" },
+                                }),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              { staticClass: "mdc-select__dropdown-icon" },
+                              [
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "mdc-select__dropdown-icon-inactive material-icons",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    arrow_drop_down\n                                "
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "mdc-select__dropdown-icon-active material-icons",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    arrow_drop_up\n                                "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-line-ripple" }),
                           ]
                         ),
                         _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "nombre-punto-singular" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
                         _c(
-                          "span",
+                          "div",
                           {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
+                            staticClass:
+                              "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
                           },
                           [
-                            _vm._v(
-                              "\n                                Nombre del punto singular\n                            "
+                            _c(
+                              "ul",
+                              {
+                                staticClass: "mdc-list",
+                                attrs: {
+                                  id: "select_dropdown",
+                                  role: "listbox",
+                                  "aria-label": "listbox",
+                                },
+                              },
+                              [
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "Item",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Item\n                                    "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
                             ),
                           ]
                         ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
                       ]
                     ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "referencia-punto-singular" }, [
+                  ]
+                ),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "carta-de-llamada-datos-personales-flex-col-1" },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "carta-de-llamada-datos-personales-tipo-de-localizacion",
+                  },
+                  [
                     _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
+                      "div",
+                      {
+                        staticClass:
+                          "mdc-select mdc-select--filled demo-width-class",
+                      },
                       [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
                         _c(
-                          "span",
+                          "div",
                           {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
+                            staticClass:
+                              "mdc-select__anchor custom-enhanced-select-width",
+                            attrs: {
+                              role: "button",
+                              "aria-haspopup": "listbox",
+                              "aria-expanded": "false",
+                            },
                           },
                           [
-                            _vm._v(
-                              "\n                                Referencia\n                            "
+                            _c("span", { staticClass: "mdc-select__ripple" }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass: "mdc-floating-label",
+                                attrs: { id: "demo-label" },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                Tipo de Localización\n                            "
+                                ),
+                              ]
                             ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "mdc-select__selected-text-container",
+                              },
+                              [
+                                _c("span", {
+                                  staticClass: "mdc-select__selected-text",
+                                  attrs: { id: "demo-selected-text" },
+                                }),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              { staticClass: "mdc-select__dropdown-icon" },
+                              [
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "mdc-select__dropdown-icon-inactive material-icons",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    arrow_drop_down\n                                "
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "mdc-select__dropdown-icon-active material-icons",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    arrow_drop_up\n                                "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-line-ripple" }),
                           ]
                         ),
                         _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
                           },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
+                          [
+                            _c(
+                              "ul",
+                              {
+                                staticClass: "mdc-list",
+                                attrs: {
+                                  id: "select_dropdown",
+                                  role: "listbox",
+                                  "aria-label": "listbox",
+                                },
+                              },
+                              [
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "Fuera de Catalunya",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Fuera de Catalunya\n                                    "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "Población",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Población\n                                    "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "Carretera",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Carretera\n                                    "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "Calle",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Calle\n                                    "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "Punto Singular",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Punto Singular\n                                    "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
                       ]
                     ),
-                  ]),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-referencia-poblacion",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Referencia\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-provincia-fuera",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Provincia\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-referencia-fuera",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Referencia\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-tipo-de-via",
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "mdc-select mdc-select--filled demo-width-class",
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "mdc-select__anchor custom-enhanced-select-width",
+                              attrs: {
+                                role: "button",
+                                "aria-haspopup": "listbox",
+                                "aria-expanded": "false",
+                              },
+                            },
+                            [
+                              _c("span", { staticClass: "mdc-select__ripple" }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass: "mdc-floating-label",
+                                  attrs: { id: "demo-label" },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                    Tipo de via\n                                "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "mdc-select__selected-text-container",
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "mdc-select__selected-text",
+                                    attrs: { id: "demo-selected-text" },
+                                  }),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-select__dropdown-icon" },
+                                [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "mdc-select__dropdown-icon-inactive material-icons",
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        arrow_drop_down\n                                    "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "mdc-select__dropdown-icon-active material-icons",
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        arrow_drop_up\n                                    "
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "mdc-line-ripple" }),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                            },
+                            [
+                              _c(
+                                "ul",
+                                {
+                                  staticClass: "mdc-list",
+                                  attrs: {
+                                    id: "select_dropdown",
+                                    role: "listbox",
+                                    "aria-label": "listbox",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "li",
+                                    {
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "#",
+                                        role: "option",
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                            #\n                                        "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    {
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "#",
+                                        role: "option",
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                            #\n                                        "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    {
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "#",
+                                        role: "option",
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                            #\n                                        "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    {
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "#",
+                                        role: "option",
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                            #\n                                        "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    {
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "#",
+                                        role: "option",
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                            #\n                                        "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-nombre-via-calle",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Nombre de la via\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-nombre-via-carretera",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Nombre de la via\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-punto-kilometrico",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Punto kilometrico\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-nombre-punto-singular",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Nombre del punto singular\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-referencia-punto-singular",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Referencia\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
                 ]),
               ]
             ),
@@ -32611,117 +32716,549 @@ var staticRenderFns = [
               { staticClass: "carta-de-llamada-datos-personales-flex-col-2" },
               [
                 _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "numero-portal" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Numero del portal\n                            "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-numero-portal",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Numero del portal\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
                 ]),
                 _vm._v(" "),
                 _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "escalera" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Escalera\n                            "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "carta-de-llamada-datos-personales-escalera",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Escalera\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
                 ]),
                 _vm._v(" "),
                 _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "piso" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Piso\n                            "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
+                  _c(
+                    "div",
+                    { staticClass: "carta-de-llamada-datos-personales-piso" },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Piso\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
                 ]),
                 _vm._v(" "),
                 _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "sentido-circulacion" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-sentido-circulacion",
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "mdc-select mdc-select--filled demo-width-class",
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "mdc-select__anchor custom-enhanced-select-width",
+                              attrs: {
+                                role: "button",
+                                "aria-haspopup": "listbox",
+                                "aria-expanded": "false",
+                              },
+                            },
+                            [
+                              _c("span", { staticClass: "mdc-select__ripple" }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass: "mdc-floating-label",
+                                  attrs: { id: "demo-label" },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                    Sentido de la circulación\n                                "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "mdc-select__selected-text-container",
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "mdc-select__selected-text",
+                                    attrs: { id: "demo-selected-text" },
+                                  }),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-select__dropdown-icon" },
+                                [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "mdc-select__dropdown-icon-inactive material-icons",
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        arrow_drop_down\n                                    "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "mdc-select__dropdown-icon-active material-icons",
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        arrow_drop_up\n                                    "
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "mdc-line-ripple" }),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                            },
+                            [
+                              _c(
+                                "ul",
+                                {
+                                  staticClass: "mdc-list",
+                                  attrs: {
+                                    id: "select_dropdown",
+                                    role: "listbox",
+                                    "aria-label": "listbox",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "li",
+                                    {
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "#",
+                                        role: "option",
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                            #\n                                        "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    {
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "#",
+                                        role: "option",
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                            #\n                                        "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    {
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "#",
+                                        role: "option",
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                            #\n                                        "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    {
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "#",
+                                        role: "option",
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                            #\n                                        "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "li",
+                                    {
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "#",
+                                        role: "option",
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                            #\n                                        "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-referencia-carretera",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Referencia\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "carta-de-llamada-datos-personales-flex-col-3" },
+              [
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    { staticClass: "carta-de-llamada-datos-personales-puerta" },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Puerta\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { attrs: { hidden: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-personales-referencia-calle",
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "mdc-text-field mdc-text-field--filled",
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-text-field__ripple" }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "mdc-floating-label",
+                              attrs: { id: "my-label-id" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                Referencia\n                            "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "mdc-text-field__input",
+                            attrs: {
+                              type: "text",
+                              "aria-labelledby": "my-label-id",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-line-ripple" }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "carta-de-llamada-datos-personales-flex-col-4" },
+              [
+                _c("img", {
+                  staticClass:
+                    "carta-de-llamada-datos-personales-separation-down",
+                  attrs: {
+                    src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg",
+                  },
+                }),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "carta-de-llamada-datos-personales-flex-col-5" },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "carta-de-llamada-datos-personales-incidente",
+                  },
+                  [
                     _c(
                       "div",
                       {
                         staticClass:
                           "mdc-select mdc-select--filled demo-width-class",
+                        attrs: { "data-id": "anima-widget" },
                       },
                       [
                         _c(
@@ -32746,7 +33283,7 @@ var staticRenderFns = [
                               },
                               [
                                 _vm._v(
-                                  "\n                                    Sentido de la circulación\n                                "
+                                  "\n                                Incidente\n                            "
                                 ),
                               ]
                             ),
@@ -32777,7 +33314,7 @@ var staticRenderFns = [
                                   },
                                   [
                                     _vm._v(
-                                      "\n                                        arrow_drop_down\n                                    "
+                                      "\n                                    arrow_drop_down\n                                "
                                     ),
                                   ]
                                 ),
@@ -32790,7 +33327,7 @@ var staticRenderFns = [
                                   },
                                   [
                                     _vm._v(
-                                      "\n                                        arrow_drop_up\n                                    "
+                                      "\n                                    arrow_drop_up\n                                "
                                     ),
                                   ]
                                 ),
@@ -32824,7 +33361,7 @@ var staticRenderFns = [
                                   {
                                     staticClass: "mdc-list-item",
                                     attrs: {
-                                      "data-value": "#",
+                                      "data-value": "X",
                                       role: "option",
                                     },
                                   },
@@ -32836,115 +33373,7 @@ var staticRenderFns = [
                                     _c(
                                       "span",
                                       { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                            #\n                                        "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "#",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                            #\n                                        "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "#",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                            #\n                                        "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "#",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                            #\n                                        "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "#",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                            #\n                                        "
-                                        ),
-                                      ]
+                                      [_vm._v("X")]
                                     ),
                                   ]
                                 ),
@@ -32954,396 +33383,155 @@ var staticRenderFns = [
                         ),
                       ]
                     ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "referencia-carretera" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Referencia\n                            "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "carta-de-llamada-datos-personales-flex-col-3" },
-              [
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "puerta" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Puerta\n                            "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c("div", { staticClass: "referencia-calle" }, [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Referencia\n                            "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "carta-de-llamada-datos-personales-flex-col-4" },
-              [
-                _c("img", {
-                  staticClass: "separation-down",
-                  attrs: {
-                    src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg",
-                  },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "incidente" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "mdc-select mdc-select--filled demo-width-class",
-                      attrs: { "data-id": "anima-widget" },
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__anchor custom-enhanced-select-width",
-                          attrs: {
-                            role: "button",
-                            "aria-haspopup": "listbox",
-                            "aria-expanded": "false",
-                          },
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-select__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "demo-label" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Incidente\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "mdc-select__selected-text-container",
-                            },
-                            [
-                              _c("span", {
-                                staticClass: "mdc-select__selected-text",
-                                attrs: { id: "demo-selected-text" },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "mdc-select__dropdown-icon" },
-                            [
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-inactive material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_down\n                                "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-active material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_up\n                                "
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                        },
-                        [
-                          _c(
-                            "ul",
-                            {
-                              staticClass: "mdc-list",
-                              attrs: {
-                                id: "select_dropdown",
-                                role: "listbox",
-                                "aria-label": "listbox",
-                              },
-                            },
-                            [
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: { "data-value": "X", role: "option" },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("X")]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "tipo-de-incidente" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "mdc-select mdc-select--filled demo-width-class",
-                      attrs: { "data-id": "anima-widget" },
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__anchor custom-enhanced-select-width",
-                          attrs: {
-                            role: "button",
-                            "aria-haspopup": "listbox",
-                            "aria-expanded": "false",
-                          },
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-select__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "demo-label" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Tipos de Incidente\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "mdc-select__selected-text-container",
-                            },
-                            [
-                              _c("span", {
-                                staticClass: "mdc-select__selected-text",
-                                attrs: { id: "demo-selected-text" },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "mdc-select__dropdown-icon" },
-                            [
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-inactive material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_down\n                                "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__dropdown-icon-active material-icons",
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    arrow_drop_up\n                                "
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                        },
-                        [
-                          _c(
-                            "ul",
-                            {
-                              staticClass: "mdc-list",
-                              attrs: {
-                                id: "select_dropdown",
-                                role: "listbox",
-                                "aria-label": "listbox",
-                              },
-                            },
-                            [
-                              _c(
-                                "li",
-                                {
-                                  staticClass: "mdc-list-item",
-                                  attrs: { "data-value": "X", role: "option" },
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-list-item__ripple",
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "mdc-list-item__text" },
-                                    [_vm._v("X")]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                  ]
+                ),
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "mapa-up", attrs: { id: "mapa-up" } },
+                  {
+                    staticClass:
+                      "carta-de-llamada-datos-personales-tipo-de-incidente",
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "mdc-select mdc-select--filled demo-width-class",
+                        attrs: { "data-id": "anima-widget" },
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mdc-select__anchor custom-enhanced-select-width",
+                            attrs: {
+                              role: "button",
+                              "aria-haspopup": "listbox",
+                              "aria-expanded": "false",
+                            },
+                          },
+                          [
+                            _c("span", { staticClass: "mdc-select__ripple" }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass: "mdc-floating-label",
+                                attrs: { id: "demo-label" },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                Tipos de Incidente\n                            "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "mdc-select__selected-text-container",
+                              },
+                              [
+                                _c("span", {
+                                  staticClass: "mdc-select__selected-text",
+                                  attrs: { id: "demo-selected-text" },
+                                }),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              { staticClass: "mdc-select__dropdown-icon" },
+                              [
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "mdc-select__dropdown-icon-inactive material-icons",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    arrow_drop_down\n                                "
+                                    ),
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "mdc-select__dropdown-icon-active material-icons",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    arrow_drop_up\n                                "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-line-ripple" }),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                          },
+                          [
+                            _c(
+                              "ul",
+                              {
+                                staticClass: "mdc-list",
+                                attrs: {
+                                  id: "select_dropdown",
+                                  role: "listbox",
+                                  "aria-label": "listbox",
+                                },
+                              },
+                              [
+                                _c(
+                                  "li",
+                                  {
+                                    staticClass: "mdc-list-item",
+                                    attrs: {
+                                      "data-value": "X",
+                                      role: "option",
+                                    },
+                                  },
+                                  [
+                                    _c("span", {
+                                      staticClass: "mdc-list-item__ripple",
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "mdc-list-item__text" },
+                                      [_vm._v("X")]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "carta-de-llamada-datos-personales-mapa-up",
+                    attrs: { id: "mapa-up" },
+                  },
                   [
                     _c(
                       "button",
@@ -33364,53 +33552,67 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("div", { staticClass: "flex-row-6" }, [
-                  _c(
-                    "div",
-                    { staticClass: "aceptar", attrs: { id: "aceptar" } },
-                    [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "mdc-button mdc-button--raised",
-                          attrs: { id: "aceptar" },
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-button__ripple" }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-button__label" }, [
-                            _vm._v(
-                              "\n                                Aceptar\n                            "
-                            ),
-                          ]),
-                        ]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "cancelar", attrs: { id: "cancelar" } },
-                    [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "mdc-button mdc-button--raised",
-                          attrs: { id: "cancelar" },
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-button__ripple" }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-button__label" }, [
-                            _vm._v(
-                              "\n                                Cancelar\n                            "
-                            ),
-                          ]),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass: "carta-de-llamada-datos-personales-flex-row-2",
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "carta-de-llamada-datos-personales-aceptar",
+                        attrs: { id: "aceptar" },
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "mdc-button mdc-button--raised",
+                            attrs: { id: "aceptar" },
+                          },
+                          [
+                            _c("span", { staticClass: "mdc-button__ripple" }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-button__label" }, [
+                              _vm._v(
+                                "\n                                Aceptar\n                            "
+                              ),
+                            ]),
+                          ]
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "carta-de-llamada-datos-personales-cancelar",
+                        attrs: { id: "cancelar" },
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "mdc-button mdc-button--raised",
+                            attrs: { id: "cancelar" },
+                          },
+                          [
+                            _c("span", { staticClass: "mdc-button__ripple" }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "mdc-button__label" }, [
+                              _vm._v(
+                                "\n                                Cancelar\n                            "
+                              ),
+                            ]),
+                          ]
+                        ),
+                      ]
+                    ),
+                  ]
+                ),
               ]
             ),
           ]

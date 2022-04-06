@@ -15,7 +15,7 @@
             </div>
             <div class="carta-de-llamada-datos-personales-flex-row-1">
                 <div class="carta-de-llamada-datos-personales-flex-col">
-                    <div class="comarca">
+                    <div class="carta-de-llamada-datos-personales-comarca">
                         <div class="mdc-select mdc-select--filled demo-width-class" data-id="anima-widget">
                             <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                 <span class="mdc-select__ripple"></span>
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="provincia">
+                    <div class="carta-de-llamada-datos-personales-provincia">
                         <div class="mdc-select mdc-select--filled demo-width-class" data-id="anima-widget">
                             <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                 <span class="mdc-select__ripple"></span>
@@ -79,7 +79,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="municipio-personales">
+                    <div class="carta-de-llamada-datos-personales-municipio">
                         <div class="mdc-select mdc-select--filled demo-width-class" data-id="anima-widget">
                             <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                 <span class="mdc-select__ripple"></span>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
                 <div class="carta-de-llamada-datos-personales-flex-col-1">
-                    <div class="tipo-de-localizacin">
+                    <div class="carta-de-llamada-datos-personales-tipo-de-localizacion">
                         <div class="mdc-select mdc-select--filled demo-width-class">
                             <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                 <span class="mdc-select__ripple"></span>
@@ -171,7 +171,7 @@
                     </div>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: POBLACIÓN: referencia-poblacion -->
-                        <div class="referencia-poblacion">
+                        <div class="carta-de-llamada-datos-personales-referencia-poblacion">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -184,7 +184,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: Fuera de Catalunya: provincia -->
-                        <div class="provincia-fuera">
+                        <div class="carta-de-llamada-datos-personales-provincia-fuera">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -197,7 +197,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: Fuera de Catalunya: referencia -->
-                        <div class="referencia-fuera">
+                        <div class="carta-de-llamada-datos-personales-referencia-fuera">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -210,7 +210,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: CALLE: Tipo de via -->
-                        <div class="tipo-de-via">
+                        <div class="carta-de-llamada-datos-personales-tipo-de-via">
                             <div class="mdc-select mdc-select--filled demo-width-class">
                                 <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span class="mdc-select__ripple"></span>
@@ -269,7 +269,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: CALLE: nombre via -->
-                        <div class="nombre-via-calle">
+                        <div class="carta-de-llamada-datos-personales-nombre-via-calle">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -282,7 +282,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: CARRETERA: Nombre via -->
-                        <div class="nombre-via-carretera">
+                        <div class="carta-de-llamada-datos-personales-nombre-via-carretera">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -295,7 +295,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: CARRETERA: punto kilometrico -->
-                        <div class="punto-kilometrico">
+                        <div class="carta-de-llamada-datos-personales-punto-kilometrico">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -308,7 +308,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: PUNTO SINGULAR: nombre punto singular -->
-                        <div class="nombre-punto-singular">
+                        <div class="carta-de-llamada-datos-personales-nombre-punto-singular">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -321,7 +321,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: PUNTO SINGULAR: referencia punto singular -->
-                        <div class="referencia-punto-singular">
+                        <div class="carta-de-llamada-datos-personales-referencia-punto-singular">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -336,7 +336,7 @@
                 </div>
                 <div class="carta-de-llamada-datos-personales-flex-col-2">
                     <span hidden> <!-- FIXME: CALLE: numero portal -->
-                        <div class="numero-portal">
+                        <div class="carta-de-llamada-datos-personales-numero-portal">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -349,7 +349,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: CALLE: escalera -->
-                        <div class="escalera">
+                        <div class="carta-de-llamada-datos-personales-escalera">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -360,8 +360,9 @@
                             </label>
                         </div>
                     </span>
+                    <!-- Space -->
                     <span hidden> <!-- FIXME: CALLE: piso -->
-                        <div class="piso">
+                        <div class="carta-de-llamada-datos-personales-piso">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -374,7 +375,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: CARRETERA: sentido circulacion -->
-                        <div class="sentido-circulacion">
+                        <div class="carta-de-llamada-datos-personales-sentido-circulacion">
                             <div class="mdc-select mdc-select--filled demo-width-class">
                                 <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span class="mdc-select__ripple"></span>
@@ -433,7 +434,7 @@
                     </span>
                     <!-- Space -->
                     <span hidden> <!-- FIXME: CARRETERA: referencia -->
-                        <div class="referencia-carretera">
+                        <div class="carta-de-llamada-datos-personales-referencia-carretera">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -448,7 +449,7 @@
                 </div>
                 <div class="carta-de-llamada-datos-personales-flex-col-3">
                     <span hidden> <!-- FIXME: CALLE: puerta -->
-                        <div class="puerta">
+                        <div class="carta-de-llamada-datos-personales-puerta">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -460,7 +461,7 @@
                         </div>
                     </span>
                     <span hidden> <!-- FIXME: CALLE: referencia -->
-                        <div class="referencia-calle">
+                        <div class="carta-de-llamada-datos-personales-referencia-calle">
                             <label class="mdc-text-field mdc-text-field--filled">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -473,8 +474,10 @@
                     </span>
                 </div>
                 <div class="carta-de-llamada-datos-personales-flex-col-4">
-                    <img class="separation-down" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg"/>
-                    <div class="incidente">
+                    <img class="carta-de-llamada-datos-personales-separation-down" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg"/>
+                </div>
+                <div class="carta-de-llamada-datos-personales-flex-col-5">
+                    <div class="carta-de-llamada-datos-personales-incidente">
                         <div class="mdc-select mdc-select--filled demo-width-class" data-id="anima-widget">
                             <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                 <span class="mdc-select__ripple"></span>
@@ -503,7 +506,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tipo-de-incidente">
+                    <div class="carta-de-llamada-datos-personales-tipo-de-incidente">
                         <div class="mdc-select mdc-select--filled demo-width-class" data-id="anima-widget">
                             <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                 <span class="mdc-select__ripple"></span>
@@ -533,7 +536,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mapa-up" id="mapa-up">
+                    <div class="carta-de-llamada-datos-personales-mapa-up" id="mapa-up">
                         <button class="mdc-button mdc-button--raised" id="mapa-up">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">
@@ -541,8 +544,8 @@
                             </span>
                         </button>
                     </div>
-                    <div class="flex-row-6">
-                        <div class="aceptar" id="aceptar">
+                    <div class="carta-de-llamada-datos-personales-flex-row-2">
+                        <div class="carta-de-llamada-datos-personales-aceptar" id="aceptar">
                             <button class="mdc-button mdc-button--raised" id="aceptar">
                                 <span class="mdc-button__ripple"></span>
                                 <span class="mdc-button__label">
@@ -550,7 +553,7 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="cancelar" id="cancelar">
+                        <div class="carta-de-llamada-datos-personales-cancelar" id="cancelar">
                             <button class="mdc-button mdc-button--raised" id="cancelar">
                                 <span class="mdc-button__ripple"></span>
                                 <span class="mdc-button__label">
@@ -636,58 +639,65 @@ export default {
     }
 
     /* FIXME: Columna uno */
-    .comarca {
+    .carta-de-llamada-datos-personales-flex-row-1{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 117px;
+    margin-left: -222px;
+    }
+
+    .carta-de-llamada-datos-personales-comarca {
     height: 60px;
     width: 263px;
     }
 
-    .comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    .carta-de-llamada-datos-personales-comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .comarca .custom-enhanced-select-width {
+    .carta-de-llamada-datos-personales-comarca .custom-enhanced-select-width {
     width: 200px;
     }
 
-    .provincia {
+    .carta-de-llamada-datos-personales-provincia {
     height: 60px;
     margin-top: 25px;
     width: 263px;
     }
 
-    .provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    .carta-de-llamada-datos-personales-provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .provincia .custom-enhanced-select-width {
+    .carta-de-llamada-datos-personales-provincia .custom-enhanced-select-width {
     width: 200px;
     }
 
-    .municipio-personales {
+    .carta-de-llamada-datos-personales-municipio {
     height: 60px;
     margin-top: 25px;
     width: 263px;
     }
 
-    .municipio-personales .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    .carta-de-llamada-datos-personales-municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .municipio-personales .custom-enhanced-select-width {
+    .carta-de-llamada-datos-personales-municipio .custom-enhanced-select-width {
     width: 200px;
     }
 
     /* FIXME: Columna dos */
-    .tipo-de-localizacin {
+    .carta-de-llamada-datos-personales-tipo-de-localizacin {
     height: 60px;
     width: 263px;
     }
 
-    .tipo-de-localizacin .custom-enhanced-select-width {
+    .carta-de-llamada-datos-personales-tipo-de-localizacin .custom-enhanced-select-width {
     width: 200px;
     }
 
-    .tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    .carta-de-llamada-datos-personales-tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
@@ -783,42 +793,57 @@ export default {
     color: var(--mdc-theme-primary);
     }
 
+    /* Barra */
+    .carta-de-llamada-datos-personales-flex-col-4{
+        display: flex;
+
+        margin-right: 51px;
+    }
+
     /* FIXME: Columna cinco */
-    .separation-down {
+    .carta-de-llamada-datos-personales-separation-down {
     height: 183px;
     margin-left: 50px;
     margin-top: 153px;
     width: 1px;
     }
 
-    .incidente {
+    .carta-de-llamada-datos-personales-incidente {
     height: 60px;
     width: 263px;
     }
 
-    .incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    .carta-de-llamada-datos-personales-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .incidente .custom-enhanced-select-width {
+    .carta-de-llamada-datos-personales-incidente .custom-enhanced-select-width {
     width: 200px;
     }
 
-    .tipo-de-incidente {
+    .carta-de-llamada-datos-personales-tipo-de-incidente {
     height: 60px;
     margin-top: 24px;
     width: 263px;
     }
 
-    .tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+    .carta-de-llamada-datos-personales-tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .tipo-de-incidente .custom-enhanced-select-width {
+    .carta-de-llamada-datos-personales-tipo-de-incidente .custom-enhanced-select-width {
     width: 200px;
     }
 
-    .mapa-up #mapa-up{
+    .carta-de-llamada-datos-personales-flex-row-2 {
+    align-items: flex-start;
+    display: flex;
+    margin-left: 38px;
+    margin-top: 24px;
+    min-width: 188px;
+    }
+
+    .carta-de-llamada-datos-personales-mapa-up #mapa-up{
     border-radius: 32px;
     cursor: pointer;
     height: 36px;
@@ -830,19 +855,19 @@ export default {
     text-transform: capitalize;
     }
 
-    .mapa-up {
+    .carta-de-llamada-datos-personales-mapa-up {
     margin-top: 50px;
     height: auto !important;
     width: auto !important;
     }
 
-    #mapa-up:hover,
-    #aceptar:hover,
-    #cancelar:hover {
+    #carta-de-llamada-datos-personales-mapa-up:hover,
+    #carta-de-llamada-datos-personales-aceptar:hover,
+    #carta-de-llamada-datos-personales-cancelar:hover {
     transform: scale(1.1);
     }
 
-    .aceptar #aceptar {
+    .carta-de-llamada-datos-personales-aceptar #aceptar {
     border-radius: 32px;
     cursor: pointer;
     height: 36px;
@@ -855,14 +880,14 @@ export default {
     text-transform: capitalize;
     }
 
-    .aceptar {
+    .carta-de-llamada-datos-personales-aceptar {
     height: auto !important;
     width: auto !important;
     margin-top: -20px;
     margin-left: -100px;
     }
 
-    .cancelar #cancelar{
+    .carta-de-llamada-datos-personales-cancelar #cancelar{
     border-radius: 32px;
     cursor: pointer;
     height: 36px;
@@ -875,7 +900,7 @@ export default {
     text-transform: capitalize;
     }
 
-    .cancelar {
+    .carta-de-llamada-datos-personales-cancelar {
     height: auto !important;
     width: auto !important;
     margin-top: -20px;
