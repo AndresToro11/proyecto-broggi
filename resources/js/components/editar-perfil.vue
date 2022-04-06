@@ -52,6 +52,24 @@
                             </label>
                         </div>
                     </div>
+                    <div class="editar-perfil-operador-flex-row-4">
+                        <div class="editar-perfil-operador-aceptar-cambios"> <!-- FIXME: Aceptar cambios -->
+                            <button class="mdc-button mdc-button--raised">
+                                <span class="mdc-button__ripple"></span>
+                                <span class="mdc-button__label">
+                                    Aceptar cambios
+                                </span>
+                            </button>
+                        </div>
+                        <div class="editar-perfil-operador-cancelar"> <!-- FIXME: Cancelar -->
+                            <button class="mdc-button mdc-button--raised">
+                                <span class="mdc-button__ripple"></span>
+                                <span class="mdc-button__label">
+                                    Cancelar
+                                </span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="editar-perfil-operador-password-container">
                     <div class="editar-perfil-operador-cambiar-contrasenya valign-text-middle gothica1-normal-black-21px"> <!-- FIXME: Password Section -->
@@ -266,7 +284,7 @@
     width: 750px;
     height: 179px;
     margin-left: 102px;
-    margin-top: 48px;
+    margin-top: 208px;
     flex-direction: column;
     }
 
@@ -307,6 +325,16 @@
 
     /* FIXME: Botones */
     .editar-perfil-operador-flex-row-3 {
+    display: flex;
+    align-items: flex-start;
+    width: 350px;
+    height: 60px;
+    margin-top: 50px;
+    margin-left: 174px;
+    gap: 50px;
+    }
+
+    .editar-perfil-operador-flex-row-4 {
     display: flex;
     align-items: flex-start;
     width: 350px;
