@@ -304,12 +304,12 @@
 
 <style>
     /* FIXME: Main divs */
-    .carta-de-llamada-datos-indicente {
+    /* .carta-de-llamada-datos-indicente {
     display: flex;
     align-items: flex-start;
     height: 312px;
     width: 891px;
-    }
+    } */
 
     /* Linea Uno */
     /* .carta-de-llamada-datos-indicente-flex-row {
