@@ -6,7 +6,7 @@
                     Editar perfil
                 </div>
                 <div class="editar-perfil-operador-datos-personales-container">
-                    <div class="datos-personales valign-text-middle gothica1-normal-black-21px"> <!-- FIXME: Datos personales -->
+                    <div class="editar-perfil-operador-datos-personales valign-text-middle gothica1-normal-black-21px"> <!-- FIXME: Datos personales -->
                     Datos personales
                     </div>
                     <div class="editar-perfil-operador-flex-row">

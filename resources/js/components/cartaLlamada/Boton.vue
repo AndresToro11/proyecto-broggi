@@ -1,12 +1,15 @@
 <template>
     <div class="main">
         <!-- <datos-administrativos></datos-administrativos> -->
-        <div class="datos-incidentes">
-            <datos-incidentes @getDataIncidente="getDataIncidente"></datos-incidentes>
+        <div class="carta-de-llamada-datos-incidentes-personales-flex-col">
+            <div class="datos-incidentes-componente">
+                <datos-incidentes @getDataIncidente="getDataIncidente"></datos-incidentes>
+            </div>
+            <div class="datos-personales-componente">
+                <datos-personales @getDataPersonal="getDataPersonal"></datos-personales>
+            </div>
         </div>
-        <div class="datos-personales">
-            <datos-personales @getDataPersonal="getDataPersonal"></datos-personales>
-        </div>
+
         <!-- <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(),insertBD(cartaLlamada)">Aceptar</button>
         <expedientes-relacionados></expedientes-relacionados> -->
     </div>
@@ -118,8 +121,30 @@ export default {
 </script>
 
 <style>
-    .main{
+    /* .main {
+    display: flex;
+    flex-direction: column;
+    } */
+
+    carta-de-llamada-datos-incidentes-personales-flex-col{
         display: flex;
-        flex-direction: column;
+    }
+
+    .datos-incidentes-componente {
+    /* display: flex;
+    align-items: flex-start;
+    height: 312px;
+    width: 891px; */
+    margin-left: 100px;
+    margin-top: 24px;
+    }
+
+    .datos-personales-componente {
+    /* display: flex;
+    align-items: flex-start;
+    height: 312px;
+    width: 891px; */
+    margin-left: 100px;
+    margin-top: 60px;
     }
 </style>

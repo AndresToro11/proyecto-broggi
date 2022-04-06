@@ -1,114 +1,106 @@
 <template>
     <div>
-        <input type="hidden" id="anPageName" name="page" value="carta-de-llamada-default" />
+        <!-- <input type="hidden" id="anPageName" name="page" value="carta-de-llamada-default" /> -->
         <div class="container-center-horizontal">
-            <div class="carta-de-llamada-default screen">
-                <div class="container-scrolling">
-                    <div class="flex-col">
-                        <div class="flex-row">
-                            <div class="flex-col-1">
-                                <h1 class="title valign-text-middle gothica1-normal-black-28px">
-                                    Carta de llamada
-                                </h1>
-                                <div class="datos-del-interlocutor valign-text-middle gothica1-normal-black-21px">
-                                    Datos del interlocutor
-                                </div>
+            <div class="carta-de-llamada-datos-indicente-flex-row">
+                <div class="carta-de-llamada-datos-indicente-flex-col">
+                    <h1 class="carta-de-llamada-datos-indicente-title valign-text-middle gothica1-normal-black-28px">
+                        Carta de llamada
+                    </h1>
+                    <div class="carta-de-llamada-datos-indicente-datos-del-interlocutor valign-text-middle gothica1-normal-black-21px">
+                        Datos del interlocutor
+                    </div>
+                </div>
+            </div>
+            <div class="carta-de-llamada-datos-indicente-flex-row-1">
+                <div class="carta-de-llamada-datos-indicente-flex-col-1">
+                <div class="carta-de-llamada-datos-indicente-telefono">
+                    <label class="mdc-text-field mdc-text-field--filled">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">
+                            Teléfono
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                <div class="carta-de-llamada-datos-indicente-Direccion-Up">
+                    <label class="mdc-text-field mdc-text-field--filled">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">Direccion</span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                <div class="carta-de-llamada-datos-indicente-Antedecendes-Up">
+                    <label class="mdc-text-field mdc-text-field--filled">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">
+                            Antedecentes
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                </div>
+                <div class="carta-de-llamada-datos-indicente-flex-col-2">
+                    <div class="carta-de-llamada-datos-indicente-procedencia-de-la-llamada">
+                            <label class="mdc-text-field mdc-text-field--filled">
+                                <span class="mdc-text-field__ripple"></span>
+                                <span class="mdc-floating-label" id="my-label-id">
+                                    Procedencia de la llamada
+                                </span>
+                                <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                <span class="mdc-line-ripple"></span>
+                            </label>
+                    </div>
+                    <div class="carta-de-llamada-datos-indicente-origen-de-la-llamada">
+                        <label class="mdc-text-field mdc-text-field--filled">
+                            <span class="mdc-text-field__ripple"></span>
+                            <span class="mdc-floating-label" id="my-label-id">
+                                Origen de la llamada
+                            </span>
+                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                            <span class="mdc-line-ripple"></span>
+                        </label>
+                    </div>
+                    <div class="carta-de-llamada-datos-indicente-municipio">
+                        <div class="mdc-select mdc-select--filled demo-width-class">
+                            <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                <span class="mdc-select__ripple"></span>
+                                <span id="demo-label" class="mdc-floating-label">
+                                    Municipio
+                                </span>
+                                <span class="mdc-select__selected-text-container">
+                                    <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                </span>
+                                <span class="mdc-select__dropdown-icon">
+                                    <span class="mdc-select__dropdown-icon-inactive material-icons">
+                                        arrow_drop_down
+                                    </span>
+                                    <span class="mdc-select__dropdown-icon-active material-icons">
+                                        arrow_drop_up
+                                    </span>
+                                </span>
+                                <span class="mdc-line-ripple"></span>
+                            </div>
+                            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                                    <li class="mdc-list-item" data-value="Item" role="option">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <span class="mdc-list-item__text">
+                                            Item
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="flex-row-1">
-                        <div class="flex-col-2">
-                            <div class="telefono">
-                                <label class="mdc-text-field mdc-text-field--filled">
-                                    <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">
-                                        Teléfono
-                                    </span>
-                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
-                                    <span class="mdc-line-ripple"></span>
-                                </label>
-                            </div>
-                            <div class="flex-col-item-Direccion-Up">
-                                <label class="mdc-text-field mdc-text-field--filled">
-                                    <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">Direccion</span>
-                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                    <span class="mdc-line-ripple"></span>
-                                </label>
-                            </div>
-                            <div class="flex-col-item-Antedecendes-Up">
-                                <label class="mdc-text-field mdc-text-field--filled">
-                                    <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">
-                                        Antedecentes
-                                    </span>
-                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                    <span class="mdc-line-ripple"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Second Column -->
-                    <div class="flex-row-2">
-                        <div class="flex-col-3">
-                            <div class="procedencia-de-la-llamada">
-                                <label class="mdc-text-field mdc-text-field--filled">
-                                    <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">
-                                        Procedencia de la llamada
-                                    </span>
-                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                    <span class="mdc-line-ripple"></span>
-                                </label>
-                            </div>
-                            <div class="origen-de-la-llamada">
-                                <label class="mdc-text-field mdc-text-field--filled">
-                                    <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="my-label-id">
-                                        Origen de la llamada
-                                    </span>
-                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                                    <span class="mdc-line-ripple"></span>
-                                </label>
-                            </div>
-                            <div class="municipio">
-                                <div class="mdc-select mdc-select--filled demo-width-class">
-                                    <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
-                                        <span class="mdc-select__ripple"></span>
-                                        <span id="demo-label" class="mdc-floating-label">
-                                            Municipio
-                                        </span>
-                                        <span class="mdc-select__selected-text-container">
-                                            <span id="demo-selected-text" class="mdc-select__selected-text"></span>
-                                        </span>
-                                        <span class="mdc-select__dropdown-icon">
-                                            <span class="mdc-select__dropdown-icon-inactive material-icons">
-                                                arrow_drop_down
-                                            </span>
-                                            <span class="mdc-select__dropdown-icon-active material-icons">
-                                                arrow_drop_up
-                                            </span>
-                                        </span>
-                                        <span class="mdc-line-ripple"></span>
-                                    </div>
-                                    <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                                        <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                            <li class="mdc-list-item" data-value="Item" role="option">
-                                                <span class="mdc-list-item__ripple"></span>
-                                                <span class="mdc-list-item__text">
-                                                    Item
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Third Column -->
-                    <div class="flex-row-3">
-                        <div class="flex-col-4">
-                            <div class="nota-comun"> <!-- Nota Comun -->
+                </div>
+                <div class="carta-de-llamada-datos-indicente-flex-col-3">
+                    <div class="carta-de-llamada-datos-indicente-flex-row-3">
+                        <div class="carta-de-llamada-datos-indicente-flex-col-4">
+                            <div class="carta-de-llamada-datos-indicente-nota-comun"> <!-- Nota Comun -->
                                 <label class="mdc-text-field mdc-text-field--filled" id="notaComun">
                                     <span class="mdc-text-field__ripple"></span>
                                     <span class="mdc-floating-label" id="notaComunLabel">
@@ -299,84 +291,60 @@
         },
         mounted() {
             this.select();
-            console.log("Component mounted.");
-            new mdc.textField.MDCTextField(document.querySelector(".telefono .mdc-text-field"));
-            new mdc.textField.MDCTextField(document.querySelector(".flex-col-item-Direccion-Up .mdc-text-field"));
-            new mdc.textField.MDCTextField(document.querySelector(".flex-col-item-Antedecendes-Up .mdc-text-field"));
-            new mdc.textField.MDCTextField(document.querySelector(".procedencia-de-la-llamada .mdc-text-field"));
-            new mdc.textField.MDCTextField(document.querySelector(".origen-de-la-llamada .mdc-text-field"));
-            new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
-            new mdc.textField.MDCTextField(document.querySelector(".nota-comun .mdc-text-field"));
+            new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-indicente-telefono .mdc-text-field"));
+            new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-indicente-Direccion-Up .mdc-text-field"));
+            new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-indicente-Antedecendes-Up .mdc-text-field"));
+            new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-indicente-procedencia-de-la-llamada .mdc-text-field"));
+            new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-indicente-origen-de-la-llamada .mdc-text-field"));
+            new mdc.select.MDCSelect(document.querySelector(".carta-de-llamada-datos-indicente-municipio .mdc-select"));
+            new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-indicente-nota-comun .mdc-text-field"));
         },
     };
 </script>
 
 <style>
-    .carta-de-llamada-default {
-    align-items: flex-start;
+    /* FIXME: Main divs */
+    .carta-de-llamada-datos-indicente {
     display: flex;
-    height: 320px;
+    align-items: flex-start;
+    height: 312px;
     width: 891px;
     }
 
-    .carta-de-llamada-default .container-scrolling {
-    align-items: flex-start;
+    /* Linea Uno */
+    /* .carta-de-llamada-datos-indicente-flex-row {
     display: flex;
-    margin-left: -150px;
-    height: 320px;
-    width: 891px;
-    left: 92px;
-    top: 172px;
-    z-index: 1;
+    align-items: flex-start;
+    height: 68px;
+    width: 218px;
+    } */
+
+    /* Linea Dos */
+    .carta-de-llamada-datos-indicente-flex-row-1 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 117px;
+    margin-left: -222px;
     }
 
-    .carta-de-llamada-default .flex-col {
+    /* FIXME: Primera columna */
+    .carta-de-llamada-datos-indicente-flex-col {
+    /* display: flex;
     align-items: flex-start;
     align-self: flex-end;
-    display: flex;
-    flex-direction: column;
-    min-height: 265px;
-    width: 265px;
-    }
-
-    .carta-de-llamada-default .flex-col-1 {
-    align-items: flex-start;
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    min-height: 68px;
+    flex-direction: column; */
+    height: 68px;
     width: 218px;
     }
 
-    .carta-de-llamada-default .flex-col-2 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    margin-top: 4px;
-    width: 265px;
-    }
-
-    .carta-de-llamada-default .flex-row {
-    align-items: flex-end;
-    display: flex;
-    height: 80px;
-    }
-
-    .carta-de-llamada-default .flex-row-1 {
-    align-items: flex-start;
-    display: flex;
-    height: 265px;
-    margin-top: 2px;
-    }
-
-    .carta-de-llamada-default .title {
+    .carta-de-llamada-datos-indicente-title {
     height: 16px;
     letter-spacing: 0.15px;
     line-height: 16px;
     white-space: nowrap;
     }
 
-    .carta-de-llamada-default .datos-del-interlocutor {
+    .carta-de-llamada-datos-indicente-datos-del-interlocutor {
     height: 16px;
     letter-spacing: 0.15px;
     line-height: 16px;
@@ -385,73 +353,83 @@
     white-space: nowrap;
     }
 
-    .carta-de-llamada-default .telefono {
+    /* FIXME: Segunda columna */
+    .carta-de-llamada-datos-indicente-flex-col-1 {
+    /* display: flex;
+    align-items: flex-start;
+    align-self: flex-end;
+    flex-direction: column; */
+    height: 226px;
+    width: 263px;
+    }
+
+    .carta-de-llamada-datos-indicente-telefono {
     height: 56px;
     margin-left: 2px;
     width: 263px;
     }
 
-    .telefono .mdc-text-field {
+    .carta-de-llamada-datos-indicente-telefono .mdc-text-field {
     --mdc-theme-primary: #000000;
     }
 
-    .telefono
+    .carta-de-llamada-datos-indicente-telefono
     .mdc-text-field--focused:not(.mdc-text-field--disabled)
     .mdc-floating-label {
     color: #000;
     }
 
-    .carta-de-llamada-default .flex-col-item-Direccion-Up {
+    .carta-de-llamada-datos-indicente-Direccion-Up {
     height: 60px;
     margin-left: 2px;
     margin-top: 25px;
     width: 263px;
     }
 
-    .flex-col-item-Direccion-Up
+    .carta-de-llamada-datos-indicente-Direccion-Up
     .mdc-text-field--focused:not(.mdc-text-field--disabled)
     .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .flex-col-item-Direccion-Up
+    .carta-de-llamada-datos-indicente-Direccion-Up
     .mdc-select:not(.mdc-select--disabled).mdc-select--focused
     .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .flex-col-item-Direccion-Up .custom-enhanced-select-width {
+    .carta-de-llamada-datos-indicente-Direccion-Up .custom-enhanced-select-width {
     width: 200px;
     }
 
-    .flex-col-item-Direccion-Up .mdc-text-field {
+    .carta-de-llamada-datos-indicente-Direccion-Up .mdc-text-field {
     --mdc-theme-primary: #000000;
     }
 
-    .carta-de-llamada-default .flex-col-item-Antedecendes-Up {
+    .carta-de-llamada-datos-indicente-Antedecendes-Up {
     height: 60px;
     margin-left: 2px;
     margin-top: 25px;
     width: 263px;
     }
 
-    .flex-col-item-Antedecendes-Up
+    .carta-de-llamada-datos-indicente-Antedecendes-Up
     .mdc-text-field--focused:not(.mdc-text-field--disabled)
     .mdc-floating-label {
     color: #000;
     }
 
-    .flex-col-item-Antedecendes-Up
+    .carta-de-llamada-datos-indicente-Antedecendes-Up
     .mdc-select:not(.mdc-select--disabled).mdc-select--focused
     .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .flex-col-item-Antedecendes-Up .custom-enhanced-select-width {
+    .carta-de-llamada-datos-indicente-Antedecendes-Up .custom-enhanced-select-width {
     width: 200px;
     }
 
-    .flex-col-item-Antedecendes-Up .mdc-text-field {
+    .carta-de-llamada-datos-indicente-Antedecendes-Up .mdc-text-field {
     --mdc-theme-primary: #000000;
     }
 
@@ -465,47 +443,46 @@
     width: 263px;
     }
 
-    /* Second Column */
-    .flex-row-2 {
+    /* FIXME: Tercera columna */
+    .carta-de-llamada-datos-indicente-flex-col-2 {
+    /* display: flex;
     align-items: flex-start;
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    margin-left: 315px;
-    margin-top: -261px;
+    align-self: flex-end;
+    flex-direction: column; */
+    height: 226px;
     width: 263px;
     }
 
-    .procedencia-de-la-llamada {
+    .carta-de-llamada-datos-indicente-procedencia-de-la-llamada {
     height: 60px;
     width: 263px;
     }
 
-    .origen-de-la-llamada {
+    .carta-de-llamada-datos-indicente-procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .carta-de-llamada-datos-indicente-origen-de-la-llamada {
     height: 60px;
     margin-top: 21px;
     width: 263px;
     }
 
-    .municipio {
+    .carta-de-llamada-datos-indicente-origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+    }
+
+    .carta-de-llamada-datos-indicente-municipio {
     height: 60px;
-    margin-top: 25px;
+    margin-top: 29px;
     width: 263px;
     }
 
-    .procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    .carta-de-llamada-datos-indicente-municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: var(--mdc-theme-primary);
-    }
-
-    .municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
-    color: var(--mdc-theme-primary);
-    }
-
-    .municipio .custom-enhanced-select-width {
+    .carta-de-llamada-datos-indicente-municipio .custom-enhanced-select-width {
     width: 200px;
     }
 
@@ -516,18 +493,17 @@
     /* position: relative; */
     }
 
-    /* Third Column */
-    .flex-row-3 {
+    /* FIXME: Cuarta columna */
+    .carta-de-llamada-datos-indicente-flex-col-3 {
+    /* display: flex;
     align-items: flex-start;
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    margin-left: 628px;
-    margin-top: -392px;
+    align-self: flex-end;
+    flex-direction: column; */
+    height: 226px;
     width: 263px;
-    height: 56px;
     }
-    .nota-comun {
+
+    .carta-de-llamada-datos-indicente-nota-comun {
     height: 56px;
     margin-top: 166px;
     width: 263px;

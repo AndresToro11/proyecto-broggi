@@ -732,31 +732,31 @@
     height: 32px;
     }
 
-    .expedientes-status-select {
+    /* .expedientes-status-select {
     display: inline-flex;
     margin-top: 10px;
-    }
+    } */
 
-    .mdc-select__anchor {
-    width: 52px;
+    /* .mdc-select__anchor {
+    width: 52px; */
     /* min-width: 0; */
     /* flex: 1 1 auto; */
     /* position: relative; */
-    box-sizing: border-box;
+    /* box-sizing: border-box;
     overflow: hidden;
     outline: none;
     cursor: pointer;
-    }
+    } */
 
     .mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {
     background-color: white;
     }
 
-    .mdc-select--filled .mdc-select__anchor {
+    /* .mdc-select--filled .mdc-select__anchor {
     height: 32px;
     display: flex;
     align-items: baseline;
-    }
+    } */
 
     .window-expediente-container {
     background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);
