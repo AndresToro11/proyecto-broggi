@@ -8,36 +8,36 @@
                 <h1 class="inicio-de-sesion-title gothica1-extra-bold-black-48px">
                     Inicio de sesion
                 </h1>
-            <div class="inicio-de-sesion-flex-row"> <!--  No borrar, conservar por margenes -->
-            </div>
-            <div class="inicio-de-sesion-e-mail">
-                <label class="mdc-text-field mdc-text-field--filled">
-                    <span class="mdc-text-field__ripple"></span>
-                    <span class="mdc-floating-label" id="my-label-id">
-                        Dirección de correo electrónico
-                    </span>
-                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                    <span class="mdc-line-ripple"></span>
-                </label>
-            </div>
-            <div class="inicio-de-sesion-contrasea">
-                <label class="mdc-text-field mdc-text-field--filled">
-                    <span class="mdc-text-field__ripple"></span>
-                    <span class="mdc-floating-label" id="my-label-id">
-                        Contraseña
-                    </span>
-                    <input type="password" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                    <span class="mdc-line-ripple"></span>
-                </label>
-            </div>
-            <div class="inicio-de-sesion-crear-cuenta-boton" id="boton">
-                <button class="mdc-button mdc-button--raised" id="boton" >
-                    <span class="mdc-button__ripple"></span>
-                    <span class="mdc-button__label">
-                        Iniciar sesion
-                    </span>
-                </button>
-            </div>
+                <div class="inicio-de-sesion-flex-row"> <!--  No borrar, conservar por margenes -->
+                </div>
+                <div class="inicio-de-sesion-e-mail">
+                    <label class="mdc-text-field mdc-text-field--filled">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">
+                            Dirección de correo electrónico
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                <div class="inicio-de-sesion-contrasea">
+                    <label class="mdc-text-field mdc-text-field--filled">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">
+                            Contraseña
+                        </span>
+                        <input type="password" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                <div class="inicio-de-sesion-crear-cuenta-boton" id="boton">
+                    <button class="mdc-button mdc-button--raised" id="boton" >
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">
+                            Iniciar sesion
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
         <!-- </div> -->
@@ -118,7 +118,7 @@
     .inicio-de-sesion-e-mail {
     height: 64px;
     margin-left: 3px;
-    margin-top: 29px;
+    margin-top: 50px;
     width: 360px;
     }
 

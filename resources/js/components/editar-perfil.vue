@@ -1,16 +1,16 @@
 <template>
     <div>
         <!-- <div class="container-center-horizontal"> -->
-            <div class="editar-perfil-operador">
+            <div class="editar-perfil-operador screen">
                 <div class="editar-perfil-operador-editar-perfil valign-text-middle gothica1-normal-black-28px"> <!-- FIXME: Editar perfil -->
                     Editar perfil
                 </div>
-                <div class="editar-perfil-operador-datos-personales-container">
+                <div class="editar-perfil-operador-datos-personales-container" id="churumbele">
                     <div class="editar-perfil-operador-datos-personales valign-text-middle gothica1-normal-black-21px"> <!-- FIXME: Datos personales -->
                     Datos personales
                     </div>
                     <div class="editar-perfil-operador-flex-row">
-                        <div class="editar-perfil-operador-nick"> <!-- FIXME: Nick -->
+                        <div class="editar-perfil-operador-correo-electronico"> <!-- FIXME: Nick -->
                             <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
@@ -171,7 +171,7 @@
             }
         },
         mounted() {
-            new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-nick .mdc-text-field"));
+            new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-correo-electronico .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-nombre .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-apellidos .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-contrasea-actual .mdc-text-field"));

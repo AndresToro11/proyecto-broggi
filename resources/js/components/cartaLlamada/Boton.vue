@@ -9,7 +9,6 @@
                 <datos-personales @getDataPersonal="getDataPersonal"></datos-personales>
             </div>
         </div>
-
         <!-- <button type="button" @click="setDataPersonal(), setDataIncidente(), setDataAdministrativos(),insertBD(cartaLlamada)">Aceptar</button>
         <expedientes-relacionados></expedientes-relacionados> -->
     </div>

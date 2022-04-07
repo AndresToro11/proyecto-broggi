@@ -27,7 +27,7 @@
         </script>
     </head>
 
-    <body onload="" style="margin: 0">
+    <body onload="">
         <div id="app" class="container">
             @yield('contenido')
         </div>

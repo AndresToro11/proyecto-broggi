@@ -5,6 +5,7 @@
  */
 
 // require('./bootstrap');
+import {MDCTextField} from '@material/textfield';
 
 window.Vue = require('vue').default;
 

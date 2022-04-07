@@ -44,9 +44,18 @@
         <link rel="stylesheet" type="text/css" href={{ asset('css/styleguide.css') }} />
         <link rel=" stylesheet" type="text/css" href={{ asset('css/globals.css') }} />
         <link rel=" stylesheet" type="text/css" href={{ asset('css/login.css') }} /> --}}
+        <script>
+            function loader() {
+                var loader = document.createElement("div");
+                loader.setAttribute('id', 'div1');
+                loader.setAttribute('class', 'spinner-border text-primary');
+                loader.setAttribute('role', 'status');
+                document.body.appendChild(loader);
+            }
+        </script>
     </head>
 
-    <body>
+    <body onload="">
         <div class="container-center-horizontal">
             <div class="header screen">
                 {{-- Header Operador --}}
@@ -117,12 +126,8 @@
         <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
 
         <script src="{{ asset('js/app.js') }}"></script>
-        <script src="{{ asset('js/app.js') }}">
-        </script>
-
 
         <style>
-
             .container-app {
             display: flex;
             margin-top: 198px;

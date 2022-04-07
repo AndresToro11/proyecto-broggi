@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- <input type="hidden" id="anPageName" name="page" value="carta-de-llamada-default" /> -->
-        <div class="container-center-horizontal">
+        <div class="carta-de-llamada-datos-incidente-container-center-horizontal">
             <div class="carta-de-llamada-datos-indicente-flex-row">
                 <div class="carta-de-llamada-datos-indicente-flex-col">
                     <h1 class="carta-de-llamada-datos-indicente-title valign-text-middle gothica1-normal-black-28px">
@@ -104,19 +104,17 @@
                     </div>
                 </div>
                 <div class="carta-de-llamada-datos-indicente-flex-col-3">
-                    <div class="carta-de-llamada-datos-indicente-flex-row-3">
-                        <div class="carta-de-llamada-datos-indicente-flex-col-4">
-                            <div class="carta-de-llamada-datos-indicente-nota-comun"> <!-- Nota Comun -->
-                                <label class="mdc-text-field mdc-text-field--filled" id="notaComun">
-                                    <span class="mdc-text-field__ripple"></span>
-                                    <span class="mdc-floating-label" id="notaComunLabel">
-                                        Nota Común
-                                    </span>
-                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" name="notaComun" id="notaComun" v-model="datos_personales.notaComun" @blur="setDataPersonal()"/>
-                                    <span class="mdc-line-ripple"></span>
-                                </label>
-                            </div>
-                        </div>
+                    <div class="carta-de-llamada-datos-indicente-nota-comun">
+                        <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field--label" id="notaComun">
+                            <span class="mdc-text-field__ripple"></span>
+                            <!-- <span class="mdc-text-field__resizer" id="my-label-id"> -->
+                                <span class="mdc-floating-label" id="my-label-id">
+                                    Nota común
+                                </span>
+                                <textarea class="mdc-text-field__input" rows="8" cols="40" aria-label="my-label-id" name="notaComun" id="notaComun" v-model="datos_personales.notaComun" @blur="setDataPersonal()"></textarea>
+                            <!-- </span> -->
+                            <span class="mdc-line-ripple"></span>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -125,21 +123,22 @@
 </template>
 
 <script>
-    import * as mdc from "material-components-web";
+    // import * as mdc from "material-components-web";
+    // import {MDCTextField} from '@material/textfield';
     export default {
         data() {
-        return {
-            municipios: [],
-            datos_personales:{
-                telefono:"",
-                antecedentes:"",
-                procedencia:"",
-                origen:"",
-                municipio:"",
-                direccion:"",
-                notaComun:""
-            }
-        };
+            return {
+                municipios: [],
+                datos_personales:{
+                    telefono:"",
+                    antecedentes:"",
+                    procedencia:"",
+                    origen:"",
+                    municipio:"",
+                    direccion:"",
+                    notaComun:""
+                }
+            };
         },
         methods: {
             select() {
@@ -179,37 +178,24 @@
 
 <style>
     /* FIXME: Main divs */
-    /* .carta-de-llamada-datos-indicente {
+    .carta-de-llamada-datos-incidente-container-center-horizontal {
     display: flex;
-    align-items: flex-start;
-    height: 312px;
-    width: 891px;
-    } */
+    flex-direction: column;
+    }
 
-    /* Linea Uno */
-    /* .carta-de-llamada-datos-indicente-flex-row {
-    display: flex;
-    align-items: flex-start;
-    height: 68px;
-    width: 218px;
-    } */
-
-    /* Linea Dos */
+    /* FIXME: Linea Dos */
     .carta-de-llamada-datos-indicente-flex-row-1 {
     display: flex;
     align-items: flex-start;
-    margin-top: 117px;
-    margin-left: -222px;
+    margin-top: 18px;
+    column-gap: 50px;
     }
 
     /* FIXME: Primera columna */
-    .carta-de-llamada-datos-indicente-flex-col {
-    /* display: flex;
-    align-items: flex-start;
-    align-self: flex-end;
-    flex-direction: column; */
-    height: 68px;
-    width: 218px;
+    .carta-de-llamada-datos-indicente-flex-col-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     }
 
     .carta-de-llamada-datos-indicente-title {
@@ -229,21 +215,6 @@
     }
 
     /* FIXME: Segunda columna */
-    .carta-de-llamada-datos-indicente-flex-col-1 {
-    /* display: flex;
-    align-items: flex-start;
-    align-self: flex-end;
-    flex-direction: column; */
-    height: 226px;
-    width: 263px;
-    }
-
-    .carta-de-llamada-datos-indicente-telefono {
-    height: 56px;
-    margin-left: 2px;
-    width: 263px;
-    }
-
     .carta-de-llamada-datos-indicente-telefono .mdc-text-field {
     --mdc-theme-primary: #000000;
     }
@@ -252,13 +223,6 @@
     .mdc-text-field--focused:not(.mdc-text-field--disabled)
     .mdc-floating-label {
     color: #000;
-    }
-
-    .carta-de-llamada-datos-indicente-Direccion-Up {
-    height: 60px;
-    margin-left: 2px;
-    margin-top: 25px;
-    width: 263px;
     }
 
     .carta-de-llamada-datos-indicente-Direccion-Up
@@ -279,13 +243,6 @@
 
     .carta-de-llamada-datos-indicente-Direccion-Up .mdc-text-field {
     --mdc-theme-primary: #000000;
-    }
-
-    .carta-de-llamada-datos-indicente-Antedecendes-Up {
-    height: 60px;
-    margin-left: 2px;
-    margin-top: 25px;
-    width: 263px;
     }
 
     .carta-de-llamada-datos-indicente-Antedecendes-Up
@@ -320,37 +277,17 @@
 
     /* FIXME: Tercera columna */
     .carta-de-llamada-datos-indicente-flex-col-2 {
-    /* display: flex;
-    align-items: flex-start;
-    align-self: flex-end;
-    flex-direction: column; */
-    height: 226px;
-    width: 263px;
-    }
-
-    .carta-de-llamada-datos-indicente-procedencia-de-la-llamada {
-    height: 60px;
-    width: 263px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     }
 
     .carta-de-llamada-datos-indicente-procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: var(--mdc-theme-primary);
     }
 
-    .carta-de-llamada-datos-indicente-origen-de-la-llamada {
-    height: 60px;
-    margin-top: 21px;
-    width: 263px;
-    }
-
     .carta-de-llamada-datos-indicente-origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: var(--mdc-theme-primary);
-    }
-
-    .carta-de-llamada-datos-indicente-municipio {
-    height: 60px;
-    margin-top: 29px;
-    width: 263px;
     }
 
     .carta-de-llamada-datos-indicente-municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
@@ -365,22 +302,13 @@
     align-items: center;
     display: flex;
     height: 48px;
-    /* position: relative; */
     }
 
     /* FIXME: Cuarta columna */
     .carta-de-llamada-datos-indicente-flex-col-3 {
-    /* display: flex;
-    align-items: flex-start;
-    align-self: flex-end;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     height: 226px;
-    width: 263px;
-    }
-
-    .carta-de-llamada-datos-indicente-nota-comun {
-    height: 56px;
-    margin-top: 166px;
-    width: 263px;
+    gap: 25px;
     }
 </style>
