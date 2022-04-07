@@ -877,44 +877,8 @@ export default {
     color: var(--mdc-theme-primary);
     }
 
-    .carta-de-llamada-datos-personales-provincia-fuera {
-    height: 60px;
-    margin-top: 25px;
-    width: 263px;
-    }
-
-    .carta-de-llamada-datos-personales-referencia-fuera {
-    margin-top: 25px;
-    width: 263px;
-    }
-
     .carta-de-llamada-datos-personales-referencia-fuera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
     color: var(--mdc-theme-primary);
-    }
-
-    .carta-de-llamada-datos-personales-tipo-de-via {
-        margin-top: 24px;
-    }
-
-    .carta-de-llamada-datos-personales-nombre-via-calle{
-        margin-top: 30px;
-    }
-
-    .carta-de-llamada-datos-personales-nombre-via-carretera{
-        margin-top: 25px;
-    }
-
-    .carta-de-llamada-datos-personales-punto-kilometrico{
-        margin-top: 29px;
-    }
-
-    .carta-de-llamada-datos-personales-nombre-punto-singular{
-        margin-top: 24px;
-    }
-
-    .carta-de-llamada-datos-personales-referencia-punto-singular{
-    margin-top: 30px;
-    width: 263px;
     }
 
     .carta-de-llamada-datos-personales-referencia-punto-singular .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
@@ -922,24 +886,10 @@ export default {
     }
 
     /* FIXME: Columna tres */
-    /* .carta-de-llamada-datos-personales-numero-portal {
-
-    } */
-    .carta-de-llamada-datos-personales-escalera {
-        margin-top: 28px;
-    }
-
-    .carta-de-llamada-datos-personales-piso{
-    margin-top: 30px;
-    }
-
-    /* .carta-de-llamada-datos-personales-sentido-circulacion {
-
-    } */
-
-    .carta-de-llamada-datos-personales-referencia-carretera{
-    margin-top: 28px;
-    width: 263px;
+    .carta-de-llamada-datos-personales-flex-col-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     }
 
     .carta-de-llamada-datos-personales-referencia-carretera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
@@ -947,13 +897,10 @@ export default {
     }
 
     /* FIXME: Columna cuatro */
-    /* .carta-de-llamada-datos-personales-puerta {
-
-    } */
-
-    .carta-de-llamada-datos-personales-referencia-calle{
-    margin-top: 28px;
-    width: 263px;
+    .carta-de-llamada-datos-personales-flex-col-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     }
 
     .carta-de-llamada-datos-personales-referencia-calle .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
@@ -961,14 +908,9 @@ export default {
     }
 
     /* Barra */
-    .carta-de-llamada-datos-personales-flex-col-4{
-    display: flex;
-    /* margin-right: 25px; */
-    }
-
     .carta-de-llamada-datos-personales-separation-down {
     height: 183px;
-    margin-top: 153px;
+    margin-top: 30px;
     width: 1px;
     }
 
