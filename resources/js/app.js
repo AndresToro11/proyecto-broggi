@@ -49,7 +49,6 @@ Vue.component('grafico', require('./components/grafico.vue').default); //Andres
 //--------------------------------------------- Perfil ----------------------------------
 
 Vue.component('perfil', require('./components/editar-perfil.vue').default); //Acabado
-
 // Vue.component('perfil', require('./components/perfil.vue').default);
 
 //---------------------------------------------------- Admin -------------------------------------
@@ -67,13 +66,14 @@ const app = new Vue({
     el: '#app',
 });
 
-/*import App from './components/App.vue';
-import vueAxios from 'vue-axios';
-import axios from 'axios';
 
-import VueRouter from 'vue-router';
-import { router } from './routes';
-import vue from 'vue';
-import Vue from 'vue';
-Vue.use(VueRouter);
-Vue.use(VueAxios, axios);*/
+// import App from './components/App.vue';
+// import vueAxios from 'vue-axios';
+// import axios from 'axios';
+
+// import VueRouter from 'vue-router';
+// import { router } from './routes';
+// import vue from 'vue';
+// import Vue from 'vue';
+// Vue.use(VueRouter);
+// Vue.use(VueAxios, axios)

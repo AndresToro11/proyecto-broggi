@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Models\Dades_personals;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\DefaultResource;
 use App\Http\Resources\DatosPersonalesResource;
 
 class DatosPersonalesController extends Controller
@@ -17,7 +18,7 @@ class DatosPersonalesController extends Controller
     public function index()
     {
         $datosPersonales = Dades_personals::all();
-        return DatosPersonalesResource::collection($datosPersonales);
+        return DefaultResource::collection($datosPersonales);
     }
 
     /**

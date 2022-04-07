@@ -167,17 +167,19 @@
             }
         },
         methods:{
+            selectExpedientes(){
+            }
         },
         mounted() {
             new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-nick .mdc-text-field"));
-            new mdc.textField.MDCTextField(document.querySelector("editar-perfil-operador-nombre .mdc-text-field"));
+            new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-nombre .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-apellidos .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-contrasea-actual .mdc-text-field"));
             new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-contrasea-nueva .mdc-text-field"));
-            // mdc.autoInit();
+            mdc.autoInit();
             new mdc.ripple.MDCRipple(document.querySelector(".editar-perfil-operador-aceptar-cambios .mdc-button"));
-            // mdc.autoInit();
-            new mdc.ripple.MDCRipple(document.querySelector("editar-perfil-operador-cancelar .mdc-button"));
+            mdc.autoInit();
+            new mdc.ripple.MDCRipple(document.querySelector(".editar-perfil-operador-cancelar .mdc-button"));
         }
     }
 </script>
@@ -557,13 +559,4 @@
     width: 45px;
     }
 
-    /* FIXME: Extras */
-    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-    width: 350px;
-    height: 60px;
-    }
-
-    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-    background-color: white;
-    }
 </style>

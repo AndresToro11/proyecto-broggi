@@ -461,14 +461,6 @@
 </script>
 
 <style>
-    :root {
-    --onProcess: rgb(1, 156, 60);
-    --requested: rgb(220, 220, 0);
-    --accepted: rgb(102, 93, 29);
-    --closed: rgb(0, 83, 199);
-    --immobilized: rgb(182,149,192);
-    }
-
     .expedientes-title {
     display: flex;
     align-items: flex-start;

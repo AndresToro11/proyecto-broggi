@@ -5,15 +5,20 @@
 @import url("https://fonts.googleapis.com/css?family=Gothic+A1:200,300,700,800");
 
 :root {
-  --mdc-theme-background: #fff;
-  --mdc-theme-error: #b00020;
-  --mdc-theme-on-error: #fff;
-  --mdc-theme-on-primary: #fff;
-  --mdc-theme-on-secondary: #fff;
-  --mdc-theme-on-surface: #000;
-  --mdc-theme-primary: #0040FF;
-  --mdc-theme-secondary: #018786;
-  --mdc-theme-surface: #fff;
+--mdc-theme-background: #fff;
+--mdc-theme-error: #b00020;
+--mdc-theme-on-error: #fff;
+--mdc-theme-on-primary: #fff;
+--mdc-theme-on-secondary: #fff;
+--mdc-theme-on-surface: #000;
+--mdc-theme-primary: #0040FF;
+--mdc-theme-secondary: #018786;
+--mdc-theme-surface: #fff;
+--onProcess: rgb(1, 156, 60);
+--requested: rgb(220, 220, 0);
+--accepted: rgb(102, 93, 29);
+--closed: rgb(0, 83, 199);
+--immobilized: rgb(182,149,192);
 }
 
 .screen a {
@@ -44,4 +49,24 @@
 
 * {
   box-sizing: border-box;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+background-color: #ffffff;
+width: 263px;
+}
+
+.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {
+background-color: #ffffff;
+width: 263px;
+}
+
+.mdc-list-item {
+align-items: center;
+display: flex;
+height: 48px;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+background-color: white;
 }

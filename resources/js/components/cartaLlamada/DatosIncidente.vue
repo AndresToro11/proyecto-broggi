@@ -14,34 +14,34 @@
             </div>
             <div class="carta-de-llamada-datos-indicente-flex-row-1">
                 <div class="carta-de-llamada-datos-indicente-flex-col-1">
-                <div class="carta-de-llamada-datos-indicente-telefono">
-                    <label class="mdc-text-field mdc-text-field--filled">
-                        <span class="mdc-text-field__ripple"></span>
-                        <span class="mdc-floating-label" id="my-label-id">
-                            Teléfono
-                        </span>
-                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
-                        <span class="mdc-line-ripple"></span>
-                    </label>
-                </div>
-                <div class="carta-de-llamada-datos-indicente-Direccion-Up">
-                    <label class="mdc-text-field mdc-text-field--filled">
-                        <span class="mdc-text-field__ripple"></span>
-                        <span class="mdc-floating-label" id="my-label-id">Direccion</span>
-                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                        <span class="mdc-line-ripple"></span>
-                    </label>
-                </div>
-                <div class="carta-de-llamada-datos-indicente-Antedecendes-Up">
-                    <label class="mdc-text-field mdc-text-field--filled">
-                        <span class="mdc-text-field__ripple"></span>
-                        <span class="mdc-floating-label" id="my-label-id">
-                            Antedecentes
-                        </span>
-                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
-                        <span class="mdc-line-ripple"></span>
-                    </label>
-                </div>
+                    <div class="carta-de-llamada-datos-indicente-telefono">
+                        <label class="mdc-text-field mdc-text-field--filled">
+                            <span class="mdc-text-field__ripple"></span>
+                            <span class="mdc-floating-label">
+                                Teléfono
+                            </span>
+                            <input type="number" class="mdc-text-field__input" aria-labelledby="my-label-id" name="telefono" id="telefono" v-model="datos_personales.telefono" @blur="setDataPersonal()"/>
+                            <span class="mdc-line-ripple"></span>
+                        </label>
+                    </div>
+                    <div class="carta-de-llamada-datos-indicente-Direccion-Up">
+                        <label class="mdc-text-field mdc-text-field--filled">
+                            <span class="mdc-text-field__ripple"></span>
+                            <span class="mdc-floating-label" id="my-label-id">Direccion</span>
+                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" name="direccion" id="direccion" v-model="datos_personales.direccion" @blur="setDataPersonal()"/>
+                            <span class="mdc-line-ripple"></span>
+                        </label>
+                    </div>
+                    <div class="carta-de-llamada-datos-indicente-Antedecendes-Up">
+                        <label class="mdc-text-field mdc-text-field--filled">
+                            <span class="mdc-text-field__ripple"></span>
+                            <span class="mdc-floating-label" id="my-label-id">
+                                Antedecentes
+                            </span>
+                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" name="antecedentes" id="antecedentes" v-model="datos_personales.antecedentes" @blur="setDataPersonal()"/>
+                            <span class="mdc-line-ripple"></span>
+                        </label>
+                    </div>
                 </div>
                 <div class="carta-de-llamada-datos-indicente-flex-col-2">
                     <div class="carta-de-llamada-datos-indicente-procedencia-de-la-llamada">
@@ -50,7 +50,7 @@
                                 <span class="mdc-floating-label" id="my-label-id">
                                     Procedencia de la llamada
                                 </span>
-                                <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" name="procedencia" id="procedencia" v-model="datos_personales.procedencia" @blur="setDataPersonal()"/>
                                 <span class="mdc-line-ripple"></span>
                             </label>
                     </div>
@@ -60,7 +60,7 @@
                             <span class="mdc-floating-label" id="my-label-id">
                                 Origen de la llamada
                             </span>
-                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" name="origen" id="origen" v-model="datos_personales.origen" @blur="setDataPersonal()"/>
                             <span class="mdc-line-ripple"></span>
                         </label>
                     </div>
@@ -89,7 +89,13 @@
                                     <li class="mdc-list-item" data-value="Item" role="option">
                                         <span class="mdc-list-item__ripple"></span>
                                         <span class="mdc-list-item__text">
-                                            Item
+
+                                        </span>
+                                    </li>
+                                    <li class="mdc-list-item" data-value="Item" role="option" v-for="municipio in municipios" :key="municipio.id" :value="municipio.id">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <span class="mdc-list-item__text">
+                                            {{ municipio.nom }}
                                         </span>
                                     </li>
                                 </ul>
@@ -106,7 +112,7 @@
                                     <span class="mdc-floating-label" id="notaComunLabel">
                                         Nota Común
                                     </span>
-                                    <input type="text" class="mdc-text-field__input" id="input-NotaComun" aria-labelledby="my-label-id"/>
+                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" name="notaComun" id="notaComun" v-model="datos_personales.notaComun" @blur="setDataPersonal()"/>
                                     <span class="mdc-line-ripple"></span>
                                 </label>
                             </div>
@@ -122,171 +128,40 @@
     import * as mdc from "material-components-web";
     export default {
         data() {
-            return {
-                municipios: [],
-                provincias: [],
-                comarcas: [],
-                tiposLocalizaciones: [],
-                tIncidentes: [],
-                incidentes: [],
-                calle: {
-                    via: "",
-                    direccion: "",
-                    numPuerta: ""
-                },
-                calle2:{
-                    escalera: "",
-                    piso: "",
-                    puerta: ""
-                },
-                puntoSingular:{
-                    nombre: ""
-                },
-                carretera:{
-                    carretera: "",
-                    puntoKm: ""
-                },
-                carretera2:{
-                    sentido: ""
-                },
-                datos_incidente:{
-                    catalunya: "",
-                    comarca: "",
-                    provincia: "",
-                    municipio: "",
-                    localizacion: "",
-                    descripcio_localitzacio: "",
-                    detall_localitzacio: "",
-                    altres_ref_localitzacio: "",
-                    tiposIncidente: "",
-                    incidente: ""
-                }
-            };
-        },
-        props: [
-        "cartaDeLlamada",
-        "datosDelInterlocutor",
-        "guardarDatos",
-        ],
-        computed: {
-            descripcioLocalitzacio: function () {
-                let varianle;
-                switch (this.datos_incidente.localizacion) {
-                    case 1:
-                        varianle=this.calle;
-                        break;
-                    case 2:
-                        varianle=this.puntoSingular;
-                        break;
-                    case 3:
-                        varianle=this.null;
-                        break;
-                    case 4:
-                        varianle=this.carretera;
-                        break;
-                    case 5:
-                        varianle=this.datos_incidente.provincia;
-                        break;
-
-                    default:
-                        break;
-                }
-                this.datos_incidente.descripcio_localitzacio = varianle;
-            },
-            detallLocalitzacio: function () {
-                let varianle;
-                switch (this.datos_incidente.localizacion) {
-                    case 1:
-                        varianle=this.calle2;
-                        break;
-                    case 2:
-                        varianle=null;
-                        break;
-                    case 3:
-                        varianle=this.null;
-                        break;
-                    case 4:
-                        varianle=this.carretera2;
-                        break;
-                    case 5:
-                        varianle=null;
-                        break;
-
-                    default:
-                        break;
-                }
-                this.datos_incidente.detall_localitzacio = varianle;
+        return {
+            municipios: [],
+            datos_personales:{
+                telefono:"",
+                antecedentes:"",
+                procedencia:"",
+                origen:"",
+                municipio:"",
+                direccion:"",
+                notaComun:""
             }
+        };
         },
         methods: {
-            emit(){
-                this.$emit();
-            },
             select() {
                 let me = this;
-                console.log("Entrando a la select 2");
+                console.log("Entrando a la select");
                 axios
                     .get("/municipio")
                     .then((response) => {
-                        console.log("Municipio OK");
+                        console.log("ol");
                         me.municipios = response.data;
                     })
                     .catch((error) => {
                         console.log(error);
                     })
                     .finally(() => (this.loading = false));
-                axios
-                    .get("/provincia")
-                    .then((response) => {
-                        console.log("Provincia OK");
-                        me.provincias = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
-                axios
-                    .get("/comarca")
-                    .then((response) => {
-                        console.log("Comarca OK");
-                        me.comarcas = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
-                axios
-                    .get("/tiposIncidente")
-                    .then((response) => {
-                        console.log("Comarca OK");
-                        me.tIncidentes = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
-                axios
-                    .get("/incidente")
-                    .then((response) => {
-                        console.log("Comarca OK");
-                        me.incidentes = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
-                axios
-                    .get("/tiposLocalitzacion")
-                    .then((response) => {
-                        console.log("Tipos Localizacion OK");
-                        me.tiposLocalizaciones = response.data;
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-                    .finally(() => (this.loading = false));
-            },setDataIncidente(){
-                this.$emit("getDataIncidente", this.datos_incidente);
+            },
+            setDataPersonal(){
+                console.log('Personal');
+                this.$emit("get-datapersonal", this.datos_personales);
+            },activarFunciones(){
+                console.log("activar");
+                this.setDataPersonal();
             },
         },
         mounted() {

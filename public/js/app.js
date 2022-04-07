@@ -12006,173 +12006,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       municipios: [],
-      provincias: [],
-      comarcas: [],
-      tiposLocalizaciones: [],
-      tIncidentes: [],
-      incidentes: [],
-      calle: {
-        via: "",
-        direccion: "",
-        numPuerta: ""
-      },
-      calle2: {
-        escalera: "",
-        piso: "",
-        puerta: ""
-      },
-      puntoSingular: {
-        nombre: ""
-      },
-      carretera: {
-        carretera: "",
-        puntoKm: ""
-      },
-      carretera2: {
-        sentido: ""
-      },
-      datos_incidente: {
-        catalunya: "",
-        comarca: "",
-        provincia: "",
+      datos_personales: {
+        telefono: "",
+        antecedentes: "",
+        procedencia: "",
+        origen: "",
         municipio: "",
-        localizacion: "",
-        descripcio_localitzacio: "",
-        detall_localitzacio: "",
-        altres_ref_localitzacio: "",
-        tiposIncidente: "",
-        incidente: ""
+        direccion: "",
+        notaComun: ""
       }
     };
   },
-  props: ["cartaDeLlamada", "datosDelInterlocutor", "guardarDatos"],
-  computed: {
-    descripcioLocalitzacio: function descripcioLocalitzacio() {
-      var varianle;
-
-      switch (this.datos_incidente.localizacion) {
-        case 1:
-          varianle = this.calle;
-          break;
-
-        case 2:
-          varianle = this.puntoSingular;
-          break;
-
-        case 3:
-          varianle = this["null"];
-          break;
-
-        case 4:
-          varianle = this.carretera;
-          break;
-
-        case 5:
-          varianle = this.datos_incidente.provincia;
-          break;
-
-        default:
-          break;
-      }
-
-      this.datos_incidente.descripcio_localitzacio = varianle;
-    },
-    detallLocalitzacio: function detallLocalitzacio() {
-      var varianle;
-
-      switch (this.datos_incidente.localizacion) {
-        case 1:
-          varianle = this.calle2;
-          break;
-
-        case 2:
-          varianle = null;
-          break;
-
-        case 3:
-          varianle = this["null"];
-          break;
-
-        case 4:
-          varianle = this.carretera2;
-          break;
-
-        case 5:
-          varianle = null;
-          break;
-
-        default:
-          break;
-      }
-
-      this.datos_incidente.detall_localitzacio = varianle;
-    }
-  },
   methods: {
-    emit: function emit() {
-      this.$emit();
-    },
     select: function select() {
       var _this = this;
 
       var me = this;
-      console.log("Entrando a la select 2");
+      console.log("Entrando a la select");
       axios.get("/municipio").then(function (response) {
-        console.log("Municipio OK");
+        console.log("ol");
         me.municipios = response.data;
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
         return _this.loading = false;
       });
-      axios.get("/provincia").then(function (response) {
-        console.log("Provincia OK");
-        me.provincias = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-      axios.get("/comarca").then(function (response) {
-        console.log("Comarca OK");
-        me.comarcas = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-      axios.get("/tiposIncidente").then(function (response) {
-        console.log("Comarca OK");
-        me.tIncidentes = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-      axios.get("/incidente").then(function (response) {
-        console.log("Comarca OK");
-        me.incidentes = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
-      axios.get("/tiposLocalitzacion").then(function (response) {
-        console.log("Tipos Localizacion OK");
-        me.tiposLocalizaciones = response.data;
-      })["catch"](function (error) {
-        console.log(error);
-      })["finally"](function () {
-        return _this.loading = false;
-      });
     },
-    setDataIncidente: function setDataIncidente() {
-      this.$emit("getDataIncidente", this.datos_incidente);
+    setDataPersonal: function setDataPersonal() {
+      console.log('Personal');
+      this.$emit("get-datapersonal", this.datos_personales);
+    },
+    activarFunciones: function activarFunciones() {
+      console.log("activar");
+      this.setDataPersonal();
     }
   },
   mounted: function mounted() {
@@ -12770,57 +12647,254 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       municipios: [],
-      datos_personales: {
-        telefono: "",
-        antecedentes: "",
-        procedencia: "",
-        origen: "",
-        municipio: "",
+      provincias: [],
+      comarcas: [],
+      tiposLocalizaciones: [],
+      tIncidentes: [],
+      incidentes: [],
+      calle: {
+        via: "",
         direccion: "",
-        notaComun: ""
+        numPuerta: ""
+      },
+      calle2: {
+        escalera: "",
+        piso: "",
+        puerta: ""
+      },
+      puntoSingular: {
+        nombre: ""
+      },
+      carretera: {
+        carretera: "",
+        puntoKm: ""
+      },
+      carretera2: {
+        sentido: ""
+      },
+      fueraCatalunya: {
+        provincia: ""
+      },
+      datos_incidente: {
+        catalunya: "",
+        comarca: "",
+        provincia: "",
+        municipio: "",
+        localizacion: "",
+        descripcio_localitzacio: null,
+        detall_localitzacio: null,
+        // altres_ref_localitzacio: null,
+        tiposIncidente: "",
+        incidente: ""
       }
     };
   },
   props: ["cartaDeLlamada", "datosDelInterlocutor"],
   methods: {
+    emit: function emit() {
+      this.$emit();
+    },
     select: function select() {
       var _this = this;
 
       var me = this;
-      console.log("Entrando a la select");
+      console.log("Entrando a la select 2");
       axios.get("/municipio").then(function (response) {
-        console.log("ol");
+        console.log("Municipio OK");
         me.municipios = response.data;
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
         return _this.loading = false;
       });
+      axios.get("/provincia").then(function (response) {
+        console.log("Provincia OK");
+        me.provincias = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+      axios.get("/comarca").then(function (response) {
+        console.log("Comarca OK");
+        me.comarcas = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+      axios.get("/tiposIncidente").then(function (response) {
+        console.log("Comarca OK");
+        me.tIncidentes = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+      axios.get("/incidente").then(function (response) {
+        console.log("Comarca OK");
+        me.incidentes = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+      axios.get("/tiposLocalitzacion").then(function (response) {
+        console.log("Tipos Localizacion OK");
+        me.tiposLocalizaciones = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
     },
-    setDataPersonal: function setDataPersonal() {
-      this.$emit("getDataPersonal", this.datos_personales);
+    setDataIncidente: function setDataIncidente() {
+      console.log('Incidente');
+      this.$emit("get-dataincidente", this.datos_incidente);
+    },
+    descripcioLocalitzacio: function descripcioLocalitzacio() {
+      console.log("descripcion");
+      var varianle;
+      this.datos_incidente.descripcio_localitzacio = " ";
+
+      switch (this.datos_incidente.localizacion) {
+        case 1:
+          varianle = this.calle.via + " " + this.calle.direccion + " " + this.calle.numPuerta;
+          break;
+
+        case 2:
+          varianle = this.puntoSingular.nombre;
+          break;
+
+        case 3:
+          varianle = " ";
+          break;
+
+        case 4:
+          varianle = this.carretera.carretera + " " + this.carretera.puntoKm;
+          break;
+
+        case 5:
+          varianle = this.fueraCatalunya.provincia;
+          break;
+
+        default:
+          break;
+      }
+
+      this.datos_incidente.descripcio_localitzacio = varianle;
+      this.setDataIncidente();
+    },
+    detallLocalitzacio: function detallLocalitzacio() {
+      console.log("detalle");
+      var varianle;
+      this.datos_incidente.detall_localitzacio = " ";
+
+      switch (this.datos_incidente.localizacion) {
+        case 1:
+          varianle = this.calle2.escalera + " " + this.calle2.piso + " " + this.calle2.puerta;
+          break;
+
+        case 2:
+          varianle = " ";
+          break;
+
+        case 3:
+          varianle = " ";
+          break;
+
+        case 4:
+          varianle = this.carretera2.sentido;
+          break;
+
+        case 5:
+          varianle = " ";
+          break;
+
+        default:
+          break;
+      }
+
+      this.datos_incidente.detall_localitzacio = varianle;
+      this.setDataIncidente();
+    },
+    activarFunciones: function activarFunciones() {
+      console.log("activar");
+      this.descripcioLocalitzacio();
+      this.detallLocalitzacio();
+      this.setDataIncidente();
     }
   },
   mounted: function mounted() {
     this.select();
-    console.log("Component mounted.");
-    new mdc.select.MDCSelect(document.querySelector(".comarca .mdc-select"));
-    new mdc.select.MDCSelect(document.querySelector(".provincia .mdc-select"));
-    new mdc.select.MDCSelect(document.querySelector(".municipio .mdc-select"));
-    new mdc.select.MDCSelect(document.querySelector(".tipo-de-localizacin .mdc-select"));
-    new mdc.textField.MDCTextField(document.querySelector(".referencia .mdc-text-field"));
-    new mdc.select.MDCSelect(document.querySelector(".incidente .mdc-select"));
-    new mdc.select.MDCSelect(document.querySelector(".tipo-de-incidente .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".carta-de-llamada-datos-personales-provincia .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".carta-de-llamada-datos-personales-comarca .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".carta-de-llamada-datos-personales-municipio .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".carta-de-llamada-datos-personales-tipo-de-localizacion .mdc-select"));
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-referencia-poblacion .mdc-text-field")); //Poblacion
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-provincia-fuera .mdc-text-field")); //Fuera de Catalunya
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-referencia-fuera .mdc-text-field")); //Fuera de Catalunya
+
+    new mdc.select.MDCSelect(document.querySelector(".carta-de-llamada-datos-personales-tipo-de-via .mdc-select")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-nombre-via-calle .mdc-text-field")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-nombre-via-carretera .mdc-text-field")); //CARRETERA
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-punto-kilometrico .mdc-text-field")); //CARRETERA
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-nombre-punto-singular .mdc-text-field")); //Punto Singular
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-referencia-punto-singular .mdc-text-field")); //Punto Singular
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-numero-portal .mdc-text-field")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-escalera .mdc-text-field")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-piso .mdc-text-field")); //CALLE
+
+    new mdc.select.MDCSelect(document.querySelector(".carta-de-llamada-datos-personales-sentido-circulacion .mdc-select")); //CARRETERA
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-referencia-carretera .mdc-text-field")); //CARRETERA
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-puerta .mdc-text-field")); //CALLE
+
+    new mdc.textField.MDCTextField(document.querySelector(".carta-de-llamada-datos-personales-referencia-calle .mdc-text-field")); //CALLE
+
+    new mdc.select.MDCSelect(document.querySelector(".carta-de-llamada-datos-personales-incidente .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".carta-de-llamada-datos-personales-tipo-de-incidente .mdc-select"));
     mdc.autoInit();
-    new mdc.ripple.MDCRipple(document.querySelector(".mapa-up .mdc-button"));
+    new mdc.ripple.MDCRipple(document.querySelector(".carta-de-llamada-datos-personales-mapa-up .mdc-button"));
     mdc.autoInit();
-    new mdc.ripple.MDCRipple(document.querySelector(".aceptar .mdc-button"));
+    new mdc.ripple.MDCRipple(document.querySelector(".carta-de-llamada-datos-personales-aceptar .mdc-button"));
     mdc.autoInit();
-    new mdc.ripple.MDCRipple(document.querySelector(".cancelar .mdc-button"));
+    new mdc.ripple.MDCRipple(document.querySelector(".carta-de-llamada-datos-personales-cancelar .mdc-button"));
   }
 });
 
@@ -13004,17 +13078,19 @@ __webpack_require__.r(__webpack_exports__);
       loading: false
     };
   },
-  methods: {},
+  methods: {
+    selectExpedientes: function selectExpedientes() {}
+  },
   mounted: function mounted() {
     new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-nick .mdc-text-field"));
-    new mdc.textField.MDCTextField(document.querySelector("editar-perfil-operador-nombre .mdc-text-field"));
+    new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-nombre .mdc-text-field"));
     new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-apellidos .mdc-text-field"));
     new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-contrasea-actual .mdc-text-field"));
-    new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-contrasea-nueva .mdc-text-field")); // mdc.autoInit();
-
-    new mdc.ripple.MDCRipple(document.querySelector(".editar-perfil-operador-aceptar-cambios .mdc-button")); // mdc.autoInit();
-
-    new mdc.ripple.MDCRipple(document.querySelector("editar-perfil-operador-cancelar .mdc-button"));
+    new mdc.textField.MDCTextField(document.querySelector(".editar-perfil-operador-contrasea-nueva .mdc-text-field"));
+    mdc.autoInit();
+    new mdc.ripple.MDCRipple(document.querySelector(".editar-perfil-operador-aceptar-cambios .mdc-button"));
+    mdc.autoInit();
+    new mdc.ripple.MDCRipple(document.querySelector(".editar-perfil-operador-cancelar .mdc-button"));
   }
 });
 
@@ -14073,17 +14149,15 @@ Vue.component('nuevousuario', (__webpack_require__(/*! ./components/administraci
 
 var app = new Vue({
   el: '#app'
-});
-/*import App from './components/App.vue';
-import vueAxios from 'vue-axios';
-import axios from 'axios';
-
-import VueRouter from 'vue-router';
-import { router } from './routes';
-import vue from 'vue';
-import Vue from 'vue';
-Vue.use(VueRouter);
-Vue.use(VueAxios, axios);*/
+}); // import App from './components/App.vue';
+// import vueAxios from 'vue-axios';
+// import axios from 'axios';
+// import VueRouter from 'vue-router';
+// import { router } from './routes';
+// import vue from 'vue';
+// import Vue from 'vue';
+// Vue.use(VueRouter);
+// Vue.use(VueAxios, axios)
 
 /***/ }),
 
@@ -27472,7 +27546,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FIXME: Main divs */\n/* .carta-de-llamada-datos-indicente {\ndisplay: flex;\nalign-items: flex-start;\nheight: 312px;\nwidth: 891px;\n} */\n\n/* Linea Uno */\n/* .carta-de-llamada-datos-indicente-flex-row {\ndisplay: flex;\nalign-items: flex-start;\nheight: 68px;\nwidth: 218px;\n} */\n\n/* Linea Dos */\n.carta-de-llamada-datos-indicente-flex-row-1 {\ndisplay: flex;\nalign-items: flex-start;\nmargin-top: 117px;\nmargin-left: -222px;\n}\n\n/* FIXME: Primera columna */\n.carta-de-llamada-datos-indicente-flex-col {\n/* display: flex;\nalign-items: flex-start;\nalign-self: flex-end;\nflex-direction: column; */\nheight: 68px;\nwidth: 218px;\n}\n.carta-de-llamada-datos-indicente-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-datos-indicente-datos-del-interlocutor {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 2px;\nmargin-top: 36px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Segunda columna */\n.carta-de-llamada-datos-indicente-flex-col-1 {\n/* display: flex;\nalign-items: flex-start;\nalign-self: flex-end;\nflex-direction: column; */\nheight: 226px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-telefono {\nheight: 56px;\nmargin-left: 2px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-telefono .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.carta-de-llamada-datos-indicente-telefono\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.carta-de-llamada-datos-indicente-Direccion-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-Direccion-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-Direccion-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-Direccion-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-indicente-Direccion-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.carta-de-llamada-datos-indicente-Antedecendes-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-Antedecendes-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.carta-de-llamada-datos-indicente-Antedecendes-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-Antedecendes-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-indicente-Antedecendes-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n\n/* FIXME: Tercera columna */\n.carta-de-llamada-datos-indicente-flex-col-2 {\n/* display: flex;\nalign-items: flex-start;\nalign-self: flex-end;\nflex-direction: column; */\nheight: 226px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-procedencia-de-la-llamada {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-origen-de-la-llamada {\nheight: 60px;\nmargin-top: 21px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-municipio {\nheight: 60px;\nmargin-top: 29px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-municipio .custom-enhanced-select-width {\nwidth: 200px;\n}\n.mdc-list-item {\nalign-items: center;\ndisplay: flex;\nheight: 48px;\n/* position: relative; */\n}\n\n/* FIXME: Cuarta columna */\n.carta-de-llamada-datos-indicente-flex-col-3 {\n/* display: flex;\nalign-items: flex-start;\nalign-self: flex-end;\nflex-direction: column; */\nheight: 226px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-nota-comun {\nheight: 56px;\nmargin-top: 166px;\nwidth: 263px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FIXME: Main divs */\n/* .carta-de-llamada-datos-indicente {\ndisplay: flex;\nalign-items: flex-start;\nheight: 312px;\nwidth: 891px;\n} */\n\n/* Linea Uno */\n/* .carta-de-llamada-datos-indicente-flex-row {\ndisplay: flex;\nalign-items: flex-start;\nheight: 68px;\nwidth: 218px;\n} */\n\n/* Linea Dos */\n.carta-de-llamada-datos-indicente-flex-row-1 {\ndisplay: flex;\nalign-items: flex-start;\nmargin-top: 117px;\nmargin-left: -222px;\n}\n\n/* FIXME: Primera columna */\n.carta-de-llamada-datos-indicente-flex-col {\n/* display: flex;\nalign-items: flex-start;\nalign-self: flex-end;\nflex-direction: column; */\nheight: 68px;\nwidth: 218px;\n}\n.carta-de-llamada-datos-indicente-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.carta-de-llamada-datos-indicente-datos-del-interlocutor {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 2px;\nmargin-top: 36px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Segunda columna */\n.carta-de-llamada-datos-indicente-flex-col-1 {\n/* display: flex;\nalign-items: flex-start;\nalign-self: flex-end;\nflex-direction: column; */\nheight: 226px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-telefono {\nheight: 56px;\nmargin-left: 2px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-telefono .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.carta-de-llamada-datos-indicente-telefono\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.carta-de-llamada-datos-indicente-Direccion-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-Direccion-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-Direccion-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-Direccion-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-indicente-Direccion-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.carta-de-llamada-datos-indicente-Antedecendes-Up {\nheight: 60px;\nmargin-left: 2px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-Antedecendes-Up\n.mdc-text-field--focused:not(.mdc-text-field--disabled)\n.mdc-floating-label {\ncolor: #000;\n}\n.carta-de-llamada-datos-indicente-Antedecendes-Up\n.mdc-select:not(.mdc-select--disabled).mdc-select--focused\n.mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-Antedecendes-Up .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-indicente-Antedecendes-Up .mdc-text-field {\n--mdc-theme-primary: #000000;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n\n/* FIXME: Tercera columna */\n.carta-de-llamada-datos-indicente-flex-col-2 {\n/* display: flex;\nalign-items: flex-start;\nalign-self: flex-end;\nflex-direction: column; */\nheight: 226px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-procedencia-de-la-llamada {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-procedencia-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-origen-de-la-llamada {\nheight: 60px;\nmargin-top: 21px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-origen-de-la-llamada .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-municipio {\nheight: 60px;\nmargin-top: 29px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-indicente-municipio .custom-enhanced-select-width {\nwidth: 200px;\n}\n.mdc-list-item {\nalign-items: center;\ndisplay: flex;\nheight: 48px;\n/* position: relative; */\n}\n\n/* FIXME: Cuarta columna */\n.carta-de-llamada-datos-indicente-flex-col-3 {\n/* display: flex;\nalign-items: flex-start;\nalign-self: flex-end;\nflex-direction: column; */\nheight: 226px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-indicente-nota-comun {\nheight: 56px;\nmargin-top: 166px;\nwidth: 263px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27496,7 +27570,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FIXME: Titulo */\n.carta-de-llamada-datos-personales-datos-del-interlocutor {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\nmargin-top: 36px;\n}\n\n/* FIXME: Columna uno */\n.carta-de-llamada-datos-personales-flex-row-1{\ndisplay: flex;\nalign-items: flex-start;\nmargin-top: 117px;\nmargin-left: -222px;\n}\n.carta-de-llamada-datos-personales-comarca {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-comarca .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-provincia {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-provincia .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-municipio {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-municipio .custom-enhanced-select-width {\nwidth: 200px;\n}\n\n/* FIXME: Columna dos */\n.carta-de-llamada-datos-personales-tipo-de-localizacin {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-tipo-de-localizacin .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.referencia-poblacion {\nmargin-top: 25px;\nwidth: 263px;\n}\n.referencia-poblacion .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.provincia-fuera {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.referencia-fuera {\nmargin-top: 25px;\nwidth: 263px;\n}\n.referencia-fuera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.tipo-de-via {\n    margin-top: 24px;\n}\n.nombre-via-calle{\n    margin-top: 30px;\n}\n.nombre-via-carretera{\n    margin-top: 25px;\n}\n.punto-kilometrico{\n    margin-top: 29px;\n}\n.nombre-punto-singular{\n    margin-top: 24px;\n}\n.referencia-punto-singular{\nmargin-top: 30px;\nwidth: 263px;\n}\n.referencia-punto-singular .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* FIXME: Columna tres */\n/* .numero-portal {\n\n} */\n.escalera {\n    margin-top: 28px;\n}\n.piso{\nmargin-top: 30px;\n}\n\n/* .sentido-circulacion {\n\n} */\n.referencia-carretera{\nmargin-top: 28px;\nwidth: 263px;\n}\n.referencia-carretera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* FIXME: Columna cuatro */\n/* .puerta {\n\n} */\n.referencia-calle{\nmargin-top: 28px;\nwidth: 263px;\n}\n.referencia-calle .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* Barra */\n.carta-de-llamada-datos-personales-flex-col-4{\n    display: flex;\n\n    margin-right: 51px;\n}\n\n/* FIXME: Columna cinco */\n.carta-de-llamada-datos-personales-separation-down {\nheight: 183px;\nmargin-left: 50px;\nmargin-top: 153px;\nwidth: 1px;\n}\n.carta-de-llamada-datos-personales-incidente {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-incidente .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-tipo-de-incidente {\nheight: 60px;\nmargin-top: 24px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-tipo-de-incidente .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-flex-row-2 {\nalign-items: flex-start;\ndisplay: flex;\nmargin-left: 38px;\nmargin-top: 24px;\nmin-width: 188px;\n}\n.carta-de-llamada-datos-personales-mapa-up #mapa-up{\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 89px;\nmargin-left: 80px;\ntransition: all 0.2s ease-in-out;\nbackground-color: #0040FF;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.carta-de-llamada-datos-personales-mapa-up {\nmargin-top: 50px;\nheight: auto !important;\nwidth: auto !important;\n}\n#carta-de-llamada-datos-personales-mapa-up:hover,\n#carta-de-llamada-datos-personales-aceptar:hover,\n#carta-de-llamada-datos-personales-cancelar:hover {\ntransform: scale(1.1);\n}\n.carta-de-llamada-datos-personales-aceptar #aceptar {\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 103px;\nmargin-left: 74px;\nmargin-top: 20px;\ntransition: all 0.2s ease-in-out;\nbackground-color: #0040FF;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.carta-de-llamada-datos-personales-aceptar {\nheight: auto !important;\nwidth: auto !important;\nmargin-top: -20px;\nmargin-left: -100px;\n}\n.carta-de-llamada-datos-personales-cancelar #cancelar{\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 103px;\nmargin-left: 74px;\nmargin-top: 20px;\ntransition: all 0.2s ease-in-out;\nbackground-color: rgb(207, 0, 0);\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.carta-de-llamada-datos-personales-cancelar {\nheight: auto !important;\nwidth: auto !important;\nmargin-top: -20px;\nmargin-left: -50px;\n}\n\n/* FIXME: Global */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: #ffffff;\nwidth: 263px;\n}\n.mdc-list-item {\nalign-items: center;\ndisplay: flex;\nheight: 48px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* Main div */\n.carta-de-llamada-datos-personales-container-center-horizontal {\ndisplay: flex;\nflex-direction: column;\n}\n\n/* FIXME: Titulo */\n.carta-de-llamada-datos-personales-datos-del-interlocutor {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\nmargin-top: 36px;\n}\n.carta-de-llamada-datos-personales-flex-row-1{\ndisplay: flex;\nalign-items: flex-start;\nmargin-top: 18px;\n-moz-column-gap: 50px;\n     column-gap: 50px;\n}\n\n/* FIXME: Columna uno */\n.carta-de-llamada-datos-personales-flex-col {\ndisplay: flex;\nflex-direction: column;\ngap: 25px;\n}\n.carta-de-llamada-datos-personales-comarca .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-comarca .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-provincia .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-provincia .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-municipio .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-municipio .custom-enhanced-select-width {\nwidth: 200px;\n}\n\n/* FIXME: Columna dos */\n.carta-de-llamada-datos-personales-flex-col-1 {\ndisplay: flex;\nflex-direction: column;\ngap: 25px;\n}\n.carta-de-llamada-datos-personales-tipo-de-localizacin .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-tipo-de-localizacin .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-referencia-poblacion .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-provincia-fuera {\nheight: 60px;\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-referencia-fuera {\nmargin-top: 25px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-referencia-fuera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-tipo-de-via {\n    margin-top: 24px;\n}\n.carta-de-llamada-datos-personales-nombre-via-calle{\n    margin-top: 30px;\n}\n.carta-de-llamada-datos-personales-nombre-via-carretera{\n    margin-top: 25px;\n}\n.carta-de-llamada-datos-personales-punto-kilometrico{\n    margin-top: 29px;\n}\n.carta-de-llamada-datos-personales-nombre-punto-singular{\n    margin-top: 24px;\n}\n.carta-de-llamada-datos-personales-referencia-punto-singular{\nmargin-top: 30px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-referencia-punto-singular .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* FIXME: Columna tres */\n/* .carta-de-llamada-datos-personales-numero-portal {\n\n} */\n.carta-de-llamada-datos-personales-escalera {\n    margin-top: 28px;\n}\n.carta-de-llamada-datos-personales-piso{\nmargin-top: 30px;\n}\n\n/* .carta-de-llamada-datos-personales-sentido-circulacion {\n\n} */\n.carta-de-llamada-datos-personales-referencia-carretera{\nmargin-top: 28px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-referencia-carretera .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* FIXME: Columna cuatro */\n/* .carta-de-llamada-datos-personales-puerta {\n\n} */\n.carta-de-llamada-datos-personales-referencia-calle{\nmargin-top: 28px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-referencia-calle .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n\n/* Barra */\n.carta-de-llamada-datos-personales-flex-col-4{\ndisplay: flex;\n/* margin-right: 25px; */\n}\n.carta-de-llamada-datos-personales-separation-down {\nheight: 183px;\nmargin-top: 153px;\nwidth: 1px;\n}\n\n/* FIXME: Columna cinco */\n.carta-de-llamada-datos-personales-incidente {\nheight: 60px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-incidente .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-tipo-de-incidente {\nheight: 60px;\nmargin-top: 24px;\nwidth: 263px;\n}\n.carta-de-llamada-datos-personales-tipo-de-incidente .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {\ncolor: var(--mdc-theme-primary);\n}\n.carta-de-llamada-datos-personales-tipo-de-incidente .custom-enhanced-select-width {\nwidth: 200px;\n}\n.carta-de-llamada-datos-personales-flex-row-2 {\nalign-items: flex-start;\ndisplay: flex;\nmargin-left: 38px;\nmargin-top: 24px;\nmin-width: 188px;\n}\n.carta-de-llamada-datos-personales-mapa-up #mapa-up{\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 89px;\nmargin-left: 80px;\ntransition: all 0.2s ease-in-out;\nbackground-color: #0040FF;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.carta-de-llamada-datos-personales-mapa-up {\nmargin-top: 50px;\nheight: auto !important;\nwidth: auto !important;\n}\n#carta-de-llamada-datos-personales-mapa-up:hover,\n#carta-de-llamada-datos-personales-aceptar:hover,\n#carta-de-llamada-datos-personales-cancelar:hover {\ntransform: scale(1.1);\n}\n.carta-de-llamada-datos-personales-aceptar #aceptar {\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 103px;\nmargin-left: 74px;\nmargin-top: 20px;\ntransition: all 0.2s ease-in-out;\nbackground-color: #0040FF;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.carta-de-llamada-datos-personales-aceptar {\nheight: auto !important;\nwidth: auto !important;\nmargin-top: -20px;\nmargin-left: -100px;\n}\n.carta-de-llamada-datos-personales-cancelar #cancelar{\nborder-radius: 32px;\ncursor: pointer;\nheight: 36px;\nwidth: 103px;\nmargin-left: 74px;\nmargin-top: 20px;\ntransition: all 0.2s ease-in-out;\nbackground-color: rgb(207, 0, 0);\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.carta-de-llamada-datos-personales-cancelar {\nheight: auto !important;\nwidth: auto !important;\nmargin-top: -20px;\nmargin-left: -50px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27520,7 +27594,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FIXME: Main container + tittle */\n.editar-perfil-operador {\ndisplay: flex;\nalign-items: flex-start;\nbackground-color: transparent;\nwidth: 1920px;\nheight: 882px;\nflex-direction: column;\nflex-wrap: wrap;\n}\n.editar-perfil-operador-editar-perfil {\nheight: 16px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 222px;\nwhite-space: nowrap;\nz-index: 4;\n}\n\n/* FIXME: Datos personales */\n.editar-perfil-operador-datos-personales-container {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 750px;\nheight: 179px;\nmargin-left: 102px;\nmargin-top: 36px;\nflex-direction: column;\n}\n.editar-perfil-operador-datos-personales {\nheight: 16px;\nleft: 102px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 274px;\nwhite-space: nowrap;\nz-index: 5;\n}\n.editar-perfil-operador-flex-row {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 18px;\n}\n.editar-perfil-operador-nick {\nheight: 60px;\nleft: 102px;\ntop: 308px;\nwidth: 350px;\nz-index: 6;\n}\n.editar-perfil-operador-flex-row-1 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 25px;\ngap: 50px;\n}\n.editar-perfil-operador-nombre {\nheight: 60px;\nleft: 102px;\ntop: 393px;\nwidth: 350px;\nz-index: 8;\n}\n.editar-perfil-operador-apellidos {\nheight: 60px;\nleft: 502px;\ntop: 393px;\nwidth: 350px;\nz-index: 7;\n}\n.editar-perfil-operador-name {\nheight: 16px;\nleft: 705px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 643px;\nwhite-space: nowrap;\nz-index: 23;\n}\n\n/* FIXME: Contraseña */\n.editar-perfil-operador-password-container{\ndisplay: flex;\nalign-items: flex-start;\nwidth: 750px;\nheight: 179px;\nmargin-left: 102px;\nmargin-top: 208px;\nflex-direction: column;\n}\n.editar-perfil-operador-flex-row-2 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 18px;\ngap: 50px;\n}\n.editar-perfil-operador-cambiar-contrasenya {\nheight: 16px;\nleft: 102px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 274px;\nwhite-space: nowrap;\nz-index: 5;\n}\n.editar-perfil-operador-contrasea-actual {\nheight: 60px;\nleft: 102px;\ntop: 482px;\nwidth: 350px;\nz-index: 9;\n}\n.editar-perfil-operador-contrasea-nueva {\nheight: 60px;\nleft: 502px;\ntop: 482px;\nwidth: 350px;\nz-index: 10;\n}\n\n/* FIXME: Botones */\n.editar-perfil-operador-flex-row-3 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 50px;\nmargin-left: 174px;\ngap: 50px;\n}\n.editar-perfil-operador-flex-row-4 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 50px;\nmargin-left: 174px;\ngap: 50px;\n}\n.editar-perfil-operador-aceptar-cambios{\nborder-radius: 32px;\nheight: 36px;\nleft: 275px;\ntop: 599px;\nwidth: 141px;\nz-index: 11;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n.editar-perfil-operador-aceptar-cambios {\nheight: auto !important;\nwidth: auto !important;\n}\n.editar-perfil-operador-cancelar {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nheight: 36px;\nleft: 552px;\ntop: 619px;\nwidth: 89px;\nz-index: 12;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.editar-perfil-operador-cancelar {\nheight: auto !important;\nwidth: auto !important;\n}\n\n/* FIXME: Personaje */\n.editar-perfil-operador .degradado {\nheight: 630px;\nleft: 1197px;\nposition: fixed;\ntop: 421px;\nwidth: 491px;\nz-index: 3;\n}\n.editar-perfil-operador .ellipse-1 {\nheight: 308px;\nleft: 1268px;\nposition: fixed;\ntop: 291px;\nwidth: 308px;\nz-index: 2;\n}\n.editar-perfil-operador .peep-standing-30 {\nalign-items: flex-end;\ndisplay: flex;\nheight: 780px;\njustify-content: flex-end;\nleft: 1246px;\nmin-width: 280px;\npadding: 37.2px 0;\nposition: fixed;\ntop: 299px;\nz-index: 1;\n}\n.editar-perfil-operador .overlap-group2 {\nheight: 700px;\nposition: relative;\nwidth: 391px;\n}\n.editar-perfil-operador .posestandingshirt-3 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 593px;\nleft: 0;\nmin-width: 391px;\npadding: 0 75.7px;\nposition: absolute;\ntop: 108px;\n}\n.editar-perfil-operador .overlap-group {\nheight: 612px;\nmargin-top: -15.42px;\nposition: relative;\nwidth: 212px;\n}\n.editar-perfil-operador .skin {\nheight: 610px;\nleft: 1px;\nposition: absolute;\ntop: 0;\nwidth: 209px;\n}\n.editar-perfil-operador .shoes {\nheight: 78px;\nleft: 0;\nposition: absolute;\ntop: 532px;\nwidth: 205px;\n}\n.editar-perfil-operador .top {\nheight: 277px;\nleft: 11px;\nposition: absolute;\ntop: 23px;\nwidth: 200px;\n}\n.editar-perfil-operador .ink {\nheight: 600px;\nleft: 0;\nposition: absolute;\ntop: 11px;\nwidth: 212px;\n}\n.editar-perfil-operador .overlap-group1 {\nheight: 134px;\nleft: 125px;\nposition: absolute;\ntop: 0;\nwidth: 112px;\n}\n.editar-perfil-operador .head-short-4 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 134px;\njustify-content: flex-end;\nleft: 0;\nmin-width: 112px;\npadding: 3.0px 9.2px;\nposition: absolute;\ntop: 0;\n}\n.editar-perfil-operador .overlap-group-1 {\nheight: 121px;\nposition: relative;\nwidth: 91px;\n}\n.editar-perfil-operador .skin-1 {\nheight: 116px;\nleft: 4px;\nposition: absolute;\ntop: 2px;\nwidth: 86px;\n}\n.editar-perfil-operador .hair {\nheight: 69px;\nleft: 7px;\nposition: absolute;\ntop: 4px;\nwidth: 83px;\n}\n.editar-perfil-operador .fill-4 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 24px;\nwidth: 1px;\n}\n.editar-perfil-operador .fill-6 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 25px;\nwidth: 1px;\n}\n.editar-perfil-operador .ink-1 {\nheight: 121px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 91px;\n}\n.editar-perfil-operador .facial-hair-moustache-7 {\nheight: 55px;\nleft: 28px;\nposition: absolute;\ntop: 79px;\nwidth: 67px;\n}\n.editar-perfil-operador .face-old {\nalign-items: flex-end;\ndisplay: flex;\nheight: 69px;\nleft: 38px;\nmin-width: 69px;\npadding: 13.0px 11.4px;\nposition: absolute;\ntop: 44px;\n}\n.editar-perfil-operador .ink-2 {\nheight: 42px;\nwidth: 45px;\n}\n\n/* FIXME: Extras */\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nwidth: 350px;\nheight: 60px;\n}\n.mdc-text-field--filled:not(.mdc-text-field--disabled) {\nbackground-color: white;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FIXME: Main container + tittle */\n.editar-perfil-operador {\ndisplay: flex;\nalign-items: flex-start;\nbackground-color: transparent;\nwidth: 1920px;\nheight: 882px;\nflex-direction: column;\nflex-wrap: wrap;\n}\n.editar-perfil-operador-editar-perfil {\nheight: 16px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 222px;\nwhite-space: nowrap;\nz-index: 4;\n}\n\n/* FIXME: Datos personales */\n.editar-perfil-operador-datos-personales-container {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 750px;\nheight: 179px;\nmargin-left: 102px;\nmargin-top: 36px;\nflex-direction: column;\n}\n.editar-perfil-operador-datos-personales {\nheight: 16px;\nleft: 102px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 274px;\nwhite-space: nowrap;\nz-index: 5;\n}\n.editar-perfil-operador-flex-row {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 18px;\n}\n.editar-perfil-operador-nick {\nheight: 60px;\nleft: 102px;\ntop: 308px;\nwidth: 350px;\nz-index: 6;\n}\n.editar-perfil-operador-flex-row-1 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 25px;\ngap: 50px;\n}\n.editar-perfil-operador-nombre {\nheight: 60px;\nleft: 102px;\ntop: 393px;\nwidth: 350px;\nz-index: 8;\n}\n.editar-perfil-operador-apellidos {\nheight: 60px;\nleft: 502px;\ntop: 393px;\nwidth: 350px;\nz-index: 7;\n}\n.editar-perfil-operador-name {\nheight: 16px;\nleft: 705px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 643px;\nwhite-space: nowrap;\nz-index: 23;\n}\n\n/* FIXME: Contraseña */\n.editar-perfil-operador-password-container{\ndisplay: flex;\nalign-items: flex-start;\nwidth: 750px;\nheight: 179px;\nmargin-left: 102px;\nmargin-top: 208px;\nflex-direction: column;\n}\n.editar-perfil-operador-flex-row-2 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 18px;\ngap: 50px;\n}\n.editar-perfil-operador-cambiar-contrasenya {\nheight: 16px;\nleft: 102px;\nletter-spacing: 0.15px;\nline-height: 16px;\ntop: 274px;\nwhite-space: nowrap;\nz-index: 5;\n}\n.editar-perfil-operador-contrasea-actual {\nheight: 60px;\nleft: 102px;\ntop: 482px;\nwidth: 350px;\nz-index: 9;\n}\n.editar-perfil-operador-contrasea-nueva {\nheight: 60px;\nleft: 502px;\ntop: 482px;\nwidth: 350px;\nz-index: 10;\n}\n\n/* FIXME: Botones */\n.editar-perfil-operador-flex-row-3 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 50px;\nmargin-left: 174px;\ngap: 50px;\n}\n.editar-perfil-operador-flex-row-4 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 50px;\nmargin-left: 174px;\ngap: 50px;\n}\n.editar-perfil-operador-aceptar-cambios{\nborder-radius: 32px;\nheight: 36px;\nleft: 275px;\ntop: 599px;\nwidth: 141px;\nz-index: 11;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n.editar-perfil-operador-aceptar-cambios {\nheight: auto !important;\nwidth: auto !important;\n}\n.editar-perfil-operador-cancelar {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nheight: 36px;\nleft: 552px;\ntop: 619px;\nwidth: 89px;\nz-index: 12;\ntransition: all 0.2s ease-in-out;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.editar-perfil-operador-cancelar {\nheight: auto !important;\nwidth: auto !important;\n}\n\n/* FIXME: Personaje */\n.editar-perfil-operador .degradado {\nheight: 630px;\nleft: 1197px;\nposition: fixed;\ntop: 421px;\nwidth: 491px;\nz-index: 3;\n}\n.editar-perfil-operador .ellipse-1 {\nheight: 308px;\nleft: 1268px;\nposition: fixed;\ntop: 291px;\nwidth: 308px;\nz-index: 2;\n}\n.editar-perfil-operador .peep-standing-30 {\nalign-items: flex-end;\ndisplay: flex;\nheight: 780px;\njustify-content: flex-end;\nleft: 1246px;\nmin-width: 280px;\npadding: 37.2px 0;\nposition: fixed;\ntop: 299px;\nz-index: 1;\n}\n.editar-perfil-operador .overlap-group2 {\nheight: 700px;\nposition: relative;\nwidth: 391px;\n}\n.editar-perfil-operador .posestandingshirt-3 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 593px;\nleft: 0;\nmin-width: 391px;\npadding: 0 75.7px;\nposition: absolute;\ntop: 108px;\n}\n.editar-perfil-operador .overlap-group {\nheight: 612px;\nmargin-top: -15.42px;\nposition: relative;\nwidth: 212px;\n}\n.editar-perfil-operador .skin {\nheight: 610px;\nleft: 1px;\nposition: absolute;\ntop: 0;\nwidth: 209px;\n}\n.editar-perfil-operador .shoes {\nheight: 78px;\nleft: 0;\nposition: absolute;\ntop: 532px;\nwidth: 205px;\n}\n.editar-perfil-operador .top {\nheight: 277px;\nleft: 11px;\nposition: absolute;\ntop: 23px;\nwidth: 200px;\n}\n.editar-perfil-operador .ink {\nheight: 600px;\nleft: 0;\nposition: absolute;\ntop: 11px;\nwidth: 212px;\n}\n.editar-perfil-operador .overlap-group1 {\nheight: 134px;\nleft: 125px;\nposition: absolute;\ntop: 0;\nwidth: 112px;\n}\n.editar-perfil-operador .head-short-4 {\nalign-items: flex-start;\ndisplay: flex;\nheight: 134px;\njustify-content: flex-end;\nleft: 0;\nmin-width: 112px;\npadding: 3.0px 9.2px;\nposition: absolute;\ntop: 0;\n}\n.editar-perfil-operador .overlap-group-1 {\nheight: 121px;\nposition: relative;\nwidth: 91px;\n}\n.editar-perfil-operador .skin-1 {\nheight: 116px;\nleft: 4px;\nposition: absolute;\ntop: 2px;\nwidth: 86px;\n}\n.editar-perfil-operador .hair {\nheight: 69px;\nleft: 7px;\nposition: absolute;\ntop: 4px;\nwidth: 83px;\n}\n.editar-perfil-operador .fill-4 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 24px;\nwidth: 1px;\n}\n.editar-perfil-operador .fill-6 {\nheight: 1px;\nleft: 12px;\nposition: absolute;\ntop: 25px;\nwidth: 1px;\n}\n.editar-perfil-operador .ink-1 {\nheight: 121px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 91px;\n}\n.editar-perfil-operador .facial-hair-moustache-7 {\nheight: 55px;\nleft: 28px;\nposition: absolute;\ntop: 79px;\nwidth: 67px;\n}\n.editar-perfil-operador .face-old {\nalign-items: flex-end;\ndisplay: flex;\nheight: 69px;\nleft: 38px;\nmin-width: 69px;\npadding: 13.0px 11.4px;\nposition: absolute;\ntop: 44px;\n}\n.editar-perfil-operador .ink-2 {\nheight: 42px;\nwidth: 45px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27544,7 +27618,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n:root {\n--onProcess: rgb(1, 156, 60);\n--requested: rgb(220, 220, 0);\n--accepted: rgb(102, 93, 29);\n--closed: rgb(0, 83, 199);\n--immobilized: rgb(182,149,192);\n}\n.expedientes-title {\ndisplay: flex;\nalign-items: flex-start;\nheight: 16px;\nwidth: 158px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\n/* top: 222px; */\nwhite-space: nowrap;\nz-index: 4;\n}\n\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\n}\n.expedientes-modal-window {\nwidth: 1104px;\nheight: 526px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n#close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 1040px;\nmargin-top: 18px;\n}\n.expedientes-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\n}\n.expedientes-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nwidth: 32px;\n}\n.expedientes-modal .is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.expediente-modal {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n.modal-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-2 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-3 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-4 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-5 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-6 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-7 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.expediente-file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.expediente-file:hover {\ntransform: scale(1.1);\n}\n.expedientes-info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.expedientes-flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 32px;\n}\n\n/* .expedientes-status-select {\ndisplay: inline-flex;\nmargin-top: 10px;\n} */\n\n/* .mdc-select__anchor {\nwidth: 52px; */\n/* min-width: 0; */\n/* flex: 1 1 auto; */\n/* position: relative; */\n/* box-sizing: border-box;\noverflow: hidden;\noutline: none;\ncursor: pointer;\n} */\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: white;\n}\n\n/* .mdc-select--filled .mdc-select__anchor {\nheight: 32px;\ndisplay: flex;\nalign-items: baseline;\n} */\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-onProcess {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--onProcess);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-inmobilized {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--immobilized);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-requested {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--requested);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-closed {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--closed);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-accepted {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--accepted);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: white;\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.expedientes-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expedientes-expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.expedientes-operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.expedientes-name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.expedientes-date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.expedientes-text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.onProcess {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.onProcess {\nheight: auto !important;\nwidth: auto !important;\n}\n.onProcess span {\ncolor: var(--onProcess);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.immobilized {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.immobilized {\nheight: auto !important;\nwidth: auto !important;\n}\n.immobilized span {\ncolor: var(--immobilized);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.requested {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.requested {\nheight: auto !important;\nwidth: auto !important;\n}\n.requested span {\ncolor: var(--requested);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.closed {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.closed {\nheight: auto !important;\nwidth: auto !important;\n}\n.closed span {\ncolor: var(--closed);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.accepted {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.accepted {\nheight: auto !important;\nwidth: auto !important;\n}\n.accepted span {\ncolor: var(--accepted);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.expedientes-title {\ndisplay: flex;\nalign-items: flex-start;\nheight: 16px;\nwidth: 158px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\n/* top: 222px; */\nwhite-space: nowrap;\nz-index: 4;\n}\n\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\n}\n.expedientes-modal-window {\nwidth: 1104px;\nheight: 526px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n#close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 1040px;\nmargin-top: 18px;\n}\n.expedientes-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\n}\n.expedientes-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nwidth: 32px;\n}\n.expedientes-modal .is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.expediente-modal {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n.modal-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-2 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-3 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-4 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-5 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-6 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-7 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.expediente-file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.expediente-file:hover {\ntransform: scale(1.1);\n}\n.expedientes-info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.expedientes-flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 32px;\n}\n\n/* .expedientes-status-select {\ndisplay: inline-flex;\nmargin-top: 10px;\n} */\n\n/* .mdc-select__anchor {\nwidth: 52px; */\n/* min-width: 0; */\n/* flex: 1 1 auto; */\n/* position: relative; */\n/* box-sizing: border-box;\noverflow: hidden;\noutline: none;\ncursor: pointer;\n} */\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: white;\n}\n\n/* .mdc-select--filled .mdc-select__anchor {\nheight: 32px;\ndisplay: flex;\nalign-items: baseline;\n} */\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-onProcess {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--onProcess);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-inmobilized {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--immobilized);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-requested {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--requested);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-closed {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--closed);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-accepted {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--accepted);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: white;\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.expedientes-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expedientes-expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.expedientes-operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.expedientes-name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.expedientes-date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.expedientes-text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.onProcess {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.onProcess {\nheight: auto !important;\nwidth: auto !important;\n}\n.onProcess span {\ncolor: var(--onProcess);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.immobilized {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.immobilized {\nheight: auto !important;\nwidth: auto !important;\n}\n.immobilized span {\ncolor: var(--immobilized);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.requested {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.requested {\nheight: auto !important;\nwidth: auto !important;\n}\n.requested span {\ncolor: var(--requested);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.closed {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.closed {\nheight: auto !important;\nwidth: auto !important;\n}\n.closed span {\ncolor: var(--closed);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.accepted {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.accepted {\nheight: auto !important;\nwidth: auto !important;\n}\n.accepted span {\ncolor: var(--accepted);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -30903,373 +30977,382 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "container-center-horizontal" }, [
-        _c(
-          "div",
-          { staticClass: "carta-de-llamada-datos-indicente-flex-row" },
-          [
-            _c(
-              "div",
-              { staticClass: "carta-de-llamada-datos-indicente-flex-col" },
-              [
-                _c(
-                  "h1",
-                  {
-                    staticClass:
-                      "carta-de-llamada-datos-indicente-title valign-text-middle gothica1-normal-black-28px",
-                  },
-                  [
-                    _vm._v(
-                      "\n                    Carta de llamada\n                "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "carta-de-llamada-datos-indicente-datos-del-interlocutor valign-text-middle gothica1-normal-black-21px",
-                  },
-                  [
-                    _vm._v(
-                      "\n                    Datos del interlocutor\n                "
-                    ),
-                  ]
-                ),
-              ]
-            ),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "carta-de-llamada-datos-indicente-flex-row-1" },
-          [
-            _c(
-              "div",
-              { staticClass: "carta-de-llamada-datos-indicente-flex-col-1" },
-              [
-                _c(
-                  "div",
-                  { staticClass: "carta-de-llamada-datos-indicente-telefono" },
-                  [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                        Teléfono\n                    "
-                            ),
-                          ]
+  return _c("div", [
+    _c("div", { staticClass: "container-center-horizontal" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "carta-de-llamada-datos-indicente-flex-row-1" },
+        [
+          _c(
+            "div",
+            { staticClass: "carta-de-llamada-datos-indicente-flex-col-1" },
+            [
+              _c(
+                "div",
+                { staticClass: "carta-de-llamada-datos-indicente-telefono" },
+                [
+                  _c(
+                    "label",
+                    { staticClass: "mdc-text-field mdc-text-field--filled" },
+                    [
+                      _c("span", { staticClass: "mdc-text-field__ripple" }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-floating-label" }, [
+                        _vm._v(
+                          "\n                            Teléfono\n                        "
                         ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "carta-de-llamada-datos-indicente-Direccion-Up",
-                  },
-                  [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
                           {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.datos_personales.telefono,
+                            expression: "datos_personales.telefono",
                           },
-                          [_vm._v("Direccion")]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
+                        ],
+                        staticClass: "mdc-text-field__input",
+                        attrs: {
+                          type: "number",
+                          "aria-labelledby": "my-label-id",
+                          name: "telefono",
+                          id: "telefono",
+                        },
+                        domProps: { value: _vm.datos_personales.telefono },
+                        on: {
+                          blur: function ($event) {
+                            return _vm.setDataPersonal()
                           },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "carta-de-llamada-datos-indicente-Antedecendes-Up",
-                  },
-                  [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.datos_personales,
+                              "telefono",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "carta-de-llamada-datos-indicente-Direccion-Up",
+                },
+                [
+                  _c(
+                    "label",
+                    { staticClass: "mdc-text-field mdc-text-field--filled" },
+                    [
+                      _c("span", { staticClass: "mdc-text-field__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass: "mdc-floating-label",
+                          attrs: { id: "my-label-id" },
+                        },
+                        [_vm._v("Direccion")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
                           {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.datos_personales.direccion,
+                            expression: "datos_personales.direccion",
                           },
-                          [
-                            _vm._v(
-                              "\n                        Antedecentes\n                    "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
+                        ],
+                        staticClass: "mdc-text-field__input",
+                        attrs: {
+                          type: "text",
+                          "aria-labelledby": "my-label-id",
+                          name: "direccion",
+                          id: "direccion",
+                        },
+                        domProps: { value: _vm.datos_personales.direccion },
+                        on: {
+                          blur: function ($event) {
+                            return _vm.setDataPersonal()
                           },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]
-                ),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "carta-de-llamada-datos-indicente-flex-col-2" },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "carta-de-llamada-datos-indicente-procedencia-de-la-llamada",
-                  },
-                  [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.datos_personales,
+                              "direccion",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "carta-de-llamada-datos-indicente-Antedecendes-Up",
+                },
+                [
+                  _c(
+                    "label",
+                    { staticClass: "mdc-text-field mdc-text-field--filled" },
+                    [
+                      _c("span", { staticClass: "mdc-text-field__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass: "mdc-floating-label",
+                          attrs: { id: "my-label-id" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Antedecentes\n                        "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
                           {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.datos_personales.antecedentes,
+                            expression: "datos_personales.antecedentes",
                           },
-                          [
-                            _vm._v(
-                              "\n                                Procedencia de la llamada\n                            "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
+                        ],
+                        staticClass: "mdc-text-field__input",
+                        attrs: {
+                          type: "text",
+                          "aria-labelledby": "my-label-id",
+                          name: "antecedentes",
+                          id: "antecedentes",
+                        },
+                        domProps: { value: _vm.datos_personales.antecedentes },
+                        on: {
+                          blur: function ($event) {
+                            return _vm.setDataPersonal()
                           },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "carta-de-llamada-datos-indicente-origen-de-la-llamada",
-                  },
-                  [
-                    _c(
-                      "label",
-                      { staticClass: "mdc-text-field mdc-text-field--filled" },
-                      [
-                        _c("span", { staticClass: "mdc-text-field__ripple" }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.datos_personales,
+                              "antecedentes",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "carta-de-llamada-datos-indicente-flex-col-2" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "carta-de-llamada-datos-indicente-procedencia-de-la-llamada",
+                },
+                [
+                  _c(
+                    "label",
+                    { staticClass: "mdc-text-field mdc-text-field--filled" },
+                    [
+                      _c("span", { staticClass: "mdc-text-field__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass: "mdc-floating-label",
+                          attrs: { id: "my-label-id" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                                Procedencia de la llamada\n                            "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
                           {
-                            staticClass: "mdc-floating-label",
-                            attrs: { id: "my-label-id" },
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.datos_personales.procedencia,
+                            expression: "datos_personales.procedencia",
                           },
-                          [
-                            _vm._v(
-                              "\n                            Origen de la llamada\n                        "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          staticClass: "mdc-text-field__input",
-                          attrs: {
-                            type: "text",
-                            "aria-labelledby": "my-label-id",
+                        ],
+                        staticClass: "mdc-text-field__input",
+                        attrs: {
+                          type: "text",
+                          "aria-labelledby": "my-label-id",
+                          name: "procedencia",
+                          id: "procedencia",
+                        },
+                        domProps: { value: _vm.datos_personales.procedencia },
+                        on: {
+                          blur: function ($event) {
+                            return _vm.setDataPersonal()
                           },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-line-ripple" }),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "carta-de-llamada-datos-indicente-municipio" },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "mdc-select mdc-select--filled demo-width-class",
-                      },
-                      [
-                        _c(
-                          "div",
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.datos_personales,
+                              "procedencia",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "carta-de-llamada-datos-indicente-origen-de-la-llamada",
+                },
+                [
+                  _c(
+                    "label",
+                    { staticClass: "mdc-text-field mdc-text-field--filled" },
+                    [
+                      _c("span", { staticClass: "mdc-text-field__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          staticClass: "mdc-floating-label",
+                          attrs: { id: "my-label-id" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Origen de la llamada\n                        "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
                           {
-                            staticClass:
-                              "mdc-select__anchor custom-enhanced-select-width",
-                            attrs: {
-                              role: "button",
-                              "aria-haspopup": "listbox",
-                              "aria-expanded": "false",
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.datos_personales.origen,
+                            expression: "datos_personales.origen",
+                          },
+                        ],
+                        staticClass: "mdc-text-field__input",
+                        attrs: {
+                          type: "text",
+                          "aria-labelledby": "my-label-id",
+                          name: "origen",
+                          id: "origen",
+                        },
+                        domProps: { value: _vm.datos_personales.origen },
+                        on: {
+                          blur: function ($event) {
+                            return _vm.setDataPersonal()
+                          },
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.datos_personales,
+                              "origen",
+                              $event.target.value
+                            )
+                          },
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "carta-de-llamada-datos-indicente-municipio" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mdc-select mdc-select--filled demo-width-class",
+                    },
+                    [
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                        },
+                        [
+                          _c(
+                            "ul",
+                            {
+                              staticClass: "mdc-list",
+                              attrs: {
+                                id: "select_dropdown",
+                                role: "listbox",
+                                "aria-label": "listbox",
+                              },
                             },
-                          },
-                          [
-                            _c("span", { staticClass: "mdc-select__ripple" }),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass: "mdc-floating-label",
-                                attrs: { id: "demo-label" },
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                Municipio\n                            "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass:
-                                  "mdc-select__selected-text-container",
-                              },
-                              [
-                                _c("span", {
-                                  staticClass: "mdc-select__selected-text",
-                                  attrs: { id: "demo-selected-text" },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              { staticClass: "mdc-select__dropdown-icon" },
-                              [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-inactive material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_down\n                                "
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-active material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_up\n                                "
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "mdc-line-ripple" }),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                          },
-                          [
-                            _c(
-                              "ul",
-                              {
-                                staticClass: "mdc-list",
-                                attrs: {
-                                  id: "select_dropdown",
-                                  role: "listbox",
-                                  "aria-label": "listbox",
-                                },
-                              },
-                              [
-                                _c(
+                            [
+                              _vm._m(2),
+                              _vm._v(" "),
+                              _vm._l(_vm.municipios, function (municipio) {
+                                return _c(
                                   "li",
                                   {
+                                    key: municipio.id,
                                     staticClass: "mdc-list-item",
                                     attrs: {
                                       "data-value": "Item",
                                       role: "option",
+                                      value: municipio.id,
                                     },
                                   },
                                   [
@@ -31282,96 +31365,247 @@ var staticRenderFns = [
                                       { staticClass: "mdc-list-item__text" },
                                       [
                                         _vm._v(
-                                          "\n                                        Item\n                                    "
+                                          "\n                                        " +
+                                            _vm._s(municipio.nom) +
+                                            "\n                                    "
                                         ),
                                       ]
                                     ),
                                   ]
-                                ),
-                              ]
-                            ),
-                          ]
-                        ),
-                      ]
-                    ),
-                  ]
+                                )
+                              }),
+                            ],
+                            2
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "carta-de-llamada-datos-indicente-flex-col-3" },
+            [
+              _c(
+                "div",
+                { staticClass: "carta-de-llamada-datos-indicente-flex-row-3" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "carta-de-llamada-datos-indicente-flex-col-4",
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "carta-de-llamada-datos-indicente-nota-comun",
+                        },
+                        [
+                          _c(
+                            "label",
+                            {
+                              staticClass:
+                                "mdc-text-field mdc-text-field--filled",
+                              attrs: { id: "notaComun" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-text-field__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass: "mdc-floating-label",
+                                  attrs: { id: "notaComunLabel" },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                    Nota Común\n                                "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.datos_personales.notaComun,
+                                    expression: "datos_personales.notaComun",
+                                  },
+                                ],
+                                staticClass: "mdc-text-field__input",
+                                attrs: {
+                                  type: "text",
+                                  "aria-labelledby": "my-label-id",
+                                  name: "notaComun",
+                                  id: "notaComun",
+                                },
+                                domProps: {
+                                  value: _vm.datos_personales.notaComun,
+                                },
+                                on: {
+                                  blur: function ($event) {
+                                    return _vm.setDataPersonal()
+                                  },
+                                  input: function ($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.datos_personales,
+                                      "notaComun",
+                                      $event.target.value
+                                    )
+                                  },
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "mdc-line-ripple" }),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+        ]
+      ),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "carta-de-llamada-datos-indicente-flex-row" },
+      [
+        _c(
+          "div",
+          { staticClass: "carta-de-llamada-datos-indicente-flex-col" },
+          [
+            _c(
+              "h1",
+              {
+                staticClass:
+                  "carta-de-llamada-datos-indicente-title valign-text-middle gothica1-normal-black-28px",
+              },
+              [
+                _vm._v(
+                  "\n                    Carta de llamada\n                "
                 ),
               ]
             ),
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "carta-de-llamada-datos-indicente-flex-col-3" },
+              {
+                staticClass:
+                  "carta-de-llamada-datos-indicente-datos-del-interlocutor valign-text-middle gothica1-normal-black-21px",
+              },
               [
-                _c(
-                  "div",
-                  {
-                    staticClass: "carta-de-llamada-datos-indicente-flex-row-3",
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "carta-de-llamada-datos-indicente-flex-col-4",
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "carta-de-llamada-datos-indicente-nota-comun",
-                          },
-                          [
-                            _c(
-                              "label",
-                              {
-                                staticClass:
-                                  "mdc-text-field mdc-text-field--filled",
-                                attrs: { id: "notaComun" },
-                              },
-                              [
-                                _c("span", {
-                                  staticClass: "mdc-text-field__ripple",
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass: "mdc-floating-label",
-                                    attrs: { id: "notaComunLabel" },
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    Nota Común\n                                "
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c("input", {
-                                  staticClass: "mdc-text-field__input",
-                                  attrs: {
-                                    type: "text",
-                                    id: "input-NotaComun",
-                                    "aria-labelledby": "my-label-id",
-                                  },
-                                }),
-                                _vm._v(" "),
-                                _c("span", { staticClass: "mdc-line-ripple" }),
-                              ]
-                            ),
-                          ]
-                        ),
-                      ]
-                    ),
-                  ]
+                _vm._v(
+                  "\n                    Datos del interlocutor\n                "
                 ),
               ]
             ),
           ]
         ),
-      ]),
-    ])
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "mdc-select__anchor custom-enhanced-select-width",
+        attrs: {
+          role: "button",
+          "aria-haspopup": "listbox",
+          "aria-expanded": "false",
+        },
+      },
+      [
+        _c("span", { staticClass: "mdc-select__ripple" }),
+        _vm._v(" "),
+        _c(
+          "span",
+          { staticClass: "mdc-floating-label", attrs: { id: "demo-label" } },
+          [
+            _vm._v(
+              "\n                                Municipio\n                            "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__selected-text-container" }, [
+          _c("span", {
+            staticClass: "mdc-select__selected-text",
+            attrs: { id: "demo-selected-text" },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+          _c(
+            "span",
+            {
+              staticClass: "mdc-select__dropdown-icon-inactive material-icons",
+            },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_down\n                                "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "mdc-select__dropdown-icon-active material-icons" },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_up\n                                "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-line-ripple" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "li",
+      {
+        staticClass: "mdc-list-item",
+        attrs: { "data-value": "Item", role: "option" },
+      },
+      [
+        _c("span", { staticClass: "mdc-list-item__ripple" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-list-item__text" }),
+      ]
+    )
   },
 ]
 render._withStripped = true
@@ -31396,29 +31630,15 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "container-center-horizontal" }, [
-        _c(
-          "div",
-          { staticClass: "carta-de-llamada-datos-personales-flex-row" },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "carta-de-llamada-datos-personales-datos-del-interlocutor valign-text-middle gothica1-normal-black-21px",
-              },
-              [_vm._v("\n                Datos del incidente\n            ")]
-            ),
-          ]
-        ),
+  return _c("div", [
+    _c(
+      "div",
+      {
+        staticClass:
+          "carta-de-llamada-datos-personales-container-center-horizontal",
+      },
+      [
+        _vm._m(0),
         _vm._v(" "),
         _c(
           "div",
@@ -31428,147 +31648,6 @@ var staticRenderFns = [
               "div",
               { staticClass: "carta-de-llamada-datos-personales-flex-col" },
               [
-                _c(
-                  "div",
-                  { staticClass: "carta-de-llamada-datos-personales-comarca" },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "mdc-select mdc-select--filled demo-width-class",
-                        attrs: { "data-id": "anima-widget" },
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "mdc-select__anchor custom-enhanced-select-width",
-                            attrs: {
-                              role: "button",
-                              "aria-haspopup": "listbox",
-                              "aria-expanded": "false",
-                            },
-                          },
-                          [
-                            _c("span", { staticClass: "mdc-select__ripple" }),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass: "mdc-floating-label",
-                                attrs: { id: "demo-label" },
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                Comarca\n                            "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass:
-                                  "mdc-select__selected-text-container",
-                              },
-                              [
-                                _c("span", {
-                                  staticClass: "mdc-select__selected-text",
-                                  attrs: { id: "demo-selected-text" },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              { staticClass: "mdc-select__dropdown-icon" },
-                              [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-inactive material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_down\n                                "
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-active material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_up\n                                "
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "mdc-line-ripple" }),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                          },
-                          [
-                            _c(
-                              "ul",
-                              {
-                                staticClass: "mdc-list",
-                                attrs: {
-                                  id: "select_dropdown",
-                                  role: "listbox",
-                                  "aria-label": "listbox",
-                                },
-                              },
-                              [
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "Item",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                        Item\n                                    "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                          ]
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
                 _c(
                   "div",
                   {
@@ -31583,82 +31662,7 @@ var staticRenderFns = [
                         attrs: { "data-id": "anima-widget" },
                       },
                       [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "mdc-select__anchor custom-enhanced-select-width",
-                            attrs: {
-                              role: "button",
-                              "aria-haspopup": "listbox",
-                              "aria-expanded": "false",
-                            },
-                          },
-                          [
-                            _c("span", { staticClass: "mdc-select__ripple" }),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass: "mdc-floating-label",
-                                attrs: { id: "demo-label" },
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                Provincia\n                            "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass:
-                                  "mdc-select__selected-text-container",
-                              },
-                              [
-                                _c("span", {
-                                  staticClass: "mdc-select__selected-text",
-                                  attrs: { id: "demo-selected-text" },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              { staticClass: "mdc-select__dropdown-icon" },
-                              [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-inactive material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_down\n                                "
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-active material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_up\n                                "
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "mdc-line-ripple" }),
-                          ]
-                        ),
+                        _vm._m(1),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -31678,32 +31682,116 @@ var staticRenderFns = [
                                 },
                               },
                               [
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "Item",
-                                      role: "option",
+                                _vm._m(2),
+                                _vm._v(" "),
+                                _vm._l(_vm.provincias, function (provincia) {
+                                  return _c(
+                                    "li",
+                                    {
+                                      key: provincia.id,
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "Item",
+                                        role: "option",
+                                        value: provincia.id,
+                                      },
                                     },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                        Item\n                                    "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                              ]
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(provincia.nom) +
+                                              "\n                                    "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  )
+                                }),
+                              ],
+                              2
+                            ),
+                          ]
+                        ),
+                      ]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "carta-de-llamada-datos-personales-comarca" },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "mdc-select mdc-select--filled demo-width-class",
+                        attrs: { "data-id": "anima-widget" },
+                      },
+                      [
+                        _vm._m(3),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                          },
+                          [
+                            _c(
+                              "ul",
+                              {
+                                staticClass: "mdc-list",
+                                attrs: {
+                                  id: "select_dropdown",
+                                  role: "listbox",
+                                  "aria-label": "listbox",
+                                },
+                              },
+                              [
+                                _vm._m(4),
+                                _vm._v(" "),
+                                _vm._l(_vm.comarcas, function (comarca) {
+                                  return _c(
+                                    "li",
+                                    {
+                                      key: comarca.id,
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "Item",
+                                        role: "option",
+                                        value: comarca.id,
+                                      },
+                                    },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(comarca.nom) +
+                                              "\n                                    "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  )
+                                }),
+                              ],
+                              2
                             ),
                           ]
                         ),
@@ -31726,82 +31814,7 @@ var staticRenderFns = [
                         attrs: { "data-id": "anima-widget" },
                       },
                       [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "mdc-select__anchor custom-enhanced-select-width",
-                            attrs: {
-                              role: "button",
-                              "aria-haspopup": "listbox",
-                              "aria-expanded": "false",
-                            },
-                          },
-                          [
-                            _c("span", { staticClass: "mdc-select__ripple" }),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass: "mdc-floating-label",
-                                attrs: { id: "demo-label" },
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                Municipio\n                            "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass:
-                                  "mdc-select__selected-text-container",
-                              },
-                              [
-                                _c("span", {
-                                  staticClass: "mdc-select__selected-text",
-                                  attrs: { id: "demo-selected-text" },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              { staticClass: "mdc-select__dropdown-icon" },
-                              [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-inactive material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_down\n                                "
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-active material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_up\n                                "
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "mdc-line-ripple" }),
-                          ]
-                        ),
+                        _vm._m(5),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -31821,32 +31834,41 @@ var staticRenderFns = [
                                 },
                               },
                               [
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "Item",
-                                      role: "option",
+                                _vm._m(6),
+                                _vm._v(" "),
+                                _vm._l(_vm.municipios, function (municipio) {
+                                  return _c(
+                                    "li",
+                                    {
+                                      key: municipio.id,
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "Item",
+                                        role: "option",
+                                        value: municipio.id,
+                                      },
                                     },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                        Item\n                                    "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                              ]
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(municipio.nom) +
+                                              "\n                                    "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  )
+                                }),
+                              ],
+                              2
                             ),
                           ]
                         ),
@@ -31875,82 +31897,7 @@ var staticRenderFns = [
                           "mdc-select mdc-select--filled demo-width-class",
                       },
                       [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "mdc-select__anchor custom-enhanced-select-width",
-                            attrs: {
-                              role: "button",
-                              "aria-haspopup": "listbox",
-                              "aria-expanded": "false",
-                            },
-                          },
-                          [
-                            _c("span", { staticClass: "mdc-select__ripple" }),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass: "mdc-floating-label",
-                                attrs: { id: "demo-label" },
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                Tipo de Localización\n                            "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass:
-                                  "mdc-select__selected-text-container",
-                              },
-                              [
-                                _c("span", {
-                                  staticClass: "mdc-select__selected-text",
-                                  attrs: { id: "demo-selected-text" },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              { staticClass: "mdc-select__dropdown-icon" },
-                              [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-inactive material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_down\n                                "
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-active material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_up\n                                "
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "mdc-line-ripple" }),
-                          ]
-                        ),
+                        _vm._m(7),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -31970,136 +31917,46 @@ var staticRenderFns = [
                                 },
                               },
                               [
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "Fuera de Catalunya",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                        Fuera de Catalunya\n                                    "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
+                                _vm._m(8),
                                 _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "Población",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
+                                _vm._l(
+                                  _vm.tiposLocalizaciones,
+                                  function (tiposLocalizacion) {
+                                    return _c(
+                                      "li",
+                                      {
+                                        key: tiposLocalizacion.id,
+                                        staticClass: "mdc-list-item",
+                                        attrs: {
+                                          "data-value": "Item",
+                                          role: "option",
+                                          value: tiposLocalizacion.id,
+                                        },
+                                      },
                                       [
-                                        _vm._v(
-                                          "\n                                        Población\n                                    "
+                                        _c("span", {
+                                          staticClass: "mdc-list-item__ripple",
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          {
+                                            staticClass: "mdc-list-item__text",
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(tiposLocalizacion.nom) +
+                                                "\n                                    "
+                                            ),
+                                          ]
                                         ),
                                       ]
-                                    ),
-                                  ]
+                                    )
+                                  }
                                 ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "Carretera",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                        Carretera\n                                    "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "Calle",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                        Calle\n                                    "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "Punto Singular",
-                                      role: "option",
-                                    },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [
-                                        _vm._v(
-                                          "\n                                        Punto Singular\n                                    "
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                              ]
+                              ],
+                              2
                             ),
                           ]
                         ),
@@ -32108,1140 +31965,31 @@ var staticRenderFns = [
                   ]
                 ),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-referencia-poblacion",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Referencia\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                _vm._m(9),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-provincia-fuera",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Provincia\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                _vm._m(10),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-referencia-fuera",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Referencia\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                _vm._m(11),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-tipo-de-via",
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select mdc-select--filled demo-width-class",
-                        },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "mdc-select__anchor custom-enhanced-select-width",
-                              attrs: {
-                                role: "button",
-                                "aria-haspopup": "listbox",
-                                "aria-expanded": "false",
-                              },
-                            },
-                            [
-                              _c("span", { staticClass: "mdc-select__ripple" }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass: "mdc-floating-label",
-                                  attrs: { id: "demo-label" },
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    Tipo de via\n                                "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__selected-text-container",
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-select__selected-text",
-                                    attrs: { id: "demo-selected-text" },
-                                  }),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                { staticClass: "mdc-select__dropdown-icon" },
-                                [
-                                  _c(
-                                    "span",
-                                    {
-                                      staticClass:
-                                        "mdc-select__dropdown-icon-inactive material-icons",
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                        arrow_drop_down\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    {
-                                      staticClass:
-                                        "mdc-select__dropdown-icon-active material-icons",
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                        arrow_drop_up\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "mdc-line-ripple" }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                            },
-                            [
-                              _c(
-                                "ul",
-                                {
-                                  staticClass: "mdc-list",
-                                  attrs: {
-                                    id: "select_dropdown",
-                                    role: "listbox",
-                                    "aria-label": "listbox",
-                                  },
-                                },
-                                [
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                            #\n                                        "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                            #\n                                        "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                            #\n                                        "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                            #\n                                        "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                            #\n                                        "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                _vm._m(12),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-nombre-via-calle",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Nombre de la via\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                _vm._m(13),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-nombre-via-carretera",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Nombre de la via\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                _vm._m(14),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-punto-kilometrico",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Punto kilometrico\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                _vm._m(15),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-nombre-punto-singular",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Nombre del punto singular\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                _vm._m(16),
                 _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-referencia-punto-singular",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Referencia\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
+                _vm._m(17),
               ]
             ),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "carta-de-llamada-datos-personales-flex-col-2" },
-              [
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-numero-portal",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Numero del portal\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "carta-de-llamada-datos-personales-escalera",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Escalera\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    { staticClass: "carta-de-llamada-datos-personales-piso" },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Piso\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-sentido-circulacion",
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "mdc-select mdc-select--filled demo-width-class",
-                        },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "mdc-select__anchor custom-enhanced-select-width",
-                              attrs: {
-                                role: "button",
-                                "aria-haspopup": "listbox",
-                                "aria-expanded": "false",
-                              },
-                            },
-                            [
-                              _c("span", { staticClass: "mdc-select__ripple" }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass: "mdc-floating-label",
-                                  attrs: { id: "demo-label" },
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    Sentido de la circulación\n                                "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "mdc-select__selected-text-container",
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "mdc-select__selected-text",
-                                    attrs: { id: "demo-selected-text" },
-                                  }),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                { staticClass: "mdc-select__dropdown-icon" },
-                                [
-                                  _c(
-                                    "span",
-                                    {
-                                      staticClass:
-                                        "mdc-select__dropdown-icon-inactive material-icons",
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                        arrow_drop_down\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    {
-                                      staticClass:
-                                        "mdc-select__dropdown-icon-active material-icons",
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                        arrow_drop_up\n                                    "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "mdc-line-ripple" }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
-                            },
-                            [
-                              _c(
-                                "ul",
-                                {
-                                  staticClass: "mdc-list",
-                                  attrs: {
-                                    id: "select_dropdown",
-                                    role: "listbox",
-                                    "aria-label": "listbox",
-                                  },
-                                },
-                                [
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                            #\n                                        "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                            #\n                                        "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                            #\n                                        "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                            #\n                                        "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "li",
-                                    {
-                                      staticClass: "mdc-list-item",
-                                      attrs: {
-                                        "data-value": "#",
-                                        role: "option",
-                                      },
-                                    },
-                                    [
-                                      _c("span", {
-                                        staticClass: "mdc-list-item__ripple",
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "mdc-list-item__text" },
-                                        [
-                                          _vm._v(
-                                            "\n                                            #\n                                        "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-referencia-carretera",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Referencia\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-              ]
-            ),
+            _vm._m(18),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "carta-de-llamada-datos-personales-flex-col-3" },
-              [
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    { staticClass: "carta-de-llamada-datos-personales-puerta" },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Puerta\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("span", { attrs: { hidden: "" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "carta-de-llamada-datos-personales-referencia-calle",
-                    },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mdc-text-field mdc-text-field--filled",
-                        },
-                        [
-                          _c("span", { staticClass: "mdc-text-field__ripple" }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "mdc-floating-label",
-                              attrs: { id: "my-label-id" },
-                            },
-                            [
-                              _vm._v(
-                                "\n                                Referencia\n                            "
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "mdc-text-field__input",
-                            attrs: {
-                              type: "text",
-                              "aria-labelledby": "my-label-id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "mdc-line-ripple" }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-              ]
-            ),
+            _vm._m(19),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "carta-de-llamada-datos-personales-flex-col-4" },
-              [
-                _c("img", {
-                  staticClass:
-                    "carta-de-llamada-datos-personales-separation-down",
-                  attrs: {
-                    src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg",
-                  },
-                }),
-              ]
-            ),
+            _vm._m(20),
             _vm._v(" "),
             _c(
               "div",
@@ -33261,82 +32009,7 @@ var staticRenderFns = [
                         attrs: { "data-id": "anima-widget" },
                       },
                       [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "mdc-select__anchor custom-enhanced-select-width",
-                            attrs: {
-                              role: "button",
-                              "aria-haspopup": "listbox",
-                              "aria-expanded": "false",
-                            },
-                          },
-                          [
-                            _c("span", { staticClass: "mdc-select__ripple" }),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass: "mdc-floating-label",
-                                attrs: { id: "demo-label" },
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                Incidente\n                            "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass:
-                                  "mdc-select__selected-text-container",
-                              },
-                              [
-                                _c("span", {
-                                  staticClass: "mdc-select__selected-text",
-                                  attrs: { id: "demo-selected-text" },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              { staticClass: "mdc-select__dropdown-icon" },
-                              [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-inactive material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_down\n                                "
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-active material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_up\n                                "
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "mdc-line-ripple" }),
-                          ]
-                        ),
+                        _vm._m(21),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -33356,28 +32029,41 @@ var staticRenderFns = [
                                 },
                               },
                               [
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "X",
-                                      role: "option",
+                                _vm._m(22),
+                                _vm._v(" "),
+                                _vm._l(_vm.incidentes, function (incidente) {
+                                  return _c(
+                                    "li",
+                                    {
+                                      key: incidente.id,
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "Item",
+                                        role: "option",
+                                        value: incidente.id,
+                                      },
                                     },
-                                  },
-                                  [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [_vm._v("X")]
-                                    ),
-                                  ]
-                                ),
-                              ]
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(incidente.nom) +
+                                              "\n                                    "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  )
+                                }),
+                              ],
+                              2
                             ),
                           ]
                         ),
@@ -33401,82 +32087,7 @@ var staticRenderFns = [
                         attrs: { "data-id": "anima-widget" },
                       },
                       [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "mdc-select__anchor custom-enhanced-select-width",
-                            attrs: {
-                              role: "button",
-                              "aria-haspopup": "listbox",
-                              "aria-expanded": "false",
-                            },
-                          },
-                          [
-                            _c("span", { staticClass: "mdc-select__ripple" }),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass: "mdc-floating-label",
-                                attrs: { id: "demo-label" },
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                Tipos de Incidente\n                            "
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              {
-                                staticClass:
-                                  "mdc-select__selected-text-container",
-                              },
-                              [
-                                _c("span", {
-                                  staticClass: "mdc-select__selected-text",
-                                  attrs: { id: "demo-selected-text" },
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              { staticClass: "mdc-select__dropdown-icon" },
-                              [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-inactive material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_down\n                                "
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "mdc-select__dropdown-icon-active material-icons",
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    arrow_drop_up\n                                "
-                                    ),
-                                  ]
-                                ),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "mdc-line-ripple" }),
-                          ]
-                        ),
+                        _vm._m(23),
                         _vm._v(" "),
                         _c(
                           "div",
@@ -33496,24 +32107,1258 @@ var staticRenderFns = [
                                 },
                               },
                               [
-                                _c(
-                                  "li",
-                                  {
-                                    staticClass: "mdc-list-item",
-                                    attrs: {
-                                      "data-value": "X",
-                                      role: "option",
+                                _vm._m(24),
+                                _vm._v(" "),
+                                _vm._l(_vm.tIncidentes, function (tIncidente) {
+                                  return _c(
+                                    "li",
+                                    {
+                                      key: tIncidente.id,
+                                      staticClass: "mdc-list-item",
+                                      attrs: {
+                                        "data-value": "Item",
+                                        role: "option",
+                                        value: tIncidente.id,
+                                      },
                                     },
-                                  },
+                                    [
+                                      _c("span", {
+                                        staticClass: "mdc-list-item__ripple",
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "mdc-list-item__text" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(tIncidente.nom) +
+                                              "\n                                    "
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  )
+                                }),
+                              ],
+                              2
+                            ),
+                          ]
+                        ),
+                      ]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(25),
+                _vm._v(" "),
+                _vm._m(26),
+              ]
+            ),
+          ]
+        ),
+      ]
+    ),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "carta-de-llamada-datos-personales-flex-row" },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "carta-de-llamada-datos-personales-datos-del-interlocutor valign-text-middle gothica1-normal-black-21px",
+          },
+          [_vm._v("\n                Datos del incidente\n            ")]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "mdc-select__anchor custom-enhanced-select-width",
+        attrs: {
+          role: "button",
+          "aria-haspopup": "listbox",
+          "aria-expanded": "false",
+        },
+      },
+      [
+        _c("span", { staticClass: "mdc-select__ripple" }),
+        _vm._v(" "),
+        _c(
+          "span",
+          { staticClass: "mdc-floating-label", attrs: { id: "demo-label" } },
+          [
+            _vm._v(
+              "\n                                Provincia\n                            "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__selected-text-container" }, [
+          _c("span", {
+            staticClass: "mdc-select__selected-text",
+            attrs: { id: "demo-selected-text" },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+          _c(
+            "span",
+            {
+              staticClass: "mdc-select__dropdown-icon-inactive material-icons",
+            },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_down\n                                "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "mdc-select__dropdown-icon-active material-icons" },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_up\n                                "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-line-ripple" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "li",
+      {
+        staticClass: "mdc-list-item",
+        attrs: { "data-value": "Item", role: "option" },
+      },
+      [
+        _c("span", { staticClass: "mdc-list-item__ripple" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-list-item__text" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "mdc-select__anchor custom-enhanced-select-width",
+        attrs: {
+          role: "button",
+          "aria-haspopup": "listbox",
+          "aria-expanded": "false",
+        },
+      },
+      [
+        _c("span", { staticClass: "mdc-select__ripple" }),
+        _vm._v(" "),
+        _c(
+          "span",
+          { staticClass: "mdc-floating-label", attrs: { id: "demo-label" } },
+          [
+            _vm._v(
+              "\n                                Comarca\n                            "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__selected-text-container" }, [
+          _c("span", {
+            staticClass: "mdc-select__selected-text",
+            attrs: { id: "demo-selected-text" },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+          _c(
+            "span",
+            {
+              staticClass: "mdc-select__dropdown-icon-inactive material-icons",
+            },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_down\n                                "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "mdc-select__dropdown-icon-active material-icons" },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_up\n                                "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-line-ripple" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "li",
+      {
+        staticClass: "mdc-list-item",
+        attrs: { "data-value": "Item", role: "option" },
+      },
+      [
+        _c("span", { staticClass: "mdc-list-item__ripple" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-list-item__text" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "mdc-select__anchor custom-enhanced-select-width",
+        attrs: {
+          role: "button",
+          "aria-haspopup": "listbox",
+          "aria-expanded": "false",
+        },
+      },
+      [
+        _c("span", { staticClass: "mdc-select__ripple" }),
+        _vm._v(" "),
+        _c(
+          "span",
+          { staticClass: "mdc-floating-label", attrs: { id: "demo-label" } },
+          [
+            _vm._v(
+              "\n                                Municipio\n                            "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__selected-text-container" }, [
+          _c("span", {
+            staticClass: "mdc-select__selected-text",
+            attrs: { id: "demo-selected-text" },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+          _c(
+            "span",
+            {
+              staticClass: "mdc-select__dropdown-icon-inactive material-icons",
+            },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_down\n                                "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "mdc-select__dropdown-icon-active material-icons" },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_up\n                                "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-line-ripple" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "li",
+      {
+        staticClass: "mdc-list-item",
+        attrs: { "data-value": "Item", role: "option" },
+      },
+      [
+        _c("span", { staticClass: "mdc-list-item__ripple" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-list-item__text" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "mdc-select__anchor custom-enhanced-select-width",
+        attrs: {
+          role: "button",
+          "aria-haspopup": "listbox",
+          "aria-expanded": "false",
+        },
+      },
+      [
+        _c("span", { staticClass: "mdc-select__ripple" }),
+        _vm._v(" "),
+        _c(
+          "span",
+          { staticClass: "mdc-floating-label", attrs: { id: "demo-label" } },
+          [
+            _vm._v(
+              "\n                                Tipo de Localización\n                            "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__selected-text-container" }, [
+          _c("span", {
+            staticClass: "mdc-select__selected-text",
+            attrs: { id: "demo-selected-text" },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+          _c(
+            "span",
+            {
+              staticClass: "mdc-select__dropdown-icon-inactive material-icons",
+            },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_down\n                                "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "mdc-select__dropdown-icon-active material-icons" },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_up\n                                "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-line-ripple" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "li",
+      {
+        staticClass: "mdc-list-item",
+        attrs: { "data-value": "Fuera de Catalunya", role: "option" },
+      },
+      [
+        _c("span", { staticClass: "mdc-list-item__ripple" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-list-item__text" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        {
+          staticClass: "carta-de-llamada-datos-personales-referencia-poblacion",
+        },
+        [
+          _c(
+            "label",
+            { staticClass: "mdc-text-field mdc-text-field--filled" },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "my-label-id" },
+                },
+                [
+                  _vm._v(
+                    "\n                                Referencia\n                            "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        { staticClass: "carta-de-llamada-datos-personales-provincia-fuera" },
+        [
+          _c(
+            "label",
+            { staticClass: "mdc-text-field mdc-text-field--filled" },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "my-label-id" },
+                },
+                [
+                  _vm._v(
+                    "\n                                Provincia\n                            "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        { staticClass: "carta-de-llamada-datos-personales-referencia-fuera" },
+        [
+          _c(
+            "label",
+            { staticClass: "mdc-text-field mdc-text-field--filled" },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "my-label-id" },
+                },
+                [
+                  _vm._v(
+                    "\n                                Referencia\n                            "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        { staticClass: "carta-de-llamada-datos-personales-tipo-de-via" },
+        [
+          _c(
+            "div",
+            { staticClass: "mdc-select mdc-select--filled demo-width-class" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "mdc-select__anchor custom-enhanced-select-width",
+                  attrs: {
+                    role: "button",
+                    "aria-haspopup": "listbox",
+                    "aria-expanded": "false",
+                  },
+                },
+                [
+                  _c("span", { staticClass: "mdc-select__ripple" }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass: "mdc-floating-label",
+                      attrs: { id: "demo-label" },
+                    },
+                    [
+                      _vm._v(
+                        "\n                                    Tipo de via\n                                "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "mdc-select__selected-text-container" },
+                    [
+                      _c("span", {
+                        staticClass: "mdc-select__selected-text",
+                        attrs: { id: "demo-selected-text" },
+                      }),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "mdc-select__dropdown-icon-inactive material-icons",
+                      },
+                      [
+                        _vm._v(
+                          "\n                                        arrow_drop_down\n                                    "
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "mdc-select__dropdown-icon-active material-icons",
+                      },
+                      [
+                        _vm._v(
+                          "\n                                        arrow_drop_up\n                                    "
+                        ),
+                      ]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-line-ripple" }),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                },
+                [
+                  _c(
+                    "ul",
+                    {
+                      staticClass: "mdc-list",
+                      attrs: {
+                        id: "select_dropdown",
+                        role: "listbox",
+                        "aria-label": "listbox",
+                      },
+                    },
+                    [
+                      _c(
+                        "li",
+                        {
+                          staticClass: "mdc-list-item",
+                          attrs: { "data-value": "#", role: "option" },
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-list-item__ripple" }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-list-item__text" }, [
+                            _vm._v(
+                              "\n                                            #\n                                        "
+                            ),
+                          ]),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        {
+                          staticClass: "mdc-list-item",
+                          attrs: { "data-value": "#", role: "option" },
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-list-item__ripple" }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-list-item__text" }, [
+                            _vm._v(
+                              "\n                                            #\n                                        "
+                            ),
+                          ]),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        {
+                          staticClass: "mdc-list-item",
+                          attrs: { "data-value": "#", role: "option" },
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-list-item__ripple" }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-list-item__text" }, [
+                            _vm._v(
+                              "\n                                            #\n                                        "
+                            ),
+                          ]),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        {
+                          staticClass: "mdc-list-item",
+                          attrs: { "data-value": "#", role: "option" },
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-list-item__ripple" }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-list-item__text" }, [
+                            _vm._v(
+                              "\n                                            #\n                                        "
+                            ),
+                          ]),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        {
+                          staticClass: "mdc-list-item",
+                          attrs: { "data-value": "#", role: "option" },
+                        },
+                        [
+                          _c("span", { staticClass: "mdc-list-item__ripple" }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "mdc-list-item__text" }, [
+                            _vm._v(
+                              "\n                                            #\n                                        "
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        { staticClass: "carta-de-llamada-datos-personales-nombre-via-calle" },
+        [
+          _c(
+            "label",
+            { staticClass: "mdc-text-field mdc-text-field--filled" },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "my-label-id" },
+                },
+                [
+                  _vm._v(
+                    "\n                                Nombre de la via\n                            "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        {
+          staticClass: "carta-de-llamada-datos-personales-nombre-via-carretera",
+        },
+        [
+          _c(
+            "label",
+            { staticClass: "mdc-text-field mdc-text-field--filled" },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "my-label-id" },
+                },
+                [
+                  _vm._v(
+                    "\n                                Nombre de la via\n                            "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        { staticClass: "carta-de-llamada-datos-personales-punto-kilometrico" },
+        [
+          _c(
+            "label",
+            { staticClass: "mdc-text-field mdc-text-field--filled" },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "my-label-id" },
+                },
+                [
+                  _vm._v(
+                    "\n                                Punto kilometrico\n                            "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "carta-de-llamada-datos-personales-nombre-punto-singular",
+        },
+        [
+          _c(
+            "label",
+            { staticClass: "mdc-text-field mdc-text-field--filled" },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "my-label-id" },
+                },
+                [
+                  _vm._v(
+                    "\n                                Nombre del punto singular\n                            "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "carta-de-llamada-datos-personales-referencia-punto-singular",
+        },
+        [
+          _c(
+            "label",
+            { staticClass: "mdc-text-field mdc-text-field--filled" },
+            [
+              _c("span", { staticClass: "mdc-text-field__ripple" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass: "mdc-floating-label",
+                  attrs: { id: "my-label-id" },
+                },
+                [
+                  _vm._v(
+                    "\n                                Referencia\n                            "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "mdc-text-field__input",
+                attrs: { type: "text", "aria-labelledby": "my-label-id" },
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-line-ripple" }),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        { staticClass: "carta-de-llamada-datos-personales-flex-col-2" },
+        [
+          _c("span", { attrs: { hidden: "" } }, [
+            _c(
+              "div",
+              {
+                staticClass: "carta-de-llamada-datos-personales-numero-portal",
+              },
+              [
+                _c(
+                  "label",
+                  { staticClass: "mdc-text-field mdc-text-field--filled" },
+                  [
+                    _c("span", { staticClass: "mdc-text-field__ripple" }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "mdc-floating-label",
+                        attrs: { id: "my-label-id" },
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    Numero del portal\n                                "
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "mdc-text-field__input",
+                      attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-line-ripple" }),
+                  ]
+                ),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("span", { attrs: { hidden: "" } }, [
+            _c(
+              "div",
+              { staticClass: "carta-de-llamada-datos-personales-escalera" },
+              [
+                _c(
+                  "label",
+                  { staticClass: "mdc-text-field mdc-text-field--filled" },
+                  [
+                    _c("span", { staticClass: "mdc-text-field__ripple" }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "mdc-floating-label",
+                        attrs: { id: "my-label-id" },
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    Escalera\n                                "
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "mdc-text-field__input",
+                      attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-line-ripple" }),
+                  ]
+                ),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("span", { attrs: { hidden: "" } }, [
+            _c(
+              "div",
+              { staticClass: "carta-de-llamada-datos-personales-piso" },
+              [
+                _c(
+                  "label",
+                  { staticClass: "mdc-text-field mdc-text-field--filled" },
+                  [
+                    _c("span", { staticClass: "mdc-text-field__ripple" }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "mdc-floating-label",
+                        attrs: { id: "my-label-id" },
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    Piso\n                                "
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "mdc-text-field__input",
+                      attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-line-ripple" }),
+                  ]
+                ),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("span", { attrs: { hidden: "" } }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "carta-de-llamada-datos-personales-sentido-circulacion",
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "mdc-select mdc-select--filled demo-width-class",
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "mdc-select__anchor custom-enhanced-select-width",
+                        attrs: {
+                          role: "button",
+                          "aria-haspopup": "listbox",
+                          "aria-expanded": "false",
+                        },
+                      },
+                      [
+                        _c("span", { staticClass: "mdc-select__ripple" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-floating-label",
+                            attrs: { id: "demo-label" },
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        Sentido de la circulación\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "mdc-select__selected-text-container",
+                          },
+                          [
+                            _c("span", {
+                              staticClass: "mdc-select__selected-text",
+                              attrs: { id: "demo-selected-text" },
+                            }),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          { staticClass: "mdc-select__dropdown-icon" },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "mdc-select__dropdown-icon-inactive material-icons",
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                            arrow_drop_down\n                                        "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "mdc-select__dropdown-icon-active material-icons",
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                            arrow_drop_up\n                                        "
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "mdc-line-ripple" }),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth",
+                      },
+                      [
+                        _c(
+                          "ul",
+                          {
+                            staticClass: "mdc-list",
+                            attrs: {
+                              id: "select_dropdown",
+                              role: "listbox",
+                              "aria-label": "listbox",
+                            },
+                          },
+                          [
+                            _c(
+                              "li",
+                              {
+                                staticClass: "mdc-list-item",
+                                attrs: { "data-value": "#", role: "option" },
+                              },
+                              [
+                                _c("span", {
+                                  staticClass: "mdc-list-item__ripple",
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "mdc-list-item__text" },
                                   [
-                                    _c("span", {
-                                      staticClass: "mdc-list-item__ripple",
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "mdc-list-item__text" },
-                                      [_vm._v("X")]
+                                    _vm._v(
+                                      "\n                                                #\n                                            "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "li",
+                              {
+                                staticClass: "mdc-list-item",
+                                attrs: { "data-value": "#", role: "option" },
+                              },
+                              [
+                                _c("span", {
+                                  staticClass: "mdc-list-item__ripple",
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "mdc-list-item__text" },
+                                  [
+                                    _vm._v(
+                                      "\n                                                #\n                                            "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "li",
+                              {
+                                staticClass: "mdc-list-item",
+                                attrs: { "data-value": "#", role: "option" },
+                              },
+                              [
+                                _c("span", {
+                                  staticClass: "mdc-list-item__ripple",
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "mdc-list-item__text" },
+                                  [
+                                    _vm._v(
+                                      "\n                                                #\n                                            "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "li",
+                              {
+                                staticClass: "mdc-list-item",
+                                attrs: { "data-value": "#", role: "option" },
+                              },
+                              [
+                                _c("span", {
+                                  staticClass: "mdc-list-item__ripple",
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "mdc-list-item__text" },
+                                  [
+                                    _vm._v(
+                                      "\n                                                #\n                                            "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "li",
+                              {
+                                staticClass: "mdc-list-item",
+                                attrs: { "data-value": "#", role: "option" },
+                              },
+                              [
+                                _c("span", {
+                                  staticClass: "mdc-list-item__ripple",
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "mdc-list-item__text" },
+                                  [
+                                    _vm._v(
+                                      "\n                                                #\n                                            "
                                     ),
                                   ]
                                 ),
@@ -33525,100 +33370,405 @@ var staticRenderFns = [
                     ),
                   ]
                 ),
-                _vm._v(" "),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("span", { attrs: { hidden: "" } }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "carta-de-llamada-datos-personales-referencia-carretera",
+              },
+              [
                 _c(
-                  "div",
-                  {
-                    staticClass: "carta-de-llamada-datos-personales-mapa-up",
-                    attrs: { id: "mapa-up" },
-                  },
+                  "label",
+                  { staticClass: "mdc-text-field mdc-text-field--filled" },
                   [
+                    _c("span", { staticClass: "mdc-text-field__ripple" }),
+                    _vm._v(" "),
                     _c(
-                      "button",
+                      "span",
                       {
-                        staticClass: "mdc-button mdc-button--raised",
-                        attrs: { id: "mapa-up" },
+                        staticClass: "mdc-floating-label",
+                        attrs: { id: "my-label-id" },
                       },
                       [
-                        _c("span", { staticClass: "mdc-button__ripple" }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "mdc-button__label" }, [
-                          _vm._v(
-                            "\n                            Mapa\n                        "
-                          ),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "carta-de-llamada-datos-personales-flex-row-2",
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "carta-de-llamada-datos-personales-aceptar",
-                        attrs: { id: "aceptar" },
-                      },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "mdc-button mdc-button--raised",
-                            attrs: { id: "aceptar" },
-                          },
-                          [
-                            _c("span", { staticClass: "mdc-button__ripple" }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "mdc-button__label" }, [
-                              _vm._v(
-                                "\n                                Aceptar\n                            "
-                              ),
-                            ]),
-                          ]
+                        _vm._v(
+                          "\n                                    Referencia\n                                "
                         ),
                       ]
                     ),
                     _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "carta-de-llamada-datos-personales-cancelar",
-                        attrs: { id: "cancelar" },
-                      },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "mdc-button mdc-button--raised",
-                            attrs: { id: "cancelar" },
-                          },
-                          [
-                            _c("span", { staticClass: "mdc-button__ripple" }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "mdc-button__label" }, [
-                              _vm._v(
-                                "\n                                Cancelar\n                            "
-                              ),
-                            ]),
-                          ]
-                        ),
-                      ]
-                    ),
+                    _c("input", {
+                      staticClass: "mdc-text-field__input",
+                      attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-line-ripple" }),
                   ]
                 ),
               ]
             ),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { attrs: { hidden: "" } }, [
+      _c(
+        "div",
+        { staticClass: "carta-de-llamada-datos-personales-flex-col-3" },
+        [
+          _c("span", { attrs: { hidden: "" } }, [
+            _c(
+              "div",
+              { staticClass: "carta-de-llamada-datos-personales-puerta" },
+              [
+                _c(
+                  "label",
+                  { staticClass: "mdc-text-field mdc-text-field--filled" },
+                  [
+                    _c("span", { staticClass: "mdc-text-field__ripple" }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "mdc-floating-label",
+                        attrs: { id: "my-label-id" },
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    Puerta\n                                "
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "mdc-text-field__input",
+                      attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-line-ripple" }),
+                  ]
+                ),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("span", { attrs: { hidden: "" } }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "carta-de-llamada-datos-personales-referencia-calle",
+              },
+              [
+                _c(
+                  "label",
+                  { staticClass: "mdc-text-field mdc-text-field--filled" },
+                  [
+                    _c("span", { staticClass: "mdc-text-field__ripple" }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "mdc-floating-label",
+                        attrs: { id: "my-label-id" },
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    Referencia\n                                "
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "mdc-text-field__input",
+                      attrs: { type: "text", "aria-labelledby": "my-label-id" },
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-line-ripple" }),
+                  ]
+                ),
+              ]
+            ),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "carta-de-llamada-datos-personales-flex-col-4" },
+      [
+        _c("img", {
+          staticClass: "carta-de-llamada-datos-personales-separation-down",
+          attrs: {
+            src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6237466bb9b42badfc76f4b9/img/separation-down@2x.svg",
+          },
+        }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "mdc-select__anchor custom-enhanced-select-width",
+        attrs: {
+          role: "button",
+          "aria-haspopup": "listbox",
+          "aria-expanded": "false",
+        },
+      },
+      [
+        _c("span", { staticClass: "mdc-select__ripple" }),
+        _vm._v(" "),
+        _c(
+          "span",
+          { staticClass: "mdc-floating-label", attrs: { id: "demo-label" } },
+          [
+            _vm._v(
+              "\n                                Incidente\n                            "
+            ),
           ]
         ),
-      ]),
-    ])
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__selected-text-container" }, [
+          _c("span", {
+            staticClass: "mdc-select__selected-text",
+            attrs: { id: "demo-selected-text" },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+          _c(
+            "span",
+            {
+              staticClass: "mdc-select__dropdown-icon-inactive material-icons",
+            },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_down\n                                "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "mdc-select__dropdown-icon-active material-icons" },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_up\n                                "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-line-ripple" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "li",
+      {
+        staticClass: "mdc-list-item",
+        attrs: { "data-value": "X", role: "option" },
+      },
+      [
+        _c("span", { staticClass: "mdc-list-item__ripple" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-list-item__text" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "mdc-select__anchor custom-enhanced-select-width",
+        attrs: {
+          role: "button",
+          "aria-haspopup": "listbox",
+          "aria-expanded": "false",
+        },
+      },
+      [
+        _c("span", { staticClass: "mdc-select__ripple" }),
+        _vm._v(" "),
+        _c(
+          "span",
+          { staticClass: "mdc-floating-label", attrs: { id: "demo-label" } },
+          [
+            _vm._v(
+              "\n                                Tipos de Incidente\n                            "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__selected-text-container" }, [
+          _c("span", {
+            staticClass: "mdc-select__selected-text",
+            attrs: { id: "demo-selected-text" },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+          _c(
+            "span",
+            {
+              staticClass: "mdc-select__dropdown-icon-inactive material-icons",
+            },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_down\n                                "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            { staticClass: "mdc-select__dropdown-icon-active material-icons" },
+            [
+              _vm._v(
+                "\n                                    arrow_drop_up\n                                "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-line-ripple" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "li",
+      {
+        staticClass: "mdc-list-item",
+        attrs: { "data-value": "X", role: "option" },
+      },
+      [
+        _c("span", { staticClass: "mdc-list-item__ripple" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "mdc-list-item__text" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "carta-de-llamada-datos-personales-mapa-up",
+        attrs: { id: "mapa-up" },
+      },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "mdc-button mdc-button--raised",
+            attrs: { id: "mapa-up" },
+          },
+          [
+            _c("span", { staticClass: "mdc-button__ripple" }),
+            _vm._v(" "),
+            _c("span", { staticClass: "mdc-button__label" }, [
+              _vm._v(
+                "\n                            Mapa\n                        "
+              ),
+            ]),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "carta-de-llamada-datos-personales-flex-row-2" },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "carta-de-llamada-datos-personales-aceptar",
+            attrs: { id: "aceptar" },
+          },
+          [
+            _c(
+              "button",
+              {
+                staticClass: "mdc-button mdc-button--raised",
+                attrs: { id: "aceptar" },
+              },
+              [
+                _c("span", { staticClass: "mdc-button__ripple" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-button__label" }, [
+                  _vm._v(
+                    "\n                                Aceptar\n                            "
+                  ),
+                ]),
+              ]
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "carta-de-llamada-datos-personales-cancelar",
+            attrs: { id: "cancelar" },
+          },
+          [
+            _c(
+              "button",
+              {
+                staticClass: "mdc-button mdc-button--raised",
+                attrs: { id: "cancelar" },
+              },
+              [
+                _c("span", { staticClass: "mdc-button__ripple" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-button__label" }, [
+                  _vm._v(
+                    "\n                                Cancelar\n                            "
+                  ),
+                ]),
+              ]
+            ),
+          ]
+        ),
+      ]
+    )
   },
 ]
 render._withStripped = true

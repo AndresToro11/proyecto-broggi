@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Provincia;
 use Illuminate\Http\Request;
-use App\Models\Carta_trucada;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\CartaTrucadaResource;
+use App\Http\Resources\DefaultResource;
+use App\Http\Resources\ProvinciaResource;
 
-class CartaLlamada extends Controller
+class ProvinciaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +17,8 @@ class CartaLlamada extends Controller
      */
     public function index()
     {
-        $cartaLlamada = Carta_trucada::all();
-        return CartaTrucadaResource::collection($cartaLlamada);
+        $provincia = Provincia::all();
+        return DefaultResource::collection($provincia);
     }
 
     /**
@@ -34,10 +35,10 @@ class CartaLlamada extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Carta_trucada  $carta_trucada
+     * @param  \App\Models\Provincia  $provincia
      * @return \Illuminate\Http\Response
      */
-    public function show(Carta_trucada $carta_trucada)
+    public function show(Provincia $provincia)
     {
         //
     }
@@ -46,10 +47,10 @@ class CartaLlamada extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Carta_trucada  $carta_trucada
+     * @param  \App\Models\Provincia  $provincia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Carta_trucada $carta_trucada)
+    public function update(Request $request, Provincia $provincia)
     {
         //
     }
@@ -57,10 +58,10 @@ class CartaLlamada extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Carta_trucada  $carta_trucada
+     * @param  \App\Models\Provincia  $provincia
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Carta_trucada $carta_trucada)
+    public function destroy(Provincia $provincia)
     {
         //
     }

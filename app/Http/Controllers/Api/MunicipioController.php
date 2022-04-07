@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Municipi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\DefaultResource;
 use App\Http\Resources\MunicipioResource;
 
 class MunicipioController extends Controller
@@ -17,7 +18,7 @@ class MunicipioController extends Controller
     public function index()
     {
         $municipio = Municipi::all();
-        return MunicipioResource::collection($municipio);
+        return DefaultResource::collection($municipio);
     }
 
     /**
