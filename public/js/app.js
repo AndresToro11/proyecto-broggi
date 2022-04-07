@@ -4505,6 +4505,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -25062,35 +25064,41 @@ var render = function () {
         },
         [_vm._m(8), _vm._v(" "), _vm._m(9)]
       ),
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "expedientes-modal",
-        attrs: { id: "expedientes-modalScreen" },
-      },
-      [
-        _c("div", { staticClass: "expedientes-modal-window" }, [
-          _c("header", { staticClass: "expedientes-modal-header" }, [
-            _c(
-              "div",
-              {
-                staticClass: "expedientes-x",
-                attrs: {
-                  id: "close-modal",
-                  "data-close": "expedientes-modalScreen",
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "expedientes-modal",
+          attrs: { id: "expedientes-modalScreen" },
+        },
+        [
+          _c("div", { staticClass: "expedientes-modal-window" }, [
+            _c("header", { staticClass: "expedientes-modal-header" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "expedientes-x",
+                  attrs: {
+                    id: "close-modal",
+                    "data-close": "expedientes-modalScreen",
+                  },
+                  on: { click: _vm.modalInvisible },
                 },
-                on: { click: _vm.modalInvisible },
-              },
-              [_c("span", { staticClass: "material-icons" }, [_vm._v("close")])]
-            ),
+                [
+                  _c("span", { staticClass: "material-icons" }, [
+                    _vm._v(
+                      "\n                            close\n                        "
+                    ),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _vm._m(10),
           ]),
-          _vm._v(" "),
-          _vm._m(10),
-        ]),
-      ]
-    ),
+        ]
+      ),
+    ]),
   ])
 }
 var staticRenderFns = [
@@ -25713,44 +25721,58 @@ var staticRenderFns = [
       { staticClass: "modal-information gothica1-normal-black-21px" },
       [
         _c("div", { staticClass: "expediente-modal valign-text-middle" }, [
-          _vm._v("\n                        Expediente\n                    "),
+          _vm._v(
+            "\n                            Expediente\n                    "
+          ),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "modal-flex-row-1" }, [
           _c("div", { staticClass: "codigo-modal" }, [
             _vm._v(
-              "\n                        Codigo de la llamada:\n                    "
+              "\n                            Codigo de la llamada:\n                        "
             ),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "info-codigo-modal" }, [
-            _vm._v("\n                        00000001\n                    "),
+            _vm._v(
+              "\n                            00000001\n                        "
+            ),
           ]),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "modal-flex-row-2" }, [
           _c("div", { staticClass: "provincia-modal valign-text-middle" }, [
             _vm._v(
-              "\n                        Provincia:\n                    "
+              "\n                            Provincia:\n                        "
             ),
           ]),
           _vm._v(" "),
           _c(
             "div",
             { staticClass: "info-provincia-modal valign-text-middle" },
-            [_vm._v("\n                        Lleida\n                    ")]
+            [
+              _vm._v(
+                "\n                            Lleida\n                        "
+              ),
+            ]
           ),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "modal-flex-row-3" }, [
           _c("div", { staticClass: "municipio-modal valign-text-middle" }, [
-            _vm._v("\n                        Municipio\n                    "),
+            _vm._v(
+              "\n                            Municipio\n                        "
+            ),
           ]),
           _vm._v(" "),
           _c(
             "div",
             { staticClass: "info-municipio-modal valign-text-middle" },
-            [_vm._v("\n                        Agramunt\n                    ")]
+            [
+              _vm._v(
+                "\n                            Agramunt\n                        "
+              ),
+            ]
           ),
         ]),
         _vm._v(" "),
@@ -25760,7 +25782,7 @@ var staticRenderFns = [
             { staticClass: "fuera-Catalunya-modal valign-text-middle" },
             [
               _vm._v(
-                "\n                        Fuera de Catalunya:\n                    "
+                "\n                            Fuera de Catalunya:\n                        "
               ),
             ]
           ),
@@ -25768,14 +25790,18 @@ var staticRenderFns = [
           _c(
             "div",
             { staticClass: "info-fuera-Catalunya-modal valign-text-middle" },
-            [_vm._v("\n                        No\n                    ")]
+            [
+              _vm._v(
+                "\n                            No\n                        "
+              ),
+            ]
           ),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "modal-flex-row-5" }, [
           _c("div", { staticClass: "incidente-modal valign-text-middle" }, [
             _vm._v(
-              "\n                        Incidente:\n                    "
+              "\n                            Incidente:\n                        "
             ),
           ]),
           _vm._v(" "),
@@ -25784,7 +25810,7 @@ var staticRenderFns = [
             { staticClass: "info-incidente-modal valign-text-middle" },
             [
               _vm._v(
-                "\n                        Derrumbamiento de un edificio\n                    "
+                "\n                            Derrumbamiento de un edificio\n                        "
               ),
             ]
           ),
@@ -25793,26 +25819,32 @@ var staticRenderFns = [
         _c("div", { staticClass: "modal-flex-row-6" }, [
           _c("div", { staticClass: "direccion-modal valign-text-middle" }, [
             _vm._v(
-              "\n                        Direccion:\n                    "
+              "\n                            Direccion:\n                        "
             ),
           ]),
           _vm._v(" "),
           _c(
             "div",
             { staticClass: "info-direccion-modal valign-text-middle" },
-            [_vm._v("\n                        SQY\n                    ")]
+            [
+              _vm._v(
+                "\n                            SQY\n                        "
+              ),
+            ]
           ),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "modal-flex-row-7" }, [
           _c("div", { staticClass: "duracion-modal valign-text-middle" }, [
             _vm._v(
-              "\n                        Duracion de la llamada:\n                    "
+              "\n                            Duracion de la llamada:\n                        "
             ),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "info-duracion-modal valign-text-middle" }, [
-            _vm._v("\n                        00:04:31\n                    "),
+            _vm._v(
+              "\n                            00:04:31\n                        "
+            ),
           ]),
         ]),
         _vm._v(" "),
@@ -25820,7 +25852,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "modal-flex-row-8" }, [
             _c("div", { staticClass: "notaComun-modal valign-text-middle" }, [
               _vm._v(
-                "\n                            Nota comun:\n                        "
+                "\n                                Nota comun:\n                            "
               ),
             ]),
           ]),
@@ -25831,7 +25863,7 @@ var staticRenderFns = [
               { staticClass: "info-notaComun-modal valign-text-middle" },
               [
                 _vm._v(
-                  "\n                            Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.\n                        "
+                  "\n                                Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.\n                            "
                 ),
               ]
             ),

@@ -66,23 +66,20 @@
                             <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
 
                             <h1 class="title-operador valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
-                            <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Video interactivo</div>
+                            <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Tutorial</div>
                              <div class="sergi-prez-jimnez-operador valign-text-middle gothica1-normal-white-18px">
                                  @if (Auth::check())
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" valign-text-middle gothica1-normal-white-18px>
                                     {{ Auth::user()->nom }} {{ Auth::user()->cognoms }}
                                 </a>
-
                                 @endif
                             </div>
-
                             @if (Auth::check())
                             <img class="separate-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/separate@2x.svg"/>
                              <div class="cerrar-sesin-operador valign-text-middle gothica1-normal-white-18px">
                                 <a class="" href="{{ url('/logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Cerrar sesión</a>
                                 @endif
                              </div>
-
                             <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/white-gradient@1x.svg"/>
                         </div>
                     </div>

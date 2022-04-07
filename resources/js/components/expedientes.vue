@@ -328,85 +328,87 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="expedientes-modal" id="expedientes-modalScreen"> <!-- TODO: Modal -->
-            <div class="expedientes-modal-window">
-                <header class="expedientes-modal-header">
-                    <div class="expedientes-x" id="close-modal" data-close="expedientes-modalScreen" @click="modalInvisible">
-                        <span class="material-icons">close</span>
-                    </div>
-                </header>
-                <div class="modal-information gothica1-normal-black-21px">
-                    <!-- <div class="modal-flex-row"> FIXME: Expediente -->
+            <div class="expedientes-modal" id="expedientes-modalScreen"> <!-- TODO: Modal -->
+                <div class="expedientes-modal-window">
+                    <header class="expedientes-modal-header">
+                        <div class="expedientes-x" id="close-modal" data-close="expedientes-modalScreen" @click="modalInvisible">
+                            <span class="material-icons">
+                                close
+                            </span>
+                        </div>
+                    </header>
+                    <div class="modal-information gothica1-normal-black-21px">
+                        <!-- <div class="modal-flex-row"> FIXME: Expediente -->
                         <div class="expediente-modal valign-text-middle">
-                            Expediente
+                                Expediente
                         </div>
-                    <!-- </div> -->
-                    <div class="modal-flex-row-1"> <!-- FIXME: Codigo de la llamada -->
-                        <div class="codigo-modal">
-                            Codigo de la llamada:
-                        </div>
-                        <div class="info-codigo-modal">
-                            00000001
-                        </div>
-                    </div>
-                    <div class="modal-flex-row-2"> <!-- FIXME: Provincia -->
-                        <div class="provincia-modal valign-text-middle">
-                            Provincia:
-                        </div>
-                        <div class="info-provincia-modal valign-text-middle">
-                            Lleida
-                        </div>
-                    </div>
-                    <div class="modal-flex-row-3"> <!-- FIXME: Municipio -->
-                        <div class="municipio-modal valign-text-middle">
-                            Municipio
-                        </div>
-                        <div class="info-municipio-modal valign-text-middle">
-                            Agramunt
-                        </div>
-                    </div>
-                    <div class="modal-flex-row-4"> <!-- FIXME: Fuera de Catalunya -->
-                        <div class="fuera-Catalunya-modal valign-text-middle">
-                            Fuera de Catalunya:
-                        </div>
-                        <div class="info-fuera-Catalunya-modal valign-text-middle">
-                            No
-                        </div>
-                    </div>
-                    <div class="modal-flex-row-5"> <!-- FIXME: Incidente -->
-                        <div class="incidente-modal valign-text-middle">
-                            Incidente:
-                        </div>
-                        <div class="info-incidente-modal valign-text-middle">
-                            Derrumbamiento de un edificio
-                        </div>
-                    </div>
-                    <div class="modal-flex-row-6"> <!-- FIXME: Direccion -->
-                        <div class="direccion-modal valign-text-middle">
-                            Direccion:
-                        </div>
-                        <div class="info-direccion-modal valign-text-middle">
-                            SQY
-                        </div>
-                    </div>
-                    <div class="modal-flex-row-7"> <!-- FIXME: Duracion de la llamada -->
-                        <div class="duracion-modal valign-text-middle">
-                            Duracion de la llamada:
-                        </div>
-                        <div class="info-duracion-modal valign-text-middle">
-                            00:04:31
-                        </div>
-                    </div>
-                    <div class="modal-flex-col"> <!-- FIXME: Nota comun -->
-                        <div class="modal-flex-row-8">
-                            <div class="notaComun-modal valign-text-middle">
-                                Nota comun:
+                        <!-- </div> -->
+                        <div class="modal-flex-row-1"> <!-- FIXME: Codigo de la llamada -->
+                            <div class="codigo-modal">
+                                Codigo de la llamada:
+                            </div>
+                            <div class="info-codigo-modal">
+                                00000001
                             </div>
                         </div>
-                        <div class="modal-flex-row-9">
-                            <div class="info-notaComun-modal valign-text-middle">
-                                Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.
+                        <div class="modal-flex-row-2"> <!-- FIXME: Provincia -->
+                            <div class="provincia-modal valign-text-middle">
+                                Provincia:
+                            </div>
+                            <div class="info-provincia-modal valign-text-middle">
+                                Lleida
+                            </div>
+                        </div>
+                        <div class="modal-flex-row-3"> <!-- FIXME: Municipio -->
+                            <div class="municipio-modal valign-text-middle">
+                                Municipio
+                            </div>
+                            <div class="info-municipio-modal valign-text-middle">
+                                Agramunt
+                            </div>
+                        </div>
+                        <div class="modal-flex-row-4"> <!-- FIXME: Fuera de Catalunya -->
+                            <div class="fuera-Catalunya-modal valign-text-middle">
+                                Fuera de Catalunya:
+                            </div>
+                            <div class="info-fuera-Catalunya-modal valign-text-middle">
+                                No
+                            </div>
+                        </div>
+                        <div class="modal-flex-row-5"> <!-- FIXME: Incidente -->
+                            <div class="incidente-modal valign-text-middle">
+                                Incidente:
+                            </div>
+                            <div class="info-incidente-modal valign-text-middle">
+                                Derrumbamiento de un edificio
+                            </div>
+                        </div>
+                        <div class="modal-flex-row-6"> <!-- FIXME: Direccion -->
+                            <div class="direccion-modal valign-text-middle">
+                                Direccion:
+                            </div>
+                            <div class="info-direccion-modal valign-text-middle">
+                                SQY
+                            </div>
+                        </div>
+                        <div class="modal-flex-row-7"> <!-- FIXME: Duracion de la llamada -->
+                            <div class="duracion-modal valign-text-middle">
+                                Duracion de la llamada:
+                            </div>
+                            <div class="info-duracion-modal valign-text-middle">
+                                00:04:31
+                            </div>
+                        </div>
+                        <div class="modal-flex-col"> <!-- FIXME: Nota comun -->
+                            <div class="modal-flex-row-8">
+                                <div class="notaComun-modal valign-text-middle">
+                                    Nota comun:
+                                </div>
+                            </div>
+                            <div class="modal-flex-row-9">
+                                <div class="info-notaComun-modal valign-text-middle">
+                                    Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -424,6 +426,7 @@
                 loading: false
             }
         },
+
         mounted() {
             new mdc.select.MDCSelect(document.querySelector(".expedientes-status-select .mdc-select"));
         },
