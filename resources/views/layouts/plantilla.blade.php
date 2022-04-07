@@ -22,6 +22,10 @@
         <link rel=" stylesheet" type="text/css" href={{ asset('css/globals.css') }} />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+        {{-- Axios ========> Las dos librerias funcionan --}}
+        {{-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> --}}
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
         <!-- fontAwesome -->
         {{-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> --}}
 

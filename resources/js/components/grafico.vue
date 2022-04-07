@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div v-if="loading == true">
             <div id="loader" class="text-center">
                 <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
@@ -23,7 +22,6 @@
                     </select>
                 </div>
         </div>
-
     </div>
 </template>
 
