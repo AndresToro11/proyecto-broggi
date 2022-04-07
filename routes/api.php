@@ -54,8 +54,8 @@ Route::apiResource('expedientes', ExpedientController::class);
 
 Route::get('grafico/provincias', [GraficoController::class, 'provincias']);
 Route::get('grafico/municipios', [GraficoController::class, 'municipios']);
-Route::get('grafico/usuarios', [GraficoController::class, 'usuarios']);
-Route::get('grafico/usuarios-incidentes', [GraficoController::class, 'usuariosIncidentes']);
+Route::get('grafico/usuarios', [GraficoController::class, 'usuarios']); //Este
+Route::get('grafico/usuarios-incidentes', [GraficoController::class, 'usuariosIncidentes']); //Este
 Route::get('grafico/usuarios/{usuario}', [GraficoController::class, 'showUsuario']);
 
 //------------------------------------ Admin --------------------------------------
@@ -75,6 +75,6 @@ Route::put('admin/activarUsuario/{usuario}', [AdminController::class, 'activarUs
 
 //---------------------------------------- Mapa ---------------------------------------
 
-Route::get('mapa/agencias', [MapaController::class, 'selectAgencias']);
+Route::get('mapa/agencias', [MapaController::class, 'selectAgencias']); //Este
 
 //--------------------------------------------  ---------------------------------------
