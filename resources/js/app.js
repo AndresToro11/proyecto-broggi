@@ -26,9 +26,9 @@ Vue.component('vista-login', require('./components/login.vue').default); //Acaba
 
 //----------------------------------------------- Home ------------------------------------
 
-Vue.component('administrador', require('./components/home/administrador.vue').default); //Acabado
-Vue.component('operador', require('./components/home/operador.vue').default); //Acabado
-Vue.component('supervisor', require('./components/home/supervisor.vue').default); //Acabado
+Vue.component('administrador', require('./components/home/administrador.vue').default);
+Vue.component('operador', require('./components/home/operador.vue').default);
+Vue.component('supervisor', require('./components/home/supervisor.vue').default);
 
 //----------------------------------------------- Llamada ----------------------------------------------------
 
@@ -37,11 +37,12 @@ Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').def
 Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncidente.vue').default); //Acabado
 Vue.component('datos-personales', require('./components/cartaLlamada/DatosPersonales.vue').default); //Acabado
 // Vue.component('expedientes-relacionados', require('./components/cartaLlamada/ExpedientesRelacionados.vue').default);
-Vue.component('mapa', require('./components/mapa.vue').default);
+Vue.component('mapa', require('./components/mapa.vue').default); //Andres
 
 //------------------------------------------- Expedientes --------------------------------
 
 Vue.component('expedientes', require('./components/expedientes.vue').default);
+Vue.component('expedientes-administrador', require('./components/expedientes-administrador.vue').default);
 
 //--------------------------------------------- Grafico ----------------------------------
 
@@ -50,7 +51,7 @@ Vue.component('grafico', require('./components/grafico.vue').default); //Andres
 //--------------------------------------------- Perfil ----------------------------------
 
 Vue.component('perfil', require('./components/editar-perfil.vue').default); //Acabado
-// Vue.component('perfil', require('./components/perfil.vue').default);
+// Vue.component('perfil', require('./components/perfil.vue').default); //Andres
 
 //---------------------------------------------------- Admin -------------------------------------
 

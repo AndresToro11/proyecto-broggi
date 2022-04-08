@@ -47,7 +47,7 @@
                         <div class="expedientes-estado valign-text-middle">
                             Estado
                         </div>
-                        <!-- <div class="onProcess">
+                        <div class="onProcess">
                             <div class="icon">
                                 <div class="vector-container">
                                     <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
@@ -56,51 +56,7 @@
                             <span class="material-icons">
                                 schedule
                             </span>
-                        </div> -->
-                        <span>
-                            <div class="expedientes-status-select">
-                                <div class="mdc-select mdc-select--filled demo-width-class">
-                                    <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
-                                        <span class="mdc-select__ripple"></span>
-                                        <!-- <span id="demo-label" class="mdc-floating-label">
-                                            Estado
-                                        </span> -->
-                                        <span class="mdc-select__selected-text-container">
-                                            <span id="demo-selected-text" class="mdc-select__selected-text"></span>
-                                        </span>
-                                        <span class="mdc-select__dropdown-icon">
-                                            <span class="mdc-select__dropdown-icon-inactive material-icons">
-                                                arrow_drop_down
-                                            </span>
-                                            <span class="mdc-select__dropdown-icon-active material-icons">
-                                                arrow_drop_up
-                                            </span>
-                                        </span>
-                                        <span class="mdc-line-ripple"></span>
-                                    </div>
-                                    <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                                        <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                            <li class="mdc-list-item" data-value="Item" role="option">
-                                                <span class="mdc-list-item__ripple"></span>
-                                                <span class="mdc-list-item__text">
-                                                    hola
-                                                    <!-- <div class="onProcess">
-                                                        <div class="icon">
-                                                            <div class="vector-container">
-                                                                <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
-                                                            </div>
-                                                        </div>
-                                                        <span class="material-icons">
-                                                            schedule
-                                                        </span>
-                                                    </div> -->
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -477,7 +433,6 @@
     white-space: nowrap;
     z-index: 4;
     }
-
     /* Modal: */
     /* Modal: */
     /* Modal: */

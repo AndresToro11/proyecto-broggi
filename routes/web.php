@@ -58,6 +58,10 @@ Route::get('/expedientes', function () {
     return view('expedientes');
 });
 
+Route::get('/expedientes-administrador', function () {
+    return view('expedientes-administrador');
+});
+
 //-------------------------- Paginas logeadas ---------------------
 
 Route::middleware(['auth'])->group(function () {

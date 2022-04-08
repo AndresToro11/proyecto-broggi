@@ -3,7 +3,5 @@
 @section('titulo', 'Expedientes')
 
 @section('contenido')
-
     <expedientes></expedientes>
-
 @endsection
