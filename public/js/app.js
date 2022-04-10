@@ -4676,6 +4676,306 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -4684,7 +4984,11 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select-one .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select-two .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select-three .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select-four .mdc-select"));
+    new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select-five .mdc-select"));
   },
   methods: {
     modalVisible: function modalVisible() {
@@ -4698,23 +5002,23 @@ __webpack_require__.r(__webpack_exports__);
       var modalIdClose = closeEls.dataset.close;
       var isVisible = "is-visible";
       document.getElementById(modalIdClose).classList.remove(isVisible);
-    },
-    modalOut: function modalOut() {
-      var closeEls = document.querySelector("[data-close]");
-      var modalIdClose = closeEls.dataset.close;
-      var isVisible = "is-visible";
-      document.getElementById(modalIdClose).classList.remove(isVisible);
-      document.addEventListener("click", function (e) {
-        if (e.target == document.querySelector(".modal.is-visible")) {
-          document.querySelector(".modal .is-visible [data-close]").click();
-        }
-      });
-      document.addEventListener("keyup", function (e) {
-        if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
-          document.querySelector(".modal .is-visible [data-close]").click();
-        }
-      });
-    }
+    } // modalOut(){
+    //     const closeEls = document.querySelector("[data-close]");
+    //     const modalIdClose = closeEls.dataset.close;
+    //     const isVisible = "is-visible";
+    //     document.getElementById(modalIdClose).classList.remove(isVisible);
+    //     document.addEventListener("click", e => {
+    //         if (e.target == document.querySelector(".modal.is-visible")) {
+    //         document.querySelector(".modal .is-visible [data-close]").click();
+    //         }
+    //     });
+    //     document.addEventListener("keyup", e => {
+    //         if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+    //         document.querySelector(".modal .is-visible [data-close]").click();
+    //         }
+    //     });
+    // },
+
   }
 });
 
@@ -19195,7 +19499,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FIXME: Title */\n.expedientes-administrador-title {\ndisplay: flex;\nalign-items: flex-start;\nheight: 16px;\nwidth: 158px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\nz-index: 4;\n}\n\n/* FIXME: Containers y rows */\n.expedientes-administrador-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-left: 102px;\nmargin-right: 102px;\nposition: relative;\nz-index: 1;\n}\n.expediente-administrador-file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.expediente-administrador-file:hover {\ntransform: scale(1.1);\n}\n.window-expediente-administrador-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-administrador-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador-shadow-onProcess {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--onProcess);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador-shadow-inmobilized {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--immobilized);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador-shadow-requested {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--requested);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador-shadow-closed {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--closed);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador-shadow-accepted {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--accepted);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador {\nbackground-color: white;\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.expedientes-administrador-info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.expedientes-administrador-flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-administrador-flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-administrador-flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-administrador-flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-administrador-flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 70px;\nflex-direction: row;\nwidth: 414px;\nheight: 32px;\n}\n\n/* FIXME: Elementos */\n/* FIXME: Expedientes */\n.expedientes-administrador-expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.expedientes-administrador-number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Operador */\n.expedientes-administrador-operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-administrador-name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Fecha */\n.expedientes-administrador-fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-administrador-date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Hora */\n.expedientes-administrador-hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-administrador-text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Estado */\n.expedientes-administrador-estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-administrador-status-select {\ndisplay: inline-flex;\nmargin-top: 10px;\n}\n\n/* FIXME: Tipos de estados */\n.onProcess-administrador {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.onProcess-administrador {\nheight: auto !important;\nwidth: auto !important;\n}\n.onProcess-administrador span {\ncolor: var(--onProcess);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.immobilized-administrador {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.immobilized-administrador {\nheight: auto !important;\nwidth: auto !important;\n}\n.immobilized-administrador span {\ncolor: var(--immobilized);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.requested-administrador {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.requested-administrador {\nheight: auto !important;\nwidth: auto !important;\n}\n.requested-administrador span {\ncolor: var(--requested);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.closed-administrador {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.closed-administrador {\nheight: auto !important;\nwidth: auto !important;\n}\n.closed-administrador span {\ncolor: var(--closed);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.accepted-administrador {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.accepted-administrador {\nheight: auto !important;\nwidth: auto !important;\n}\n.accepted-administrador span {\ncolor: var(--accepted);\nmargin-top: -5px;\nfont-size: 32px;\n}\n#select-contenido {\ndisplay: flex;\nalign-items: center;\nheight: 56px;\nwidth: 256px;\n}\n#icono-administrador {\ndisplay: flex;\nalign-items: center;\nheight: 100%;\npadding: 1.8px 1.8px;\nwidth: 100%;\nflex-direction: row-reverse;\nflex-wrap: wrap;\ngap: 10px;\n}\n\n/* .expedientes-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n} */\n\n/* FIXME: Modal: */\n.expedientes-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\n}\n.expedientes-modal-window {\nwidth: 1104px;\nheight: 526px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n#close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 1040px;\nmargin-top: 18px;\n}\n.expedientes-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\n}\n.expedientes-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nwidth: 32px;\n}\n.expedientes-modal .is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.expediente-modal {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n.modal-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-2 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-3 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-4 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-5 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-6 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-7 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FIXME: Title */\n.expedientes-administrador-title {\ndisplay: flex;\nalign-items: flex-start;\nheight: 16px;\nwidth: 158px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\nz-index: 4;\n}\n\n/* FIXME: Containers y rows */\n.expedientes-administrador-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-left: 102px;\nmargin-right: 102px;\nposition: relative;\nz-index: 1;\n}\n.expediente-administrador-file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n\n/* .expediente-administrador-file:hover {\ntransform: scale(1.1);\n} */\n.window-expediente-administrador-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-administrador-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador-shadow-onProcess {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--onProcess);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador-shadow-inmobilized {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--immobilized);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador-shadow-requested {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--requested);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador-shadow-closed {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--closed);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador-shadow-accepted {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--accepted);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-administrador {\nbackground-color: white;\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.expedientes-administrador-info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.expedientes-administrador-flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-administrador-flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-administrador-flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-administrador-flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-administrador-flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 70px;\nflex-direction: row;\nwidth: 414px;\nheight: 32px;\n}\n\n/* FIXME: Elementos */\n/* FIXME: Expedientes */\n.expedientes-administrador-expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.expedientes-administrador-number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Operador */\n.expedientes-administrador-operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-administrador-name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Fecha */\n.expedientes-administrador-fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-administrador-date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Hora */\n.expedientes-administrador-hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-administrador-text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Estado */\n.expedientes-administrador-estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-administrador-status-select {\ndisplay: inline-flex;\nmargin-top: 10px;\n}\n\n/* FIXME: Tipos de estados */\n.onProcess-administrador {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.onProcess-administrador {\nheight: auto !important;\nwidth: auto !important;\n}\n.onProcess-administrador span {\ncolor: var(--onProcess);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.immobilized-administrador {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.immobilized-administrador {\nheight: auto !important;\nwidth: auto !important;\n}\n.immobilized-administrador span {\ncolor: var(--immobilized);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.requested-administrador {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.requested-administrador {\nheight: auto !important;\nwidth: auto !important;\n}\n.requested-administrador span {\ncolor: var(--requested);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.closed-administrador {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.closed-administrador {\nheight: auto !important;\nwidth: auto !important;\n}\n.closed-administrador span {\ncolor: var(--closed);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.accepted-administrador {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.accepted-administrador {\nheight: auto !important;\nwidth: auto !important;\n}\n.accepted-administrador span {\ncolor: var(--accepted);\nmargin-top: -5px;\nfont-size: 32px;\n}\n#select-contenido {\ndisplay: flex;\nalign-items: center;\nheight: 56px;\nwidth: 256px;\n}\n#icono-administrador {\ndisplay: flex;\nalign-items: center;\nheight: 100%;\npadding: 1.8px 1.8px;\nwidth: 100%;\nflex-direction: row-reverse;\nflex-wrap: wrap;\ngap: 10px;\n}\n\n/* .expedientes-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n} */\n\n/* FIXME: Modal: */\n.expedientes-administrador-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\n}\n.expedientes-administrador-modal-window {\nwidth: 1104px;\nheight: 526px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n.expedientes-administrador-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\n}\n.expedientes-administrador-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nwidth: 32px;\n}\n#close-administrador-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 1040px;\nmargin-top: 18px;\n}\n.expedientes-administrador-modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.expediente-administrador-modal {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n.modal-administrador-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-administrador-flex-row-2 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-administrador-flex-row-3 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-administrador-flex-row-4 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-administrador-flex-row-5 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-administrador-flex-row-6 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-administrador-flex-row-7 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19219,7 +19523,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.expedientes-title {\ndisplay: flex;\nalign-items: flex-start;\nheight: 16px;\nwidth: 158px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\n/* top: 222px; */\nwhite-space: nowrap;\nz-index: 4;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\n}\n.expedientes-modal-window {\nwidth: 1104px;\nheight: 526px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n#close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 1040px;\nmargin-top: 18px;\n}\n.expedientes-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\n}\n.expedientes-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nwidth: 32px;\n}\n.expedientes-modal .is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.expediente-modal {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n.modal-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-2 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-3 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-4 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-5 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-6 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-7 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.expediente-file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.expediente-file:hover {\ntransform: scale(1.1);\n}\n.expedientes-info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.expedientes-flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 32px;\n}\n\n/* .expedientes-status-select {\ndisplay: inline-flex;\nmargin-top: 10px;\n} */\n\n/* .mdc-select__anchor {\nwidth: 52px; */\n/* min-width: 0; */\n/* flex: 1 1 auto; */\n/* position: relative; */\n/* box-sizing: border-box;\noverflow: hidden;\noutline: none;\ncursor: pointer;\n} */\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: white;\n}\n\n/* .mdc-select--filled .mdc-select__anchor {\nheight: 32px;\ndisplay: flex;\nalign-items: baseline;\n} */\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-onProcess {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--onProcess);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-inmobilized {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--immobilized);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-requested {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--requested);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-closed {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--closed);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-accepted {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--accepted);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: white;\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.expedientes-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expedientes-expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.expedientes-operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.expedientes-name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.expedientes-date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.expedientes-text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.onProcess {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.onProcess {\nheight: auto !important;\nwidth: auto !important;\n}\n.onProcess span {\ncolor: var(--onProcess);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.immobilized {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.immobilized {\nheight: auto !important;\nwidth: auto !important;\n}\n.immobilized span {\ncolor: var(--immobilized);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.requested {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.requested {\nheight: auto !important;\nwidth: auto !important;\n}\n.requested span {\ncolor: var(--requested);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.closed {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.closed {\nheight: auto !important;\nwidth: auto !important;\n}\n.closed span {\ncolor: var(--closed);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.accepted {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.accepted {\nheight: auto !important;\nwidth: auto !important;\n}\n.accepted span {\ncolor: var(--accepted);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.expedientes-title {\ndisplay: flex;\nalign-items: flex-start;\nheight: 16px;\nwidth: 158px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\n/* top: 222px; */\nwhite-space: nowrap;\nz-index: 4;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\n}\n.expedientes-modal-window {\nwidth: 1104px;\nheight: 526px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n#close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 1040px;\nmargin-top: 18px;\n}\n.expedientes-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\n}\n.expedientes-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nwidth: 32px;\n}\n.expedientes-modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.expediente-modal {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n.modal-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-2 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-3 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-4 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-5 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-6 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-7 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.expediente-file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.expediente-file:hover {\ntransform: scale(1.1);\n}\n.expedientes-info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.expedientes-flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 32px;\n}\n\n/* .expedientes-status-select {\ndisplay: inline-flex;\nmargin-top: 10px;\n} */\n\n/* .mdc-select__anchor {\nwidth: 52px; */\n/* min-width: 0; */\n/* flex: 1 1 auto; */\n/* position: relative; */\n/* box-sizing: border-box;\noverflow: hidden;\noutline: none;\ncursor: pointer;\n} */\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: white;\n}\n\n/* .mdc-select--filled .mdc-select__anchor {\nheight: 32px;\ndisplay: flex;\nalign-items: baseline;\n} */\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-onProcess {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--onProcess);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-inmobilized {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--immobilized);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-requested {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--requested);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-closed {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--closed);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-accepted {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--accepted);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: white;\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.expedientes-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expedientes-expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.expedientes-operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.expedientes-name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.expedientes-date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.expedientes-text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.onProcess {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.onProcess {\nheight: auto !important;\nwidth: auto !important;\n}\n.onProcess span {\ncolor: var(--onProcess);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.immobilized {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.immobilized {\nheight: auto !important;\nwidth: auto !important;\n}\n.immobilized span {\ncolor: var(--immobilized);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.requested {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.requested {\nheight: auto !important;\nwidth: auto !important;\n}\n.requested span {\ncolor: var(--requested);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.closed {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.closed {\nheight: auto !important;\nwidth: auto !important;\n}\n.closed span {\ncolor: var(--closed);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.accepted {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.accepted {\nheight: auto !important;\nwidth: auto !important;\n}\n.accepted span {\ncolor: var(--accepted);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -25759,7 +26063,7 @@ var render = function () {
         "div",
         {
           staticClass: "expediente-administrador-file",
-          attrs: { "data-open": "expedientes-modalScreen" },
+          attrs: { "data-open": "expedientes-administrador-modalScreen" },
           on: { click: _vm.modalVisible },
         },
         [_vm._m(0), _vm._v(" "), _vm._m(1)]
@@ -25768,33 +26072,77 @@ var render = function () {
       _c(
         "div",
         {
-          staticClass: "expedientes-modal",
-          attrs: { id: "expedientes-modalScreen" },
+          staticClass: "expediente-administrador-file",
+          attrs: { "data-open": "expedientes-administrador-modalScreen" },
+          on: { click: _vm.modalVisible },
+        },
+        [_vm._m(2), _vm._v(" "), _vm._m(3)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "expediente-administrador-file",
+          attrs: { "data-open": "expedientes-administrador-modalScreen" },
+          on: { click: _vm.modalVisible },
+        },
+        [_vm._m(4), _vm._v(" "), _vm._m(5)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "expediente-administrador-file",
+          attrs: { "data-open": "expedientes-administrador-modalScreen" },
+          on: { click: _vm.modalVisible },
+        },
+        [_vm._m(6), _vm._v(" "), _vm._m(7)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "expediente-administrador-file",
+          attrs: { "data-open": "expedientes-administrador-modalScreen" },
+          on: { click: _vm.modalVisible },
+        },
+        [_vm._m(8), _vm._v(" "), _vm._m(9)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "expedientes-administrador-modal",
+          attrs: { id: "expedientes-administrador-modalScreen" },
         },
         [
-          _c("div", { staticClass: "expedientes-modal-window" }, [
-            _c("header", { staticClass: "expedientes-modal-header" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "expedientes-x",
-                  attrs: {
-                    id: "close-modal",
-                    "data-close": "expedientes-modalScreen",
+          _c("div", { staticClass: "expedientes-administrador-modal-window" }, [
+            _c(
+              "header",
+              { staticClass: "expedientes-administrador-modal-header" },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "expedientes-administrador-x",
+                    attrs: {
+                      id: "close-administrador-modal",
+                      "data-close": "expedientes-administrador-modalScreen",
+                    },
+                    on: { click: _vm.modalInvisible },
                   },
-                  on: { click: _vm.modalInvisible },
-                },
-                [
-                  _c("span", { staticClass: "material-icons" }, [
-                    _vm._v(
-                      "\n                            close\n                        "
-                    ),
-                  ]),
-                ]
-              ),
-            ]),
+                  [
+                    _c("span", { staticClass: "material-icons" }, [
+                      _vm._v(
+                        "\n                            close\n                        "
+                      ),
+                    ]),
+                  ]
+                ),
+              ]
+            ),
             _vm._v(" "),
-            _vm._m(2),
+            _vm._m(10),
           ]),
         ]
       ),
@@ -25931,7 +26279,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "expedientes-administrador-status-select" },
+            { staticClass: "expedientes-administrador-status-select-one" },
             [
               _c(
                 "div",
@@ -26367,38 +26715,2288 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "modal-information gothica1-normal-black-21px" },
+      { staticClass: "window-expediente-administrador-container" },
       [
-        _c("div", { staticClass: "expediente-modal valign-text-middle" }, [
-          _vm._v(
-            "\n                            Expediente\n                    "
+        _c("div", { staticClass: "window-expediente-administrador-shadow" }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass: "window-expediente-administrador-shadow-accepted",
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "window-expediente-administrador" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "expedientes-administrador-info gothica1-normal-black-21px",
+      },
+      [
+        _c("div", { staticClass: "expedientes-administrador-flex-row" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-expediente valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        Expediente\n                    "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-number valign-text-middle",
+            },
+            [_vm._v("\n                        00000001\n                    ")]
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-1" }, [
-          _c("div", { staticClass: "codigo-modal" }, [
+        _c("div", { staticClass: "expedientes-administrador-flex-row-1" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-operador valign-text-middle",
+            },
+            [_vm._v("\n                        Operador\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-name-profile valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        Andrés Toro\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-2" }, [
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-fecha valign-text-middle",
+            },
+            [_vm._v("\n                        Fecha\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-date valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        13/10/2022\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-3" }, [
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-hora valign-text-middle",
+            },
+            [_vm._v("\n                        Hora\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-text valign-text-middle",
+            },
+            [_vm._v("\n                        22:34\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-4" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-estado valign-text-middle",
+            },
+            [_vm._v("\n                        Estado\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "expedientes-administrador-status-select-two" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "mdc-select mdc-select--filled demo-width-class",
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mdc-select__anchor custom-enhanced-select-width",
+                      attrs: {
+                        role: "button",
+                        "aria-haspopup": "listbox",
+                        "aria-expanded": "false",
+                      },
+                    },
+                    [
+                      _c("span", { staticClass: "mdc-select__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-select__selected-text-container" },
+                        [
+                          _c("span", {
+                            staticClass: "mdc-select__selected-text",
+                            attrs: { id: "demo-selected-text" },
+                          }),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "mdc-select__dropdown-icon-inactive material-icons",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        arrow_drop_down\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "mdc-select__dropdown-icon-active material-icons",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        arrow_drop_up\n                                    "
+                            ),
+                          ]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "mdc-select__menu mdc-menu mdc-menu-surface",
+                    },
+                    [
+                      _c(
+                        "ul",
+                        {
+                          staticClass: "mdc-list",
+                          attrs: {
+                            id: "select_dropdown",
+                            role: "listbox",
+                            "aria-label": "listbox",
+                          },
+                        },
+                        [
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: {
+                                "data-value": "Item1",
+                                role: "option",
+                                id: "select-contenido",
+                              },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "onProcess-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass:
+                                                  "vector-administrador",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        En proceso\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        schedule\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item2", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "immobilized-administrador",
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Congelado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        do_disturb_on\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item3", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "requested-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Solicitado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        ios_share\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item4", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "closed-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Finalizado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        cancel\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item5", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "accepted-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Completado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        check_circle_outline\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "window-expediente-administrador-container" },
+      [
+        _c("div", { staticClass: "window-expediente-administrador-shadow" }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass: "window-expediente-administrador-shadow-inmobilized",
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "window-expediente-administrador" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "expedientes-administrador-info gothica1-normal-black-21px",
+      },
+      [
+        _c("div", { staticClass: "expedientes-administrador-flex-row" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-expediente valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        Expediente\n                    "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-number valign-text-middle",
+            },
+            [_vm._v("\n                        00000001\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-1" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-operador valign-text-middle",
+            },
+            [_vm._v("\n                        Operador\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-name-profile valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        Andrés Toro\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-2" }, [
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-fecha valign-text-middle",
+            },
+            [_vm._v("\n                        Fecha\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-date valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        13/10/2022\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-3" }, [
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-hora valign-text-middle",
+            },
+            [_vm._v("\n                        Hora\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-text valign-text-middle",
+            },
+            [_vm._v("\n                        22:34\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-4" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-estado valign-text-middle",
+            },
+            [_vm._v("\n                        Estado\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "expedientes-administrador-status-select-three" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "mdc-select mdc-select--filled demo-width-class",
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mdc-select__anchor custom-enhanced-select-width",
+                      attrs: {
+                        role: "button",
+                        "aria-haspopup": "listbox",
+                        "aria-expanded": "false",
+                      },
+                    },
+                    [
+                      _c("span", { staticClass: "mdc-select__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-select__selected-text-container" },
+                        [
+                          _c("span", {
+                            staticClass: "mdc-select__selected-text",
+                            attrs: { id: "demo-selected-text" },
+                          }),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "mdc-select__dropdown-icon-inactive material-icons",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        arrow_drop_down\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "mdc-select__dropdown-icon-active material-icons",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        arrow_drop_up\n                                    "
+                            ),
+                          ]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "mdc-select__menu mdc-menu mdc-menu-surface",
+                    },
+                    [
+                      _c(
+                        "ul",
+                        {
+                          staticClass: "mdc-list",
+                          attrs: {
+                            id: "select_dropdown",
+                            role: "listbox",
+                            "aria-label": "listbox",
+                          },
+                        },
+                        [
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: {
+                                "data-value": "Item1",
+                                role: "option",
+                                id: "select-contenido",
+                              },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "onProcess-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass:
+                                                  "vector-administrador",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        En proceso\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        schedule\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item2", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "immobilized-administrador",
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Congelado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        do_disturb_on\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item3", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "requested-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Solicitado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        ios_share\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item4", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "closed-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Finalizado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        cancel\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item5", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "accepted-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Completado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        check_circle_outline\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "window-expediente-administrador-container" },
+      [
+        _c("div", { staticClass: "window-expediente-administrador-shadow" }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass: "window-expediente-administrador-shadow-requested",
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "window-expediente-administrador" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "expedientes-administrador-info gothica1-normal-black-21px",
+      },
+      [
+        _c("div", { staticClass: "expedientes-administrador-flex-row" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-expediente valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        Expediente\n                    "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-number valign-text-middle",
+            },
+            [_vm._v("\n                        00000001\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-1" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-operador valign-text-middle",
+            },
+            [_vm._v("\n                        Operador\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-name-profile valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        Andrés Toro\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-2" }, [
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-fecha valign-text-middle",
+            },
+            [_vm._v("\n                        Fecha\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-date valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        13/10/2022\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-3" }, [
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-hora valign-text-middle",
+            },
+            [_vm._v("\n                        Hora\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-text valign-text-middle",
+            },
+            [_vm._v("\n                        22:34\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-4" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-estado valign-text-middle",
+            },
+            [_vm._v("\n                        Estado\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "expedientes-administrador-status-select-four" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "mdc-select mdc-select--filled demo-width-class",
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mdc-select__anchor custom-enhanced-select-width",
+                      attrs: {
+                        role: "button",
+                        "aria-haspopup": "listbox",
+                        "aria-expanded": "false",
+                      },
+                    },
+                    [
+                      _c("span", { staticClass: "mdc-select__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-select__selected-text-container" },
+                        [
+                          _c("span", {
+                            staticClass: "mdc-select__selected-text",
+                            attrs: { id: "demo-selected-text" },
+                          }),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "mdc-select__dropdown-icon-inactive material-icons",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        arrow_drop_down\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "mdc-select__dropdown-icon-active material-icons",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        arrow_drop_up\n                                    "
+                            ),
+                          ]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "mdc-select__menu mdc-menu mdc-menu-surface",
+                    },
+                    [
+                      _c(
+                        "ul",
+                        {
+                          staticClass: "mdc-list",
+                          attrs: {
+                            id: "select_dropdown",
+                            role: "listbox",
+                            "aria-label": "listbox",
+                          },
+                        },
+                        [
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: {
+                                "data-value": "Item1",
+                                role: "option",
+                                id: "select-contenido",
+                              },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "onProcess-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass:
+                                                  "vector-administrador",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        En proceso\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        schedule\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item2", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "immobilized-administrador",
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Congelado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        do_disturb_on\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item3", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "requested-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Solicitado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        ios_share\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item4", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "closed-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Finalizado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        cancel\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item5", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "accepted-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Completado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        check_circle_outline\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "window-expediente-administrador-container" },
+      [
+        _c("div", { staticClass: "window-expediente-administrador-shadow" }),
+        _vm._v(" "),
+        _c("div", {
+          staticClass: "window-expediente-administrador-shadow-closed",
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "window-expediente-administrador" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "expedientes-administrador-info gothica1-normal-black-21px",
+      },
+      [
+        _c("div", { staticClass: "expedientes-administrador-flex-row" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-expediente valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        Expediente\n                    "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-number valign-text-middle",
+            },
+            [_vm._v("\n                        00000001\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-1" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-operador valign-text-middle",
+            },
+            [_vm._v("\n                        Operador\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-name-profile valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        Andrés Toro\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-2" }, [
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-fecha valign-text-middle",
+            },
+            [_vm._v("\n                        Fecha\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-date valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                        13/10/2022\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-3" }, [
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-hora valign-text-middle",
+            },
+            [_vm._v("\n                        Hora\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "expedientes-administrador-text valign-text-middle",
+            },
+            [_vm._v("\n                        22:34\n                    ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-administrador-flex-row-4" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "expedientes-administrador-estado valign-text-middle",
+            },
+            [_vm._v("\n                        Estado\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "expedientes-administrador-status-select-five" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "mdc-select mdc-select--filled demo-width-class",
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "mdc-select__anchor custom-enhanced-select-width",
+                      attrs: {
+                        role: "button",
+                        "aria-haspopup": "listbox",
+                        "aria-expanded": "false",
+                      },
+                    },
+                    [
+                      _c("span", { staticClass: "mdc-select__ripple" }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-select__selected-text-container" },
+                        [
+                          _c("span", {
+                            staticClass: "mdc-select__selected-text",
+                            attrs: { id: "demo-selected-text" },
+                          }),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-select__dropdown-icon" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "mdc-select__dropdown-icon-inactive material-icons",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        arrow_drop_down\n                                    "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "mdc-select__dropdown-icon-active material-icons",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        arrow_drop_up\n                                    "
+                            ),
+                          ]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "mdc-line-ripple" }),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "mdc-select__menu mdc-menu mdc-menu-surface",
+                    },
+                    [
+                      _c(
+                        "ul",
+                        {
+                          staticClass: "mdc-list",
+                          attrs: {
+                            id: "select_dropdown",
+                            role: "listbox",
+                            "aria-label": "listbox",
+                          },
+                        },
+                        [
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: {
+                                "data-value": "Item1",
+                                role: "option",
+                                id: "select-contenido",
+                              },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "onProcess-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass:
+                                                  "vector-administrador",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        En proceso\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        schedule\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item2", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "immobilized-administrador",
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Congelado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        do_disturb_on\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item3", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "requested-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Solicitado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        ios_share\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item4", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "closed-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Finalizado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        cancel\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "mdc-list-item",
+                              attrs: { "data-value": "Item5", role: "option" },
+                            },
+                            [
+                              _c("span", {
+                                staticClass: "mdc-list-item__ripple",
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "mdc-list-item__text" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "accepted-administrador" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "icon-administrador",
+                                          attrs: { id: "icono-administrador" },
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "vector-container-administrador",
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass: "vector",
+                                                attrs: {
+                                                  src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg",
+                                                },
+                                              }),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("p", [
+                                            _vm._v(
+                                              "\n                                                        Completado\n                                                    "
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "material-icons" },
+                                            [
+                                              _vm._v(
+                                                "\n                                                        check_circle_outline\n                                                    "
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "modal-administrador-information gothica1-normal-black-21px",
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "expediente-administrador-modal valign-text-middle" },
+          [
+            _vm._v(
+              "\n                            Expediente\n                    "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "modal-administrador-flex-row-1" }, [
+          _c("div", { staticClass: "codigo-administrador-modal" }, [
             _vm._v(
               "\n                            Codigo de la llamada:\n                        "
             ),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "info-codigo-modal" }, [
+          _c("div", { staticClass: "info-administrador-codigo-modal" }, [
             _vm._v(
               "\n                            00000001\n                        "
             ),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-2" }, [
-          _c("div", { staticClass: "provincia-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            Provincia:\n                        "
-            ),
-          ]),
+        _c("div", { staticClass: "modal-administrador-flex-row-2" }, [
+          _c(
+            "div",
+            { staticClass: "provincia-administrador-modal valign-text-middle" },
+            [
+              _vm._v(
+                "\n                            Provincia:\n                        "
+              ),
+            ]
+          ),
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "info-provincia-modal valign-text-middle" },
+            {
+              staticClass:
+                "info-provincia-administrador-modal valign-text-middle",
+            },
             [
               _vm._v(
                 "\n                            Lleida\n                        "
@@ -26407,16 +29005,23 @@ var staticRenderFns = [
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-3" }, [
-          _c("div", { staticClass: "municipio-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            Municipio\n                        "
-            ),
-          ]),
+        _c("div", { staticClass: "modal-administrador-flex-row-3" }, [
+          _c(
+            "div",
+            { staticClass: "municipio-administrador-modal valign-text-middle" },
+            [
+              _vm._v(
+                "\n                            Municipio\n                        "
+              ),
+            ]
+          ),
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "info-municipio-modal valign-text-middle" },
+            {
+              staticClass:
+                "info-municipio-administrador-modal valign-text-middle",
+            },
             [
               _vm._v(
                 "\n                            Agramunt\n                        "
@@ -26425,10 +29030,13 @@ var staticRenderFns = [
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-4" }, [
+        _c("div", { staticClass: "modal-administrador-flex-row-4" }, [
           _c(
             "div",
-            { staticClass: "fuera-Catalunya-modal valign-text-middle" },
+            {
+              staticClass:
+                "fuera-Catalunya-administrador-modal valign-text-middle",
+            },
             [
               _vm._v(
                 "\n                            Fuera de Catalunya:\n                        "
@@ -26438,7 +29046,10 @@ var staticRenderFns = [
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "info-fuera-Catalunya-modal valign-text-middle" },
+            {
+              staticClass:
+                "info-fuera-Catalunya-administrador-modal valign-text-middle",
+            },
             [
               _vm._v(
                 "\n                            No\n                        "
@@ -26447,16 +29058,23 @@ var staticRenderFns = [
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-5" }, [
-          _c("div", { staticClass: "incidente-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            Incidente:\n                        "
-            ),
-          ]),
+        _c("div", { staticClass: "modal-administrador-flex-row-5" }, [
+          _c(
+            "div",
+            { staticClass: "incidente-administrador-modal valign-text-middle" },
+            [
+              _vm._v(
+                "\n                            Incidente:\n                        "
+              ),
+            ]
+          ),
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "info-incidente-modal valign-text-middle" },
+            {
+              staticClass:
+                "info-incidente-administrador-modal valign-text-middle",
+            },
             [
               _vm._v(
                 "\n                            Derrumbamiento de un edificio\n                        "
@@ -26465,16 +29083,23 @@ var staticRenderFns = [
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-6" }, [
-          _c("div", { staticClass: "direccion-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            Direccion:\n                        "
-            ),
-          ]),
+        _c("div", { staticClass: "modal-administrador-flex-row-6" }, [
+          _c(
+            "div",
+            { staticClass: "direccion-administrador-modal valign-text-middle" },
+            [
+              _vm._v(
+                "\n                            Direccion:\n                        "
+              ),
+            ]
+          ),
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "info-direccion-modal valign-text-middle" },
+            {
+              staticClass:
+                "info-direccion-administrador-modal valign-text-middle",
+            },
             [
               _vm._v(
                 "\n                            SQY\n                        "
@@ -26483,22 +29108,33 @@ var staticRenderFns = [
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-7" }, [
-          _c("div", { staticClass: "duracion-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            Duracion de la llamada:\n                        "
-            ),
-          ]),
+        _c("div", { staticClass: "modal-administrador-flex-row-7" }, [
+          _c(
+            "div",
+            { staticClass: "duracion-administrador-modal valign-text-middle" },
+            [
+              _vm._v(
+                "\n                            Duracion de la llamada:\n                        "
+              ),
+            ]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "info-duracion-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            00:04:31\n                        "
-            ),
-          ]),
+          _c(
+            "div",
+            {
+              staticClass:
+                "info-duracion-administrador-modal valign-text-middle",
+            },
+            [
+              _vm._v(
+                "\n                            00:04:31\n                        "
+              ),
+            ]
+          ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-col" }, [
-          _c("div", { staticClass: "modal-flex-row-8" }, [
+        _c("div", { staticClass: "modal-administrador-flex-col" }, [
+          _c("div", { staticClass: "modal-administrador-flex-row-8" }, [
             _c("div", { staticClass: "notaComun-modal valign-text-middle" }, [
               _vm._v(
                 "\n                                Nota comun:\n                            "
@@ -26506,10 +29142,13 @@ var staticRenderFns = [
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "modal-flex-row-9" }, [
+          _c("div", { staticClass: "modal-administrador-flex-row-9" }, [
             _c(
               "div",
-              { staticClass: "info-notaComun-modal valign-text-middle" },
+              {
+                staticClass:
+                  "info-notaComun-administrador-modal valign-text-middle",
+              },
               [
                 _vm._v(
                   "\n                                Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.\n                            "

@@ -4,7 +4,7 @@
             Expedientes
         </h1>
         <div class="expedientes-administrador-container">
-            <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible"> <!-- TODO: File --onProcess  -->
+            <div class="expediente-administrador-file" data-open="expedientes-administrador-modalScreen" @click="modalVisible">
                 <div class="window-expediente-administrador-container"> <!-- FIXME: ELEMENTS -->
                     <div class="window-expediente-administrador-shadow"></div>
                     <div class="window-expediente-administrador-shadow-onProcess"></div>
@@ -47,7 +47,7 @@
                         <div class="expedientes-administrador-estado valign-text-middle">
                             Estado
                         </div>
-                        <div class="expedientes-administrador-status-select">
+                        <div class="expedientes-administrador-status-select-one">
                             <div class="mdc-select mdc-select--filled demo-width-class">
                                 <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span class="mdc-select__ripple"></span>
@@ -163,10 +163,10 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible">
+            <div class="expediente-administrador-file" data-open="expedientes-administrador-modalScreen" @click="modalVisible">
                 <div class="window-expediente-administrador-container">
                     <div class="window-expediente-administrador-shadow"></div>
-                    <div class="window-expediente-administrador-shadow-onProcess"></div>
+                    <div class="window-expediente-administrador-shadow-accepted"></div>
                     <div class="window-expediente-administrador"></div>
                 </div>
                 <div class="expedientes-administrador-info gothica1-normal-black-21px">
@@ -206,7 +206,7 @@
                         <div class="expedientes-administrador-estado valign-text-middle">
                             Estado
                         </div>
-                        <div class="expedientes-administrador-status-select">
+                        <div class="expedientes-administrador-status-select-two">
                             <div class="mdc-select mdc-select--filled demo-width-class">
                                 <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span class="mdc-select__ripple"></span>
@@ -223,188 +223,95 @@
                                     </span>
                                     <span class="mdc-line-ripple"></span>
                                 </div>
-                                <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                <div class="mdc-select__menu mdc-menu mdc-menu-surface">
                                     <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                        <li class="mdc-list-item" data-value="Item" role="option">
+                                        <li class="mdc-list-item" data-value="Item1" role="option" id="select-contenido">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="onProcess-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
+                                                        </div>
+                                                        <p>
+                                                            En proceso
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            schedule
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item2" role="option">
                                             <span class="mdc-list-item__ripple"></span>
                                             <span class="mdc-list-item__text">
                                                 <div class="immobilized-administrador">
-                                                    <div class="icon">
-                                                        <div class="vector-container">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
                                                             <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
                                                         </div>
+                                                        <p>
+                                                            Congelado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            do_disturb_on
+                                                        </span>
                                                     </div>
-                                                    <span class="material-icons">
-                                                        do_disturb_on
-                                                    </span>
                                                 </div>
                                             </span>
                                         </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible">
-                <div class="window-expediente-administrador-container">
-                    <div class="window-expediente-administrador-shadow"></div>
-                    <div class="window-expediente-administrador-shadow-onProcess"></div>
-                    <div class="window-expediente-administrador"></div>
-                </div>
-                <div class="expedientes-administrador-info gothica1-normal-black-21px">
-                    <div class="expedientes-administrador-flex-row">
-                        <div class="expedientes-administrador-expediente valign-text-middle">
-                            Expediente
-                        </div>
-                        <div class="expedientes-administrador-number valign-text-middle">
-                            00000001
-                        </div>
-                    </div>
-                    <div class="expedientes-administrador-flex-row-1">
-                        <div class="expedientes-administrador-operador valign-text-middle">
-                            Operador
-                        </div>
-                        <div class="expedientes-administrador-name-profile valign-text-middle">
-                            Andrés Toro
-                        </div>
-                    </div>
-                    <div class="expedientes-administrador-flex-row-2">
-                        <div class="expedientes-administrador-fecha valign-text-middle">
-                            Fecha
-                        </div>
-                        <div class="expedientes-administrador-date valign-text-middle">
-                            13/10/2022
-                        </div>
-                    </div>
-                    <div class="expedientes-administrador-flex-row-3">
-                        <div class="expedientes-administrador-hora valign-text-middle">
-                            Hora
-                        </div>
-                        <div class="expedientes-administrador-text valign-text-middle">
-                            22:34
-                        </div>
-                    </div>
-                    <div class="expedientes-administrador-flex-row-4">
-                        <div class="expedientes-administrador-estado valign-text-middle">
-                            Estado
-                        </div>
-                        <div class="expedientes-administrador-status-select">
-                            <div class="mdc-select mdc-select--filled demo-width-class">
-                                <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
-                                    <span class="mdc-select__ripple"></span>
-                                    <span class="mdc-select__selected-text-container">
-                                        <span id="demo-selected-text" class="mdc-select__selected-text"></span>
-                                    </span>
-                                    <span class="mdc-select__dropdown-icon">
-                                        <span class="mdc-select__dropdown-icon-inactive material-icons">
-                                            arrow_drop_down
-                                        </span>
-                                        <span class="mdc-select__dropdown-icon-active material-icons">
-                                            arrow_drop_up
-                                        </span>
-                                    </span>
-                                    <span class="mdc-line-ripple"></span>
-                                </div>
-                                <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                                    <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                        <li class="mdc-list-item" data-value="Item" role="option">
+                                        <li class="mdc-list-item" data-value="Item3" role="option">
                                             <span class="mdc-list-item__ripple"></span>
                                             <span class="mdc-list-item__text">
                                                 <div class="requested-administrador">
-                                                    <div class="icon">
-                                                        <div class="vector-container">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
                                                             <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
                                                         </div>
+                                                        <p>
+                                                            Solicitado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            ios_share
+                                                        </span>
                                                     </div>
-                                                    <span class="material-icons">
-                                                        ios_share
-                                                    </span>
                                                 </div>
                                             </span>
                                         </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible">
-                <div class="window-expediente-administrador-container">
-                    <div class="window-expediente-administrador-shadow"></div>
-                    <div class="window-expediente-administrador-shadow-onProcess"></div>
-                    <div class="window-expediente-administrador"></div>
-                </div>
-                <div class="expedientes-administrador-info gothica1-normal-black-21px">
-                    <div class="expedientes-administrador-flex-row">
-                        <div class="expedientes-administrador-expediente valign-text-middle">
-                            Expediente
-                        </div>
-                        <div class="expedientes-administrador-number valign-text-middle">
-                            00000001
-                        </div>
-                    </div>
-                    <div class="expedientes-administrador-flex-row-1">
-                        <div class="expedientes-administrador-operador valign-text-middle">
-                            Operador
-                        </div>
-                        <div class="expedientes-administrador-name-profile valign-text-middle">
-                            Andrés Toro
-                        </div>
-                    </div>
-                    <div class="expedientes-administrador-flex-row-2">
-                        <div class="expedientes-administrador-fecha valign-text-middle">
-                            Fecha
-                        </div>
-                        <div class="expedientes-administrador-date valign-text-middle">
-                            13/10/2022
-                        </div>
-                    </div>
-                    <div class="expedientes-administrador-flex-row-3">
-                        <div class="expedientes-administrador-hora valign-text-middle">
-                            Hora
-                        </div>
-                        <div class="expedientes-administrador-text valign-text-middle">
-                            22:34
-                        </div>
-                    </div>
-                    <div class="expedientes-administrador-flex-row-4">
-                        <div class="expedientes-administrador-estado valign-text-middle">
-                            Estado
-                        </div>
-                        <div class="expedientes-administrador-status-select">
-                            <div class="mdc-select mdc-select--filled demo-width-class">
-                                <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
-                                    <span class="mdc-select__ripple"></span>
-                                    <span class="mdc-select__selected-text-container">
-                                        <span id="demo-selected-text" class="mdc-select__selected-text"></span>
-                                    </span>
-                                    <span class="mdc-select__dropdown-icon">
-                                        <span class="mdc-select__dropdown-icon-inactive material-icons">
-                                            arrow_drop_down
-                                        </span>
-                                        <span class="mdc-select__dropdown-icon-active material-icons">
-                                            arrow_drop_up
-                                        </span>
-                                    </span>
-                                    <span class="mdc-line-ripple"></span>
-                                </div>
-                                <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                                    <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                        <li class="mdc-list-item" data-value="Item" role="option">
+                                        <li class="mdc-list-item" data-value="Item4" role="option">
                                             <span class="mdc-list-item__ripple"></span>
                                             <span class="mdc-list-item__text">
                                                 <div class="closed-administrador">
-                                                    <div class="icon">
-                                                        <div class="vector-container">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
                                                             <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg"/>
                                                         </div>
+                                                        <p>
+                                                            Finalizado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            cancel
+                                                        </span>
                                                     </div>
-                                                    <span class="material-icons">
-                                                        cancel
-                                                    </span>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item5" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="accepted-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Completado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            check_circle_outline
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </span>
                                         </li>
@@ -414,11 +321,11 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
-            <!-- <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible">
+            </div>
+            <div class="expediente-administrador-file" data-open="expedientes-administrador-modalScreen" @click="modalVisible">
                 <div class="window-expediente-administrador-container">
                     <div class="window-expediente-administrador-shadow"></div>
-                    <div class="window-expediente-administrador-shadow-onProcess"></div>
+                    <div class="window-expediente-administrador-shadow-inmobilized"></div>
                     <div class="window-expediente-administrador"></div>
                 </div>
                 <div class="expedientes-administrador-info gothica1-normal-black-21px">
@@ -458,7 +365,7 @@
                         <div class="expedientes-administrador-estado valign-text-middle">
                             Estado
                         </div>
-                        <div class="expedientes-administrador-status-select">
+                        <div class="expedientes-administrador-status-select-three">
                             <div class="mdc-select mdc-select--filled demo-width-class">
                                 <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
                                     <span class="mdc-select__ripple"></span>
@@ -475,20 +382,95 @@
                                     </span>
                                     <span class="mdc-line-ripple"></span>
                                 </div>
-                                <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                <div class="mdc-select__menu mdc-menu mdc-menu-surface">
                                     <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                        <li class="mdc-list-item" data-value="Item" role="option">
+                                        <li class="mdc-list-item" data-value="Item1" role="option" id="select-contenido">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="onProcess-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
+                                                        </div>
+                                                        <p>
+                                                            En proceso
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            schedule
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item2" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="immobilized-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Congelado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            do_disturb_on
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item3" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="requested-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Solicitado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            ios_share
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item4" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="closed-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Finalizado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item5" role="option">
                                             <span class="mdc-list-item__ripple"></span>
                                             <span class="mdc-list-item__text">
                                                 <div class="accepted-administrador">
-                                                    <div class="icon">
-                                                        <div class="vector-container">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
                                                             <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg"/>
                                                         </div>
+                                                        <p>
+                                                            Completado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            check_circle_outline
+                                                        </span>
                                                     </div>
-                                                    <span class="material-icons">
-                                                        check_circle_outline
-                                                    </span>
                                                 </div>
                                             </span>
                                         </li>
@@ -498,84 +480,402 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
-            <div class="expedientes-modal" id="expedientes-modalScreen">
-                <div class="expedientes-modal-window">
-                    <header class="expedientes-modal-header">
-                        <div class="expedientes-x" id="close-modal" data-close="expedientes-modalScreen" @click="modalInvisible">
+            </div>
+            <div class="expediente-administrador-file" data-open="expedientes-administrador-modalScreen" @click="modalVisible">
+                <div class="window-expediente-administrador-container">
+                    <div class="window-expediente-administrador-shadow"></div>
+                    <div class="window-expediente-administrador-shadow-requested"></div>
+                    <div class="window-expediente-administrador"></div>
+                </div>
+                <div class="expedientes-administrador-info gothica1-normal-black-21px">
+                    <div class="expedientes-administrador-flex-row">
+                        <div class="expedientes-administrador-expediente valign-text-middle">
+                            Expediente
+                        </div>
+                        <div class="expedientes-administrador-number valign-text-middle">
+                            00000001
+                        </div>
+                    </div>
+                    <div class="expedientes-administrador-flex-row-1">
+                        <div class="expedientes-administrador-operador valign-text-middle">
+                            Operador
+                        </div>
+                        <div class="expedientes-administrador-name-profile valign-text-middle">
+                            Andrés Toro
+                        </div>
+                    </div>
+                    <div class="expedientes-administrador-flex-row-2">
+                        <div class="expedientes-administrador-fecha valign-text-middle">
+                            Fecha
+                        </div>
+                        <div class="expedientes-administrador-date valign-text-middle">
+                            13/10/2022
+                        </div>
+                    </div>
+                    <div class="expedientes-administrador-flex-row-3">
+                        <div class="expedientes-administrador-hora valign-text-middle">
+                            Hora
+                        </div>
+                        <div class="expedientes-administrador-text valign-text-middle">
+                            22:34
+                        </div>
+                    </div>
+                    <div class="expedientes-administrador-flex-row-4">
+                        <div class="expedientes-administrador-estado valign-text-middle">
+                            Estado
+                        </div>
+                        <div class="expedientes-administrador-status-select-four">
+                            <div class="mdc-select mdc-select--filled demo-width-class">
+                                <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span class="mdc-select__ripple"></span>
+                                    <span class="mdc-select__selected-text-container">
+                                        <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                    </span>
+                                    <span class="mdc-select__dropdown-icon">
+                                        <span class="mdc-select__dropdown-icon-inactive material-icons">
+                                            arrow_drop_down
+                                        </span>
+                                        <span class="mdc-select__dropdown-icon-active material-icons">
+                                            arrow_drop_up
+                                        </span>
+                                    </span>
+                                    <span class="mdc-line-ripple"></span>
+                                </div>
+                                <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+                                    <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                                        <li class="mdc-list-item" data-value="Item1" role="option" id="select-contenido">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="onProcess-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
+                                                        </div>
+                                                        <p>
+                                                            En proceso
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            schedule
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item2" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="immobilized-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Congelado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            do_disturb_on
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item3" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="requested-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Solicitado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            ios_share
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item4" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="closed-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Finalizado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item5" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="accepted-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Completado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            check_circle_outline
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="expediente-administrador-file" data-open="expedientes-administrador-modalScreen" @click="modalVisible">
+                <div class="window-expediente-administrador-container">
+                    <div class="window-expediente-administrador-shadow"></div>
+                    <div class="window-expediente-administrador-shadow-closed"></div>
+                    <div class="window-expediente-administrador"></div>
+                </div>
+                <div class="expedientes-administrador-info gothica1-normal-black-21px">
+                    <div class="expedientes-administrador-flex-row">
+                        <div class="expedientes-administrador-expediente valign-text-middle">
+                            Expediente
+                        </div>
+                        <div class="expedientes-administrador-number valign-text-middle">
+                            00000001
+                        </div>
+                    </div>
+                    <div class="expedientes-administrador-flex-row-1">
+                        <div class="expedientes-administrador-operador valign-text-middle">
+                            Operador
+                        </div>
+                        <div class="expedientes-administrador-name-profile valign-text-middle">
+                            Andrés Toro
+                        </div>
+                    </div>
+                    <div class="expedientes-administrador-flex-row-2">
+                        <div class="expedientes-administrador-fecha valign-text-middle">
+                            Fecha
+                        </div>
+                        <div class="expedientes-administrador-date valign-text-middle">
+                            13/10/2022
+                        </div>
+                    </div>
+                    <div class="expedientes-administrador-flex-row-3">
+                        <div class="expedientes-administrador-hora valign-text-middle">
+                            Hora
+                        </div>
+                        <div class="expedientes-administrador-text valign-text-middle">
+                            22:34
+                        </div>
+                    </div>
+                    <div class="expedientes-administrador-flex-row-4">
+                        <div class="expedientes-administrador-estado valign-text-middle">
+                            Estado
+                        </div>
+                        <div class="expedientes-administrador-status-select-five">
+                            <div class="mdc-select mdc-select--filled demo-width-class">
+                                <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span class="mdc-select__ripple"></span>
+                                    <span class="mdc-select__selected-text-container">
+                                        <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                    </span>
+                                    <span class="mdc-select__dropdown-icon">
+                                        <span class="mdc-select__dropdown-icon-inactive material-icons">
+                                            arrow_drop_down
+                                        </span>
+                                        <span class="mdc-select__dropdown-icon-active material-icons">
+                                            arrow_drop_up
+                                        </span>
+                                    </span>
+                                    <span class="mdc-line-ripple"></span>
+                                </div>
+                                <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+                                    <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                                        <li class="mdc-list-item" data-value="Item1" role="option" id="select-contenido">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="onProcess-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
+                                                        </div>
+                                                        <p>
+                                                            En proceso
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            schedule
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item2" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="immobilized-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Congelado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            do_disturb_on
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item3" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="requested-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Solicitado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            ios_share
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item4" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="closed-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Finalizado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item5" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="accepted-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Completado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            check_circle_outline
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="expedientes-administrador-modal" id="expedientes-administrador-modalScreen">
+                <div class="expedientes-administrador-modal-window">
+                    <header class="expedientes-administrador-modal-header">
+                        <div class="expedientes-administrador-x" id="close-administrador-modal" data-close="expedientes-administrador-modalScreen" @click="modalInvisible">
                             <span class="material-icons">
                                 close
                             </span>
                         </div>
                     </header>
-                    <div class="modal-information gothica1-normal-black-21px">
-                        <div class="expediente-modal valign-text-middle">
+                    <div class="modal-administrador-information gothica1-normal-black-21px">
+                        <div class="expediente-administrador-modal valign-text-middle">
                                 Expediente
                         </div>
-                        <div class="modal-flex-row-1">
-                            <div class="codigo-modal">
+                        <div class="modal-administrador-flex-row-1">
+                            <div class="codigo-administrador-modal">
                                 Codigo de la llamada:
                             </div>
-                            <div class="info-codigo-modal">
+                            <div class="info-administrador-codigo-modal">
                                 00000001
                             </div>
                         </div>
-                        <div class="modal-flex-row-2">
-                            <div class="provincia-modal valign-text-middle">
+                        <div class="modal-administrador-flex-row-2">
+                            <div class="provincia-administrador-modal valign-text-middle">
                                 Provincia:
                             </div>
-                            <div class="info-provincia-modal valign-text-middle">
+                            <div class="info-provincia-administrador-modal valign-text-middle">
                                 Lleida
                             </div>
                         </div>
-                        <div class="modal-flex-row-3">
-                            <div class="municipio-modal valign-text-middle">
+                        <div class="modal-administrador-flex-row-3">
+                            <div class="municipio-administrador-modal valign-text-middle">
                                 Municipio
                             </div>
-                            <div class="info-municipio-modal valign-text-middle">
+                            <div class="info-municipio-administrador-modal valign-text-middle">
                                 Agramunt
                             </div>
                         </div>
-                        <div class="modal-flex-row-4">
-                            <div class="fuera-Catalunya-modal valign-text-middle">
+                        <div class="modal-administrador-flex-row-4">
+                            <div class="fuera-Catalunya-administrador-modal valign-text-middle">
                                 Fuera de Catalunya:
                             </div>
-                            <div class="info-fuera-Catalunya-modal valign-text-middle">
+                            <div class="info-fuera-Catalunya-administrador-modal valign-text-middle">
                                 No
                             </div>
                         </div>
-                        <div class="modal-flex-row-5">
-                            <div class="incidente-modal valign-text-middle">
+                        <div class="modal-administrador-flex-row-5">
+                            <div class="incidente-administrador-modal valign-text-middle">
                                 Incidente:
                             </div>
-                            <div class="info-incidente-modal valign-text-middle">
+                            <div class="info-incidente-administrador-modal valign-text-middle">
                                 Derrumbamiento de un edificio
                             </div>
                         </div>
-                        <div class="modal-flex-row-6">
-                            <div class="direccion-modal valign-text-middle">
+                        <div class="modal-administrador-flex-row-6">
+                            <div class="direccion-administrador-modal valign-text-middle">
                                 Direccion:
                             </div>
-                            <div class="info-direccion-modal valign-text-middle">
+                            <div class="info-direccion-administrador-modal valign-text-middle">
                                 SQY
                             </div>
                         </div>
-                        <div class="modal-flex-row-7">
-                            <div class="duracion-modal valign-text-middle">
+                        <div class="modal-administrador-flex-row-7">
+                            <div class="duracion-administrador-modal valign-text-middle">
                                 Duracion de la llamada:
                             </div>
-                            <div class="info-duracion-modal valign-text-middle">
+                            <div class="info-duracion-administrador-modal valign-text-middle">
                                 00:04:31
                             </div>
                         </div>
-                        <div class="modal-flex-col">
-                            <div class="modal-flex-row-8">
+                        <div class="modal-administrador-flex-col">
+                            <div class="modal-administrador-flex-row-8">
                                 <div class="notaComun-modal valign-text-middle">
                                     Nota comun:
                                 </div>
                             </div>
-                            <div class="modal-flex-row-9">
-                                <div class="info-notaComun-modal valign-text-middle">
+                            <div class="modal-administrador-flex-row-9">
+                                <div class="info-notaComun-administrador-modal valign-text-middle">
                                     Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.
                                 </div>
                             </div>
@@ -597,7 +897,11 @@
         },
 
         mounted() {
-            new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select .mdc-select"));
+            new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select-one .mdc-select"));
+            new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select-two .mdc-select"));
+            new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select-three .mdc-select"));
+            new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select-four .mdc-select"));
+            new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select-five .mdc-select"));
         },
         methods:{
             modalVisible() {
@@ -612,22 +916,22 @@
                 const isVisible = "is-visible";
                 document.getElementById(modalIdClose).classList.remove(isVisible);
             },
-            modalOut(){
-                const closeEls = document.querySelector("[data-close]");
-                const modalIdClose = closeEls.dataset.close;
-                const isVisible = "is-visible";
-                document.getElementById(modalIdClose).classList.remove(isVisible);
-                document.addEventListener("click", e => {
-                    if (e.target == document.querySelector(".modal.is-visible")) {
-                    document.querySelector(".modal .is-visible [data-close]").click();
-                    }
-                });
-                document.addEventListener("keyup", e => {
-                    if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
-                    document.querySelector(".modal .is-visible [data-close]").click();
-                    }
-                });
-            },
+            // modalOut(){
+            //     const closeEls = document.querySelector("[data-close]");
+            //     const modalIdClose = closeEls.dataset.close;
+            //     const isVisible = "is-visible";
+            //     document.getElementById(modalIdClose).classList.remove(isVisible);
+            //     document.addEventListener("click", e => {
+            //         if (e.target == document.querySelector(".modal.is-visible")) {
+            //         document.querySelector(".modal .is-visible [data-close]").click();
+            //         }
+            //     });
+            //     document.addEventListener("keyup", e => {
+            //         if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+            //         document.querySelector(".modal .is-visible [data-close]").click();
+            //         }
+            //     });
+            // },
         }
     }
 </script>
@@ -671,9 +975,9 @@
     cursor: pointer;
     }
 
-    .expediente-administrador-file:hover {
+    /* .expediente-administrador-file:hover {
     transform: scale(1.1);
-    }
+    } */
 
     .window-expediente-administrador-container {
     background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);
@@ -1043,7 +1347,7 @@
     } */
 
     /* FIXME: Modal: */
-    .expedientes-modal{
+    .expedientes-administrador-modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -1060,7 +1364,7 @@
     transition: all 0.35s ease-in;
     }
 
-    .expedientes-modal-window {
+    .expedientes-administrador-modal-window {
     width: 1104px;
     height: 526px;
     border-radius: 32px;
@@ -1069,7 +1373,20 @@
     z-index: 99;
     }
 
-    #close-modal {
+    .expedientes-administrador-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .expedientes-administrador-x {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    width: 32px;
+    }
+
+    #close-administrador-modal {
     cursor: pointer;
     background: transparent;
     border: none;
@@ -1080,30 +1397,12 @@
     margin-top: 18px;
     }
 
-    .expedientes-modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    }
-
-    .expedientes-x {
-    align-items: flex-start;
-    background-color: transparent;
-    display: flex;
-    width: 32px;
-    }
-
-    .expedientes-modal .is-visible {
+    .expedientes-administrador-modal.is-visible {
     visibility: visible;
     opacity: 1;
     }
 
-    .x span {
-    color: black;
-    font-size: 32px;
-    }
-
-    .expediente-modal {
+    .expediente-administrador-modal {
     height: 16px;
     letter-spacing: 1.25px;
     line-height: 16px;
@@ -1112,7 +1411,7 @@
     margin-left: 40px
     }
 
-    .modal-flex-row-1 {
+    .modal-administrador-flex-row-1 {
     height: 16px;
     width: 411px;
     letter-spacing: 1.25px;
@@ -1123,7 +1422,7 @@
     margin-top: 53px;
     }
 
-    .modal-flex-row-2 {
+    .modal-administrador-flex-row-2 {
     height: 16px;
     width: 411px;
     letter-spacing: 1.25px;
@@ -1134,7 +1433,7 @@
     margin-top: 53px;
     }
 
-    .modal-flex-row-3 {
+    .modal-administrador-flex-row-3 {
     height: 16px;
     width: 411px;
     letter-spacing: 1.25px;
@@ -1145,7 +1444,7 @@
     margin-top: 53px;
     }
 
-    .modal-flex-row-4 {
+    .modal-administrador-flex-row-4 {
     height: 16px;
     width: 411px;
     letter-spacing: 1.25px;
@@ -1156,7 +1455,7 @@
     margin-top: 53px;
     }
 
-    .modal-flex-row-5 {
+    .modal-administrador-flex-row-5 {
     height: 16px;
     width: 411px;
     letter-spacing: 1.25px;
@@ -1167,7 +1466,7 @@
     margin-top: 53px;
     }
 
-    .modal-flex-row-6 {
+    .modal-administrador-flex-row-6 {
     height: 16px;
     width: 411px;
     letter-spacing: 1.25px;
@@ -1178,7 +1477,7 @@
     margin-top: 53px;
     }
 
-    .modal-flex-row-7 {
+    .modal-administrador-flex-row-7 {
     height: 16px;
     width: 411px;
     letter-spacing: 1.25px;

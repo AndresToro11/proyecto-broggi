@@ -487,7 +487,7 @@
     width: 32px;
     }
 
-    .expedientes-modal .is-visible {
+    .expedientes-modal.is-visible {
     visibility: visible;
     opacity: 1;
     }
