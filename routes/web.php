@@ -16,10 +16,6 @@ use App\Http\Controllers\Api\UsuariController;
 */
 //------------------------------ Login -----------------------------
 
-/*Route::get('/login', function () {
-    return view('login');
-});*/
-
 Route::get('/login', function () {
     return view('login');
 });
@@ -38,6 +34,20 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/index', function () {
     return view('index');
+});
+
+//-------------------------------- home ---------------------------
+
+Route::get('/home/home-operador', function () {
+    return view('home-operador');
+});
+
+Route::get('/home/home-supervisor', function () {
+    return view('home-supervisor');
+});
+
+Route::get('/home/home-administrador', function () {
+    return view('home-administrador');
 });
 
 //-------------------------------- Llamada ---------------------------

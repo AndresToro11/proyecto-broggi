@@ -23,9 +23,9 @@ Vue.component('vista-login', require('./components/login.vue').default); //Acaba
 
 //----------------------------------------------- Home ------------------------------------
 
-Vue.component('administrador', require('./components/home/administrador.vue').default);
-Vue.component('operador', require('./components/home/operador.vue').default);
-Vue.component('supervisor', require('./components/home/supervisor.vue').default);
+Vue.component('home-operador', require('./components/home/operador.vue').default);
+Vue.component('home-supervisor', require('./components/home/supervisor.vue').default);
+Vue.component('home-administrador', require('./components/home/administrador.vue').default);
 
 //----------------------------------------------- Llamada ----------------------------------------------------
 
