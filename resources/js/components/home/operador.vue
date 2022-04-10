@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="operador-home-title gothica1-normal-black-28px">
-            ¡Bienvenido Operador!
+            ¡Bienvenido operador!
         </h1>
         <div class="operador-home-container">
             <div class="operador-home-llamada-button">
