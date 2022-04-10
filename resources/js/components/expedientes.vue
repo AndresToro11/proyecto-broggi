@@ -384,13 +384,12 @@
         },
 
         mounted() {
-            new mdc.select.MDCSelect(document.querySelector(".expedientes-status-select .mdc-select"));
         },
         methods:{
             modalVisible() {
-                const openEls = document.querySelector("[data-open]");
-                const modalId = openEls.dataset.open;
-                const isVisible = "is-visible";
+                let openEls = document.querySelector("[data-open]");
+                let modalId = openEls.dataset.open;
+                let isVisible = "is-visible";
                 document.getElementById(modalId).classList.add(isVisible);
             },
             modalInvisible() {

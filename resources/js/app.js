@@ -5,10 +5,7 @@
  */
 
 // require('./bootstrap');
-import {MDCTextField} from '@material/textfield';
-
 window.Vue = require('vue').default;
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -67,8 +64,6 @@ Vue.component('nuevousuario', require('./components/administracion/nuevoUsuario.
 const app = new Vue({
     el: '#app',
 });
-
-
 // import App from './components/App.vue';
 // import vueAxios from 'vue-axios';
 // import axios from 'axios';

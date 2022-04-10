@@ -64,20 +64,95 @@
                                     </span>
                                     <span class="mdc-line-ripple"></span>
                                 </div>
-                                <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                <div class="mdc-select__menu mdc-menu mdc-menu-surface">
                                     <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                                        <li class="mdc-list-item" data-value="Item" role="option">
+                                        <li class="mdc-list-item" data-value="Item1" role="option" id="select-contenido">
                                             <span class="mdc-list-item__ripple"></span>
                                             <span class="mdc-list-item__text">
-                                                <div class="onProcess">
-                                                    <div class="icon">
-                                                        <div class="vector-container">
-                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
+                                                <div class="onProcess-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6240b3148dae3cfde23e0d81/img/vector@2x.png"/>
                                                         </div>
+                                                        <p>
+                                                            En proceso
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            schedule
+                                                        </span>
                                                     </div>
-                                                    <span class="material-icons">
-                                                        schedule
-                                                    </span>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item2" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="immobilized-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Congelado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            do_disturb_on
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item3" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="requested-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Solicitado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            ios_share
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item4" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="closed-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Finalizado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li class="mdc-list-item" data-value="Item5" role="option">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-list-item__text">
+                                                <div class="accepted-administrador">
+                                                    <div class="icon-administrador" id="icono-administrador">
+                                                        <div class="vector-container-administrador">
+                                                            <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg"/>
+                                                        </div>
+                                                        <p>
+                                                            Completado
+                                                        </p>
+                                                        <span class="material-icons">
+                                                            check_circle_outline
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </span>
                                         </li>
@@ -88,13 +163,13 @@
                     </div>
                 </div>
             </div>
-            <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible"> <!-- TODO: File --onProcess  -->
-                <div class="window-expediente-administrador-container"> <!-- FIXME: ELEMENTS -->
+            <!-- <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible">
+                <div class="window-expediente-administrador-container">
                     <div class="window-expediente-administrador-shadow"></div>
                     <div class="window-expediente-administrador-shadow-onProcess"></div>
                     <div class="window-expediente-administrador"></div>
                 </div>
-                <div class="expedientes-administrador-info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
+                <div class="expedientes-administrador-info gothica1-normal-black-21px">
                     <div class="expedientes-administrador-flex-row">
                         <div class="expedientes-administrador-expediente valign-text-middle">
                             Expediente
@@ -153,7 +228,7 @@
                                         <li class="mdc-list-item" data-value="Item" role="option">
                                             <span class="mdc-list-item__ripple"></span>
                                             <span class="mdc-list-item__text">
-                                                <div class="immobilized">
+                                                <div class="immobilized-administrador">
                                                     <div class="icon">
                                                         <div class="vector-container">
                                                             <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
@@ -171,14 +246,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible"> <!-- TODO: File --onProcess  -->
-                <div class="window-expediente-administrador-container"> <!-- FIXME: ELEMENTS -->
+            </div> -->
+            <!-- <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible">
+                <div class="window-expediente-administrador-container">
                     <div class="window-expediente-administrador-shadow"></div>
                     <div class="window-expediente-administrador-shadow-onProcess"></div>
                     <div class="window-expediente-administrador"></div>
                 </div>
-                <div class="expedientes-administrador-info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
+                <div class="expedientes-administrador-info gothica1-normal-black-21px">
                     <div class="expedientes-administrador-flex-row">
                         <div class="expedientes-administrador-expediente valign-text-middle">
                             Expediente
@@ -237,7 +312,7 @@
                                         <li class="mdc-list-item" data-value="Item" role="option">
                                             <span class="mdc-list-item__ripple"></span>
                                             <span class="mdc-list-item__text">
-                                                <div class="requested">
+                                                <div class="requested-administrador">
                                                     <div class="icon">
                                                         <div class="vector-container">
                                                             <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-10@2x.svg"/>
@@ -255,14 +330,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible"> <!-- TODO: File --onProcess  -->
-                <div class="window-expediente-administrador-container"> <!-- FIXME: ELEMENTS -->
+            </div> -->
+            <!-- <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible">
+                <div class="window-expediente-administrador-container">
                     <div class="window-expediente-administrador-shadow"></div>
                     <div class="window-expediente-administrador-shadow-onProcess"></div>
                     <div class="window-expediente-administrador"></div>
                 </div>
-                <div class="expedientes-administrador-info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
+                <div class="expedientes-administrador-info gothica1-normal-black-21px">
                     <div class="expedientes-administrador-flex-row">
                         <div class="expedientes-administrador-expediente valign-text-middle">
                             Expediente
@@ -321,7 +396,7 @@
                                         <li class="mdc-list-item" data-value="Item" role="option">
                                             <span class="mdc-list-item__ripple"></span>
                                             <span class="mdc-list-item__text">
-                                                <div class="closed">
+                                                <div class="closed-administrador">
                                                     <div class="icon">
                                                         <div class="vector-container">
                                                             <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-6@2x.svg"/>
@@ -339,14 +414,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible"> <!-- TODO: File --onProcess  -->
-                <div class="window-expediente-administrador-container"> <!-- FIXME: ELEMENTS -->
+            </div> -->
+            <!-- <div class="expediente-administrador-file" data-open="expedientes-modalScreen" @click="modalVisible">
+                <div class="window-expediente-administrador-container">
                     <div class="window-expediente-administrador-shadow"></div>
                     <div class="window-expediente-administrador-shadow-onProcess"></div>
                     <div class="window-expediente-administrador"></div>
                 </div>
-                <div class="expedientes-administrador-info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
+                <div class="expedientes-administrador-info gothica1-normal-black-21px">
                     <div class="expedientes-administrador-flex-row">
                         <div class="expedientes-administrador-expediente valign-text-middle">
                             Expediente
@@ -405,7 +480,7 @@
                                         <li class="mdc-list-item" data-value="Item" role="option">
                                             <span class="mdc-list-item__ripple"></span>
                                             <span class="mdc-list-item__text">
-                                                <div class="accepted">
+                                                <div class="accepted-administrador">
                                                     <div class="icon">
                                                         <div class="vector-container">
                                                             <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg"/>
@@ -423,14 +498,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-
-
-
-
-            <div class="expedientes-modal" id="expedientes-modalScreen"> <!-- TODO: Modal -->
+            </div> -->
+            <div class="expedientes-modal" id="expedientes-modalScreen">
                 <div class="expedientes-modal-window">
                     <header class="expedientes-modal-header">
                         <div class="expedientes-x" id="close-modal" data-close="expedientes-modalScreen" @click="modalInvisible">
@@ -440,12 +509,10 @@
                         </div>
                     </header>
                     <div class="modal-information gothica1-normal-black-21px">
-                        <!-- <div class="modal-flex-row"> FIXME: Expediente -->
                         <div class="expediente-modal valign-text-middle">
                                 Expediente
                         </div>
-                        <!-- </div> -->
-                        <div class="modal-flex-row-1"> <!-- FIXME: Codigo de la llamada -->
+                        <div class="modal-flex-row-1">
                             <div class="codigo-modal">
                                 Codigo de la llamada:
                             </div>
@@ -453,7 +520,7 @@
                                 00000001
                             </div>
                         </div>
-                        <div class="modal-flex-row-2"> <!-- FIXME: Provincia -->
+                        <div class="modal-flex-row-2">
                             <div class="provincia-modal valign-text-middle">
                                 Provincia:
                             </div>
@@ -461,7 +528,7 @@
                                 Lleida
                             </div>
                         </div>
-                        <div class="modal-flex-row-3"> <!-- FIXME: Municipio -->
+                        <div class="modal-flex-row-3">
                             <div class="municipio-modal valign-text-middle">
                                 Municipio
                             </div>
@@ -469,7 +536,7 @@
                                 Agramunt
                             </div>
                         </div>
-                        <div class="modal-flex-row-4"> <!-- FIXME: Fuera de Catalunya -->
+                        <div class="modal-flex-row-4">
                             <div class="fuera-Catalunya-modal valign-text-middle">
                                 Fuera de Catalunya:
                             </div>
@@ -477,7 +544,7 @@
                                 No
                             </div>
                         </div>
-                        <div class="modal-flex-row-5"> <!-- FIXME: Incidente -->
+                        <div class="modal-flex-row-5">
                             <div class="incidente-modal valign-text-middle">
                                 Incidente:
                             </div>
@@ -485,7 +552,7 @@
                                 Derrumbamiento de un edificio
                             </div>
                         </div>
-                        <div class="modal-flex-row-6"> <!-- FIXME: Direccion -->
+                        <div class="modal-flex-row-6">
                             <div class="direccion-modal valign-text-middle">
                                 Direccion:
                             </div>
@@ -493,7 +560,7 @@
                                 SQY
                             </div>
                         </div>
-                        <div class="modal-flex-row-7"> <!-- FIXME: Duracion de la llamada -->
+                        <div class="modal-flex-row-7">
                             <div class="duracion-modal valign-text-middle">
                                 Duracion de la llamada:
                             </div>
@@ -501,7 +568,7 @@
                                 00:04:31
                             </div>
                         </div>
-                        <div class="modal-flex-col"> <!-- FIXME: Nota comun -->
+                        <div class="modal-flex-col">
                             <div class="modal-flex-row-8">
                                 <div class="notaComun-modal valign-text-middle">
                                     Nota comun:
@@ -530,7 +597,7 @@
         },
 
         mounted() {
-            new mdc.select.MDCSelect(document.querySelector(".expedientes-status-select .mdc-select"));
+            new mdc.select.MDCSelect(document.querySelector(".expedientes-administrador-status-select .mdc-select"));
         },
         methods:{
             modalVisible() {
@@ -566,6 +633,7 @@
 </script>
 
 <style>
+    /* FIXME: Title */
     .expedientes-administrador-title {
     display: flex;
     align-items: flex-start;
@@ -575,10 +643,405 @@
     margin-top: 50px;
     letter-spacing: 0.15px;
     line-height: 16px;
-    /* top: 222px; */
     white-space: nowrap;
     z-index: 4;
     }
+
+    /* FIXME: Containers y rows */
+    .expedientes-administrador-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    row-gap: 50px;
+    column-gap: 115px;
+    margin-left: 102px;
+    margin-right: 102px;
+    position: relative;
+    z-index: 1;
+    }
+
+    .expediente-administrador-file {
+    height: 279px;
+    margin-top: 45px;
+    position: relative;
+    width: 488px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    }
+
+    .expediente-administrador-file:hover {
+    transform: scale(1.1);
+    }
+
+    .window-expediente-administrador-container {
+    background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);
+    background-size: 100% 100%;
+    height: 279px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 488px;
+    }
+
+    .window-expediente-administrador-shadow {
+    background-color: var(--black-3);
+    border-radius: 39.43px;
+    box-shadow: 0px 4.93px 4.93px #00000040;
+    height: 269px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 478px;
+    }
+
+    .window-expediente-administrador-shadow-onProcess {
+    background-color: var(--black-3);
+    border-radius: 39.43px;
+    box-shadow: 0px 4.93px 4.93px var(--onProcess);
+    height: 269px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 478px;
+    }
+
+    .window-expediente-administrador-shadow-inmobilized {
+    background-color: var(--black-3);
+    border-radius: 39.43px;
+    box-shadow: 0px 4.93px 4.93px var(--immobilized);
+    height: 269px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 478px;
+    }
+
+    .window-expediente-administrador-shadow-requested {
+    background-color: var(--black-3);
+    border-radius: 39.43px;
+    box-shadow: 0px 4.93px 4.93px var(--requested);
+    height: 269px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 478px;
+    }
+
+    .window-expediente-administrador-shadow-closed {
+    background-color: var(--black-3);
+    border-radius: 39.43px;
+    box-shadow: 0px 4.93px 4.93px var(--closed);
+    height: 269px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 478px;
+    }
+
+    .window-expediente-administrador-shadow-accepted {
+    background-color: var(--black-3);
+    border-radius: 39.43px;
+    box-shadow: 0px 4.93px 4.93px var(--accepted);
+    height: 269px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 478px;
+    }
+
+    .window-expediente-administrador {
+    background-color: white;
+    border-radius: 39.43px;
+    height: 274px;
+    left: 5px;
+    position: absolute;
+    top: 3px;
+    width: 478px;
+    }
+
+    .expedientes-administrador-info {
+    align-items: flex-start;
+    display: flex;
+    height: 180px;
+    width: 414px;
+    left: 37px;
+    position: absolute;
+    top: 32px;
+    }
+
+    .expedientes-administrador-flex-row {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 188px;
+    flex-direction: row;
+    width: 414px;
+    height: 16px;
+    }
+
+    .expedientes-administrador-flex-row-1 {
+    align-items: flex-start;
+    margin-top: 25px;
+    margin-left: -412px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 183px;
+    flex-direction: row;
+    width: 414px;
+    height: 16px;
+    }
+
+    .expedientes-administrador-flex-row-2 {
+    align-items: flex-start;
+    margin-top: 75px;
+    margin-left: -412px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 227px;
+    flex-direction: row;
+    width: 414px;
+    height: 16px;
+    }
+
+    .expedientes-administrador-flex-row-3 {
+    align-items: flex-start;
+    margin-top: 125px;
+    margin-left: -412px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 300px;
+    flex-direction: row;
+    width: 414px;
+    height: 16px;
+    }
+
+    .expedientes-administrador-flex-row-4 {
+    align-items: flex-start;
+    margin-top: 175px;
+    margin-left: -412px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    flex-direction: row;
+    width: 414px;
+    height: 32px;
+    }
+
+    /* FIXME: Elementos */
+    /* FIXME: Expedientes */
+    .expedientes-administrador-expediente {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    white-space: nowrap;
+    }
+
+    .expedientes-administrador-number {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    min-width: 105px;
+    white-space: nowrap;
+    }
+
+    /* FIXME: Operador */
+    .expedientes-administrador-operador {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    margin-top: 25px;
+    white-space: nowrap;
+    }
+
+    .expedientes-administrador-name-profile {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    margin-top: 25px;
+    min-width: 129px;
+    white-space: nowrap;
+    }
+
+    /* FIXME: Fecha */
+    .expedientes-administrador-fecha {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    margin-top: 25px;
+    white-space: nowrap;
+    }
+
+    .expedientes-administrador-date {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    margin-top: 25px;
+    min-width: 121px;
+    white-space: nowrap;
+    }
+
+    /* FIXME: Hora */
+    .expedientes-administrador-hora {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    margin-top: 25px;
+    white-space: nowrap;
+    }
+
+    .expedientes-administrador-text {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    margin-top: 25px;
+    min-width: 61px;
+    white-space: nowrap;
+    }
+
+    /* FIXME: Estado */
+    .expedientes-administrador-estado {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    margin-top: 25px;
+    white-space: nowrap;
+    }
+
+    .expedientes-administrador-status-select {
+    display: inline-flex;
+    margin-top: 10px;
+    }
+
+    /* FIXME: Tipos de estados */
+    .onProcess-administrador {
+    align-items: flex-start;
+    background-color: white;
+    display: flex;
+    margin-right: 2.3px;
+    margin-top: 20px;
+    min-width: 26px;
+    }
+
+    .onProcess-administrador {
+    height: auto !important;
+    width: auto !important;
+    }
+
+    .onProcess-administrador span {
+    color: var(--onProcess);
+    margin-top: -5px;
+    font-size: 32px;
+    }
+
+    .immobilized-administrador {
+    align-items: flex-start;
+    background-color: white;
+    display: flex;
+    margin-right: 2.3px;
+    margin-top: 20px;
+    min-width: 26px;
+    }
+
+    .immobilized-administrador {
+    height: auto !important;
+    width: auto !important;
+    }
+
+    .immobilized-administrador span {
+    color: var(--immobilized);
+    margin-top: -5px;
+    font-size: 32px;
+    }
+
+    .requested-administrador {
+    align-items: flex-start;
+    background-color: white;
+    display: flex;
+    margin-right: 2.3px;
+    margin-top: 20px;
+    min-width: 26px;
+    }
+
+    .requested-administrador {
+    height: auto !important;
+    width: auto !important;
+    }
+
+    .requested-administrador span {
+    color: var(--requested);
+    margin-top: -5px;
+    font-size: 32px;
+    }
+
+    .closed-administrador {
+    align-items: flex-start;
+    background-color: white;
+    display: flex;
+    margin-right: 2.3px;
+    margin-top: 20px;
+    min-width: 26px;
+    }
+
+    .closed-administrador {
+    height: auto !important;
+    width: auto !important;
+    }
+
+    .closed-administrador span {
+    color: var(--closed);
+    margin-top: -5px;
+    font-size: 32px;
+    }
+
+    .accepted-administrador {
+    align-items: flex-start;
+    background-color: white;
+    display: flex;
+    margin-right: 2.3px;
+    margin-top: 20px;
+    min-width: 26px;
+    }
+
+    .accepted-administrador {
+    height: auto !important;
+    width: auto !important;
+    }
+
+    .accepted-administrador span {
+    color: var(--accepted);
+    margin-top: -5px;
+    font-size: 32px;
+    }
+
+    #select-contenido {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    width: 256px;
+    }
+
+    #icono-administrador {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 1.8px 1.8px;
+    width: 100%;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+
+    /* .expedientes-title {
+    height: 16px;
+    letter-spacing: 0.15px;
+    line-height: 16px;
+    margin-left: 102px;
+    margin-top: 24px;
+    white-space: nowrap;
+    } */
+
     /* FIXME: Modal: */
     .expedientes-modal{
     position: fixed;
@@ -724,419 +1187,5 @@
     gap: 4px;
     margin-left: 40px;
     margin-top: 53px;
-    }
-
-    /* FIXME: Containers y rows */
-    .expedientes-administrador-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: flex-start;
-    row-gap: 50px;
-    column-gap: 115px;
-    margin-left: 102px;
-    margin-right: 102px;
-    z-index: inherit;
-    }
-
-    .expedientes-administrador-file {
-    height: 279px;
-    margin-top: 45px;
-    position: relative;
-    width: 488px;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    }
-
-    .expedientes-administrador-file:hover {
-    transform: scale(1.1);
-    }
-
-    .expedientes-administrador-info {
-    align-items: flex-start;
-    display: flex;
-    height: 180px;
-    width: 414px;
-    left: 37px;
-    position: absolute;
-    top: 32px;
-    }
-
-    .expedientes-administrador-flex-row {
-    align-items: flex-start;
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 188px;
-    flex-direction: row;
-    width: 414px;
-    height: 16px;
-    }
-
-    .expedientes-administrador-flex-row-1 {
-    align-items: flex-start;
-    margin-top: 25px;
-    margin-left: -412px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 183px;
-    flex-direction: row;
-    width: 414px;
-    height: 16px;
-    }
-
-    .expedientes-administrador-flex-row-2 {
-    align-items: flex-start;
-    margin-top: 75px;
-    margin-left: -412px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 227px;
-    flex-direction: row;
-    width: 414px;
-    height: 16px;
-    }
-
-    .expedientes-administrador-flex-row-3 {
-    align-items: flex-start;
-    margin-top: 125px;
-    margin-left: -412px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 300px;
-    flex-direction: row;
-    width: 414px;
-    height: 16px;
-    }
-
-    .expedientes-administrador-flex-row-4 {
-    align-items: flex-start;
-    margin-top: 175px;
-    margin-left: -412px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 270px;
-    flex-direction: row;
-    width: 414px;
-    height: 32px;
-    }
-
-    .expedientes-administrador-status-select {
-    display: inline-flex;
-    margin-top: 10px;
-    }
-
-    .mdc-select__anchor {
-    width: 52px;
-    min-width: 0;
-    flex: 1 1 auto;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    outline: none;
-    cursor: pointer;
-    }
-
-    .mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {
-    background-color: white;
-    }
-
-    .mdc-select--filled .mdc-select__anchor {
-    height: 32px;
-    display: flex;
-    align-items: baseline;
-    }
-
-
-    
-    .window-expedientes-administrador-container {
-    background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);
-    background-size: 100% 100%;
-    height: 279px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 488px;
-    }
-
-    .window-expedientes-administrador-shadow {
-    background-color: var(--black-3);
-    border-radius: 39.43px;
-    box-shadow: 0px 4.93px 4.93px #00000040;
-    height: 269px;
-    left: 5px;
-    position: absolute;
-    top: 5px;
-    width: 478px;
-    }
-
-    .window-expedientes-administrador-shadow-onProcess {
-    background-color: var(--black-3);
-    border-radius: 39.43px;
-    box-shadow: 0px 4.93px 4.93px var(--onProcess);
-    height: 269px;
-    left: 5px;
-    position: absolute;
-    top: 5px;
-    width: 478px;
-    }
-
-    .window-expedientes-administrador-shadow-inmobilized {
-    background-color: var(--black-3);
-    border-radius: 39.43px;
-    box-shadow: 0px 4.93px 4.93px var(--immobilized);
-    height: 269px;
-    left: 5px;
-    position: absolute;
-    top: 5px;
-    width: 478px;
-    }
-
-    .window-expedientes-administrador-shadow-requested {
-    background-color: var(--black-3);
-    border-radius: 39.43px;
-    box-shadow: 0px 4.93px 4.93px var(--requested);
-    height: 269px;
-    left: 5px;
-    position: absolute;
-    top: 5px;
-    width: 478px;
-    }
-
-    .window-expedientes-administrador-shadow-closed {
-    background-color: var(--black-3);
-    border-radius: 39.43px;
-    box-shadow: 0px 4.93px 4.93px var(--closed);
-    height: 269px;
-    left: 5px;
-    position: absolute;
-    top: 5px;
-    width: 478px;
-    }
-
-    .window-expedientes-administrador-shadow-accepted {
-    background-color: var(--black-3);
-    border-radius: 39.43px;
-    box-shadow: 0px 4.93px 4.93px var(--accepted);
-    height: 269px;
-    left: 5px;
-    position: absolute;
-    top: 5px;
-    width: 478px;
-    }
-
-    .window-expediente {
-    background-color: white;
-    border-radius: 39.43px;
-    height: 274px;
-    left: 5px;
-    position: absolute;
-    top: 3px;
-    width: 478px;
-    }
-
-    .expedientes-title {
-    height: 16px;
-    letter-spacing: 0.15px;
-    line-height: 16px;
-    margin-left: 102px;
-    margin-top: 24px;
-    white-space: nowrap;
-    }
-
-    .expedientes-expediente {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    white-space: nowrap;
-    }
-
-    .expedientes-operador {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    margin-top: 25px;
-    white-space: nowrap;
-    }
-
-    .expedientes-fecha {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    margin-top: 25px;
-    white-space: nowrap;
-    }
-
-    .expedientes-hora {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    margin-top: 25px;
-    white-space: nowrap;
-    }
-
-    .expedientes-estado {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    margin-top: 25px;
-    white-space: nowrap;
-    }
-
-    .expedientes-number {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    min-width: 105px;
-    white-space: nowrap;
-    }
-
-    .expedientes-name-profile {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    margin-top: 25px;
-    min-width: 129px;
-    white-space: nowrap;
-    }
-
-    .expedientes-date {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    margin-top: 25px;
-    min-width: 121px;
-    white-space: nowrap;
-    }
-
-    .expedientes-text {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    margin-top: 25px;
-    min-width: 61px;
-    white-space: nowrap;
-    }
-
-    .onProcess {
-    align-items: flex-start;
-    background-color: white;
-    display: flex;
-    margin-right: 2.3px;
-    margin-top: 20px;
-    min-width: 26px;
-    }
-
-    .onProcess {
-    height: auto !important;
-    width: auto !important;
-    }
-
-    .onProcess span {
-    color: var(--onProcess);
-    margin-top: -5px;
-    font-size: 32px;
-    }
-
-    .immobilized {
-    align-items: flex-start;
-    background-color: white;
-    display: flex;
-    margin-right: 2.3px;
-    margin-top: 20px;
-    min-width: 26px;
-    }
-
-    .immobilized {
-    height: auto !important;
-    width: auto !important;
-    }
-
-    .immobilized span {
-    color: var(--immobilized);
-    margin-top: -5px;
-    font-size: 32px;
-    }
-
-    .requested {
-    align-items: flex-start;
-    background-color: white;
-    display: flex;
-    margin-right: 2.3px;
-    margin-top: 20px;
-    min-width: 26px;
-    }
-
-    .requested {
-    height: auto !important;
-    width: auto !important;
-    }
-
-    .requested span {
-    color: var(--requested);
-    margin-top: -5px;
-    font-size: 32px;
-    }
-
-    .closed {
-    align-items: flex-start;
-    background-color: white;
-    display: flex;
-    margin-right: 2.3px;
-    margin-top: 20px;
-    min-width: 26px;
-    }
-
-    .closed {
-    height: auto !important;
-    width: auto !important;
-    }
-
-    .closed span {
-    color: var(--closed);
-    margin-top: -5px;
-    font-size: 32px;
-    }
-
-    .accepted {
-    align-items: flex-start;
-    background-color: white;
-    display: flex;
-    margin-right: 2.3px;
-    margin-top: 20px;
-    min-width: 26px;
-    }
-
-    .accepted {
-    height: auto !important;
-    width: auto !important;
-    }
-
-    .accepted span {
-    color: var(--accepted);
-    margin-top: -5px;
-    font-size: 32px;
-    }
-
-    .icon {
-    align-items: flex-start;
-    display: flex;
-    height: 26px;
-    padding: 1.8px 1.8px;
-    width: 26px;
-    }
-
-    .vector-container {
-    height: 22px;
-    position: relative;
-    width: 22px;
-    }
-
-    .vector {
-    height: 1px;
-    left: 11px;
-    position: absolute;
-    top: 11px;
-    width: 1px;
     }
 </style>
