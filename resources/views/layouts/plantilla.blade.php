@@ -85,21 +85,21 @@
                     </div>
                 </span>
                 {{-- Header Supervisor --}}
-                    <span hidden>
-                        <div class="header-supervisor">
-                            <div class="overlap-group-supervisor">
-                                <img class="overlap-group-item-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
-                                <img class="overlap-group-item-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623f92c8f6a94c4ce7531afa/img/white-gradient-1@1x.svg"/>
-                                <h1 class="title-supervisor valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
-                                <div class="expedientes-supervisor valign-text-middle gothica1-medium-white-28px">Expedientes</div>
-                                <div class="grficos-supervisor valign-text-middle gothica1-medium-white-28px">Gráficos</div>
-                                <div class="operadores-supervisor valign-text-middle gothica1-medium-white-28px">Operadores</div>
-                                <div class="sergi-prez-jimnez-supervisor valign-text-middle gothica1-normal-white-18px">Sergi Pérez Jiménez</div>
-                                <img class="separate-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623f92c8f6a94c4ce7531afa/img/separate-1@2x.svg"/>
-                                <div class="cerrar-sesin-supervisor valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
-                            </div>
+                <span hidden>
+                    <div class="header-supervisor">
+                        <div class="header-supervisor-overlap-group-supervisor">
+                            <img class="header-supervisor-overlap-group-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
+                            <img class="header-supervisor-overlap-group-item-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623f92c8f6a94c4ce7531afa/img/white-gradient-1@1x.svg"/>
+                            <h1 class="header-supervisor-title-supervisor valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
+                            <div class="header-supervisor-expedientes-supervisor valign-text-middle gothica1-medium-white-28px">Expedientes</div>
+                            <div class="header-supervisor-graficos-supervisor valign-text-middle gothica1-medium-white-28px">Gráficos</div>
+                            <div class="header-supervisor-operadores-supervisor valign-text-middle gothica1-medium-white-28px">Operadores</div>
+                            <div class="header-supervisor-sergi-prez-jimnez-supervisor valign-text-middle gothica1-normal-white-18px">Sergi Pérez Jiménez</div>
+                            <img class="header-supervisor-separate-supervisor" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623f92c8f6a94c4ce7531afa/img/separate-1@2x.svg"/>
+                            <div class="header-supervisor-cerrar-sesin-supervisor valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
                         </div>
-                    </span>
+                    </div>
+                </span>
                 {{-- Header Administrador --}}
                 <span hidden>
                     <div class="header-administrador">
@@ -269,7 +269,7 @@
             z-index: 1;
             }
 
-            .header .overlap-group-supervisor {
+            .header-supervisor-overlap-group-supervisor {
             background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png);
             background-position: 50% 50%;
             background-size: cover;
@@ -278,7 +278,7 @@
             width: 1920px;
             }
 
-            .header .overlap-group-item-supervisor {
+            .header-supervisor-overlap-group-item-supervisor {
             height: 172px;
             left: 0;
             position: absolute;
@@ -286,7 +286,7 @@
             width: 1920px;
             }
 
-            .header .title-supervisor {
+            .header-supervisor-title-supervisor {
             cursor: pointer;
             height: 16px;
             left: 265px;
@@ -299,31 +299,11 @@
             white-space: nowrap;
             }
 
-            .header .title-supervisor:hover {
+            .header-supervisor-title-supervisor:hover {
             transform: scale(1.1);
             }
 
-            .header .expedientes-supervisor:hover {
-            transform: scale(1.1);
-            }
-
-            .header .grficos-supervisor:hover {
-            transform: scale(1.1);
-            }
-
-            .header .operadores-supervisor:hover {
-            transform: scale(1.1);
-            }
-
-            .header .sergi-prez-jimnez-supervisor:hover {
-            transform: scale(1.1);
-            }
-
-            .header .cerrar-sesin-supervisor:hover {
-            transform: scale(1.1);
-            }
-
-            .header .expedientes-supervisor {
+            .header-supervisor-expedientes-supervisor {
             cursor: pointer;
             height: 16px;
             left: 681px;
@@ -336,7 +316,11 @@
             white-space: nowrap;
             }
 
-            .header .grficos-supervisor {
+            .header-supervisor-expedientes-supervisor:hover {
+            transform: scale(1.1);
+            }
+
+            .header-supervisor-graficos-supervisor {
             cursor: pointer;
             height: 16px;
             left: 1093px;
@@ -349,7 +333,11 @@
             white-space: nowrap;
             }
 
-            .header .operadores-supervisor {
+            .header-supervisor-graficos-supervisor:hover {
+            transform: scale(1.1);
+            }
+
+            .header-supervisor-operadores-supervisor {
             cursor: pointer;
             height: 16px;
             left: 1454px;
@@ -362,8 +350,15 @@
             white-space: nowrap;
             }
 
-            .header .sergi-prez-jimnez-supervisor {
-            cursor: pointer;
+            .header-supervisor-operadores-supervisor:hover {
+            transform: scale(1.1);
+            }
+
+            .header-supervisor-sergi-prez-jimnez-supervisor {
+            color: var(--white);
+            font-family: var(--font-family-gothic_a1-regular);
+            font-size: var(--font-size-xs);
+            font-weight: 400;
             height: 16px;
             left: 1408px;
             letter-spacing: 1.25px;
@@ -371,11 +366,14 @@
             position: absolute;
             text-shadow: 0px 4px 4px #00000040;
             top: 34px;
-            transition: all 0.2s ease-in-out;
             white-space: nowrap;
             }
 
-            .header .separate-supervisor {
+            .header-supervisor-sergi-prez-jimnez-supervisor:hover {
+            transform: scale(1.1);
+            }
+
+            .header-supervisor-separate-supervisor {
             height: 58px;
             left: 1647px;
             position: absolute;
@@ -383,8 +381,11 @@
             width: 9px;
             }
 
-            .header .cerrar-sesin-supervisor {
-            cursor: pointer;
+            .header-supervisor-cerrar-sesin-supervisor {
+            color: var(--white);
+            font-family: var(--font-family-gothic_a1-regular);
+            font-size: var(--font-size-xs);
+            font-weight: 400;
             height: 16px;
             left: 1707px;
             letter-spacing: 1.25px;
@@ -392,8 +393,11 @@
             position: absolute;
             text-shadow: 0px 4px 4px #00000040;
             top: 34px;
-            transition: all 0.2s ease-in-out;
             white-space: nowrap;
+            }
+
+            .header-supervisor-cerrar-sesin-supervisor:hover {
+            transform: scale(1.1);
             }
 
             /* TODO: Header Administrador */
