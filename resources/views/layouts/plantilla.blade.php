@@ -55,19 +55,19 @@
         </script>
     </head>
 
-    <body onload="">
+    <body>
+        {{-- HTML --}}
         <div class="container-center-horizontal">
-            <div class="header screen">
+            <div class="header">
                 {{-- Header Operador --}}
                 <span>
                     <div class="header-operador">
-                        <div class="overlap-group-operador">
-                            <img class="background-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png"/>
-                            <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
-
-                            <h1 class="title-operador valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
-                            <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Tutorial</div>
-                             <div class="sergi-prez-jimnez-operador valign-text-middle gothica1-normal-white-18px">
+                        <div class="header-operador-overlap-group">
+                            <img class="header-operador-background-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png"/>
+                            <img class="header-operador-overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
+                            <h1 class="header-operador-title-operador valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
+                            <div class="header-operador-video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Tutorial</div>
+                            <div class="header-operador-sergi-prez-jimnez-operador valign-text-middle gothica1-normal-white-18px">
                                  @if (Auth::check())
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" valign-text-middle gothica1-normal-white-18px>
                                     {{ Auth::user()->nom }} {{ Auth::user()->cognoms }}
@@ -75,8 +75,8 @@
                                 @endif
                             </div>
                             @if (Auth::check())
-                            <img class="separate-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/separate@2x.svg"/>
-                             <div class="cerrar-sesin-operador valign-text-middle gothica1-normal-white-18px">
+                            <img class="header-operador-separate-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/separate@2x.svg"/>
+                             <div class="header-operador-cerrar-sesin-operador valign-text-middle gothica1-normal-white-18px">
                                 <a class="" href="{{ url('/logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Cerrar sesión</a>
                                 @endif
                              </div>
@@ -120,15 +120,18 @@
         <div id="app" class="container-app">
             @yield('contenido')
         </div>
+        {{-- HTML --}}
+
+        {{-- JS --}}
         <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
-
         <script src="{{ asset('js/app.js') }}"></script>
+        {{-- JS --}}
 
+        {{-- CSS --}}
         <style>
             .container-app {
             display: flex;
             margin-top: 198px;
-            z-index: 99;
             }
 
             .header {
@@ -137,18 +140,19 @@
             height: 198px;
             width: 1920px;
             position: fixed;
+            z-index: 99;
             }
 
             /* TODO: Header Operador */
-            .header .header-operador {
+            /* .header .header-operador {
             align-items: flex-end;
             background-color: var(--white);
             display: flex;
             height: 172px;
             min-width: 1920px;
-            }
+            } */
 
-            .header .overlap-group-operador {
+            .header-operador-overlap-group {
             background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c8fba9e2027501296d59a/img/shadow@1x.svg);
             background-size: 100% 100%;
             height: 198px;
@@ -157,7 +161,7 @@
             width: 1920px;
             }
 
-            .header .background-operador {
+            .header-operador-background-operador {
             height: 172px;
             left: 0;
             object-fit: cover;
@@ -166,7 +170,7 @@
             width: 1920px;
             }
 
-            .header .overlap-group-item-operador {
+            .header-operador-overlap-group-item-operador {
             height: 172px;
             left: 0;
             position: absolute;
@@ -174,7 +178,7 @@
             width: 1920px;
             }
 
-            .title-operador {
+            .header-operador-title-operador {
             cursor: pointer;
             height: 16px;
             left: 521px;
@@ -187,23 +191,11 @@
             white-space: nowrap;
             }
 
-            .header .title-operador:hover {
+            .header-operador-title-operador:hover {
             transform: scale(1.1);
             }
 
-            .header .video-interactivo-operador:hover {
-            transform: scale(1.1);
-            }
-
-            .header .sergi-prez-jimnez-operador:hover {
-            transform: scale(1.1);
-            }
-
-            .header .cerrar-sesin-operador:hover {
-            transform: scale(1.1);
-            }
-
-            .header .video-interactivo-operador {
+            .header-operador-video-interactivo-operador {
             cursor: pointer;
             height: 16px;
             left: 1161px;
@@ -216,7 +208,11 @@
             white-space: nowrap;
             }
 
-            .header .sergi-prez-jimnez-operador {
+            .header-operador-video-interactivo-operador:hover {
+            transform: scale(1.1);
+            }
+
+            .header-operador-sergi-prez-jimnez-operador {
             color: var(--white);
             font-family: var(--font-family-gothic_a1-regular);
             font-size: var(--font-size-xs);
@@ -231,7 +227,11 @@
             white-space: nowrap;
             }
 
-            .header .separate-operador {
+            .header-operador-sergi-prez-jimnez-operador:hover {
+            transform: scale(1.1);
+            }
+
+            .header-operador-separate-operador {
             height: 58px;
             left: 1647px;
             position: absolute;
@@ -239,7 +239,7 @@
             width: 9px;
             }
 
-            .header .cerrar-sesin-operador {
+            .header-operador-cerrar-sesin-operador {
             color: var(--white);
             font-family: var(--font-family-gothic_a1-regular);
             font-size: var(--font-size-xs);
@@ -252,6 +252,10 @@
             text-shadow: 0px 4px 4px #00000040;
             top: 34px;
             white-space: nowrap;
+            }
+
+            .header-operador-cerrar-sesin-operador:hover {
+            transform: scale(1.1);
             }
 
             /* TODO: Header Supervisor */
