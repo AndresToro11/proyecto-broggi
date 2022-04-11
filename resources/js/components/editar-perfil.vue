@@ -1,17 +1,17 @@
 <template>
     <div>
         <!-- <div class="container-center-horizontal"> -->
-            <div class="editar-perfil-operador screen">
+            <div class="editar-perfil-operador">
                 <div class="editar-perfil-operador-editar-perfil valign-text-middle gothica1-normal-black-28px"> <!-- FIXME: Editar perfil -->
                     Editar perfil
                 </div>
-                <div class="editar-perfil-operador-datos-personales-container" id="churumbele">
+                <div class="editar-perfil-operador-datos-personales-container">
                     <div class="editar-perfil-operador-datos-personales valign-text-middle gothica1-normal-black-21px"> <!-- FIXME: Datos personales -->
                     Datos personales
                     </div>
                     <div class="editar-perfil-operador-flex-row">
-                        <div class="editar-perfil-operador-correo-electronico"> <!-- FIXME: Nick -->
-                            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
+                        <div class="editar-perfil-operador-correo-electronico"> <!-- FIXME: Correo -->
+                            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon" id="editar-perfil-text-width">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
                                     Dirección de correo electrónico
@@ -26,7 +26,7 @@
                     </div>
                     <div class="editar-perfil-operador-flex-row-1">
                         <div class="editar-perfil-operador-nombre"> <!-- FIXME: Nombre -->
-                            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
+                            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon" id="editar-perfil-text-width">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
                                     Nombre
@@ -39,7 +39,7 @@
                             </label>
                         </div>
                         <div class="editar-perfil-operador-apellidos"> <!-- FIXME: Apellidos -->
-                            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
+                            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon" id="editar-perfil-text-width">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
                                     Apellidos
@@ -54,7 +54,7 @@
                     </div>
                     <div class="editar-perfil-operador-flex-row-4">
                         <div class="editar-perfil-operador-aceptar-cambios"> <!-- FIXME: Aceptar cambios -->
-                            <button class="mdc-button mdc-button--raised">
+                            <button class="mdc-button mdc-button--raised" id="aceptarButtonEditarPerfil">
                                 <span class="mdc-button__ripple"></span>
                                 <span class="mdc-button__label">
                                     Aceptar cambios
@@ -62,7 +62,7 @@
                             </button>
                         </div>
                         <div class="editar-perfil-operador-cancelar"> <!-- FIXME: Cancelar -->
-                            <button class="mdc-button mdc-button--raised">
+                            <button class="mdc-button mdc-button--raised" id="cancelarButtonEditarPerfil">
                                 <span class="mdc-button__ripple"></span>
                                 <span class="mdc-button__label">
                                     Cancelar
@@ -77,12 +77,12 @@
                     </div>
                     <div class="editar-perfil-operador-flex-row-2">
                         <div class="editar-perfil-operador-contrasea-actual"> <!-- FIXME: Contraseña -->
-                            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
+                            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon" id="editar-perfil-text-width">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
                                     Contraseña actual
                                 </span>
-                                <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" />
+                                <input type="password" class="mdc-text-field__input" aria-labelledby="my-label-id" />
                                 <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
                                     lock
                                 </i>
@@ -90,12 +90,12 @@
                             </label>
                         </div>
                         <div class="editar-perfil-operador-contrasea-nueva"> <!-- FIXME: Contraseña nueva -->
-                            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon">
+                            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon" id="editar-perfil-text-width">
                                 <span class="mdc-text-field__ripple"></span>
                                 <span class="mdc-floating-label" id="my-label-id">
                                     Contraseña nueva
                                 </span>
-                                <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
+                                <input type="password" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
                                 <i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
                                     lock
                                 </i>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="editar-perfil-operador-flex-row-3">
                         <div class="editar-perfil-operador-aceptar-cambios"> <!-- FIXME: Aceptar cambios -->
-                            <button class="mdc-button mdc-button--raised">
+                            <button class="mdc-button mdc-button--raised" id="aceptarButtonEditarPerfil">
                                 <span class="mdc-button__ripple"></span>
                                 <span class="mdc-button__label">
                                     Aceptar cambios
@@ -113,7 +113,7 @@
                             </button>
                         </div>
                         <div class="editar-perfil-operador-cancelar"> <!-- FIXME: Cancelar -->
-                            <button class="mdc-button mdc-button--raised">
+                            <button class="mdc-button mdc-button--raised" id="cancelarButtonEditarPerfil">
                                 <span class="mdc-button__ripple"></span>
                                 <span class="mdc-button__label">
                                     Cancelar
@@ -185,7 +185,12 @@
 </script>
 
 <style>
-    /* FIXME: Main container + tittle */
+    /* Custom fields for this component */
+    #editar-perfil-text-width {
+    width: 350px;
+    }
+
+    /* FIXME: Main container + title */
     .editar-perfil-operador {
     display: flex;
     align-items: flex-start;
@@ -202,9 +207,7 @@
     margin-top: 50px;
     letter-spacing: 0.15px;
     line-height: 16px;
-    top: 222px;
     white-space: nowrap;
-    z-index: 4;
     }
 
     /* FIXME: Datos personales */
@@ -219,29 +222,15 @@
     }
 
     .editar-perfil-operador-datos-personales {
-    height: 16px;
-    left: 102px;
     letter-spacing: 0.15px;
     line-height: 16px;
-    top: 274px;
     white-space: nowrap;
-    z-index: 5;
     }
 
     .editar-perfil-operador-flex-row {
     display: flex;
     align-items: flex-start;
-    width: 350px;
-    height: 60px;
     margin-top: 18px;
-    }
-
-    .editar-perfil-operador-nick {
-    height: 60px;
-    left: 102px;
-    top: 308px;
-    width: 350px;
-    z-index: 6;
     }
 
     .editar-perfil-operador-flex-row-1 {
@@ -251,32 +240,6 @@
     height: 60px;
     margin-top: 25px;
     gap: 50px;
-    }
-
-    .editar-perfil-operador-nombre {
-    height: 60px;
-    left: 102px;
-    top: 393px;
-    width: 350px;
-    z-index: 8;
-    }
-
-    .editar-perfil-operador-apellidos {
-    height: 60px;
-    left: 502px;
-    top: 393px;
-    width: 350px;
-    z-index: 7;
-    }
-
-    .editar-perfil-operador-name {
-    height: 16px;
-    left: 705px;
-    letter-spacing: 0.15px;
-    line-height: 16px;
-    top: 643px;
-    white-space: nowrap;
-    z-index: 23;
     }
 
     /* FIXME: Contraseña */
@@ -299,32 +262,6 @@
     gap: 50px;
     }
 
-    .editar-perfil-operador-cambiar-contrasenya {
-    height: 16px;
-    left: 102px;
-    letter-spacing: 0.15px;
-    line-height: 16px;
-    top: 274px;
-    white-space: nowrap;
-    z-index: 5;
-    }
-
-    .editar-perfil-operador-contrasea-actual {
-    height: 60px;
-    left: 102px;
-    top: 482px;
-    width: 350px;
-    z-index: 9;
-    }
-
-    .editar-perfil-operador-contrasea-nueva {
-    height: 60px;
-    left: 502px;
-    top: 482px;
-    width: 350px;
-    z-index: 10;
-    }
-
     /* FIXME: Botones */
     .editar-perfil-operador-flex-row-3 {
     display: flex;
@@ -332,7 +269,7 @@
     width: 350px;
     height: 60px;
     margin-top: 50px;
-    margin-left: 174px;
+    margin-left: 196px;
     gap: 50px;
     }
 
@@ -342,43 +279,21 @@
     width: 350px;
     height: 60px;
     margin-top: 50px;
-    margin-left: 174px;
+    margin-left: 196px;
     gap: 50px;
     }
 
-    .editar-perfil-operador-aceptar-cambios{
+    #aceptarButtonEditarPerfil{
     border-radius: 32px;
-    height: 36px;
-    left: 275px;
-    top: 599px;
-    width: 141px;
-    z-index: 11;
-    transition: all 0.2s ease-in-out;
     font-family: var(--font-family-gothic_a1);
     text-transform: none;
     }
 
-    .editar-perfil-operador-aceptar-cambios {
-    height: auto !important;
-    width: auto !important;
-    }
-
-    .editar-perfil-operador-cancelar {
+    #cancelarButtonEditarPerfil {
     border-radius: 32px;
     background-color: rgb(207, 0, 0);
-    height: 36px;
-    left: 552px;
-    top: 619px;
-    width: 89px;
-    z-index: 12;
-    transition: all 0.2s ease-in-out;
     font-family: var(--font-family-gothic_a1);
     text-transform: capitalize;
-    }
-
-    .editar-perfil-operador-cancelar {
-    height: auto !important;
-    width: auto !important;
     }
 
     /* FIXME: Personaje */
