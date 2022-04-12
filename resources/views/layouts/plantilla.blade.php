@@ -140,7 +140,7 @@
             height: 198px;
             width: 1920px;
             position: fixed;
-            z-index: 99;
+            z-index: 90; /*  ha de quedarse en 90 porque en los siguientes valores es donde van los modals */
             }
 
             /* TODO: Header Operador */

@@ -452,6 +452,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.35s ease-in;
+    z-index: 99;
     }
 
     .expedientes-modal-window {
