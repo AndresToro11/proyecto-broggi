@@ -13,7 +13,7 @@
                 <div class="expedientes-administrador-info gothica1-normal-black-21px"> <!-- FIXME: INFO -->
                     <div class="expedientes-administrador-flex-row">
                         <div class="expedientes-administrador-expediente valign-text-middle">
-                            Expediente  
+                            Expediente
                         </div>
                         <div class="expedientes-administrador-number valign-text-middle">
                             00000001

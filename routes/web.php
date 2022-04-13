@@ -72,6 +72,12 @@ Route::get('/expedientes-administrador', function () {
     return view('expedientes-administrador');
 });
 
+//---------------------------- Operadores -------------------------
+
+Route::get('/operadoresLista', function () {
+    return view('operadoresLista');
+});
+
 //-------------------------- Paginas logeadas ---------------------
 
 Route::middleware(['auth'])->group(function () {

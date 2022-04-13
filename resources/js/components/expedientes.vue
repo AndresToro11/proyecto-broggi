@@ -288,15 +288,39 @@
                 <div class="expedientes-modal-window">
                     <header class="expedientes-modal-header">
                         <div class="expedientes-x" id="close-modal" data-close="expedientes-modalScreen" @click="modalInvisible">
-                            <span class="material-icons">
+                            <span class="material-icons" id="expedientes-x">
                                 close
                             </span>
                         </div>
                     </header>
                     <div class="modal-information gothica1-normal-black-21px">
+                        <!-- <div class="mdc-card">
+                            <div class="mdc-card__primary-action">
+                                <div class="mdc-card__media mdc-card__media--square">
+                                    <div class="mdc-card__media-content">Title</div>
+                                </div>
+                                <div class="mdc-card__ripple"></div>
+                            </div>
+                            <div class="mdc-card__actions">
+                                <div class="mdc-card__action-buttons">
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button">
+                                        <div class="mdc-button__ripple"></div>
+                                        <span class="mdc-button__label">Action 1</span>
+                                    </button>
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button">
+                                        <div class="mdc-button__ripple"></div>
+                                        <span class="mdc-button__label">Action 2</span>
+                                    </button>
+                                </div>
+                                <div class="mdc-card__action-icons">
+                                    <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
+                                    <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">more_vert</button>
+                                </div>
+                            </div>
+                        </div> -->
                         <!-- <div class="modal-flex-row"> FIXME: Expediente -->
                         <div class="expediente-modal valign-text-middle">
-                                Expediente
+                                Cartas de llamada
                         </div>
                         <!-- </div> -->
                         <div class="modal-flex-row-1"> <!-- FIXME: Codigo de la llamada -->
@@ -481,11 +505,12 @@
     justify-content: space-between;
     }
 
-    .expedientes-x {
+    .expedientes-x
+    #expedientes-x {
     align-items: flex-start;
     background-color: transparent;
     display: flex;
-    width: 32px;
+    font-size: 32px;
     }
 
     .expedientes-modal.is-visible {
@@ -611,7 +636,7 @@
     }
 
     .expediente-file:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     }
 
     .expedientes-info {
@@ -681,32 +706,6 @@
     width: 414px;
     height: 32px;
     }
-
-    /* .expedientes-status-select {
-    display: inline-flex;
-    margin-top: 10px;
-    } */
-
-    /* .mdc-select__anchor {
-    width: 52px; */
-    /* min-width: 0; */
-    /* flex: 1 1 auto; */
-    /* position: relative; */
-    /* box-sizing: border-box;
-    overflow: hidden;
-    outline: none;
-    cursor: pointer;
-    } */
-
-    .mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {
-    background-color: white;
-    }
-
-    /* .mdc-select--filled .mdc-select__anchor {
-    height: 32px;
-    display: flex;
-    align-items: baseline;
-    } */
 
     .window-expediente-container {
     background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);

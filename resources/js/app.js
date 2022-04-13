@@ -41,6 +41,10 @@ Vue.component('mapa', require('./components/mapa.vue').default); //Andres
 Vue.component('expedientes', require('./components/expedientes.vue').default);
 Vue.component('expedientes-administrador', require('./components/expedientes-administrador.vue').default);
 
+//------------------------------------------- Operadores --------------------------------
+
+Vue.component('operadoresLista', require('./components/operadoresLista.vue').default);
+
 //--------------------------------------------- Grafico ----------------------------------
 
 Vue.component('grafico', require('./components/grafico.vue').default); //Andres

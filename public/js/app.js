@@ -5411,6 +5411,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6010,6 +6034,339 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      expedientes: [],
+      loading: false
+    };
+  },
+  mounted: function mounted() {
+    new mdc.Ripple.MDCRipple(document.querySelector('operadores-lista-boton-principal .mdc-fab'));
+    new mdc.textField.MDCTextField(document.querySelector(".inicio-de-sesion-e-mail .mdc-text-field"));
+  },
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -6053,7 +6410,9 @@ Vue.component('mapa', (__webpack_require__(/*! ./components/mapa.vue */ "./resou
 //------------------------------------------- Expedientes --------------------------------
 
 Vue.component('expedientes', (__webpack_require__(/*! ./components/expedientes.vue */ "./resources/js/components/expedientes.vue")["default"]));
-Vue.component('expedientes-administrador', (__webpack_require__(/*! ./components/expedientes-administrador.vue */ "./resources/js/components/expedientes-administrador.vue")["default"])); //--------------------------------------------- Grafico ----------------------------------
+Vue.component('expedientes-administrador', (__webpack_require__(/*! ./components/expedientes-administrador.vue */ "./resources/js/components/expedientes-administrador.vue")["default"])); //------------------------------------------- Operadores --------------------------------
+
+Vue.component('operadoresLista', (__webpack_require__(/*! ./components/operadoresLista.vue */ "./resources/js/components/operadoresLista.vue")["default"])); //--------------------------------------------- Grafico ----------------------------------
 
 Vue.component('grafico', (__webpack_require__(/*! ./components/grafico.vue */ "./resources/js/components/grafico.vue")["default"])); //Andres
 //--------------------------------------------- Perfil ----------------------------------
@@ -19566,7 +19925,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.expedientes-title {\ndisplay: flex;\nalign-items: flex-start;\nheight: 16px;\nwidth: 158px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\n/* top: 222px; */\nwhite-space: nowrap;\nz-index: 4;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\nz-index: 99;\n}\n.expedientes-modal-window {\nwidth: 1104px;\nheight: 526px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n#close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 1040px;\nmargin-top: 18px;\n}\n.expedientes-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\n}\n.expedientes-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nwidth: 32px;\n}\n.expedientes-modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.expediente-modal {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n.modal-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-2 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-3 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-4 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-5 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-6 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-7 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.expediente-file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.expediente-file:hover {\ntransform: scale(1.1);\n}\n.expedientes-info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.expedientes-flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 32px;\n}\n\n/* .expedientes-status-select {\ndisplay: inline-flex;\nmargin-top: 10px;\n} */\n\n/* .mdc-select__anchor {\nwidth: 52px; */\n/* min-width: 0; */\n/* flex: 1 1 auto; */\n/* position: relative; */\n/* box-sizing: border-box;\noverflow: hidden;\noutline: none;\ncursor: pointer;\n} */\n.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {\nbackground-color: white;\n}\n\n/* .mdc-select--filled .mdc-select__anchor {\nheight: 32px;\ndisplay: flex;\nalign-items: baseline;\n} */\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-onProcess {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--onProcess);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-inmobilized {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--immobilized);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-requested {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--requested);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-closed {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--closed);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-accepted {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--accepted);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: white;\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.expedientes-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expedientes-expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.expedientes-operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.expedientes-name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.expedientes-date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.expedientes-text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.onProcess {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.onProcess {\nheight: auto !important;\nwidth: auto !important;\n}\n.onProcess span {\ncolor: var(--onProcess);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.immobilized {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.immobilized {\nheight: auto !important;\nwidth: auto !important;\n}\n.immobilized span {\ncolor: var(--immobilized);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.requested {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.requested {\nheight: auto !important;\nwidth: auto !important;\n}\n.requested span {\ncolor: var(--requested);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.closed {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.closed {\nheight: auto !important;\nwidth: auto !important;\n}\n.closed span {\ncolor: var(--closed);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.accepted {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.accepted {\nheight: auto !important;\nwidth: auto !important;\n}\n.accepted span {\ncolor: var(--accepted);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.expedientes-title {\ndisplay: flex;\nalign-items: flex-start;\nheight: 16px;\nwidth: 158px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\n/* top: 222px; */\nwhite-space: nowrap;\nz-index: 4;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\nz-index: 99;\n}\n.expedientes-modal-window {\nwidth: 1104px;\nheight: 526px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n#close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 1040px;\nmargin-top: 18px;\n}\n.expedientes-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\n}\n.expedientes-x\n#expedientes-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nfont-size: 32px;\n}\n.expedientes-modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.expediente-modal {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n.modal-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-2 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-3 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-4 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-5 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-6 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-7 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.expediente-file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.expediente-file:hover {\ntransform: scale(1.05);\n}\n.expedientes-info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.expedientes-flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 32px;\n}\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-onProcess {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--onProcess);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-inmobilized {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--immobilized);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-requested {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--requested);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-closed {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--closed);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-accepted {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--accepted);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: white;\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.expedientes-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expedientes-expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.expedientes-operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.expedientes-name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.expedientes-date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.expedientes-text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.onProcess {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.onProcess {\nheight: auto !important;\nwidth: auto !important;\n}\n.onProcess span {\ncolor: var(--onProcess);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.immobilized {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.immobilized {\nheight: auto !important;\nwidth: auto !important;\n}\n.immobilized span {\ncolor: var(--immobilized);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.requested {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.requested {\nheight: auto !important;\nwidth: auto !important;\n}\n.requested span {\ncolor: var(--requested);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.closed {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.closed {\nheight: auto !important;\nwidth: auto !important;\n}\n.closed span {\ncolor: var(--closed);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.accepted {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.accepted {\nheight: auto !important;\nwidth: auto !important;\n}\n.accepted span {\ncolor: var(--accepted);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19687,6 +20046,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n#map {\n    width: 100%;\n    height: 700px;\n}\n#sortir {\n    position: fixed;\n    right: 20px;\n    bottom: 20px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.operadores-lista-title {\ndisplay: flex;\nalign-items: center;\nmargin-left: 100px;\nmargin-top: 50px;\nmargin-bottom: 25px;\n}\n.operadores-lista-container {\ndisplay: flex;\nflex-direction: column;\nmargin-left: 132px; /* Esto centra la tabla */\n}\n.operadores-lista-marco {\ndisplay: flex;\nalign-items: flex-end;\nwidth: 1656px;\nheight: 60px;\nbackground-color: rgb(248, 248, 248);\nborder-radius: 32px 32px 0px 0px;\n}\n.operadores-lista-foto-perfil-margen {\nwidth: 40px;\nheight: 40px;\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: transparent;\n}\n.operadores-lista-list-scrolling {\nwidth: 1656px;\nheight: 604px;\noverflow-y: auto;\n}\n.operadores-lista-item {\nheight: 72px;\n}\n.operadores-lista-row {\ndisplay: flex;\nalign-items: center;\n}\n.operadores-lista-foto-perfil {\nwidth: 40px;\nheight: 40px;\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: black;\n}\n.operadores-lista-nombre {\nmargin-right: 660px;\n}\n.operadores-lista-info {\ndisplay: flex;\nalign-items: center;\nflex-wrap: wrap;\ngap: 200px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20318,6 +20701,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_mapa_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_operadoresLista_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./operadoresLista.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_operadoresLista_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_operadoresLista_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -21168,6 +21581,47 @@ component.options.__file = "resources/js/components/mapa.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/operadoresLista.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/operadoresLista.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _operadoresLista_vue_vue_type_template_id_c03e5734___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./operadoresLista.vue?vue&type=template&id=c03e5734& */ "./resources/js/components/operadoresLista.vue?vue&type=template&id=c03e5734&");
+/* harmony import */ var _operadoresLista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./operadoresLista.vue?vue&type=script&lang=js& */ "./resources/js/components/operadoresLista.vue?vue&type=script&lang=js&");
+/* harmony import */ var _operadoresLista_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./operadoresLista.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/operadoresLista.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _operadoresLista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _operadoresLista_vue_vue_type_template_id_c03e5734___WEBPACK_IMPORTED_MODULE_0__.render,
+  _operadoresLista_vue_vue_type_template_id_c03e5734___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/operadoresLista.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/administracion/admin.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************!*\
   !*** ./resources/js/components/administracion/admin.vue?vue&type=script&lang=js& ***!
@@ -21392,6 +21846,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/operadoresLista.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/operadoresLista.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_operadoresLista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./operadoresLista.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_operadoresLista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/cartaLlamada/Boton.vue?vue&type=style&index=0&lang=css&":
 /*!*****************************************************************************************!*\
   !*** ./resources/js/components/cartaLlamada/Boton.vue?vue&type=style&index=0&lang=css& ***!
@@ -21531,6 +22001,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_mapa_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./mapa.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/mapa.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/operadoresLista.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/operadoresLista.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_operadoresLista_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./operadoresLista.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=style&index=0&lang=css&");
 
 
 /***/ }),
@@ -21769,6 +22252,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_mapa_vue_vue_type_template_id_ab016260___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_mapa_vue_vue_type_template_id_ab016260___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./mapa.vue?vue&type=template&id=ab016260& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/mapa.vue?vue&type=template&id=ab016260&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/operadoresLista.vue?vue&type=template&id=c03e5734&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/operadoresLista.vue?vue&type=template&id=c03e5734& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_operadoresLista_vue_vue_type_template_id_c03e5734___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_operadoresLista_vue_vue_type_template_id_c03e5734___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_operadoresLista_vue_vue_type_template_id_c03e5734___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./operadoresLista.vue?vue&type=template&id=c03e5734& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=template&id=c03e5734&");
 
 
 /***/ }),
@@ -26460,7 +26960,7 @@ var staticRenderFns = [
             },
             [
               _vm._v(
-                "\n                        Expediente  \n                    "
+                "\n                        Expediente\n                    "
               ),
             ]
           ),
@@ -29531,11 +30031,18 @@ var render = function () {
                   on: { click: _vm.modalInvisible },
                 },
                 [
-                  _c("span", { staticClass: "material-icons" }, [
-                    _vm._v(
-                      "\n                            close\n                        "
-                    ),
-                  ]),
+                  _c(
+                    "span",
+                    {
+                      staticClass: "material-icons",
+                      attrs: { id: "expedientes-x" },
+                    },
+                    [
+                      _vm._v(
+                        "\n                            close\n                        "
+                      ),
+                    ]
+                  ),
                 ]
               ),
             ]),
@@ -30073,7 +30580,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "expediente-modal valign-text-middle" }, [
           _vm._v(
-            "\n                            Expediente\n                    "
+            "\n                            Cartas de llamada\n                    "
           ),
         ]),
         _vm._v(" "),
@@ -30843,6 +31350,777 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container m-4" }, [
       _c("div", { attrs: { id: "map" } }),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=template&id=c03e5734&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/operadoresLista.vue?vue&type=template&id=c03e5734& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "h1",
+        { staticClass: "operadores-lista-title gothica1-normal-black-28px" },
+        [_vm._v("\n        Gestionar usuarios\n    ")]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "operadores-lista-container" }, [
+        _c("div", { staticClass: "operadores-lista-marco" }, [
+          _c(
+            "span",
+            { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+            [
+              _c("span", {
+                staticClass:
+                  "operadores-lista-foto-perfil-margen mdc-list-item__graphic material-icons",
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                { staticClass: "operadores-lista-nombre mdc-list-item__text" },
+                [
+                  _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                    _vm._v("Nombre de usuario"),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _c("span", { staticClass: "operadores-lista-info" }, [
+                _c("span", { staticClass: "mdc-list-item__text" }, [
+                  _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                    _vm._v("Correo electrónico"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-list-item__text" }, [
+                  _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                    _vm._v("Tipo de usuario"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "mdc-list-item__text" }, [
+                  _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                    _vm._v("Estado"),
+                  ]),
+                ]),
+              ]),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "ul",
+          {
+            staticClass:
+              "operadores-lista-list-scrolling mdc-list mdc-list--two-line",
+          },
+          [
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+              _c(
+                "span",
+                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+                [
+                  _c("span", {
+                    staticClass:
+                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "operadores-lista-nombre mdc-list-item__text",
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Sergi Pérez Jiménez")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__secondary-text" },
+                        [_vm._v("Secondary text")]
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "operadores-lista-info" }, [
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("sperezj2021@cepnet.net")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("Operador")]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "mdc-list-item__text" }, [
+                      _c(
+                        "span",
+                        { staticClass: "mdc-list-item__primary-text" },
+                        [_vm._v("En línea")]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "mdc-touch-target-wrapper" }, [
+        _c(
+          "button",
+          {
+            staticClass:
+              "operadores-lista-boton-principal mdc-fab mdc-fab--touch",
+          },
+          [
+            _c("div", { staticClass: "mdc-fab__ripple" }),
+            _vm._v(" "),
+            _c("span", { staticClass: "material-icons mdc-fab__icon" }, [
+              _vm._v("add"),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mdc-fab__touch" }),
+          ]
+        ),
+      ]),
     ])
   },
 ]
