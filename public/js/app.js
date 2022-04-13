@@ -26460,7 +26460,7 @@ var staticRenderFns = [
             },
             [
               _vm._v(
-                "\n                        Expediente\n                    "
+                "\n                        Expediente  \n                    "
               ),
             ]
           ),

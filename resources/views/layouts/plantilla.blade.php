@@ -60,7 +60,7 @@
         <div class="container-center-horizontal">
             <div class="header">
                 {{-- Header Operador --}}
-                <span>
+                <span hidden>
                     <div class="header-operador">
                         <div class="header-operador-overlap-group">
                             <img class="header-operador-background-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png"/>
@@ -101,17 +101,17 @@
                     </div>
                 </span>
                 {{-- Header Administrador --}}
-                <span hidden>
+                <span>
                     <div class="header-administrador">
-                        <div class="overlap-group-administrador">
-                            <img class="overlap-group-item-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
-                            <img class="overlap-group-item-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624047c85dc258b91591e4d0/img/white-gradient-1@1x.svg"/>
-                            <h1 class="title-administrador valign-text-middle gothica1-medium-white-28px">Gestionar expedientes</h1>
-                            <div class="grficos-administrador valign-text-middle gothica1-medium-white-28px">Gráficos</div>
-                            <div class="gestionar-usuarios-administrador valign-text-middle gothica1-medium-white-28px">Gestionar usuarios</div>
-                            <div class="sergi-prez-jimnez-administrador valign-text-middle gothica1-normal-white-18px">Sergi Pérez Jiménez</div>
-                            <img class="separate-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624047c85dc258b91591e4d0/img/separate-1@2x.svg"/>
-                            <div class="cerrar-sesin-administrador valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
+                        <div class="header-administrador-overlap-group-administrador">
+                            <img class="header-administrador-overlap-group-item-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
+                            <img class="header-administrador-overlap-group-item-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624047c85dc258b91591e4d0/img/white-gradient-1@1x.svg"/>
+                            <h1 class="header-administrador-title-administrador valign-text-middle gothica1-medium-white-28px">Gestionar expedientes</h1>
+                            <div class="header-administrador-grficos-administrador valign-text-middle gothica1-medium-white-28px">Gráficos</div>
+                            <div class="header-administrador-gestionar-usuarios-administrador valign-text-middle gothica1-medium-white-28px">Gestionar usuarios</div>
+                            <div class="header-administrador-sergi-prez-jimnez-administrador valign-text-middle gothica1-normal-white-18px">Sergi Pérez Jiménez</div>
+                            <img class="header-administrador-separate-administrador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624047c85dc258b91591e4d0/img/separate-1@2x.svg"/>
+                            <div class="header-administrador-cerrar-sesin-administrador valign-text-middle gothica1-normal-white-18px">Cerrar sesión</div>
                         </div>
                     </div>
                 </span>
@@ -223,6 +223,7 @@
             line-height: 16px;
             position: absolute;
             text-shadow: 0px 4px 4px #00000040;
+            transition: all 0.2s ease-in-out;
             top: 34px;
             white-space: nowrap;
             }
@@ -250,6 +251,7 @@
             line-height: 16px;
             position: absolute;
             text-shadow: 0px 4px 4px #00000040;
+            transition: all 0.2s ease-in-out;
             top: 34px;
             white-space: nowrap;
             }
@@ -266,14 +268,16 @@
             display: flex;
             height: 198px;
             min-width: 1920px;
-            z-index: 1;
+            position: fixed;
+            z-index: 90;
             }
 
             .header-supervisor-overlap-group-supervisor {
             background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png);
-            background-position: 50% 50%;
+            background-position: 100% 100%;
             background-size: cover;
             height: 172px;
+            margin-bottom: -26px;
             position: relative;
             width: 1920px;
             }
@@ -366,6 +370,7 @@
             position: absolute;
             text-shadow: 0px 4px 4px #00000040;
             top: 34px;
+            transition: all 0.2s ease-in-out;
             white-space: nowrap;
             }
 
@@ -393,6 +398,7 @@
             position: absolute;
             text-shadow: 0px 4px 4px #00000040;
             top: 34px;
+            transition: all 0.2s ease-in-out;
             white-space: nowrap;
             }
 
@@ -408,19 +414,20 @@
             display: flex;
             height: 198px;
             min-width: 1920px;
-            z-index: 1;
+            position: fixed;
+            z-index: 90;
             }
 
-            .header .overlap-group-administrador {
+            .header-administrador-overlap-group-administrador {
             background-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/background@1x.png);
-            background-position: 50% 50%;
+            background-position: 100% 100%;
             background-size: cover;
             height: 172px;
             position: relative;
             width: 1920px;
             }
 
-            .header .overlap-group-item-administrador {
+            .header-administrador-overlap-group-item-administrador {
             height: 172px;
             left: 0;
             position: absolute;
@@ -428,7 +435,7 @@
             width: 1920px;
             }
 
-            .header .title-administrador {
+            .header-administrador-title-administrador {
             cursor: pointer;
             height: 16px;
             left: 322px;
@@ -441,27 +448,11 @@
             white-space: nowrap;
             }
 
-            .header .title-administrador:hover {
+            .header-administrador-title-administrador:hover {
             transform: scale(1.1);
             }
 
-            .header .grficos-administrador:hover {
-            transform: scale(1.1);
-            }
-
-            .header .gestionar-usuarios-administrador:hover {
-            transform: scale(1.1);
-            }
-
-            .header .sergi-prez-jimnez-administrador:hover {
-            transform: scale(1.1);
-            }
-
-            .header .cerrar-sesin-administrador:hover {
-            transform: scale(1.1);
-            }
-
-            .header .grficos-administrador {
+            .header-administrador-grficos-administrador {
             cursor: pointer;
             height: 16px;
             left: 901px;
@@ -474,7 +465,11 @@
             white-space: nowrap;
             }
 
-            .header .gestionar-usuarios-administrador {
+            .header-administrador-grficos-administrador:hover {
+            transform: scale(1.1);
+            }
+
+            .header-administrador-gestionar-usuarios-administrador {
             cursor: pointer;
             height: 16px;
             left: 1308px;
@@ -487,7 +482,15 @@
             white-space: nowrap;
             }
 
-            .header .sergi-prez-jimnez-administrador {
+            .header-administrador-gestionar-usuarios-administrador:hover {
+            transform: scale(1.1);
+            }
+
+            .header-administrador-sergi-prez-jimnez-administrador {
+            color: var(--white);
+            font-family: var(--font-family-gothic_a1-regular);
+            font-size: var(--font-size-xs);
+            font-weight: 400;
             cursor: pointer;
             height: 16px;
             left: 1408px;
@@ -500,7 +503,11 @@
             white-space: nowrap;
             }
 
-            .header .separate-administrador {
+            .header-administrador-sergi-prez-jimnez-administrador:hover {
+            transform: scale(1.1);
+            }
+
+            .header-administrador-separate-administrador {
             height: 58px;
             left: 1647px;
             position: absolute;
@@ -508,7 +515,11 @@
             width: 9px;
             }
 
-            .header .cerrar-sesin-administrador {
+            .header-administrador-cerrar-sesin-administrador {
+            color: var(--white);
+            font-family: var(--font-family-gothic_a1-regular);
+            font-size: var(--font-size-xs);
+            font-weight: 400;
             cursor: pointer;
             height: 16px;
             left: 1707px;
@@ -521,6 +532,9 @@
             white-space: nowrap;
             }
 
+            .header-administrador-cerrar-sesin-administrador:hover {
+            transform: scale(1.1);
+            }
         </style>
     </body>
 </html>
