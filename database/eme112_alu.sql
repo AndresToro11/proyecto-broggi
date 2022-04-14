@@ -59,7 +59,6 @@ DROP TABLE IF EXISTS `cartes_trucades`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cartes_trucades` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `codi_trucada` int(11) NOT NULL,
   `data_hora` datetime DEFAULT NULL,
   `temps_trucada` int(11) DEFAULT NULL,
   `dades_personals_id` int(11),
