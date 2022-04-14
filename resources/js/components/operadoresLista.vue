@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="operadores-lista-main-container">
         <h1 class="operadores-lista-title gothica1-normal-black-28px">
             Gestionar usuarios
         </h1>
@@ -294,12 +294,24 @@
                 </li>
             </ul>
         </div>
-        <div class="mdc-touch-target-wrapper">
-            <button class="operadores-lista-boton-principal mdc-fab mdc-fab--touch">
-                <div class="mdc-fab__ripple"></div>
-                <span class="material-icons mdc-fab__icon">add</span>
-                <div class="mdc-fab__touch"></div>
-            </button>
+        <div class="operadores-lista-boton-space mdc-touch-target-wrapper">
+            <div class="action">
+                <span class="material-icons mdc-fab__icon" @click="actionToggle()">add</span>
+                <ul>
+                    <div class="operadores-lista-button-row">
+                        <li class="añadir-usuario material-icons-round">
+                            person_add
+                        </li>
+                        <!-- <li class="operadores-lista-boton-text">
+                            Hola caracola
+                        </li> -->
+                    </div>
+
+                    <li class="eliminar-usuario material-icons-round">
+                        person_remove
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -314,15 +326,23 @@
         },
 
         mounted() {
-            new mdc.Ripple.MDCRipple(document.querySelector('operadores-lista-boton-principal .mdc-fab'));
-            new mdc.textField.MDCTextField(document.querySelector(".inicio-de-sesion-e-mail .mdc-text-field"));
+            // new mdc.Ripple.MDCRipple(document.querySelector('operadores-lista-boton-principal .mdc-fab'));
+            // new mdc.textField.MDCTextField(document.querySelector(".inicio-de-sesion-e-mail .mdc-text-field"));
         },
+
         methods:{
+            actionToggle(){
+                var action = document.querySelector(".action");
+                action.classList.toggle("active");
+            }
         }
     }
 </script>
 
 <style>
+    .operadores-lista-main-container {
+    width: 1920px;
+    }
     .operadores-lista-title {
     display: flex;
     align-items: center;
@@ -356,7 +376,7 @@
 
     .operadores-lista-list-scrolling {
     width: 1656px;
-    height: 604px;
+    height: 580px;
     overflow-y: auto;
     }
 
@@ -386,5 +406,105 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 200px;
+    }
+
+    .operadores-lista-boton-space {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 25px;
+    margin-right: 45px;
+    }
+
+    .action {
+    position: fixed;
+    bottom: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--mdc-theme-primary);
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    }
+
+    .action span {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    transition: 0.3s ease-in-out;
+    color: white;
+    }
+
+    .action.active span {
+    transform: rotate(135deg);
+    }
+
+    .action.active .operadores-lista-main-container {
+    background-color: black;
+    }
+
+    .action ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 6px;
+    bottom: 80px;
+    flex-wrap: wrap;
+    gap: 5px;
+    background-color: transparent;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    }
+
+    .action.active ul {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+    margin-left: 5px;
+    }
+
+    .operadores-lista-button-row {
+    display: flex;
+    flex-direction: row-reverse;
+    }
+
+    .action.active ul li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    transition: 0.3s ease-in-out;
+    color: white;
+    }
+
+    .action li {
+    width: 50px;
+    height: 50px;
+    background-color: var(--mdc-theme-primary);
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    }
+
+    /* .operadores-lista-boton-text {
+    width: 250px;
+    height: 50px;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    } */
+
+    .operadores-lista-background {
+    background-color: rgba(0, 0, 0, 0.082);
     }
 </style>

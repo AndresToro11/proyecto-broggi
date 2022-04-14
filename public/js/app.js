@@ -6351,6 +6351,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6358,11 +6370,15 @@ __webpack_require__.r(__webpack_exports__);
       loading: false
     };
   },
-  mounted: function mounted() {
-    new mdc.Ripple.MDCRipple(document.querySelector('operadores-lista-boton-principal .mdc-fab'));
-    new mdc.textField.MDCTextField(document.querySelector(".inicio-de-sesion-e-mail .mdc-text-field"));
+  mounted: function mounted() {// new mdc.Ripple.MDCRipple(document.querySelector('operadores-lista-boton-principal .mdc-fab'));
+    // new mdc.textField.MDCTextField(document.querySelector(".inicio-de-sesion-e-mail .mdc-text-field"));
   },
-  methods: {}
+  methods: {
+    actionToggle: function actionToggle() {
+      var action = document.querySelector(".action");
+      action.classList.toggle("active");
+    }
+  }
 });
 
 /***/ }),
@@ -20069,7 +20085,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.operadores-lista-title {\ndisplay: flex;\nalign-items: center;\nmargin-left: 100px;\nmargin-top: 50px;\nmargin-bottom: 25px;\n}\n.operadores-lista-container {\ndisplay: flex;\nflex-direction: column;\nmargin-left: 132px; /* Esto centra la tabla */\n}\n.operadores-lista-marco {\ndisplay: flex;\nalign-items: flex-end;\nwidth: 1656px;\nheight: 60px;\nbackground-color: rgb(248, 248, 248);\nborder-radius: 32px 32px 0px 0px;\n}\n.operadores-lista-foto-perfil-margen {\nwidth: 40px;\nheight: 40px;\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: transparent;\n}\n.operadores-lista-list-scrolling {\nwidth: 1656px;\nheight: 604px;\noverflow-y: auto;\n}\n.operadores-lista-item {\nheight: 72px;\n}\n.operadores-lista-row {\ndisplay: flex;\nalign-items: center;\n}\n.operadores-lista-foto-perfil {\nwidth: 40px;\nheight: 40px;\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: black;\n}\n.operadores-lista-nombre {\nmargin-right: 660px;\n}\n.operadores-lista-info {\ndisplay: flex;\nalign-items: center;\nflex-wrap: wrap;\ngap: 200px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.operadores-lista-main-container {\nwidth: 1920px;\n}\n.operadores-lista-title {\ndisplay: flex;\nalign-items: center;\nmargin-left: 100px;\nmargin-top: 50px;\nmargin-bottom: 25px;\n}\n.operadores-lista-container {\ndisplay: flex;\nflex-direction: column;\nmargin-left: 132px; /* Esto centra la tabla */\n}\n.operadores-lista-marco {\ndisplay: flex;\nalign-items: flex-end;\nwidth: 1656px;\nheight: 60px;\nbackground-color: rgb(248, 248, 248);\nborder-radius: 32px 32px 0px 0px;\n}\n.operadores-lista-foto-perfil-margen {\nwidth: 40px;\nheight: 40px;\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: transparent;\n}\n.operadores-lista-list-scrolling {\nwidth: 1656px;\nheight: 580px;\noverflow-y: auto;\n}\n.operadores-lista-item {\nheight: 72px;\n}\n.operadores-lista-row {\ndisplay: flex;\nalign-items: center;\n}\n.operadores-lista-foto-perfil {\nwidth: 40px;\nheight: 40px;\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: black;\n}\n.operadores-lista-nombre {\nmargin-right: 660px;\n}\n.operadores-lista-info {\ndisplay: flex;\nalign-items: center;\nflex-wrap: wrap;\ngap: 200px;\n}\n.operadores-lista-boton-space {\ndisplay: flex;\nflex-direction: row-reverse;\nmargin-top: 25px;\nmargin-right: 45px;\n}\n.action {\nposition: fixed;\nbottom: 50px;\nwidth: 60px;\nheight: 60px;\nbackground-color: var(--mdc-theme-primary);\nborder-radius: 50%;\nbox-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);\ncursor: pointer;\n}\n.action span {\nposition: relative;\nwidth: 100%;\nheight: 100%;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\nfont-size: 2em;\ntransition: 0.3s ease-in-out;\ncolor: white;\n}\n.action.active span {\ntransform: rotate(135deg);\n}\n.action.active .operadores-lista-main-container {\nbackground-color: black;\n}\n.action ul {\ndisplay: flex;\njustify-content: center;\nalign-items: center;\nflex-direction: column;\nposition: absolute;\nmargin-left: 6px;\nbottom: 80px;\nflex-wrap: wrap;\ngap: 5px;\nbackground-color: transparent;\nborder-radius: 20px;\nopacity: 0;\nvisibility: hidden;\ntransition: 0.3s;\n}\n.action.active ul {\nopacity: 1;\nvisibility: visible;\ntransition: 0.3s;\nmargin-left: 5px;\n}\n.operadores-lista-button-row {\ndisplay: flex;\nflex-direction: row-reverse;\n}\n.action.active ul li {\nlist-style: none;\ndisplay: flex;\njustify-content: flex-start;\nalign-items: center;\njustify-content: center;\npadding: 10px 0;\ntransition: 0.3s ease-in-out;\ncolor: white;\n}\n.action li {\nwidth: 50px;\nheight: 50px;\nbackground-color: var(--mdc-theme-primary);\nborder-radius: 50%;\nbox-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);\ncursor: pointer;\n}\n\n/* .operadores-lista-boton-text {\nwidth: 250px;\nheight: 50px;\nbackground-color: white;\nborder-radius: 32px;\nbox-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);\ncursor: pointer;\n} */\n.operadores-lista-background {\nbackground-color: rgba(0, 0, 0, 0.082);\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31375,751 +31391,672 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "operadores-lista-main-container" }, [
+    _c(
+      "h1",
+      { staticClass: "operadores-lista-title gothica1-normal-black-28px" },
+      [_vm._v("\n        Gestionar usuarios\n    ")]
+    ),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "operadores-lista-boton-space mdc-touch-target-wrapper" },
+      [
+        _c("div", { staticClass: "action" }, [
+          _c(
+            "span",
+            {
+              staticClass: "material-icons mdc-fab__icon",
+              on: {
+                click: function ($event) {
+                  return _vm.actionToggle()
+                },
+              },
+            },
+            [_vm._v("add")]
+          ),
+          _vm._v(" "),
+          _vm._m(1),
+        ]),
+      ]
+    ),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "h1",
-        { staticClass: "operadores-lista-title gothica1-normal-black-28px" },
-        [_vm._v("\n        Gestionar usuarios\n    ")]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "operadores-lista-container" }, [
-        _c("div", { staticClass: "operadores-lista-marco" }, [
-          _c(
-            "span",
-            { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-            [
-              _c("span", {
-                staticClass:
-                  "operadores-lista-foto-perfil-margen mdc-list-item__graphic material-icons",
-              }),
-              _vm._v(" "),
-              _c(
-                "span",
-                { staticClass: "operadores-lista-nombre mdc-list-item__text" },
-                [
-                  _c("span", { staticClass: "mdc-list-item__primary-text" }, [
-                    _vm._v("Nombre de usuario"),
-                  ]),
-                ]
-              ),
-              _vm._v(" "),
-              _c("span", { staticClass: "operadores-lista-info" }, [
-                _c("span", { staticClass: "mdc-list-item__text" }, [
-                  _c("span", { staticClass: "mdc-list-item__primary-text" }, [
-                    _vm._v("Correo electrónico"),
-                  ]),
+    return _c("div", { staticClass: "operadores-lista-container" }, [
+      _c("div", { staticClass: "operadores-lista-marco" }, [
+        _c(
+          "span",
+          { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+          [
+            _c("span", {
+              staticClass:
+                "operadores-lista-foto-perfil-margen mdc-list-item__graphic material-icons",
+            }),
+            _vm._v(" "),
+            _c(
+              "span",
+              { staticClass: "operadores-lista-nombre mdc-list-item__text" },
+              [
+                _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                  _vm._v("Nombre de usuario"),
                 ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-list-item__text" }, [
-                  _c("span", { staticClass: "mdc-list-item__primary-text" }, [
-                    _vm._v("Tipo de usuario"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "mdc-list-item__text" }, [
-                  _c("span", { staticClass: "mdc-list-item__primary-text" }, [
-                    _vm._v("Estado"),
-                  ]),
+              ]
+            ),
+            _vm._v(" "),
+            _c("span", { staticClass: "operadores-lista-info" }, [
+              _c("span", { staticClass: "mdc-list-item__text" }, [
+                _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                  _vm._v("Correo electrónico"),
                 ]),
               ]),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c(
-          "ul",
-          {
-            staticClass:
-              "operadores-lista-list-scrolling mdc-list mdc-list--two-line",
-          },
-          [
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
-              _c(
-                "span",
-                { staticClass: "operadores-lista-row mdc-list-item__ripple" },
-                [
-                  _c("span", {
-                    staticClass:
-                      "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass:
-                        "operadores-lista-nombre mdc-list-item__text",
-                    },
-                    [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Sergi Pérez Jiménez")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__secondary-text" },
-                        [_vm._v("Secondary text")]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "operadores-lista-info" }, [
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("sperezj2021@cepnet.net")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("Operador")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "mdc-list-item__text" }, [
-                      _c(
-                        "span",
-                        { staticClass: "mdc-list-item__primary-text" },
-                        [_vm._v("En línea")]
-                      ),
-                    ]),
-                  ]),
-                ]
-              ),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-list-item__text" }, [
+                _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                  _vm._v("Tipo de usuario"),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "mdc-list-item__text" }, [
+                _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                  _vm._v("Estado"),
+                ]),
+              ]),
             ]),
           ]
         ),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "mdc-touch-target-wrapper" }, [
-        _c(
-          "button",
-          {
-            staticClass:
-              "operadores-lista-boton-principal mdc-fab mdc-fab--touch",
-          },
-          [
-            _c("div", { staticClass: "mdc-fab__ripple" }),
-            _vm._v(" "),
-            _c("span", { staticClass: "material-icons mdc-fab__icon" }, [
-              _vm._v("add"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "mdc-fab__touch" }),
-          ]
-        ),
+      _c(
+        "ul",
+        {
+          staticClass:
+            "operadores-lista-list-scrolling mdc-list mdc-list--two-line",
+        },
+        [
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "operadores-lista-item mdc-list-item" }, [
+            _c(
+              "span",
+              { staticClass: "operadores-lista-row mdc-list-item__ripple" },
+              [
+                _c("span", {
+                  staticClass:
+                    "operadores-lista-foto-perfil mdc-list-item__graphic material-icons",
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    staticClass: "operadores-lista-nombre mdc-list-item__text",
+                  },
+                  [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Sergi Pérez Jiménez"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "mdc-list-item__secondary-text" },
+                      [_vm._v("Secondary text")]
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", { staticClass: "operadores-lista-info" }, [
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("sperezj2021@cepnet.net"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("Operador"),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mdc-list-item__text" }, [
+                    _c("span", { staticClass: "mdc-list-item__primary-text" }, [
+                      _vm._v("En línea"),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", [
+      _c("div", { staticClass: "operadores-lista-button-row" }, [
+        _c("li", { staticClass: "añadir-usuario material-icons-round" }, [
+          _vm._v("\n                        person_add\n                    "),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "eliminar-usuario material-icons-round" }, [
+        _vm._v("\n                    person_remove\n                "),
       ]),
     ])
   },
