@@ -610,6 +610,12 @@
                 </div>
             </div>
         </div>
+        <div class="motor-busqueda">
+            <span class="icon-search-motor-busqueda material-icons-round">
+                search
+            </span>
+            <input type="text" class="motor-busqueda-text">
+        </div>
         <!-- <div class="mdc-dialog">
             <div class="mdc-dialog__container">
                 <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
@@ -691,7 +697,7 @@
     display: flex;
     align-items: flex-end;
     width: 1656px;
-    height: 60px;
+    height: 50px;
     background-color: rgb(248, 248, 248);
     border-radius: 32px 32px 0px 0px;
     }
@@ -949,4 +955,55 @@
     font-family: var(--font-family-gothic_a1);
     text-transform: capitalize;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .motor-busqueda {
+    display: flex;
+    flex-direction: row;
+    width: 744px;
+    height: 56px;
+    background: transparent;
+    border: 1.27273px solid #DFE1E5;
+    box-sizing: border-box;
+    border-radius: 30.5455px;
+    }
+
+    .icon-search-motor-busqueda {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.400);
+    }
+
+    .motor-busqueda-text {
+    width: 100%;
+    border: 0;
+    size: 2em;
+    }
+
+
+
+
+
 </style>
