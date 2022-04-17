@@ -2762,6 +2762,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -20494,7 +20495,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* .main {\ndisplay: flex;\nflex-direction: column;\n} */\ncarta-de-llamada-datos-incidentes-personales-flex-col{\n    display: flex;\n}\n.datos-incidentes-componente {\n/* display: flex;\nalign-items: flex-start;\nheight: 312px;\nwidth: 891px; */\nmargin-left: 100px;\nmargin-top: 24px;\n}\n.datos-personales-componente {\n/* display: flex;\nalign-items: flex-start;\nheight: 312px;\nwidth: 891px; */\nmargin-left: 100px;\nmargin-top: 60px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* .main {\ndisplay: flex;\nflex-direction: column;\n} */\ncarta-de-llamada-datos-incidentes-personales-flex-col{\ndisplay: flex;\n}\n.datos-incidentes-componente {\n/* display: flex;\nalign-items: flex-start;\nheight: 312px;\nwidth: 891px; */\nmargin-left: 100px;\nmargin-top: 24px;\n}\n.datos-personales-componente {\n/* display: flex;\nalign-items: flex-start;\nheight: 312px;\nwidth: 891px; */\nmargin-left: 100px;\nmargin-top: 60px;\n}\n\n/* .expedientes-relacionados-componente {\nmargin-left: 100px;\nmargin-top: 60px;\n} */\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -24134,6 +24135,8 @@ var render = function () {
           ],
           1
         ),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-relacionados-componente" }),
       ]
     ),
   ])
