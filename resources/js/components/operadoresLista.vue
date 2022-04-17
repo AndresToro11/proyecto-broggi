@@ -2,14 +2,14 @@
     <div class="operadores-lista-main-container">
         <h1 class="operadores-lista-title gothica1-normal-black-28px">
             Gestionar usuarios
-            <div class="motor-busqueda">
-            <span class="icon-search-motor-busqueda material-icons-round-">
-                <span class="material-icons-round">
-                    person_search
+            <div class="operadores-lista-motor-busqueda">
+                <span class="operadores-lista-icon-search-motor-busqueda material-icons-round">
+                    <span class="material-icons-round">
+                        person_search
+                    </span>
                 </span>
-            </span>
-            <input type="text" class="motor-busqueda-text" placeholder="Escribe el nombre del usuario...">
-        </div>
+                <input type="text" class="operadores-lista-motor-busqueda-text" placeholder="Escribe el nombre del usuario...">
+            </div>
         </h1>
         <div class="operadores-lista-container">
             <div class="operadores-lista-marco"> <!-- FIXME: Marco -->
@@ -687,11 +687,11 @@
     align-items: center;
     gap: 970px;
     margin-left: 100px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     margin-bottom: 25px;
     }
 
-    .motor-busqueda {
+    .operadores-lista-motor-busqueda {
     display: flex;
     flex-direction: row;
     width: 480px;
@@ -703,16 +703,17 @@
     transition: 0.2s ease-in-out;
     }
 
-    .icon-search-motor-busqueda {
+    .operadores-lista-icon-search-motor-busqueda {
     display: flex;
     align-items: center;
     margin-left: 16px;
     margin-right: 16px;
     font-size: 2em;
     color: rgba(0, 0, 0, 0.400);
+    cursor: default;
     }
 
-    .motor-busqueda-text {
+    .operadores-lista-motor-busqueda-text {
     display: flex;
     width: 410px;
     height: 34px;
@@ -721,7 +722,7 @@
     outline: none;
     }
 
-    .motor-busqueda:hover {
+    .operadores-lista-motor-busqueda:hover {
     box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
     }
 

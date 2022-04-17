@@ -5435,6 +5435,340 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -20280,7 +20614,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.expedientes-title {\ndisplay: flex;\nalign-items: flex-start;\nheight: 16px;\nwidth: 158px;\nmargin-left: 100px;\nmargin-top: 50px;\nletter-spacing: 0.15px;\nline-height: 16px;\n/* top: 222px; */\nwhite-space: nowrap;\nz-index: 4;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\nz-index: 99;\n}\n.expedientes-modal-window {\nwidth: 1104px;\nheight: 526px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n#close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 1040px;\nmargin-top: 18px;\n}\n.expedientes-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\n}\n.expedientes-x\n#expedientes-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nfont-size: 32px;\n}\n.expedientes-modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.expediente-modal {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n.modal-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-2 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-3 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-4 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-5 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-6 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n.modal-flex-row-7 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.expediente-file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.expediente-file:hover {\ntransform: scale(1.05);\n}\n.expedientes-info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.expedientes-flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 32px;\n}\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-onProcess {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--onProcess);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-inmobilized {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--immobilized);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-requested {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--requested);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-closed {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--closed);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-accepted {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--accepted);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: white;\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.expedientes-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expedientes-expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.expedientes-operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.expedientes-name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.expedientes-date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.expedientes-text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.onProcess {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.onProcess {\nheight: auto !important;\nwidth: auto !important;\n}\n.onProcess span {\ncolor: var(--onProcess);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.immobilized {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.immobilized {\nheight: auto !important;\nwidth: auto !important;\n}\n.immobilized span {\ncolor: var(--immobilized);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.requested {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.requested {\nheight: auto !important;\nwidth: auto !important;\n}\n.requested span {\ncolor: var(--requested);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.closed {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.closed {\nheight: auto !important;\nwidth: auto !important;\n}\n.closed span {\ncolor: var(--closed);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.accepted {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.accepted {\nheight: auto !important;\nwidth: auto !important;\n}\n.accepted span {\ncolor: var(--accepted);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.expedientes-title {\ndisplay: flex;\nalign-items: center;\ngap: 970px;\nmargin-left: 100px;\nmargin-top: 50px;\n/* letter-spacing: 0.15px;\nline-height: 16px;\ntop: 222px;\nwhite-space: nowrap;\nz-index: 4; */\n}\n.expedientes-motor-busqueda {\ndisplay: flex;\nflex-direction: row;\nwidth: 480px;\nheight: 36px;\nbackground: transparent;\nborder: 1.27273px solid #DFE1E5;\nbox-sizing: border-box;\nborder-radius: 30.5455px;\ntransition: 0.2s ease-in-out;\n}\n.expedientes-icon-search-motor-busqueda {\ndisplay: flex;\nalign-items: center;\nmargin-left: 16px;\nmargin-right: 16px;\nfont-size: 2em;\ncolor: rgba(0, 0, 0, 0.400);\ncursor: default;\n}\n.expedientes-motor-busqueda-text {\ndisplay: flex;\nwidth: 410px;\nheight: 34px;\nborder: 2px;\nfont-size: 18px;\noutline: none;\n}\n.expedientes-motor-busqueda:hover {\nbox-shadow: 0 1px 6px rgb(32 33 36 / 28%);\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\nz-index: 99;\n}\n.expedientes-modal-window {\nwidth: 1104px;\nheight: 900px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n.expedientes-modal-header {\ndisplay: flex;\nalign-items: center;\nmargin-top: 40px;\ngap: 750px;\n}\n.expediente-modal-title {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\nfont-size: 28px;\nmargin-left: 40px\n}\n#close-modal {\ndisplay: block;\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\n}\n.expedientes-x\n#expedientes-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nfont-size: 32px;\n}\n.expedientes-modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.expediente-modal-carta-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: center;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-top: 50px;\nmax-height: 745px;\noverflow-y: auto;\n}\n.expediente-modal-carta-carta-llamada {\nwidth: 344px;\nheight: 335px;\ntransition: 0.3s ease-in-out;\ncursor: pointer;\n}\n.expediente-modal-carta-carta-llamada:hover {\ntransform: scale(1.02);\n}\n.expediente-modal-carta-carta-llamada-content {\ndisplay: flex;\nflex-direction: column;\npadding: 16px;\n}\n.class-1 {\nfont-family: Roboto, sans-serif;\nfont-size: 1.25rem;\nline-height: 2rem;\nfont-weight: 500;\nletter-spacing: .0125em;\ntext-decoration: inherit;\ntext-transform: inherit;\n}\n.class-2 {\nfont-family: Roboto, sans-serif;\nfont-size: .875rem;\nline-height: 1.25rem;\nfont-weight: 400;\nletter-spacing: .0178571429em;\ntext-decoration: inherit;\ntext-transform: inherit;\nopacity: .6;\n}\n.expediente-modal-carta-carta-llamada-text {\npadding: 18px 16px 16px 0px;\n}\n.class-3 {\nfont-family: Roboto, sans-serif;\nfont-size: .875rem;\nline-height: 1.25rem;\nfont-weight: 400;\nletter-spacing: .0178571429em;\ntext-decoration: inherit;\ntext-transform: inherit;\nopacity: .6;\n}\n\n/* .modal-flex-row-1 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n\n.modal-flex-row-2 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n\n.modal-flex-row-3 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n\n.modal-flex-row-4 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n\n.modal-flex-row-5 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n\n.modal-flex-row-6 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n}\n\n.modal-flex-row-7 {\nheight: 16px;\nwidth: 411px;\nletter-spacing: 1.25px;\nline-height: 16px;\nflex-wrap: wrap;\ngap: 4px;\nmargin-left: 40px;\nmargin-top: 53px;\n} */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.expedientes-container {\ndisplay: flex;\nflex-wrap: wrap;\nflex-direction: row;\njustify-content: flex-start;\nalign-content: flex-start;\nrow-gap: 50px;\n-moz-column-gap: 115px;\n     column-gap: 115px;\nmargin-left: 102px;\nmargin-right: 102px;\nz-index: inherit;\n}\n.expediente-file {\nheight: 279px;\nmargin-top: 45px;\nposition: relative;\nwidth: 488px;\ntransition: all 0.2s ease-in-out;\ncursor: pointer;\n}\n.expediente-file:hover {\ntransform: scale(1.05);\n}\n.expedientes-info {\nalign-items: flex-start;\ndisplay: flex;\nheight: 180px;\nwidth: 414px;\nleft: 37px;\nposition: absolute;\ntop: 32px;\n}\n.expedientes-flex-row {\nalign-items: flex-start;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 188px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-1 {\nalign-items: flex-start;\nmargin-top: 25px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 183px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-2 {\nalign-items: flex-start;\nmargin-top: 75px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 227px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-3 {\nalign-items: flex-start;\nmargin-top: 125px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 300px;\nflex-direction: row;\nwidth: 414px;\nheight: 16px;\n}\n.expedientes-flex-row-4 {\nalign-items: flex-start;\nmargin-top: 175px;\nmargin-left: -412px;\ndisplay: inline-flex;\nflex-wrap: wrap;\ngap: 270px;\nflex-direction: row;\nwidth: 414px;\nheight: 32px;\n}\n.window-expediente-container {\nbackground-image: url(https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/6241fd8a3766e1a6c59e7341/img/window-expediente-blur-8@2x.svg);\nbackground-size: 100% 100%;\nheight: 279px;\nleft: 0;\nposition: absolute;\ntop: 0;\nwidth: 488px;\n}\n.window-expediente-shadow {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px #00000040;\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-onProcess {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--onProcess);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-inmobilized {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--immobilized);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-requested {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--requested);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-closed {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--closed);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente-shadow-accepted {\nbackground-color: var(--black-3);\nborder-radius: 39.43px;\nbox-shadow: 0px 4.93px 4.93px var(--accepted);\nheight: 269px;\nleft: 5px;\nposition: absolute;\ntop: 5px;\nwidth: 478px;\n}\n.window-expediente {\nbackground-color: white;\nborder-radius: 39.43px;\nheight: 274px;\nleft: 5px;\nposition: absolute;\ntop: 3px;\nwidth: 478px;\n}\n.expedientes-title {\nheight: 16px;\nletter-spacing: 0.15px;\nline-height: 16px;\nmargin-left: 102px;\nmargin-top: 24px;\nwhite-space: nowrap;\n}\n.expedientes-expediente {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.expedientes-operador {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-fecha {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-hora {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-estado {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nwhite-space: nowrap;\n}\n.expedientes-number {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmin-width: 105px;\nwhite-space: nowrap;\n}\n.expedientes-name-profile {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 129px;\nwhite-space: nowrap;\n}\n.expedientes-date {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 121px;\nwhite-space: nowrap;\n}\n.expedientes-text {\nheight: 16px;\nletter-spacing: 1.25px;\nline-height: 16px;\nmargin-top: 25px;\nmin-width: 61px;\nwhite-space: nowrap;\n}\n.onProcess {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.onProcess {\nheight: auto !important;\nwidth: auto !important;\n}\n.onProcess span {\ncolor: var(--onProcess);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.immobilized {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.immobilized {\nheight: auto !important;\nwidth: auto !important;\n}\n.immobilized span {\ncolor: var(--immobilized);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.requested {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.requested {\nheight: auto !important;\nwidth: auto !important;\n}\n.requested span {\ncolor: var(--requested);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.closed {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.closed {\nheight: auto !important;\nwidth: auto !important;\n}\n.closed span {\ncolor: var(--closed);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.accepted {\nalign-items: flex-start;\nbackground-color: white;\ndisplay: flex;\nmargin-right: 2.3px;\nmargin-top: 20px;\nmin-width: 26px;\n}\n.accepted {\nheight: auto !important;\nwidth: auto !important;\n}\n.accepted span {\ncolor: var(--accepted);\nmargin-top: -5px;\nfont-size: 32px;\n}\n.icon {\nalign-items: flex-start;\ndisplay: flex;\nheight: 26px;\npadding: 1.8px 1.8px;\nwidth: 26px;\n}\n.vector-container {\nheight: 22px;\nposition: relative;\nwidth: 22px;\n}\n.vector {\nheight: 1px;\nleft: 11px;\nposition: absolute;\ntop: 11px;\nwidth: 1px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20424,7 +20758,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.operadores-lista-main-container {\nwidth: 1920px;\n}\n.operadores-lista-title {\ndisplay: flex;\nalign-items: center;\ngap: 970px;\nmargin-left: 100px;\nmargin-top: 50px;\nmargin-bottom: 25px;\n}\n.motor-busqueda {\ndisplay: flex;\nflex-direction: row;\nwidth: 480px;\nheight: 36px;\nbackground: transparent;\nborder: 1.27273px solid #DFE1E5;\nbox-sizing: border-box;\nborder-radius: 30.5455px;\ntransition: 0.2s ease-in-out;\n}\n.icon-search-motor-busqueda {\ndisplay: flex;\nalign-items: center;\nmargin-left: 16px;\nmargin-right: 16px;\nfont-size: 2em;\ncolor: rgba(0, 0, 0, 0.400);\n}\n.motor-busqueda-text {\ndisplay: flex;\nwidth: 410px;\nheight: 34px;\nborder: 2px;\nfont-size: 18px;\noutline: none;\n}\n.motor-busqueda:hover {\nbox-shadow: 0 1px 6px rgb(32 33 36 / 28%);\n}\n.operadores-lista-container {\ndisplay: flex;\nflex-direction: column;\nmargin-left: 132px; /* Esto centra la tabla */\n}\n.operadores-lista-marco {\ndisplay: flex;\nalign-items: flex-end;\nwidth: 1656px;\nheight: 50px;\nbackground-color: rgb(248, 248, 248);\nborder-radius: 32px 32px 0px 0px;\n}\n.operadores-lista-row {\ndisplay: flex;\nalign-items: center;\n}\n.operadores-lista-foto-perfil-margen {\nwidth: 40px;\nheight: 40px;\nmargin-left: 16px;\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: transparent;\n}\n.operadores-lista-list-scrolling {\nwidth: 1656px;\nheight: 580px;\noverflow-y: auto;\n}\n.operadores-lista-item {\nheight: 72px;\n}\n.operadores-lista-foto-perfil {\nwidth: 40px;\nheight: 40px;\n/* margin-left: 16px; */\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: black;\n}\n.operadores-lista-nombre {\nwidth: 200px;\nmargin-right: 550px;\n}\n.operadores-lista-info {\ndisplay: flex;\nflex-direction: row;\nalign-items: center;\nflex-wrap: wrap;\ngap: 149px;\n}\n.operadores-lista-email {\nwidth: 200px;\n}\n.operadores-lista-user {\nwidth: 105px;\n}\n.operadores-lista-status {\nwidth: 105px;\n}\n.operadores-lista-delete {\nwidth: 42px;\nheight: 42px;\nmargin-left: 50px;\nfont-size: 2em;\nposition: relative;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\ntransition: 0.3s ease-in-out;\ncursor: pointer;\nborder-radius: 32px;\n}\n.operadores-lista-delete:hover {\nbackground-color: transparent;\nborder: 0.1px solid red;\ncolor: red;\n}\n.operadores-lista-boton-space {\ndisplay: flex;\nflex-direction: row-reverse;\nmargin-top: 25px;\nmargin-right: 45px;\n}\n.action {\nposition: fixed;\nbottom: 50px;\nwidth: 60px;\nheight: 60px;\nbackground-color: var(--mdc-theme-primary);\nborder-radius: 50%;\nbox-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);\ncursor: pointer;\n}\n.action span {\nposition: relative;\nwidth: 100%;\nheight: 100%;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\nfont-size: 2em;\ntransition: 0.3s ease-in-out;\ncolor: white;\n}\n.action.active span {\ntransform: rotate(135deg);\n}\n/* FIXME: Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.operadores-lista-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\nz-index: 99;\n}\n.operadores-lista-modal-window {\nwidth: 850px;\nheight: 394px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n.operadores-lista-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\nwidth: 100%;\nmargin-top: 10px;\n}\n.operadores-lista-modal-crear-usuario-title {\nheight: 16px;\nmargin-left: 50px;\nmargin-top: 25px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operadores-lista-x\n#operadores-lista-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nfont-size: 32px;\n}\n#operadores-lista-close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-right: 20px;\nmargin-top: 18px;\n}\n.operadores-lista-modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.operadores-lista-modal-crear-usuario {\ndisplay: flex;\nalign-items: flex-start;\nbackground-color: transparent;\nflex-direction: column;\nflex-wrap: wrap;\n}\n\n/* FIXME: Datos personales */\n.operadores-lista-modal-crear-usuario-container {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 750px;\nheight: 179px;\nmargin-left: 52px;\nmargin-top: 36px;\nflex-direction: column;\n}\n.operadores-lista-modal-crear-usuario-datos-personales {\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operadores-lista-modal-crear-usuario-flex-row {\ndisplay: flex;\nalign-items: flex-start;\nmargin-top: 18px;\n}\n.operadores-lista-modal-crear-usuario-flex-row-1 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 25px;\ngap: 50px;\n}\n\n/* FIXME: Botones */\n.operadores-lista-modal-crear-usuario-flex-row-4 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 50px;\nmargin-left: 220px;\ngap: 50px;\n}\n#aceptarButtonOperadoresLista {\nborder-radius: 32px;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n#cancelarButtonOperadoresLista {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.operadores-lista-main-container {\nwidth: 1920px;\n}\n.operadores-lista-title {\ndisplay: flex;\nalign-items: center;\ngap: 970px;\nmargin-left: 100px;\n/* margin-top: 50px; */\nmargin-bottom: 25px;\n}\n.operadores-lista-motor-busqueda {\ndisplay: flex;\nflex-direction: row;\nwidth: 480px;\nheight: 36px;\nbackground: transparent;\nborder: 1.27273px solid #DFE1E5;\nbox-sizing: border-box;\nborder-radius: 30.5455px;\ntransition: 0.2s ease-in-out;\n}\n.operadores-lista-icon-search-motor-busqueda {\ndisplay: flex;\nalign-items: center;\nmargin-left: 16px;\nmargin-right: 16px;\nfont-size: 2em;\ncolor: rgba(0, 0, 0, 0.400);\ncursor: default;\n}\n.operadores-lista-motor-busqueda-text {\ndisplay: flex;\nwidth: 410px;\nheight: 34px;\nborder: 2px;\nfont-size: 18px;\noutline: none;\n}\n.operadores-lista-motor-busqueda:hover {\nbox-shadow: 0 1px 6px rgb(32 33 36 / 28%);\n}\n.operadores-lista-container {\ndisplay: flex;\nflex-direction: column;\nmargin-left: 132px; /* Esto centra la tabla */\n}\n.operadores-lista-marco {\ndisplay: flex;\nalign-items: flex-end;\nwidth: 1656px;\nheight: 50px;\nbackground-color: rgb(248, 248, 248);\nborder-radius: 32px 32px 0px 0px;\n}\n.operadores-lista-row {\ndisplay: flex;\nalign-items: center;\n}\n.operadores-lista-foto-perfil-margen {\nwidth: 40px;\nheight: 40px;\nmargin-left: 16px;\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: transparent;\n}\n.operadores-lista-list-scrolling {\nwidth: 1656px;\nheight: 580px;\noverflow-y: auto;\n}\n.operadores-lista-item {\nheight: 72px;\n}\n.operadores-lista-foto-perfil {\nwidth: 40px;\nheight: 40px;\n/* margin-left: 16px; */\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: black;\n}\n.operadores-lista-nombre {\nwidth: 200px;\nmargin-right: 550px;\n}\n.operadores-lista-info {\ndisplay: flex;\nflex-direction: row;\nalign-items: center;\nflex-wrap: wrap;\ngap: 149px;\n}\n.operadores-lista-email {\nwidth: 200px;\n}\n.operadores-lista-user {\nwidth: 105px;\n}\n.operadores-lista-status {\nwidth: 105px;\n}\n.operadores-lista-delete {\nwidth: 42px;\nheight: 42px;\nmargin-left: 50px;\nfont-size: 2em;\nposition: relative;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\ntransition: 0.3s ease-in-out;\ncursor: pointer;\nborder-radius: 32px;\n}\n.operadores-lista-delete:hover {\nbackground-color: transparent;\nborder: 0.1px solid red;\ncolor: red;\n}\n.operadores-lista-boton-space {\ndisplay: flex;\nflex-direction: row-reverse;\nmargin-top: 25px;\nmargin-right: 45px;\n}\n.action {\nposition: fixed;\nbottom: 50px;\nwidth: 60px;\nheight: 60px;\nbackground-color: var(--mdc-theme-primary);\nborder-radius: 50%;\nbox-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);\ncursor: pointer;\n}\n.action span {\nposition: relative;\nwidth: 100%;\nheight: 100%;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\nfont-size: 2em;\ntransition: 0.3s ease-in-out;\ncolor: white;\n}\n.action.active span {\ntransform: rotate(135deg);\n}\n/* FIXME: Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.operadores-lista-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\nz-index: 99;\n}\n.operadores-lista-modal-window {\nwidth: 850px;\nheight: 394px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n.operadores-lista-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\nwidth: 100%;\nmargin-top: 10px;\n}\n.operadores-lista-modal-crear-usuario-title {\nheight: 16px;\nmargin-left: 50px;\nmargin-top: 25px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operadores-lista-x\n#operadores-lista-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nfont-size: 32px;\n}\n#operadores-lista-close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-right: 20px;\nmargin-top: 18px;\n}\n.operadores-lista-modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.operadores-lista-modal-crear-usuario {\ndisplay: flex;\nalign-items: flex-start;\nbackground-color: transparent;\nflex-direction: column;\nflex-wrap: wrap;\n}\n\n/* FIXME: Datos personales */\n.operadores-lista-modal-crear-usuario-container {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 750px;\nheight: 179px;\nmargin-left: 52px;\nmargin-top: 36px;\nflex-direction: column;\n}\n.operadores-lista-modal-crear-usuario-datos-personales {\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operadores-lista-modal-crear-usuario-flex-row {\ndisplay: flex;\nalign-items: flex-start;\nmargin-top: 18px;\n}\n.operadores-lista-modal-crear-usuario-flex-row-1 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 25px;\ngap: 50px;\n}\n\n/* FIXME: Botones */\n.operadores-lista-modal-crear-usuario-flex-row-4 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 50px;\nmargin-left: 220px;\ngap: 50px;\n}\n#aceptarButtonOperadoresLista {\nborder-radius: 32px;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n#cancelarButtonOperadoresLista {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -30311,9 +30645,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h1", { staticClass: "expedientes-title gothica1-normal-black-28px" }, [
-      _vm._v("\n        Expedientes\n    "),
-    ]),
+    _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "expedientes-container" }, [
       _c(
@@ -30323,7 +30655,7 @@ var render = function () {
           attrs: { "data-open": "expedientes-modalScreen" },
           on: { click: _vm.modalVisible },
         },
-        [_vm._m(0), _vm._v(" "), _vm._m(1)]
+        [_vm._m(1), _vm._v(" "), _vm._m(2)]
       ),
       _vm._v(" "),
       _c(
@@ -30333,7 +30665,7 @@ var render = function () {
           attrs: { "data-open": "expedientes-modalScreen" },
           on: { click: _vm.modalVisible },
         },
-        [_vm._m(2), _vm._v(" "), _vm._m(3)]
+        [_vm._m(3), _vm._v(" "), _vm._m(4)]
       ),
       _vm._v(" "),
       _c(
@@ -30343,7 +30675,7 @@ var render = function () {
           attrs: { "data-open": "expedientes-modalScreen" },
           on: { click: _vm.modalVisible },
         },
-        [_vm._m(4), _vm._v(" "), _vm._m(5)]
+        [_vm._m(5), _vm._v(" "), _vm._m(6)]
       ),
       _vm._v(" "),
       _c(
@@ -30353,7 +30685,7 @@ var render = function () {
           attrs: { "data-open": "expedientes-modalScreen" },
           on: { click: _vm.modalVisible },
         },
-        [_vm._m(6), _vm._v(" "), _vm._m(7)]
+        [_vm._m(7), _vm._v(" "), _vm._m(8)]
       ),
       _vm._v(" "),
       _c(
@@ -30363,7 +30695,47 @@ var render = function () {
           attrs: { "data-open": "expedientes-modalScreen" },
           on: { click: _vm.modalVisible },
         },
-        [_vm._m(8), _vm._v(" "), _vm._m(9)]
+        [_vm._m(9), _vm._v(" "), _vm._m(10)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "expediente-file",
+          attrs: { "data-open": "expedientes-modalScreen" },
+          on: { click: _vm.modalVisible },
+        },
+        [_vm._m(11), _vm._v(" "), _vm._m(12)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "expediente-file",
+          attrs: { "data-open": "expedientes-modalScreen" },
+          on: { click: _vm.modalVisible },
+        },
+        [_vm._m(13), _vm._v(" "), _vm._m(14)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "expediente-file",
+          attrs: { "data-open": "expedientes-modalScreen" },
+          on: { click: _vm.modalVisible },
+        },
+        [_vm._m(15), _vm._v(" "), _vm._m(16)]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "expediente-file",
+          attrs: { "data-open": "expedientes-modalScreen" },
+          on: { click: _vm.modalVisible },
+        },
+        [_vm._m(17), _vm._v(" "), _vm._m(18)]
       ),
       _vm._v(" "),
       _c(
@@ -30375,6 +30747,19 @@ var render = function () {
         [
           _c("div", { staticClass: "expedientes-modal-window" }, [
             _c("header", { staticClass: "expedientes-modal-header" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "expediente-modal-title valign-text-middle valign-text-middle gothica1-normal-black-28px",
+                },
+                [
+                  _vm._v(
+                    "\n                            Cartas de llamada\n                    "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
               _c(
                 "div",
                 {
@@ -30402,7 +30787,7 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(10),
+            _vm._m(19),
           ]),
         ]
       ),
@@ -30410,6 +30795,40 @@ var render = function () {
   ])
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h1",
+      { staticClass: "expedientes-title gothica1-normal-black-28px" },
+      [
+        _vm._v("\n        Expedientes\n        "),
+        _c("div", { staticClass: "expedientes-motor-busqueda" }, [
+          _c(
+            "span",
+            {
+              staticClass:
+                "expedientes-icon-search-motor-busqueda material-icons-round",
+            },
+            [
+              _c("span", { staticClass: "material-icons-round" }, [
+                _vm._v("\n                    find_in_page\n                "),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "expedientes-motor-busqueda-text",
+            attrs: {
+              type: "text",
+              placeholder: "Escribe el numero del expediente...",
+            },
+          }),
+        ]),
+      ]
+    )
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -30929,161 +31348,779 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "window-expediente-container" }, [
+      _c("div", { staticClass: "window-expediente-shadow" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente-shadow-accepted" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "modal-information gothica1-normal-black-21px" },
+      { staticClass: "expedientes-info gothica1-normal-black-21px" },
       [
-        _c("div", { staticClass: "expediente-modal valign-text-middle" }, [
-          _vm._v(
-            "\n                            Cartas de llamada\n                    "
+        _c("div", { staticClass: "expedientes-flex-row" }, [
+          _c(
+            "div",
+            { staticClass: "expedientes-expediente valign-text-middle" },
+            [
+              _vm._v(
+                "\n                        Expediente\n                    "
+              ),
+            ]
           ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-1" }, [
-          _c("div", { staticClass: "codigo-modal" }, [
-            _vm._v(
-              "\n                            Codigo de la llamada:\n                        "
-            ),
-          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "info-codigo-modal" }, [
-            _vm._v(
-              "\n                            00000001\n                        "
-            ),
+          _c("div", { staticClass: "expedientes-number valign-text-middle" }, [
+            _vm._v("\n                        00000001\n                    "),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-2" }, [
-          _c("div", { staticClass: "provincia-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            Provincia:\n                        "
-            ),
-          ]),
+        _c("div", { staticClass: "expedientes-flex-row-1" }, [
+          _c(
+            "div",
+            { staticClass: "expedientes-operador valign-text-middle" },
+            [_vm._v("\n                        Operador\n                    ")]
+          ),
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "info-provincia-modal valign-text-middle" },
+            { staticClass: "expedientes-name-profile valign-text-middle" },
             [
               _vm._v(
-                "\n                            Lleida\n                        "
+                "\n                        Andrés Toro\n                    "
               ),
             ]
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-3" }, [
-          _c("div", { staticClass: "municipio-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            Municipio\n                        "
-            ),
+        _c("div", { staticClass: "expedientes-flex-row-2" }, [
+          _c("div", { staticClass: "expedientes-fecha valign-text-middle" }, [
+            _vm._v("\n                        Fecha\n                    "),
           ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "info-municipio-modal valign-text-middle" },
-            [
-              _vm._v(
-                "\n                            Agramunt\n                        "
-              ),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-4" }, [
-          _c(
-            "div",
-            { staticClass: "fuera-Catalunya-modal valign-text-middle" },
-            [
-              _vm._v(
-                "\n                            Fuera de Catalunya:\n                        "
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "info-fuera-Catalunya-modal valign-text-middle" },
-            [
-              _vm._v(
-                "\n                            No\n                        "
-              ),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-5" }, [
-          _c("div", { staticClass: "incidente-modal valign-text-middle" }, [
+          _c("div", { staticClass: "expedientes-date valign-text-middle" }, [
             _vm._v(
-              "\n                            Incidente:\n                        "
-            ),
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "info-incidente-modal valign-text-middle" },
-            [
-              _vm._v(
-                "\n                            Derrumbamiento de un edificio\n                        "
-              ),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-6" }, [
-          _c("div", { staticClass: "direccion-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            Direccion:\n                        "
-            ),
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "info-direccion-modal valign-text-middle" },
-            [
-              _vm._v(
-                "\n                            SQY\n                        "
-              ),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-row-7" }, [
-          _c("div", { staticClass: "duracion-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            Duracion de la llamada:\n                        "
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "info-duracion-modal valign-text-middle" }, [
-            _vm._v(
-              "\n                            00:04:31\n                        "
+              "\n                        13/10/2022\n                    "
             ),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "modal-flex-col" }, [
-          _c("div", { staticClass: "modal-flex-row-8" }, [
-            _c("div", { staticClass: "notaComun-modal valign-text-middle" }, [
+        _c("div", { staticClass: "expedientes-flex-row-3" }, [
+          _c("div", { staticClass: "expedientes-hora valign-text-middle" }, [
+            _vm._v("\n                        Hora\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "expedientes-text valign-text-middle" }, [
+            _vm._v("\n                        22:34\n                    "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-4" }, [
+          _c("div", { staticClass: "expedientes-estado valign-text-middle" }, [
+            _vm._v("\n                        Estado\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "accepted" }, [
+            _c("div", { staticClass: "icon" }, [
+              _c("div", { staticClass: "vector-container" }, [
+                _c("img", {
+                  staticClass: "vector",
+                  attrs: {
+                    src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg",
+                  },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "material-icons" }, [
               _vm._v(
-                "\n                                Nota comun:\n                            "
+                "\n                            check_circle_outline\n                        "
               ),
             ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "modal-flex-row-9" }, [
-            _c(
-              "div",
-              { staticClass: "info-notaComun-modal valign-text-middle" },
-              [
-                _vm._v(
-                  "\n                                Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.\n                            "
-                ),
-              ]
-            ),
           ]),
         ]),
       ]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "window-expediente-container" }, [
+      _c("div", { staticClass: "window-expediente-shadow" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente-shadow-accepted" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "expedientes-info gothica1-normal-black-21px" },
+      [
+        _c("div", { staticClass: "expedientes-flex-row" }, [
+          _c(
+            "div",
+            { staticClass: "expedientes-expediente valign-text-middle" },
+            [
+              _vm._v(
+                "\n                        Expediente\n                    "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "expedientes-number valign-text-middle" }, [
+            _vm._v("\n                        00000001\n                    "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-1" }, [
+          _c(
+            "div",
+            { staticClass: "expedientes-operador valign-text-middle" },
+            [_vm._v("\n                        Operador\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "expedientes-name-profile valign-text-middle" },
+            [
+              _vm._v(
+                "\n                        Andrés Toro\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-2" }, [
+          _c("div", { staticClass: "expedientes-fecha valign-text-middle" }, [
+            _vm._v("\n                        Fecha\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "expedientes-date valign-text-middle" }, [
+            _vm._v(
+              "\n                        13/10/2022\n                    "
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-3" }, [
+          _c("div", { staticClass: "expedientes-hora valign-text-middle" }, [
+            _vm._v("\n                        Hora\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "expedientes-text valign-text-middle" }, [
+            _vm._v("\n                        22:34\n                    "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-4" }, [
+          _c("div", { staticClass: "expedientes-estado valign-text-middle" }, [
+            _vm._v("\n                        Estado\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "accepted" }, [
+            _c("div", { staticClass: "icon" }, [
+              _c("div", { staticClass: "vector-container" }, [
+                _c("img", {
+                  staticClass: "vector",
+                  attrs: {
+                    src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg",
+                  },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "material-icons" }, [
+              _vm._v(
+                "\n                            check_circle_outline\n                        "
+              ),
+            ]),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "window-expediente-container" }, [
+      _c("div", { staticClass: "window-expediente-shadow" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente-shadow-accepted" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "expedientes-info gothica1-normal-black-21px" },
+      [
+        _c("div", { staticClass: "expedientes-flex-row" }, [
+          _c(
+            "div",
+            { staticClass: "expedientes-expediente valign-text-middle" },
+            [
+              _vm._v(
+                "\n                        Expediente\n                    "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "expedientes-number valign-text-middle" }, [
+            _vm._v("\n                        00000001\n                    "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-1" }, [
+          _c(
+            "div",
+            { staticClass: "expedientes-operador valign-text-middle" },
+            [_vm._v("\n                        Operador\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "expedientes-name-profile valign-text-middle" },
+            [
+              _vm._v(
+                "\n                        Andrés Toro\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-2" }, [
+          _c("div", { staticClass: "expedientes-fecha valign-text-middle" }, [
+            _vm._v("\n                        Fecha\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "expedientes-date valign-text-middle" }, [
+            _vm._v(
+              "\n                        13/10/2022\n                    "
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-3" }, [
+          _c("div", { staticClass: "expedientes-hora valign-text-middle" }, [
+            _vm._v("\n                        Hora\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "expedientes-text valign-text-middle" }, [
+            _vm._v("\n                        22:34\n                    "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-4" }, [
+          _c("div", { staticClass: "expedientes-estado valign-text-middle" }, [
+            _vm._v("\n                        Estado\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "accepted" }, [
+            _c("div", { staticClass: "icon" }, [
+              _c("div", { staticClass: "vector-container" }, [
+                _c("img", {
+                  staticClass: "vector",
+                  attrs: {
+                    src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg",
+                  },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "material-icons" }, [
+              _vm._v(
+                "\n                            check_circle_outline\n                        "
+              ),
+            ]),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "window-expediente-container" }, [
+      _c("div", { staticClass: "window-expediente-shadow" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente-shadow-accepted" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "window-expediente" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "expedientes-info gothica1-normal-black-21px" },
+      [
+        _c("div", { staticClass: "expedientes-flex-row" }, [
+          _c(
+            "div",
+            { staticClass: "expedientes-expediente valign-text-middle" },
+            [
+              _vm._v(
+                "\n                        Expediente\n                    "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "expedientes-number valign-text-middle" }, [
+            _vm._v("\n                        00000001\n                    "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-1" }, [
+          _c(
+            "div",
+            { staticClass: "expedientes-operador valign-text-middle" },
+            [_vm._v("\n                        Operador\n                    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "expedientes-name-profile valign-text-middle" },
+            [
+              _vm._v(
+                "\n                        Andrés Toro\n                    "
+              ),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-2" }, [
+          _c("div", { staticClass: "expedientes-fecha valign-text-middle" }, [
+            _vm._v("\n                        Fecha\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "expedientes-date valign-text-middle" }, [
+            _vm._v(
+              "\n                        13/10/2022\n                    "
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-3" }, [
+          _c("div", { staticClass: "expedientes-hora valign-text-middle" }, [
+            _vm._v("\n                        Hora\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "expedientes-text valign-text-middle" }, [
+            _vm._v("\n                        22:34\n                    "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "expedientes-flex-row-4" }, [
+          _c("div", { staticClass: "expedientes-estado valign-text-middle" }, [
+            _vm._v("\n                        Estado\n                    "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "accepted" }, [
+            _c("div", { staticClass: "icon" }, [
+              _c("div", { staticClass: "vector-container" }, [
+                _c("img", {
+                  staticClass: "vector",
+                  attrs: {
+                    src: "https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg",
+                  },
+                }),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "material-icons" }, [
+              _vm._v(
+                "\n                            check_circle_outline\n                        "
+              ),
+            ]),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "expediente-modal-carta-container" }, [
+      _c(
+        "div",
+        { staticClass: "expediente-modal-carta-carta-llamada mdc-card" },
+        [
+          _c(
+            "div",
+            { staticClass: "expediente-modal-carta-carta-llamada-content" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9",
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "expediente-modal-carta-carta-llamada-mapa mdc-card__media-content",
+                    },
+                    [_vm._v("Mapa")]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-title" },
+                [
+                  _c("div", { staticClass: "class-1" }, [
+                    _vm._v(
+                      "\n                                    Titulo\n                                "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "class-2" }, [
+                    _vm._v(
+                      "\n                                    Titulo secundario\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-text" },
+                [
+                  _c("div", { staticClass: "class-3" }, [
+                    _vm._v(
+                      "\n                                    Greyhound divisively hello coldly wonderfully marginally far upon excluding.\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "expediente-modal-carta-carta-llamada mdc-card" },
+        [
+          _c(
+            "div",
+            { staticClass: "expediente-modal-carta-carta-llamada-content" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9",
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "expediente-modal-carta-carta-llamada-mapa mdc-card__media-content",
+                    },
+                    [_vm._v("Mapa")]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-title" },
+                [
+                  _c("div", { staticClass: "class-1" }, [
+                    _vm._v(
+                      "\n                                    Titulo\n                                "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "class-2" }, [
+                    _vm._v(
+                      "\n                                    Titulo secundario\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-text" },
+                [
+                  _c("div", { staticClass: "class-3" }, [
+                    _vm._v(
+                      "\n                                    Greyhound divisively hello coldly wonderfully marginally far upon excluding.\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "expediente-modal-carta-carta-llamada mdc-card" },
+        [
+          _c(
+            "div",
+            { staticClass: "expediente-modal-carta-carta-llamada-content" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9",
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "expediente-modal-carta-carta-llamada-mapa mdc-card__media-content",
+                    },
+                    [_vm._v("Mapa")]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-title" },
+                [
+                  _c("div", { staticClass: "class-1" }, [
+                    _vm._v(
+                      "\n                                    Titulo\n                                "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "class-2" }, [
+                    _vm._v(
+                      "\n                                    Titulo secundario\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-text" },
+                [
+                  _c("div", { staticClass: "class-3" }, [
+                    _vm._v(
+                      "\n                                    Greyhound divisively hello coldly wonderfully marginally far upon excluding.\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "expediente-modal-carta-carta-llamada mdc-card" },
+        [
+          _c(
+            "div",
+            { staticClass: "expediente-modal-carta-carta-llamada-content" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9",
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "expediente-modal-carta-carta-llamada-mapa mdc-card__media-content",
+                    },
+                    [_vm._v("Mapa")]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-title" },
+                [
+                  _c("div", { staticClass: "class-1" }, [
+                    _vm._v(
+                      "\n                                    Titulo\n                                "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "class-2" }, [
+                    _vm._v(
+                      "\n                                    Titulo secundario\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-text" },
+                [
+                  _c("div", { staticClass: "class-3" }, [
+                    _vm._v(
+                      "\n                                    Greyhound divisively hello coldly wonderfully marginally far upon excluding.\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "expediente-modal-carta-carta-llamada mdc-card" },
+        [
+          _c(
+            "div",
+            { staticClass: "expediente-modal-carta-carta-llamada-content" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9",
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "expediente-modal-carta-carta-llamada-mapa mdc-card__media-content",
+                    },
+                    [_vm._v("Mapa")]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-title" },
+                [
+                  _c("div", { staticClass: "class-1" }, [
+                    _vm._v(
+                      "\n                                    Titulo\n                                "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "class-2" }, [
+                    _vm._v(
+                      "\n                                    Titulo secundario\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-text" },
+                [
+                  _c("div", { staticClass: "class-3" }, [
+                    _vm._v(
+                      "\n                                    Greyhound divisively hello coldly wonderfully marginally far upon excluding.\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "expediente-modal-carta-carta-llamada mdc-card" },
+        [
+          _c(
+            "div",
+            { staticClass: "expediente-modal-carta-carta-llamada-content" },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9",
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "expediente-modal-carta-carta-llamada-mapa mdc-card__media-content",
+                    },
+                    [_vm._v("Mapa")]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-title" },
+                [
+                  _c("div", { staticClass: "class-1" }, [
+                    _vm._v(
+                      "\n                                    Titulo\n                                "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "class-2" }, [
+                    _vm._v(
+                      "\n                                    Titulo secundario\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "expediente-modal-carta-carta-llamada-text" },
+                [
+                  _c("div", { staticClass: "class-3" }, [
+                    _vm._v(
+                      "\n                                    Greyhound divisively hello coldly wonderfully marginally far upon excluding.\n                                "
+                    ),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
   },
 ]
 render._withStripped = true
@@ -31926,19 +32963,22 @@ var staticRenderFns = [
       { staticClass: "operadores-lista-title gothica1-normal-black-28px" },
       [
         _vm._v("\n        Gestionar usuarios\n        "),
-        _c("div", { staticClass: "motor-busqueda" }, [
+        _c("div", { staticClass: "operadores-lista-motor-busqueda" }, [
           _c(
             "span",
-            { staticClass: "icon-search-motor-busqueda material-icons-round-" },
+            {
+              staticClass:
+                "operadores-lista-icon-search-motor-busqueda material-icons-round",
+            },
             [
               _c("span", { staticClass: "material-icons-round" }, [
-                _vm._v("\n                person_search\n            "),
+                _vm._v("\n                    person_search\n                "),
               ]),
             ]
           ),
           _vm._v(" "),
           _c("input", {
-            staticClass: "motor-busqueda-text",
+            staticClass: "operadores-lista-motor-busqueda-text",
             attrs: {
               type: "text",
               placeholder: "Escribe el nombre del usuario...",

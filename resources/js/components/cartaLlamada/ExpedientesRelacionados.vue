@@ -1,7 +1,9 @@
 <template>
-    <h3>Expedientes Relacionados</h3>
+    <div>
 
+    </div>
 </template>
+
 <script>
 export default {
     mounted() {
@@ -9,3 +11,7 @@ export default {
     },
 };
 </script>
+
+<style>
+
+</style>

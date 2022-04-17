@@ -2,6 +2,14 @@
     <div>
         <h1 class="expedientes-title gothica1-normal-black-28px">
             Expedientes
+            <div class="expedientes-motor-busqueda">
+                <span class="expedientes-icon-search-motor-busqueda material-icons-round">
+                    <span class="material-icons-round">
+                        find_in_page
+                    </span>
+                </span>
+                <input type="text" class="expedientes-motor-busqueda-text" placeholder="Escribe el numero del expediente...">
+            </div>
         </h1>
         <div class="expedientes-container">
             <div class="expediente-file" data-open="expedientes-modalScreen" @click="modalVisible"> <!-- TODO: File --onProcess  -->
@@ -284,46 +292,372 @@
                     </div>
                 </div>
             </div>
+            <div class="expediente-file" data-open="expedientes-modalScreen" @click="modalVisible"> <!-- TODO: File --accepted  -->
+                <div class="window-expediente-container">
+                    <div class="window-expediente-shadow"></div>
+                    <div class="window-expediente-shadow-accepted"></div>
+                    <div class="window-expediente"></div>
+                </div>
+                <div class="expedientes-info gothica1-normal-black-21px">
+                    <div class="expedientes-flex-row">
+                        <div class="expedientes-expediente valign-text-middle">
+                            Expediente
+                        </div>
+                        <div class="expedientes-number valign-text-middle">
+                            00000001
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-1">
+                        <div class="expedientes-operador valign-text-middle">
+                            Operador
+                        </div>
+                        <div class="expedientes-name-profile valign-text-middle">
+                            Andrés Toro
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-2">
+                        <div class="expedientes-fecha valign-text-middle">
+                            Fecha
+                        </div>
+                        <div class="expedientes-date valign-text-middle">
+                            13/10/2022
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-3">
+                        <div class="expedientes-hora valign-text-middle">
+                            Hora
+                        </div>
+                        <div class="expedientes-text valign-text-middle">
+                            22:34
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-4">
+                        <div class="expedientes-estado valign-text-middle">
+                            Estado
+                        </div>
+                        <div class="accepted">
+                            <div class="icon">
+                                <div class="vector-container">
+                                    <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg"/>
+                                </div>
+                            </div>
+                            <span class="material-icons">
+                                check_circle_outline
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="expediente-file" data-open="expedientes-modalScreen" @click="modalVisible"> <!-- TODO: File --accepted  -->
+                <div class="window-expediente-container">
+                    <div class="window-expediente-shadow"></div>
+                    <div class="window-expediente-shadow-accepted"></div>
+                    <div class="window-expediente"></div>
+                </div>
+                <div class="expedientes-info gothica1-normal-black-21px">
+                    <div class="expedientes-flex-row">
+                        <div class="expedientes-expediente valign-text-middle">
+                            Expediente
+                        </div>
+                        <div class="expedientes-number valign-text-middle">
+                            00000001
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-1">
+                        <div class="expedientes-operador valign-text-middle">
+                            Operador
+                        </div>
+                        <div class="expedientes-name-profile valign-text-middle">
+                            Andrés Toro
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-2">
+                        <div class="expedientes-fecha valign-text-middle">
+                            Fecha
+                        </div>
+                        <div class="expedientes-date valign-text-middle">
+                            13/10/2022
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-3">
+                        <div class="expedientes-hora valign-text-middle">
+                            Hora
+                        </div>
+                        <div class="expedientes-text valign-text-middle">
+                            22:34
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-4">
+                        <div class="expedientes-estado valign-text-middle">
+                            Estado
+                        </div>
+                        <div class="accepted">
+                            <div class="icon">
+                                <div class="vector-container">
+                                    <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg"/>
+                                </div>
+                            </div>
+                            <span class="material-icons">
+                                check_circle_outline
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="expediente-file" data-open="expedientes-modalScreen" @click="modalVisible"> <!-- TODO: File --accepted  -->
+                <div class="window-expediente-container">
+                    <div class="window-expediente-shadow"></div>
+                    <div class="window-expediente-shadow-accepted"></div>
+                    <div class="window-expediente"></div>
+                </div>
+                <div class="expedientes-info gothica1-normal-black-21px">
+                    <div class="expedientes-flex-row">
+                        <div class="expedientes-expediente valign-text-middle">
+                            Expediente
+                        </div>
+                        <div class="expedientes-number valign-text-middle">
+                            00000001
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-1">
+                        <div class="expedientes-operador valign-text-middle">
+                            Operador
+                        </div>
+                        <div class="expedientes-name-profile valign-text-middle">
+                            Andrés Toro
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-2">
+                        <div class="expedientes-fecha valign-text-middle">
+                            Fecha
+                        </div>
+                        <div class="expedientes-date valign-text-middle">
+                            13/10/2022
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-3">
+                        <div class="expedientes-hora valign-text-middle">
+                            Hora
+                        </div>
+                        <div class="expedientes-text valign-text-middle">
+                            22:34
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-4">
+                        <div class="expedientes-estado valign-text-middle">
+                            Estado
+                        </div>
+                        <div class="accepted">
+                            <div class="icon">
+                                <div class="vector-container">
+                                    <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg"/>
+                                </div>
+                            </div>
+                            <span class="material-icons">
+                                check_circle_outline
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="expediente-file" data-open="expedientes-modalScreen" @click="modalVisible"> <!-- TODO: File --accepted  -->
+                <div class="window-expediente-container">
+                    <div class="window-expediente-shadow"></div>
+                    <div class="window-expediente-shadow-accepted"></div>
+                    <div class="window-expediente"></div>
+                </div>
+                <div class="expedientes-info gothica1-normal-black-21px">
+                    <div class="expedientes-flex-row">
+                        <div class="expedientes-expediente valign-text-middle">
+                            Expediente
+                        </div>
+                        <div class="expedientes-number valign-text-middle">
+                            00000001
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-1">
+                        <div class="expedientes-operador valign-text-middle">
+                            Operador
+                        </div>
+                        <div class="expedientes-name-profile valign-text-middle">
+                            Andrés Toro
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-2">
+                        <div class="expedientes-fecha valign-text-middle">
+                            Fecha
+                        </div>
+                        <div class="expedientes-date valign-text-middle">
+                            13/10/2022
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-3">
+                        <div class="expedientes-hora valign-text-middle">
+                            Hora
+                        </div>
+                        <div class="expedientes-text valign-text-middle">
+                            22:34
+                        </div>
+                    </div>
+                    <div class="expedientes-flex-row-4">
+                        <div class="expedientes-estado valign-text-middle">
+                            Estado
+                        </div>
+                        <div class="accepted">
+                            <div class="icon">
+                                <div class="vector-container">
+                                    <img class="vector" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/624ac280c692872ebb3335be/img/vector-4@2x.svg"/>
+                                </div>
+                            </div>
+                            <span class="material-icons">
+                                check_circle_outline
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="expedientes-modal" id="expedientes-modalScreen"> <!-- TODO: Modal -->
                 <div class="expedientes-modal-window">
                     <header class="expedientes-modal-header">
+                        <div class="expediente-modal-title valign-text-middle valign-text-middle gothica1-normal-black-28px">
+                                Cartas de llamada
+                        </div>
                         <div class="expedientes-x" id="close-modal" data-close="expedientes-modalScreen" @click="modalInvisible">
                             <span class="material-icons" id="expedientes-x">
                                 close
                             </span>
                         </div>
                     </header>
-                    <div class="modal-information gothica1-normal-black-21px">
-                        <!-- <div class="mdc-card">
-                            <div class="mdc-card__primary-action">
-                                <div class="mdc-card__media mdc-card__media--square">
-                                    <div class="mdc-card__media-content">Title</div>
+                    <!-- <div class="modal-information gothica1-normal-black-21px"> -->
+                    <div class="expediente-modal-carta-container">
+                        <div class="expediente-modal-carta-carta-llamada mdc-card">
+                            <div class="expediente-modal-carta-carta-llamada-content">
+                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
+                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
                                 </div>
-                                <div class="mdc-card__ripple"></div>
-                            </div>
-                            <div class="mdc-card__actions">
-                                <div class="mdc-card__action-buttons">
-                                    <button class="mdc-button mdc-card__action mdc-card__action--button">
-                                        <div class="mdc-button__ripple"></div>
-                                        <span class="mdc-button__label">Action 1</span>
-                                    </button>
-                                    <button class="mdc-button mdc-card__action mdc-card__action--button">
-                                        <div class="mdc-button__ripple"></div>
-                                        <span class="mdc-button__label">Action 2</span>
-                                    </button>
+                                <div class="expediente-modal-carta-carta-llamada-title">
+                                    <div class="class-1">
+                                        Titulo
+                                    </div>
+                                    <!-- <div class="gothica1-normal-black-21px"> -->
+                                    <div class="class-2">
+                                        Titulo secundario
+                                    </div>
                                 </div>
-                                <div class="mdc-card__action-icons">
-                                    <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
-                                    <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">more_vert</button>
+                                <div class="expediente-modal-carta-carta-llamada-text">
+                                    <div class="class-3">
+                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
+                                    </div>
                                 </div>
                             </div>
-                        </div> -->
-                        <!-- <div class="modal-flex-row"> FIXME: Expediente -->
-                        <div class="expediente-modal valign-text-middle">
-                                Cartas de llamada
                         </div>
-                        <!-- </div> -->
-                        <div class="modal-flex-row-1"> <!-- FIXME: Codigo de la llamada -->
+                        <div class="expediente-modal-carta-carta-llamada mdc-card">
+                            <div class="expediente-modal-carta-carta-llamada-content">
+                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
+                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
+                                </div>
+                                <div class="expediente-modal-carta-carta-llamada-title">
+                                    <div class="class-1">
+                                        Titulo
+                                    </div>
+                                    <!-- <div class="gothica1-normal-black-21px"> -->
+                                    <div class="class-2">
+                                        Titulo secundario
+                                    </div>
+                                </div>
+                                <div class="expediente-modal-carta-carta-llamada-text">
+                                    <div class="class-3">
+                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expediente-modal-carta-carta-llamada mdc-card">
+                            <div class="expediente-modal-carta-carta-llamada-content">
+                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
+                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
+                                </div>
+                                <div class="expediente-modal-carta-carta-llamada-title">
+                                    <div class="class-1">
+                                        Titulo
+                                    </div>
+                                    <!-- <div class="gothica1-normal-black-21px"> -->
+                                    <div class="class-2">
+                                        Titulo secundario
+                                    </div>
+                                </div>
+                                <div class="expediente-modal-carta-carta-llamada-text">
+                                    <div class="class-3">
+                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expediente-modal-carta-carta-llamada mdc-card">
+                            <div class="expediente-modal-carta-carta-llamada-content">
+                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
+                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
+                                </div>
+                                <div class="expediente-modal-carta-carta-llamada-title">
+                                    <div class="class-1">
+                                        Titulo
+                                    </div>
+                                    <!-- <div class="gothica1-normal-black-21px"> -->
+                                    <div class="class-2">
+                                        Titulo secundario
+                                    </div>
+                                </div>
+                                <div class="expediente-modal-carta-carta-llamada-text">
+                                    <div class="class-3">
+                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expediente-modal-carta-carta-llamada mdc-card">
+                            <div class="expediente-modal-carta-carta-llamada-content">
+                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
+                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
+                                </div>
+                                <div class="expediente-modal-carta-carta-llamada-title">
+                                    <div class="class-1">
+                                        Titulo
+                                    </div>
+                                    <!-- <div class="gothica1-normal-black-21px"> -->
+                                    <div class="class-2">
+                                        Titulo secundario
+                                    </div>
+                                </div>
+                                <div class="expediente-modal-carta-carta-llamada-text">
+                                    <div class="class-3">
+                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expediente-modal-carta-carta-llamada mdc-card">
+                            <div class="expediente-modal-carta-carta-llamada-content">
+                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
+                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
+                                </div>
+                                <div class="expediente-modal-carta-carta-llamada-title">
+                                    <div class="class-1">
+                                        Titulo
+                                    </div>
+                                    <!-- <div class="gothica1-normal-black-21px"> -->
+                                    <div class="class-2">
+                                        Titulo secundario
+                                    </div>
+                                </div>
+                                <div class="expediente-modal-carta-carta-llamada-text">
+                                    <div class="class-3">
+                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="modal-flex-row-1">
                             <div class="codigo-modal">
                                 Codigo de la llamada:
                             </div>
@@ -331,7 +665,7 @@
                                 00000001
                             </div>
                         </div>
-                        <div class="modal-flex-row-2"> <!-- FIXME: Provincia -->
+                        <div class="modal-flex-row-2">
                             <div class="provincia-modal valign-text-middle">
                                 Provincia:
                             </div>
@@ -339,7 +673,7 @@
                                 Lleida
                             </div>
                         </div>
-                        <div class="modal-flex-row-3"> <!-- FIXME: Municipio -->
+                        <div class="modal-flex-row-3">
                             <div class="municipio-modal valign-text-middle">
                                 Municipio
                             </div>
@@ -347,7 +681,7 @@
                                 Agramunt
                             </div>
                         </div>
-                        <div class="modal-flex-row-4"> <!-- FIXME: Fuera de Catalunya -->
+                        <div class="modal-flex-row-4">
                             <div class="fuera-Catalunya-modal valign-text-middle">
                                 Fuera de Catalunya:
                             </div>
@@ -355,7 +689,7 @@
                                 No
                             </div>
                         </div>
-                        <div class="modal-flex-row-5"> <!-- FIXME: Incidente -->
+                        <div class="modal-flex-row-5">
                             <div class="incidente-modal valign-text-middle">
                                 Incidente:
                             </div>
@@ -363,7 +697,7 @@
                                 Derrumbamiento de un edificio
                             </div>
                         </div>
-                        <div class="modal-flex-row-6"> <!-- FIXME: Direccion -->
+                        <div class="modal-flex-row-6">
                             <div class="direccion-modal valign-text-middle">
                                 Direccion:
                             </div>
@@ -371,7 +705,7 @@
                                 SQY
                             </div>
                         </div>
-                        <div class="modal-flex-row-7"> <!-- FIXME: Duracion de la llamada -->
+                        <div class="modal-flex-row-7">
                             <div class="duracion-modal valign-text-middle">
                                 Duracion de la llamada:
                             </div>
@@ -379,7 +713,7 @@
                                 00:04:31
                             </div>
                         </div>
-                        <div class="modal-flex-col"> <!-- FIXME: Nota comun -->
+                        <div class="modal-flex-col">
                             <div class="modal-flex-row-8">
                                 <div class="notaComun-modal valign-text-middle">
                                     Nota comun:
@@ -390,8 +724,8 @@
                                     Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -445,16 +779,50 @@
 <style>
     .expedientes-title {
     display: flex;
-    align-items: flex-start;
-    height: 16px;
-    width: 158px;
+    align-items: center;
+    gap: 970px;
     margin-left: 100px;
     margin-top: 50px;
-    letter-spacing: 0.15px;
+    /* letter-spacing: 0.15px;
     line-height: 16px;
-    /* top: 222px; */
+    top: 222px;
     white-space: nowrap;
-    z-index: 4;
+    z-index: 4; */
+    }
+
+    .expedientes-motor-busqueda {
+    display: flex;
+    flex-direction: row;
+    width: 480px;
+    height: 36px;
+    background: transparent;
+    border: 1.27273px solid #DFE1E5;
+    box-sizing: border-box;
+    border-radius: 30.5455px;
+    transition: 0.2s ease-in-out;
+    }
+
+    .expedientes-icon-search-motor-busqueda {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.400);
+    cursor: default;
+    }
+
+    .expedientes-motor-busqueda-text {
+    display: flex;
+    width: 410px;
+    height: 34px;
+    border: 2px;
+    font-size: 18px;
+    outline: none;
+    }
+
+    .expedientes-motor-busqueda:hover {
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
     }
     /* Modal: */
     /* Modal: */
@@ -481,28 +849,37 @@
 
     .expedientes-modal-window {
     width: 1104px;
-    height: 526px;
+    height: 900px;
     border-radius: 32px;
     background: white;
     cursor: default;
     z-index: 99;
     }
 
+    .expedientes-modal-header {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    gap: 750px;
+    }
+
+    .expediente-modal-title {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    white-space: nowrap;
+    font-size: 28px;
+    margin-left: 40px
+    }
+
     #close-modal {
+    display: block;
     cursor: pointer;
     background: transparent;
     border: none;
     outline: none;
     font-size: inherit;
     color: black;
-    margin-left: 1040px;
-    margin-top: 18px;
-    }
-
-    .expedientes-modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     }
 
     .expedientes-x
@@ -523,16 +900,73 @@
     font-size: 32px;
     }
 
-    .expediente-modal {
-    height: 16px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    white-space: nowrap;
-    font-size: 28px;
-    margin-left: 40px
+    .expediente-modal-carta-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    row-gap: 50px;
+    column-gap: 115px;
+    margin-top: 50px;
+    max-height: 745px;
+    overflow-y: auto;
     }
 
-    .modal-flex-row-1 {
+    .expediente-modal-carta-carta-llamada {
+    width: 344px;
+    height: 335px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    }
+
+    .expediente-modal-carta-carta-llamada:hover {
+    transform: scale(1.02);
+    }
+
+    .expediente-modal-carta-carta-llamada-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    }
+
+    .class-1 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    letter-spacing: .0125em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    }
+
+    .class-2 {
+    font-family: Roboto, sans-serif;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: .0178571429em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    opacity: .6;
+    }
+
+    .expediente-modal-carta-carta-llamada-text {
+    padding: 18px 16px 16px 0px;
+    }
+
+    .class-3 {
+    font-family: Roboto, sans-serif;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: .0178571429em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    opacity: .6;
+    }
+
+    /* .modal-flex-row-1 {
     height: 16px;
     width: 411px;
     letter-spacing: 1.25px;
@@ -607,7 +1041,7 @@
     gap: 4px;
     margin-left: 40px;
     margin-top: 53px;
-    }
+    } */
     /* Modal: */
     /* Modal: */
     /* Modal: */
