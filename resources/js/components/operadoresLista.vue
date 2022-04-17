@@ -2,6 +2,14 @@
     <div class="operadores-lista-main-container">
         <h1 class="operadores-lista-title gothica1-normal-black-28px">
             Gestionar usuarios
+            <div class="motor-busqueda">
+            <span class="icon-search-motor-busqueda material-icons-round-">
+                <span class="material-icons-round">
+                    person_search
+                </span>
+            </span>
+            <input type="text" class="motor-busqueda-text" placeholder="Escribe el nombre del usuario...">
+        </div>
         </h1>
         <div class="operadores-lista-container">
             <div class="operadores-lista-marco"> <!-- FIXME: Marco -->
@@ -529,7 +537,10 @@
         <div class="operadores-lista-modal" id="operadores-lista-modalScreen"> <!-- TODO: Modal -->
             <div class="operadores-lista-modal-window">
                 <header class="operadores-lista-modal-header">
-                    <div class="operadores-lista-x" id="close-modal" data-close="operadores-lista-modalScreen" @click="modalInvisible">
+                    <div class="operadores-lista-modal-crear-usuario-title valign-text-middle gothica1-normal-black-28px"> <!-- FIXME: Editar perfil -->
+                            Crear usuario
+                    </div>
+                    <div class="operadores-lista-x" id="operadores-lista-close-modal" data-close="operadores-lista-modalScreen" @click="modalInvisible">
                         <span class="material-icons" id="operadores-lista-x" @click="actionToggle()">
                             close
                         </span>
@@ -537,9 +548,6 @@
                 </header>
                 <div class="operadores-lista-modal-information gothica1-normal-black-21px">
                     <div class="operadores-lista-modal-crear-usuario">
-                        <div class="operadores-lista-modal-crear-usuario-title valign-text-middle gothica1-normal-black-28px"> <!-- FIXME: Editar perfil -->
-                            Crear usuario
-                        </div>
                         <div class="operadores-lista-modal-crear-usuario-container">
                             <div class="operadores-lista-modal-crear-usuario-datos-personales valign-text-middle gothica1-normal-black-21px"> <!-- FIXME: Datos personales -->
                             Datos personales
@@ -610,12 +618,6 @@
                 </div>
             </div>
         </div>
-        <div class="motor-busqueda">
-            <span class="icon-search-motor-busqueda material-icons-round">
-                search
-            </span>
-            <input type="text" class="motor-busqueda-text">
-        </div>
         <!-- <div class="mdc-dialog">
             <div class="mdc-dialog__container">
                 <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
@@ -679,12 +681,48 @@
     .operadores-lista-main-container {
     width: 1920px;
     }
+
     .operadores-lista-title {
     display: flex;
     align-items: center;
+    gap: 970px;
     margin-left: 100px;
     margin-top: 50px;
     margin-bottom: 25px;
+    }
+
+    .motor-busqueda {
+    display: flex;
+    flex-direction: row;
+    width: 480px;
+    height: 36px;
+    background: transparent;
+    border: 1.27273px solid #DFE1E5;
+    box-sizing: border-box;
+    border-radius: 30.5455px;
+    transition: 0.2s ease-in-out;
+    }
+
+    .icon-search-motor-busqueda {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.400);
+    }
+
+    .motor-busqueda-text {
+    display: flex;
+    width: 410px;
+    height: 34px;
+    border: 2px;
+    font-size: 18px;
+    outline: none;
+    }
+
+    .motor-busqueda:hover {
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
     }
 
     .operadores-lista-container {
@@ -813,7 +851,7 @@
     .action.active span {
     transform: rotate(135deg);
     }
-    /* Modal: */
+    /* FIXME: Modal: */
     /* Modal: */
     /* Modal: */
     /* Modal: */
@@ -838,22 +876,11 @@
 
     .operadores-lista-modal-window {
     width: 850px;
-    height: 434px;
+    height: 394px;
     border-radius: 32px;
     background: white;
     cursor: default;
     z-index: 99;
-    }
-
-    #close-modal {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: inherit;
-    color: black;
-    margin-left: 786px;
-    margin-top: 18px;
     }
 
     .operadores-lista-modal-header {
@@ -861,6 +888,16 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-top: 10px;
+    }
+
+    .operadores-lista-modal-crear-usuario-title {
+    height: 16px;
+    margin-left: 50px;
+    margin-top: 25px;
+    letter-spacing: 0.15px;
+    line-height: 16px;
+    white-space: nowrap;
     }
 
     .operadores-lista-x
@@ -869,6 +906,17 @@
     background-color: transparent;
     display: flex;
     font-size: 32px;
+    }
+
+    #operadores-lista-close-modal {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    color: black;
+    margin-right: 20px;
+    margin-top: 18px;
     }
 
     .operadores-lista-modal.is-visible {
@@ -885,19 +933,8 @@
     display: flex;
     align-items: flex-start;
     background-color: transparent;
-    /* width: 1920px; */
-    /* height: 882px; */
     flex-direction: column;
     flex-wrap: wrap;
-    }
-
-    .operadores-lista-modal-crear-usuario-title {
-    height: 16px;
-    margin-left: 50px;
-    margin-top: 25px;
-    letter-spacing: 0.15px;
-    line-height: 16px;
-    white-space: nowrap;
     }
 
     /* FIXME: Datos personales */
@@ -955,55 +992,4 @@
     font-family: var(--font-family-gothic_a1);
     text-transform: capitalize;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .motor-busqueda {
-    display: flex;
-    flex-direction: row;
-    width: 744px;
-    height: 56px;
-    background: transparent;
-    border: 1.27273px solid #DFE1E5;
-    box-sizing: border-box;
-    border-radius: 30.5455px;
-    }
-
-    .icon-search-motor-busqueda {
-    display: flex;
-    align-items: center;
-    margin-left: 16px;
-    margin-right: 16px;
-    font-size: 2em;
-    color: rgba(0, 0, 0, 0.400);
-    }
-
-    .motor-busqueda-text {
-    width: 100%;
-    border: 0;
-    size: 2em;
-    }
-
-
-
-
-
 </style>

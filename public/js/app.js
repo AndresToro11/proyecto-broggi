@@ -6686,6 +6686,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -20422,7 +20424,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.operadores-lista-main-container {\nwidth: 1920px;\n}\n.operadores-lista-title {\ndisplay: flex;\nalign-items: center;\nmargin-left: 100px;\nmargin-top: 50px;\nmargin-bottom: 25px;\n}\n.operadores-lista-container {\ndisplay: flex;\nflex-direction: column;\nmargin-left: 132px; /* Esto centra la tabla */\n}\n.operadores-lista-marco {\ndisplay: flex;\nalign-items: flex-end;\nwidth: 1656px;\nheight: 50px;\nbackground-color: rgb(248, 248, 248);\nborder-radius: 32px 32px 0px 0px;\n}\n.operadores-lista-row {\ndisplay: flex;\nalign-items: center;\n}\n.operadores-lista-foto-perfil-margen {\nwidth: 40px;\nheight: 40px;\nmargin-left: 16px;\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: transparent;\n}\n.operadores-lista-list-scrolling {\nwidth: 1656px;\nheight: 580px;\noverflow-y: auto;\n}\n.operadores-lista-item {\nheight: 72px;\n}\n.operadores-lista-foto-perfil {\nwidth: 40px;\nheight: 40px;\n/* margin-left: 16px; */\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: black;\n}\n.operadores-lista-nombre {\nwidth: 200px;\nmargin-right: 550px;\n}\n.operadores-lista-info {\ndisplay: flex;\nflex-direction: row;\nalign-items: center;\nflex-wrap: wrap;\ngap: 149px;\n}\n.operadores-lista-email {\nwidth: 200px;\n}\n.operadores-lista-user {\nwidth: 105px;\n}\n.operadores-lista-status {\nwidth: 105px;\n}\n.operadores-lista-delete {\nwidth: 42px;\nheight: 42px;\nmargin-left: 50px;\nfont-size: 2em;\nposition: relative;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\ntransition: 0.3s ease-in-out;\ncursor: pointer;\nborder-radius: 32px;\n}\n.operadores-lista-delete:hover {\nbackground-color: transparent;\nborder: 0.1px solid red;\ncolor: red;\n}\n.operadores-lista-boton-space {\ndisplay: flex;\nflex-direction: row-reverse;\nmargin-top: 25px;\nmargin-right: 45px;\n}\n.action {\nposition: fixed;\nbottom: 50px;\nwidth: 60px;\nheight: 60px;\nbackground-color: var(--mdc-theme-primary);\nborder-radius: 50%;\nbox-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);\ncursor: pointer;\n}\n.action span {\nposition: relative;\nwidth: 100%;\nheight: 100%;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\nfont-size: 2em;\ntransition: 0.3s ease-in-out;\ncolor: white;\n}\n.action.active span {\ntransform: rotate(135deg);\n}\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.operadores-lista-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\nz-index: 99;\n}\n.operadores-lista-modal-window {\nwidth: 850px;\nheight: 434px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n#close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-left: 786px;\nmargin-top: 18px;\n}\n.operadores-lista-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\nwidth: 100%;\n}\n.operadores-lista-x\n#operadores-lista-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nfont-size: 32px;\n}\n.operadores-lista-modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.operadores-lista-modal-crear-usuario {\ndisplay: flex;\nalign-items: flex-start;\nbackground-color: transparent;\n/* width: 1920px; */\n/* height: 882px; */\nflex-direction: column;\nflex-wrap: wrap;\n}\n.operadores-lista-modal-crear-usuario-title {\nheight: 16px;\nmargin-left: 50px;\nmargin-top: 25px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n\n/* FIXME: Datos personales */\n.operadores-lista-modal-crear-usuario-container {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 750px;\nheight: 179px;\nmargin-left: 52px;\nmargin-top: 36px;\nflex-direction: column;\n}\n.operadores-lista-modal-crear-usuario-datos-personales {\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operadores-lista-modal-crear-usuario-flex-row {\ndisplay: flex;\nalign-items: flex-start;\nmargin-top: 18px;\n}\n.operadores-lista-modal-crear-usuario-flex-row-1 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 25px;\ngap: 50px;\n}\n\n/* FIXME: Botones */\n.operadores-lista-modal-crear-usuario-flex-row-4 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 50px;\nmargin-left: 220px;\ngap: 50px;\n}\n#aceptarButtonOperadoresLista {\nborder-radius: 32px;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n#cancelarButtonOperadoresLista {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n.motor-busqueda {\ndisplay: flex;\nflex-direction: row;\nwidth: 744px;\nheight: 56px;\nbackground: transparent;\nborder: 1.27273px solid #DFE1E5;\nbox-sizing: border-box;\nborder-radius: 30.5455px;\n}\n.icon-search-motor-busqueda {\ndisplay: flex;\nalign-items: center;\nmargin-left: 16px;\nmargin-right: 16px;\nfont-size: 2em;\ncolor: rgba(0, 0, 0, 0.400);\n}\n.motor-busqueda-text {\nwidth: 100%;\nborder: 0;\nsize: 2em;\n}\n\n\n\n\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.operadores-lista-main-container {\nwidth: 1920px;\n}\n.operadores-lista-title {\ndisplay: flex;\nalign-items: center;\ngap: 970px;\nmargin-left: 100px;\nmargin-top: 50px;\nmargin-bottom: 25px;\n}\n.motor-busqueda {\ndisplay: flex;\nflex-direction: row;\nwidth: 480px;\nheight: 36px;\nbackground: transparent;\nborder: 1.27273px solid #DFE1E5;\nbox-sizing: border-box;\nborder-radius: 30.5455px;\ntransition: 0.2s ease-in-out;\n}\n.icon-search-motor-busqueda {\ndisplay: flex;\nalign-items: center;\nmargin-left: 16px;\nmargin-right: 16px;\nfont-size: 2em;\ncolor: rgba(0, 0, 0, 0.400);\n}\n.motor-busqueda-text {\ndisplay: flex;\nwidth: 410px;\nheight: 34px;\nborder: 2px;\nfont-size: 18px;\noutline: none;\n}\n.motor-busqueda:hover {\nbox-shadow: 0 1px 6px rgb(32 33 36 / 28%);\n}\n.operadores-lista-container {\ndisplay: flex;\nflex-direction: column;\nmargin-left: 132px; /* Esto centra la tabla */\n}\n.operadores-lista-marco {\ndisplay: flex;\nalign-items: flex-end;\nwidth: 1656px;\nheight: 50px;\nbackground-color: rgb(248, 248, 248);\nborder-radius: 32px 32px 0px 0px;\n}\n.operadores-lista-row {\ndisplay: flex;\nalign-items: center;\n}\n.operadores-lista-foto-perfil-margen {\nwidth: 40px;\nheight: 40px;\nmargin-left: 16px;\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: transparent;\n}\n.operadores-lista-list-scrolling {\nwidth: 1656px;\nheight: 580px;\noverflow-y: auto;\n}\n.operadores-lista-item {\nheight: 72px;\n}\n.operadores-lista-foto-perfil {\nwidth: 40px;\nheight: 40px;\n/* margin-left: 16px; */\nmargin-right: 16px;\nborder-radius: 32px;\nbackground-color: black;\n}\n.operadores-lista-nombre {\nwidth: 200px;\nmargin-right: 550px;\n}\n.operadores-lista-info {\ndisplay: flex;\nflex-direction: row;\nalign-items: center;\nflex-wrap: wrap;\ngap: 149px;\n}\n.operadores-lista-email {\nwidth: 200px;\n}\n.operadores-lista-user {\nwidth: 105px;\n}\n.operadores-lista-status {\nwidth: 105px;\n}\n.operadores-lista-delete {\nwidth: 42px;\nheight: 42px;\nmargin-left: 50px;\nfont-size: 2em;\nposition: relative;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\ntransition: 0.3s ease-in-out;\ncursor: pointer;\nborder-radius: 32px;\n}\n.operadores-lista-delete:hover {\nbackground-color: transparent;\nborder: 0.1px solid red;\ncolor: red;\n}\n.operadores-lista-boton-space {\ndisplay: flex;\nflex-direction: row-reverse;\nmargin-top: 25px;\nmargin-right: 45px;\n}\n.action {\nposition: fixed;\nbottom: 50px;\nwidth: 60px;\nheight: 60px;\nbackground-color: var(--mdc-theme-primary);\nborder-radius: 50%;\nbox-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);\ncursor: pointer;\n}\n.action span {\nposition: relative;\nwidth: 100%;\nheight: 100%;\ndisplay: flex;\njustify-content: center;\nalign-items: center;\nfont-size: 2em;\ntransition: 0.3s ease-in-out;\ncolor: white;\n}\n.action.active span {\ntransform: rotate(135deg);\n}\n/* FIXME: Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n/* Modal: */\n.operadores-lista-modal{\nposition: fixed;\ntop: 0;\nleft: 0;\nright: 0;\nbottom: 0;\ndisplay: flex;\nalign-items: center;\njustify-content: center;\npadding: 1rem;\nbackground: rgba(0, 0, 0, 0.800);\ncursor: pointer;\nvisibility: hidden;\nopacity: 0;\ntransition: all 0.35s ease-in;\nz-index: 99;\n}\n.operadores-lista-modal-window {\nwidth: 850px;\nheight: 394px;\nborder-radius: 32px;\nbackground: white;\ncursor: default;\nz-index: 99;\n}\n.operadores-lista-modal-header {\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\nwidth: 100%;\nmargin-top: 10px;\n}\n.operadores-lista-modal-crear-usuario-title {\nheight: 16px;\nmargin-left: 50px;\nmargin-top: 25px;\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operadores-lista-x\n#operadores-lista-x {\nalign-items: flex-start;\nbackground-color: transparent;\ndisplay: flex;\nfont-size: 32px;\n}\n#operadores-lista-close-modal {\ncursor: pointer;\nbackground: transparent;\nborder: none;\noutline: none;\nfont-size: inherit;\ncolor: black;\nmargin-right: 20px;\nmargin-top: 18px;\n}\n.operadores-lista-modal.is-visible {\nvisibility: visible;\nopacity: 1;\n}\n.x span {\ncolor: black;\nfont-size: 32px;\n}\n.operadores-lista-modal-crear-usuario {\ndisplay: flex;\nalign-items: flex-start;\nbackground-color: transparent;\nflex-direction: column;\nflex-wrap: wrap;\n}\n\n/* FIXME: Datos personales */\n.operadores-lista-modal-crear-usuario-container {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 750px;\nheight: 179px;\nmargin-left: 52px;\nmargin-top: 36px;\nflex-direction: column;\n}\n.operadores-lista-modal-crear-usuario-datos-personales {\nletter-spacing: 0.15px;\nline-height: 16px;\nwhite-space: nowrap;\n}\n.operadores-lista-modal-crear-usuario-flex-row {\ndisplay: flex;\nalign-items: flex-start;\nmargin-top: 18px;\n}\n.operadores-lista-modal-crear-usuario-flex-row-1 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 25px;\ngap: 50px;\n}\n\n/* FIXME: Botones */\n.operadores-lista-modal-crear-usuario-flex-row-4 {\ndisplay: flex;\nalign-items: flex-start;\nwidth: 350px;\nheight: 60px;\nmargin-top: 50px;\nmargin-left: 220px;\ngap: 50px;\n}\n#aceptarButtonOperadoresLista {\nborder-radius: 32px;\nfont-family: var(--font-family-gothic_a1);\ntext-transform: none;\n}\n#cancelarButtonOperadoresLista {\nborder-radius: 32px;\nbackground-color: rgb(207, 0, 0);\nfont-family: var(--font-family-gothic_a1);\ntext-transform: capitalize;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31729,13 +31731,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "operadores-lista-main-container" }, [
-    _c(
-      "h1",
-      { staticClass: "operadores-lista-title gothica1-normal-black-28px" },
-      [_vm._v("\n        Gestionar usuarios\n    ")]
-    ),
-    _vm._v(" "),
     _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
     _vm._v(" "),
     _c(
       "div",
@@ -31778,9 +31776,22 @@ var render = function () {
             _c(
               "div",
               {
+                staticClass:
+                  "operadores-lista-modal-crear-usuario-title valign-text-middle gothica1-normal-black-28px",
+              },
+              [
+                _vm._v(
+                  "\n                        Crear usuario\n                "
+                ),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
                 staticClass: "operadores-lista-x",
                 attrs: {
-                  id: "close-modal",
+                  id: "operadores-lista-close-modal",
                   "data-close": "operadores-lista-modalScreen",
                 },
                 on: { click: _vm.modalInvisible },
@@ -31822,19 +31833,6 @@ var render = function () {
                     "div",
                     {
                       staticClass:
-                        "operadores-lista-modal-crear-usuario-title valign-text-middle gothica1-normal-black-28px",
-                    },
-                    [
-                      _vm._v(
-                        "\n                        Crear usuario\n                    "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
                         "operadores-lista-modal-crear-usuario-container",
                     },
                     [
@@ -31851,9 +31849,9 @@ var render = function () {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1),
-                      _vm._v(" "),
                       _vm._m(2),
+                      _vm._v(" "),
+                      _vm._m(3),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -31862,7 +31860,7 @@ var render = function () {
                             "operadores-lista-modal-crear-usuario-flex-row-4",
                         },
                         [
-                          _vm._m(3),
+                          _vm._m(4),
                           _vm._v(" "),
                           _c(
                             "div",
@@ -31916,11 +31914,40 @@ var render = function () {
         ]),
       ]
     ),
-    _vm._v(" "),
-    _vm._m(4),
   ])
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h1",
+      { staticClass: "operadores-lista-title gothica1-normal-black-28px" },
+      [
+        _vm._v("\n        Gestionar usuarios\n        "),
+        _c("div", { staticClass: "motor-busqueda" }, [
+          _c(
+            "span",
+            { staticClass: "icon-search-motor-busqueda material-icons-round-" },
+            [
+              _c("span", { staticClass: "material-icons-round" }, [
+                _vm._v("\n                person_search\n            "),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "motor-busqueda-text",
+            attrs: {
+              type: "text",
+              placeholder: "Escribe el nombre del usuario...",
+            },
+          }),
+        ]),
+      ]
+    )
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -33439,23 +33466,6 @@ var staticRenderFns = [
         ),
       ]
     )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "motor-busqueda" }, [
-      _c(
-        "span",
-        { staticClass: "icon-search-motor-busqueda material-icons-round" },
-        [_vm._v("\n            search\n        ")]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "motor-busqueda-text",
-        attrs: { type: "text" },
-      }),
-    ])
   },
 ]
 render._withStripped = true
