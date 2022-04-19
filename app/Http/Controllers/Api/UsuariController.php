@@ -15,17 +15,17 @@ class UsuariController extends Controller
 
     public function showLogin()
     {
-         /*user = new Usuari();
+        //  $user = new Usuari();
 
-         $user->codi = 'Andrés';
-         $user->mail = 'atoro2021@cepnet.net';
-         $user->nom = 'Andrés';
-         $user->cognoms = 'Toro';
-         $user->contrassenya = \bcrypt('9876');
-         $user->activo = true;
-         $user->perfils_id = 1;
+        //  $user->codi = 'Andrés';
+        //  $user->mail = 'atoro2021@cepnet.net';
+        //  $user->nom = 'Andrés';
+        //  $user->cognoms = 'Toro';
+        //  $user->contrassenya = \bcrypt('9876');
+        //  $user->activo = true;
+        //  $user->perfils_id = 1;
 
-         $user->save();*/
+        //  $user->save();
 
         return view('auth.login');
     }
@@ -37,7 +37,8 @@ class UsuariController extends Controller
 
         $user = Usuari::where('mail', $mail)->first();
 
-        if ($user != null && Hash::check($contrassenya, $user->contrassenya)) {
+        // if ($user != null && Hash::check($contrassenya, $user->contrassenya)) {
+            if ($user != null && $contrassenya === $user->contrassenya) {
             Auth::login($user);
             $response = redirect('/home');
         }

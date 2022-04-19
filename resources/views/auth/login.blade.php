@@ -23,7 +23,7 @@
                         Dirección de correo electrónico
                     </span>
                          {{-- <input type="mail" class="form-control" id="mail" name="mail" autofocus value="{{ old('mail') }}"> --}}
-                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id" id="mail" name="mail" autofocus value="{{ old('mail') }}" />
+                    <input type="mail" class="mdc-text-field__input" aria-labelledby="my-label-id" id="mail" name="mail" autofocus value="{{ old('mail') }}" />
                     <span class="mdc-line-ripple"></span>
                 </label>
             </div>
@@ -88,16 +88,7 @@
         </div>
     </div>-->
 </div>
-<script>
-    export default {
-        mounted() {
-            new mdc.textField.MDCTextField(document.querySelector(".e-mail .mdc-text-field"));
-            new mdc.textField.MDCTextField(document.querySelector(".contrasea .mdc-text-field"));
-            mdc.autoInit();
-            new mdc.ripple.MDCRipple(document.querySelector(".crear-cuenta-boton .mdc-button"));
-        }
-    }
-</script>
+
 
 
 @endsection

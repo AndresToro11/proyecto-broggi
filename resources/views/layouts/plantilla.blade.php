@@ -42,7 +42,7 @@
                             <img class="overlap-group-item-operador" src="https://anima-uploads.s3.amazonaws.com/projects/623709b3985fbcb0a0170895/releases/623c426cb5b83dea2f4dc699/img/square-background@1x.png"/>
 
                             <h1 class="title-operador valign-text-middle gothica1-medium-white-28px">Carta de llamada</h1>
-                            <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Video Interactivo</div>
+                            <div class="video-interactivo-operador valign-text-middle gothica1-medium-white-28px">Tutorial</div>
                              <div class="sergi-prez-jimnez-operador valign-text-middle gothica1-normal-white-18px">
                                  @if (Auth::check())
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" valign-text-middle gothica1-normal-white-18px>
