@@ -530,7 +530,7 @@
                     </header>
                     <!-- <div class="modal-information gothica1-normal-black-21px"> -->
                     <div class="expediente-modal-carta-container">
-                        <div class="expediente-modal-carta-carta-llamada mdc-card">
+                        <div class="expediente-modal-carta-carta-llamada mdc-card" data-open="expedientes-modal-modalScreen" @click="modalVisible">
                             <div class="expediente-modal-carta-carta-llamada-content">
                                 <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
                                     <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
@@ -551,181 +551,47 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="expediente-modal-carta-carta-llamada mdc-card">
-                            <div class="expediente-modal-carta-carta-llamada-content">
-                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
-                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
-                                </div>
-                                <div class="expediente-modal-carta-carta-llamada-title">
-                                    <div class="class-1">
-                                        Titulo
+
+
+
+
+
+
+
+
+
+
+                        <div class="expedientes-modal-modal" id="expedientes-modal-modalScreen"> <!-- TODO: Modal -->
+                            <div class="expedientes-modal-modal-window">
+                                <header class="expedientes-modal-modal-header">
+                                    <div class="expediente-modal-modal-title valign-text-middle valign-text-middle gothica1-normal-black-28px">
+                                        Cartas de llamada
                                     </div>
-                                    <!-- <div class="gothica1-normal-black-21px"> -->
-                                    <div class="class-2">
-                                        Titulo secundario
+                                    <div class="expedientes-modal-x" id="close-modal-modal" data-close="expedientes-modal-modalScreen" @click="modalInvisible">
+                                        <span class="material-icons" id="expedientes-modal-x">
+                                            close
+                                        </span>
                                     </div>
-                                </div>
-                                <div class="expediente-modal-carta-carta-llamada-text">
-                                    <div class="class-3">
-                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="expediente-modal-carta-carta-llamada mdc-card">
-                            <div class="expediente-modal-carta-carta-llamada-content">
-                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
-                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
-                                </div>
-                                <div class="expediente-modal-carta-carta-llamada-title">
-                                    <div class="class-1">
-                                        Titulo
-                                    </div>
-                                    <!-- <div class="gothica1-normal-black-21px"> -->
-                                    <div class="class-2">
-                                        Titulo secundario
-                                    </div>
-                                </div>
-                                <div class="expediente-modal-carta-carta-llamada-text">
-                                    <div class="class-3">
-                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
+                                </header>
+                                <!-- <div class="modal-information gothica1-normal-black-21px"> -->
+                                <div class="expediente-modal-modal-carta-container">
+                                    <div class="expediente-modal-modal-carta-carta-llamada mdc-card">
+                                        <div class="expediente-modal-modal-carta-carta-llamada-content">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="expediente-modal-carta-carta-llamada mdc-card">
-                            <div class="expediente-modal-carta-carta-llamada-content">
-                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
-                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
-                                </div>
-                                <div class="expediente-modal-carta-carta-llamada-title">
-                                    <div class="class-1">
-                                        Titulo
-                                    </div>
-                                    <!-- <div class="gothica1-normal-black-21px"> -->
-                                    <div class="class-2">
-                                        Titulo secundario
-                                    </div>
-                                </div>
-                                <div class="expediente-modal-carta-carta-llamada-text">
-                                    <div class="class-3">
-                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="expediente-modal-carta-carta-llamada mdc-card">
-                            <div class="expediente-modal-carta-carta-llamada-content">
-                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
-                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
-                                </div>
-                                <div class="expediente-modal-carta-carta-llamada-title">
-                                    <div class="class-1">
-                                        Titulo
-                                    </div>
-                                    <!-- <div class="gothica1-normal-black-21px"> -->
-                                    <div class="class-2">
-                                        Titulo secundario
-                                    </div>
-                                </div>
-                                <div class="expediente-modal-carta-carta-llamada-text">
-                                    <div class="class-3">
-                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="expediente-modal-carta-carta-llamada mdc-card">
-                            <div class="expediente-modal-carta-carta-llamada-content">
-                                <div class="expediente-modal-carta-carta-llamada-mapa__media mdc-card__media mdc-card__media--16-9">
-                                    <div class="expediente-modal-carta-carta-llamada-mapa mdc-card__media-content">Mapa</div>
-                                </div>
-                                <div class="expediente-modal-carta-carta-llamada-title">
-                                    <div class="class-1">
-                                        Titulo
-                                    </div>
-                                    <!-- <div class="gothica1-normal-black-21px"> -->
-                                    <div class="class-2">
-                                        Titulo secundario
-                                    </div>
-                                </div>
-                                <div class="expediente-modal-carta-carta-llamada-text">
-                                    <div class="class-3">
-                                        Greyhound divisively hello coldly wonderfully marginally far upon excluding.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+
+
+
+
+
+
+
+
                     </div>
-                    <!-- <div class="modal-flex-row-1">
-                            <div class="codigo-modal">
-                                Codigo de la llamada:
-                            </div>
-                            <div class="info-codigo-modal">
-                                00000001
-                            </div>
-                        </div>
-                        <div class="modal-flex-row-2">
-                            <div class="provincia-modal valign-text-middle">
-                                Provincia:
-                            </div>
-                            <div class="info-provincia-modal valign-text-middle">
-                                Lleida
-                            </div>
-                        </div>
-                        <div class="modal-flex-row-3">
-                            <div class="municipio-modal valign-text-middle">
-                                Municipio
-                            </div>
-                            <div class="info-municipio-modal valign-text-middle">
-                                Agramunt
-                            </div>
-                        </div>
-                        <div class="modal-flex-row-4">
-                            <div class="fuera-Catalunya-modal valign-text-middle">
-                                Fuera de Catalunya:
-                            </div>
-                            <div class="info-fuera-Catalunya-modal valign-text-middle">
-                                No
-                            </div>
-                        </div>
-                        <div class="modal-flex-row-5">
-                            <div class="incidente-modal valign-text-middle">
-                                Incidente:
-                            </div>
-                            <div class="info-incidente-modal valign-text-middle">
-                                Derrumbamiento de un edificio
-                            </div>
-                        </div>
-                        <div class="modal-flex-row-6">
-                            <div class="direccion-modal valign-text-middle">
-                                Direccion:
-                            </div>
-                            <div class="info-direccion-modal valign-text-middle">
-                                SQY
-                            </div>
-                        </div>
-                        <div class="modal-flex-row-7">
-                            <div class="duracion-modal valign-text-middle">
-                                Duracion de la llamada:
-                            </div>
-                            <div class="info-duracion-modal valign-text-middle">
-                                00:04:31
-                            </div>
-                        </div>
-                        <div class="modal-flex-col">
-                            <div class="modal-flex-row-8">
-                                <div class="notaComun-modal valign-text-middle">
-                                    Nota comun:
-                                </div>
-                            </div>
-                            <div class="modal-flex-row-9">
-                                <div class="info-notaComun-modal valign-text-middle">
-                                    Lorem fistrum va usté muy cargadoo papaar papaar hasta luego Lucas. Ahorarr tiene musho peligro a wan sexuarl de la pradera diodenoo torpedo no te digo trigo por no llamarte Rodrigor a wan.
-                                </div>
-                            </div>
-                        </div> -->
-                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -745,6 +611,7 @@
         },
         methods:{
             modalVisible() {
+                console.log("Hola caracola");
                 let openEls = document.querySelector("[data-open]");
                 let modalId = openEls.dataset.open;
                 let isVisible = "is-visible";
@@ -844,7 +711,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.35s ease-in;
-    z-index: 99;
+    z-index: 98;
     }
 
     .expedientes-modal-window {
@@ -853,7 +720,7 @@
     border-radius: 32px;
     background: white;
     cursor: default;
-    z-index: 99;
+    z-index: 98;
     }
 
     .expedientes-modal-header {
@@ -910,7 +777,7 @@
     column-gap: 115px;
     margin-top: 50px;
     max-height: 745px;
-    overflow-y: auto;
+    /* overflow-y: auto; */ /* Poner overflow para hacer scroll dentro del modal */
     }
 
     .expediente-modal-carta-carta-llamada {
@@ -965,83 +832,6 @@
     text-transform: inherit;
     opacity: .6;
     }
-
-    /* .modal-flex-row-1 {
-    height: 16px;
-    width: 411px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-left: 40px;
-    margin-top: 53px;
-    }
-
-    .modal-flex-row-2 {
-    height: 16px;
-    width: 411px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-left: 40px;
-    margin-top: 53px;
-    }
-
-    .modal-flex-row-3 {
-    height: 16px;
-    width: 411px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-left: 40px;
-    margin-top: 53px;
-    }
-
-    .modal-flex-row-4 {
-    height: 16px;
-    width: 411px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-left: 40px;
-    margin-top: 53px;
-    }
-
-    .modal-flex-row-5 {
-    height: 16px;
-    width: 411px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-left: 40px;
-    margin-top: 53px;
-    }
-
-    .modal-flex-row-6 {
-    height: 16px;
-    width: 411px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-left: 40px;
-    margin-top: 53px;
-    }
-
-    .modal-flex-row-7 {
-    height: 16px;
-    width: 411px;
-    letter-spacing: 1.25px;
-    line-height: 16px;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-left: 40px;
-    margin-top: 53px;
-    } */
     /* Modal: */
     /* Modal: */
     /* Modal: */
@@ -1431,4 +1221,201 @@
     top: 11px;
     width: 1px;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .expedientes-modal-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.800);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+    z-index: 99;
+    }
+
+    .expedientes-modal-modal-window {
+    width: 1104px;
+    height: 900px;
+    border-radius: 32px;
+    background: white;
+    cursor: default;
+    z-index: 99;
+    }
+
+    .expedientes-modal-modal-header {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    gap: 750px;
+    }
+
+    .expediente-modal-modal-title {
+    height: 16px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+    white-space: nowrap;
+    font-size: 28px;
+    margin-left: 40px
+    }
+
+    #close-modal-modal {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    color: black;
+    }
+
+    .expedientes-modal-x
+    #expedientes-modal-x {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    font-size: 32px;
+    }
+
+    .expedientes-modal-modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+    }
+
+    .x span {
+    color: black;
+    font-size: 32px;
+    }
+
+    .expediente-modal-modal-carta-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    row-gap: 50px;
+    column-gap: 115px;
+    margin-top: 50px;
+    max-height: 745px;
+    overflow-y: auto;
+    }
+
+    .expediente-modal-modal-carta-carta-llamada {
+    width: 344px;
+    height: 335px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    }
+
+    .expediente-modal-modal-carta-carta-llamada:hover {
+    transform: scale(1.02);
+    }
+
+    .expediente-modal-modal-carta-carta-llamada-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    }
+    /*
+    .class-1 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    letter-spacing: .0125em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    }
+
+    .class-2 {
+    font-family: Roboto, sans-serif;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: .0178571429em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    opacity: .6;
+    }
+
+    .expediente-modal-carta-carta-llamada-text {
+    padding: 18px 16px 16px 0px;
+    }
+
+    .class-3 {
+    font-family: Roboto, sans-serif;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: .0178571429em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    opacity: .6;
+    } */
+
 </style>
