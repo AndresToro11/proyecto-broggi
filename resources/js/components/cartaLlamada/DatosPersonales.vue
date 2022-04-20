@@ -69,7 +69,7 @@ export default {
         },activarFunciones(){
             console.log("activar");
             this.setDataPersonal();
-        }
+        },  
     },
 
     mounted() {
