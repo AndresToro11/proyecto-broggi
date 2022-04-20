@@ -5,6 +5,5 @@
 @section('contenido')
 
     <grafico></grafico>
-    <mapa></mapa>
 
 @endsection
