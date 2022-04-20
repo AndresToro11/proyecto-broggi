@@ -11,10 +11,9 @@ use App\Http\Controllers\Api\UsuariController;
 use App\Http\Controllers\Api\ExpedientController;
 use App\Http\Controllers\Api\MunicipioController;
 use App\Http\Controllers\Api\TiposIncidenteController;
-
 use App\Http\Controllers\Api\TiposLocalizacionController;
 use App\Http\Controllers\Api\DatosPersonalesController;
-
+use App\Http\Controllers\Api\OperadoresController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +30,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('user/index', [UsuariController::class, 'index']);
 Route::apiResource('user', UsuariController::class);
-
 Route::apiResource('municipio', MunicipioController::class);
 Route::apiResource('provincia', ProvinciaController::class);
 Route::apiResource('comarca', ComarcaController::class);
@@ -40,6 +39,7 @@ Route::apiResource('incidente', IncidenteController::class);
 Route::apiResource('tiposIncidente', TiposIncidenteController::class);
 Route::apiResource('tiposLocalitzacion', TiposLocalizacionController::class);
 Route::apiResource('datosPersonales', DatosPersonalesController::class);
+Route::apiResource('operadores', OperadoresController::class);
 Route::apiResource('llamadas', CartaLlamadaController::class);
 Route::apiResource('expediente', ExpedientController::class); //->only(['index', 'provincias']);
 Route::get('expediente/provincias', [ExpedientController::class, 'provincias']);

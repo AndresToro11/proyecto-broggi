@@ -24,6 +24,7 @@
             <a href="{{ url('/home') }}" class="brand-logo">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="{{ url('/llamada') }}">Llamada</a></li>
+                <li><a href="{{ url('/operadores') }}">Operadores</a></li>
                 <li><a href="{{ url('/expedientes') }}">Expedientes</a></li>
                 <li><a href="{{ url('/grafico') }}">Grafico</a></li>
                 <li><a href="">login</a></li>

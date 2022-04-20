@@ -20,8 +20,8 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 //---------------------------------------------- Login -----------------------------------
-
 Vue.component('login', require('./components/login.vue').default);
+
 //-----------------------------------------------Llamada----------------------------------------------------
 Vue.component('datos-administrativos', require('./components/cartaLlamada/DatosAdministrativos.vue').default);
 Vue.component('datos-incidentes', require('./components/cartaLlamada/DatosIncidente.vue').default);
@@ -29,18 +29,18 @@ Vue.component('datos-personales', require('./components/cartaLlamada/DatosPerson
 Vue.component('enviar-datos', require('./components/cartaLlamada/Boton.vue').default);
 
 //------------------------------------------- Expedientes --------------------------------
-
 Vue.component('expedientes', require('./components/expedientes.vue').default);
 
 //--------------------------------------------- Grafico ----------------------------------
-
 Vue.component('grafico', require('./components/grafico.vue').default);
 
 //----------------------------------------------- Home ------------------------------------
-
 Vue.component('user-administrador', require('./components/home/administrador.vue').default);
 Vue.component('user-operador', require('./components/home/operador.vue').default);
 Vue.component('user-supervisor', require('./components/home/supervisor.vue').default);
+
+//--------------------------------------------- Operadores ----------------------------------
+Vue.component('vista-operadores', require('./components/operador/operador.vue').default);
 
 //-----------------------------------------------------------------------------------------
 
