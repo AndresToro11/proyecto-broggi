@@ -30,6 +30,12 @@ Route::get('/llamada', function () {
     return view('llamada');
 });
 
+//------------------------------ Operadores -----------------------------
+
+Route::get('/operadores', function () {
+    return view('operadores');
+});
+
 //-------------------------------- Video ---------------------------
 
 Route::get('/video', function () {

@@ -7,9 +7,16 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Resources\DefaultResource;
 
 class UsuariController extends Controller
 {
+    public function index()
+    {
+        $usuaris = Usuari::all();
+        return DefaultResource::collection($usuaris);
+    }
+
     public function login(Request $request)
     {
         $codi = $request->input('codi');
@@ -20,8 +27,7 @@ class UsuariController extends Controller
         if ($user != null && Hash::check($contrassenya, $user->contrassenya)) {
             Auth::login($user);
             //$response = redirect('/home');
-        }
-        else{
+        } else {
             //$request->session()->flash('error', 'Usuario o contraseña incorrecta');
             //$response = redirect('/login')->withInput();
         }
