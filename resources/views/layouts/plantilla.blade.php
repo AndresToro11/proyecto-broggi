@@ -27,13 +27,12 @@
     <body>
         <nav>
             <div class="nav-wrapper">
-                <a href="{{ url('/home') }}" class="brand-logo">Logo</a>
+                <a href="{{ url('/home') }}" class="brand-logo"><img src="{{ asset('images/logoBroggi.png') }}" alt="Nada" width="200px" height="45px"></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{ url('/expedientes') }}">Expedientes</a></li>
                     <li><a href="{{ url('/grafico') }}">Grafico</a></li>
                     <li><a href="{{ url('/admin') }}">Admin</a></li>
                     <li><a href="{{ url('/mapa') }}">Mapa</a></li>
-                    <li><a href="">login</a></li>
                 </ul>
             </div>
         </nav>
