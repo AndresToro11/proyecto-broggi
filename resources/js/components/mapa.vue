@@ -1,6 +1,5 @@
 <template>
     <div class="container m-4">
-        <button id="sortir" class="btn btn-primary">Salir</button>
         <div id='map'></div>
     </div>
 </template>
@@ -69,7 +68,7 @@
             },
 
             añadirMarker(agencias){
-                
+
                 for(let i = 0; i < agencias.length; i++){
 
                     let me = this;

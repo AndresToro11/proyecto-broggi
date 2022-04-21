@@ -170,8 +170,8 @@
                     }
                 });
                 grafica.canvas.parentNode.style.left = '40%';
-                grafica.canvas.parentNode.style.width = '40%';
-                grafica.canvas.parentNode.style.heigth = '30%';
+                grafica.canvas.parentNode.style.width = '50%';
+                grafica.canvas.parentNode.style.heigth = '40%';
                 this.loading = false;
             },
         },

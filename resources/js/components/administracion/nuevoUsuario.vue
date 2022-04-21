@@ -110,11 +110,11 @@
             verificarContrasena(){
                 if(this.usuario.contrasena != '' && this.contrasenaC != ''){
                     if(this.usuario.contrasena != this.contrasenaC){
-                    console.log("Son diferentes las contraseñas");
+                        alert("Son diferentes las contraseñas");
                     }
 
                     else{
-                    console.log('Contraseña correcta')
+                   alert('Contraseña correcta')
                     }
                 }
             },

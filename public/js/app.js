@@ -6048,9 +6048,9 @@ __webpack_require__.r(__webpack_exports__);
     verificarContrasena: function verificarContrasena() {
       if (this.usuario.contrasena != '' && this.contrasenaC != '') {
         if (this.usuario.contrasena != this.contrasenaC) {
-          console.log("Son diferentes las contraseñas");
+          "Son diferentes las contraseñas";
         } else {
-          console.log('Contraseña correcta');
+          alert('Contraseña correcta');
         }
       }
     }
@@ -7293,8 +7293,8 @@ var grafica;
         }
       });
       grafica.canvas.parentNode.style.left = '40%';
-      grafica.canvas.parentNode.style.width = '40%';
-      grafica.canvas.parentNode.style.heigth = '30%';
+      grafica.canvas.parentNode.style.width = '50%';
+      grafica.canvas.parentNode.style.heigth = '40%';
       this.loading = false;
     }
   },
@@ -7481,7 +7481,6 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-//
 //
 //
 //
@@ -45731,7 +45730,7 @@ var render = function () {
                 _c("div", { staticClass: "card col-2 m-4" }, [
                   _c("div", { staticClass: "card-image" }, [
                     _c("img", {
-                      attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") },
+                      attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") },
                     }),
                     _vm._v(" "),
                     _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
@@ -46218,7 +46217,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
@@ -46517,7 +46516,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
@@ -49555,12 +49554,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container m-4" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-primary", attrs: { id: "sortir" } },
-        [_vm._v("Salir")]
-      ),
-      _vm._v(" "),
       _c("div", { attrs: { id: "map" } }),
     ])
   },
@@ -49590,7 +49583,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
