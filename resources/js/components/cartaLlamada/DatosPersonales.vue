@@ -1,6 +1,8 @@
 <template>
     <div>
         <h3>Dades Personals:</h3>
+        <input type="checkbox" id="guardarUser" v-model="guardar" />
+        <label for="guardarUser">Guardar user</label>
         <label for="telefono">Telefono</label>
         <input type="number" name="telefono" id="telefono" v-model="datos_personales.telefono" @blur="setDataPersonal()" required />
         <label for="antecedentes">Antecedentes</label>
@@ -36,6 +38,7 @@
 export default {
     data() {
         return {
+            guardar:[],
             municipios: [],
             datos_personales:{
                 telefono:"",
@@ -69,7 +72,7 @@ export default {
         },activarFunciones(){
             console.log("activar");
             this.setDataPersonal();
-        },  
+        },
     },
 
     mounted() {

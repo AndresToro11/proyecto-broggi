@@ -5914,9 +5914,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      guardar: [],
       municipios: [],
       datos_personales: {
         telefono: "",
@@ -43787,6 +43790,44 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("h3", [_vm._v("Dades Personals:")]),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.guardar,
+          expression: "guardar",
+        },
+      ],
+      attrs: { type: "checkbox", id: "guardarUser" },
+      domProps: {
+        checked: Array.isArray(_vm.guardar)
+          ? _vm._i(_vm.guardar, null) > -1
+          : _vm.guardar,
+      },
+      on: {
+        change: function ($event) {
+          var $$a = _vm.guardar,
+            $$el = $event.target,
+            $$c = $$el.checked ? true : false
+          if (Array.isArray($$a)) {
+            var $$v = null,
+              $$i = _vm._i($$a, $$v)
+            if ($$el.checked) {
+              $$i < 0 && (_vm.guardar = $$a.concat([$$v]))
+            } else {
+              $$i > -1 &&
+                (_vm.guardar = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+            }
+          } else {
+            _vm.guardar = $$c
+          }
+        },
+      },
+    }),
+    _vm._v(" "),
+    _c("label", { attrs: { for: "guardarUser" } }, [_vm._v("Guardar user")]),
     _vm._v(" "),
     _c("label", { attrs: { for: "telefono" } }, [_vm._v("Telefono")]),
     _vm._v(" "),
