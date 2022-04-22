@@ -7,7 +7,7 @@
         </div>
 
         <div v-else>
-            <input @input="buscarExpediente" v-model="buscar" type="text" name="" id="" placeholder="Buscar">
+            <input @input="buscarExpediente" v-model="buscar" type="text" placeholder="Buscar">
             <div class="test" v-for="expediente in expedientes" :key="expediente.id">
                 <p>
                     <div v-if="expediente.estats_expedients_id == 1">
@@ -99,28 +99,31 @@
                     </div>
                 </p>
 
-             <div class="collapse" v-bind:id="'multiCollapseExample'+expediente.id">
-                 <div class=" d-flex justify-content-between">
-                    <div class="card " v-for="carta in expediente.cartas_trucades" :key="carta.id" style="width: 49%">
-                        <div class="card-header text-light bg-success rounded-3" style="width: 30%">
-                                    Codigo llamada: {{ carta.id }}</div>
+            <div class="collapse" v-bind:id="'multiCollapseExample'+ expediente.id">
+                <div class="d-flex flex-wrap justify-content-between">
+
+                    <div class="card" style="width: 49%">
+                        <plano></plano>
+                    </div>
+                     
+                    <div class="card" v-for="carta in expediente.cartas_trucades" :key="carta.id" style="width: 49%">
+                        <div class="card-header bg-light rounded-3" style="width: 30%">
+                            Codigo llamada: {{ carta.id }}
+                        </div>
                         <div class="card-body">
                             <div class="row" >
                                 <div class="col">
                                     <hr style="width: 20%">
                                     <b>Provincia</b> <br> {{ carta.provincia.nom }}
-                                    <hr style="width: 20%">
                                 </div>
 
                                 <div class="col">
                                     <hr style="width: 20%">
                                     <b>Municipio</b> <br> {{ carta.municipi.nom }}
-                                    <hr style="width: 20%">
                                 </div>
                                 <div class="col">
                                     <hr style="width: 20%">
                                     <b>Incidente</b> <br> {{ carta.incident.descripcio }}
-                                    <hr style="width: 20%">
                                 </div>
                             </div>
                             <div class="row">
@@ -133,33 +136,28 @@
                                     <div v-else>
                                         No
                                     </div>
-                                    <hr style="width: 20%">
                                 </div>
                                 <div class="col">
                                     <hr style="width: 20%">
                                      <b>Tiempo de la llamada</b> <br> {{ carta.temps_trucada }}
-                                    <hr style="width: 20%">
                                 </div>
                                 <div class="col">
                                     <hr style="width: 20%">
                                     <b>Direccion</b> <br> {{ carta.adreca_trucada }}
-                                    <hr style="width: 20%">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <hr style="width: 80%">
+                                    <hr style="width: 70%">
                                     <b>Nota común</b> <br> "{{ carta.nota_comuna }}"
-                                    <hr style="width: 80%">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
         </div>
-
+        </div>
     </div>
 </template>
 
@@ -172,7 +170,8 @@
                 loading: false,
                 contador : 0,
                 buscar: '',
-                actual: []
+                actual: [],
+                mapaOk: false
             }
         },
 

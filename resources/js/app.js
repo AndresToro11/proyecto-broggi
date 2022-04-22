@@ -37,6 +37,7 @@ window.Vue = require('vue').default;
 
 Vue.component('expedientes', require('./components/expedientes.vue').default);
 Vue.component('mapa', require('./components/mapa.vue').default);
+Vue.component('plano', require('./components/plano.vue').default);
 
 //--------------------------------------------- Grafico ----------------------------------
 
