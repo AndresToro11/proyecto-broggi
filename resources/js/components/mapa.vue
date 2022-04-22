@@ -30,7 +30,7 @@
                     .finally(() => this.loading = false);
             },
 
-            crearMapa(place, store) {
+            crearMapa(place, agencias) {
                 let me = this;
                 mapboxgl.accessToken = this.accessToken;
 
@@ -64,7 +64,7 @@
                     });
                 })
 
-                this.añadirMarker(store);
+                this.añadirMarker(agencias);
             },
 
             añadirMarker(agencias){
@@ -95,9 +95,10 @@
 
                         const feature = response.body.features[0];
 
-                        const popup = new mapboxgl.Popup({ offset: 25 }).setText(
-                            agencias[i].nom + ' <br> ' + agencias[i].municipi.nom
-                        );
+                        const popup = new mapboxgl.Popup({ offset: 25 })
+                            .setText(
+                                agencias[i].nom + ', ' + agencias[i].municipi.nom + ', ' + agencias[i].carrer
+                            );
 
                             // Crear marker y añadirlo al mapa
                             new mapboxgl.Marker({
@@ -106,7 +107,6 @@
                             .setPopup(popup)
                             .addTo(me.map);
                     })
-
                 }
 
             },

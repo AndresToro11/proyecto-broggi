@@ -57,8 +57,7 @@
                         <label for="nick">Nick</label>
                     </div>
                     <div class="col s6 text-center">
-                        <button @click="insertUsuario()" class="btn waves-effect waves-light" name="action">Aceptar
-                            <i class="material-icons right">send</i>
+                        <button @click="insertUsuario()" class="btn waves-effect waves-light" name="action">Aceptar <i class="fal fa-paper-plane"></i>
                         </button>
                     </div>
                 </div>
@@ -122,7 +121,7 @@
 
         },
         mounted() {
-            this.selectRoles();
+            
         }
     }
 
