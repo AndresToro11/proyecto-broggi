@@ -1,7 +1,6 @@
 <template>
     <div>
-        <h3>Datos Administrativos</h3>
-        <p>Contador:{{ crono }} </p>
+        <p>Tiempo:{{ crono }} </p>
     </div>
 </template>
 

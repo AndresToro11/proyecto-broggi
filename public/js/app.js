@@ -5566,7 +5566,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5880,6 +5879,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6340,6 +6367,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -43235,11 +43263,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h3", [_vm._v("Datos Administrativos")]),
-    _vm._v(" "),
-    _c("p", [_vm._v("Contador:" + _vm._s(_vm.crono) + " ")]),
-  ])
+  return _c("div", [_c("p", [_vm._v("Tiempo:" + _vm._s(_vm.crono) + " ")])])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -43369,7 +43393,7 @@ var render = function () {
       2
     ),
     _vm._v(" "),
-    _c("label", { attrs: { for: "mucipio" } }, [_vm._v("Municipio")]),
+    _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
     _vm._v(" "),
     _c(
       "select",
@@ -43923,233 +43947,299 @@ var render = function () {
   return _c("div", [
     _c("h3", [_vm._v("Dades Personals:")]),
     _vm._v(" "),
-    _c("label", { attrs: { for: "telefono" } }, [_vm._v("Telefono")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_personales.telefono,
-          expression: "datos_personales.telefono",
-        },
-      ],
-      attrs: { type: "number", name: "telefono", id: "telefono", required: "" },
-      domProps: { value: _vm.datos_personales.telefono },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataPersonal()
-        },
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.datos_personales, "telefono", $event.target.value)
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "antecedentes" } }, [_vm._v("Antecedentes")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_personales.antecedentes,
-          expression: "datos_personales.antecedentes",
-        },
-      ],
-      attrs: {
-        type: "text",
-        name: "antecedentes",
-        id: "antecedentes",
-        required: "",
-      },
-      domProps: { value: _vm.datos_personales.antecedentes },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataPersonal()
-        },
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.datos_personales, "antecedentes", $event.target.value)
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "procedencia" } }, [_vm._v("Procedencia")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_personales.procedencia,
-          expression: "datos_personales.procedencia",
-        },
-      ],
-      attrs: {
-        type: "text",
-        name: "procedencia",
-        id: "procedencia",
-        required: "",
-      },
-      domProps: { value: _vm.datos_personales.procedencia },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataPersonal()
-        },
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.datos_personales, "procedencia", $event.target.value)
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "origen" } }, [_vm._v("Origen")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_personales.origen,
-          expression: "datos_personales.origen",
-        },
-      ],
-      attrs: { type: "text", name: "origen", id: "origen", required: "" },
-      domProps: { value: _vm.datos_personales.origen },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataPersonal()
-        },
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.datos_personales, "origen", $event.target.value)
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
-    _vm._v(" "),
-    _c(
-      "select",
-      {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.datos_personales.municipio,
-            expression: "datos_personales.municipio",
-          },
-        ],
-        staticClass: "form-control",
-        attrs: { id: "municipio", required: "" },
-        on: {
-          change: [
-            function ($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function (o) {
-                  return o.selected
-                })
-                .map(function (o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.$set(
-                _vm.datos_personales,
-                "municipio",
-                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-              )
-            },
-            function ($event) {
-              return _vm.activarFunciones()
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "input-field col s3" }, [
+        _c("label", { attrs: { for: "telefono" } }, [_vm._v("Telefono")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.datos_personales.telefono,
+              expression: "datos_personales.telefono",
             },
           ],
-        },
-      },
-      [
-        _c("option", { attrs: { value: "" } }),
-        _vm._v(" "),
-        _vm._l(_vm.municipios, function (municipio) {
-          return _c(
-            "option",
-            { key: municipio.id, domProps: { value: municipio.id } },
-            [_vm._v("\n            " + _vm._s(municipio.nom) + "\n        ")]
-          )
+          attrs: {
+            type: "number",
+            name: "telefono",
+            id: "telefono",
+            required: "",
+          },
+          domProps: { value: _vm.datos_personales.telefono },
+          on: {
+            blur: function ($event) {
+              return _vm.setDataPersonal()
+            },
+            input: function ($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.datos_personales, "telefono", $event.target.value)
+            },
+          },
         }),
-      ],
-      2
-    ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s3" }, [
+        _c("label", { attrs: { for: "antecedentes" } }, [
+          _vm._v("Antecedentes"),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.datos_personales.antecedentes,
+              expression: "datos_personales.antecedentes",
+            },
+          ],
+          attrs: {
+            type: "text",
+            name: "antecedentes",
+            id: "antecedentes",
+            required: "",
+          },
+          domProps: { value: _vm.datos_personales.antecedentes },
+          on: {
+            blur: function ($event) {
+              return _vm.setDataPersonal()
+            },
+            input: function ($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(
+                _vm.datos_personales,
+                "antecedentes",
+                $event.target.value
+              )
+            },
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s3" }, [
+        _c("label", { attrs: { for: "procedencia" } }, [_vm._v("Procedencia")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.datos_personales.procedencia,
+              expression: "datos_personales.procedencia",
+            },
+          ],
+          attrs: {
+            type: "text",
+            name: "procedencia",
+            id: "procedencia",
+            required: "",
+          },
+          domProps: { value: _vm.datos_personales.procedencia },
+          on: {
+            blur: function ($event) {
+              return _vm.setDataPersonal()
+            },
+            input: function ($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.datos_personales, "procedencia", $event.target.value)
+            },
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s3" }, [
+        _c("label", { attrs: { for: "origen" } }, [_vm._v("Origen")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.datos_personales.origen,
+              expression: "datos_personales.origen",
+            },
+          ],
+          attrs: { type: "text", name: "origen", id: "origen", required: "" },
+          domProps: { value: _vm.datos_personales.origen },
+          on: {
+            blur: function ($event) {
+              return _vm.setDataPersonal()
+            },
+            input: function ($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.datos_personales, "origen", $event.target.value)
+            },
+          },
+        }),
+      ]),
+    ]),
     _vm._v(" "),
-    _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "input-field col s4" }, [
+        _c("label", { attrs: { for: "origen" } }, [_vm._v("Origen")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.datos_personales.origen,
+              expression: "datos_personales.origen",
+            },
+          ],
+          attrs: { type: "text", name: "origen", id: "origen", required: "" },
+          domProps: { value: _vm.datos_personales.origen },
+          on: {
+            blur: function ($event) {
+              return _vm.setDataPersonal()
+            },
+            input: function ($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.datos_personales, "origen", $event.target.value)
+            },
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s4" }, [
+        _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.datos_personales.direccion,
+              expression: "datos_personales.direccion",
+            },
+          ],
+          attrs: {
+            type: "text",
+            name: "direccion",
+            id: "direccion",
+            required: "",
+          },
+          domProps: { value: _vm.datos_personales.direccion },
+          on: {
+            blur: function ($event) {
+              return _vm.setDataPersonal()
+            },
+            input: function ($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.datos_personales, "direccion", $event.target.value)
+            },
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s4" }, [
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.datos_personales.municipio,
+                expression: "datos_personales.municipio",
+              },
+            ],
+            staticClass: "browser-default",
+            attrs: { id: "municipio", required: "" },
+            on: {
+              change: [
+                function ($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function (o) {
+                      return o.selected
+                    })
+                    .map(function (o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.datos_personales,
+                    "municipio",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                },
+                function ($event) {
+                  return _vm.activarFunciones()
+                },
+              ],
+            },
+          },
+          [
+            _c("option", { attrs: { value: "", disabled: "", selected: "" } }, [
+              _vm._v("Municipios"),
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.municipios, function (municipio) {
+              return _c(
+                "option",
+                { key: municipio.id, domProps: { value: municipio.id } },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(municipio.nom) +
+                      "\n                "
+                  ),
+                ]
+              )
+            }),
+          ],
+          2
+        ),
+      ]),
+    ]),
     _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_personales.direccion,
-          expression: "datos_personales.direccion",
-        },
-      ],
-      attrs: { type: "text", name: "direccion", id: "direccion", required: "" },
-      domProps: { value: _vm.datos_personales.direccion },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataPersonal()
-        },
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.datos_personales, "direccion", $event.target.value)
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "notaComun" } }, [_vm._v("Nota comun:")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_personales.notaComun,
-          expression: "datos_personales.notaComun",
-        },
-      ],
-      attrs: {
-        type: "text",
-        name: "notaComun",
-        id: "notaComun",
-        required: "",
-        size: "100",
-      },
-      domProps: { value: _vm.datos_personales.notaComun },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataPersonal()
-        },
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.datos_personales, "notaComun", $event.target.value)
-        },
-      },
-    }),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "input-field col s12" }, [
+        _c("label", { attrs: { for: "notaComun" } }, [_vm._v("Nota comun:")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.datos_personales.notaComun,
+              expression: "datos_personales.notaComun",
+            },
+          ],
+          attrs: {
+            type: "text",
+            name: "notaComun",
+            id: "notaComun",
+            required: "",
+            size: "100",
+          },
+          domProps: { value: _vm.datos_personales.notaComun },
+          on: {
+            blur: function ($event) {
+              return _vm.setDataPersonal()
+            },
+            input: function ($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.datos_personales, "notaComun", $event.target.value)
+            },
+          },
+        }),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = []
@@ -44689,7 +44779,7 @@ var render = function () {
             ? _c("td", [_vm._v(_vm._s(user.mail))])
             : _vm._e(),
           _vm._v(" "),
-          _c("td", [_vm._v(" Descansando ")]),
+          user.perfils_id == 1 ? _c("td", [_vm._v(" Descansando ")]) : _vm._e(),
         ])
       }),
       0

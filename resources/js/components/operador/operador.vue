@@ -1,4 +1,5 @@
 <template>
+
     <table class="table table-warning table-striped">
         <thead>
             <tr>
@@ -13,7 +14,7 @@
                 <td v-if="user.perfils_id == 1">{{ user.nom }}{{ user.cognoms }}</td>
                 <td v-if="user.perfils_id == 1">{{ user.codi }}</td>
                 <td v-if="user.perfils_id == 1">{{ user.mail }}</td>
-                <td> Descansando </td>
+                <td v-if="user.perfils_id == 1"> Descansando </td>
             </tr>
         </tbody>
     </table>
