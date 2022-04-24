@@ -2,18 +2,18 @@
     <table class="table table-warning table-striped">
         <thead>
             <tr>
+            <th scope="col">Nombre</th>
             <th scope="col">Codigo</th>
             <th scope="col">Mail</th>
-            <th scope="col">Nombre</th>
             <th scope="col">Estado</th>
             </tr>
         </thead>
         <tbody>
             <tr v-for="user in users" :key="user.id">
-                <td v-if="user.perfils_id == 1">{{ user.nom }}{{ user.cognoms }}</td>
+                <td v-if="user.perfils_id == 1">{{ user.nom }} {{ user.cognoms }}</td>
                 <td v-if="user.perfils_id == 1">{{ user.codi }}</td>
                 <td v-if="user.perfils_id == 1">{{ user.mail }}</td>
-                <td> Descansando </td>
+                <td v-if="user.perfils_id == 1"> Descansando </td>
             </tr>
         </tbody>
     </table>

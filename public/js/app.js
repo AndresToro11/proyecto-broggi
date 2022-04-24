@@ -44719,7 +44719,7 @@ var render = function () {
       _vm._l(_vm.users, function (user) {
         return _c("tr", { key: user.id }, [
           user.perfils_id == 1
-            ? _c("td", [_vm._v(_vm._s(user.nom) + _vm._s(user.cognoms))])
+            ? _c("td", [_vm._v(_vm._s(user.nom) + " " + _vm._s(user.cognoms))])
             : _vm._e(),
           _vm._v(" "),
           user.perfils_id == 1
@@ -44730,7 +44730,7 @@ var render = function () {
             ? _c("td", [_vm._v(_vm._s(user.mail))])
             : _vm._e(),
           _vm._v(" "),
-          _c("td", [_vm._v(" Descansando ")]),
+          user.perfils_id == 1 ? _c("td", [_vm._v(" Descansando ")]) : _vm._e(),
         ])
       }),
       0
@@ -44744,11 +44744,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Nombre")]),
+        _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Codigo")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Mail")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Nombre")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Estado")]),
       ]),
