@@ -1,4 +1,5 @@
 <template>
+
     <table class="table table-warning table-striped">
         <thead>
             <tr>

@@ -15,7 +15,7 @@
                 {{ comarca.nom }}
             </option>
         </select>
-        <label for="mucipio">Municipio</label>
+        <label for="municipio">Municipio</label>
          <select class="form-control" id="municipio" v-model="datos_incidente.municipio" @change="activarFunciones()">
             <option value=""></option>
             <option v-for="municipio in municipios" :key="municipio.id" :value="municipio.id">
