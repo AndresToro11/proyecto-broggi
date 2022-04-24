@@ -555,12 +555,6 @@
 
 
 
-
-
-
-
-
-
                         <div class="expedientes-modal-modal" id="expedientes-modal-modalScreen"> <!-- TODO: Modal -->
                             <div class="expedientes-modal-modal-window">
                                 <header class="expedientes-modal-modal-header">
@@ -585,12 +579,7 @@
 
 
 
-
-
-
-
-
-
+                        
                     </div>
                 </div>
             </div>

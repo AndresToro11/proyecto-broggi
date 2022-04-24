@@ -24,7 +24,7 @@
                             <span class="mdc-list-item__primary-text">Correo electrónico</span>
                         </span>
                         <span class="operadores-lista-user mdc-list-item__text">
-                            <span class="mdc-list-item__primary-text">Tipo de usuario</span>
+                            <span class="mdc-list-item__primary-text">Codigo</span>
                         </span>
                         <span class="operadores-lista-status mdc-list-item__text">
                             <span class="mdc-list-item__primary-text">Estado</span>
@@ -45,7 +45,7 @@
                                 <span class="mdc-list-item__primary-text">sperezj2021@cepnet.net</span>
                             </span>
                             <span class="operadores-lista-user mdc-list-item__text">
-                                <span class="mdc-list-item__primary-text">Administrador</span>
+                                <span class="mdc-list-item__primary-text">000001</span>
                             </span>
                             <span class="operadores-lista-status mdc-list-item__text">
                                 <span class="mdc-list-item__primary-text">Desconectado</span>

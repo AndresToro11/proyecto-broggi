@@ -5625,17 +5625,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -32681,7 +32670,7 @@ var staticRenderFns = [
                 { staticClass: "operadores-lista-user mdc-list-item__text" },
                 [
                   _c("span", { staticClass: "mdc-list-item__primary-text" }, [
-                    _vm._v("Tipo de usuario"),
+                    _vm._v("Codigo"),
                   ]),
                 ]
               ),
@@ -32740,7 +32729,7 @@ var staticRenderFns = [
                   { staticClass: "operadores-lista-user mdc-list-item__text" },
                   [
                     _c("span", { staticClass: "mdc-list-item__primary-text" }, [
-                      _vm._v("Administrador"),
+                      _vm._v("000001"),
                     ]),
                   ]
                 ),
