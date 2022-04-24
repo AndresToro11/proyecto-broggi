@@ -5397,6 +5397,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5600,6 +5617,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5915,8 +5974,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
-=======
 //
 //
 //
@@ -5941,13 +5998,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
->>>>>>> a922cfbd0c324cacd61f2b7e16301f82916aed73
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       guardar: [],
+      cronos: 1,
       municipios: [],
       datos_personales: {
         telefono: "",
@@ -43121,128 +43176,178 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("datos-administrativos"),
-      _vm._v(" "),
-      _c("datos-personales", {
-        on: { "get-datapersonal": _vm.getDataPersonal },
-      }),
-      _vm._v(" "),
-      _c("datos-incidentes", {
-        on: { "get-dataincidente": _vm.getDataIncidente },
-      }),
-      _vm._v(" "),
-      _c("h3", [_vm._v("boton")]),
-      _vm._v(" "),
-      _c("button", { attrs: { type: "button" } }, [_vm._v("Cancelar")]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          attrs: { type: "button" },
-          on: {
-            click: function ($event) {
-              return _vm.camposExtra()
-            },
-          },
-        },
-        [_vm._v("Aceptar")]
-      ),
-      _vm._v(" "),
-      _c("h3", [
-        _vm._v(
-          "Expedientes Relacionados: " + _vm._s(_vm.expedienteRelacionado)
-        ),
+  return _c("div", [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col s6 m3" }, [
+        _c("div", { staticClass: "card blue-grey darken-1" }, [
+          _c(
+            "div",
+            { staticClass: "card-content white-text" },
+            [
+              _c("datos-personales", {
+                on: { "get-datapersonal": _vm.getDataPersonal },
+              }),
+              _vm._v(" "),
+              _c("datos-incidentes", {
+                on: { "get-dataincidente": _vm.getDataIncidente },
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-action" }, [
+            _c("a", { attrs: { href: "#" } }, [_vm._v("Cancelar")]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                attrs: { href: "#" },
+                on: {
+                  click: function ($event) {
+                    return _vm.camposExtra()
+                  },
+                },
+              },
+              [_vm._v("Aceptar")]
+            ),
+          ]),
+        ]),
       ]),
       _vm._v(" "),
-      _c("span", [
-        _c("table", { staticClass: "table" }, [
-          _c("thead", [
-            _c("tr", [
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Nº Expediente")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Telefono")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Localizacion")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Tipificacion")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [
-                _c(
-                  "button",
-                  {
-                    attrs: { type: "button" },
-                    on: {
-                      click: function ($event) {
-                        return _vm.expedienteRela(null)
-                      },
-                    },
-                  },
-                  [_vm._v("Check")]
-                ),
+      _c("div", { staticClass: "col s6 m3" }, [
+        _c("div", { staticClass: "card blue-grey darken-1" }, [
+          _c("div", { staticClass: "card-content white-text" }, [
+            _c("span", { staticClass: "card-title" }, [
+              _vm._v(
+                "Expedientes Relacionados: " + _vm._s(_vm.expedienteRelacionado)
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-action" }, [
+              _c("span", [
+                _c("table", { staticClass: "table" }, [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", { attrs: { scope: "col" } }, [
+                        _vm._v("Nº Expediente"),
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { attrs: { scope: "col" } }, [
+                        _vm._v("Telefono"),
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { attrs: { scope: "col" } }, [
+                        _vm._v("Localizacion"),
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { attrs: { scope: "col" } }, [
+                        _vm._v("Tipificacion"),
+                      ]),
+                      _vm._v(" "),
+                      _c("th", { attrs: { scope: "col" } }, [
+                        _c(
+                          "button",
+                          {
+                            attrs: { type: "button" },
+                            on: {
+                              click: function ($event) {
+                                return _vm.expedienteRela(null)
+                              },
+                            },
+                          },
+                          [_vm._v("Check")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "tbody",
+                    _vm._l(_vm.pruebaCartas, function (pruebaCarta, index) {
+                      return _c("tr", { key: index }, [
+                        pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
+                        pruebaCarta.municipis_id ==
+                          _vm.cartaLlamada.municipis_id ||
+                        pruebaCarta.incidents_id ==
+                          _vm.cartaLlamada.incidents_id
+                          ? _c("td", [
+                              _vm._v(_vm._s(pruebaCarta.expedients_id)),
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
+                        pruebaCarta.municipis_id ==
+                          _vm.cartaLlamada.municipis_id ||
+                        pruebaCarta.incidents_id ==
+                          _vm.cartaLlamada.incidents_id
+                          ? _c("td", [_vm._v(_vm._s(pruebaCarta.telefon))])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
+                        pruebaCarta.municipis_id ==
+                          _vm.cartaLlamada.municipis_id ||
+                        pruebaCarta.incidents_id ==
+                          _vm.cartaLlamada.incidents_id
+                          ? _c("td", [_vm._v(_vm._s(pruebaCarta.municipis_id))])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
+                        pruebaCarta.municipis_id ==
+                          _vm.cartaLlamada.municipis_id ||
+                        pruebaCarta.incidents_id ==
+                          _vm.cartaLlamada.incidents_id
+                          ? _c("td", [_vm._v(_vm._s(pruebaCarta.incidents_id))])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
+                        pruebaCarta.municipis_id ==
+                          _vm.cartaLlamada.municipis_id ||
+                        pruebaCarta.incidents_id ==
+                          _vm.cartaLlamada.incidents_id
+                          ? _c("td", [
+                              _c(
+                                "button",
+                                {
+                                  attrs: { type: "button" },
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.expedienteRela(
+                                        pruebaCarta.expedients_id
+                                      )
+                                    },
+                                  },
+                                },
+                                [_vm._v("Check")]
+                              ),
+                            ])
+                          : _vm._e(),
+                      ])
+                    }),
+                    0
+                  ),
+                ]),
               ]),
             ]),
           ]),
-          _vm._v(" "),
-          _c(
-            "tbody",
-            _vm._l(_vm.pruebaCartas, function (pruebaCarta, index) {
-              return _c("tr", { key: index }, [
-                pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
-                pruebaCarta.municipis_id == _vm.cartaLlamada.municipis_id ||
-                pruebaCarta.incidents_id == _vm.cartaLlamada.incidents_id
-                  ? _c("td", [_vm._v(_vm._s(pruebaCarta.expedients_id))])
-                  : _vm._e(),
-                _vm._v(" "),
-                pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
-                pruebaCarta.municipis_id == _vm.cartaLlamada.municipis_id ||
-                pruebaCarta.incidents_id == _vm.cartaLlamada.incidents_id
-                  ? _c("td", [_vm._v(_vm._s(pruebaCarta.telefon))])
-                  : _vm._e(),
-                _vm._v(" "),
-                pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
-                pruebaCarta.municipis_id == _vm.cartaLlamada.municipis_id ||
-                pruebaCarta.incidents_id == _vm.cartaLlamada.incidents_id
-                  ? _c("td", [_vm._v(_vm._s(pruebaCarta.municipis_id))])
-                  : _vm._e(),
-                _vm._v(" "),
-                pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
-                pruebaCarta.municipis_id == _vm.cartaLlamada.municipis_id ||
-                pruebaCarta.incidents_id == _vm.cartaLlamada.incidents_id
-                  ? _c("td", [_vm._v(_vm._s(pruebaCarta.incidents_id))])
-                  : _vm._e(),
-                _vm._v(" "),
-                pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
-                pruebaCarta.municipis_id == _vm.cartaLlamada.municipis_id ||
-                pruebaCarta.incidents_id == _vm.cartaLlamada.incidents_id
-                  ? _c("td", [
-                      _c(
-                        "button",
-                        {
-                          attrs: { type: "button" },
-                          on: {
-                            click: function ($event) {
-                              return _vm.expedienteRela(
-                                pruebaCarta.expedients_id
-                              )
-                            },
-                          },
-                        },
-                        [_vm._v("Check")]
-                      ),
-                    ])
-                  : _vm._e(),
-              ])
-            }),
-            0
-          ),
         ]),
+        _vm._v(" "),
+        _c("button", { attrs: { type: "button" } }, [_vm._v("Cancelar")]),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            attrs: { type: "button" },
+            on: {
+              click: function ($event) {
+                return _vm.camposExtra()
+              },
+            },
+          },
+          [_vm._v("Aceptar")]
+        ),
       ]),
-    ],
-    1
-  )
+    ]),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -43293,636 +43398,712 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h3", [_vm._v("Datos Incidente")]),
+    _c("h4", [_vm._v("Datos Incidente")]),
     _vm._v(" "),
-    _c("label", { attrs: { for: "provincia" } }, [_vm._v("Provincia")]),
-    _vm._v(" "),
-    _c(
-      "select",
-      {
-        directives: [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "input-field col s4" }, [
+        _c(
+          "select",
           {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.datos_incidente.provincia,
-            expression: "datos_incidente.provincia",
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.datos_incidente.provincia,
+                expression: "datos_incidente.provincia",
+              },
+            ],
+            staticClass: "form-control",
+            attrs: { id: "provincia" },
+            on: {
+              blur: function ($event) {
+                return _vm.setDataIncidente(_vm.datos_incidente)
+              },
+              change: function ($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function (o) {
+                    return o.selected
+                  })
+                  .map(function (o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.$set(
+                  _vm.datos_incidente,
+                  "provincia",
+                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                )
+              },
+            },
           },
-        ],
-        staticClass: "form-control",
-        attrs: { id: "provincia" },
-        on: {
-          blur: function ($event) {
-            return _vm.setDataIncidente(_vm.datos_incidente)
-          },
-          change: function ($event) {
-            var $$selectedVal = Array.prototype.filter
-              .call($event.target.options, function (o) {
-                return o.selected
-              })
-              .map(function (o) {
-                var val = "_value" in o ? o._value : o.value
-                return val
-              })
-            _vm.$set(
-              _vm.datos_incidente,
-              "provincia",
-              $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-            )
-          },
-        },
-      },
-      [
-        _c("option", { attrs: { value: "" } }),
-        _vm._v(" "),
-        _vm._l(_vm.provincias, function (provincia) {
-          return _c(
-            "option",
-            { key: provincia.id, domProps: { value: provincia.id } },
-            [_vm._v("\n            " + _vm._s(provincia.nom) + "\n        ")]
-          )
-        }),
-      ],
-      2
-    ),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "comarca" } }, [_vm._v("Comarca")]),
-    _vm._v(" "),
-    _c(
-      "select",
-      {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.datos_incidente.comarca,
-            expression: "datos_incidente.comarca",
-          },
-        ],
-        staticClass: "form-control",
-        attrs: { id: "comarca" },
-        on: {
-          change: [
-            function ($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function (o) {
-                  return o.selected
-                })
-                .map(function (o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.$set(
-                _vm.datos_incidente,
-                "comarca",
-                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+          [
+            _c("option", { attrs: { value: "", disabled: "", selected: "" } }, [
+              _vm._v("Provincia"),
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.provincias, function (provincia) {
+              return _c(
+                "option",
+                { key: provincia.id, domProps: { value: provincia.id } },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(provincia.nom) +
+                      "\n                "
+                  ),
+                ]
               )
-            },
-            function ($event) {
-              return _vm.activarFunciones()
-            },
+            }),
           ],
-        },
-      },
-      [
-        _c("option", { attrs: { value: "" } }),
-        _vm._v(" "),
-        _vm._l(_vm.comarcas, function (comarca) {
-          return _c(
-            "option",
-            { key: comarca.id, domProps: { value: comarca.id } },
-            [_vm._v("\n            " + _vm._s(comarca.nom) + "\n        ")]
-          )
-        }),
-      ],
-      2
-    ),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
-    _vm._v(" "),
-    _c(
-      "select",
-      {
-        directives: [
+          2
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s4" }, [
+        _c(
+          "select",
           {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.datos_incidente.municipio,
-            expression: "datos_incidente.municipio",
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.datos_incidente.comarca,
+                expression: "datos_incidente.comarca",
+              },
+            ],
+            staticClass: "form-control",
+            attrs: { id: "comarca" },
+            on: {
+              change: [
+                function ($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function (o) {
+                      return o.selected
+                    })
+                    .map(function (o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.datos_incidente,
+                    "comarca",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                },
+                function ($event) {
+                  return _vm.activarFunciones()
+                },
+              ],
+            },
           },
-        ],
-        staticClass: "form-control",
-        attrs: { id: "municipio" },
-        on: {
-          change: [
-            function ($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function (o) {
-                  return o.selected
-                })
-                .map(function (o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.$set(
-                _vm.datos_incidente,
-                "municipio",
-                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+          [
+            _c("option", { attrs: { value: "", disabled: "", selected: "" } }, [
+              _vm._v("Comarca"),
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.comarcas, function (comarca) {
+              return _c(
+                "option",
+                { key: comarca.id, domProps: { value: comarca.id } },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(comarca.nom) +
+                      "\n                "
+                  ),
+                ]
               )
-            },
-            function ($event) {
-              return _vm.activarFunciones()
-            },
+            }),
           ],
-        },
-      },
-      [
-        _c("option", { attrs: { value: "" } }),
-        _vm._v(" "),
-        _vm._l(_vm.municipios, function (municipio) {
-          return _c(
-            "option",
-            { key: municipio.id, domProps: { value: municipio.id } },
-            [_vm._v("\n            " + _vm._s(municipio.nom) + "\n        ")]
-          )
-        }),
-      ],
-      2
-    ),
-    _vm._v(" "),
-    _c("h4", [_vm._v("Tipos de localizacion")]),
-    _vm._v(" "),
-    _c(
-      "select",
-      {
-        directives: [
+          2
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s4" }, [
+        _c(
+          "select",
           {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.datos_incidente.localizacion,
-            expression: "datos_incidente.localizacion",
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.datos_incidente.municipio,
+                expression: "datos_incidente.municipio",
+              },
+            ],
+            staticClass: "form-control",
+            attrs: { id: "municipio" },
+            on: {
+              change: [
+                function ($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function (o) {
+                      return o.selected
+                    })
+                    .map(function (o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.datos_incidente,
+                    "municipio",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                },
+                function ($event) {
+                  return _vm.activarFunciones()
+                },
+              ],
+            },
           },
-        ],
-        staticClass: "form-control",
-        attrs: { id: "tiposLocalizacion", required: "" },
-        on: {
-          change: [
-            function ($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function (o) {
-                  return o.selected
-                })
-                .map(function (o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.$set(
-                _vm.datos_incidente,
-                "localizacion",
-                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+          [
+            _c("option", { attrs: { value: "", disabled: "", selected: "" } }, [
+              _vm._v("Municipios"),
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.municipios, function (municipio) {
+              return _c(
+                "option",
+                { key: municipio.id, domProps: { value: municipio.id } },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(municipio.nom) +
+                      "\n                "
+                  ),
+                ]
               )
-            },
-            function ($event) {
-              return _vm.activarFunciones()
-            },
+            }),
           ],
-        },
-      },
-      [
-        _c("option", { attrs: { value: "" } }),
-        _vm._v(" "),
-        _vm._l(_vm.tiposLocalizaciones, function (tiposLocalizacion) {
-          return _c(
-            "option",
+          2
+        ),
+      ]),
+    ]),
+    _vm._v(" "),
+    _c("h5", [_vm._v("Tipos de localizacion")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "input-field col s4" }, [
+      _c(
+        "select",
+        {
+          directives: [
             {
-              key: tiposLocalizacion.id,
-              domProps: { value: tiposLocalizacion.id },
+              name: "model",
+              rawName: "v-model",
+              value: _vm.datos_incidente.localizacion,
+              expression: "datos_incidente.localizacion",
             },
-            [
-              _vm._v(
-                "\n            " +
-                  _vm._s(tiposLocalizacion.tipus) +
-                  "\n        "
-              ),
-            ]
-          )
-        }),
-      ],
-      2
-    ),
+          ],
+          staticClass: "form-control",
+          attrs: { id: "tiposLocalizacion", required: "" },
+          on: {
+            change: [
+              function ($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function (o) {
+                    return o.selected
+                  })
+                  .map(function (o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.$set(
+                  _vm.datos_incidente,
+                  "localizacion",
+                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                )
+              },
+              function ($event) {
+                return _vm.activarFunciones()
+              },
+            ],
+          },
+        },
+        [
+          _c("option", { attrs: { value: "" } }),
+          _vm._v(" "),
+          _vm._l(_vm.tiposLocalizaciones, function (tiposLocalizacion) {
+            return _c(
+              "option",
+              {
+                key: tiposLocalizacion.id,
+                domProps: { value: tiposLocalizacion.id },
+              },
+              [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(tiposLocalizacion.tipus) +
+                    "\n                "
+                ),
+              ]
+            )
+          }),
+        ],
+        2
+      ),
+    ]),
     _vm._v(" "),
-    _vm.datos_incidente.localizacion == 1
+    _vm.datos_incidente.localizacion == 2
       ? _c("span", [
-          _c("label", { attrs: { for: "via" } }, [_vm._v("Via")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.calle.via,
-                expression: "calle.via",
+          _c("div", { staticClass: "input-field col s4" }, [
+            _c("label", { attrs: { for: "nombre" } }, [_vm._v("Nombre")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.puntoSingular.nombre,
+                  expression: "puntoSingular.nombre",
+                },
+              ],
+              attrs: { type: "text", name: "nombre", id: "nombre" },
+              domProps: { value: _vm.puntoSingular.nombre },
+              on: {
+                blur: function ($event) {
+                  return _vm.descripcioLocalitzacio()
+                },
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.puntoSingular, "nombre", $event.target.value)
+                },
               },
-            ],
-            attrs: { type: "text", name: "via", id: "via" },
-            domProps: { value: _vm.calle.via },
-            on: {
-              blur: function ($event) {
-                return _vm.descripcioLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.calle, "via", $event.target.value)
-              },
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "direccion" } }, [_vm._v("Direccion")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.calle.direccion,
-                expression: "calle.direccion",
-              },
-            ],
-            attrs: { type: "text", name: "direccion", id: "direccion" },
-            domProps: { value: _vm.calle.direccion },
-            on: {
-              blur: function ($event) {
-                return _vm.descripcioLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.calle, "direccion", $event.target.value)
-              },
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "numero" } }, [_vm._v("Numero puerta")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.calle.numPuerta,
-                expression: "calle.numPuerta",
-              },
-            ],
-            attrs: { type: "number", name: "numero", id: "numero" },
-            domProps: { value: _vm.calle.numPuerta },
-            on: {
-              blur: function ($event) {
-                return _vm.descripcioLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.calle, "numPuerta", $event.target.value)
-              },
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "escalera" } }, [_vm._v("Escalera")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.calle2.escalera,
-                expression: "calle2.escalera",
-              },
-            ],
-            attrs: { type: "text", name: "escalera", id: "escalera" },
-            domProps: { value: _vm.calle2.escalera },
-            on: {
-              blur: function ($event) {
-                return _vm.detallLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.calle2, "escalera", $event.target.value)
-              },
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "piso" } }, [_vm._v("Piso")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.calle2.piso,
-                expression: "calle2.piso",
-              },
-            ],
-            attrs: { type: "number", name: "piso", id: "piso" },
-            domProps: { value: _vm.calle2.piso },
-            on: {
-              blur: function ($event) {
-                return _vm.detallLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.calle2, "piso", $event.target.value)
-              },
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "puerta" } }, [_vm._v("Puerta")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.calle2.puerta,
-                expression: "calle2.puerta",
-              },
-            ],
-            attrs: { type: "number", name: "puerta", id: "puerta" },
-            domProps: { value: _vm.calle2.puerta },
-            on: {
-              blur: function ($event) {
-                return _vm.detallLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.calle2, "puerta", $event.target.value)
-              },
-            },
-          }),
-        ])
-      : _vm.datos_incidente.localizacion == 2
-      ? _c("span", [
-          _c("label", { attrs: { for: "nombre" } }, [_vm._v("Nombre")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.puntoSingular.nombre,
-                expression: "puntoSingular.nombre",
-              },
-            ],
-            attrs: { type: "text", name: "nombre", id: "nombre" },
-            domProps: { value: _vm.puntoSingular.nombre },
-            on: {
-              blur: function ($event) {
-                return _vm.descripcioLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.puntoSingular, "nombre", $event.target.value)
-              },
-            },
-          }),
-        ])
-      : _vm.datos_incidente.localizacion == 4
-      ? _c("span", [
-          _c("label", { attrs: { for: "carretera" } }, [_vm._v("Carretera")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.carretera.carretera,
-                expression: "carretera.carretera",
-              },
-            ],
-            attrs: { type: "text", name: "carretera", id: "carretera" },
-            domProps: { value: _vm.carretera.carretera },
-            on: {
-              blur: function ($event) {
-                return _vm.descripcioLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.carretera, "carretera", $event.target.value)
-              },
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "puntoKM" } }, [
-            _vm._v("Punto kilometrico"),
+            }),
           ]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.carretera.puntoKm,
-                expression: "carretera.puntoKm",
-              },
-            ],
-            attrs: { type: "number", name: "puntoKM", id: "puntoKM" },
-            domProps: { value: _vm.carretera.puntoKm },
-            on: {
-              blur: function ($event) {
-                return _vm.descripcioLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.carretera, "puntoKm", $event.target.value)
-              },
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "sentido" } }, [_vm._v("Sentido")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.carretera2.sentido,
-                expression: "carretera2.sentido",
-              },
-            ],
-            attrs: { type: "text", name: "sentido", id: "sentido" },
-            domProps: { value: _vm.carretera2.sentido },
-            on: {
-              blur: function ($event) {
-                return _vm.detallLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.carretera2, "sentido", $event.target.value)
-              },
-            },
-          }),
         ])
       : _vm.datos_incidente.localizacion == 5
       ? _c("span", [
-          _c("label", { attrs: { for: "provincia" } }, [_vm._v("Provincia")]),
+          _c("div", { staticClass: "input-field col s4" }, [
+            _c("label", { attrs: { for: "provincia" } }, [_vm._v("Provincia")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.fueraCatalunya.provincia,
+                  expression: "fueraCatalunya.provincia",
+                },
+              ],
+              attrs: { type: "text", id: "provinciaOut" },
+              domProps: { value: _vm.fueraCatalunya.provincia },
+              on: {
+                blur: function ($event) {
+                  return _vm.descripcioLocalitzacio()
+                },
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.fueraCatalunya, "provincia", $event.target.value)
+                },
+              },
+            }),
+          ]),
+        ])
+      : _vm.datos_incidente.localizacion == 1
+      ? _c("span", [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "input-field col s4" }, [
+              _c("label", { attrs: { for: "via" } }, [_vm._v("Via")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.calle.via,
+                    expression: "calle.via",
+                  },
+                ],
+                attrs: { type: "text", name: "via", id: "via" },
+                domProps: { value: _vm.calle.via },
+                on: {
+                  blur: function ($event) {
+                    return _vm.descripcioLocalitzacio()
+                  },
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.calle, "via", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-field col s4" }, [
+              _c("label", { attrs: { for: "direccion" } }, [
+                _vm._v("Direccion"),
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.calle.direccion,
+                    expression: "calle.direccion",
+                  },
+                ],
+                attrs: { type: "text", name: "direccion", id: "direccion" },
+                domProps: { value: _vm.calle.direccion },
+                on: {
+                  blur: function ($event) {
+                    return _vm.descripcioLocalitzacio()
+                  },
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.calle, "direccion", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-field col s4" }, [
+              _c("label", { attrs: { for: "numero" } }, [
+                _vm._v("Numero puerta"),
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.calle.numPuerta,
+                    expression: "calle.numPuerta",
+                  },
+                ],
+                attrs: { type: "number", name: "numero", id: "numero" },
+                domProps: { value: _vm.calle.numPuerta },
+                on: {
+                  blur: function ($event) {
+                    return _vm.descripcioLocalitzacio()
+                  },
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.calle, "numPuerta", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+          ]),
           _vm._v(" "),
-          _c("input", {
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "input-field col s4" }, [
+              _c("label", { attrs: { for: "escalera" } }, [_vm._v("Escalera")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.calle2.escalera,
+                    expression: "calle2.escalera",
+                  },
+                ],
+                attrs: { type: "text", name: "escalera", id: "escalera" },
+                domProps: { value: _vm.calle2.escalera },
+                on: {
+                  blur: function ($event) {
+                    return _vm.detallLocalitzacio()
+                  },
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.calle2, "escalera", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-field col s4" }, [
+              _c("label", { attrs: { for: "piso" } }, [_vm._v("Piso")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.calle2.piso,
+                    expression: "calle2.piso",
+                  },
+                ],
+                attrs: { type: "number", name: "piso", id: "piso" },
+                domProps: { value: _vm.calle2.piso },
+                on: {
+                  blur: function ($event) {
+                    return _vm.detallLocalitzacio()
+                  },
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.calle2, "piso", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-field col s4" }, [
+              _c("label", { attrs: { for: "puerta" } }, [_vm._v("Puerta")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.calle2.puerta,
+                    expression: "calle2.puerta",
+                  },
+                ],
+                attrs: { type: "number", name: "puerta", id: "puerta" },
+                domProps: { value: _vm.calle2.puerta },
+                on: {
+                  blur: function ($event) {
+                    return _vm.detallLocalitzacio()
+                  },
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.calle2, "puerta", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+          ]),
+        ])
+      : _vm.datos_incidente.localizacion == 4
+      ? _c("span", [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "input-field col s4" }, [
+              _c("label", { attrs: { for: "carretera" } }, [
+                _vm._v("Carretera"),
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.carretera.carretera,
+                    expression: "carretera.carretera",
+                  },
+                ],
+                attrs: { type: "text", name: "carretera", id: "carretera" },
+                domProps: { value: _vm.carretera.carretera },
+                on: {
+                  blur: function ($event) {
+                    return _vm.descripcioLocalitzacio()
+                  },
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.carretera, "carretera", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-field col s4" }, [
+              _c("label", { attrs: { for: "puntoKM" } }, [
+                _vm._v("Punto kilometrico"),
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.carretera.puntoKm,
+                    expression: "carretera.puntoKm",
+                  },
+                ],
+                attrs: { type: "number", name: "puntoKM", id: "puntoKM" },
+                domProps: { value: _vm.carretera.puntoKm },
+                on: {
+                  blur: function ($event) {
+                    return _vm.descripcioLocalitzacio()
+                  },
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.carretera, "puntoKm", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-field col s4" }, [
+              _c("label", { attrs: { for: "sentido" } }, [_vm._v("Sentido")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.carretera2.sentido,
+                    expression: "carretera2.sentido",
+                  },
+                ],
+                attrs: { type: "text", name: "sentido", id: "sentido" },
+                domProps: { value: _vm.carretera2.sentido },
+                on: {
+                  blur: function ($event) {
+                    return _vm.detallLocalitzacio()
+                  },
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.carretera2, "sentido", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+          ]),
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.datos_incidente.localizacion != 1 ? _c("br") : _vm._e(),
+    _vm._v(" "),
+    _vm.datos_incidente.localizacion != 1 ? _c("br") : _vm._e(),
+    _vm._v(" "),
+    _vm.datos_incidente.localizacion != 1 ? _c("br") : _vm._e(),
+    _vm._v(" "),
+    _c("h5", [_vm._v("Emergencia")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "input-field col s6" }, [
+        _c(
+          "select",
+          {
             directives: [
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.fueraCatalunya.provincia,
-                expression: "fueraCatalunya.provincia",
+                value: _vm.datos_incidente.tiposIncidente,
+                expression: "datos_incidente.tiposIncidente",
               },
             ],
-            attrs: { type: "text", id: "provinciaOut" },
-            domProps: { value: _vm.fueraCatalunya.provincia },
+            staticClass: "form-control",
+            attrs: { id: "tiposIncidete" },
             on: {
-              blur: function ($event) {
-                return _vm.descripcioLocalitzacio()
-              },
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.fueraCatalunya, "provincia", $event.target.value)
-              },
+              change: [
+                function ($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function (o) {
+                      return o.selected
+                    })
+                    .map(function (o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.datos_incidente,
+                    "tiposIncidente",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                },
+                function ($event) {
+                  return _vm.activarFunciones()
+                },
+              ],
             },
-          }),
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _c("h4", [_vm._v("Emergencia")]),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "tiposIncidete" } }, [
-      _vm._v("Tipo Incidente"),
+          },
+          [
+            _c("option", { attrs: { value: "", disabled: "", selected: "" } }, [
+              _vm._v("Tipo Incidente"),
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.tIncidentes, function (tIncidente) {
+              return _c(
+                "option",
+                { key: tIncidente.id, domProps: { value: tIncidente.id } },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(tIncidente.descripcio) +
+                      "\n                "
+                  ),
+                ]
+              )
+            }),
+          ],
+          2
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s6" }, [
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.datos_incidente.incidente,
+                expression: "datos_incidente.incidente",
+              },
+            ],
+            staticClass: "form-control",
+            attrs: { id: "incidente" },
+            on: {
+              change: [
+                function ($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function (o) {
+                      return o.selected
+                    })
+                    .map(function (o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.datos_incidente,
+                    "incidente",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                },
+                function ($event) {
+                  return _vm.activarFunciones()
+                },
+              ],
+            },
+          },
+          [
+            _c("option", { attrs: { value: "", disabled: "", selected: "" } }, [
+              _vm._v("Incidente"),
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.incidentes, function (incidente) {
+              return _c(
+                "option",
+                { key: incidente.id, domProps: { value: incidente.id } },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(incidente.descripcio) +
+                      "\n                "
+                  ),
+                ]
+              )
+            }),
+          ],
+          2
+        ),
+      ]),
     ]),
-    _vm._v(" "),
-    _c(
-      "select",
-      {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.datos_incidente.tiposIncidente,
-            expression: "datos_incidente.tiposIncidente",
-          },
-        ],
-        staticClass: "form-control",
-        attrs: { id: "tiposIncidete" },
-        on: {
-          change: [
-            function ($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function (o) {
-                  return o.selected
-                })
-                .map(function (o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.$set(
-                _vm.datos_incidente,
-                "tiposIncidente",
-                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-              )
-            },
-            function ($event) {
-              return _vm.activarFunciones()
-            },
-          ],
-        },
-      },
-      [
-        _c("option", { attrs: { value: "" } }),
-        _vm._v(" "),
-        _vm._l(_vm.tIncidentes, function (tIncidente) {
-          return _c(
-            "option",
-            { key: tIncidente.id, domProps: { value: tIncidente.id } },
-            [
-              _vm._v(
-                "\n            " + _vm._s(tIncidente.descripcio) + "\n        "
-              ),
-            ]
-          )
-        }),
-      ],
-      2
-    ),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "incidente" } }, [_vm._v("Incidente")]),
-    _vm._v(" "),
-    _c(
-      "select",
-      {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.datos_incidente.incidente,
-            expression: "datos_incidente.incidente",
-          },
-        ],
-        staticClass: "form-control",
-        attrs: { id: "incidente" },
-        on: {
-          change: [
-            function ($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function (o) {
-                  return o.selected
-                })
-                .map(function (o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.$set(
-                _vm.datos_incidente,
-                "incidente",
-                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-              )
-            },
-            function ($event) {
-              return _vm.activarFunciones()
-            },
-          ],
-        },
-      },
-      [
-        _c("option", { attrs: { value: "" } }),
-        _vm._v(" "),
-        _vm._l(_vm.incidentes, function (incidente) {
-          return _c(
-            "option",
-            { key: incidente.id, domProps: { value: incidente.id } },
-            [
-              _vm._v(
-                "\n            " + _vm._s(incidente.descripcio) + "\n        "
-              ),
-            ]
-          )
-        }),
-      ],
-      2
-    ),
   ])
 }
 var staticRenderFns = []
@@ -43949,200 +44130,8 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h3", [_vm._v("Dades Personals:")]),
+    _c("h4", [_vm._v("Dades Personals " + _vm._s(_vm.cronos))]),
     _vm._v(" "),
-<<<<<<< HEAD
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.guardar,
-          expression: "guardar",
-        },
-      ],
-      attrs: { type: "checkbox", id: "guardarUser" },
-      domProps: {
-        checked: Array.isArray(_vm.guardar)
-          ? _vm._i(_vm.guardar, null) > -1
-          : _vm.guardar,
-      },
-      on: {
-        change: function ($event) {
-          var $$a = _vm.guardar,
-            $$el = $event.target,
-            $$c = $$el.checked ? true : false
-          if (Array.isArray($$a)) {
-            var $$v = null,
-              $$i = _vm._i($$a, $$v)
-            if ($$el.checked) {
-              $$i < 0 && (_vm.guardar = $$a.concat([$$v]))
-            } else {
-              $$i > -1 &&
-                (_vm.guardar = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
-            }
-          } else {
-            _vm.guardar = $$c
-          }
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "guardarUser" } }, [_vm._v("Guardar user")]),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "telefono" } }, [_vm._v("Telefono")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_personales.telefono,
-          expression: "datos_personales.telefono",
-        },
-      ],
-      attrs: { type: "number", name: "telefono", id: "telefono", required: "" },
-      domProps: { value: _vm.datos_personales.telefono },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataPersonal()
-        },
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.datos_personales, "telefono", $event.target.value)
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "antecedentes" } }, [_vm._v("Antecedentes")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_personales.antecedentes,
-          expression: "datos_personales.antecedentes",
-        },
-      ],
-      attrs: {
-        type: "text",
-        name: "antecedentes",
-        id: "antecedentes",
-        required: "",
-      },
-      domProps: { value: _vm.datos_personales.antecedentes },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataPersonal()
-        },
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.datos_personales, "antecedentes", $event.target.value)
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "procedencia" } }, [_vm._v("Procedencia")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_personales.procedencia,
-          expression: "datos_personales.procedencia",
-        },
-      ],
-      attrs: {
-        type: "text",
-        name: "procedencia",
-        id: "procedencia",
-        required: "",
-      },
-      domProps: { value: _vm.datos_personales.procedencia },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataPersonal()
-        },
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.datos_personales, "procedencia", $event.target.value)
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "origen" } }, [_vm._v("Origen")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.datos_personales.origen,
-          expression: "datos_personales.origen",
-        },
-      ],
-      attrs: { type: "text", name: "origen", id: "origen", required: "" },
-      domProps: { value: _vm.datos_personales.origen },
-      on: {
-        blur: function ($event) {
-          return _vm.setDataPersonal()
-        },
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.$set(_vm.datos_personales, "origen", $event.target.value)
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "municipio" } }, [_vm._v("Municipio")]),
-    _vm._v(" "),
-    _c(
-      "select",
-      {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.datos_personales.municipio,
-            expression: "datos_personales.municipio",
-          },
-        ],
-        staticClass: "form-control",
-        attrs: { id: "municipio", required: "" },
-        on: {
-          change: [
-            function ($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function (o) {
-                  return o.selected
-                })
-                .map(function (o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.$set(
-                _vm.datos_personales,
-                "municipio",
-                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-              )
-            },
-            function ($event) {
-              return _vm.activarFunciones()
-=======
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "input-field col s3" }, [
         _c("label", { attrs: { for: "telefono" } }, [_vm._v("Telefono")]),
@@ -44154,7 +44143,6 @@ var render = function () {
               rawName: "v-model",
               value: _vm.datos_personales.telefono,
               expression: "datos_personales.telefono",
->>>>>>> a922cfbd0c324cacd61f2b7e16301f82916aed73
             },
           ],
           attrs: {

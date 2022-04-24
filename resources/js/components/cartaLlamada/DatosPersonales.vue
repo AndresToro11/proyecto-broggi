@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Dades Personals:</h3>
+        <h4>Dades Personals {{ cronos }}</h4>
         <div class="row">
             <div class="input-field col s3">
                 <label for="telefono">Telefono</label>
@@ -37,9 +37,7 @@
                     </option>
                 </select>
             </div>
-
         </div>
-
         <div class="row">
             <div class="input-field col s12">
                 <label for="notaComun">Nota comun:</label>
@@ -65,6 +63,7 @@ export default {
     data() {
         return {
             guardar:[],
+            cronos:1,
             municipios: [],
             datos_personales:{
                 telefono:"",
