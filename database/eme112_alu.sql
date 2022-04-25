@@ -441,6 +441,7 @@ CREATE TABLE `usuaris` (
   `nom` varchar(45) NOT NULL,
   `cognoms` varchar(45) NOT NULL,
   `perfils_id` int(11) NOT NULL,
+  `activo` boolean NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `codi_UNIQUE` (`codi`),
   KEY `fk_usuaris_perfils1_idx` (`perfils_id`),
@@ -451,7 +452,7 @@ CREATE TABLE `usuaris` (
 --
 -- Dumping data for table `usuaris`
 --
-INSERT INTO usuaris VALUES (null,'00000','alexPro@gmail.com','123321','Alex','Cubells',2);
+INSERT INTO usuaris VALUES (null,'00000','alexPro@gmail.com','123321','Alex','Cubells',2,1);
 
 LOCK TABLES `usuaris` WRITE;
 /*!40000 ALTER TABLE `usuaris` DISABLE KEYS */;

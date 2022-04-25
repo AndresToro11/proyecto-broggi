@@ -5,6 +5,16 @@
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
                         <datos-personales @get-datapersonal="getDataPersonal"></datos-personales>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Cancelar</a>
+                        <a href="#" @click="camposExtra()">Aceptar</a>
+                    </div>
+                </div>
+            </div>
+             <div class="col s6 m3">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
                         <datos-incidentes @get-dataincidente="getDataIncidente"></datos-incidentes>
                     </div>
                     <div class="card-action">
@@ -13,6 +23,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
             <div class="col s6 m3">
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
@@ -39,6 +51,10 @@
                                         </tbody>
                                 </table>
                             </span>
+                        </div>
+                            <div class="card-action">
+                            <a href="#">Cancelar</a>
+                            <a href="#" @click="camposExtra()">Aceptar</a>
                         </div>
                     </div>
                 </div>

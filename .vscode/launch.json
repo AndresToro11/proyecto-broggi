@@ -8,7 +8,7 @@
             "name": "Launch Chrome",
             "request": "launch",
             "type": "chrome",
-            "url": "http://localhost:8080/proyecto-broggi/public",
+            "url": "http://localhost:8080/proyecto-broggi/public/llamada",
             "webRoot": "${workspaceFolder}"
         },
         {

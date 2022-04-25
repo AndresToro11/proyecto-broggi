@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h4>Dades Personals {{ cronos }}</h4>
+        <h6><b> Dades Personals {{ cronos }}</b> </h6>
         <div class="row">
             <div class="input-field col s3">
                 <label for="telefono">Telefono</label>
@@ -13,10 +13,6 @@
             <div class="input-field col s3">
                 <label for="procedencia">Procedencia</label>
                 <input type="text" name="procedencia" id="procedencia" v-model="datos_personales.procedencia" @blur="setDataPersonal()" required />
-            </div>
-            <div class="input-field col s3">
-                <label for="origen">Origen</label>
-                <input type="text" name="origen" id="origen" v-model="datos_personales.origen" @blur="setDataPersonal()" required />
             </div>
         </div>
         <div class="row">
