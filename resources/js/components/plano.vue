@@ -1,9 +1,12 @@
 <template>
-        <div id='map'></div>
+        <div></div>
 </template>
 
 <script>
     export default {
+
+        props: ['place', 'codigo'],
+
         data() {
             return {
                 loading: false,
@@ -12,13 +15,21 @@
             }
         },
         methods: {
+            
+            crearMapa() {
 
-            crearMapa(place) {
+                console.log(this.codigo)
+
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute('id', this.codigo + 'mapa');
+                newDiv.setAttribute('class', 'map');
+                document.getElementById(this.codigo + 'container').appendChild(newDiv);
+
                 mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVzdG9ybzExIiwiYSI6ImNsMWVzeHhzbDBxc2kzZG1mZGN5b3Z1bW0ifQ.Ri10l_V5MJyWX9VoF0a0iw';
                 const mapboxClient = mapboxSdk({ accessToken: mapboxgl.accessToken });
                 mapboxClient.geocoding
                 .forwardGeocode({
-                    query: place,
+                    query: this.place,
                     autocomplete: false,
                     limit: 1
                 })
@@ -37,7 +48,7 @@
                 const feature = response.body.features[0];
                 
                 this.map = new mapboxgl.Map({
-                    container: 'map',
+                    container: this.codigo + 'mapa',
                     style: 'mapbox://styles/mapbox/streets-v11',
                     center: feature.center,
                     zoom: 12
@@ -55,26 +66,26 @@
                     .setPopup(popup)
                     .addTo(this.map);
             });
-            },
+            }
         },
 
         created() {
 
         },
         mounted() {
-            this.crearMapa('Barcelona, Spain');
+            this.crearMapa();
         }
     }
 </script>
 
 <style>
-    #map {
+    .map {
         width: 100%;
         height: 100%;
+        position: absolute;
     }
-    #sortir {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
+    #canvas{
+        width: 100%;
+        height: 100%;
     }
 </style>

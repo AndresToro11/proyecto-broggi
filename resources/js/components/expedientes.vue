@@ -8,7 +8,7 @@
 
         <div v-else>
             <input @input="buscarExpediente" v-model="buscar" type="text" placeholder="Buscar">
-            <div class="test" v-for="expediente in expedientes" :key="expediente.id">
+            <div class="" v-for="expediente in expedientes" :key="expediente.id">
                 <p>
                     <div v-if="expediente.estats_expedients_id == 1">
                         <a class="btn btn-success" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%">
@@ -103,7 +103,10 @@
                 <div class="d-flex flex-wrap justify-content-between">
 
                     <div class="card" style="width: 49%">
-                        <plano></plano>
+                        <div :id="expediente.id + 'container'">
+                            <plano :place="expediente.cartas_trucades[0].municipi.nom" :codigo="expediente.id"></plano>
+                        </div>
+                        
                     </div>
                      
                     <div class="card" v-for="carta in expediente.cartas_trucades" :key="carta.id" style="width: 49%">
@@ -162,7 +165,9 @@
 </template>
 
 <script>
+import plano from './plano.vue';
     export default {
+  components: { plano },
 
         data(){
             return {
@@ -171,7 +176,8 @@
                 contador : 0,
                 buscar: '',
                 actual: [],
-                mapaOk: false
+                mapaOk: false,
+                map: []
             }
         },
 

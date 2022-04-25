@@ -6070,6 +6070,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _plano_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plano.vue */ "./resources/js/components/plano.vue");
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -6239,7 +6240,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    plano: _plano_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       expedientes: [],
@@ -6247,7 +6255,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       contador: 0,
       buscar: '',
       actual: [],
-      mapaOk: false
+      mapaOk: false,
+      map: []
     };
   },
   methods: {
@@ -6882,6 +6891,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['place', 'codigo'],
   data: function data() {
     return {
       loading: false,
@@ -6890,15 +6900,20 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    crearMapa: function crearMapa(place) {
+    crearMapa: function crearMapa() {
       var _this = this;
 
+      console.log(this.codigo);
+      var newDiv = document.createElement("div");
+      newDiv.setAttribute('id', this.codigo + 'mapa');
+      newDiv.setAttribute('class', 'map');
+      document.getElementById(this.codigo + 'container').appendChild(newDiv);
       mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVzdG9ybzExIiwiYSI6ImNsMWVzeHhzbDBxc2kzZG1mZGN5b3Z1bW0ifQ.Ri10l_V5MJyWX9VoF0a0iw';
       var mapboxClient = mapboxSdk({
         accessToken: mapboxgl.accessToken
       });
       mapboxClient.geocoding.forwardGeocode({
-        query: place,
+        query: this.place,
         autocomplete: false,
         limit: 1
       }).send().then(function (response) {
@@ -6910,7 +6925,7 @@ __webpack_require__.r(__webpack_exports__);
 
         var feature = response.body.features[0];
         _this.map = new mapboxgl.Map({
-          container: 'map',
+          container: _this.codigo + 'mapa',
           style: 'mapbox://styles/mapbox/streets-v11',
           center: feature.center,
           zoom: 12
@@ -6927,7 +6942,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {},
   mounted: function mounted() {
-    this.crearMapa('Barcelona, Spain');
+    this.crearMapa();
   }
 });
 
@@ -25455,7 +25470,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#map {\n    width: 100%;\n    height: 100%;\n}\n#sortir {\n    position: fixed;\n    right: 20px;\n    bottom: 20px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.map {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n}\n#canvas{\n    width: 100%;\n    height: 100%;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -45607,7 +45622,7 @@ var render = function () {
             }),
             _vm._v(" "),
             _vm._l(_vm.expedientes, function (expediente) {
-              return _c("div", { key: expediente.id, staticClass: "test" }, [
+              return _c("div", { key: expediente.id }, [
                 _c("p"),
                 expediente.estats_expedients_id == 1
                   ? _c("div", [
@@ -45864,8 +45879,23 @@ var render = function () {
                             staticClass: "card",
                             staticStyle: { width: "49%" },
                           },
-                          [_c("plano")],
-                          1
+                          [
+                            _c(
+                              "div",
+                              { attrs: { id: expediente.id + "container" } },
+                              [
+                                _c("plano", {
+                                  attrs: {
+                                    place:
+                                      expediente.cartas_trucades[0].municipi
+                                        .nom,
+                                    codigo: expediente.id,
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ]
                         ),
                         _vm._v(" "),
                         _vm._l(expediente.cartas_trucades, function (carta) {
@@ -46738,7 +46768,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "map" } })
+  return _c("div")
 }
 var staticRenderFns = []
 render._withStripped = true
