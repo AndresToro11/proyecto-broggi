@@ -15,10 +15,8 @@
             }
         },
         methods: {
-            
-            crearMapa() {
 
-                console.log(this.codigo)
+            crearMapa() {
 
                 var newDiv = document.createElement("div");
                 newDiv.setAttribute('id', this.codigo + 'mapa');
@@ -46,14 +44,14 @@
                         return;
                 }
                 const feature = response.body.features[0];
-                
+
                 this.map = new mapboxgl.Map({
                     container: this.codigo + 'mapa',
                     style: 'mapbox://styles/mapbox/streets-v11',
                     center: feature.center,
                     zoom: 12
                 });
-                
+
                 const popup = new mapboxgl.Popup({ offset: 25 })
                     .setText(
                         'hola'
@@ -63,7 +61,6 @@
                     new mapboxgl.Marker({
                     color: '#E74C3C',})
                     .setLngLat(feature.center)
-                    .setPopup(popup)
                     .addTo(this.map);
             });
             }
@@ -83,9 +80,5 @@
         width: 100%;
         height: 100%;
         position: absolute;
-    }
-    #canvas{
-        width: 100%;
-        height: 100%;
     }
 </style>

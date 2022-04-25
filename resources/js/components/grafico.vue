@@ -1,6 +1,6 @@
 <template>
-    <div>
-
+    <div class="m-4">
+        <h1>Gráficos</h1>
         <div v-if="loading == true">
             <div id="loader" class="text-center">
                 <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
@@ -9,7 +9,7 @@
         </div>
 
         <div v-else>
-            <canvas id="grafico"></canvas>
+
                 <button @click="selectProvincias">Provincias</button>
                 <button @click="selectMunicipios">Municipios</button>
                 <button @click="selectUsuariosIncidentes">Incidentes</button>
@@ -22,6 +22,53 @@
                         </option>
                     </select>
                 </div>
+        </div>
+
+        <div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Provincias
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div v-if="mostrar == 1">
+                                <canvas id="grafico"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Municipios
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div v-if="mostrar == 2">
+                                <canvas id="grafico"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Incidentes
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div v-if="mostrar == 3">
+                                <canvas id="grafico"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -38,13 +85,20 @@
                 usuarios: [],
                 selected: 0,
                 loading: false,
-                showUsuarios: false
+                showUsuarios: false,
+                mostrar: 1
             }
         },
 
         methods:{
             selectProvincias(){
                 this.loading = true;
+
+                let elem = document.getElementById('collapseOne');
+                elem.setAttribute('class', 'accordion-collapse collapse show');
+
+                this.mostrar = 1;
+
                 axios
                 .get('/grafico/provincias')
 
@@ -181,5 +235,4 @@
             this.selectUsuariosIncidentes()
         }
     }
-    //https://programmerclick.com/article/27651329726/
 </script>

@@ -106,9 +106,9 @@
                         <div :id="expediente.id + 'container'">
                             <plano :place="expediente.cartas_trucades[0].municipi.nom" :codigo="expediente.id"></plano>
                         </div>
-                        
+
                     </div>
-                     
+
                     <div class="card" v-for="carta in expediente.cartas_trucades" :key="carta.id" style="width: 49%">
                         <div class="card-header bg-light rounded-3" style="width: 30%">
                             Codigo llamada: {{ carta.id }}
@@ -219,3 +219,4 @@ import plano from './plano.vue';
         }
     }
 </script>
+<style>

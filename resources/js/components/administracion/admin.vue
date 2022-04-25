@@ -26,8 +26,8 @@
         <div v-if="seccion == 'todos'">
             <div class="card-body">
                 <div class="mt-4" v-if="loading == true">
-                    <div id="loader" class="text-center">
-                        <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
+                    <div class="spinner-border text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
                     </div>
                 </div>
 
@@ -73,8 +73,8 @@
             <div v-else-if="seccion == 'operadores'">
                 <div class="card-body">
                     <div class="mt-4" v-if="loading == true">
-                        <div id="loader" class="text-center">
-                            <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
+                        <div class="spinner-border text-danger" role="status">
+                            <span class="visually-hidden">Loading...</span>
                         </div>
                     </div>
 
@@ -119,8 +119,8 @@
             <div v-else-if="seccion == 'supervisores'">
                 <div class="card-body">
                     <div class="mt-4" v-if="loading == true">
-                        <div id="loader" class="text-center">
-                            <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
+                        <div class="spinner-border text-danger" role="status">
+                            <span class="visually-hidden">Loading...</span>
                         </div>
                     </div>
 
@@ -163,8 +163,8 @@
             <div v-else-if="seccion == 'inactivos'">
                 <div class="card-body">
                     <div class="mt-4" v-if="loading == true">
-                        <div id="loader" class="text-center">
-                            <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
+                        <div class="spinner-border text-danger" role="status">
+                            <span class="visually-hidden">Loading...</span>
                         </div>
                     </div>
 
