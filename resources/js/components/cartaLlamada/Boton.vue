@@ -2,8 +2,8 @@
     <div>
         <div class="row">
             <div class="col s6 m3">
-                <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
+                <div class="card  ">
+                    <div class="card-content ">
                         <datos-personales @get-datapersonal="getDataPersonal"></datos-personales>
                     </div>
                     <div class="card-action">
@@ -13,21 +13,17 @@
                 </div>
             </div>
              <div class="col s6 m3">
-                <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
+                <div class="card  ">
+                    <div class="card-content ">
                         <datos-incidentes @get-dataincidente="getDataIncidente"></datos-incidentes>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Cancelar</a>
-                        <a href="#" @click="camposExtra()">Aceptar</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col s6 m3">
-                <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
+                <div class="card  ">
+                    <div class="card-content ">
                         <span class="card-title">Expedientes Relacionados: {{expedienteRelacionado}}</span>
                         <div class="card-action">
                             <span>
@@ -38,7 +34,7 @@
                                             <th scope="col">Telefono</th>
                                             <th scope="col">Localizacion</th>
                                             <th scope="col">Tipificacion</th>
-                                            <th scope="col"><button type="button" @click="expedienteRela(null)">Check</button></th>
+                                            <th scope="col"><button class="btn colorbutton" type="button" @click="expedienteRela(null)">Check</button></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -47,19 +43,13 @@
                                             <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">{{pruebaCarta.telefon}}</td>
                                             <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">{{pruebaCarta.municipis_id}}</td>
                                             <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">{{pruebaCarta.incidents_id}}</td>
-                                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id"> <button type="button" @click="expedienteRela(pruebaCarta.expedients_id)">Check</button></td>                                        </tr>
+                                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id"> <button class="btn colorbutton" type="button" @click="expedienteRela(pruebaCarta.expedients_id)">Check</button></td>                                        </tr>
                                         </tbody>
                                 </table>
                             </span>
                         </div>
-                            <div class="card-action">
-                            <a href="#">Cancelar</a>
-                            <a href="#" @click="camposExtra()">Aceptar</a>
-                        </div>
                     </div>
                 </div>
-                <button type="button">Cancelar</button>
-                <button type="button" @click="camposExtra()">Aceptar</button>
             </div>
         </div>
     </div>

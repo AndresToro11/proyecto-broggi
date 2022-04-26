@@ -3,24 +3,23 @@
         <h6> <b>Datos Incidente </b> </h6>
         <div class="row">
             <div class="input-field col s4">
-                <select class="form-control" id="provincia" v-model="datos_incidente.provincia" @change="setDataIncidente(datos_incidente), provinciaComarca()">
-                    <option value="" disabled selected>Provincia</option>
+                <select class="browser-default" id="provincia" v-model="datos_incidente.provincia" @change="setDataIncidente(datos_incidente), provinciaComarca()">
+                    <option value="" selected disabled >Provincia</option>
                     <option v-for="provincia in provincias" :key="provincia.id" :value="provincia.id">
                         {{ provincia.nom }}
                     </option>
                 </select>
             </div>
             <div class="input-field col s4">
-                    <select class="form-control" id="comarca" v-model="datos_incidente.comarca" @change="activarFunciones(), comarcaMunicipio()">
-                        <option value="" disabled selected>Comarca</option>
-                        <option v-for="comarca in comarcas" :key="comarca.id" :value="comarca.id">
-                                {{ comarca.nom }}
-                        </option>
-                    </select>
-
+                <select class="browser-default" id="comarca" v-model="datos_incidente.comarca" @change="activarFunciones(), comarcaMunicipio()">
+                    <option value="" disabled selected>Comarca</option>
+                    <option v-for="comarca in comarcas" :key="comarca.id" :value="comarca.id">
+                        {{ comarca.nom }}
+                    </option>
+                </select>
             </div>
             <div class="input-field col s4">
-                <select class="form-control" id="municipio" v-model="datos_incidente.municipio" @change="activarFunciones()">
+                <select class="browser-default" id="municipio" v-model="datos_incidente.municipio" @change="activarFunciones()">
                     <option value="" disabled selected>Municipios</option>
                     <option v-for="municipio in municipios" :key="municipio.id" :value="municipio.id">
                         {{ municipio.nom }}
@@ -30,7 +29,7 @@
         </div>
         <h6>Tipos de localizacion</h6>
             <div class="input-field col s4">
-                <select class="form-control" id="tiposLocalizacion" v-model="datos_incidente.localizacion" @change="activarFunciones()" required >
+                <select class="browser-default" id="tiposLocalizacion" v-model="datos_incidente.localizacion" @change="activarFunciones()" required >
                     <option value="null" disabled></option>
                     <option v-for="tiposLocalizacion in tiposLocalizaciones" :key="tiposLocalizacion.id"  :value="tiposLocalizacion.id">
                         {{ tiposLocalizacion.tipus   }}
@@ -38,13 +37,13 @@
                 </select>
             </div>
         <span v-if="datos_incidente.localizacion == 2">
-                <div class="input-field col s4">
+                <div class="input-field col s8">
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" v-model="puntoSingular.nombre" @blur="descripcioLocalitzacio()">
                 </div>
         </span>
         <span v-else-if="datos_incidente.localizacion == 5">
-                <div class="input-field col s4">
+                <div class="input-field col s8">
                     <label for="provincia">Provincia</label>
                     <input type="text" id="provinciaOut" v-model="fueraCatalunya.provincia" @blur="descripcioLocalitzacio()">
                 </div>
@@ -106,16 +105,16 @@
         <h6>Emergencia</h6>
         <div class="row">
             <div class="input-field col s6">
-                <select class="form-control" id="tiposIncidete" v-model="datos_incidente.tiposIncidente"  @change="activarFunciones()">
-                    <option value="" disabled selected>Tipo Incidente</option>
+                <select class="browser-default" id="tiposIncidete" v-model="datos_incidente.tiposIncidente"  @change="activarFunciones()">
+                    <option value="" selected disabled >Tipo Incidente</option>
                     <option v-for="tIncidente in tIncidentes" :key="tIncidente.id" :value="tIncidente.id">
                         {{ tIncidente.descripcio }}
                     </option>
                 </select>
             </div>
             <div class="input-field col s6">
-                <select class="form-control" id="incidente" v-model="datos_incidente.incidente"  @change="activarFunciones()">
-                    <option value="" disabled selected>Incidente</option>
+                <select class="browser-default" id="incidente" v-model="datos_incidente.incidente"  @change="activarFunciones()">
+                    <option value="" selected disabled >Incidente</option>
                     <option v-for="incidente in incidentes" :key="incidente.id" :value="incidente.id">
                         {{ incidente.descripcio }}
                     </option>
@@ -129,8 +128,10 @@ export default {
     data() {
         return {
             municipios: [],
+            municipios2: [],
             provincias: [],
             comarcas: [],
+            comarcas2: [],
             tiposLocalizaciones: [],
             tIncidentes: [],
             incidentes: [],
@@ -183,6 +184,7 @@ export default {
                 .then((response) => {
                     console.log("Municipio OK");
                     me.municipios = response.data;
+                    me.municipios2 = response.data;
                 })
                 .catch((error) => {
                     console.log(error);
@@ -203,6 +205,7 @@ export default {
                 .then((response) => {
                     console.log("Comarca OK");
                     me.comarcas = response.data;
+                    me.comarcas2 = response.data;
                 })
                 .catch((error) => {
                     console.log(error);
@@ -302,21 +305,18 @@ export default {
             this.setDataIncidente();
         },
         provinciaComarca(){
-            debugger
-            let ave = this.comarcas;
-            this.comarcas = null;
-            for (let index = 0; index < ave.length; index++) {
-                if (this.datos_incidente.provincia == ave.provincies_id) {
-                    this.comarcas+=this.provincias[index].comarques;
+            this.comarcas = [];
+            for (let index = 0; index < this.comarcas2.length; index++) {
+                if (this.datos_incidente.provincia == this.comarcas2[index].provincies_id) {
+                    this.comarcas.push(this.comarcas2[index]);
                 }
             }
         },
         comarcaMunicipio(){
-            let ave = this.municipios;
-            this.municipios = null;
-            for (let index = 0; index < ave.length; index++) {
-                if (this.datos_incidente.comarca == ave.provincies_id) {
-                    this.municipios+=this.comarcas[index].municipis;
+            this.municipios = [];
+            for (let index = 0; index < this.municipios2.length; index++) {
+                if (this.datos_incidente.comarca == this.municipios2[index].comarques_id) {
+                    this.municipios.push(this.municipios2[index]);
                 }
             }
         }
