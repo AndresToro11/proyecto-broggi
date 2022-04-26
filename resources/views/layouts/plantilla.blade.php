@@ -26,17 +26,33 @@
 
     </head>
     <body>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="{{ url('/home') }}" class="brand-logo"><img src="{{ asset('images/logoBroggi.png') }}" alt="Nada" width="200px" height="45px"></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{ url('/expedientes') }}">Expedientes</a></li>
-                    <li><a href="{{ url('/grafico') }}">Grafico</a></li>
-                    <li><a href="{{ url('/admin') }}">Admin</a></li>
-                    <li><a href="{{ url('/mapa') }}">Mapa</a></li>
-                </ul>
-            </div>
-        </nav>
+
+        <div class=" sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="{{ asset('images/logoBroggi.png') }}" alt="Nada" width="60px" height="60px"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item m-4">
+                                <a class="nav-link active" aria-current="page" href="{{ url('/expedientes') }}">Expedientes</a>
+                            </li>
+                            <li class="nav-item m-4">
+                                <a class="nav-link active" aria-current="page" href="{{ url('/grafico') }}">Gráficos</a>
+                            </li>
+                            <li class="nav-item m-4">
+                                <a class="nav-link active" aria-current="page" href="{{ url('/admin') }}">Administración</a>
+                            </li>
+                            <li class="nav-item m-4">
+                                <a class="nav-link active" aria-current="page" href="{{ url('/mapa') }}">Mapa</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
 
         <div id="app" class="container">
             @yield('contenido')

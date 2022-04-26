@@ -44567,7 +44567,7 @@ var render = function () {
                 _c("div", { staticClass: "card col-2 m-4" }, [
                   _c("div", { staticClass: "card-image" }, [
                     _c("img", {
-                      attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") },
+                      attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") },
                     }),
                     _vm._v(" "),
                     _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
@@ -45046,7 +45046,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
@@ -45345,7 +45345,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
@@ -45648,6 +45648,7 @@ var render = function () {
                   expression: "buscar",
                 },
               ],
+              staticClass: "validate",
               attrs: { type: "text", placeholder: "Buscar" },
               domProps: { value: _vm.buscar },
               on: {
@@ -45911,169 +45912,203 @@ var render = function () {
                   [
                     _c(
                       "div",
-                      {
-                        staticClass: "d-flex flex-wrap justify-content-between",
-                      },
+                      { staticClass: " d-flex justify-content-center" },
                       [
                         _c(
                           "div",
                           {
-                            staticClass: "card",
-                            staticStyle: { width: "49%" },
+                            staticClass:
+                              "d-flex flex-wrap justify-content-between",
+                            staticStyle: { width: "95%" },
                           },
                           [
                             _c(
                               "div",
-                              { attrs: { id: expediente.id + "container" } },
+                              {
+                                staticClass: "card",
+                                staticStyle: { width: "49%" },
+                              },
                               [
-                                _c("plano", {
-                                  attrs: {
-                                    place:
-                                      expediente.cartas_trucades[0].municipi
-                                        .nom,
-                                    codigo: expediente.id,
+                                _c(
+                                  "div",
+                                  {
+                                    attrs: { id: expediente.id + "container" },
                                   },
-                                }),
-                              ],
-                              1
+                                  [
+                                    _c("plano", {
+                                      attrs: {
+                                        place:
+                                          expediente.cartas_trucades[0].municipi
+                                            .nom,
+                                        codigo: expediente.id,
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                              ]
                             ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _vm._l(expediente.cartas_trucades, function (carta) {
-                          return _c(
-                            "div",
-                            {
-                              key: carta.id,
-                              staticClass: "card",
-                              staticStyle: { width: "49%" },
-                            },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "card-header bg-light rounded-3",
-                                  staticStyle: { width: "30%" },
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                        Codigo llamada: " +
-                                      _vm._s(carta.id) +
-                                      "\n                    "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "card-body" }, [
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("hr", { staticStyle: { width: "20%" } }),
-                                    _vm._v(" "),
-                                    _c("b", [_vm._v("Provincia")]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(
-                                      " " +
-                                        _vm._s(carta.provincia.nom) +
-                                        "\n                            "
+                            _vm._v(" "),
+                            _vm._l(
+                              expediente.cartas_trucades,
+                              function (carta) {
+                                return _c(
+                                  "div",
+                                  {
+                                    key: carta.id,
+                                    staticClass: "card",
+                                    staticStyle: { width: "49%" },
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "card-header bg-light rounded-3",
+                                        staticStyle: { width: "30%" },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                        Codigo llamada: " +
+                                            _vm._s(carta.id) +
+                                            "\n                    "
+                                        ),
+                                      ]
                                     ),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("hr", { staticStyle: { width: "20%" } }),
                                     _vm._v(" "),
-                                    _c("b", [_vm._v("Municipio")]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(
-                                      " " +
-                                        _vm._s(carta.municipi.nom) +
-                                        "\n                            "
-                                    ),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("hr", { staticStyle: { width: "20%" } }),
-                                    _vm._v(" "),
-                                    _c("b", [_vm._v("Incidente")]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(
-                                      " " +
-                                        _vm._s(carta.incident.descripcio) +
-                                        "\n                            "
-                                    ),
-                                  ]),
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("hr", { staticStyle: { width: "20%" } }),
-                                    _vm._v(" "),
-                                    _c("b", [_vm._v("Fuera de cataluña")]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(" "),
-                                    carta.fora_catalunya
-                                      ? _c("div", [
+                                    _c("div", { staticClass: "card-body" }, [
+                                      _c("div", { staticClass: "row" }, [
+                                        _c("div", { staticClass: "col" }, [
+                                          _c("hr", {
+                                            staticStyle: { width: "20%" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c("b", [_vm._v("Provincia")]),
+                                          _vm._v(" "),
+                                          _c("br"),
                                           _vm._v(
-                                            "\n                                    Si\n                                "
-                                          ),
-                                        ])
-                                      : _c("div", [
-                                          _vm._v(
-                                            "\n                                    No\n                                "
+                                            " " +
+                                              _vm._s(carta.provincia.nom) +
+                                              "\n                            "
                                           ),
                                         ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("hr", { staticStyle: { width: "20%" } }),
-                                    _vm._v(" "),
-                                    _c("b", [_vm._v("Tiempo de la llamada")]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(
-                                      " " +
-                                        _vm._s(carta.temps_trucada) +
-                                        "\n                            "
-                                    ),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("hr", { staticStyle: { width: "20%" } }),
-                                    _vm._v(" "),
-                                    _c("b", [_vm._v("Direccion")]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(
-                                      " " +
-                                        _vm._s(carta.adreca_trucada) +
-                                        "\n                            "
-                                    ),
-                                  ]),
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "row" }, [
-                                  _c("div", { staticClass: "col" }, [
-                                    _c("hr", { staticStyle: { width: "70%" } }),
-                                    _vm._v(" "),
-                                    _c("b", [_vm._v("Nota común")]),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v(
-                                      ' "' +
-                                        _vm._s(carta.nota_comuna) +
-                                        '"\n                            '
-                                    ),
-                                  ]),
-                                ]),
-                              ]),
-                            ]
-                          )
-                        }),
-                      ],
-                      2
+                                        _vm._v(" "),
+                                        _c("div", { staticClass: "col" }, [
+                                          _c("hr", {
+                                            staticStyle: { width: "20%" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c("b", [_vm._v("Municipio")]),
+                                          _vm._v(" "),
+                                          _c("br"),
+                                          _vm._v(
+                                            " " +
+                                              _vm._s(carta.municipi.nom) +
+                                              "\n                            "
+                                          ),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("div", { staticClass: "col" }, [
+                                          _c("hr", {
+                                            staticStyle: { width: "20%" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c("b", [_vm._v("Incidente")]),
+                                          _vm._v(" "),
+                                          _c("br"),
+                                          _vm._v(
+                                            " " +
+                                              _vm._s(
+                                                carta.incident.descripcio
+                                              ) +
+                                              "\n                            "
+                                          ),
+                                        ]),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "row" }, [
+                                        _c("div", { staticClass: "col" }, [
+                                          _c("hr", {
+                                            staticStyle: { width: "20%" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c("b", [
+                                            _vm._v("Fuera de cataluña"),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("br"),
+                                          _vm._v(" "),
+                                          carta.fora_catalunya
+                                            ? _c("div", [
+                                                _vm._v(
+                                                  "\n                                    Si\n                                "
+                                                ),
+                                              ])
+                                            : _c("div", [
+                                                _vm._v(
+                                                  "\n                                    No\n                                "
+                                                ),
+                                              ]),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("div", { staticClass: "col" }, [
+                                          _c("hr", {
+                                            staticStyle: { width: "20%" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c("b", [
+                                            _vm._v("Tiempo de la llamada"),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("br"),
+                                          _vm._v(
+                                            " " +
+                                              _vm._s(carta.temps_trucada) +
+                                              "\n                            "
+                                          ),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("div", { staticClass: "col" }, [
+                                          _c("hr", {
+                                            staticStyle: { width: "20%" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c("b", [_vm._v("Direccion")]),
+                                          _vm._v(" "),
+                                          _c("br"),
+                                          _vm._v(
+                                            " " +
+                                              _vm._s(carta.adreca_trucada) +
+                                              "\n                            "
+                                          ),
+                                        ]),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "row" }, [
+                                        _c("div", { staticClass: "col" }, [
+                                          _c("hr", {
+                                            staticStyle: { width: "70%" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c("b", [_vm._v("Nota común")]),
+                                          _vm._v(" "),
+                                          _c("br"),
+                                          _vm._v(
+                                            ' "' +
+                                              _vm._s(carta.nota_comuna) +
+                                              '"\n                            '
+                                          ),
+                                        ]),
+                                      ]),
+                                    ]),
+                                  ]
+                                )
+                              }
+                            ),
+                          ],
+                          2
+                        ),
+                      ]
                     ),
                   ]
                 ),
@@ -46666,7 +46701,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),

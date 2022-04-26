@@ -7,7 +7,7 @@
         </div>
 
         <div v-else>
-            <input @input="buscarExpediente" v-model="buscar" type="text" placeholder="Buscar">
+            <input @input="buscarExpediente" class="validate" v-model="buscar" type="text" placeholder="Buscar">
             <div class="" v-for="expediente in expedientes" :key="expediente.id">
                 <p>
                     <div v-if="expediente.estats_expedients_id == 1">
@@ -100,14 +100,13 @@
                 </p>
 
             <div class="collapse" v-bind:id="'multiCollapseExample'+ expediente.id">
-                <div class="d-flex flex-wrap justify-content-between">
-
-                    <div class="card" style="width: 49%">
-                        <div :id="expediente.id + 'container'">
-                            <plano :place="expediente.cartas_trucades[0].municipi.nom" :codigo="expediente.id"></plano>
+                <div class=" d-flex justify-content-center">
+                    <div class="d-flex flex-wrap justify-content-between" style="width: 95%">
+                        <div class="card" style="width: 49%">
+                            <div :id="expediente.id + 'container'">
+                                <plano :place="expediente.cartas_trucades[0].municipi.nom" :codigo="expediente.id"></plano>
+                            </div>
                         </div>
-
-                    </div>
 
                     <div class="card" v-for="carta in expediente.cartas_trucades" :key="carta.id" style="width: 49%">
                         <div class="card-header bg-light rounded-3" style="width: 30%">
@@ -159,6 +158,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         </div>
     </div>
