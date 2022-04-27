@@ -1,85 +1,121 @@
 <template>
-    <div>
-        <div class="row">
-            <div class="col s6 m3">
-                <div class="card  ">
-                    <div class="card-content ">
-                        <datos-personales @get-datapersonal="getDataPersonal"></datos-personales>
-                    </div>
-                    <div class="card-action">
-                        <a href="http://localhost:8080/proyecto-broggi/public/home">Cancelar</a>
-                        <a href="#" @click="camposExtra()">Aceptar</a>
-                    </div>
-                </div>
-            </div>
-             <div class="col s6 m3">
-                <div class="card  ">
-                    <div class="card-content ">
-                        <datos-incidentes @get-dataincidente="getDataIncidente"></datos-incidentes>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s6 m3">
-                <div class="card  ">
-                    <div class="card-content ">
-                        <span class="card-title">Expedientes Relacionados: {{expedienteRelacionado}}</span>
-                        <div class="card-action">
-                            <span>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Nº Expediente</th>
-                                            <th scope="col">Telefono</th>
-                                            <th scope="col">Localizacion</th>
-                                            <th scope="col">Tipificacion</th>
-                                            <th scope="col"><button class="btn colorbutton" type="button" @click="expedienteRela(null)">Check</button></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr v-for="(pruebaCarta, index) in pruebaCartas" :key="index">
-                                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">
-                                                {{pruebaCarta.expedients_id}}
-                                            </td>
-                                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">
-                                                {{pruebaCarta.telefon}}
-                                            </td>
-                                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">
-                                                <span v-for="municipi in municipis" :key="municipi.id">
-                                                    <span v-if="municipi.id == pruebaCarta.municipis_id">
-                                                        {{ municipi.nom }}
-                                                    </span>
-                                                </span>
-                                            </td>
-                                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">
+    <div class="card m-5 p-5 z-depth-1">
 
-                                                <span v-for="incidente in incidentes" :key="incidente.id">
-                                                    <span v-if="incidente.id == pruebaCarta.incidents_id">
-                                                        {{ incidente.descripcio }}
-                                                    </span>
-                                                </span>
-                                            </td>
-                                            <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">
-                                                <button class="btn colorbutton" type="button" @click="expedienteRela(pruebaCarta.expedients_id)">Check</button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </span>
+        <div class="row d-flex justify-content-between">
+          <h1 class="col" >Carta Llamada </h1>
+          <p class="col"></p>
+          <p class="col"></p>
+          <h2 class="col">{{crono}}</h2>
+        </div>
+        <span v-if="loading == true">
+            <div class="text-center">
+                <div class="spinner-border text-danger" style="width: 5rem; height: 5rem;" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+        </span>
+        <span v-else>
+            <div class="row">
+                <div class="col s6 m3">
+                    <div class="card z-depth-0">
+                        <div class="card-content ">
+                            <span class="card-title">Dades Personals</span>
+                            <div class="card-action mb-3" >
+                                <span  v-if="cartaLlamada.tipus_localitzacions_id == 1">
+                                    <br>
+                                    <br>
+                                </span>
+                                <datos-personales @get-datapersonal="getDataPersonal" ></datos-personales>
+                                <span  v-if="cartaLlamada.tipus_localitzacions_id == 1">
+                                    <br>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-action colorLink">
+                            <a class="colorLink" href="http://localhost:8080/proyecto-broggi/public/home" @click="pararContador()">Cancelar</a>
+                            <a class="colorLink" href="#" @click="camposExtra(), pararContador()">Aceptar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s6 m3">
+                    <div class="card  z-depth-0">
+                        <div class="card-content ">
+                            <span class="card-title mx-2">Datos Incidente</span>
+                            <div class="card-action mb-3">
+                                <datos-incidentes @get-dataincidente="getDataIncidente"></datos-incidentes>
+                                <span  v-if="cartaLlamada.tipus_localitzacions_id != 1">
+                                    <br>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col s6 m3">
+                    <div class="card  z-depth-0">
+                        <div class="card-content ">
+                            <span class="card-title">Expedientes Relacionados: {{expedienteRelacionado}}</span>
+                            <div class="card-action">
+                                <span>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Nº Expediente</th>
+                                                <th scope="col">Telefono</th>
+                                                <th scope="col">Localizacion</th>
+                                                <th scope="col">Tipificacion</th>
+                                                <th scope="col"><button class="btn colorbutton" type="button" @click="expedienteRela(null)">Check</button></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="(pruebaCarta, index) in pruebaCartas" :key="index">
+                                                <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">
+                                                    {{pruebaCarta.expedients_id}}
+                                                </td>
+                                                <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">
+                                                    {{pruebaCarta.telefon}}
+                                                </td>
+                                                <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">
+                                                    <span v-for="municipi in municipis" :key="municipi.id">
+                                                        <span v-if="municipi.id == pruebaCarta.municipis_id">
+                                                            {{ municipi.nom }}
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">
+
+                                                    <span v-for="incidente in incidentes" :key="incidente.id">
+                                                        <span v-if="incidente.id == pruebaCarta.incidents_id">
+                                                            {{ incidente.descripcio }}
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td v-if="pruebaCarta.telefon == cartaLlamada.telefon || pruebaCarta.municipis_id == cartaLlamada.municipis_id || pruebaCarta.incidents_id == cartaLlamada.incidents_id">
+                                                    <button class="btn colorbutton" type="button" @click="expedienteRela(pruebaCarta.expedients_id)">Check</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </span>
+
+
     </div>
 </template>
 <script>
 export default {
     data() {
         return {
+            crono: 0,
             expedienteRelacionado: null,
+            loading: false,
             idDatosPersonales: [],
             pruebaCartas: [],
             incidentes:[],
@@ -115,6 +151,7 @@ export default {
     },
     methods: {
         select() {
+            this.loading = true;
             let me = this;
             console.log("Entrando a la select");
             axios
@@ -183,6 +220,16 @@ export default {
         },
         getDataAdministrativos(contador) {
             this.contador = contador;
+        },
+
+        pararContador(){
+            clearInterval(contadorInterval);
+        },
+        contador(){
+            this.crono+=1;
+        },
+        empezarContador(){
+            const contadorInterval = setInterval(this.contador,1000);
         },
         camposExtra() {
             let hoy = new Date();
@@ -257,12 +304,11 @@ export default {
             }
         },
 
-        empezarContador: function () {
-            tiempo();
-        },
+
     },
     mounted() {
         this.select();
+        this.empezarContador();
         console.log("Component mounted.");
     },
 };

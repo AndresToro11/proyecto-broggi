@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h6><b> Dades Personals {{ cronos }}</b> </h6>
         <div class="row">
             <div class="input-field col s3">
                 <label for="telefono">Telefono</label>

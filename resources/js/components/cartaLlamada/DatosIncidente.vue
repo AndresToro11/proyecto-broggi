@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h6> <b>Datos Incidente </b> </h6>
         <div class="row">
             <div class="input-field col s4">
                 <select class="browser-default" id="provincia" v-model="datos_incidente.provincia" @change="setDataIncidente(datos_incidente), provinciaComarca()">
@@ -28,7 +27,7 @@
             </div>
         </div>
         <h6>Tipos de localizacion</h6>
-            <div class="input-field col s4">
+            <div class="input-field col s5">
                 <select class="browser-default" id="tiposLocalizacion" v-model="datos_incidente.localizacion" @change="activarFunciones()" required >
                     <option v-for="tiposLocalizacion in tiposLocalizaciones" :key="tiposLocalizacion.id"  :value="tiposLocalizacion.id">
                         {{ tiposLocalizacion.tipus   }}
@@ -36,13 +35,13 @@
                 </select>
             </div>
         <span v-if="datos_incidente.localizacion == 2">
-                <div class="input-field col s8">
+                <div class="input-field col s7">
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" v-model="puntoSingular.nombre" @blur="descripcioLocalitzacio()">
                 </div>
         </span>
         <span v-else-if="datos_incidente.localizacion == 5">
-                <div class="input-field col s8">
+                <div class="input-field col s7">
                     <label for="provincia">Provincia</label>
                     <input type="text" id="provinciaOut" v-model="fueraCatalunya.provincia" @blur="descripcioLocalitzacio()">
                 </div>
@@ -58,7 +57,7 @@
                         <input type="text" name="direccion" id="direccion" v-model="calle.direccion" @blur="descripcioLocalitzacio()">
                 </div>
                 <div class="input-field col s4">
-                        <label for="numero">Numero puerta</label>
+                        <label for="numero">Portal</label>
                         <input type="number" name="numero" id="numero" v-model="calle.numPuerta" @blur="descripcioLocalitzacio()">
                 </div>
             </div>
