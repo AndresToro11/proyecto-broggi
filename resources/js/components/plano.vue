@@ -81,4 +81,8 @@
         height: 100%;
         position: absolute;
     }
+    .mapboxgl-canvas{
+        width: 100% !important;
+        height: 100% !important;
+    }
 </style>

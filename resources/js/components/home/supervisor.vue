@@ -18,7 +18,7 @@
                 <a href="/proyecto-broggi/public/expedientes" type="button" class="btn btn-primary">Gestionar expediente</a>
             </div>
             <div class="col">
-                <a href="/proyecto-broggi/public/video" type="button" class="btn btn-primary">Estado operadores</a>
+                <a href="/proyecto-broggi/public/operadores" type="button" class="btn btn-primary">Estado operadores</a>
             </div>
         </div>
 

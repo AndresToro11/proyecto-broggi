@@ -1,7 +1,10 @@
 <template>
     <div class="container m-4">
         <h1 class="m-4">Mapa</h1>
-        <div id='map'></div>
+        <div class="card">
+            <div id='map'></div>
+        </div>
+
     </div>
 </template>
 
@@ -135,7 +138,7 @@
 <style>
     #map {
         width: 100%;
-        height: 700px;
+        height: 600px;
     }
     #sortir {
         position: fixed;

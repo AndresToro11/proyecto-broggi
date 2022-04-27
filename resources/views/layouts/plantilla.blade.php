@@ -38,6 +38,9 @@
                     </button>
                     <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
                         <ul class="navbar-nav">
+                        <li class="nav-item m-4">
+                                <a class="nav-link active" aria-current="page" href="{{ url('/home') }}">Inicio</a>
+                            </li>
                             <li class="nav-item m-4">
                                 <a class="nav-link active" aria-current="page" href="{{ url('/expedientes') }}">Expedientes</a>
                             </li>

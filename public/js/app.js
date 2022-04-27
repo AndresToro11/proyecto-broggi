@@ -7156,50 +7156,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 var grafica;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -7208,8 +7164,7 @@ var grafica;
       usuarios: [],
       selected: 0,
       loading: false,
-      showUsuarios: false,
-      mostrar: 1
+      showUsuarios: false
     };
   },
   methods: {
@@ -7217,9 +7172,6 @@ var grafica;
       var _this = this;
 
       this.loading = true;
-      var elem = document.getElementById('collapseOne');
-      elem.setAttribute('class', 'accordion-collapse collapse show');
-      this.mostrar = 1;
       axios.get('/grafico/provincias').then(function (response) {
         var titulo = 'Incidentes';
         var provincias = [];
@@ -7325,10 +7277,9 @@ var grafica;
             backgroundColor: ['rgba(168, 29, 31, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(255, 72, 0)', 'rgba(54, 135, 30)']
           }]
         }
-      });
-      grafica.canvas.parentNode.style.left = '40%';
-      grafica.canvas.parentNode.style.width = '50%';
-      grafica.canvas.parentNode.style.heigth = '40%';
+      }); // grafica.canvas.parentNode.style.width = '100%';
+      // grafica.canvas.parentNode.style.heigth = '100%';
+
       this.loading = false;
     }
   },
@@ -7480,6 +7431,9 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//
+//
+//
 //
 //
 //
@@ -26359,7 +26313,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#map {\n    width: 100%;\n    height: 700px;\n}\n#sortir {\n    position: fixed;\n    right: 20px;\n    bottom: 20px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#map {\n    width: 100%;\n    height: 600px;\n}\n#sortir {\n    position: fixed;\n    right: 20px;\n    bottom: 20px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -26383,7 +26337,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.map {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.map {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n}\n.mapboxgl-canvas{\n    width: 100% !important;\n    height: 100% !important;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -45790,7 +45744,7 @@ var render = function () {
                 _c("div", { staticClass: "card col-2 m-4" }, [
                   _c("div", { staticClass: "card-image" }, [
                     _c("img", {
-                      attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") },
+                      attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") },
                     }),
                     _vm._v(" "),
                     _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
@@ -46269,7 +46223,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
@@ -48778,6 +48732,8 @@ var render = function () {
           _c("canvas", { attrs: { id: "grafico", hidden: "" } }),
         ])
       : _c("div", [
+          _c("canvas", { attrs: { id: "grafico" } }),
+          _vm._v(" "),
           _c("button", { on: { click: _vm.selectProvincias } }, [
             _vm._v("Provincias"),
           ]),
@@ -48838,9 +48794,9 @@ var render = function () {
                         { key: usuario.id, domProps: { value: usuario.id } },
                         [
                           _vm._v(
-                            "\n                        " +
+                            "\n                    " +
                               _vm._s(usuario.codi) +
-                              "\n                    "
+                              "\n                "
                           ),
                         ]
                       )
@@ -48851,83 +48807,6 @@ var render = function () {
               ])
             : _vm._e(),
         ]),
-    _vm._v(" "),
-    _c("div", [
-      _c(
-        "div",
-        { staticClass: "accordion", attrs: { id: "accordionExample" } },
-        [
-          _c("div", { staticClass: "accordion-item" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "accordion-collapse collapse show",
-                attrs: {
-                  id: "collapseOne",
-                  "aria-labelledby": "headingOne",
-                  "data-bs-parent": "#accordionExample",
-                },
-              },
-              [
-                _c("div", { staticClass: "accordion-body" }, [
-                  _vm.mostrar == 1
-                    ? _c("div", [_c("canvas", { attrs: { id: "grafico" } })])
-                    : _vm._e(),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "accordion-item" }, [
-            _vm._m(2),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "accordion-collapse collapse",
-                attrs: {
-                  id: "collapseTwo",
-                  "aria-labelledby": "headingTwo",
-                  "data-bs-parent": "#accordionExample",
-                },
-              },
-              [
-                _c("div", { staticClass: "accordion-body" }, [
-                  _vm.mostrar == 2
-                    ? _c("div", [_c("canvas", { attrs: { id: "grafico" } })])
-                    : _vm._e(),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "accordion-item" }, [
-            _vm._m(3),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "accordion-collapse collapse",
-                attrs: {
-                  id: "collapseThree",
-                  "aria-labelledby": "headingThree",
-                  "data-bs-parent": "#accordionExample",
-                },
-              },
-              [
-                _c("div", { staticClass: "accordion-body" }, [
-                  _vm.mostrar == 3
-                    ? _c("div", [_c("canvas", { attrs: { id: "grafico" } })])
-                    : _vm._e(),
-                ]),
-              ]
-            ),
-          ]),
-        ]
-      ),
-    ]),
   ])
 }
 var staticRenderFns = [
@@ -48942,81 +48821,6 @@ var staticRenderFns = [
         attrs: { role: "status" },
       }),
     ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "h2",
-      { staticClass: "accordion-header", attrs: { id: "headingOne" } },
-      [
-        _c(
-          "button",
-          {
-            staticClass: "accordion-button",
-            attrs: {
-              type: "button",
-              "data-bs-toggle": "collapse",
-              "data-bs-target": "#collapseOne",
-              "aria-expanded": "true",
-              "aria-controls": "collapseOne",
-            },
-          },
-          [_vm._v("\n                        Provincias\n                    ")]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "h2",
-      { staticClass: "accordion-header", attrs: { id: "headingTwo" } },
-      [
-        _c(
-          "button",
-          {
-            staticClass: "accordion-button collapsed",
-            attrs: {
-              type: "button",
-              "data-bs-toggle": "collapse",
-              "data-bs-target": "#collapseTwo",
-              "aria-expanded": "false",
-              "aria-controls": "collapseTwo",
-            },
-          },
-          [_vm._v("\n                        Municipios\n                    ")]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "h2",
-      { staticClass: "accordion-header", attrs: { id: "headingThree" } },
-      [
-        _c(
-          "button",
-          {
-            staticClass: "accordion-button collapsed",
-            attrs: {
-              type: "button",
-              "data-bs-toggle": "collapse",
-              "data-bs-target": "#collapseThree",
-              "aria-expanded": "false",
-              "aria-controls": "collapseThree",
-            },
-          },
-          [_vm._v("\n                        Incidentes\n                    ")]
-        ),
-      ]
-    )
   },
 ]
 render._withStripped = true
@@ -49246,7 +49050,10 @@ var staticRenderFns = [
             "a",
             {
               staticClass: "btn btn-primary",
-              attrs: { href: "/proyecto-broggi/public/video", type: "button" },
+              attrs: {
+                href: "/proyecto-broggi/public/operadores",
+                type: "button",
+              },
             },
             [_vm._v("Estado operadores")]
           ),
@@ -49287,7 +49094,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container m-4" }, [
       _c("h1", { staticClass: "m-4" }, [_vm._v("Mapa")]),
       _vm._v(" "),
-      _c("div", { attrs: { id: "map" } }),
+      _c("div", { staticClass: "card" }, [_c("div", { attrs: { id: "map" } })]),
     ])
   },
 ]
@@ -49382,7 +49189,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),

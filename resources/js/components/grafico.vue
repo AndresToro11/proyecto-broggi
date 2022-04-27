@@ -10,65 +10,21 @@
 
         <div v-else>
 
-                <button @click="selectProvincias">Provincias</button>
-                <button @click="selectMunicipios">Municipios</button>
-                <button @click="selectUsuariosIncidentes">Incidentes</button>
+            <canvas id="grafico"></canvas>
 
-                <div v-if="showUsuarios == true">
-                    <select class="form-control" v-on:change="selectUsuario()" v-model="selected">
-                        <option value="0" disabled selected>Usuarios</option>
-                        <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id" >
-                            {{ usuario.codi }}
-                        </option>
-                    </select>
-                </div>
-        </div>
+            <button @click="selectProvincias">Provincias</button>
+            <button @click="selectMunicipios">Municipios</button>
+            <button @click="selectUsuariosIncidentes">Incidentes</button>
 
-        <div>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Provincias
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <div v-if="mostrar == 1">
-                                <canvas id="grafico"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Municipios
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <div v-if="mostrar == 2">
-                                <canvas id="grafico"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Incidentes
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <div v-if="mostrar == 3">
-                                <canvas id="grafico"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div v-if="showUsuarios == true">
+                <select class="form-control" v-on:change="selectUsuario()" v-model="selected">
+                    <option value="0" disabled selected>Usuarios</option>
+                    <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id" >
+                        {{ usuario.codi }}
+                    </option>
+                </select>
             </div>
+
         </div>
 
     </div>
@@ -85,19 +41,14 @@
                 usuarios: [],
                 selected: 0,
                 loading: false,
-                showUsuarios: false,
-                mostrar: 1
+                showUsuarios: false
             }
         },
 
         methods:{
             selectProvincias(){
+
                 this.loading = true;
-
-                let elem = document.getElementById('collapseOne');
-                elem.setAttribute('class', 'accordion-collapse collapse show');
-
-                this.mostrar = 1;
 
                 axios
                 .get('/grafico/provincias')
@@ -223,9 +174,8 @@
                         ],
                     }
                 });
-                grafica.canvas.parentNode.style.left = '40%';
-                grafica.canvas.parentNode.style.width = '50%';
-                grafica.canvas.parentNode.style.heigth = '40%';
+                // grafica.canvas.parentNode.style.width = '100%';
+                // grafica.canvas.parentNode.style.heigth = '100%';
                 this.loading = false;
             },
         },
