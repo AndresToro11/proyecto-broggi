@@ -7003,6 +7003,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -7437,6 +7438,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//
 //
 //
 //
@@ -45746,7 +45748,7 @@ var render = function () {
                 _c("div", { staticClass: "card col-2 m-4" }, [
                   _c("div", { staticClass: "card-image" }, [
                     _c("img", {
-                      attrs: { src: __webpack_require__(/*! ../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") },
+                      attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") },
                     }),
                     _vm._v(" "),
                     _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
@@ -46225,7 +46227,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
@@ -46522,17 +46524,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
-    _c("div", { staticClass: "card col-2 m-4" }, [
-      _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
-        _vm._v(" "),
-        _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
-        _vm._v(" "),
-        _vm._m(0),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-content" }),
-    ]),
+    _c("h1", { staticClass: "m-4" }, [_vm._v("Nuevo Usuario")]),
+    _vm._v(" "),
+    _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "card col-9 m-4" }, [
       _c("div", { staticClass: "card-title" }, [
@@ -46783,11 +46777,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "btn-floating halfway-fab waves-effect waves-light red" },
-      [_c("i", { staticClass: "material-icons" }, [_vm._v("add")])]
-    )
+    return _c("div", { staticClass: "card col-2 m-4" }, [
+      _c("div", { staticClass: "card-image" }, [
+        _c("img", {
+          attrs: { src: "/proyecto-broggi/public/images/usuario.jpg" },
+        }),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "btn-floating halfway-fab waves-effect waves-light red",
+          },
+          [_c("i", { staticClass: "material-icons" }, [_vm._v("add")])]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-content" }),
+    ])
   },
 ]
 render._withStripped = true
@@ -48121,7 +48128,9 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mt-4" }, [
+  return _c("div", { staticClass: "mt-5" }, [
+    _c("h1", { staticClass: "m-5" }, [_vm._v("Expedientes")]),
+    _vm._v(" "),
     _vm.loading == true
       ? _c("div", {}, [_vm._m(0)])
       : _c(
@@ -49160,6 +49169,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container m-4" }, [
+      _c("h1", { staticClass: "m-4" }, [_vm._v("Mapa")]),
+      _vm._v(" "),
       _c("div", { attrs: { id: "map" } }),
     ])
   },
@@ -49255,7 +49266,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),

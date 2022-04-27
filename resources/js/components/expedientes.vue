@@ -1,5 +1,6 @@
 <template>
-    <div class="mt-4">
+    <div class="mt-5">
+        <h1 class="m-5">Expedientes</h1>
         <div class="" v-if="loading == true">
             <div id="loader" class="text-center">
                 <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>

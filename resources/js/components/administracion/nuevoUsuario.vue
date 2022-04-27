@@ -1,9 +1,9 @@
 <template>
     <div class="row">
+        <h1 class="m-4">Nuevo Usuario</h1>
         <div class="card col-2 m-4">
             <div class="card-image">
-                <img :src="require('/images/usuario.jpg')">
-                <span class="card-title">Foto</span>
+                <img src="/proyecto-broggi/public/images/usuario.jpg">
                 <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content">

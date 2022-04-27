@@ -1,5 +1,6 @@
 <template>
     <div class="container m-4">
+        <h1 class="m-4">Mapa</h1>
         <div id='map'></div>
     </div>
 </template>
