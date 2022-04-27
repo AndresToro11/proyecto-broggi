@@ -1,6 +1,6 @@
 <template>
 
-    <table class="table table-warning table-striped">
+    <table class="table table-warning table-striped m-4">
         <thead>
             <tr>
             <th scope="col">Nombre</th>

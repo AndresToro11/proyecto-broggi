@@ -6147,10 +6147,46 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      crono: 0,
       expedienteRelacionado: null,
+      loading: false,
       idDatosPersonales: [],
       pruebaCartas: [],
       incidentes: [],
@@ -6188,6 +6224,7 @@ __webpack_require__.r(__webpack_exports__);
     select: function select() {
       var _this = this;
 
+      this.loading = true;
       var me = this;
       console.log("Entrando a la select");
       axios.get("/incidente").then(function (response) {
@@ -6241,6 +6278,15 @@ __webpack_require__.r(__webpack_exports__);
     },
     getDataAdministrativos: function getDataAdministrativos(contador) {
       this.contador = contador;
+    },
+    pararContador: function pararContador() {
+      clearInterval(contadorInterval);
+    },
+    contador: function contador() {
+      this.crono += 1;
+    },
+    empezarContador: function empezarContador() {
+      var contadorInterval = setInterval(this.contador, 1000);
     },
     camposExtra: function camposExtra() {
       var hoy = new Date();
@@ -6304,13 +6350,11 @@ __webpack_require__.r(__webpack_exports__);
       if (varianle != -1) {
         this.cartaLlamada.dades_personals_id = varianle;
       }
-    },
-    empezarContador: function empezarContador() {
-      tiempo();
     }
   },
   mounted: function mounted() {
     this.select();
+    this.empezarContador();
     console.log("Component mounted.");
   }
 });
@@ -6368,7 +6412,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
 //
 //
 //
@@ -6714,7 +6757,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
 //
 //
 //
@@ -46812,201 +46854,141 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col s6 m3" }, [
-        _c("div", { staticClass: "card  " }, [
-          _c(
-            "div",
-            { staticClass: "card-content " },
-            [
-              _c("datos-personales", {
-                on: { "get-datapersonal": _vm.getDataPersonal },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-action" }, [
-            _c(
-              "a",
-              {
-                attrs: {
-                  href: "http://localhost:8080/proyecto-broggi/public/home",
-                },
-              },
-              [_vm._v("Cancelar")]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                attrs: { href: "#" },
-                on: {
-                  click: function ($event) {
-                    return _vm.camposExtra()
-                  },
-                },
-              },
-              [_vm._v("Aceptar")]
-            ),
-          ]),
-        ]),
-      ]),
+  return _c("div", { staticClass: "card m-5 p-5 z-depth-1" }, [
+    _c("div", { staticClass: "row d-flex justify-content-between" }, [
+      _c("h1", { staticClass: "col" }, [_vm._v("Carta Llamada ")]),
       _vm._v(" "),
-      _c("div", { staticClass: "col s6 m3" }, [
-        _c("div", { staticClass: "card  " }, [
-          _c(
-            "div",
-            { staticClass: "card-content " },
-            [
-              _c("datos-incidentes", {
-                on: { "get-dataincidente": _vm.getDataIncidente },
-              }),
-              _vm._v(" "),
-              _c("br"),
-            ],
-            1
-          ),
-        ]),
-      ]),
+      _c("p", { staticClass: "col" }),
+      _vm._v(" "),
+      _c("p", { staticClass: "col" }),
+      _vm._v(" "),
+      _c("h2", { staticClass: "col" }, [_vm._v(_vm._s(_vm.crono))]),
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col s6 m3" }, [
-        _c("div", { staticClass: "card  " }, [
-          _c("div", { staticClass: "card-content " }, [
-            _c("span", { staticClass: "card-title" }, [
-              _vm._v(
-                "Expedientes Relacionados: " + _vm._s(_vm.expedienteRelacionado)
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-action" }, [
-              _c("span", [
-                _c("table", { staticClass: "table" }, [
-                  _c("thead", [
-                    _c("tr", [
-                      _c("th", { attrs: { scope: "col" } }, [
-                        _vm._v("Nº Expediente"),
-                      ]),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [
-                        _vm._v("Telefono"),
-                      ]),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [
-                        _vm._v("Localizacion"),
-                      ]),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [
-                        _vm._v("Tipificacion"),
-                      ]),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn colorbutton",
-                            attrs: { type: "button" },
-                            on: {
-                              click: function ($event) {
-                                return _vm.expedienteRela(null)
-                              },
-                            },
-                          },
-                          [_vm._v("Check")]
-                        ),
-                      ]),
-                    ]),
+    _vm.loading == true
+      ? _c("span", [_vm._m(0)])
+      : _c("span", [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col s6 m3" }, [
+              _c("div", { staticClass: "card z-depth-0" }, [
+                _c("div", { staticClass: "card-content " }, [
+                  _c("span", { staticClass: "card-title" }, [
+                    _vm._v("Dades Personals"),
                   ]),
                   _vm._v(" "),
                   _c(
-                    "tbody",
-                    _vm._l(_vm.pruebaCartas, function (pruebaCarta, index) {
-                      return _c("tr", { key: index }, [
-                        pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
-                        pruebaCarta.municipis_id ==
-                          _vm.cartaLlamada.municipis_id ||
-                        pruebaCarta.incidents_id ==
-                          _vm.cartaLlamada.incidents_id
-                          ? _c("td", [
-                              _vm._v(
-                                "\n                                            " +
-                                  _vm._s(pruebaCarta.expedients_id) +
-                                  "\n                                        "
-                              ),
-                            ])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
-                        pruebaCarta.municipis_id ==
-                          _vm.cartaLlamada.municipis_id ||
-                        pruebaCarta.incidents_id ==
-                          _vm.cartaLlamada.incidents_id
-                          ? _c("td", [
-                              _vm._v(
-                                "\n                                            " +
-                                  _vm._s(pruebaCarta.telefon) +
-                                  "\n                                        "
-                              ),
-                            ])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
-                        pruebaCarta.municipis_id ==
-                          _vm.cartaLlamada.municipis_id ||
-                        pruebaCarta.incidents_id ==
-                          _vm.cartaLlamada.incidents_id
-                          ? _c(
-                              "td",
-                              _vm._l(_vm.municipis, function (municipi) {
-                                return _c("span", { key: municipi.id }, [
-                                  municipi.id == pruebaCarta.municipis_id
-                                    ? _c("span", [
-                                        _vm._v(
-                                          "\n                                                    " +
-                                            _vm._s(municipi.nom) +
-                                            "\n                                                "
-                                        ),
-                                      ])
-                                    : _vm._e(),
-                                ])
-                              }),
-                              0
-                            )
-                          : _vm._e(),
-                        _vm._v(" "),
-                        pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
-                        pruebaCarta.municipis_id ==
-                          _vm.cartaLlamada.municipis_id ||
-                        pruebaCarta.incidents_id ==
-                          _vm.cartaLlamada.incidents_id
-                          ? _c(
-                              "td",
-                              _vm._l(_vm.incidentes, function (incidente) {
-                                return _c("span", { key: incidente.id }, [
-                                  incidente.id == pruebaCarta.incidents_id
-                                    ? _c("span", [
-                                        _vm._v(
-                                          "\n                                                    " +
-                                            _vm._s(incidente.descripcio) +
-                                            "\n                                                "
-                                        ),
-                                      ])
-                                    : _vm._e(),
-                                ])
-                              }),
-                              0
-                            )
-                          : _vm._e(),
-                        _vm._v(" "),
-                        pruebaCarta.telefon == _vm.cartaLlamada.telefon ||
-                        pruebaCarta.municipis_id ==
-                          _vm.cartaLlamada.municipis_id ||
-                        pruebaCarta.incidents_id ==
-                          _vm.cartaLlamada.incidents_id
-                          ? _c("td", [
+                    "div",
+                    { staticClass: "card-action mb-3" },
+                    [
+                      _vm.cartaLlamada.tipus_localitzacions_id == 1
+                        ? _c("span", [_c("br"), _vm._v(" "), _c("br")])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _c("datos-personales", {
+                        on: { "get-datapersonal": _vm.getDataPersonal },
+                      }),
+                      _vm._v(" "),
+                      _vm.cartaLlamada.tipus_localitzacions_id == 1
+                        ? _c("span", [_c("br")])
+                        : _vm._e(),
+                    ],
+                    1
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-action colorLink" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "colorLink",
+                      attrs: {
+                        href: "http://localhost:8080/proyecto-broggi/public/home",
+                      },
+                      on: {
+                        click: function ($event) {
+                          return _vm.pararContador()
+                        },
+                      },
+                    },
+                    [_vm._v("Cancelar")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "colorLink",
+                      attrs: { href: "#" },
+                      on: {
+                        click: function ($event) {
+                          _vm.camposExtra(), _vm.pararContador()
+                        },
+                      },
+                    },
+                    [_vm._v("Aceptar")]
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col s6 m3" }, [
+              _c("div", { staticClass: "card  z-depth-0" }, [
+                _c("div", { staticClass: "card-content " }, [
+                  _c("span", { staticClass: "card-title mx-2" }, [
+                    _vm._v("Datos Incidente"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "card-action mb-3" },
+                    [
+                      _c("datos-incidentes", {
+                        on: { "get-dataincidente": _vm.getDataIncidente },
+                      }),
+                      _vm._v(" "),
+                      _vm.cartaLlamada.tipus_localitzacions_id != 1
+                        ? _c("span", [_c("br")])
+                        : _vm._e(),
+                    ],
+                    1
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col s6 m3" }, [
+              _c("div", { staticClass: "card  z-depth-0" }, [
+                _c("div", { staticClass: "card-content " }, [
+                  _c("span", { staticClass: "card-title" }, [
+                    _vm._v(
+                      "Expedientes Relacionados: " +
+                        _vm._s(_vm.expedienteRelacionado)
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-action" }, [
+                    _c("span", [
+                      _c("table", { staticClass: "table" }, [
+                        _c("thead", [
+                          _c("tr", [
+                            _c("th", { attrs: { scope: "col" } }, [
+                              _vm._v("Nº Expediente"),
+                            ]),
+                            _vm._v(" "),
+                            _c("th", { attrs: { scope: "col" } }, [
+                              _vm._v("Telefono"),
+                            ]),
+                            _vm._v(" "),
+                            _c("th", { attrs: { scope: "col" } }, [
+                              _vm._v("Localizacion"),
+                            ]),
+                            _vm._v(" "),
+                            _c("th", { attrs: { scope: "col" } }, [
+                              _vm._v("Tipificacion"),
+                            ]),
+                            _vm._v(" "),
+                            _c("th", { attrs: { scope: "col" } }, [
                               _c(
                                 "button",
                                 {
@@ -47014,30 +46996,177 @@ var render = function () {
                                   attrs: { type: "button" },
                                   on: {
                                     click: function ($event) {
-                                      return _vm.expedienteRela(
-                                        pruebaCarta.expedients_id
-                                      )
+                                      return _vm.expedienteRela(null)
                                     },
                                   },
                                 },
                                 [_vm._v("Check")]
                               ),
-                            ])
-                          : _vm._e(),
-                      ])
-                    }),
-                    0
-                  ),
+                            ]),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "tbody",
+                          _vm._l(
+                            _vm.pruebaCartas,
+                            function (pruebaCarta, index) {
+                              return _c("tr", { key: index }, [
+                                pruebaCarta.telefon ==
+                                  _vm.cartaLlamada.telefon ||
+                                pruebaCarta.municipis_id ==
+                                  _vm.cartaLlamada.municipis_id ||
+                                pruebaCarta.incidents_id ==
+                                  _vm.cartaLlamada.incidents_id
+                                  ? _c("td", [
+                                      _vm._v(
+                                        "\n                                                " +
+                                          _vm._s(pruebaCarta.expedients_id) +
+                                          "\n                                            "
+                                      ),
+                                    ])
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                pruebaCarta.telefon ==
+                                  _vm.cartaLlamada.telefon ||
+                                pruebaCarta.municipis_id ==
+                                  _vm.cartaLlamada.municipis_id ||
+                                pruebaCarta.incidents_id ==
+                                  _vm.cartaLlamada.incidents_id
+                                  ? _c("td", [
+                                      _vm._v(
+                                        "\n                                                " +
+                                          _vm._s(pruebaCarta.telefon) +
+                                          "\n                                            "
+                                      ),
+                                    ])
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                pruebaCarta.telefon ==
+                                  _vm.cartaLlamada.telefon ||
+                                pruebaCarta.municipis_id ==
+                                  _vm.cartaLlamada.municipis_id ||
+                                pruebaCarta.incidents_id ==
+                                  _vm.cartaLlamada.incidents_id
+                                  ? _c(
+                                      "td",
+                                      _vm._l(
+                                        _vm.municipis,
+                                        function (municipi) {
+                                          return _c(
+                                            "span",
+                                            { key: municipi.id },
+                                            [
+                                              municipi.id ==
+                                              pruebaCarta.municipis_id
+                                                ? _c("span", [
+                                                    _vm._v(
+                                                      "\n                                                        " +
+                                                        _vm._s(municipi.nom) +
+                                                        "\n                                                    "
+                                                    ),
+                                                  ])
+                                                : _vm._e(),
+                                            ]
+                                          )
+                                        }
+                                      ),
+                                      0
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                pruebaCarta.telefon ==
+                                  _vm.cartaLlamada.telefon ||
+                                pruebaCarta.municipis_id ==
+                                  _vm.cartaLlamada.municipis_id ||
+                                pruebaCarta.incidents_id ==
+                                  _vm.cartaLlamada.incidents_id
+                                  ? _c(
+                                      "td",
+                                      _vm._l(
+                                        _vm.incidentes,
+                                        function (incidente) {
+                                          return _c(
+                                            "span",
+                                            { key: incidente.id },
+                                            [
+                                              incidente.id ==
+                                              pruebaCarta.incidents_id
+                                                ? _c("span", [
+                                                    _vm._v(
+                                                      "\n                                                        " +
+                                                        _vm._s(
+                                                          incidente.descripcio
+                                                        ) +
+                                                        "\n                                                    "
+                                                    ),
+                                                  ])
+                                                : _vm._e(),
+                                            ]
+                                          )
+                                        }
+                                      ),
+                                      0
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                pruebaCarta.telefon ==
+                                  _vm.cartaLlamada.telefon ||
+                                pruebaCarta.municipis_id ==
+                                  _vm.cartaLlamada.municipis_id ||
+                                pruebaCarta.incidents_id ==
+                                  _vm.cartaLlamada.incidents_id
+                                  ? _c("td", [
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn colorbutton",
+                                          attrs: { type: "button" },
+                                          on: {
+                                            click: function ($event) {
+                                              return _vm.expedienteRela(
+                                                pruebaCarta.expedients_id
+                                              )
+                                            },
+                                          },
+                                        },
+                                        [_vm._v("Check")]
+                                      ),
+                                    ])
+                                  : _vm._e(),
+                              ])
+                            }
+                          ),
+                          0
+                        ),
+                      ]),
+                    ]),
+                  ]),
                 ]),
               ]),
             ]),
           ]),
         ]),
-      ]),
-    ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _c(
+        "div",
+        {
+          staticClass: "spinner-border text-danger",
+          staticStyle: { width: "5rem", height: "5rem" },
+          attrs: { role: "status" },
+        },
+        [_c("span", { staticClass: "visually-hidden" }, [_vm._v("Loading...")])]
+      ),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -47086,8 +47215,6 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "input-field col s4" }, [
         _c(
@@ -47273,7 +47400,7 @@ var render = function () {
     _vm._v(" "),
     _c("h6", [_vm._v("Tipos de localizacion")]),
     _vm._v(" "),
-    _c("div", { staticClass: "input-field col s4" }, [
+    _c("div", { staticClass: "input-field col s5" }, [
       _c(
         "select",
         {
@@ -47332,7 +47459,7 @@ var render = function () {
     _vm._v(" "),
     _vm.datos_incidente.localizacion == 2
       ? _c("span", [
-          _c("div", { staticClass: "input-field col s8" }, [
+          _c("div", { staticClass: "input-field col s7" }, [
             _c("label", { attrs: { for: "nombre" } }, [_vm._v("Nombre")]),
             _vm._v(" "),
             _c("input", {
@@ -47362,7 +47489,7 @@ var render = function () {
         ])
       : _vm.datos_incidente.localizacion == 5
       ? _c("span", [
-          _c("div", { staticClass: "input-field col s8" }, [
+          _c("div", { staticClass: "input-field col s7" }, [
             _c("label", { attrs: { for: "provincia" } }, [_vm._v("Provincia")]),
             _vm._v(" "),
             _c("input", {
@@ -47452,9 +47579,7 @@ var render = function () {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "input-field col s4" }, [
-              _c("label", { attrs: { for: "numero" } }, [
-                _vm._v("Numero puerta"),
-              ]),
+              _c("label", { attrs: { for: "numero" } }, [_vm._v("Portal")]),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -47798,14 +47923,7 @@ var render = function () {
     ]),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h6", [_c("b", [_vm._v("Datos Incidente ")])])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -47829,8 +47947,6 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h6", [_c("b", [_vm._v(" Dades Personals " + _vm._s(_vm.cronos))])]),
-    _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "input-field col s3" }, [
         _c("label", { attrs: { for: "telefono" } }, [_vm._v("Telefono")]),
@@ -49186,7 +49302,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("table", { staticClass: "table table-warning table-striped" }, [
+  return _c("table", { staticClass: "table table-warning table-striped m-4" }, [
     _vm._m(0),
     _vm._v(" "),
     _c(
