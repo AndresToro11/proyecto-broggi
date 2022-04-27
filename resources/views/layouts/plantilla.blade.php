@@ -7,10 +7,10 @@
         <title>@yield('titulo')</title>
 
         <!-- MapBox -->
-        
+
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
-        
+
         <!-- font awesome -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -47,6 +47,12 @@
                             </li>
                             <li class="nav-item m-4">
                                 <a class="nav-link active" aria-current="page" href="{{ url('/mapa') }}">Mapa</a>
+                            </li>
+                            <li class="nav-item m-4">
+                                <a class="nav-link active" aria-current="page" href="{{ url('/llamada') }}">Llamada</a>
+                            </li>
+                            <li class="nav-item m-4">
+                                <a class="nav-link active" aria-current="page" href="{{ url('/operadores') }}">Operadores</a>
                             </li>
                         </ul>
                     </div>

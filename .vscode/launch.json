@@ -13,8 +13,8 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:80/proyecto-broggi/public",
+            "name": "Launch Chrome ",
+            "url": "http://localhost:8080/proyecto-broggi/public",
             "webRoot": "${workspaceFolder}"
         }
     ]
