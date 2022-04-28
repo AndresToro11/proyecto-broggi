@@ -1,6 +1,6 @@
 <template>
     <div class="m-4">
-        <h1 class="m-4">Administración</h1>
+        <h1 class="m-4"><i class="fas fa-user-edit"></i> Administración</h1>
         <div class="card text-center">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">

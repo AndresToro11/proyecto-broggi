@@ -1,23 +1,25 @@
 <template>
-
-    <table class="table table-warning table-striped m-4">
-        <thead>
-            <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Codigo</th>
-            <th scope="col">Mail</th>
-            <th scope="col">Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="user in users" :key="user.id">
-                <td v-if="user.perfils_id == 1">{{ user.nom }} {{ user.cognoms }}</td>
-                <td v-if="user.perfils_id == 1">{{ user.codi }}</td>
-                <td v-if="user.perfils_id == 1">{{ user.mail }}</td>
-                <td v-if="user.perfils_id == 1"> Descansando </td>
-            </tr>
-        </tbody>
-    </table>
+    <div>
+        <h1 class="m-5"><i class="fas fa-user-alt"></i> Operadores</h1>
+        <table class="table table-warning table-striped m-3">
+            <thead>
+                <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Mail</th>
+                <th scope="col">Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="user in users" :key="user.id">
+                    <td v-if="user.perfils_id == 1">{{ user.nom }} {{ user.cognoms }}</td>
+                    <td v-if="user.perfils_id == 1">{{ user.codi }}</td>
+                    <td v-if="user.perfils_id == 1">{{ user.mail }}</td>
+                    <td v-if="user.perfils_id == 1"> Descansando </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
 </template>
 <script>
 

@@ -1,32 +1,33 @@
 <template>
-    <div class="m-4">
-        <h1>Gráficos</h1>
-        <div v-if="loading == true">
-            <div id="loader" class="text-center">
-                <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
-            </div>
-            <canvas id="grafico" hidden></canvas>
-        </div>
-
-        <div v-else>
-
-            <canvas id="grafico"></canvas>
-
-            <button @click="selectProvincias">Provincias</button>
-            <button @click="selectMunicipios">Municipios</button>
-            <button @click="selectUsuariosIncidentes">Incidentes</button>
-
-            <div v-if="showUsuarios == true">
-                <select class="form-control" v-on:change="selectUsuario()" v-model="selected">
-                    <option value="0" disabled selected>Usuarios</option>
-                    <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id" >
-                        {{ usuario.codi }}
-                    </option>
-                </select>
+    <div>
+        <div class="m-4">
+            <h1><i class="fas fa-chart-pie"></i> Gráficos</h1>
+            <div v-if="loading == true">
+                <div id="loader" class="text-center">
+                    <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
+                </div>
+                <canvas id="grafico" hidden></canvas>
             </div>
 
-        </div>
+            <div v-else>
 
+                <canvas id="grafico"></canvas>
+
+                <button @click="selectProvincias">Provincias</button>
+                <button @click="selectMunicipios">Municipios</button>
+                <button @click="selectUsuariosIncidentes">Incidentes</button>
+
+                <div v-if="showUsuarios == true">
+                    <select class="form-control" v-on:change="selectUsuario()" v-model="selected">
+                        <option value="0" disabled selected>Usuarios</option>
+                        <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id" >
+                            {{ usuario.codi }}
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
     </div>
 </template>
 

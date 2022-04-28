@@ -2,10 +2,10 @@
     <div class="card m-5 p-5 z-depth-1">
 
         <div class="row d-flex justify-content-between">
-          <h1 class="col" >Carta Llamada </h1>
+          <h1 class="col" ><i class="fas fa-phone-alt"></i> Carta Llamada </h1>
+
           <p class="col"></p>
-          <p class="col"></p>
-          <h2 class="col">{{crono}}</h2>
+          <h2 class="col"> <i class="fal fa-alarm-clock" ></i> {{crono}}</h2>
         </div>
         <span v-if="loading == true">
             <div class="text-center">
@@ -33,8 +33,9 @@
                             </div>
                         </div>
                         <div class="card-action colorLink">
+                            <a class="colorLink" id="myBtn" href="#" @click="camposExtra(), pararContador()">Aceptar</a>
                             <a class="colorLink" href="http://localhost:8080/proyecto-broggi/public/home" @click="pararContador()">Cancelar</a>
-                            <a class="colorLink" href="#" @click="camposExtra(), pararContador()">Aceptar</a>
+                            <button class="colorLink" id="myBtn btn" @click="funcionOpenModal()"> open modal</button>
                         </div>
                     </div>
                 </div>
@@ -104,6 +105,40 @@
                     </div>
                 </div>
             </div>
+            <div id="myModal" ref="openModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <p>Quieres guardar al llamante?</p>
+                        <form action="#">
+                            <p>
+                            <label>
+                                <input name="group1" type="radio"  v-model="guardarLlamante" value="si"/>
+                                <span>Si </span>
+                            </label>
+                            <label>
+                                <input name="group1" type="radio" checked v-model="guardarLlamante" value="no"/>
+                                <span>No</span>
+                            </label>
+                            </p>
+                        </form>
+                    <p>Aviso:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Calle</th>
+                                <th>Codigo Postal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                </div>
         </span>
 
 
@@ -113,6 +148,7 @@
 export default {
     data() {
         return {
+            guardarLlamante: "no",
             crono: 0,
             expedienteRelacionado: null,
             loading: false,
@@ -229,7 +265,7 @@ export default {
             this.crono+=1;
         },
         empezarContador(){
-            const contadorInterval = setInterval(this.contador,1000);
+            contadorInterval = setInterval(this.contador,1000);
         },
         camposExtra() {
             let hoy = new Date();
@@ -248,6 +284,12 @@ export default {
         },
         expedienteRela(idExpediente){
             this.expedienteRelacionado = idExpediente;
+
+        },
+        funcionOpenModal(){
+            console.log("sd,gkoerhngivnweuiger9nrjigirohrthtjr");
+            //   this.modal.style.display = "block";
+            this.$refs.openModal.style.display = "block"
         },
         insertBD(){
             let me = this;
@@ -287,7 +329,7 @@ export default {
                             console.log(error);
                         });
             }
-
+            this.funcionOpenModal();
         }
     },
     computed: {

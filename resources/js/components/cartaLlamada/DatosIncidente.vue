@@ -2,24 +2,24 @@
     <div>
         <div class="row">
             <div class="input-field col s4">
-                <select class="browser-default" id="provincia" v-model="datos_incidente.provincia" @change="setDataIncidente(datos_incidente), provinciaComarca()">
-                    <option value="" selected disabled >Provincia</option>
+                <select class="browser-default" id="provincia" v-model="datos_incidente.provincia" @change="setDataIncidente(datos_incidente), provinciaComarca()" required>
+                    <option value="null" selected disabled >Provincia</option>
                     <option v-for="provincia in provincias" :key="provincia.id" :value="provincia.id">
                         {{ provincia.nom }}
                     </option>
                 </select>
             </div>
             <div class="input-field col s4">
-                <select class="browser-default" id="comarca" v-model="datos_incidente.comarca" @change="activarFunciones(), comarcaMunicipio()">
-                    <option value="" disabled selected>Comarca</option>
+                <select class="browser-default" id="comarca" v-model="datos_incidente.comarca" @change="activarFunciones(), comarcaMunicipio()" required>
+                    <option value="null" disabled selected>Comarca</option>
                     <option v-for="comarca in comarcas" :key="comarca.id" :value="comarca.id">
                         {{ comarca.nom }}
                     </option>
                 </select>
             </div>
             <div class="input-field col s4">
-                <select class="browser-default" id="municipio" v-model="datos_incidente.municipio" @change="activarFunciones()">
-                    <option value="" disabled selected>Municipios</option>
+                <select class="browser-default" id="municipio" v-model="datos_incidente.municipio" @change="activarFunciones()" required>
+                    <option value="null" disabled selected>Municipios</option>
                     <option v-for="municipio in municipios" :key="municipio.id" :value="municipio.id">
                         {{ municipio.nom }}
                     </option>
@@ -102,14 +102,14 @@
 
         <h6>Emergencia</h6>
         <div class="row">
-            <div class="input-field col s6">
+            <!-- <div class="input-field col s6">
                 <select class="browser-default" id="tiposIncidete" v-model="datos_incidente.tiposIncidente"  @change="activarFunciones()">
                     <option value="" selected disabled >Tipo Incidente</option>
                     <option v-for="tIncidente in tIncidentes" :key="tIncidente.id" :value="tIncidente.id">
                         {{ tIncidente.descripcio }}
                     </option>
                 </select>
-            </div>
+            </div> -->
             <div class="input-field col s6">
                 <select class="browser-default" id="incidente" v-model="datos_incidente.incidente"  @change="activarFunciones()">
                     <option value="" selected disabled >Incidente</option>

@@ -1,6 +1,6 @@
 <template>
     <div class="container m-4">
-        <h1 class="m-4">Mapa</h1>
+        <h1 class="m-4"><i class="fas fa-map"></i> Mapa</h1>
         <div class="card">
             <div id='map'></div>
         </div>
