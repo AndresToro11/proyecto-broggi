@@ -1,6 +1,7 @@
 <template>
     <div class="m-4">
-        <h1>Gráficos</h1>
+        <h1 class="m-5">Gráficos</h1>
+
         <div v-if="loading == true">
             <div id="loader" class="text-center">
                 <div class="spinner-border text-danger" role="status" style="width: 9rem; height: 9rem;"/>
@@ -9,24 +10,25 @@
         </div>
 
         <div v-else>
-
-            <canvas id="grafico"></canvas>
-
-            <button @click="selectProvincias">Provincias</button>
-            <button @click="selectMunicipios">Municipios</button>
-            <button @click="selectUsuariosIncidentes">Incidentes</button>
-
-            <div v-if="showUsuarios == true">
-                <select class="form-control" v-on:change="selectUsuario()" v-model="selected">
+            <canvas id="grafico"></canvas> 
+            <br><br>
+        </div>
+                    <!-- BOTONES -->
+        <div> 
+            <div>
+                <button class="btn" @click="selectProvincias">Provincias</button>
+                <button class="btn waves-effect waves-light" @click="selectMunicipios">Municipios</button>
+                <button class="btn" @click="selectUsuariosIncidentes">Incidentes</button><br>
+            </div>
+            <div class="input-field col s12" v-if="showUsuarios == true">
+                <select class="browser-default" v-on:change="selectUsuario()" v-model="selected">
                     <option value="0" disabled selected>Usuarios</option>
                     <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id" >
                         {{ usuario.codi }}
                     </option>
                 </select>
             </div>
-
         </div>
-
     </div>
 </template>
 
@@ -75,7 +77,7 @@
                 .then(response => {
                     let titulo = 'Incidentes'
                     let municipios = [];
-                    let type = 'doughnut';
+                    let type = 'bar';
                     municipios = response.data;
                     this.grafico(municipios, type, titulo)
                 })
@@ -104,7 +106,7 @@
             selectUsuariosIncidentes(){
                 this.loading = true;
                 let incidentes;
-                let type = 'bar';
+                let type = 'doughnut';
                 let titulo = 'Incidentes';
                 axios
                 .get('/grafico/usuarios-incidentes')
@@ -174,8 +176,8 @@
                         ],
                     }
                 });
-                // grafica.canvas.parentNode.style.width = '100%';
-                // grafica.canvas.parentNode.style.heigth = '100%';
+                grafica.canvas.parentNode.style.width = '40%';
+                grafica.canvas.parentNode.style.heigth = '40%';
                 this.loading = false;
             },
         },

@@ -6028,7 +6028,7 @@ __webpack_require__.r(__webpack_exports__);
         apellidos: '',
         contrasena: '',
         mail: '',
-        rol: '',
+        rol: '99',
         nick: ''
       },
       image: '/images/usuario.jpg',
@@ -7046,6 +7046,28 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -7156,6 +7178,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 var grafica;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -7192,7 +7216,7 @@ var grafica;
       axios.get('/grafico/municipios').then(function (response) {
         var titulo = 'Incidentes';
         var municipios = [];
-        var type = 'doughnut';
+        var type = 'bar';
         municipios = response.data;
 
         _this2.grafico(municipios, type, titulo);
@@ -7220,7 +7244,7 @@ var grafica;
 
       this.loading = true;
       var incidentes;
-      var type = 'bar';
+      var type = 'doughnut';
       var titulo = 'Incidentes';
       axios.get('/grafico/usuarios-incidentes').then(function (response) {
         incidentes = response.data;
@@ -7277,9 +7301,9 @@ var grafica;
             backgroundColor: ['rgba(168, 29, 31, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(255, 72, 0)', 'rgba(54, 135, 30)']
           }]
         }
-      }); // grafica.canvas.parentNode.style.width = '100%';
-      // grafica.canvas.parentNode.style.heigth = '100%';
-
+      });
+      grafica.canvas.parentNode.style.width = '40%';
+      grafica.canvas.parentNode.style.heigth = '40%';
       this.loading = false;
     }
   },
@@ -7802,7 +7826,7 @@ __webpack_require__.r(__webpack_exports__);
         });
         var popup = new mapboxgl.Popup({
           offset: 25
-        }).setText('hola'); // Crear marker y añadirlo al mapa
+        }).setText('¡Aquí es!'); // Crear marker y añadirlo al mapa
 
         new mapboxgl.Marker({
           color: '#E74C3C'
@@ -45744,7 +45768,7 @@ var render = function () {
                 _c("div", { staticClass: "card col-2 m-4" }, [
                   _c("div", { staticClass: "card-image" }, [
                     _c("img", {
-                      attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") },
+                      attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") },
                     }),
                     _vm._v(" "),
                     _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
@@ -46223,7 +46247,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
@@ -46706,9 +46730,11 @@ var render = function () {
                 },
               },
               [
-                _c("option", { attrs: { selected: "", disabled: "" } }, [
-                  _vm._v("Rol"),
-                ]),
+                _c(
+                  "option",
+                  { attrs: { value: "99", selected: "", disabled: "" } },
+                  [_vm._v("Rol")]
+                ),
                 _vm._v(" "),
                 _c("option", { attrs: { value: "1" } }, [_vm._v("Operador")]),
                 _vm._v(" "),
@@ -48240,7 +48266,71 @@ var render = function () {
                         "a",
                         {
                           staticClass: "btn btn-success",
-                          staticStyle: { width: "100%" },
+                          staticStyle: {
+                            width: "100%",
+                            "background-color": "rgb(12, 122, 16)",
+                          },
+                          attrs: {
+                            "data-bs-toggle": "collapse",
+                            "data-bs-target":
+                              "#multiCollapseExample" + expediente.id,
+                            role: "button",
+                            "aria-expanded": "false",
+                            "aria-controls":
+                              "#multiCollapseExample" + expediente.id,
+                          },
+                        },
+                        [
+                          _c("div", { staticClass: "row" }, [
+                            _c("div", { staticClass: "col" }, [
+                              _vm._v(
+                                "\n                                Expediente: " +
+                                  _vm._s(expediente.id) +
+                                  "\n                            "
+                              ),
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col" }, [
+                              _vm._v(
+                                "\n                                Operador: " +
+                                  _vm._s(
+                                    expediente.cartas_trucades[
+                                      expediente.cartas_trucades.length - 1
+                                    ].usuari.codi
+                                  ) +
+                                  "\n                            "
+                              ),
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col" }, [
+                              _vm._v(
+                                "\n                                fecha: " +
+                                  _vm._s(expediente.data_creacio) +
+                                  "\n                            "
+                              ),
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col" }, [
+                              _vm._v(
+                                "\n                                estado: " +
+                                  _vm._s(expediente.estat_expedient.estat) +
+                                  "\n                            "
+                              ),
+                            ]),
+                          ]),
+                        ]
+                      ),
+                    ])
+                  : expediente.estats_expedients_id == 2
+                  ? _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-light",
+                          staticStyle: {
+                            width: "100%",
+                            "background-color": "rgb(253, 200, 24)",
+                          },
                           attrs: {
                             "data-bs-toggle": "collapse",
                             "data-bs-target":
@@ -48723,7 +48813,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "m-4" }, [
-    _c("h1", [_vm._v("Gráficos")]),
+    _c("h1", { staticClass: "m-5" }, [_vm._v("Gráficos")]),
     _vm._v(" "),
     _vm.loading == true
       ? _c("div", [
@@ -48734,79 +48824,96 @@ var render = function () {
       : _c("div", [
           _c("canvas", { attrs: { id: "grafico" } }),
           _vm._v(" "),
-          _c("button", { on: { click: _vm.selectProvincias } }, [
-            _vm._v("Provincias"),
-          ]),
-          _vm._v(" "),
-          _c("button", { on: { click: _vm.selectMunicipios } }, [
-            _vm._v("Municipios"),
-          ]),
-          _vm._v(" "),
-          _c("button", { on: { click: _vm.selectUsuariosIncidentes } }, [
-            _vm._v("Incidentes"),
-          ]),
-          _vm._v(" "),
-          _vm.showUsuarios == true
-            ? _c("div", [
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.selected,
-                        expression: "selected",
-                      },
-                    ],
-                    staticClass: "form-control",
-                    on: {
-                      change: [
-                        function ($event) {
-                          var $$selectedVal = Array.prototype.filter
-                            .call($event.target.options, function (o) {
-                              return o.selected
-                            })
-                            .map(function (o) {
-                              var val = "_value" in o ? o._value : o.value
-                              return val
-                            })
-                          _vm.selected = $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        },
-                        function ($event) {
-                          return _vm.selectUsuario()
-                        },
-                      ],
-                    },
-                  },
-                  [
-                    _c(
-                      "option",
-                      { attrs: { value: "0", disabled: "", selected: "" } },
-                      [_vm._v("Usuarios")]
-                    ),
-                    _vm._v(" "),
-                    _vm._l(_vm.usuarios, function (usuario) {
-                      return _c(
-                        "option",
-                        { key: usuario.id, domProps: { value: usuario.id } },
-                        [
-                          _vm._v(
-                            "\n                    " +
-                              _vm._s(usuario.codi) +
-                              "\n                "
-                          ),
-                        ]
-                      )
-                    }),
-                  ],
-                  2
-                ),
-              ])
-            : _vm._e(),
+          _c("br"),
+          _c("br"),
         ]),
+    _vm._v(" "),
+    _c("div", [
+      _c("div", [
+        _c(
+          "button",
+          { staticClass: "btn", on: { click: _vm.selectProvincias } },
+          [_vm._v("Provincias")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn waves-effect waves-light",
+            on: { click: _vm.selectMunicipios },
+          },
+          [_vm._v("Municipios")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          { staticClass: "btn", on: { click: _vm.selectUsuariosIncidentes } },
+          [_vm._v("Incidentes")]
+        ),
+        _c("br"),
+      ]),
+      _vm._v(" "),
+      _vm.showUsuarios == true
+        ? _c("div", { staticClass: "input-field col s12" }, [
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.selected,
+                    expression: "selected",
+                  },
+                ],
+                staticClass: "browser-default",
+                on: {
+                  change: [
+                    function ($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function (o) {
+                          return o.selected
+                        })
+                        .map(function (o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.selected = $event.target.multiple
+                        ? $$selectedVal
+                        : $$selectedVal[0]
+                    },
+                    function ($event) {
+                      return _vm.selectUsuario()
+                    },
+                  ],
+                },
+              },
+              [
+                _c(
+                  "option",
+                  { attrs: { value: "0", disabled: "", selected: "" } },
+                  [_vm._v("Usuarios")]
+                ),
+                _vm._v(" "),
+                _vm._l(_vm.usuarios, function (usuario) {
+                  return _c(
+                    "option",
+                    { key: usuario.id, domProps: { value: usuario.id } },
+                    [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(usuario.codi) +
+                          "\n                "
+                      ),
+                    ]
+                  )
+                }),
+              ],
+              2
+            ),
+          ])
+        : _vm._e(),
+    ]),
   ])
 }
 var staticRenderFns = [
@@ -49189,7 +49296,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
