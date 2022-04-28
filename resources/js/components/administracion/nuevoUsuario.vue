@@ -44,7 +44,7 @@
                     </div>
                     <div class="input-field col s4">
                         <select v-model="usuario.rol" class="form-select" aria-label="Default select example">
-                            <option selected disabled>Rol</option>
+                            <option value="99" selected disabled>Rol</option>
                             <option value="1">Operador</option>
                             <option value="2">Supervisor</option>
                         </select>
@@ -82,7 +82,7 @@
                     apellidos: '',
                     contrasena: '',
                     mail: '',
-                    rol: '',
+                    rol: '99',
                     nick: ''
                 },
                 image: '/images/usuario.jpg',

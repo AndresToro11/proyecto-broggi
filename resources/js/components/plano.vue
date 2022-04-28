@@ -54,7 +54,7 @@
 
                 const popup = new mapboxgl.Popup({ offset: 25 })
                     .setText(
-                        'hola'
+                        '¡Aquí es!'
                     );
 
                     // Crear marker y añadirlo al mapa
