@@ -7221,11 +7221,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-<<<<<<< HEAD
-=======
-//
->>>>>>> aa6ba1e6fcea6b0b477d6b33a3989d50e77b892e
 
 var grafica;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -45816,11 +45811,7 @@ var render = function () {
                 _c("div", { staticClass: "card col-2 m-4" }, [
                   _c("div", { staticClass: "card-image" }, [
                     _c("img", {
-<<<<<<< HEAD
                       attrs: { src: __webpack_require__(/*! ../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") },
-=======
-                      attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") },
->>>>>>> aa6ba1e6fcea6b0b477d6b33a3989d50e77b892e
                     }),
                     _vm._v(" "),
                     _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
@@ -46308,11 +46299,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-<<<<<<< HEAD
         _c("img", { attrs: { src: __webpack_require__(/*! ../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
-=======
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
->>>>>>> aa6ba1e6fcea6b0b477d6b33a3989d50e77b892e
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
@@ -48949,100 +48936,12 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-<<<<<<< HEAD
-  return _c("div", [
-    _c("div", { staticClass: "m-4" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _vm.loading == true
-        ? _c("div", [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("canvas", { attrs: { id: "grafico", hidden: "" } }),
-          ])
-        : _c("div", [
-            _c("canvas", { attrs: { id: "grafico" } }),
-            _vm._v(" "),
-            _c("button", { on: { click: _vm.selectProvincias } }, [
-              _vm._v("Provincias"),
-            ]),
-            _vm._v(" "),
-            _c("button", { on: { click: _vm.selectMunicipios } }, [
-              _vm._v("Municipios"),
-            ]),
-            _vm._v(" "),
-            _c("button", { on: { click: _vm.selectUsuariosIncidentes } }, [
-              _vm._v("Incidentes"),
-            ]),
-            _vm._v(" "),
-            _vm.showUsuarios == true
-              ? _c("div", [
-                  _c(
-                    "select",
-                    {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.selected,
-                          expression: "selected",
-                        },
-                      ],
-                      staticClass: "form-control",
-                      on: {
-                        change: [
-                          function ($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function (o) {
-                                return o.selected
-                              })
-                              .map(function (o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.selected = $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          },
-                          function ($event) {
-                            return _vm.selectUsuario()
-                          },
-                        ],
-                      },
-                    },
-                    [
-                      _c(
-                        "option",
-                        { attrs: { value: "0", disabled: "", selected: "" } },
-                        [_vm._v("Usuarios")]
-                      ),
-                      _vm._v(" "),
-                      _vm._l(_vm.usuarios, function (usuario) {
-                        return _c(
-                          "option",
-                          { key: usuario.id, domProps: { value: usuario.id } },
-                          [
-                            _vm._v(
-                              "\n                        " +
-                                _vm._s(usuario.codi) +
-                                "\n                    "
-                            ),
-                          ]
-                        )
-                      }),
-                    ],
-                    2
-                  ),
-                ])
-              : _vm._e(),
-          ]),
-=======
   return _c("div", { staticClass: "m-4" }, [
-    _c("h1", { staticClass: "m-5" }, [_vm._v("Gráficos")]),
+    _vm._m(0),
     _vm._v(" "),
     _vm.loading == true
       ? _c("div", [
-          _vm._m(0),
+          _vm._m(1),
           _vm._v(" "),
           _c("canvas", { attrs: { id: "grafico", hidden: "" } }),
         ])
@@ -49138,7 +49037,6 @@ var render = function () {
             ),
           ])
         : _vm._e(),
->>>>>>> aa6ba1e6fcea6b0b477d6b33a3989d50e77b892e
     ]),
   ])
 }
@@ -49551,11 +49449,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-<<<<<<< HEAD
         _c("img", { attrs: { src: __webpack_require__(/*! ../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
-=======
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
->>>>>>> aa6ba1e6fcea6b0b477d6b33a3989d50e77b892e
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),

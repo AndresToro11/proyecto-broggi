@@ -1,5 +1,4 @@
 <template>
-    <div>
         <div class="m-4">
             <h1><i class="fas fa-chart-pie"></i> Gráficos</h1>
             <div v-if="loading == true">
@@ -8,7 +7,6 @@
                 </div>
                 <canvas id="grafico" hidden></canvas>
             </div>
-
         <div v-else>
             <canvas id="grafico"></canvas>
             <br><br>
