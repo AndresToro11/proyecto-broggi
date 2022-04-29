@@ -45861,7 +45861,7 @@ var render = function () {
                 _c("div", { staticClass: "card col-2 m-4" }, [
                   _c("div", { staticClass: "card-image" }, [
                     _c("img", {
-                      attrs: { src: __webpack_require__(/*! ../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") },
+                      attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") },
                     }),
                     _vm._v(" "),
                     _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
@@ -46349,7 +46349,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),
@@ -48551,10 +48551,10 @@ var render = function () {
                       _c(
                         "a",
                         {
-                          staticClass: "btn btn-success",
+                          staticClass: "btn btn-light text-light",
                           staticStyle: {
                             width: "100%",
-                            "background-color": "rgb(12, 122, 16)",
+                            "background-color": "rgb(56, 130, 86)",
                           },
                           attrs: {
                             "data-bs-toggle": "collapse",
@@ -48612,7 +48612,7 @@ var render = function () {
                       _c(
                         "a",
                         {
-                          staticClass: "btn btn-light",
+                          staticClass: "btn btn-light text-light",
                           staticStyle: {
                             width: "100%",
                             "background-color": "rgb(253, 200, 24)",
@@ -48673,8 +48673,11 @@ var render = function () {
                       _c(
                         "a",
                         {
-                          staticClass: "btn btn-light",
-                          staticStyle: { width: "100%" },
+                          staticClass: "btn btn-light text-light",
+                          staticStyle: {
+                            width: "100%",
+                            "background-color": "rgb(12, 122, 16)",
+                          },
                           attrs: {
                             "data-bs-toggle": "collapse",
                             "data-bs-target":
@@ -48731,8 +48734,11 @@ var render = function () {
                       _c(
                         "a",
                         {
-                          staticClass: "btn btn-primary",
-                          staticStyle: { width: "100%" },
+                          staticClass: "btn btn-light text-light",
+                          staticStyle: {
+                            width: "100%",
+                            "background-color": "rgb(17, 172, 196)",
+                          },
                           attrs: {
                             "data-bs-toggle": "collapse",
                             "data-bs-target":
@@ -48789,8 +48795,11 @@ var render = function () {
                       _c(
                         "a",
                         {
-                          staticClass: "btn btn-danger",
-                          staticStyle: { width: "100%" },
+                          staticClass: "btn btn-light text-light",
+                          staticStyle: {
+                            width: "100%",
+                            "background-color": "rgb(194, 109, 207)",
+                          },
                           attrs: {
                             "data-bs-toggle": "collapse",
                             "data-bs-target":
@@ -49620,7 +49629,7 @@ var render = function () {
   return _c("div", { staticClass: "row" }, [
     _c("div", { staticClass: "card col-2 m-4" }, [
       _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: __webpack_require__(/*! ../../../../../../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
+        _c("img", { attrs: { src: __webpack_require__(/*! ../../images/usuario.jpg */ "./public/images/usuario.jpg") } }),
         _vm._v(" "),
         _c("span", { staticClass: "card-title" }, [_vm._v("Foto")]),
         _vm._v(" "),

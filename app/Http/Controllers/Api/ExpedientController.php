@@ -20,6 +20,7 @@ class ExpedientController extends Controller
     {
         $expedientes = Expedient::with('estat_expedient', 'cartas_trucades', 'cartas_trucades.usuari',
                                 'cartas_trucades.provincia', 'cartas_trucades.municipi', 'cartas_trucades.incident')
+                                ->orderBy('estats_expedients_id', 'asc')
                                 ->get();
 
         return new ExpedientResource($expedientes);

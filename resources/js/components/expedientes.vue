@@ -12,7 +12,7 @@
             <div class="" v-for="expediente in expedientes" :key="expediente.id">
                 <p>
                     <div v-if="expediente.estats_expedients_id == 1">
-                        <a class="btn btn-success" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%; background-color: rgb(12, 122, 16);">
+                        <a class="btn btn-light text-light" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%; background-color: rgb(56, 130, 86);">
 
                             <div class="row">
                                 <div class="col">
@@ -34,7 +34,7 @@
                     </div>
 
                     <div v-else-if="expediente.estats_expedients_id == 2">
-                        <a class="btn btn-light" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%; background-color: rgb(253, 200, 24);">
+                        <a class="btn btn-light text-light" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%; background-color: rgb(253, 200, 24);">
 
                             <div class="row">
                                 <div class="col">
@@ -56,7 +56,7 @@
                     </div>
 
                     <div v-else-if="expediente.estats_expedients_id == 3">
-                        <a class="btn btn-light" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%">
+                        <a class="btn btn-light text-light" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%; background-color: rgb(12, 122, 16);">
 
                             <div class="row">
                                 <div class="col">
@@ -78,7 +78,7 @@
                     </div>
 
                     <div v-else-if="expediente.estats_expedients_id == 4">
-                        <a class="btn btn-primary" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%">
+                        <a class="btn btn-light text-light" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%; background-color: rgb(17, 172, 196);">
 
                             <div class="row">
                                 <div class="col">
@@ -100,7 +100,7 @@
                     </div>
 
                     <div v-else-if="expediente.estats_expedients_id == 5">
-                        <a class="btn btn-danger" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%">
+                        <a class="btn btn-light text-light" data-bs-toggle="collapse" :data-bs-target="'#multiCollapseExample'+expediente.id" role="button" aria-expanded="false" :aria-controls="'#multiCollapseExample'+expediente.id" style="width: 100%; background-color: rgb(194, 109, 207);">
 
                             <div class="row">
                                 <div class="col">
