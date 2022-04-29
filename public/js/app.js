@@ -6216,6 +6216,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6226,6 +6242,8 @@ __webpack_require__.r(__webpack_exports__);
       idDatosPersonales: [],
       pruebaCartas: [],
       incidentes: [],
+      agencias: [],
+      agenciasRelacion: [],
       municipis: [],
       expediente: {
         id: null,
@@ -6244,7 +6262,7 @@ __webpack_require__.r(__webpack_exports__);
         adreca_trucada: " ",
         fora_catalunya: " ",
         provincies_id: " ",
-        municipis_id: " ",
+        municipis_id: null,
         tipus_localitzacions_id: " ",
         descripcio_localitzacio: " ",
         detall_localitzacio: " ",
@@ -6266,6 +6284,14 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("/incidente").then(function (response) {
         console.log("Incidente OK");
         me.incidentes = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+      axios.get("/agencias").then(function (response) {
+        console.log("Municipio OK");
+        me.agencias = response.data;
       })["catch"](function (error) {
         console.log(error);
       })["finally"](function () {
@@ -6324,6 +6350,31 @@ __webpack_require__.r(__webpack_exports__);
     empezarContador: function empezarContador() {
       contadorInterval = setInterval(this.contador, 1000);
     },
+    agenciasEscogidas: function agenciasEscogidas(agenciaId, agenciaNom) {
+      var cont = 0;
+      var i = 0;
+      debugger;
+
+      if (agenciaId != -1) {
+        while (cont != 1 & i < this.agenciasRelacion.length) {
+          if (this.agenciasRelacion[i] == agenciaId) {
+            cont = 1;
+          }
+
+          i++;
+        }
+
+        if (cont == 0) {
+          // let agencia= [
+          //     id = agenciaId,
+          //     nom = agenciaNom
+          //     ]
+          this.agenciasRelacion.push(agenciaId);
+        }
+      } else {
+        this.agenciasRelacion = [];
+      }
+    },
     camposExtra: function camposExtra() {
       var hoy = new Date();
       var fecha = hoy.getFullYear() + '-' + (hoy.getMonth() + 1) + '-' + hoy.getDate();
@@ -6345,8 +6396,6 @@ __webpack_require__.r(__webpack_exports__);
       this.expedienteRelacionado = idExpediente;
     },
     funcionOpenModal: function funcionOpenModal() {
-      console.log("sd,gkoerhngivnweuiger9nrjigirohrthtjr"); //   this.modal.style.display = "block";
-
       this.$refs.openModal.style.display = "block";
     },
     insertBD: function insertBD() {
@@ -7155,6 +7204,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             var expediente = _step.value;
 
             if (expediente.cartas_trucades[0].usuari.codi.toLowerCase().indexOf(this.buscar.toLowerCase()) >= 0) {
+              console.log(expediente.cartas_trucades[0].usuari.codi);
               response.push(expediente);
             }
           }
@@ -47074,9 +47124,9 @@ var render = function () {
                                   _vm.cartaLlamada.incidents_id
                                   ? _c("td", [
                                       _vm._v(
-                                        "\n                                                " +
+                                        "\n                                                    " +
                                           _vm._s(pruebaCarta.expedients_id) +
-                                          "\n                                            "
+                                          "\n                                                "
                                       ),
                                     ])
                                   : _vm._e(),
@@ -47089,9 +47139,9 @@ var render = function () {
                                   _vm.cartaLlamada.incidents_id
                                   ? _c("td", [
                                       _vm._v(
-                                        "\n                                                " +
+                                        "\n                                                    " +
                                           _vm._s(pruebaCarta.telefon) +
-                                          "\n                                            "
+                                          "\n                                                "
                                       ),
                                     ])
                                   : _vm._e(),
@@ -47115,9 +47165,9 @@ var render = function () {
                                               pruebaCarta.municipis_id
                                                 ? _c("span", [
                                                     _vm._v(
-                                                      "\n                                                        " +
+                                                      "\n                                                            " +
                                                         _vm._s(municipi.nom) +
-                                                        "\n                                                    "
+                                                        "\n                                                        "
                                                     ),
                                                   ])
                                                 : _vm._e(),
@@ -47148,11 +47198,11 @@ var render = function () {
                                               pruebaCarta.incidents_id
                                                 ? _c("span", [
                                                     _vm._v(
-                                                      "\n                                                        " +
+                                                      "\n                                                            " +
                                                         _vm._s(
                                                           incidente.descripcio
                                                         ) +
-                                                        "\n                                                    "
+                                                        "\n                                                        "
                                                     ),
                                                   ])
                                                 : _vm._e(),
@@ -47210,7 +47260,9 @@ var render = function () {
             },
             [
               _c("div", { staticClass: "modal-content" }, [
-                _c("p", [_vm._v("Quieres guardar al llamante?")]),
+                _c("p", [
+                  _vm._v("¿Quieres guardar los datos de la persona que llama?"),
+                ]),
                 _vm._v(" "),
                 _c("form", { attrs: { action: "#" } }, [
                   _c("p", [
@@ -47269,9 +47321,86 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _c("p", [_vm._v("Aviso:")]),
+                _c("p", [
+                  _vm._v("Aviso:\n                        "),
+                  _vm._v(
+                    "\n" +
+                      _vm._s(_vm.agenciaRelacion) +
+                      "\n                    "
+                  ),
+                ]),
                 _vm._v(" "),
-                _vm._m(2),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col s12 m6" }, [
+                    _c("div", { staticClass: "card" }, [
+                      _c(
+                        "table",
+                        [
+                          _c("thead", [
+                            _c("tr", [
+                              _c("td", [_vm._v("Nom")]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("Calle")]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("Codigo Postal")]),
+                              _vm._v(" "),
+                              _c("td", [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn colorbutton",
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.agenciasEscogidas(-1, null)
+                                      },
+                                    },
+                                  },
+                                  [_vm._v("Borrar")]
+                                ),
+                              ]),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(_vm.agencias, function (agencia) {
+                            return _c("tbody", { key: agencia.id }, [
+                              agencia.municipis_id ==
+                              _vm.cartaLlamada.municipis_id
+                                ? _c("tr", [
+                                    _c("td", [_vm._v(_vm._s(agencia.nom))]),
+                                    _vm._v(" "),
+                                    _c("td", [_vm._v(_vm._s(agencia.carrer))]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(_vm._s(agencia.codi_postal)),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn colorbutton",
+                                          on: {
+                                            click: function ($event) {
+                                              return _vm.agenciasEscogidas(
+                                                agencia.id,
+                                                agencia.nom
+                                              )
+                                            },
+                                          },
+                                        },
+                                        [_vm._v("Check")]
+                                      ),
+                                    ]),
+                                  ])
+                                : _vm._e(),
+                            ])
+                          }),
+                        ],
+                        2
+                      ),
+                    ]),
+                  ]),
+                ]),
               ]),
             ]
           ),
@@ -47302,24 +47431,6 @@ var staticRenderFns = [
         },
         [_c("span", { staticClass: "visually-hidden" }, [_vm._v("Loading...")])]
       ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("table", [
-      _c("thead", [
-        _c("tr", [
-          _c("th", [_vm._v("Nom")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("Calle")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("Codigo Postal")]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("tbody", [_c("tr")]),
     ])
   },
 ]
@@ -47963,6 +48074,66 @@ var render = function () {
     _c("h6", [_vm._v("Emergencia")]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "input-field col s6" }, [
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.datos_incidente.tiposIncidente,
+                expression: "datos_incidente.tiposIncidente",
+              },
+            ],
+            staticClass: "browser-default",
+            attrs: { id: "tiposIncidete" },
+            on: {
+              change: [
+                function ($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function (o) {
+                      return o.selected
+                    })
+                    .map(function (o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.datos_incidente,
+                    "tiposIncidente",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                },
+                function ($event) {
+                  return _vm.activarFunciones()
+                },
+              ],
+            },
+          },
+          [
+            _c("option", { attrs: { value: "", selected: "", disabled: "" } }, [
+              _vm._v("Tipo Incidente"),
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.tIncidentes, function (tIncidente) {
+              return _c(
+                "option",
+                { key: tIncidente.id, domProps: { value: tIncidente.id } },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(tIncidente.descripcio) +
+                      "\n                "
+                  ),
+                ]
+              )
+            }),
+          ],
+          2
+        ),
+      ]),
+      _vm._v(" "),
       _c("div", { staticClass: "input-field col s6" }, [
         _c(
           "select",

@@ -102,14 +102,14 @@
 
         <h6>Emergencia</h6>
         <div class="row">
-            <!-- <div class="input-field col s6">
+            <div class="input-field col s6">
                 <select class="browser-default" id="tiposIncidete" v-model="datos_incidente.tiposIncidente"  @change="activarFunciones()">
                     <option value="" selected disabled >Tipo Incidente</option>
                     <option v-for="tIncidente in tIncidentes" :key="tIncidente.id" :value="tIncidente.id">
                         {{ tIncidente.descripcio }}
                     </option>
                 </select>
-            </div> -->
+            </div>
             <div class="input-field col s6">
                 <select class="browser-default" id="incidente" v-model="datos_incidente.incidente"  @change="activarFunciones()">
                     <option value="" selected disabled >Incidente</option>

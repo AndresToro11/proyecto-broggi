@@ -227,6 +227,7 @@ import plano from './plano.vue';
                 if(this.buscar != ''){
                     for(let expediente of this.expedientes){
                         if(expediente.cartas_trucades[0].usuari.codi.toLowerCase().indexOf(this.buscar.toLowerCase()) >= 0){
+                            console.log(expediente.cartas_trucades[0].usuari.codi);
                             response.push(expediente);
                         }
                     }

@@ -108,7 +108,7 @@
             <div id="myModal" ref="openModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <p>Quieres guardar al llamante?</p>
+                    <p>¿Quieres guardar los datos de la persona que llama?</p>
                         <form action="#">
                             <p>
                             <label>
@@ -121,21 +121,37 @@
                             </label>
                             </p>
                         </form>
-                    <p>Aviso:</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Nom</th>
-                                <th>Calle</th>
-                                <th>Codigo Postal</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                
-                            </tr>
-                        </tbody>
+                    <p>Aviso:
+                        <!-- <span v-for="agenciaRelacion in agenciasRelacion" :key="agenciaRelacion.id">
+                            {{agenciaRelacion.nom}}
+                        </span> -->
+{{ agenciaRelacion }}
+                    </p>
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>Nom</td>
+                                            <td>Calle</td>
+                                            <td>Codigo Postal</td>
+                                            <td><button class="btn colorbutton" @click="agenciasEscogidas(-1, null)">Borrar</button></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody v-for="agencia in agencias" :key="agencia.id">
+                                            <tr v-if="agencia.municipis_id == cartaLlamada.municipis_id">
+                                                <td>{{ agencia.nom }}</td>
+                                                <td>{{ agencia.carrer }}</td>
+                                                <td>{{ agencia.codi_postal }}</td>
+                                                <td><button class="btn colorbutton" @click="agenciasEscogidas(agencia.id, agencia.nom)">Check</button></td>
+                                            </tr>
+                                    </tbody>
                     </table>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 </div>
@@ -155,6 +171,8 @@ export default {
             idDatosPersonales: [],
             pruebaCartas: [],
             incidentes:[],
+            agencias: [],
+            agenciasRelacion: [ ],
             municipis:[],
             expediente:{
                 id: null,
@@ -173,7 +191,7 @@ export default {
                 adreca_trucada: " ",
                 fora_catalunya: " ",
                 provincies_id: " ",
-                municipis_id: " ",
+                municipis_id: null,
                 tipus_localitzacions_id: " ",
                 descripcio_localitzacio: " ",
                 detall_localitzacio: " ",
@@ -195,6 +213,16 @@ export default {
                 .then((response) => {
                     console.log("Incidente OK");
                     me.incidentes = response.data;
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+                .finally(() => (this.loading = false));
+             axios
+                .get("/agencias")
+                .then((response) => {
+                    console.log("Municipio OK");
+                    me.agencias = response.data;
                 })
                 .catch((error) => {
                     console.log(error);
@@ -267,6 +295,30 @@ export default {
         empezarContador(){
             contadorInterval = setInterval(this.contador,1000);
         },
+        agenciasEscogidas(agenciaId, agenciaNom){
+            let cont = 0
+            let i = 0
+            debugger
+            if (agenciaId != -1) {
+                while (cont != 1 & i < this.agenciasRelacion.length) {
+                    if (this.agenciasRelacion[i] == agenciaId) {
+                        cont = 1;
+                    }
+                    i++;
+                }
+                if (cont == 0) {
+                    // let agencia= [
+                    //     id = agenciaId,
+                    //     nom = agenciaNom
+                    //     ]
+                    this.agenciasRelacion.push(agenciaId);
+                }
+            }else{
+                this.agenciasRelacion=[];
+            }
+
+
+        },
         camposExtra() {
             let hoy = new Date();
             let fecha = hoy.getFullYear() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getDate();
@@ -287,8 +339,6 @@ export default {
 
         },
         funcionOpenModal(){
-            console.log("sd,gkoerhngivnweuiger9nrjigirohrthtjr");
-            //   this.modal.style.display = "block";
             this.$refs.openModal.style.display = "block"
         },
         insertBD(){

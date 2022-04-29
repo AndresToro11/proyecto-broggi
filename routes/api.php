@@ -10,9 +10,9 @@ use App\Http\Controllers\ComarcaController;
 use App\Http\Controllers\IncidenteController;
 use App\Http\Controllers\ProvinciaController;
 use App\Http\Controllers\Api\UsuariController;
+use App\Http\Controllers\Api\AgenciaController;
 use App\Http\Controllers\Api\GraficoController;
 use App\Http\Controllers\Api\ExpedientController;
-
 use App\Http\Controllers\Api\MunicipioController;
 use App\Http\Controllers\Api\OperadoresController;
 use App\Http\Controllers\TiposIncidenteController;
@@ -51,6 +51,7 @@ Route::apiResource('tiposLocalitzacion', TiposLocalizacionController::class);
 Route::apiResource('datosPersonales', DatosPersonalesController::class);
 Route::apiResource('operadores', OperadoresController::class);
 Route::apiResource('llamadas', CartaLlamadaController::class);
+Route::apiResource('agencias', AgenciaController::class);
 Route::apiResource('expediente', ExpedientController::class); //->only(['index', 'provincias']);
 // Route::get('llamadas/cartaLlamadaId', [CartaLlamadaController::class, 'cartaLlamadaId']);
 
