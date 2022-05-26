@@ -35,7 +35,6 @@
                         <div class="card-action colorLink">
                             <a class="colorLink" id="myBtn" href="#" @click="camposExtra(), pararContador()">Aceptar</a>
                             <a class="colorLink" href="http://localhost:8080/proyecto-broggi/public/home" @click="pararContador()">Cancelar</a>
-                            <button class="colorLink" id="myBtn btn" @click="funcionOpenModal()"> open modal</button>
                         </div>
                     </div>
                 </div>
@@ -183,7 +182,7 @@ export default {
             cartaLlamada: {
                 data_hora: "",
                 temps_trucada: 3,
-                dades_personals_id: null,
+                dades_personals_id: 1,
                 telefon: " ",
                 procedencia_trucada: " ",
                 origen_trucada: " ",

@@ -121,7 +121,6 @@
                         </a>
                     </div>
                 </p>
-
             <div class="collapse" v-bind:id="'multiCollapseExample'+ expediente.id">
                 <div class=" d-flex justify-content-center">
                     <div class="d-flex flex-wrap justify-content-between" style="width: 95%">
