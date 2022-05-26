@@ -119,12 +119,13 @@
                                 <span>No</span>
                             </label>
                             </p>
+
                         </form>
                     <p>Aviso:
                         <!-- <span v-for="agenciaRelacion in agenciasRelacion" :key="agenciaRelacion.id">
                             {{agenciaRelacion.nom}}
                         </span> -->
-{{ agenciaRelacion }}
+                    {{ agenciaRelacion }}
                     </p>
                     <div class="row">
                         <div class="col s12 m6">
@@ -150,7 +151,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <button><a href="http://localhost:8080/proyecto-broggi/public/home">Aceptar</a></button>
                 </div>
 
                 </div>

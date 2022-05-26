@@ -6231,6 +6231,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -47108,9 +47109,9 @@ var render = function () {
                                   _vm.cartaLlamada.incidents_id
                                   ? _c("td", [
                                       _vm._v(
-                                        "\n                                                    " +
+                                        "\n                                                " +
                                           _vm._s(pruebaCarta.expedients_id) +
-                                          "\n                                                "
+                                          "\n                                            "
                                       ),
                                     ])
                                   : _vm._e(),
@@ -47123,9 +47124,9 @@ var render = function () {
                                   _vm.cartaLlamada.incidents_id
                                   ? _c("td", [
                                       _vm._v(
-                                        "\n                                                    " +
+                                        "\n                                                " +
                                           _vm._s(pruebaCarta.telefon) +
-                                          "\n                                                "
+                                          "\n                                            "
                                       ),
                                     ])
                                   : _vm._e(),
@@ -47149,9 +47150,9 @@ var render = function () {
                                               pruebaCarta.municipis_id
                                                 ? _c("span", [
                                                     _vm._v(
-                                                      "\n                                                            " +
+                                                      "\n                                                        " +
                                                         _vm._s(municipi.nom) +
-                                                        "\n                                                        "
+                                                        "\n                                                    "
                                                     ),
                                                   ])
                                                 : _vm._e(),
@@ -47182,11 +47183,11 @@ var render = function () {
                                               pruebaCarta.incidents_id
                                                 ? _c("span", [
                                                     _vm._v(
-                                                      "\n                                                            " +
+                                                      "\n                                                        " +
                                                         _vm._s(
                                                           incidente.descripcio
                                                         ) +
-                                                        "\n                                                        "
+                                                        "\n                                                    "
                                                     ),
                                                   ])
                                                 : _vm._e(),
@@ -47306,11 +47307,11 @@ var render = function () {
                 ]),
                 _vm._v(" "),
                 _c("p", [
-                  _vm._v("Aviso:\n                        "),
+                  _vm._v("Aviso:\n                    "),
                   _vm._v(
-                    "\n" +
+                    "\n                " +
                       _vm._s(_vm.agenciaRelacion) +
-                      "\n                    "
+                      "\n                "
                   ),
                 ]),
                 _vm._v(" "),
@@ -47385,6 +47386,8 @@ var render = function () {
                     ]),
                   ]),
                 ]),
+                _vm._v(" "),
+                _vm._m(2),
               ]),
             ]
           ),
@@ -47414,6 +47417,20 @@ var staticRenderFns = [
           attrs: { role: "status" },
         },
         [_c("span", { staticClass: "visually-hidden" }, [_vm._v("Loading...")])]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", [
+      _c(
+        "a",
+        {
+          attrs: { href: "http://localhost:8080/proyecto-broggi/public/home" },
+        },
+        [_vm._v("Aceptar")]
       ),
     ])
   },
